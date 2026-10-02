@@ -27,15 +27,15 @@ class _IsolatedPathsMixin:
         self._tmpdir = tempfile.TemporaryDirectory()
         tmp = Path(self._tmpdir.name)
         self._orig = {
-            "RELATIONSHIP_EVENTS_PATH": tl.RELATIONSHIP_EVENTS_PATH, "GOVERNANCE_PATH": tl.GOVERNANCE_PATH,
-            "PENETRATION_PATH": tl.PENETRATION_PATH, "CHANGE_EVENTS_PATH": tl.CHANGE_EVENTS_PATH,
-            "FORCING_SIGNALS_PATH": tl.FORCING_SIGNALS_PATH,
+            name: getattr(tl, name) for name in (
+                "RELATIONSHIP_EVENTS_PATH", "GOVERNANCE_PATH", "PENETRATION_PATH", "CHANGE_EVENTS_PATH",
+                "FORCING_SIGNALS_PATH", "FDD_SOURCES_PATH", "TECHNOLOGY_ECONOMICS_PATH",
+                "GOVERNANCE_CHANGE_EVENTS_PATH", "PENETRATION_RECONCILIATION_PATH", "FDD_RESEARCH_GAPS_PATH",
+                "ENTITY_RESOLUTION_REVIEW_PATH",
+            )
         }
-        tl.RELATIONSHIP_EVENTS_PATH = tmp / "rel.jsonl"
-        tl.GOVERNANCE_PATH = tmp / "gov.jsonl"
-        tl.PENETRATION_PATH = tmp / "pen.jsonl"
-        tl.CHANGE_EVENTS_PATH = tmp / "chg.jsonl"
-        tl.FORCING_SIGNALS_PATH = tmp / "fs.jsonl"
+        for name in self._orig:
+            setattr(tl, name, tmp / f"{name}.jsonl")
 
     def tearDown(self):
         for name, path in self._orig.items():
@@ -142,6 +142,89 @@ class TestCreateTechnologyForcingSignal(_IsolatedPathsMixin, unittest.TestCase):
             with self.assertRaises(HTTPException) as cm:
                 server.post_create_technology_forcing_signal(body, x_api_key=None)
         self.assertEqual(cm.exception.status_code, 422)
+
+
+class TestListFddResearchGaps(_IsolatedPathsMixin, unittest.TestCase):
+    def test_empty_when_nothing_on_file(self):
+        import server
+        with patch.object(server, "_auth", lambda *a, **k: None):
+            result = server.get_fdd_research_gaps(brand_name=None, x_api_key=None)
+        self.assertEqual(result["gap_count"], 0)
+
+    def test_filters_by_brand_name(self):
+        import server
+        tl.record_fdd_research_gap(
+            fdd_gap_id="gap-1", brand_id="brand-burger-king", gap_type="governance_unknown", detail="d",
+        )
+        with patch.object(server, "_auth", lambda *a, **k: None):
+            result = server.get_fdd_research_gaps(brand_name="Burger King", x_api_key=None)
+            result_other = server.get_fdd_research_gaps(brand_name="McDonald's", x_api_key=None)
+        self.assertEqual(result["gap_count"], 1)
+        self.assertEqual(result_other["gap_count"], 0)
+
+    def test_unresolvable_brand_raises_404(self):
+        import server
+        from fastapi import HTTPException
+        with patch.object(server, "_auth", lambda *a, **k: None):
+            with self.assertRaises(HTTPException) as cm:
+                server.get_fdd_research_gaps(brand_name="Totally Not A Real Brand XYZ123", x_api_key=None)
+        self.assertEqual(cm.exception.status_code, 404)
+
+
+class TestEntityResolutionReviewQueue(_IsolatedPathsMixin, unittest.TestCase):
+    def test_defaults_to_pending_status(self):
+        import server
+        tl.queue_entity_resolution_review(review_id="r1", raw_name_or_identifier="X", context="c")
+        with patch.object(server, "_auth", lambda *a, **k: None):
+            result = server.get_entity_resolution_review_queue(status="pending", x_api_key=None)
+        self.assertEqual(result["item_count"], 1)
+
+    def test_invalid_status_rejected_with_422(self):
+        import server
+        from fastapi import HTTPException
+        with patch.object(server, "_auth", lambda *a, **k: None):
+            with self.assertRaises(HTTPException) as cm:
+                server.get_entity_resolution_review_queue(status="not_a_real_status", x_api_key=None)
+        self.assertEqual(cm.exception.status_code, 422)
+
+    def test_resolve_writes_real_entity_id(self):
+        import server
+        tl.queue_entity_resolution_review(review_id="r1", raw_name_or_identifier="PAR", context="c")
+        body = server.ResolveEntityResolutionReviewBody(resolved_entity_name="PAR Technology")
+        with patch.object(server, "_auth", lambda *a, **k: None):
+            result = server.post_resolve_entity_resolution_review("r1", body, x_api_key=None)
+        self.assertEqual(result["item"]["status"], "resolved")
+        self.assertEqual(result["item"]["resolved_entity_id"], "vendor-par-technology")
+        self.assertEqual(tl.list_entity_resolution_review("pending"), [])
+
+    def test_resolve_unknown_review_id_404(self):
+        import server
+        from fastapi import HTTPException
+        body = server.ResolveEntityResolutionReviewBody(resolved_entity_name="PAR Technology")
+        with patch.object(server, "_auth", lambda *a, **k: None):
+            with self.assertRaises(HTTPException) as cm:
+                server.post_resolve_entity_resolution_review("not-a-real-review-id", body, x_api_key=None)
+        self.assertEqual(cm.exception.status_code, 404)
+
+    def test_resolve_unresolvable_entity_name_404(self):
+        import server
+        from fastapi import HTTPException
+        tl.queue_entity_resolution_review(review_id="r1", raw_name_or_identifier="X", context="c")
+        body = server.ResolveEntityResolutionReviewBody(resolved_entity_name="Totally Not A Real Entity XYZ123")
+        with patch.object(server, "_auth", lambda *a, **k: None):
+            with self.assertRaises(HTTPException) as cm:
+                server.post_resolve_entity_resolution_review("r1", body, x_api_key=None)
+        self.assertEqual(cm.exception.status_code, 404)
+
+    def test_reject_marks_rejected_without_resolving(self):
+        import server
+        tl.queue_entity_resolution_review(review_id="r1", raw_name_or_identifier="X", context="c")
+        body = server.RejectEntityResolutionReviewBody(reason="duplicate mention")
+        with patch.object(server, "_auth", lambda *a, **k: None):
+            result = server.post_reject_entity_resolution_review("r1", body, x_api_key=None)
+        self.assertEqual(result["item"]["status"], "rejected")
+        self.assertIsNone(result["item"]["resolved_entity_id"])
+        self.assertEqual(tl.list_entity_resolution_review("pending"), [])
 
 
 if __name__ == "__main__":

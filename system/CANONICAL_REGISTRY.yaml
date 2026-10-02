@@ -920,17 +920,36 @@ domains:
       Every *_entity_id in every record must already resolve in
       industry_ecosystem_intelligence's authoritative_store -- this
       domain never creates a new entity id scheme.
+
+      Extended same day by the FDD Technology Governance & Economics
+      program (system/technology_lifecycle/FDD_GOVERNANCE_ECONOMICS_BRIEF.md,
+      "What Phase 1 actually built") -- 6 new stores, 5 new writers (§3/§4's
+      governance fields needed no new writer, fitting inside the existing
+      record_governance()'s fdd_sourced_fields dict), a local population
+      export (export_fdd_target_population.py, the >90-location brand
+      queue, wired into Hunter as a new "fdd" universe + playbook), a
+      dedicated importer (import_fdd_research.py), 4 more API ops, a
+      read-only Team Portal route, and its own Account Background Brief
+      section. get_entity_technology_profile() (the one shared derived
+      view both the API and the brief read) now returns the FDD data
+      alongside the original Technology Lifecycle fields.
     authoritative_store: >-
       system/technology_lifecycle/{technology_relationship_events.jsonl,
       technology_governance.jsonl, technology_penetration.jsonl,
-      technology_change_events.jsonl, technology_forcing_signals.jsonl}
+      technology_change_events.jsonl, technology_forcing_signals.jsonl,
+      fdd_sources.jsonl, technology_economics.jsonl,
+      technology_governance_change_events.jsonl,
+      technology_penetration_reconciliation.jsonl, fdd_research_gaps.jsonl,
+      entity_resolution_review.json}
     schemas:
       - system/SCHEMAS.md
       - system/scripts/technology_lifecycle.py (the enforced vocabulary; no separate JSON schema file)
+      - system/technology_lifecycle/FDD_GOVERNANCE_ECONOMICS_BRIEF.md (FDD-specific field-level spec)
     mutation_owner:
-      - system/scripts/technology_lifecycle.py (the only module that appends to the 5 jsonl stores)
+      - system/scripts/technology_lifecycle.py (the only module that appends to the 10 jsonl stores + the one mutable entity_resolution_review.json queue)
       - system/scripts/import_technology_lifecycle_research.py (Hunter packet importer, dispatched from hunter_change_dispatch.py)
-      - system/api/server.py (createTechnologyForcingSignal only -- the one cheap/ungated chat-callable write; every other record type is importer-only)
+      - system/scripts/import_fdd_research.py (FDD packet importer, same dispatch pattern, dispatched from hunter_change_dispatch.py)
+      - system/api/server.py (createTechnologyForcingSignal is the one cheap/ungated chat-callable structured write; resolveEntityResolutionReview/rejectEntityResolutionReview are the queue-review writes; every structured record type beyond those is importer-only)
     validation: not_yet_built
     freshness_policy: >-
       last_verified_current_date on every record (see "Evidence decay" in
@@ -938,11 +957,14 @@ domains:
     conflict_policy: >-
       append-only + supersedes (never edit/delete a line; a correction is
       a new line pointing at the id it corrects) -- same discipline as
-      the rest of this layer.
+      the rest of this layer, EXCEPT entity_resolution_review.json, which
+      is a deliberately mutable workflow queue (status changes in place:
+      pending -> resolved/rejected), matching blue_sheets/_portfolio/
+      review_queue.json's precedent rather than this layer's own default.
     known_gap: >-
-      Phase 1 only. Not built: Team Portal surface/UI tab, category_tenure_
-      benchmarks.json regeneration (system/SCHEMAS.md names it "Phase 1,
-      not yet implemented" but system/technology_lifecycle/README.md's own
+      Phase 1 only. Not built: category_tenure_benchmarks.json
+      regeneration (system/SCHEMAS.md names it "Phase 1, not yet
+      implemented" but system/technology_lifecycle/README.md's own
       "what's Phase 1" list excludes benchmark computation -- treated
       README as authoritative for this Phase 1 slice's boundary, flagged
       here rather than silently resolved), and any change-propensity
@@ -951,7 +973,12 @@ domains:
       rollup view (system/SCHEMAS.md's "Account management application")
       is also not built -- the brief enrichment added this pass renders
       current state directly from get_entity_technology_profile(), not a
-      separate computed rollup.
+      separate computed rollup. Team Portal now has a read-only API route
+      (fdd-governance-profile) but no UI tab rendering it yet. FDD-
+      specific gaps (brand_profile_common permanent-fact fields per §12,
+      vendor/competitor-intelligence auto-benefit per §15, opportunity-
+      intelligence displacement classification per §16): see the brief's
+      own "Still open / not built in Phase 1" list.
     legacy_status: not_applicable_new_domain
 
   user_pov:

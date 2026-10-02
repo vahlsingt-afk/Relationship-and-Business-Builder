@@ -388,6 +388,21 @@ def get_brand_ecosystem_profile(brand_id: str, member: dict = Depends(get_curren
         raise _not_found_to_404(exc)
 
 
+@app.get("/api/brands/{brand_id}/fdd-governance-profile")
+def get_brand_fdd_governance_profile(brand_id: str, member: dict = Depends(get_current_member)):
+    """FDD Technology Governance & Economics (2026-10-02) -- tracked
+    technology relationships, governance (mandated/approved-vendor-list/
+    franchisee-choice/etc.), economics, FDD source documents, detected
+    governance-change events, penetration reconciliation, and open
+    research gaps for this brand. No is_owner branch -- same reasoning as
+    the ecosystem-profile route above: this is all public-source research,
+    not Todd's private judgment, so every teammate sees the same thing."""
+    try:
+        return tts.get_fdd_governance_profile(brand_id)
+    except tts.NotFoundError as exc:
+        raise _not_found_to_404(exc)
+
+
 @app.get("/api/vendors/{vendor_id}/company-profile")
 def get_vendor_company_profile(vendor_id: str, member: dict = Depends(get_current_member)):
     """Vendor-side sibling of the brand ecosystem-profile route above

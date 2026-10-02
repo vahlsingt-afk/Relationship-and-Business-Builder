@@ -8,6 +8,17 @@ what's Phase 1"). Full field-level schema: system/SCHEMAS.md, "Technology
 Lifecycle & Change Events". This module is the ONLY place that appends to
 the 5 jsonl stores -- nothing else should open them for writing.
 
+FDD Technology Governance & Economics (2026-10-02, same day): adds the
+source-record, economics, governance-change-event, penetration-
+reconciliation, research-gap, and entity-resolution-review stores the
+brief (system/technology_lifecycle/FDD_GOVERNANCE_ECONOMICS_BRIEF.md)
+asks for. Governance facts themselves still go through the existing
+record_governance() above -- its fdd_sourced_fields dict already covers
+every brief §3/§4 field (contractual_authority, current_requirement,
+named_vendor_id, grandfathering_status, etc.); it was deliberately built
+generic enough in Technology Lifecycle Phase 1 that this program needed
+no signature change there.
+
 Append-only / supersedes, same discipline as the rest of this layer and
 system/ARCHITECTURE.md's "event stream over snapshots" principle: a line
 is never edited or deleted in place; a correction is a new line carrying
@@ -39,6 +50,11 @@ PENETRATION_PATH = ROOT / "technology_penetration.jsonl"
 CHANGE_EVENTS_PATH = ROOT / "technology_change_events.jsonl"
 FORCING_SIGNALS_PATH = ROOT / "technology_forcing_signals.jsonl"
 FDD_SOURCES_PATH = ROOT / "fdd_sources.jsonl"
+TECHNOLOGY_ECONOMICS_PATH = ROOT / "technology_economics.jsonl"
+GOVERNANCE_CHANGE_EVENTS_PATH = ROOT / "technology_governance_change_events.jsonl"
+PENETRATION_RECONCILIATION_PATH = ROOT / "technology_penetration_reconciliation.jsonl"
+FDD_RESEARCH_GAPS_PATH = ROOT / "fdd_research_gaps.jsonl"
+ENTITY_RESOLUTION_REVIEW_PATH = ROOT / "entity_resolution_review.jsonl"
 
 # -- Shared vocabulary (system/SCHEMAS.md, "Technology Lifecycle & Change Events") --
 
@@ -93,6 +109,31 @@ FORCING_EVENT_TYPES = {
 DOCUMENT_STATUSES = {
     "current", "historical", "amended", "superseded", "incomplete", "secondary_copy", "not_located",
 }
+
+# §8 "Historical FDD Comparison"
+GOVERNANCE_CHANGE_TYPES = {
+    "vendor_removed_from_approved_list", "vendor_added_to_approved_list", "optional_to_mandated",
+    "approved_to_exclusive", "new_store_mandate_created", "grandfathering_created", "grandfathering_ended",
+    "conversion_deadline_created", "technology_fee_increased", "technology_fee_decreased",
+    "franchisor_authority_changed",
+}
+
+# §9 "Penetration Reconciliation"
+RECONCILIATION_STATUSES = {
+    "standard_vendor", "known_competing_installed_base", "grandfathering_possible",
+    "migration_in_progress", "penetration_unknown", "conversion_deadline_unknown",
+}
+
+# §17 "Research Gaps"
+FDD_RESEARCH_GAP_TYPES = {
+    "current_vendor_unknown", "governance_unknown", "approved_vendor_list_incomplete",
+    "penetration_unknown", "grandfathering_unknown", "conversion_deadline_unknown",
+    "payment_flexibility_unknown", "current_FDD_not_located", "historical_FDD_missing",
+    "conflicting_vendor_evidence",
+}
+
+# §1 "Canonical Entity Resolution" -- review queue statuses
+ENTITY_RESOLUTION_REVIEW_STATUSES = {"pending", "resolved", "rejected"}
 
 DEFAULT_VISIBILITY_CLASS = "public_shared"
 
@@ -177,7 +218,10 @@ def _non_superseded(records: list[dict]) -> list[dict]:
     -- the correcting line replaces it for "current state" purposes, while
     both stay on disk forever for audit (append-only)."""
     superseded_ids = {r.get("supersedes") for r in records if r.get("supersedes")}
-    id_keys = ("event_id", "governance_id", "observation_id", "signal_id", "fdd_id")
+    id_keys = (
+        "event_id", "governance_id", "observation_id", "signal_id", "fdd_id",
+        "change_event_id", "reconciliation_id", "fdd_gap_id",
+    )
     def _own_id(r: dict) -> str | None:
         for k in id_keys:
             if k in r:
@@ -396,6 +440,220 @@ def record_fdd_source(
     return _append(FDD_SOURCES_PATH, record)
 
 
+def record_economics_observation(
+    *, observation_id: str, brand_id: str, technology_category: str, evidence_type: str, confidence: str,
+    fdd_id: str | None = None, source_url: str | None = None, franchisee_pays: bool | None = None,
+    franchisor_subsidy: bool | None = None, vendor_subsidy: bool | None = None,
+    supplier_rebate_or_commission: bool | None = None, no_cap_disclosed: bool | None = None,
+    payment_frequency: str | None = None, cost_unit: str | None = None, notes: str | None = None,
+    observed_at: str | None = None, last_verified_date: str | None = None,
+    visibility_class: str = DEFAULT_VISIBILITY_CLASS, supersedes: str | None = None, **cost_fields,
+) -> dict:
+    """Brief §6 "Technology Economics". `cost_fields` carries whatever of
+    initial_technology_investment/hardware_cost/software_fee/
+    recurring_technology_fee/digital_fee/loyalty_fee/online_ordering_fee/
+    payment_related_fee/support_fee/maintenance_fee/upgrade_cost/
+    replacement_cost/future_spending_cap/cost_range_low/cost_range_high the
+    FDD actually discloses -- never required, never fabricated when
+    absent. Preserve disclosed ranges (cost_range_low/high) rather than
+    inventing a point estimate, per the brief's own instruction."""
+    graph = _load_graph()
+    if not _entity_exists(brand_id, graph):
+        raise TechnologyLifecycleError(f"brand_id={brand_id!r} does not resolve in ecosystem_intelligence.json")
+    _assert_in(technology_category, TECHNOLOGY_CATEGORIES, "technology_category")
+    _assert_in(confidence, CONFIDENCE_LEVELS, "confidence")
+    _assert_in(evidence_type, EVIDENCE_TYPES, "evidence_type")
+    _assert_in(visibility_class, VISIBILITY_CLASSES, "visibility_class")
+    observed_at = observed_at or today()
+    record = {
+        "observation_id": observation_id, "brand_id": brand_id, "technology_category": technology_category,
+        "fdd_id": fdd_id, "source_url": source_url,
+        "initial_technology_investment": None, "hardware_cost": None, "software_fee": None,
+        "recurring_technology_fee": None, "digital_fee": None, "loyalty_fee": None, "online_ordering_fee": None,
+        "payment_related_fee": None, "support_fee": None, "maintenance_fee": None, "upgrade_cost": None,
+        "replacement_cost": None, "future_spending_cap": None, "cost_range_low": None, "cost_range_high": None,
+        **cost_fields,
+        "franchisee_pays": franchisee_pays, "franchisor_subsidy": franchisor_subsidy,
+        "vendor_subsidy": vendor_subsidy, "supplier_rebate_or_commission": supplier_rebate_or_commission,
+        "no_cap_disclosed": no_cap_disclosed, "payment_frequency": payment_frequency, "cost_unit": cost_unit,
+        "notes": notes, "confidence": confidence, "evidence_type": evidence_type, "observed_at": observed_at,
+        "last_verified_date": last_verified_date or observed_at, "visibility_class": visibility_class,
+        "supersedes": supersedes,
+    }
+    return _append(TECHNOLOGY_ECONOMICS_PATH, record)
+
+
+def record_governance_change_event(
+    *, change_event_id: str, brand_id: str, technology_category: str, change_type: str, evidence: str,
+    evidence_type: str, confidence: str, effective_date: str | None = None, from_value: object = None,
+    to_value: object = None, prior_fdd_id: str | None = None, new_fdd_id: str | None = None,
+    source_url: str | None = None, observed_at: str | None = None,
+    visibility_class: str = DEFAULT_VISIBILITY_CLASS, supersedes: str | None = None,
+) -> dict:
+    """Brief §8 "Historical FDD Comparison" -- a detected change between two
+    FDD years' governance, kept as its own event type rather than
+    overloading technology_relationship_events.jsonl's vendor-relationship
+    lifecycle_state enum (these are brand x category governance-authority
+    changes, e.g. a fee increase or a mandate taking effect, not
+    necessarily tied to one specific vendor relationship)."""
+    graph = _load_graph()
+    if not _entity_exists(brand_id, graph):
+        raise TechnologyLifecycleError(f"brand_id={brand_id!r} does not resolve in ecosystem_intelligence.json")
+    _assert_in(technology_category, TECHNOLOGY_CATEGORIES, "technology_category")
+    _assert_in(change_type, GOVERNANCE_CHANGE_TYPES, "change_type")
+    _assert_in(confidence, CONFIDENCE_LEVELS, "confidence")
+    _assert_in(evidence_type, EVIDENCE_TYPES, "evidence_type")
+    _assert_in(visibility_class, VISIBILITY_CLASSES, "visibility_class")
+    observed_at = observed_at or today()
+    record = {
+        "change_event_id": change_event_id, "brand_id": brand_id, "technology_category": technology_category,
+        "change_type": change_type, "effective_date": effective_date, "from_value": from_value,
+        "to_value": to_value, "prior_fdd_id": prior_fdd_id, "new_fdd_id": new_fdd_id, "evidence": evidence,
+        "source_url": source_url, "confidence": confidence, "evidence_type": evidence_type,
+        "observed_at": observed_at, "visibility_class": visibility_class, "supersedes": supersedes,
+    }
+    return _append(GOVERNANCE_CHANGE_EVENTS_PATH, record)
+
+
+def record_penetration_reconciliation(
+    *, reconciliation_id: str, relationship_key: dict, reconciliation_status: str, evidence: str,
+    evidence_type: str, confidence: str, conversion_deadline: str | None = None,
+    source_url: str | None = None, observed_at: str | None = None,
+    visibility_class: str = DEFAULT_VISIBILITY_CLASS, supersedes: str | None = None,
+) -> dict:
+    """Brief §9 "Penetration Reconciliation" -- explicitly distinct from a
+    raw technology_penetration.jsonl observation: this records the
+    RELATIONSHIP between an FDD governance mandate and what's actually
+    known to be installed (e.g. "FDD names Vendor A as the required future
+    standard; a competing product is independently known to remain
+    installed at some locations"). Never overwrite a penetration
+    observation because a governance mandate exists -- both coexist."""
+    graph = _load_graph()
+    assert_valid_relationship_key(relationship_key, graph)
+    _assert_in(reconciliation_status, RECONCILIATION_STATUSES, "reconciliation_status")
+    _assert_in(confidence, CONFIDENCE_LEVELS, "confidence")
+    _assert_in(evidence_type, EVIDENCE_TYPES, "evidence_type")
+    _assert_in(visibility_class, VISIBILITY_CLASSES, "visibility_class")
+    observed_at = observed_at or today()
+    record = {
+        "reconciliation_id": reconciliation_id, "relationship_key": relationship_key,
+        "reconciliation_status": reconciliation_status, "conversion_deadline": conversion_deadline,
+        "evidence": evidence, "source_url": source_url, "confidence": confidence, "evidence_type": evidence_type,
+        "observed_at": observed_at, "visibility_class": visibility_class, "supersedes": supersedes,
+    }
+    return _append(PENETRATION_RECONCILIATION_PATH, record)
+
+
+def record_fdd_research_gap(
+    *, fdd_gap_id: str, brand_id: str, gap_type: str, detail: str, status: str = "open",
+    technology_category: str | None = None, observed_at: str | None = None,
+    visibility_class: str = DEFAULT_VISIBILITY_CLASS, supersedes: str | None = None,
+) -> dict:
+    """Brief §17 "Research Gaps" -- missing information generates a
+    structured gap rather than disappearing. Closing a gap is a NEW record
+    (same fdd_gap_id lineage, a fresh id of its own) with status:"resolved"
+    and `supersedes` naming the gap it resolves -- never an in-place edit,
+    same append-only discipline as every other store here.
+    list_fdd_research_gaps() returns only non-superseded, status:"open"
+    rows, so a resolution record both hides its predecessor and excludes
+    itself."""
+    graph = _load_graph()
+    if not _entity_exists(brand_id, graph):
+        raise TechnologyLifecycleError(f"brand_id={brand_id!r} does not resolve in ecosystem_intelligence.json")
+    _assert_in(gap_type, FDD_RESEARCH_GAP_TYPES, "gap_type")
+    _assert_in(status, {"open", "resolved"}, "status")
+    _assert_in(visibility_class, VISIBILITY_CLASSES, "visibility_class")
+    if technology_category is not None:
+        _assert_in(technology_category, TECHNOLOGY_CATEGORIES, "technology_category")
+    observed_at = observed_at or today()
+    record = {
+        "fdd_gap_id": fdd_gap_id, "brand_id": brand_id, "gap_type": gap_type, "status": status,
+        "technology_category": technology_category, "detail": detail, "observed_at": observed_at,
+        "visibility_class": visibility_class, "supersedes": supersedes,
+    }
+    return _append(FDD_RESEARCH_GAPS_PATH, record)
+
+
+# ---------------------------------------------------------------------------
+# Entity Resolution Review Queue (brief §1) -- a mutable workflow queue,
+# deliberately NOT append-only/supersedes like the ledgers above: a review
+# item's whole point is to change status in place (pending -> resolved/
+# rejected) once a human confirms the right entity, the same shape as
+# blue_sheets/_portfolio/review_queue.json elsewhere in this codebase.
+# Stored as one JSON object keyed by review_id, not a .jsonl log.
+# ---------------------------------------------------------------------------
+
+def _load_entity_resolution_review() -> dict:
+    if not ENTITY_RESOLUTION_REVIEW_PATH.exists():
+        return {"items": {}}
+    data = json.loads(ENTITY_RESOLUTION_REVIEW_PATH.read_text(encoding="utf-8"))
+    data.setdefault("items", {})
+    return data
+
+
+def _save_entity_resolution_review(data: dict) -> None:
+    ENTITY_RESOLUTION_REVIEW_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ENTITY_RESOLUTION_REVIEW_PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
+
+
+def queue_entity_resolution_review(
+    *, review_id: str, raw_name_or_identifier: str, context: str, candidate_entity_ids: list[str] | None = None,
+) -> dict:
+    """An incoming finding named an entity (brand/vendor/franchisor/etc.)
+    that could not be confidently resolved against ecosystem_
+    intelligence.json -- queued for human review rather than silently
+    creating a duplicate entity (brief §1's explicit instruction)."""
+    data = _load_entity_resolution_review()
+    item = {
+        "review_id": review_id, "raw_name_or_identifier": raw_name_or_identifier, "context": context,
+        "candidate_entity_ids": candidate_entity_ids or [], "status": "pending",
+        "queued_at": now_iso(), "resolved_entity_id": None, "resolved_at": None,
+    }
+    data["items"][review_id] = item
+    _save_entity_resolution_review(data)
+    return item
+
+
+def list_entity_resolution_review(status: str | None = None) -> list[dict]:
+    if status is not None:
+        _assert_in(status, ENTITY_RESOLUTION_REVIEW_STATUSES, "status")
+    items = list(_load_entity_resolution_review()["items"].values())
+    if status:
+        items = [i for i in items if i.get("status") == status]
+    return items
+
+
+def resolve_entity_resolution_review(review_id: str, *, resolved_entity_id: str) -> dict:
+    """Confirms the real entity id and marks the item resolved -- never
+    creates the entity itself; resolved_entity_id must already exist in
+    ecosystem_intelligence.json, same invariant every writer above
+    enforces."""
+    graph = _load_graph()
+    if not _entity_exists(resolved_entity_id, graph):
+        raise TechnologyLifecycleError(f"resolved_entity_id={resolved_entity_id!r} does not resolve in ecosystem_intelligence.json")
+    data = _load_entity_resolution_review()
+    item = data["items"].get(review_id)
+    if item is None:
+        raise TechnologyLifecycleError(f"no entity_resolution_review item with review_id={review_id!r}")
+    item["status"] = "resolved"
+    item["resolved_entity_id"] = resolved_entity_id
+    item["resolved_at"] = now_iso()
+    _save_entity_resolution_review(data)
+    return item
+
+
+def reject_entity_resolution_review(review_id: str, *, reason: str) -> dict:
+    data = _load_entity_resolution_review()
+    item = data["items"].get(review_id)
+    if item is None:
+        raise TechnologyLifecycleError(f"no entity_resolution_review item with review_id={review_id!r}")
+    item["status"] = "rejected"
+    item["rejection_reason"] = reason
+    item["resolved_at"] = now_iso()
+    _save_entity_resolution_review(data)
+    return item
+
+
 # ---------------------------------------------------------------------------
 # Readers / derived views
 # ---------------------------------------------------------------------------
@@ -441,10 +699,45 @@ def list_fdd_sources_for_brand(brand_id: str) -> list[dict]:
     return [s for s in sources if s.get("brand_id") == brand_id]
 
 
+def list_economics_for_brand(brand_id: str) -> list[dict]:
+    rows = _non_superseded(load_records(TECHNOLOGY_ECONOMICS_PATH))
+    return [r for r in rows if r.get("brand_id") == brand_id]
+
+
+def list_governance_change_events_for_brand(brand_id: str) -> list[dict]:
+    rows = _non_superseded(load_records(GOVERNANCE_CHANGE_EVENTS_PATH))
+    return [r for r in rows if r.get("brand_id") == brand_id]
+
+
+def list_penetration_reconciliation_for_brand(brand_id: str) -> list[dict]:
+    rows = _non_superseded(load_records(PENETRATION_RECONCILIATION_PATH))
+    return [r for r in rows if (r.get("relationship_key") or {}).get("brand_entity_id") == brand_id]
+
+
+def list_fdd_research_gaps(brand_id: str | None = None) -> list[dict]:
+    """Open, non-superseded FDD research gaps -- a status:"resolved"
+    record both supersedes (hides) its open predecessor and is itself
+    filtered out here, matching the rest of this module's append-only/
+    supersedes discipline."""
+    rows = _non_superseded(load_records(FDD_RESEARCH_GAPS_PATH))
+    rows = [r for r in rows if r.get("status") == "open"]
+    if brand_id:
+        rows = [r for r in rows if r.get("brand_id") == brand_id]
+    return rows
+
+
 def get_entity_technology_profile(brand_entity_id: str) -> dict:
     """One shared, derived view -- consumed by both getTechnologyLifecycleProfile
     and Account Background Brief enrichment, so the two never drift apart.
-    Pure read; computes nothing not already evidenced on disk."""
+    Pure read; computes nothing not already evidenced on disk.
+
+    FDD Technology Governance & Economics (2026-10-02): fdd_sources,
+    economics, governance_change_events, penetration_reconciliation, and
+    open_research_gaps added here rather than a parallel profile function,
+    same "ingest once, expose everywhere" principle the brief's own Core
+    Architectural Principle states -- Account Background Brief and the API
+    both read this one function, so neither can silently drift from the
+    other."""
     governance = [g for g in _non_superseded(load_records(GOVERNANCE_PATH)) if g.get("brand_entity_id") == brand_entity_id]
     penetration = [
         p for p in _non_superseded(load_records(PENETRATION_PATH))
@@ -458,4 +751,9 @@ def get_entity_technology_profile(brand_entity_id: str) -> dict:
         "penetration": penetration,
         "change_events": change_events,
         "forcing_signals": list_forcing_signals(brand_entity_id=brand_entity_id),
+        "fdd_sources": list_fdd_sources_for_brand(brand_entity_id),
+        "economics": list_economics_for_brand(brand_entity_id),
+        "governance_change_events": list_governance_change_events_for_brand(brand_entity_id),
+        "penetration_reconciliation": list_penetration_reconciliation_for_brand(brand_entity_id),
+        "open_research_gaps": list_fdd_research_gaps(brand_entity_id),
     }

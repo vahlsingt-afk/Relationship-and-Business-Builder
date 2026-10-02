@@ -1,0 +1,233 @@
+{
+  "schema": "rb.hunter_research_packet.v1",
+  "packet_id": "fdd-sample-packet-2026-10-02",
+  "payload_schema": "rb.fdd_governance_economics_research.v1",
+  "_note": "SAMPLE CONTRACT, not real data -- system/technology_lifecycle/FDD_GOVERNANCE_ECONOMICS_BRIEF.md's own 'operational addition' asked for this before real >90-location batches begin, specifically to catch a schema problem on one record rather than after hundreds. Entity ids below ('brand-sample-fdd-chain', 'vendor-sample-pos-co') are fictional placeholders that exist ONLY in the isolated test fixture (system/tests/test_import_fdd_research.py) -- this file is never run against the real ecosystem_intelligence.json or real jsonl stores. Covers all 10 record_types import_fdd_research.py dispatches, one example each.",
+  "payload": {
+    "fdd_governance_economics_findings": [
+      {
+        "record_type": "fdd_source",
+        "finding_id": "f-fdd-current",
+        "payload": {
+          "fdd_id": "fdd-sample-fdd-chain-2026",
+          "brand_id": "brand-sample-fdd-chain",
+          "fdd_year": "2026",
+          "document_status": "current",
+          "evidence_type": "independent_evidence",
+          "confidence": "high",
+          "effective_date": "2026-04-01",
+          "source_url": "https://example.com/fdd/sample-fdd-chain-2026.pdf",
+          "source_title": "Sample FDD Chain 2026 Franchise Disclosure Document",
+          "prior_fdd_id": "fdd-sample-fdd-chain-2024",
+          "notes": "Sample contract record."
+        }
+      },
+      {
+        "record_type": "fdd_source",
+        "finding_id": "f-fdd-prior",
+        "payload": {
+          "fdd_id": "fdd-sample-fdd-chain-2024",
+          "brand_id": "brand-sample-fdd-chain",
+          "fdd_year": "2024",
+          "document_status": "historical",
+          "evidence_type": "independent_evidence",
+          "confidence": "high",
+          "effective_date": "2024-03-15",
+          "source_url": "https://example.com/fdd/sample-fdd-chain-2024.pdf",
+          "source_title": "Sample FDD Chain 2024 Franchise Disclosure Document"
+        }
+      },
+      {
+        "record_type": "governance",
+        "finding_id": "f-governance-pos",
+        "payload": {
+          "governance_id": "gov-sample-fdd-chain-pos-2026",
+          "brand_entity_id": "brand-sample-fdd-chain",
+          "technology_category": "pos",
+          "governance_state": "mandated_category_brand_selected_vendor",
+          "evidence": "2026 FDD Item 8 names Sample POS Co as the required POS system for all locations opened after 2026-01-01.",
+          "source_url": "https://example.com/fdd/sample-fdd-chain-2026.pdf",
+          "confidence": "high",
+          "evidence_type": "independent_evidence",
+          "approved_vendors": ["vendor-sample-pos-co"],
+          "franchisor_change_authority": {
+            "may_change_required_systems": true,
+            "may_require_upgrades": true,
+            "franchisee_bears_change_cost": true,
+            "spending_limit": null,
+            "no_spending_limit": true
+          },
+          "fdd_sourced_fields": {
+            "fdd_id": "fdd-sample-fdd-chain-2026",
+            "contractual_authority": "franchisor may designate required technology systems",
+            "current_requirement": "franchisees must use Sample POS Co for all new locations",
+            "named_vendor_id": "vendor-sample-pos-co",
+            "named_product_id": "Sample POS Co Register 5",
+            "approved_alternatives": [],
+            "new_store_requirement": "mandated",
+            "existing_store_requirement": "grandfathered until 2028-01-01",
+            "grandfathering_status": "grandfathering_created",
+            "conversion_deadline": "2028-01-01",
+            "franchisee_choice": false,
+            "geographic_scope": "all US locations",
+            "operator_scope": "all franchisees",
+            "source_item": "Item 8",
+            "source_page": "42",
+            "source_excerpt_or_summary": "Franchisee must install and use the POS system designated by Franchisor...",
+            "effective_from": "2026-01-01",
+            "effective_to": null,
+            "last_verified_date": "2026-10-02"
+          }
+        }
+      },
+      {
+        "record_type": "economics",
+        "finding_id": "f-economics-pos",
+        "payload": {
+          "observation_id": "eco-sample-fdd-chain-pos-2026",
+          "brand_id": "brand-sample-fdd-chain",
+          "technology_category": "pos",
+          "fdd_id": "fdd-sample-fdd-chain-2026",
+          "evidence_type": "independent_evidence",
+          "confidence": "high",
+          "source_url": "https://example.com/fdd/sample-fdd-chain-2026.pdf",
+          "hardware_cost": null,
+          "software_fee": null,
+          "recurring_technology_fee": "1.5% of gross sales, monthly",
+          "franchisee_pays": true,
+          "franchisor_subsidy": false,
+          "vendor_subsidy": false,
+          "supplier_rebate_or_commission": null,
+          "no_cap_disclosed": true,
+          "payment_frequency": "monthly",
+          "cost_range_low": 8000,
+          "cost_range_high": 15000,
+          "cost_unit": "usd_per_location_initial",
+          "notes": "2026 FDD Item 7 -- initial POS hardware/software investment range disclosed, no point estimate given."
+        }
+      },
+      {
+        "record_type": "governance_change_event",
+        "finding_id": "f-governance-change",
+        "payload": {
+          "change_event_id": "gce-sample-fdd-chain-pos-2026",
+          "brand_id": "brand-sample-fdd-chain",
+          "technology_category": "pos",
+          "change_type": "optional_to_mandated",
+          "evidence": "2024 FDD listed Sample POS Co as one of three approved vendors (franchisee choice); 2026 FDD mandates Sample POS Co exclusively for new locations.",
+          "evidence_type": "independent_evidence",
+          "confidence": "high",
+          "effective_date": "2026-01-01",
+          "from_value": "approved_vendor_list",
+          "to_value": "mandated_category_brand_selected_vendor",
+          "prior_fdd_id": "fdd-sample-fdd-chain-2024",
+          "new_fdd_id": "fdd-sample-fdd-chain-2026",
+          "source_url": "https://example.com/fdd/sample-fdd-chain-2026.pdf"
+        }
+      },
+      {
+        "record_type": "penetration_reconciliation",
+        "finding_id": "f-reconciliation-pos",
+        "payload": {
+          "reconciliation_id": "rec-sample-fdd-chain-pos-2026",
+          "relationship_key": {
+            "brand_entity_id": "brand-sample-fdd-chain",
+            "technology_category": "pos",
+            "vendor_entity_id": "vendor-sample-pos-co"
+          },
+          "reconciliation_status": "migration_in_progress",
+          "evidence": "2026 FDD mandates Sample POS Co for new stores; independent trade press reports a legacy competing POS system remains installed at roughly 300 pre-2026 locations under the grandfathering provision.",
+          "evidence_type": "independent_evidence",
+          "confidence": "medium",
+          "conversion_deadline": "2028-01-01",
+          "source_url": "https://example.com/trade-press/sample-fdd-chain-pos-migration"
+        }
+      },
+      {
+        "record_type": "relationship_event",
+        "finding_id": "f-relationship-event",
+        "payload": {
+          "event_id": "tre-sample-fdd-chain-pos-2026",
+          "relationship_key": {
+            "parent_entity_id": null,
+            "brand_entity_id": "brand-sample-fdd-chain",
+            "operator_entity_id": null,
+            "technology_category": "pos",
+            "vendor_entity_id": "vendor-sample-pos-co",
+            "product": "Sample POS Co Register 5"
+          },
+          "entity_level": "brand",
+          "lifecycle_state": "selected",
+          "state_date_or_range": "2026",
+          "evidence": "2026 FDD Item 8 names Sample POS Co as the designated POS vendor.",
+          "source_url": "https://example.com/fdd/sample-fdd-chain-2026.pdf",
+          "source_type": "public_filing",
+          "confidence": "high",
+          "evidence_type": "independent_evidence"
+        }
+      },
+      {
+        "record_type": "penetration",
+        "finding_id": "f-penetration",
+        "payload": {
+          "observation_id": "pen-sample-fdd-chain-pos-2026",
+          "relationship_key": {
+            "parent_entity_id": null,
+            "brand_entity_id": "brand-sample-fdd-chain",
+            "operator_entity_id": null,
+            "technology_category": "pos",
+            "vendor_entity_id": "vendor-sample-pos-co",
+            "product": "Sample POS Co Register 5"
+          },
+          "entity_level": "brand",
+          "penetration_type": "location_penetration",
+          "observation_date": "2026-10-01",
+          "confidence": "medium",
+          "evidence_type": "independent_evidence",
+          "source": "Trade press estimate, Oct 2026",
+          "total_system_locations": 850,
+          "installed_locations": 550,
+          "penetration_pct_low": 60.0,
+          "penetration_pct_high": 68.0
+        }
+      },
+      {
+        "record_type": "forcing_signal",
+        "finding_id": "f-forcing-signal",
+        "payload": {
+          "signal_id": "tfs-sample-fdd-chain-2026",
+          "brand_entity_id": "brand-sample-fdd-chain",
+          "entity_level": "brand",
+          "technology_category": "pos_hardware",
+          "forcing_event_type": "hardware_eol",
+          "detail": "Legacy POS terminal hardware at remaining grandfathered locations reaches vendor end-of-support in 2027, ahead of the 2028-01-01 conversion deadline.",
+          "evidence": "Vendor support-lifecycle notice referenced in trade press coverage of the 2026 FDD mandate.",
+          "source_url": "https://example.com/trade-press/sample-fdd-chain-hardware-eol",
+          "confidence": "medium",
+          "evidence_type": "independent_evidence"
+        }
+      },
+      {
+        "record_type": "research_gap",
+        "finding_id": "f-research-gap",
+        "payload": {
+          "fdd_gap_id": "gap-sample-fdd-chain-grandfathering",
+          "brand_id": "brand-sample-fdd-chain",
+          "gap_type": "grandfathering_unknown",
+          "technology_category": "pos",
+          "detail": "FDD states grandfathered locations must convert by 2028-01-01 but does not disclose how many locations currently qualify for grandfathering."
+        }
+      },
+      {
+        "record_type": "entity_resolution_review",
+        "finding_id": "f-entity-review",
+        "payload": {
+          "review_id": "err-sample-fdd-chain-loyalty-vendor",
+          "raw_name_or_identifier": "SamplePoints Loyalty Platform",
+          "context": "2026 FDD Item 11 mentions a required loyalty integration named 'SamplePoints' -- could not confidently match to an existing vendor entity in ecosystem_intelligence.json; may be a rebrand or sub-product of an already-tracked vendor.",
+          "candidate_entity_ids": []
+        }
+      }
+    ]
+  }
+}

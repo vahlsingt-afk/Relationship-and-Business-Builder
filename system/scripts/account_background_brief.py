@@ -865,6 +865,82 @@ def render_technology_lifecycle_section(brand_entity_id: str | None) -> list[str
     return lines
 
 
+def render_fdd_governance_economics_section(brand_entity_id: str | None) -> list[str]:
+    """The '## FDD Technology Governance & Economics' block (brief §13
+    "Account Intelligence Integration") -- reuses the SAME derived profile
+    render_technology_lifecycle_section reads (tech_lifecycle.
+    get_entity_technology_profile), so the two sections can never drift
+    apart from the API's getTechnologyLifecycleProfile. Distinct content
+    from Technology Lifecycle above: that section shows the CURRENT STATE
+    per vendor relationship; this one shows what the FDD itself says
+    (authority/requirement/deployment kept separate per the brief's own
+    §4 instruction -- contractual_authority and current_requirement are
+    never collapsed into one line), what it costs, what changed between
+    FDD years, and what's still unresolved. Honestly omitted (returns [])
+    when nothing FDD-specific is on file yet -- matches render_technology_
+    lifecycle_section's own "never a placeholder for not-yet-researched"
+    discipline."""
+    if not brand_entity_id:
+        return []
+    profile = tech_lifecycle.get_entity_technology_profile(brand_entity_id)
+    fdd_governance = [g for g in profile["governance"] if g.get("fdd_sourced_fields")]
+    has_content = any([
+        profile["fdd_sources"], fdd_governance, profile["economics"], profile["governance_change_events"],
+        profile["penetration_reconciliation"], profile["open_research_gaps"],
+    ])
+    if not has_content:
+        return []
+    lines = ["\n## FDD Technology Governance & Economics"]
+
+    if profile["fdd_sources"]:
+        lines.append("\n**FDD documents on file:**")
+        for src in profile["fdd_sources"]:
+            status = src.get("document_status")
+            year = src.get("fdd_year")
+            lines.append(f"- {year} FDD — status: {status}, confidence: {src.get('document_confidence', src.get('confidence'))}" + (f" ([source]({src['source_url']}))" if src.get("source_url") else ""))
+
+    if fdd_governance:
+        lines.append("\n| Category | Authority | Current Requirement | Grandfathering | Conversion Deadline |")
+        lines.append("|---|---|---|---|---|")
+        for g in fdd_governance:
+            f = g["fdd_sourced_fields"] or {}
+            lines.append(
+                f"| {g.get('technology_category')} | {f.get('contractual_authority') or '—'} "
+                f"| {f.get('current_requirement') or '—'} | {f.get('grandfathering_status') or '—'} "
+                f"| {f.get('conversion_deadline') or '—'} |"
+            )
+
+    if profile["economics"]:
+        lines.append("\n**Technology economics (disclosed ranges, never point estimates):**")
+        for e in profile["economics"]:
+            parts = []
+            if e.get("recurring_technology_fee"):
+                parts.append(f"recurring fee: {e['recurring_technology_fee']}")
+            if e.get("cost_range_low") is not None and e.get("cost_range_high") is not None:
+                parts.append(f"range: {e['cost_range_low']}–{e['cost_range_high']} {e.get('cost_unit') or ''}".strip())
+            if e.get("franchisee_pays") is not None:
+                parts.append(f"franchisee pays: {e['franchisee_pays']}")
+            lines.append(f"- [{e.get('technology_category')}] " + "; ".join(parts) if parts else f"- [{e.get('technology_category')}] (no cost detail disclosed)")
+
+    if profile["governance_change_events"]:
+        lines.append("\n**Governance changes detected across FDD years:**")
+        for c in profile["governance_change_events"]:
+            lines.append(f"- [{c.get('technology_category')}] {c.get('change_type')} (effective {c.get('effective_date', 'unknown')}): {c.get('from_value')} → {c.get('to_value')}")
+
+    if profile["penetration_reconciliation"]:
+        lines.append("\n**Governance vs. actual deployment reconciliation:**")
+        for r in profile["penetration_reconciliation"]:
+            rk = r.get("relationship_key") or {}
+            lines.append(f"- [{rk.get('technology_category')}] {r.get('reconciliation_status')}: {r.get('evidence')}")
+
+    if profile["open_research_gaps"]:
+        lines.append("\n**Open FDD research gaps:**")
+        for g in profile["open_research_gaps"]:
+            lines.append(f"- {g.get('gap_type')}: {g.get('detail')}")
+
+    return lines
+
+
 def render_related_artifacts_section(intel: dict) -> list[str]:
     """The '## Related Intelligence Artifacts' block -- other RBB
     artifacts (e.g. micro graphs) scoped to this account, with their own
@@ -951,6 +1027,8 @@ def render_background_brief(slug: str, *, prepared_for: str = "", purpose: str =
     lines.extend(render_technology_environment_section(account, intel.get("ecosystem_relationships")))
 
     lines.extend(render_technology_lifecycle_section(intel.get("brand_entity_id")))
+
+    lines.extend(render_fdd_governance_economics_section(intel.get("brand_entity_id")))
 
     lines.extend(render_relationship_access_section(account))
 
