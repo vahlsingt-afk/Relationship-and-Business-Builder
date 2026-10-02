@@ -1585,3 +1585,110 @@ Regenerated from `technology_change_events.jsonl` (Phase 1, not yet implemented)
 ### Explicitly deferred (not part of this schema yet)
 
 The numeric Change Propensity Score, its variable weighting, and the false-positive/non-switch classifier are intentionally not modeled here — they require enough real switch/non-switch sample size first (Todd's 2026-10-01 scoping decision), and should not be calculated until the event corpus is large and balanced across switches, renewals, abandoned projects, and non-switches. `technology_forcing_signals.jsonl` and `technology_penetration.jsonl` exist now precisely so that evidence is already accumulating by the time that layer is built. The account-management rollup view above is likewise a future derived view, not a new store.
+
+---
+
+## Franchisee Finder — `system/franchisee_finder/`
+
+**Phase 1 (2026-10-02): schema + storage + 3 read-only API ops + one-time seed import -- no write/submission path yet.** Full feature intent: `system/design/FRANCHISEE_FINDER_SPEC.md`. An evidence-backed ownership-resolution system for restaurant franchisee organizations (Flynn Group, Sun Holdings, etc.) -- their brand portfolios, unit counts, headquarters, leadership, and the evidence behind each claim. Deliberately its own canonical domain, not buried inside brand records (spec section 2).
+
+**Prior art, reconciled rather than ignored.** Two real sources existed before this domain did: `system/franchisee_hierarchy.json` (a static Franchise Times "2026 Restaurant 200" extract -- 200 operators, name/location/brands+unit-counts/revenue, no legal entities, no confidence model, named in the spec itself) and `multi_brand_franchisee_operator_ingest.py`'s 2026-09-27 ingest (47 real `multi_brand_franchisee_operator` entities already living in `ecosystem_intelligence.json`, each with sourced headquarters/leadership/`operates`-edges -- a prior-art source the spec didn't know about, found by checking before building). `migrate_franchisee_hierarchy.py` merges both: Franchise Times is the only unit-count source; a brand both sources agree the org operates gets a confidence bump; 28 of the 47 ecosystem entities match a Restaurant 200 operator by name/alias, the other 19 (Aramark, Sodexo, Compass Group USA, etc. -- large foodservice contractors FRANdata's Multi-Brand 50 tracks that a revenue-ranked restaurant list doesn't reach) are seeded ecosystem-only, honestly with `unit_count: null` where Franchise Times doesn't cover them.
+
+### Storage shape — `system/franchisee_finder/organizations/<org_slug>/`
+
+- `organization.json` — one organization's full profile (see `franchisee_finder_common._empty_organization_json()` for the authoritative shape).
+- `evidence.jsonl` — append-only evidence ledger; every assertion's `evidence_ids` point into this file by `evidence_id`.
+- `_portfolio/franchisee_registry.json` — flat index (`org_slug`, `display_name`, `first_tracked_at`, `last_updated_at`), same lock-and-atomic-write discipline as `competitor_intelligence_common.py`'s registry.
+
+### The assertion model (spec section 6)
+
+Confidence lives at the **assertion**, not the record: `franchisee_finder_common.assertion_field(value, confidence_pct, evidence_ids, source_url, as_of, status, confidence_rationale?, known_conflicts?, last_verified?)`. `status` is one of `confirmed` / `inferred` / `unresolved` / `contradicted`. `confidence_pct` is `None`, not a guessed number, when a claim genuinely hasn't been assessed. `headquarters`, `ownership.structure`, each `legal_entities[]`/`ownership.owners[]` entry, each `geographic_footprint[]` entry, and each `people[]` entry's confidence fields are all `assertion_field()`-shaped.
+
+### Brand relationships carry history (spec section 9)
+
+`franchisee_finder_common.brand_relationship(brand_name, unit_count, brand_entity_id?, unit_count_basis?, confidence_pct?, evidence_ids?, source_url?, status?)` builds one entry: `brand_entity_id` links to `ecosystem_intelligence.json`'s real brand entity when `ecosystem_intelligence._resolve_entity_id_any_type()` resolves it (never guessed). `unit_count` is itself an `assertion_field()`. `history[]` is append-only (`record_unit_count_change()`) -- a later re-research never silently overwrites an earlier figure; it appends a new dated observation and promotes it to the current assertion.
+
+```json
+{
+  "org_id": "ff-flynn-group",
+  "org_slug": "flynn-group",
+  "display_name": "Flynn Group",
+  "linked_graph_entity_id": "operator-flynn-group",
+  "headquarters": { "value": "...", "confidence_pct": 100, "status": "confirmed", "evidence_ids": ["ff-ev-flynn-group-0001"], "source_url": "...", "as_of": "2026-09-27", "last_verified": "2026-09-27" },
+  "ownership": { "structure": null, "owners": [] },
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "brand_name": "Pizza Hut",
+      "brand_entity_id": "brand-pizza-hut",
+      "unit_count": { "value": 1321, "confidence_pct": 80, "status": "confirmed", "evidence_ids": ["ff-ev-flynn-group-0008", "ff-ev-flynn-group-0009"], "source_url": "...", "as_of": "2026-10-02" },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [ { "date": "2026-10-02", "unit_count": 1321, "unit_count_basis": "Franchise Times 2026 Restaurant 200", "note": null } ]
+    }
+  ],
+  "geographic_footprint": [],
+  "people": [ { "name": "Greg Flynn", "title": "Founder, Chairman & CEO", "role_category": "ceo", "confidence_pct": 100, "status": "confirmed", "evidence_ids": ["ff-ev-flynn-group-0002"], "source_url": "..." } ],
+  "technology": {},
+  "confidence_thresholds": { "high_confidence_pct": 85 },
+  "research_status": { "last_researched": null, "next_scheduled_review": null, "overall_profile_quality": "medium" },
+  "source_system": "manual_seed_import",
+  "total_identified_units": 2936,
+  "template_version": "franchisee-finder-v1"
+}
+```
+
+### API (Phase 1, read-only)
+
+`listFranchiseeOrganizations` (`min_units?`, `multi_brand_only?`), `getFranchiseeProfile(org_slug)`, `queryFranchiseesByBrand(brand_name)` — `system/api/server.py`, wired into `rbb_chat_tools.py`'s `_EXTRA_RBB_CHAT_ONLY_TOOLS` (not the 30-op-capped `openapi_gpt.yaml`, same pattern every artifact-suite addition since Account Plan has used). KB routing: `system/api/custom_gpt_instructions_compact_8k.md`.
+
+### Explicitly deferred to Phase 2+ (spec sections 7, 10, 14, 16)
+
+No legal-entity data, no ownership-structure data, no geographic-footprint data (neither seed source carries any of the three -- every org's `legal_entities`/`ownership.owners`/`geographic_footprint` is honestly empty, not guessed). No write/correction-submission path (`submitFranchiseeCorrection`/`reviewFranchiseeSubmission` don't exist yet). No ChatGPT-deep-research-packet ingestion pipeline. No quarterly/monthly refresh cycle. `technology` is reserved (spec section 14's category set lives in `franchisee_finder_common.TECHNOLOGY_CATEGORIES`) but never populated in Phase 1.
+
+---
+
+## User POV Registry — `system/pov/`
+
+**Phase 1 (2026-10-02): atomic registry + evidence links only.** Full feature intent: `system/POV_REGISTRY_FEATURE_BRIEF_2026-10-01.md`. Named `user_pov` (not `todds_pov`/`operator_pov`) -- a general RBB capability, user-agnostic by design; Todd is simply the first user populating it. Deliberately separate from objective intelligence (`ecosystem_intelligence.json`) and from system doctrine (this file, `ARCHITECTURE.md`) -- this domain holds what the USER believes or wants used as an evaluative lens, not facts about the market or rules controlling how RBB behaves.
+
+**Real gap closed, investigated before building.** `CANONICAL_REGISTRY.yaml`'s `strategic_theses` domain already flagged this (`authority_status: distributed_consolidation_pending`, `authoritative_store: null`) -- but checking its named `current_stores` found `strategic_events.json`/`.py` is a genuinely different concept (RB's market/industry event-convergence log, not Todd's own beliefs), and a grep across `active_threads.yaml`/`account_intelligence/`/`research/` found only scattered incidental uses of the word "thesis", not a second concentrated source. `system/00_TODD_PROFILE.md`'s "Strategic theses" and "BridgePoint Ops engagement boundaries" sections were the real concentrated content -- now migrated into `user_pov` (`migrate_todd_profile_pov.py`, 11 entries). That file's biography/communication-style/relationship-capital-taxonomy content is deliberately NOT migrated -- identity/configuration, not POV claims.
+
+### Storage shape
+
+- `system/pov/registry.json` -- current canonical projection: `{"entries": [...]}`.
+- `system/pov/events.jsonl` -- immutable append-only history (created/revised/retired events).
+- `system/pov/evidence_links.jsonl` -- supports/challenges/qualifies evidence records.
+- `system/pov/frameworks/` -- reserved for the second, longer-document layer (POV Frameworks) the feature brief describes; empty in Phase 1, no import pipeline exists yet.
+
+### Atomic entry shape
+
+```json
+{
+  "pov_id": "pov-<hex12>",
+  "statement": "Enterprise buyers prefer best-of-breed; platform plays weaken at enterprise scale.",
+  "type": "principle | hypothesis | evaluative_lens | metric | research_question | hard_boundary",
+  "scope": "restaurant_technology | enterprise_sales | ai | business_development | global | ...",
+  "status": "active | testing | qualified | superseded | retired",
+  "conviction": "working_hypothesis | informed_belief | strong_conviction | foundational_principle",
+  "authorship": "user_authored | rbb_inferred",
+  "needs_review": false,
+  "source_document": "system/00_TODD_PROFILE.md",
+  "source_section": "Strategic theses",
+  "applies_to_surfaces": [],
+  "supporting_evidence_ids": [], "challenging_evidence_ids": [], "qualifying_evidence_ids": [],
+  "supersedes": null, "superseded_by": null,
+  "created_at": "2026-10-02T14:38:20Z", "last_reviewed_at": "2026-10-02T14:38:20Z"
+}
+```
+
+### Write discipline (the feature brief's "critical separation")
+
+Additive by default. `user_pov.attach_pov_evidence()` (API: `attachPOVEvidence`) records independent fact that supports, challenges, or qualifies an entry -- it NEVER changes the entry's own `statement`. `user_pov.revise_pov_entry()` (API: `revisePOVEntry`) is for the user directly changing their own stated belief -- it never edits in place; it creates a NEW entry carrying the revised statement and marks the original `status: superseded` with `superseded_by` set, same append-only/supersedes discipline as Technology Lifecycle and EOLMS. `authorship: "rbb_inferred"` entries start `needs_review: true` (an RBB judgment call, not yet confirmed); `authorship: "user_authored"` entries (the user's own verbatim declaration) are never gated.
+
+### API (Phase 1)
+
+`listPOVEntries` (`scope?`, `type?`, `status?`), `getPOVEntry(pov_id)`, `addPOVEntry`, `revisePOVEntry`, `retirePOVEntry`, `attachPOVEvidence` -- `system/api/server.py`, wired into `rbb_chat_tools.py`'s `_EXTRA_RBB_CHAT_ONLY_TOOLS`. KB routing: `system/api/custom_gpt_instructions_compact_8k.md`.
+
+### Explicitly deferred to Phase 2+
+
+POV Frameworks (the longer authored-document layer), `importPOVFramework`/`reviewPOVFrameworkExtraction`/`getPOVFramework` (no framework-import pipeline exists yet -- these would always 404, so they weren't built). A shared review surface with the Overwrite Confirmation Queue (queued, blocked as of this pass) for `needs_review: true` entries -- not resolved; Phase 1 has no review surface beyond `listPOVEntries` itself.

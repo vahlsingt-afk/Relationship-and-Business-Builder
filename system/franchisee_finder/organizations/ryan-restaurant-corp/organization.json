@@ -1,0 +1,115 @@
+{
+  "org_id": "ff-ryan-restaurant-corp",
+  "org_slug": "ryan-restaurant-corp",
+  "display_name": "Ryan Restaurant Corp.",
+  "aliases": [],
+  "linked_graph_entity_id": null,
+  "headquarters": {
+    "value": "Missoula, MT",
+    "confidence_pct": 55,
+    "status": "inferred",
+    "evidence_ids": [
+      "ff-ev-ryan-restaurant-corp-0001"
+    ],
+    "as_of": "2026-10-02",
+    "last_verified": "2026-10-02",
+    "source_url": "https://www.franchisetimes.com/franchise_times_top_200/",
+    "confidence_rationale": "Franchise Times location column; not confirmed as headquarters vs. registered address."
+  },
+  "registered_address": null,
+  "ownership": {
+    "structure": null,
+    "owners": []
+  },
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "brand_name": "Applebee’s",
+      "brand_entity_id": "brand-applebee-s",
+      "unit_count": {
+        "value": 7,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-ryan-restaurant-corp-0002"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 7,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Famous Dave’s",
+      "brand_entity_id": "brand-famous-dave-s",
+      "unit_count": {
+        "value": 5,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-ryan-restaurant-corp-0003"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 5,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Panera Bread",
+      "brand_entity_id": "brand-panera-bread",
+      "unit_count": {
+        "value": 4,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-ryan-restaurant-corp-0004"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 4,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    }
+  ],
+  "geographic_footprint": [],
+  "people": [],
+  "technology": {},
+  "confidence_thresholds": {
+    "high_confidence_pct": 85
+  },
+  "research_status": {
+    "last_researched": null,
+    "next_scheduled_review": null,
+    "overall_profile_quality": "low"
+  },
+  "source_system": "manual_seed_import",
+  "total_identified_units": 16,
+  "template_version": "franchisee-finder-v1",
+  "created_at": "2026-10-02T14:06:29Z",
+  "updated_at": "2026-10-02T14:06:29Z"
+}

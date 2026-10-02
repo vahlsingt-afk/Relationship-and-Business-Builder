@@ -1,0 +1,259 @@
+{
+  "org_id": "ff-quality-restaurant-group",
+  "org_slug": "quality-restaurant-group",
+  "display_name": "Quality Restaurant Group",
+  "aliases": [],
+  "linked_graph_entity_id": "operator-quality-restaurant-group",
+  "headquarters": {
+    "value": "Greensboro, NC",
+    "confidence_pct": 55,
+    "status": "inferred",
+    "evidence_ids": [
+      "ff-ev-quality-restaurant-group-0001"
+    ],
+    "as_of": "2026-10-02",
+    "last_verified": "2026-10-02",
+    "source_url": "https://www.franchisetimes.com/franchise_times_top_200/",
+    "confidence_rationale": "Franchise Times location column; not confirmed as headquarters vs. registered address."
+  },
+  "registered_address": null,
+  "ownership": {
+    "structure": null,
+    "owners": []
+  },
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "brand_name": "Pizza Hut",
+      "brand_entity_id": "brand-pizza-hut",
+      "unit_count": {
+        "value": 147,
+        "confidence_pct": 80,
+        "status": "confirmed",
+        "evidence_ids": [
+          "ff-ev-quality-restaurant-group-0004",
+          "ff-ev-quality-restaurant-group-0005"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 147,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Sonic",
+      "brand_entity_id": "brand-sonic",
+      "unit_count": {
+        "value": 72,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-quality-restaurant-group-0006"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 72,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Moe’s SW Grill",
+      "brand_entity_id": null,
+      "unit_count": {
+        "value": 55,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-quality-restaurant-group-0007"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 55,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Arby’s",
+      "brand_entity_id": "brand-arby-s",
+      "unit_count": {
+        "value": 26,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-quality-restaurant-group-0008"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 26,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "SONIC",
+      "brand_entity_id": "brand-sonic",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-quality-restaurant-group-0009"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Moe's Southwest Grill",
+      "brand_entity_id": "brand-moe-s-southwest-grill",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-quality-restaurant-group-0010"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Arby's",
+      "brand_entity_id": "brand-arby-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-quality-restaurant-group-0011"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Nothing Bundt Cakes",
+      "brand_entity_id": "brand-nothing-bundt-cakes",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-quality-restaurant-group-0012"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    }
+  ],
+  "geographic_footprint": [],
+  "people": [
+    {
+      "name": "Tricia Morrison",
+      "title": "Director of Information Technology and Audit/Loss Prevention",
+      "role_category": "technology_leader",
+      "confidence_pct": 88,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-quality-restaurant-group-0002"
+      ],
+      "source_url": "https://people.equilar.com/bio/person/tricia-morrison-quality-restaurant-group/45515073",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "Kris Oldenburg",
+      "title": "Director of Information Technology Services",
+      "role_category": "technology_leader",
+      "confidence_pct": 85,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-quality-restaurant-group-0003"
+      ],
+      "source_url": "https://people.equilar.com/bio/person/tricia-morrison-quality-restaurant-group/45515073",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    }
+  ],
+  "technology": {},
+  "confidence_thresholds": {
+    "high_confidence_pct": 85
+  },
+  "research_status": {
+    "last_researched": null,
+    "next_scheduled_review": null,
+    "overall_profile_quality": "medium"
+  },
+  "source_system": "manual_seed_import",
+  "total_identified_units": 300,
+  "template_version": "franchisee-finder-v1",
+  "created_at": "2026-10-02T14:06:23Z",
+  "updated_at": "2026-10-02T14:06:24Z"
+}

@@ -1,0 +1,393 @@
+{
+  "org_id": "ff-the-falcons-group",
+  "org_slug": "the-falcons-group",
+  "display_name": "The Falcons Group",
+  "aliases": [
+    "The Falcons Group"
+  ],
+  "linked_graph_entity_id": "operator-chunara-group",
+  "headquarters": {
+    "value": "Atlanta, GA",
+    "confidence_pct": 55,
+    "status": "inferred",
+    "evidence_ids": [
+      "ff-ev-the-falcons-group-0001"
+    ],
+    "as_of": "2026-10-02",
+    "last_verified": "2026-10-02",
+    "source_url": "https://www.franchisetimes.com/franchise_times_top_200/",
+    "confidence_rationale": "Franchise Times location column; not confirmed as headquarters vs. registered address."
+  },
+  "registered_address": null,
+  "ownership": {
+    "structure": null,
+    "owners": []
+  },
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "brand_name": "Dunkin’",
+      "brand_entity_id": "brand-dunkin",
+      "unit_count": {
+        "value": 31,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0002"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 31,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Rally’s",
+      "brand_entity_id": "brand-rally-s",
+      "unit_count": {
+        "value": 29,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0003"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 29,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Qdoba",
+      "brand_entity_id": null,
+      "unit_count": {
+        "value": 13,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0004"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 13,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Dunkin'",
+      "brand_entity_id": "brand-dunkin",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0005"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Nothing Bundt Cakes",
+      "brand_entity_id": "brand-nothing-bundt-cakes",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0006"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Rally's",
+      "brand_entity_id": "brand-rally-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0007"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Checkers",
+      "brand_entity_id": "brand-checkers",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0008"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Baskin-Robbins",
+      "brand_entity_id": "brand-baskin-robbins",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0009"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "TGI Fridays",
+      "brand_entity_id": "brand-tgi-fridays",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0010"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Blaze Pizza",
+      "brand_entity_id": "brand-blaze-pizza",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0011"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "BurgerFi",
+      "brand_entity_id": "brand-burgerfi",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0012"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Popeyes",
+      "brand_entity_id": "brand-popeyes",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0013"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Super Chix",
+      "brand_entity_id": "brand-super-chix",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0014"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Jimmy John's",
+      "brand_entity_id": "brand-jimmy-john-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0015"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Kale Me Crazy",
+      "brand_entity_id": "brand-kale-me-crazy",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-the-falcons-group-0016"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    }
+  ],
+  "geographic_footprint": [],
+  "people": [],
+  "technology": {},
+  "confidence_thresholds": {
+    "high_confidence_pct": 85
+  },
+  "research_status": {
+    "last_researched": null,
+    "next_scheduled_review": null,
+    "overall_profile_quality": "medium"
+  },
+  "source_system": "manual_seed_import",
+  "total_identified_units": 73,
+  "template_version": "franchisee-finder-v1",
+  "created_at": "2026-10-02T14:06:25Z",
+  "updated_at": "2026-10-02T14:06:25Z"
+}

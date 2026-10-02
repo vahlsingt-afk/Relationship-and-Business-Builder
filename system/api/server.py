@@ -135,6 +135,9 @@ import relationship_plan  # noqa: E402  # RB-2026-09-08 — Relationship Plan: g
 import customers_prospects_common as cpc  # noqa: E402  # RB-2026-09-06 — unified Account Research/Blue Sheet storage (pre-engagement, upstream of active engagement)
 import competitor_intelligence as compintel  # noqa: E402  # RB-2026-08-28 — Competitor Intelligence
 import competitor_intelligence_common as compintel_common  # noqa: E402
+import franchisee_finder_common as ff_common  # noqa: E402  # 2026-10-02 — Franchisee Finder Phase 1 (read-only + seed import)
+import technology_lifecycle as tech_lifecycle  # noqa: E402  # 2026-10-02 — Technology Lifecycle Phase 1
+import user_pov  # noqa: E402  # 2026-10-02 — User POV Registry Phase 1
 import account_reference_detector  # noqa: E402  # RB-2026-08-28 — links uploaded intelligence-pipeline content to known Blue Sheets/competitors by mechanical name match
 import intelligence_index  # noqa: E402  # RB-2026-08-27 — unified "what do we have on X, and where" index
 import uploaded_document_store  # noqa: E402  # RB-2026-08-31 — retrievable full text for an uploaded document
@@ -11070,6 +11073,352 @@ def get_competitor_profile(competitor_slug: str, x_api_key: Optional[str] = Head
         "pending_reviews": pending_reviews,
         "markdown": compintel.render_competitor_profile(competitor_slug),
     }
+
+
+# ---------------------------------------------------------------------------
+# Franchisee Finder (Phase 1, 2026-10-02) — read-only + seed import only.
+# system/design/FRANCHISEE_FINDER_SPEC.md sections 16/19: Phase 1 is schema +
+# storage + a basic search surface; the review-first submission workflow
+# (submitFranchiseeCorrection / reviewFranchiseeSubmission) and the
+# continuous research-refresh cycle are Phase 2+, not built here. Every
+# organization record was seeded by migrate_franchisee_hierarchy.py from two
+# real public sources (Franchise Times 2026 Restaurant 200 + the existing
+# multi_brand_franchisee_operator entities in ecosystem_intelligence.json) --
+# nothing here is live-researched on call.
+# ---------------------------------------------------------------------------
+
+@app.get("/franchisee-organizations", tags=["compute"], operation_id="listFranchiseeOrganizations")
+def get_franchisee_organizations_list(
+    min_units: Optional[int] = Query(None, ge=0, description="Only organizations whose total_identified_units is at least this."),
+    multi_brand_only: bool = Query(False, description="Only organizations operating 2+ distinct brands."),
+    x_api_key: Optional[str] = Header(None),
+):
+    """List every franchisee organization Franchisee Finder has on file --
+    multi-brand restaurant franchisee groups (e.g. Flynn Group, Sun
+    Holdings) and large foodservice contractors (e.g. Sodexo, Aramark) with
+    at least one identified restaurant-brand relationship. Call this to find
+    the right org_slug for getFranchiseeProfile, or use queryFranchiseesByBrand
+    to search by brand instead of browsing the full list. Each row's
+    brand_count/total_identified_units is a real, already-computed summary,
+    not re-derived on this call."""
+    _auth(x_api_key)
+    reg = ff_common.load_registry()
+    orgs = []
+    for row in reg.get("registry", []):
+        slug = row.get("org_slug") or ""
+        try:
+            org = ff_common.load_organization(slug)["organization"]
+        except FileNotFoundError:
+            continue
+        brand_count = len(org.get("brand_relationships") or [])
+        total_units = org.get("total_identified_units") or 0
+        if multi_brand_only and brand_count < 2:
+            continue
+        if min_units is not None and total_units < min_units:
+            continue
+        orgs.append({
+            "org_slug": slug,
+            "display_name": org.get("display_name"),
+            "brand_count": brand_count,
+            "total_identified_units": total_units,
+            "headquarters": (org.get("headquarters") or {}).get("value"),
+            "overall_profile_quality": (org.get("research_status") or {}).get("overall_profile_quality"),
+        })
+    orgs.sort(key=lambda o: o["total_identified_units"], reverse=True)
+    return {"contract": "rb_franchisee_organization_list_v1", "organization_count": len(orgs), "organizations": orgs}
+
+
+@app.get("/franchisee-organizations/{org_slug}", tags=["compute"], operation_id="getFranchiseeProfile")
+def get_franchisee_profile(org_slug: str, x_api_key: Optional[str] = Header(None)):
+    """Return one franchisee organization's full profile: headquarters,
+    ownership, legal entities, every brand relationship with its own
+    unit-count assertion and history, leadership/people, and the complete
+    evidence ledger every assertion's evidence_ids point into. Every
+    assertion carries its own confidence_pct and status (confirmed /
+    inferred / unresolved / contradicted) -- never present a value from
+    this record as settled fact without surfacing that distinction. Never
+    re-researched live; only what Franchisee Finder already has persisted.
+    Call listFranchiseeOrganizations or queryFranchiseesByBrand first if you
+    don't know the org_slug."""
+    _auth(x_api_key)
+    try:
+        data = ff_common.load_organization(org_slug)
+    except FileNotFoundError:
+        raise HTTPException(404, detail=f"No Franchisee Finder record for org_slug '{org_slug}'. Call listFranchiseeOrganizations to see valid slugs.")
+    return {"organization": data["organization"], "evidence": data["evidence"]}
+
+
+@app.get("/franchisee-organizations/by-brand/{brand_name}", tags=["compute"], operation_id="queryFranchiseesByBrand")
+def get_franchisees_by_brand(brand_name: str, x_api_key: Optional[str] = Header(None)):
+    """Answer 'who are the franchisees of brand X' -- every organization
+    with a brand_relationships entry matching brand_name (case-insensitive
+    exact match against the brand's name as recorded, e.g. 'Taco Bell'),
+    each with that specific relationship's unit count, confidence, and
+    status. Returns an empty organizations list (not a 404) when the brand
+    is tracked but no franchisee relationship is on file yet -- that is a
+    real, honest answer, not an error. Call listFranchiseeOrganizations
+    first if you want to browse by organization instead of by brand."""
+    _auth(x_api_key)
+    needle = brand_name.strip().casefold()
+    reg = ff_common.load_registry()
+    matches = []
+    for row in reg.get("registry", []):
+        slug = row.get("org_slug") or ""
+        try:
+            org = ff_common.load_organization(slug)["organization"]
+        except FileNotFoundError:
+            continue
+        for rel in org.get("brand_relationships") or []:
+            if (rel.get("brand_name") or "").strip().casefold() == needle:
+                matches.append({
+                    "org_slug": slug,
+                    "display_name": org.get("display_name"),
+                    "brand_relationship": rel,
+                })
+                break
+    matches.sort(key=lambda m: (m["brand_relationship"]["unit_count"]["value"] or -1), reverse=True)
+    return {"contract": "rb_franchisee_by_brand_v1", "brand_name": brand_name, "match_count": len(matches), "organizations": matches}
+
+
+# ---------------------------------------------------------------------------
+# Technology Lifecycle (Phase 1, 2026-10-02) — read + one cheap/ungated
+# write (forcing signals only). system/technology_lifecycle/README.md,
+# "What exists vs. what's Phase 1": the richer structured record types
+# (relationship events, governance, penetration, change events) are
+# written only through import_technology_lifecycle_research.py's Hunter-
+# packet importer, not a chat-callable endpoint with dozens of nested
+# parameters -- same reasoning competitor-platform research's structured
+# findings go through its own importer rather than createCompetitor.
+# ---------------------------------------------------------------------------
+
+def _resolve_brand_entity_id_or_404(brand_name: str) -> str:
+    graph = ecosystem_intelligence._read_graph()
+    entity_id = ecosystem_intelligence._resolve_entity_id_any_type(brand_name, graph)
+    if not entity_id:
+        raise HTTPException(404, detail=f"'{brand_name}' does not resolve to a known entity in ecosystem_intelligence.json (no exact name/alias match, or ambiguous).")
+    return entity_id
+
+
+@app.get("/technology-lifecycle/profile/{brand_name}", tags=["compute"], operation_id="getTechnologyLifecycleProfile")
+def get_technology_lifecycle_profile(brand_name: str, x_api_key: Optional[str] = Header(None)):
+    """Return everything Technology Lifecycle has on one brand: every
+    tracked technology relationship with its current lifecycle state
+    (selected/contracted/rollout_active/deployed/displaced/etc. -- derived
+    from the most recent non-superseded event, never assumed from the
+    oldest announcement), governance records, penetration observations,
+    reconstructed change-event narratives, and open forcing signals
+    (approaching EOL, leadership change, etc. that haven't yet led to a
+    completed switch). An empty profile (every list empty) is a real,
+    honest answer -- this brand has no technology-lifecycle research on
+    file yet, not an error. brand_name is resolved against
+    ecosystem_intelligence.json's real brand/vendor entities (exact name
+    or alias only, never guessed) -- a 404 means no such entity is
+    tracked at all, which is different from a tracked brand with zero
+    lifecycle evidence."""
+    _auth(x_api_key)
+    brand_entity_id = _resolve_brand_entity_id_or_404(brand_name)
+    return tech_lifecycle.get_entity_technology_profile(brand_entity_id)
+
+
+@app.get("/technology-lifecycle/forcing-signals", tags=["compute"], operation_id="listTechnologyForcingSignals")
+def get_technology_forcing_signals(
+    brand_name: Optional[str] = Query(None, description="Filter to one brand (resolved against ecosystem_intelligence.json)."),
+    technology_category: Optional[str] = Query(None, description="Filter to one category, e.g. 'pos_hardware'."),
+    x_api_key: Optional[str] = Header(None),
+):
+    """List standalone pre-change signals (approaching OS/hardware EOL, a
+    new CTO, a transformation announcement) that haven't yet led to a
+    completed technology switch -- the raw material for a future
+    change-propensity read, not itself a confirmed change. See
+    getTechnologyLifecycleProfile for a specific brand's full picture
+    including any completed change events."""
+    _auth(x_api_key)
+    brand_entity_id = _resolve_brand_entity_id_or_404(brand_name) if brand_name else None
+    if technology_category and technology_category not in tech_lifecycle.TECHNOLOGY_CATEGORIES:
+        raise HTTPException(422, detail=f"technology_category must be one of {sorted(tech_lifecycle.TECHNOLOGY_CATEGORIES)}, got {technology_category!r}.")
+    signals = tech_lifecycle.list_forcing_signals(brand_entity_id=brand_entity_id, technology_category=technology_category)
+    return {"contract": "rb_technology_forcing_signal_list_v1", "signal_count": len(signals), "signals": signals}
+
+
+class CreateTechnologyForcingSignalBody(BaseModel):
+    brand_name: str = Field(..., description="Resolved against ecosystem_intelligence.json -- must already be a tracked brand/vendor entity.")
+    technology_category: str = Field(..., description=f"One of {sorted(tech_lifecycle.TECHNOLOGY_CATEGORIES)}.")
+    forcing_event_type: str = Field(..., description=f"One of {sorted(tech_lifecycle.FORCING_EVENT_TYPES)}.")
+    detail: str = Field(..., description="What was actually observed -- real, specific content, never a generic placeholder.")
+    evidence: str = Field(..., description="The real evidence/excerpt supporting this, never invented.")
+    source_url: Optional[str] = Field(None, description="Omit only when there is genuinely no URL (e.g. firsthand RBB observation).")
+    confidence: str = Field(..., description="One of high/medium/low.")
+    evidence_type: str = Field(..., description=f"One of {sorted(tech_lifecycle.EVIDENCE_TYPES)}. Use 'rbb_inference' for a judgment call, never upgrade it to a stronger type later without new sourcing.")
+
+
+@app.post("/technology-lifecycle/forcing-signals", tags=["write"], operation_id="createTechnologyForcingSignal")
+def post_create_technology_forcing_signal(body: CreateTechnologyForcingSignalBody, x_api_key: Optional[str] = Header(None)):
+    """Record one standalone pre-change signal about a brand's CURRENT
+    stack -- deliberately cheap and ungated (same philosophy as
+    createCompetitor/addCompetitiveNote), since this is observational
+    evidence capture, not a canonical commitment the way createBlueSheetAccount
+    is. Never call this with a signal you inferred without saying so --
+    evidence_type:'rbb_inference' exists exactly for that case. For a
+    brand with no existing ecosystem_intelligence.json entity at all,
+    this returns 404 -- Technology Lifecycle never invents a new entity
+    id scheme; the brand/vendor must be tracked there first."""
+    _auth(x_api_key)
+    brand_entity_id = _resolve_brand_entity_id_or_404(body.brand_name)
+    import uuid as _uuid
+    signal_id = f"tfs-{brand_entity_id}-{_uuid.uuid4().hex[:8]}"
+    try:
+        record = tech_lifecycle.record_forcing_signal(
+            signal_id=signal_id, brand_entity_id=brand_entity_id, entity_level="brand",
+            technology_category=body.technology_category, forcing_event_type=body.forcing_event_type,
+            detail=body.detail, evidence=body.evidence, source_url=body.source_url,
+            confidence=body.confidence, evidence_type=body.evidence_type,
+        )
+    except tech_lifecycle.TechnologyLifecycleError as exc:
+        raise HTTPException(422, detail=str(exc))
+    al.log_mutation_executed(
+        f"createTechnologyForcingSignal: signal_id={signal_id} brand={body.brand_name}",
+        source="POST /technology-lifecycle/forcing-signals",
+    )
+    return {"ok": True, "signal": record}
+
+
+# ---------------------------------------------------------------------------
+# User POV Registry (Phase 1, 2026-10-02) — atomic, governed user beliefs
+# and operating principles, distinct from objective intelligence
+# (ecosystem graph) and system doctrine (ARCHITECTURE.md/SCHEMAS.md).
+# See system/POV_REGISTRY_FEATURE_BRIEF_2026-10-01.md. No framework-import
+# pipeline yet (getPOVFramework/importPOVFramework) -- Phase 1 is the
+# atomic registry only.
+# ---------------------------------------------------------------------------
+
+@app.get("/pov/entries", tags=["compute"], operation_id="listPOVEntries")
+def get_pov_entries_list(
+    scope: Optional[str] = Query(None, description="Filter to one scope, e.g. 'restaurant_technology', 'enterprise_sales'."),
+    type: Optional[str] = Query(None, description=f"Filter to one type: {sorted(user_pov.VALID_TYPES)}."),
+    status: Optional[str] = Query(None, description=f"Filter to one status: {sorted(user_pov.VALID_STATUSES)}. Omit to see every entry including superseded/retired."),
+    x_api_key: Optional[str] = Header(None),
+):
+    """List every atomic POV entry on file -- the user's own beliefs,
+    hypotheses, evaluative lenses, and hard operating boundaries (NOT
+    objective facts about the world -- see getEntitySignals/
+    queryIntelligenceIndex for those). Omit `status` to see the full
+    history including superseded/retired entries; pass status='active'
+    for just what's currently in force. Call this to find a pov_id for
+    getPOVEntry, revisePOVEntry, retirePOVEntry, or attachPOVEvidence."""
+    _auth(x_api_key)
+    if type is not None and type not in user_pov.VALID_TYPES:
+        raise HTTPException(422, detail=f"type must be one of {sorted(user_pov.VALID_TYPES)}, got {type!r}.")
+    if status is not None and status not in user_pov.VALID_STATUSES:
+        raise HTTPException(422, detail=f"status must be one of {sorted(user_pov.VALID_STATUSES)}, got {status!r}.")
+    entries = user_pov.list_pov_entries(scope=scope, entry_type=type, status=status)
+    return {"contract": "rb_pov_entry_list_v1", "entry_count": len(entries), "entries": entries}
+
+
+@app.get("/pov/entries/{pov_id}", tags=["compute"], operation_id="getPOVEntry")
+def get_pov_entry_detail(pov_id: str, x_api_key: Optional[str] = Header(None)):
+    """Return one POV entry plus every evidence record attached to it
+    (supporting/challenging/qualifying). Call listPOVEntries first if you
+    don't have the pov_id."""
+    _auth(x_api_key)
+    try:
+        entry = user_pov.get_pov_entry(pov_id)
+    except user_pov.UserPovError:
+        raise HTTPException(404, detail=f"No POV entry with pov_id '{pov_id}'. Call listPOVEntries to see valid ids.")
+    return {"entry": entry, "evidence": user_pov.list_evidence_for(pov_id)}
+
+
+class AddPOVEntryBody(BaseModel):
+    statement: str = Field(..., description="The exact statement, in the user's own words wherever possible -- never a paraphrase that changes meaning.")
+    type: str = Field(..., description=f"One of {sorted(user_pov.VALID_TYPES)}.")
+    scope: str = Field(..., description="e.g. 'restaurant_technology', 'enterprise_sales', 'ai', 'global'.")
+    conviction: str = Field("informed_belief", description=f"One of {sorted(user_pov.VALID_CONVICTIONS)}.")
+    authorship: str = Field("user_authored", description=f"One of {sorted(user_pov.VALID_AUTHORSHIPS)}. 'rbb_inferred' entries start needs_review:true -- never claim the user said something they didn't.")
+    source_document: Optional[str] = Field(None, description="Where this came from, if applicable.")
+    source_section: Optional[str] = Field(None, description="Section/heading within source_document, if applicable.")
+    applies_to_surfaces: list[str] = Field(default_factory=list, description="Which RBB surfaces should apply this lens, e.g. ['opportunity_scoring', 'account_research'].")
+
+
+@app.post("/pov/entries", tags=["write"], operation_id="addPOVEntry")
+def post_add_pov_entry(body: AddPOVEntryBody, x_api_key: Optional[str] = Header(None)):
+    """Record a new atomic POV entry -- deliberately cheap and ungated for
+    authorship='user_authored' (the user's own direct, verbatim
+    declaration), same philosophy as createCompetitor. Never call this
+    with a belief YOU inferred and present it as authorship='user_authored'
+    -- use 'rbb_inferred' for your own judgment calls, which this starts
+    as needs_review:true rather than immediately authoritative."""
+    _auth(x_api_key)
+    try:
+        entry = user_pov.add_pov_entry(
+            body.statement, body.type, body.scope, conviction=body.conviction, authorship=body.authorship,
+            source_document=body.source_document, source_section=body.source_section,
+            applies_to_surfaces=body.applies_to_surfaces,
+        )
+    except user_pov.UserPovError as exc:
+        raise HTTPException(422, detail=str(exc))
+    return {"ok": True, "entry": entry}
+
+
+class RevisePOVEntryBody(BaseModel):
+    new_statement: str = Field(..., description="The revised statement -- never a silent edit; this creates a new entry and marks the original superseded.")
+    conviction: Optional[str] = Field(None, description=f"One of {sorted(user_pov.VALID_CONVICTIONS)}. Omit to keep the original entry's conviction.")
+    reason: Optional[str] = Field(None, description="Why this is changing, if the user said so.")
+
+
+@app.post("/pov/entries/{pov_id}/revise", tags=["write"], operation_id="revisePOVEntry")
+def post_revise_pov_entry(pov_id: str, body: RevisePOVEntryBody, x_api_key: Optional[str] = Header(None)):
+    """Revise an existing POV entry -- NEVER edits it in place. Creates a
+    new entry carrying the revised statement and marks the original
+    status:'superseded' with superseded_by set, preserving full history
+    (additive-by-default -- see the feature brief's write discipline).
+    Use this only for the user revising their OWN belief directly, not
+    for applying external evidence that merely challenges it -- that's
+    attachPOVEvidence instead, which never changes the entry's statement."""
+    _auth(x_api_key)
+    try:
+        entry = user_pov.revise_pov_entry(pov_id, body.new_statement, conviction=body.conviction, reason=body.reason)
+    except user_pov.UserPovError as exc:
+        raise HTTPException(404 if "No POV entry" in str(exc) else 422, detail=str(exc))
+    return {"ok": True, "entry": entry}
+
+
+class RetirePOVEntryBody(BaseModel):
+    reason: str = Field(..., description="Why this entry no longer applies -- required, never silent.")
+
+
+@app.post("/pov/entries/{pov_id}/retire", tags=["write"], operation_id="retirePOVEntry")
+def post_retire_pov_entry(pov_id: str, body: RetirePOVEntryBody, x_api_key: Optional[str] = Header(None)):
+    """Mark a POV entry retired -- the user no longer holds this belief or
+    applies this rule. The entry and its full evidence history stay on
+    file (never deleted), just excluded from an active-only view."""
+    _auth(x_api_key)
+    try:
+        entry = user_pov.retire_pov_entry(pov_id, reason=body.reason)
+    except user_pov.UserPovError as exc:
+        raise HTTPException(404, detail=str(exc))
+    return {"ok": True, "entry": entry}
+
+
+class AttachPOVEvidenceBody(BaseModel):
+    relation: str = Field(..., description=f"One of {sorted(user_pov.VALID_EVIDENCE_RELATIONS)}.")
+    evidence: str = Field(..., description="The real evidence/observation -- never invented.")
+    source_url: Optional[str] = Field(None, description="Omit only when there is genuinely no URL.")
+    confidence: str = Field("medium", description="high, medium, or low.")
+
+
+@app.post("/pov/entries/{pov_id}/evidence", tags=["write"], operation_id="attachPOVEvidence")
+def post_attach_pov_evidence(pov_id: str, body: AttachPOVEvidenceBody, x_api_key: Optional[str] = Header(None)):
+    """Attach one evidence record to an existing POV entry -- supports,
+    challenges, or qualifies it. Deliberately cheap and ungated, same as
+    addCompetitiveNote. NEVER overwrites or changes the entry's statement
+    -- evidence is independent fact, the belief stays the user's own
+    (feature brief's 'critical separation'). Call revisePOVEntry instead
+    if the user is directly changing their own stated belief."""
+    _auth(x_api_key)
+    try:
+        record = user_pov.attach_pov_evidence(pov_id, body.relation, body.evidence, source_url=body.source_url, confidence=body.confidence)
+    except user_pov.UserPovError as exc:
+        raise HTTPException(404 if "No POV entry" in str(exc) else 422, detail=str(exc))
+    return {"ok": True, "evidence": record}
 
 
 class CreateCompetitiveBriefBody(BaseModel):

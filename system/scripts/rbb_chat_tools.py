@@ -3075,6 +3075,331 @@ _EXTRA_RBB_CHAT_ONLY_TOOLS: list[tuple[dict, dict]] = [
             "path_params": [], "query_params": [], "has_body": False, "body_param_names": [],
         },
     ),
+    (
+        {
+            "type": "function",
+            "name": "listFranchiseeOrganizations",
+            "description": (
+                "List every franchisee organization Franchisee Finder has on file -- "
+                "multi-brand restaurant franchisee groups (e.g. Flynn Group, Sun Holdings) "
+                "and large foodservice contractors (e.g. Sodexo, Aramark) with at least one "
+                "identified restaurant-brand relationship. Call this for 'who are our "
+                "biggest franchisee operators' / 'which franchisees operate more than N "
+                "restaurants' or to find the right org_slug for getFranchiseeProfile. Use "
+                "queryFranchiseesByBrand instead when the question is about one specific "
+                "brand (e.g. 'who are Taco Bell's franchisees')."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "min_units": {"type": "integer", "description": "Only organizations with at least this many total identified units."},
+                    "multi_brand_only": {"type": "boolean", "description": "Only organizations operating 2+ distinct brands."},
+                },
+                "required": [],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/franchisee-organizations",
+            "path_params": [], "query_params": ["min_units", "multi_brand_only"], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "getFranchiseeProfile",
+            "description": (
+                "Return one franchisee organization's full profile: headquarters, "
+                "ownership, legal entities, every brand relationship with its own "
+                "unit-count assertion and history, leadership/people, and the complete "
+                "evidence ledger. Every assertion carries its own confidence_pct and "
+                "status (confirmed/inferred/unresolved/contradicted) -- relay that "
+                "distinction, never present a value here as settled fact without it. "
+                "Call listFranchiseeOrganizations or queryFranchiseesByBrand first if you "
+                "don't already have the org_slug."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {"org_slug": {"type": "string"}},
+                "required": ["org_slug"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/franchisee-organizations/{org_slug}",
+            "path_params": ["org_slug"], "query_params": [], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "queryFranchiseesByBrand",
+            "description": (
+                "Answer 'who are the franchisees of brand X' -- every tracked organization "
+                "with a brand relationship matching that brand, each with that "
+                "relationship's own unit count, confidence, and status. An empty result "
+                "means no franchisee relationship is on file yet for that brand (a real, "
+                "honest answer, not an error) -- never fill the gap with general "
+                "knowledge."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {"brand_name": {"type": "string", "description": "e.g. 'Taco Bell'."}},
+                "required": ["brand_name"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/franchisee-organizations/by-brand/{brand_name}",
+            "path_params": ["brand_name"], "query_params": [], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "getTechnologyLifecycleProfile",
+            "description": (
+                "Return everything Technology Lifecycle has on one brand: every tracked "
+                "technology relationship with its current lifecycle state (selected/"
+                "contracted/rollout_active/deployed/displaced/etc.), governance records, "
+                "penetration observations, reconstructed change-event narratives, and open "
+                "forcing signals (approaching EOL, leadership change, etc. that haven't yet "
+                "led to a completed switch). An empty profile is a real, honest answer -- "
+                "this brand has no technology-lifecycle research on file yet, not an error. "
+                "brand_name is resolved against ecosystem_intelligence.json's real brand/vendor "
+                "entities -- a 404 means no such entity is tracked at all."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {"brand_name": {"type": "string", "description": "e.g. 'Burger King'."}},
+                "required": ["brand_name"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/technology-lifecycle/profile/{brand_name}",
+            "path_params": ["brand_name"], "query_params": [], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "listTechnologyForcingSignals",
+            "description": (
+                "List standalone pre-change signals (approaching OS/hardware EOL, a new "
+                "CTO, a transformation announcement) that haven't yet led to a completed "
+                "technology switch -- the raw material for a future change-propensity read, "
+                "not itself a confirmed change. Optionally filter to one brand and/or one "
+                "technology_category."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "brand_name": {"type": "string"},
+                    "technology_category": {"type": "string"},
+                },
+                "required": [],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/technology-lifecycle/forcing-signals",
+            "path_params": [], "query_params": ["brand_name", "technology_category"], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "createTechnologyForcingSignal",
+            "description": (
+                "Record one standalone pre-change signal about a brand's CURRENT technology "
+                "stack -- deliberately cheap and ungated, same philosophy as createCompetitor/"
+                "addCompetitiveNote. Never call this with a signal you inferred without "
+                "saying so -- evidence_type:'rbb_inference' exists exactly for that case. "
+                "404s if brand_name doesn't resolve to an existing ecosystem_intelligence.json "
+                "entity -- this never invents a new entity id scheme."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "brand_name": {"type": "string"},
+                    "technology_category": {"type": "string"},
+                    "forcing_event_type": {"type": "string", "description": "e.g. os_eol, hardware_eol, vendor_support_sunset, leadership_change, other."},
+                    "detail": {"type": "string"},
+                    "evidence": {"type": "string"},
+                    "source_url": {"type": "string"},
+                    "confidence": {"type": "string", "description": "high, medium, or low."},
+                    "evidence_type": {"type": "string", "description": "vendor_claim, operator_statement, independent_evidence, rbb_inference, or unknown."},
+                },
+                "required": ["brand_name", "technology_category", "forcing_event_type", "detail", "evidence", "confidence", "evidence_type"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "POST", "path": "/technology-lifecycle/forcing-signals",
+            "path_params": [], "query_params": [], "has_body": True,
+            "body_param_names": ["brand_name", "technology_category", "forcing_event_type", "detail", "evidence", "source_url", "confidence", "evidence_type"],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "listPOVEntries",
+            "description": (
+                "List the user's atomic POV entries -- their own beliefs, hypotheses, "
+                "evaluative lenses, and hard operating boundaries (NOT objective facts about "
+                "the world or market -- use queryIntelligenceIndex/getEntitySignals for "
+                "those). Omit status to see full history including superseded/retired; pass "
+                "status='active' for just what's currently in force. Call this to find a "
+                "pov_id for getPOVEntry/revisePOVEntry/retirePOVEntry/attachPOVEvidence."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "scope": {"type": "string", "description": "e.g. 'restaurant_technology', 'enterprise_sales'."},
+                    "type": {"type": "string", "description": "principle, hypothesis, evaluative_lens, metric, research_question, or hard_boundary."},
+                    "status": {"type": "string", "description": "active, testing, qualified, superseded, or retired."},
+                },
+                "required": [],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/pov/entries",
+            "path_params": [], "query_params": ["scope", "type", "status"], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "getPOVEntry",
+            "description": "Return one POV entry plus every evidence record attached to it (supporting/challenging/qualifying). Call listPOVEntries first if you don't have the pov_id.",
+            "parameters": {
+                "type": "object",
+                "properties": {"pov_id": {"type": "string"}},
+                "required": ["pov_id"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/pov/entries/{pov_id}",
+            "path_params": ["pov_id"], "query_params": [], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "addPOVEntry",
+            "description": (
+                "Record a new atomic POV entry -- deliberately cheap and ungated for "
+                "authorship='user_authored' (the user's own direct, verbatim declaration). "
+                "Never call this with a belief YOU inferred and present it as "
+                "authorship='user_authored' -- use 'rbb_inferred' for your own judgment "
+                "calls, which starts as needs_review:true rather than immediately "
+                "authoritative."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "statement": {"type": "string", "description": "The exact statement, in the user's own words wherever possible."},
+                    "type": {"type": "string", "description": "principle, hypothesis, evaluative_lens, metric, research_question, or hard_boundary."},
+                    "scope": {"type": "string"},
+                    "conviction": {"type": "string", "description": "working_hypothesis, informed_belief, strong_conviction, or foundational_principle. Defaults to informed_belief."},
+                    "authorship": {"type": "string", "description": "user_authored or rbb_inferred. Defaults to user_authored."},
+                    "source_document": {"type": "string"},
+                    "source_section": {"type": "string"},
+                    "applies_to_surfaces": {"type": "array", "items": {"type": "string"}},
+                },
+                "required": ["statement", "type", "scope"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "POST", "path": "/pov/entries",
+            "path_params": [], "query_params": [], "has_body": True,
+            "body_param_names": ["statement", "type", "scope", "conviction", "authorship", "source_document", "source_section", "applies_to_surfaces"],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "revisePOVEntry",
+            "description": (
+                "Revise an existing POV entry -- NEVER edits it in place. Creates a new "
+                "entry carrying the revised statement and marks the original superseded, "
+                "preserving full history. Use only for the user revising their OWN belief "
+                "directly -- for external evidence that merely challenges a belief, use "
+                "attachPOVEvidence instead, which never changes the statement."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "pov_id": {"type": "string"},
+                    "new_statement": {"type": "string"},
+                    "conviction": {"type": "string"},
+                    "reason": {"type": "string"},
+                },
+                "required": ["pov_id", "new_statement"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "POST", "path": "/pov/entries/{pov_id}/revise",
+            "path_params": ["pov_id"], "query_params": [], "has_body": True,
+            "body_param_names": ["new_statement", "conviction", "reason"],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "retirePOVEntry",
+            "description": "Mark a POV entry retired -- the user no longer holds this belief or applies this rule. Stays on file (never deleted), just excluded from an active-only view.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "pov_id": {"type": "string"},
+                    "reason": {"type": "string", "description": "Why this no longer applies -- required."},
+                },
+                "required": ["pov_id", "reason"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "POST", "path": "/pov/entries/{pov_id}/retire",
+            "path_params": ["pov_id"], "query_params": [], "has_body": True,
+            "body_param_names": ["reason"],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "attachPOVEvidence",
+            "description": (
+                "Attach one evidence record to an existing POV entry -- supports, "
+                "challenges, or qualifies it. Deliberately cheap and ungated. NEVER "
+                "overwrites or changes the entry's statement -- evidence is independent "
+                "fact, the belief stays the user's own. Call revisePOVEntry instead if the "
+                "user is directly changing their own stated belief."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "pov_id": {"type": "string"},
+                    "relation": {"type": "string", "description": "supports, challenges, or qualifies."},
+                    "evidence": {"type": "string"},
+                    "source_url": {"type": "string"},
+                    "confidence": {"type": "string", "description": "high, medium, or low. Defaults to medium."},
+                },
+                "required": ["pov_id", "relation", "evidence"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "POST", "path": "/pov/entries/{pov_id}/evidence",
+            "path_params": ["pov_id"], "query_params": [], "has_body": True,
+            "body_param_names": ["relation", "evidence", "source_url", "confidence"],
+        },
+    ),
 ]
 
 

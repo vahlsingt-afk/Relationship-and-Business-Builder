@@ -1,0 +1,216 @@
+{
+  "org_id": "ff-pilot-company",
+  "org_slug": "pilot-company",
+  "display_name": "Pilot Company",
+  "aliases": [],
+  "linked_graph_entity_id": "operator-pilot-company",
+  "headquarters": null,
+  "registered_address": null,
+  "ownership": {
+    "structure": null,
+    "owners": []
+  },
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "brand_name": "Subway",
+      "brand_entity_id": "brand-subway",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-pilot-company-0001"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Cinnabon",
+      "brand_entity_id": "brand-cinnabon",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-pilot-company-0002"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Dunkin'",
+      "brand_entity_id": "brand-dunkin",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-pilot-company-0003"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Wendy's",
+      "brand_entity_id": "brand-wendy-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-pilot-company-0004"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Arby's",
+      "brand_entity_id": "brand-arby-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-pilot-company-0005"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Taco Bell",
+      "brand_entity_id": "brand-taco-bell",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-pilot-company-0006"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Moe's Southwest Grill",
+      "brand_entity_id": "brand-moe-s-southwest-grill",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-pilot-company-0007"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Pizza Hut",
+      "brand_entity_id": "brand-pizza-hut",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-pilot-company-0008"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    }
+  ],
+  "geographic_footprint": [],
+  "people": [],
+  "technology": {},
+  "confidence_thresholds": {
+    "high_confidence_pct": 85
+  },
+  "research_status": {
+    "last_researched": null,
+    "next_scheduled_review": null,
+    "overall_profile_quality": "low"
+  },
+  "source_system": "manual_seed_import",
+  "total_identified_units": 0,
+  "template_version": "franchisee-finder-v1",
+  "created_at": "2026-10-02T14:06:23Z",
+  "updated_at": "2026-10-02T14:06:23Z"
+}

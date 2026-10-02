@@ -41,6 +41,23 @@ def _competitor_snapshot():
     }
 
 
+def _franchisee_snapshot():
+    return {
+        "organizations": [{
+            "id": "flynn-group",
+            "name": "Flynn Group",
+            "linked_graph_entity_id": "operator-flynn-group",
+            "total_identified_units": 2936,
+            "brand_count": 6,
+            "brands": ["Pizza Hut", "Applebee's"],
+            "headquarters": None,
+            "coverage": "none",
+            "priority": "enterprise_primary",
+            "research_gaps": ["headquarters", "ownership"],
+        }]
+    }
+
+
 def _vendor_snapshot():
     return {
         "competitors": [{
@@ -61,6 +78,42 @@ def test_brand_snapshot_becomes_stable_gap_ids():
         "gap:company:brand-example:leadership",
         "gap:company:brand-example:technology-stack",
     ]
+
+
+def test_franchisee_snapshot_becomes_stable_gap_ids():
+    target = gaps.normalize_franchisee_snapshot(_franchisee_snapshot())[0]
+    assert target["target_key"] == "franchisee:flynn-group"
+    assert target["entity_type"] == "restaurant_operator"
+    assert target["priority"] == "enterprise_primary"
+    assert [gap["gap_id"] for gap in target["gaps"]] == [
+        "gap:franchisee:flynn-group:headquarters",
+        "gap:franchisee:flynn-group:ownership",
+    ]
+
+
+def test_franchisees_universe_included_in_manifest(monkeypatch):
+    monkeypatch.setattr(gaps.franchisee_exporter, "export_franchisee_research_gaps", lambda **kwargs: _franchisee_snapshot())
+    manifest = gaps.build_manifest(universe="franchisees")
+    assert manifest["target_count"] == 1
+    assert manifest["targets"][0]["target_key"] == "franchisee:flynn-group"
+    assert gaps.FRANCHISEE_SOURCE in manifest["sources"]
+
+
+def test_franchisees_excluded_from_brands_only_universe(monkeypatch):
+    monkeypatch.setattr(gaps.brand_exporter, "export_research_gaps", lambda **kwargs: _brand_snapshot())
+    monkeypatch.setattr(gaps.franchisee_exporter, "export_franchisee_research_gaps", lambda **kwargs: _franchisee_snapshot())
+    manifest = gaps.build_manifest(universe="brands")
+    target_keys = {t["target_key"] for t in manifest["targets"]}
+    assert target_keys == {"company:brand-example"}
+
+
+def test_franchisee_manifest_validates_against_schema(monkeypatch):
+    monkeypatch.setattr(gaps.franchisee_exporter, "export_franchisee_research_gaps", lambda **kwargs: _franchisee_snapshot())
+    manifest = gaps.build_manifest(universe="franchisees")
+    schema_path = Path(__file__).resolve().parent.parent / "schemas" / "hunter_gap_manifest.schema.json"
+    schema = json.loads(schema_path.read_text())
+    errors = list(Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(manifest))
+    assert errors == []
 
 
 def test_competitor_exporters_merge_without_duplicate_target():

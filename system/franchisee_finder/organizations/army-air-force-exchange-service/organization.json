@@ -1,0 +1,308 @@
+{
+  "org_id": "ff-army-air-force-exchange-service",
+  "org_slug": "army-air-force-exchange-service",
+  "display_name": "Army & Air Force Exchange Service",
+  "aliases": [],
+  "linked_graph_entity_id": "operator-army-air-force-exchange-service",
+  "headquarters": null,
+  "registered_address": null,
+  "ownership": {
+    "structure": null,
+    "owners": []
+  },
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "brand_name": "Subway",
+      "brand_entity_id": "brand-subway",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-army-air-force-exchange-service-0001"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Burger King",
+      "brand_entity_id": "brand-burger-king",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-army-air-force-exchange-service-0002"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Popeyes",
+      "brand_entity_id": "brand-popeyes",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-army-air-force-exchange-service-0003"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Arby's",
+      "brand_entity_id": "brand-arby-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-army-air-force-exchange-service-0004"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Taco Bell",
+      "brand_entity_id": "brand-taco-bell",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-army-air-force-exchange-service-0005"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Einstein Bros. Bagels",
+      "brand_entity_id": "brand-einstein-bros-bagels",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-army-air-force-exchange-service-0006"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Baskin-Robbins",
+      "brand_entity_id": "brand-baskin-robbins",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-army-air-force-exchange-service-0007"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Dunkin'",
+      "brand_entity_id": "brand-dunkin",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-army-air-force-exchange-service-0008"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Wing Zone",
+      "brand_entity_id": "brand-wing-zone",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-army-air-force-exchange-service-0009"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Taco John's",
+      "brand_entity_id": "brand-taco-john-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-army-air-force-exchange-service-0010"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Manchu Wok",
+      "brand_entity_id": "brand-manchu-wok",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-army-air-force-exchange-service-0011"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Pizza Hut",
+      "brand_entity_id": "brand-pizza-hut",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-army-air-force-exchange-service-0012"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    }
+  ],
+  "geographic_footprint": [],
+  "people": [],
+  "technology": {},
+  "confidence_thresholds": {
+    "high_confidence_pct": 85
+  },
+  "research_status": {
+    "last_researched": null,
+    "next_scheduled_review": null,
+    "overall_profile_quality": "low"
+  },
+  "source_system": "manual_seed_import",
+  "total_identified_units": 0,
+  "template_version": "franchisee-finder-v1",
+  "created_at": "2026-10-02T14:06:23Z",
+  "updated_at": "2026-10-02T14:06:23Z"
+}

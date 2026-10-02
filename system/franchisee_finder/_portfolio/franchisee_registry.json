@@ -1,0 +1,1318 @@
+{
+  "registry": [
+    {
+      "org_slug": "flynn-group",
+      "display_name": "Flynn Group",
+      "first_tracked_at": "2026-10-02T14:06:22Z",
+      "last_updated_at": "2026-10-02T14:06:22Z"
+    },
+    {
+      "org_slug": "the-dhanani-group",
+      "display_name": "The Dhanani Group",
+      "first_tracked_at": "2026-10-02T14:06:22Z",
+      "last_updated_at": "2026-10-02T14:06:22Z"
+    },
+    {
+      "org_slug": "kbp-brands",
+      "display_name": "KBP Brands",
+      "first_tracked_at": "2026-10-02T14:06:22Z",
+      "last_updated_at": "2026-10-02T14:06:22Z"
+    },
+    {
+      "org_slug": "sun-holdings",
+      "display_name": "Sun Holdings",
+      "first_tracked_at": "2026-10-02T14:06:22Z",
+      "last_updated_at": "2026-10-02T14:06:22Z"
+    },
+    {
+      "org_slug": "love-s-travel-stops-country-stores",
+      "display_name": "Love's Travel Stops & Country Stores",
+      "first_tracked_at": "2026-10-02T14:06:22Z",
+      "last_updated_at": "2026-10-02T14:06:22Z"
+    },
+    {
+      "org_slug": "sizzling-platter",
+      "display_name": "Sizzling Platter",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "pilot-company",
+      "display_name": "Pilot Company",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "haza-group",
+      "display_name": "HAZA Group",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "cmg-companies",
+      "display_name": "CMG Companies",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "tasty-restaurant-group",
+      "display_name": "Tasty Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "ampler-group",
+      "display_name": "Ampler Group",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "army-air-force-exchange-service",
+      "display_name": "Army & Air Force Exchange Service",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "charter-foods",
+      "display_name": "Charter Foods",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "anchor-point-management",
+      "display_name": "Anchor Point Management",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "gps-hospitality",
+      "display_name": "GPS Hospitality",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "aramark",
+      "display_name": "Aramark",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "k-mac-enterprises",
+      "display_name": "K-MAC Enterprises",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "tacala",
+      "display_name": "Tacala",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "wks-restaurant-group",
+      "display_name": "WKS Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "purple-rock-investment",
+      "display_name": "Purple Rock Investment",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "diversified-restaurant-group",
+      "display_name": "Diversified Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "summit-restaurant-group",
+      "display_name": "Summit Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:23Z",
+      "last_updated_at": "2026-10-02T14:06:23Z"
+    },
+    {
+      "org_slug": "quality-restaurant-group",
+      "display_name": "Quality Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:24Z",
+      "last_updated_at": "2026-10-02T14:06:24Z"
+    },
+    {
+      "org_slug": "desert-de-oro-foods",
+      "display_name": "Desert De Oro Foods",
+      "first_tracked_at": "2026-10-02T14:06:24Z",
+      "last_updated_at": "2026-10-02T14:06:24Z"
+    },
+    {
+      "org_slug": "yadav-enterprises",
+      "display_name": "Yadav Enterprises",
+      "first_tracked_at": "2026-10-02T14:06:24Z",
+      "last_updated_at": "2026-10-02T14:06:24Z"
+    },
+    {
+      "org_slug": "gsr-group",
+      "display_name": "GSR Group",
+      "first_tracked_at": "2026-10-02T14:06:24Z",
+      "last_updated_at": "2026-10-02T14:06:24Z"
+    },
+    {
+      "org_slug": "kovan-group",
+      "display_name": "Kovan Group",
+      "first_tracked_at": "2026-10-02T14:06:24Z",
+      "last_updated_at": "2026-10-02T14:06:24Z"
+    },
+    {
+      "org_slug": "luihn-vantedge-partners",
+      "display_name": "Luihn VantEdge Partners",
+      "first_tracked_at": "2026-10-02T14:06:24Z",
+      "last_updated_at": "2026-10-02T14:06:24Z"
+    },
+    {
+      "org_slug": "harman-management",
+      "display_name": "Harman Management",
+      "first_tracked_at": "2026-10-02T14:06:24Z",
+      "last_updated_at": "2026-10-02T14:06:24Z"
+    },
+    {
+      "org_slug": "compass-group-usa",
+      "display_name": "Compass Group USA",
+      "first_tracked_at": "2026-10-02T14:06:24Z",
+      "last_updated_at": "2026-10-02T14:06:24Z"
+    },
+    {
+      "org_slug": "beshay-enterprises",
+      "display_name": "Beshay Enterprises",
+      "first_tracked_at": "2026-10-02T14:06:24Z",
+      "last_updated_at": "2026-10-02T14:06:24Z"
+    },
+    {
+      "org_slug": "sodexo",
+      "display_name": "Sodexo",
+      "first_tracked_at": "2026-10-02T14:06:24Z",
+      "last_updated_at": "2026-10-02T14:06:24Z"
+    },
+    {
+      "org_slug": "travelcenters-of-america",
+      "display_name": "TravelCenters of America",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "covelli-family-limited-partnership",
+      "display_name": "Covelli Family Limited Partnership",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "parikh-network",
+      "display_name": "Parikh Network",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "eyas-capital",
+      "display_name": "Eyas Capital",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "fourteen-foods",
+      "display_name": "Fourteen Foods",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "alvarado-restaurant-nation",
+      "display_name": "Alvarado Restaurant Nation",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "fresh-dining-concepts",
+      "display_name": "Fresh Dining Concepts",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "northwest-restaurants",
+      "display_name": "Northwest Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "cotti-foods",
+      "display_name": "Cotti Foods",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "delight-restaurant-group",
+      "display_name": "Delight Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "the-falcons-group",
+      "display_name": "The Falcons Group",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "fugate-enterprises",
+      "display_name": "Fugate Enterprises",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "warner-foods",
+      "display_name": "Warner Foods",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "manna-hospitality-group",
+      "display_name": "Manna Hospitality Group",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "front-range-holdings",
+      "display_name": "Front Range Holdings",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "dhanani-group",
+      "display_name": "Dhanani Group",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "anchor-point-management-group",
+      "display_name": "Anchor Point Management Group",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "mic-glen",
+      "display_name": "MIC Glen",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "border-foods",
+      "display_name": "Border Foods",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "meritage-hospitality",
+      "display_name": "Meritage Hospitality",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "covelli-enterprises",
+      "display_name": "Covelli Enterprises",
+      "first_tracked_at": "2026-10-02T14:06:25Z",
+      "last_updated_at": "2026-10-02T14:06:25Z"
+    },
+    {
+      "org_slug": "doherty-enterprises",
+      "display_name": "Doherty Enterprises",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "fmi-group",
+      "display_name": "FMI Group",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "vantedge-partners",
+      "display_name": "VantEdge Partners",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "manna",
+      "display_name": "Manna",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "d-l-rogers-corp",
+      "display_name": "D.L. Rogers Corp.",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "fsi",
+      "display_name": "FSI",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "hamra-enterprises",
+      "display_name": "Hamra Enterprises",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "boddie-noell-enterprises",
+      "display_name": "Boddie-Noell Enterprises",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "aes-restaurant-group",
+      "display_name": "AES Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "ghai-management-services",
+      "display_name": "Ghai Management Services",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "warner-foods-group",
+      "display_name": "Warner Foods Group",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "team-lyders",
+      "display_name": "Team Lyders",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "manna-development-group",
+      "display_name": "Manna Development Group",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "carlisle-corp",
+      "display_name": "Carlisle Corp.",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "redberry-restaurants",
+      "display_name": "Redberry Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "far-west-services",
+      "display_name": "Far West Services",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "b-g-food-enterprises",
+      "display_name": "B & G Food Enterprises",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "thrive-restaurant-group",
+      "display_name": "Thrive Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "southern-rock-restaurants",
+      "display_name": "Southern Rock Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "wendy-s-of-colorado-springs",
+      "display_name": "Wendy’s of Colorado Springs",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "guernsey-holdings",
+      "display_name": "Guernsey Holdings",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "ambrosia-qsr",
+      "display_name": "Ambrosia QSR",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "chunara-group-of-companies",
+      "display_name": "Chunara Group of Companies",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "southpaw",
+      "display_name": "Southpaw",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "wendy-s-of-bowling-green",
+      "display_name": "Wendy’s of Bowling Green",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "out-west-restaurant-group",
+      "display_name": "Out West Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "bajco-group",
+      "display_name": "BAJCO Group",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "retzer-organization",
+      "display_name": "Retzer Organization",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "merritt-restaurant-group",
+      "display_name": "Merritt Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "brew-crew",
+      "display_name": "Brew Crew",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "cave-enterprises",
+      "display_name": "Cave Enterprises",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "om-group",
+      "display_name": "OM Group",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "stine-enterprises",
+      "display_name": "Stine Enterprises",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "vibe-restaurants",
+      "display_name": "Vibe Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "southern-multifoods",
+      "display_name": "Southern Multifoods",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "afc-brands",
+      "display_name": "AFC Brands",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "emerge",
+      "display_name": "Emerge!",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "summerwood-corp",
+      "display_name": "Summerwood Corp.",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "north-fork-restaurant-group",
+      "display_name": "North Fork Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "ars-brands",
+      "display_name": "ARS Brands",
+      "first_tracked_at": "2026-10-02T14:06:26Z",
+      "last_updated_at": "2026-10-02T14:06:26Z"
+    },
+    {
+      "org_slug": "jai-restaurant-group",
+      "display_name": "JAI Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "grube",
+      "display_name": "Grube",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "pj-united",
+      "display_name": "PJ United",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "lemek",
+      "display_name": "Lemek",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "mrco",
+      "display_name": "MRCO",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "carolina-restaurant-group",
+      "display_name": "Carolina Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "pizza-properties",
+      "display_name": "Pizza Properties",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "meauxmentum-strategies-and-investments",
+      "display_name": "Meauxmentum Strategies and Investments",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "burgerbusters",
+      "display_name": "BurgerBusters",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "calhoun-management",
+      "display_name": "Calhoun Management",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "csm-group",
+      "display_name": "CSM Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "quality-brand-group",
+      "display_name": "Quality Brand Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "cka-management",
+      "display_name": "CKA Management",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "rackson-restaurants",
+      "display_name": "Rackson Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "high-noon-restaurant-group",
+      "display_name": "High Noon Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "pars-group",
+      "display_name": "PARS Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "bluegrass-restaurant-holdings",
+      "display_name": "Bluegrass Restaurant Holdings",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "tar-heel-capital",
+      "display_name": "Tar Heel Capital",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "the-saxton-group",
+      "display_name": "The Saxton Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "team-schostak-family-restaurants",
+      "display_name": "Team Schostak Family Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "schmidt-family-restaurant-group",
+      "display_name": "Schmidt Family Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "celebration-restaurant-group",
+      "display_name": "Celebration Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "the-rose-group",
+      "display_name": "The Rose Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "rbd-hawaii-restaurants-limited",
+      "display_name": "RBD Hawaii Restaurants Limited",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "tl-cannon",
+      "display_name": "TL Cannon",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "chaac-foods",
+      "display_name": "Chaac Foods",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "roost-rise-holdings",
+      "display_name": "Roost & Rise Holdings",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "rucker-restaurant-holdings",
+      "display_name": "Rucker Restaurant Holdings",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "diya-raishaan-holdings",
+      "display_name": "Diya & Raishaan Holdings",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "drm",
+      "display_name": "DRM",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "jri-hospitality",
+      "display_name": "JRI Hospitality",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "js-fort-group",
+      "display_name": "JS Fort Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "the-wolak-group",
+      "display_name": "The Wolak Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "emerald-city-pizza",
+      "display_name": "Emerald City Pizza",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "sms-holdings",
+      "display_name": "SMS Holdings",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "rottinghaus-company",
+      "display_name": "Rottinghaus Company",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "seaside-dining-group",
+      "display_name": "Seaside Dining Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "dyne-hospitality-group",
+      "display_name": "DYNE Hospitality Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "genesh",
+      "display_name": "Genesh",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "sterling-restaurants",
+      "display_name": "Sterling Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "irmg",
+      "display_name": "IRMG",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "roaring-fork-restaurant-group",
+      "display_name": "Roaring Fork Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "convive-brands",
+      "display_name": "Convive Brands",
+      "first_tracked_at": "2026-10-02T14:06:27Z",
+      "last_updated_at": "2026-10-02T14:06:27Z"
+    },
+    {
+      "org_slug": "23-restaurant-services",
+      "display_name": "23 Restaurant Services",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "fourjay",
+      "display_name": "Fourjay",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "c-r-restaurant-group",
+      "display_name": "C&R Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "jrn",
+      "display_name": "JRN",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "american-bread-company",
+      "display_name": "American Bread Company",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "dmac-sd",
+      "display_name": "DMAC-SD",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "metro-corral",
+      "display_name": "Metro Corral",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "rremc-restaurants",
+      "display_name": "RREMC Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "nisamex",
+      "display_name": "Nisamex",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "premium-loaves",
+      "display_name": "Premium Loaves",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "fgny",
+      "display_name": "FGNY",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "spark-restaurant-holdings",
+      "display_name": "Spark Restaurant Holdings",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "summit-restaurant-group-llc",
+      "display_name": "Summit Restaurant Group, LLC",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "anna-management",
+      "display_name": "Anna Management",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "hyde-park-burgers",
+      "display_name": "Hyde Park Burgers",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "phase-three-brands",
+      "display_name": "Phase Three Brands",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "kc-bell",
+      "display_name": "KC Bell",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "liberty-restaurant-holdings",
+      "display_name": "Liberty Restaurant Holdings",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "rbd-california-restaurants-limited",
+      "display_name": "RBD California Restaurants Limited",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "northland-restaurant-group",
+      "display_name": "Northland Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "daland-corp",
+      "display_name": "Daland Corp.",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "hoogland-foods",
+      "display_name": "Hoogland Foods",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "subs-of-the-south",
+      "display_name": "Subs of the South",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "3-brothers-restaurants",
+      "display_name": "3 Brothers Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "century-restaurants",
+      "display_name": "Century Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "adiser-orlando",
+      "display_name": "Adiser Orlando",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "falcon-holdings",
+      "display_name": "Falcon Holdings",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "the-jones-group",
+      "display_name": "The Jones Group",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "clark-business-solutions",
+      "display_name": "Clark Business Solutions",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "lehigh-valley-restaurant-brands",
+      "display_name": "Lehigh Valley Restaurant Brands",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "magic-concepts",
+      "display_name": "Magic Concepts",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "ram-z-restaurant-group",
+      "display_name": "Ram-Z Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "staab-management-co",
+      "display_name": "Staab Management Co.",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "tice",
+      "display_name": "TICE",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "jdk-management-company",
+      "display_name": "JDK Management Company",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "den-tex-central",
+      "display_name": "Den-Tex Central",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "shamrock-company",
+      "display_name": "Shamrock Company",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "royal-restaurant-group",
+      "display_name": "Royal Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "ansara-restaurant-group",
+      "display_name": "Ansara Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "avants-operations",
+      "display_name": "Avants Operations",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "stellaris-group",
+      "display_name": "Stellaris Group",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "s-group-companies",
+      "display_name": "S-Group Companies",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "value-foodservice",
+      "display_name": "Value Foodservice",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "the-munson-group",
+      "display_name": "The Munson Group",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "parrish-restaurants",
+      "display_name": "Parrish Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "sweetwater-franchise-group",
+      "display_name": "Sweetwater Franchise Group",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "jm-west-holdings",
+      "display_name": "JM West Holdings",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "cedartown-foods",
+      "display_name": "Cedartown Foods",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "serazen",
+      "display_name": "Serazen",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "brumit-restaurant-group",
+      "display_name": "Brumit Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "denco-family",
+      "display_name": "Denco Family",
+      "first_tracked_at": "2026-10-02T14:06:28Z",
+      "last_updated_at": "2026-10-02T14:06:28Z"
+    },
+    {
+      "org_slug": "pentex-restaurant-group",
+      "display_name": "Pentex Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "bmw-management",
+      "display_name": "BMW Management",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "built-different-brands",
+      "display_name": "Built Different Brands",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "utah-del-taco",
+      "display_name": "Utah Del Taco",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "us-leader-restaurants-opco",
+      "display_name": "US Leader Restaurants OpCo",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "the-mendoza-company",
+      "display_name": "The Mendoza Company",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "kk-corporation",
+      "display_name": "KK Corporation",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "all-star-management",
+      "display_name": "All Star Management",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "platinum-corral",
+      "display_name": "Platinum Corral",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "jmb-foods",
+      "display_name": "JMB Foods",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "phoenix-organization",
+      "display_name": "Phoenix Organization",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "mcjunkins-restaurant-group",
+      "display_name": "McJunkins Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "texas-subs",
+      "display_name": "Texas Subs",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "superior-restaurant-group",
+      "display_name": "Superior Restaurant Group",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "jthree",
+      "display_name": "jThree",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "legacy-food-beverage",
+      "display_name": "Legacy Food & Beverage",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "fuego-investments",
+      "display_name": "Fuego Investments",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "red-door-brands",
+      "display_name": "Red Door Brands",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "freedom-enterprises",
+      "display_name": "Freedom Enterprises",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "j-s-restaurants",
+      "display_name": "J & S Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "pmtd-restaurants",
+      "display_name": "PMTD Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "brodersen-management",
+      "display_name": "Brodersen Management",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "blue-ribbon-restaurants",
+      "display_name": "Blue Ribbon Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "ryan-restaurant-corp",
+      "display_name": "Ryan Restaurant Corp.",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "shere-foods",
+      "display_name": "Shere Foods",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "rohoho",
+      "display_name": "RoHoHo",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "rks-ventures",
+      "display_name": "RKS Ventures",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "d-d-management",
+      "display_name": "D&D Management",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "tetra-management",
+      "display_name": "Tetra Management",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "zenith-investment-group",
+      "display_name": "Zenith Investment Group",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "viking-restaurants",
+      "display_name": "Viking Restaurants",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    },
+    {
+      "org_slug": "mitsa-group",
+      "display_name": "Mitsa Group",
+      "first_tracked_at": "2026-10-02T14:06:29Z",
+      "last_updated_at": "2026-10-02T14:06:29Z"
+    }
+  ]
+}

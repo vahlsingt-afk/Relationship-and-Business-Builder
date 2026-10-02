@@ -1,0 +1,360 @@
+{
+  "org_id": "ff-sun-holdings",
+  "org_slug": "sun-holdings",
+  "display_name": "Sun Holdings",
+  "aliases": [],
+  "linked_graph_entity_id": "operator-sun-holdings",
+  "headquarters": {
+    "value": "Dallas, TX",
+    "confidence_pct": 55,
+    "status": "inferred",
+    "evidence_ids": [
+      "ff-ev-sun-holdings-0001"
+    ],
+    "as_of": "2026-10-02",
+    "last_verified": "2026-10-02",
+    "source_url": "https://www.franchisetimes.com/franchise_times_top_200/",
+    "confidence_rationale": "Franchise Times location column; not confirmed as headquarters vs. registered address."
+  },
+  "registered_address": null,
+  "ownership": {
+    "structure": null,
+    "owners": []
+  },
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "brand_name": "Arby’s",
+      "brand_entity_id": "brand-arby-s",
+      "unit_count": {
+        "value": 220,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-sun-holdings-0006"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 220,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Papa Johns",
+      "brand_entity_id": "brand-papa-johns",
+      "unit_count": {
+        "value": 218,
+        "confidence_pct": 80,
+        "status": "confirmed",
+        "evidence_ids": [
+          "ff-ev-sun-holdings-0007",
+          "ff-ev-sun-holdings-0008"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 218,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Burger King",
+      "brand_entity_id": "brand-burger-king",
+      "unit_count": {
+        "value": 138,
+        "confidence_pct": 80,
+        "status": "confirmed",
+        "evidence_ids": [
+          "ff-ev-sun-holdings-0009",
+          "ff-ev-sun-holdings-0010"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 138,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Applebee’s",
+      "brand_entity_id": "brand-applebee-s",
+      "unit_count": {
+        "value": 129,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-sun-holdings-0011"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 129,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Popeyes",
+      "brand_entity_id": "brand-popeyes",
+      "unit_count": {
+        "value": 120,
+        "confidence_pct": 80,
+        "status": "confirmed",
+        "evidence_ids": [
+          "ff-ev-sun-holdings-0012",
+          "ff-ev-sun-holdings-0013"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 120,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "McAlister’s Deli",
+      "brand_entity_id": "brand-mcalister-s-deli",
+      "unit_count": {
+        "value": 73,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-sun-holdings-0014"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 73,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "IHOP",
+      "brand_entity_id": "brand-ihop",
+      "unit_count": {
+        "value": 34,
+        "confidence_pct": 80,
+        "status": "confirmed",
+        "evidence_ids": [
+          "ff-ev-sun-holdings-0015",
+          "ff-ev-sun-holdings-0016"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 34,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Arby's",
+      "brand_entity_id": "brand-arby-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-sun-holdings-0017"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Applebee's",
+      "brand_entity_id": "brand-applebee-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-sun-holdings-0018"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "McAlister's Deli",
+      "brand_entity_id": "brand-mcalister-s-deli",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-sun-holdings-0019"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Golden Corral",
+      "brand_entity_id": "brand-golden-corral",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-sun-holdings-0020"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    }
+  ],
+  "geographic_footprint": [],
+  "people": [
+    {
+      "name": "Guillermo Perales",
+      "title": "President & CEO",
+      "role_category": "ceo",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-sun-holdings-0002"
+      ],
+      "source_url": "https://sunholdings.net/our-team/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "Jimmy Dang",
+      "title": "Senior VP of Information Technology",
+      "role_category": "technology_leader",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-sun-holdings-0003"
+      ],
+      "source_url": "https://sunholdings.net/our-team/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "Mike Zmudosky",
+      "title": "Chief Financial Officer",
+      "role_category": "other",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-sun-holdings-0004"
+      ],
+      "source_url": "https://sunholdings.net/our-team/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "Anthony Schlemmer",
+      "title": "President of Operations, QSR Division",
+      "role_category": "coo",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-sun-holdings-0005"
+      ],
+      "source_url": "https://sunholdings.net/our-team/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    }
+  ],
+  "technology": {},
+  "confidence_thresholds": {
+    "high_confidence_pct": 85
+  },
+  "research_status": {
+    "last_researched": null,
+    "next_scheduled_review": null,
+    "overall_profile_quality": "medium"
+  },
+  "source_system": "manual_seed_import",
+  "total_identified_units": 932,
+  "template_version": "franchisee-finder-v1",
+  "created_at": "2026-10-02T14:06:22Z",
+  "updated_at": "2026-10-02T14:06:22Z"
+}

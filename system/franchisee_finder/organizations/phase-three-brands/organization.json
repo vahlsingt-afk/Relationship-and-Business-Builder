@@ -1,0 +1,91 @@
+{
+  "org_id": "ff-phase-three-brands",
+  "org_slug": "phase-three-brands",
+  "display_name": "Phase Three Brands",
+  "aliases": [],
+  "linked_graph_entity_id": null,
+  "headquarters": {
+    "value": "Tampa, FL",
+    "confidence_pct": 55,
+    "status": "inferred",
+    "evidence_ids": [
+      "ff-ev-phase-three-brands-0001"
+    ],
+    "as_of": "2026-10-02",
+    "last_verified": "2026-10-02",
+    "source_url": "https://www.franchisetimes.com/franchise_times_top_200/",
+    "confidence_rationale": "Franchise Times location column; not confirmed as headquarters vs. registered address."
+  },
+  "registered_address": null,
+  "ownership": {
+    "structure": null,
+    "owners": []
+  },
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "brand_name": "Hardee’s",
+      "brand_entity_id": "brand-hardee-s",
+      "unit_count": {
+        "value": 73,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-phase-three-brands-0002"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 73,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Wingstop",
+      "brand_entity_id": "brand-wingstop",
+      "unit_count": {
+        "value": 2,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-phase-three-brands-0003"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 2,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    }
+  ],
+  "geographic_footprint": [],
+  "people": [],
+  "technology": {},
+  "confidence_thresholds": {
+    "high_confidence_pct": 85
+  },
+  "research_status": {
+    "last_researched": null,
+    "next_scheduled_review": null,
+    "overall_profile_quality": "low"
+  },
+  "source_system": "manual_seed_import",
+  "total_identified_units": 75,
+  "template_version": "franchisee-finder-v1",
+  "created_at": "2026-10-02T14:06:28Z",
+  "updated_at": "2026-10-02T14:06:28Z"
+}

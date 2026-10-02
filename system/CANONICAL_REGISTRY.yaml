@@ -238,7 +238,25 @@ domains:
       - python3 system/scripts/validate_baseline.py
     freshness_policy: every thesis must carry dated evidence and a review date
     conflict_policy: contradictory evidence lowers confidence; it never disappears
-    consolidation_target: canonical_thesis_registry
+    consolidation_target: user_pov
+    consolidation_note: >-
+      RB-2026-10-02: investigated before building user_pov (below) --
+      system/strategic_events.json/.py, listed above as a current_store,
+      turned out to be a genuinely different concept (RB's market/
+      industry EVENT convergence log, e.g. "operational AI implementation
+      risk in restaurants" sourced from trade press, not a registry of
+      Todd's own beliefs) -- not actually a second source of personal
+      theses. A grep across active_threads.yaml/account_intelligence//
+      research/ found only scattered incidental uses of the word
+      "thesis" in account-specific docs, not a second concentrated
+      source. system/00_TODD_PROFILE.md's "Strategic theses" and
+      "BridgePoint Ops engagement boundaries" sections were the real
+      concentrated content and are now migrated into user_pov (11 atomic
+      entries, migrate_todd_profile_pov.py) -- that domain is the new,
+      correct consolidation target. authority_status stays
+      distributed_consolidation_pending: the scattered account-level
+      "thesis" mentions above are a real, flagged, NOT-yet-swept gap,
+      not silently resolved by this pass.
     legacy_status: evidence_only
 
   execution_loops:
@@ -842,6 +860,155 @@ domains:
       ensure_competitor_by_slug() when the slug doesn't resolve yet,
       instead of erroring -- Todd's explicit direction, accepting a
       typo'd slug now creates a new shell rather than failing loudly.
+    legacy_status: not_applicable_new_domain
+
+  franchisee_finder:
+    authority_status: operational
+    note: >-
+      RB-2026-10-02, Phase 1 only (schema + storage + 3 read-only API ops +
+      one-time seed import -- see system/design/FRANCHISEE_FINDER_SPEC.md
+      section 16/19). An evidence-backed ownership-resolution system for
+      restaurant franchisee organizations, deliberately its own domain
+      rather than buried inside brand records. Supersedes
+      system/franchisee_hierarchy.json (a static, no-evidence Franchise
+      Times extract) as the canonical store; that file is a seed/import
+      source only (migrate_franchisee_hierarchy.py), never deleted or
+      overwritten by this domain. Confidence lives at the
+      assertion/relationship level (franchisee_finder_common.assertion_field),
+      not the record level -- a headquarters claim and a specific brand's
+      unit count on the same org can each carry different confidence.
+      Investigated before building: a SECOND real prior-art source existed
+      that the spec itself didn't know about -- multibrand_franchisee_
+      operator_ingest.py (2026-09-27) already created 47
+      multi_brand_franchisee_operator entities in
+      industry_ecosystem_intelligence below, with sourced headquarters/
+      leadership/operates-edges. The seed importer reconciles both sources
+      (28 of 47 match a Restaurant 200 operator by name/alias) rather than
+      ignoring the richer one; linked_graph_entity_id cross-references the
+      matched graph entity where one exists.
+    authoritative_store: system/franchisee_finder/organizations/*/{organization.json,evidence.jsonl}
+    projections:
+      - system/franchisee_finder/_portfolio/franchisee_registry.json
+    schemas:
+      - system/scripts/franchisee_finder_common.py (the shape; no separate JSON schema file)
+    mutation_owner:
+      - system/scripts/migrate_franchisee_hierarchy.py (one-time seed import only -- Phase 1 has no live write/submission path)
+      - system/scripts/franchisee_finder_common.py
+    validation: not_yet_built
+    freshness_policy: not_yet_declared
+    conflict_policy: not_yet_declared
+    known_gap: >-
+      Phase 1 only: no legal-entity data, no ownership-structure data, no
+      geographic-footprint data (neither seed source carries any of the
+      three), no write/correction-submission path, and no ChatGPT-research-
+      packet ingestion pipeline. Spec sections 7/10 (Codex processing
+      responsibility, user-contributed intelligence review workflow) and
+      the quarterly/monthly refresh cycle (section 8) are Phase 2+, not
+      built here.
+    legacy_status: not_applicable_new_domain
+
+  technology_lifecycle:
+    authority_status: operational
+    note: >-
+      RB-2026-10-02, Phase 1: governed module + Hunter packet importer +
+      3 API ops + Account Background Brief enrichment -- see
+      system/technology_lifecycle/README.md and system/SCHEMAS.md,
+      "Technology Lifecycle & Change Events" for the full field-level
+      schema. A Tier 1 (public_shared) layer per system/
+      DATA_TIER_ARCHITECTURE.md, sitting alongside industry_ecosystem_
+      intelligence above rather than inside any account's Tier 2 tree.
+      Every *_entity_id in every record must already resolve in
+      industry_ecosystem_intelligence's authoritative_store -- this
+      domain never creates a new entity id scheme.
+    authoritative_store: >-
+      system/technology_lifecycle/{technology_relationship_events.jsonl,
+      technology_governance.jsonl, technology_penetration.jsonl,
+      technology_change_events.jsonl, technology_forcing_signals.jsonl}
+    schemas:
+      - system/SCHEMAS.md
+      - system/scripts/technology_lifecycle.py (the enforced vocabulary; no separate JSON schema file)
+    mutation_owner:
+      - system/scripts/technology_lifecycle.py (the only module that appends to the 5 jsonl stores)
+      - system/scripts/import_technology_lifecycle_research.py (Hunter packet importer, dispatched from hunter_change_dispatch.py)
+      - system/api/server.py (createTechnologyForcingSignal only -- the one cheap/ungated chat-callable write; every other record type is importer-only)
+    validation: not_yet_built
+    freshness_policy: >-
+      last_verified_current_date on every record (see "Evidence decay" in
+      system/SCHEMAS.md) -- no automated staleness sweep yet.
+    conflict_policy: >-
+      append-only + supersedes (never edit/delete a line; a correction is
+      a new line pointing at the id it corrects) -- same discipline as
+      the rest of this layer.
+    known_gap: >-
+      Phase 1 only. Not built: Team Portal surface/UI tab, category_tenure_
+      benchmarks.json regeneration (system/SCHEMAS.md names it "Phase 1,
+      not yet implemented" but system/technology_lifecycle/README.md's own
+      "what's Phase 1" list excludes benchmark computation -- treated
+      README as authoritative for this Phase 1 slice's boundary, flagged
+      here rather than silently resolved), and any change-propensity
+      scoring (explicitly deferred per Todd's 2026-10-01 scoping decision
+      until the event corpus is large enough). The account-management
+      rollup view (system/SCHEMAS.md's "Account management application")
+      is also not built -- the brief enrichment added this pass renders
+      current state directly from get_entity_technology_profile(), not a
+      separate computed rollup.
+    legacy_status: not_applicable_new_domain
+
+  user_pov:
+    authority_status: operational
+    note: >-
+      RB-2026-10-02, Phase 1 (atomic registry + evidence links only --
+      see system/POV_REGISTRY_FEATURE_BRIEF_2026-10-01.md). Named
+      user_pov, not todds_pov/operator_pov -- a general RBB capability,
+      user-agnostic by design (ARCHITECTURE.md's "configurable core,
+      user-specific layer" principle); Todd is simply the first user
+      populating it. Deliberately separate from objective intelligence
+      (industry_ecosystem_intelligence) and from system doctrine
+      (ARCHITECTURE.md/SCHEMAS.md) -- this domain holds what the USER
+      believes or wants used as an evaluative lens, not facts about the
+      market or rules controlling how RBB behaves. This is the real
+      consolidation target for strategic_theses above (see that entry's
+      consolidation_note for what was investigated before building this).
+      Seeded from system/00_TODD_PROFILE.md's "Strategic theses" and
+      "BridgePoint Ops engagement boundaries" sections
+      (migrate_todd_profile_pov.py, 11 entries) -- that file's biography/
+      communication-style/relationship-capital-taxonomy content is
+      deliberately NOT migrated here (identity/configuration, not POV
+      claims -- see the feature brief's own four-way framing).
+    authoritative_store: system/pov/registry.json
+    evidence_stores:
+      - system/pov/events.jsonl
+      - system/pov/evidence_links.jsonl
+    schemas:
+      - system/scripts/user_pov.py (the shape; no separate JSON schema file)
+    mutation_owner:
+      - system/scripts/user_pov.py (the only module that writes registry.json/events.jsonl/evidence_links.jsonl)
+      - system/scripts/migrate_todd_profile_pov.py (one-time seed migration)
+      - system/api/server.py (addPOVEntry/revisePOVEntry/retirePOVEntry/attachPOVEvidence)
+    validation: not_yet_built
+    freshness_policy: >-
+      last_reviewed_at on every entry; no automated staleness sweep yet.
+    conflict_policy: >-
+      additive by default -- external evidence only supports/challenges/
+      qualifies an entry (attachPOVEvidence), never overwrites it. A
+      revision (revisePOVEntry) never edits in place: it creates a new
+      entry and marks the original superseded, preserving full history.
+    known_gap: >-
+      Phase 1 only (the atomic registry). Not built: POV Frameworks (the
+      second, longer-document layer the feature brief describes --
+      system/pov/frameworks/ exists as a reserved directory, empty),
+      importPOVFramework/reviewPOVFrameworkExtraction/getPOVFramework
+      (no framework-import pipeline exists yet, so these three
+      recommended ops were deliberately not built -- they'd always 404).
+      The feature brief also flags this domain as sharing a design
+      principle with the Overwrite Confirmation Queue (queued at
+      position 3, blocked as of this pass -- its plan only exists in a
+      local file from a prior session, not in this repo) and suggests
+      that queue's confirm/reject mechanism, once built, may be the
+      right surface for needs_review:true entries rather than a second
+      confirmation UI -- not resolved here; Phase 1's rbb_inferred/
+      needs_review entries have no review surface wired yet beyond
+      listPOVEntries itself.
     legacy_status: not_applicable_new_domain
 
   watchlist:
