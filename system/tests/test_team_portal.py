@@ -1131,6 +1131,36 @@ class TestAuth(unittest.TestCase):
         )
         self.assertEqual(resp.status_code, 404)
 
+    def test_docs_and_openapi_not_exposed_unauthenticated(self):
+        """RB-SECURITY-2026-10-02: the default docs_url/openapi_url/redoc_url
+        would hand anyone the full route map (every /api/admin/* path
+        included) with no auth at all -- the same issue RB-SECURITY-2026-09-03
+        already found and fixed once on server.py. Confirms the equivalent
+        fix on team_portal_api.py actually took."""
+        for path in ("/docs", "/openapi.json"):
+            resp = self.client.get(path)
+            self.assertEqual(resp.status_code, 401, f"{path} should require auth")
+        # /redoc has no gated replacement (server.py's own fix didn't add
+        # one either) -- disabled means a plain 404, which discloses
+        # nothing either.
+        self.assertEqual(self.client.get("/redoc").status_code, 404)
+
+    def test_openapi_json_accepts_valid_bearer_or_query_token(self):
+        resp = self.client.get("/openapi.json", headers={"Authorization": f"Bearer {self.token}"})
+        self.assertEqual(resp.status_code, 200)
+        self.assertIn("/api/admin/members", resp.json()["paths"])
+
+        resp = self.client.get(f"/openapi.json?token={self.token}")
+        self.assertEqual(resp.status_code, 200)
+
+        resp = self.client.get("/openapi.json?token=not-a-real-token")
+        self.assertEqual(resp.status_code, 401)
+
+    def test_docs_accepts_valid_bearer_token(self):
+        resp = self.client.get("/docs", headers={"Authorization": f"Bearer {self.token}"})
+        self.assertEqual(resp.status_code, 200)
+        self.assertIn("swagger", resp.text.lower())
+
 
 class TestEcosystemLookupRoutes(unittest.TestCase):
     """Route-level (FastAPI TestClient) coverage for the 2026-09-25
