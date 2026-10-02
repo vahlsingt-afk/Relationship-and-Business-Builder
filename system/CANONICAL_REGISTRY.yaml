@@ -889,6 +889,53 @@ domains:
       built here.
     legacy_status: not_applicable_new_domain
 
+  technology_lifecycle:
+    authority_status: operational
+    note: >-
+      RB-2026-10-02, Phase 1: governed module + Hunter packet importer +
+      3 API ops + Account Background Brief enrichment -- see
+      system/technology_lifecycle/README.md and system/SCHEMAS.md,
+      "Technology Lifecycle & Change Events" for the full field-level
+      schema. A Tier 1 (public_shared) layer per system/
+      DATA_TIER_ARCHITECTURE.md, sitting alongside industry_ecosystem_
+      intelligence above rather than inside any account's Tier 2 tree.
+      Every *_entity_id in every record must already resolve in
+      industry_ecosystem_intelligence's authoritative_store -- this
+      domain never creates a new entity id scheme.
+    authoritative_store: >-
+      system/technology_lifecycle/{technology_relationship_events.jsonl,
+      technology_governance.jsonl, technology_penetration.jsonl,
+      technology_change_events.jsonl, technology_forcing_signals.jsonl}
+    schemas:
+      - system/SCHEMAS.md
+      - system/scripts/technology_lifecycle.py (the enforced vocabulary; no separate JSON schema file)
+    mutation_owner:
+      - system/scripts/technology_lifecycle.py (the only module that appends to the 5 jsonl stores)
+      - system/scripts/import_technology_lifecycle_research.py (Hunter packet importer, dispatched from hunter_change_dispatch.py)
+      - system/api/server.py (createTechnologyForcingSignal only -- the one cheap/ungated chat-callable write; every other record type is importer-only)
+    validation: not_yet_built
+    freshness_policy: >-
+      last_verified_current_date on every record (see "Evidence decay" in
+      system/SCHEMAS.md) -- no automated staleness sweep yet.
+    conflict_policy: >-
+      append-only + supersedes (never edit/delete a line; a correction is
+      a new line pointing at the id it corrects) -- same discipline as
+      the rest of this layer.
+    known_gap: >-
+      Phase 1 only. Not built: Team Portal surface/UI tab, category_tenure_
+      benchmarks.json regeneration (system/SCHEMAS.md names it "Phase 1,
+      not yet implemented" but system/technology_lifecycle/README.md's own
+      "what's Phase 1" list excludes benchmark computation -- treated
+      README as authoritative for this Phase 1 slice's boundary, flagged
+      here rather than silently resolved), and any change-propensity
+      scoring (explicitly deferred per Todd's 2026-10-01 scoping decision
+      until the event corpus is large enough). The account-management
+      rollup view (system/SCHEMAS.md's "Account management application")
+      is also not built -- the brief enrichment added this pass renders
+      current state directly from get_entity_technology_profile(), not a
+      separate computed rollup.
+    legacy_status: not_applicable_new_domain
+
   watchlist:
     authority_status: operational
     note: >-

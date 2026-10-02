@@ -3154,6 +3154,93 @@ _EXTRA_RBB_CHAT_ONLY_TOOLS: list[tuple[dict, dict]] = [
             "path_params": ["brand_name"], "query_params": [], "has_body": False, "body_param_names": [],
         },
     ),
+    (
+        {
+            "type": "function",
+            "name": "getTechnologyLifecycleProfile",
+            "description": (
+                "Return everything Technology Lifecycle has on one brand: every tracked "
+                "technology relationship with its current lifecycle state (selected/"
+                "contracted/rollout_active/deployed/displaced/etc.), governance records, "
+                "penetration observations, reconstructed change-event narratives, and open "
+                "forcing signals (approaching EOL, leadership change, etc. that haven't yet "
+                "led to a completed switch). An empty profile is a real, honest answer -- "
+                "this brand has no technology-lifecycle research on file yet, not an error. "
+                "brand_name is resolved against ecosystem_intelligence.json's real brand/vendor "
+                "entities -- a 404 means no such entity is tracked at all."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {"brand_name": {"type": "string", "description": "e.g. 'Burger King'."}},
+                "required": ["brand_name"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/technology-lifecycle/profile/{brand_name}",
+            "path_params": ["brand_name"], "query_params": [], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "listTechnologyForcingSignals",
+            "description": (
+                "List standalone pre-change signals (approaching OS/hardware EOL, a new "
+                "CTO, a transformation announcement) that haven't yet led to a completed "
+                "technology switch -- the raw material for a future change-propensity read, "
+                "not itself a confirmed change. Optionally filter to one brand and/or one "
+                "technology_category."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "brand_name": {"type": "string"},
+                    "technology_category": {"type": "string"},
+                },
+                "required": [],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/technology-lifecycle/forcing-signals",
+            "path_params": [], "query_params": ["brand_name", "technology_category"], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "createTechnologyForcingSignal",
+            "description": (
+                "Record one standalone pre-change signal about a brand's CURRENT technology "
+                "stack -- deliberately cheap and ungated, same philosophy as createCompetitor/"
+                "addCompetitiveNote. Never call this with a signal you inferred without "
+                "saying so -- evidence_type:'rbb_inference' exists exactly for that case. "
+                "404s if brand_name doesn't resolve to an existing ecosystem_intelligence.json "
+                "entity -- this never invents a new entity id scheme."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "brand_name": {"type": "string"},
+                    "technology_category": {"type": "string"},
+                    "forcing_event_type": {"type": "string", "description": "e.g. os_eol, hardware_eol, vendor_support_sunset, leadership_change, other."},
+                    "detail": {"type": "string"},
+                    "evidence": {"type": "string"},
+                    "source_url": {"type": "string"},
+                    "confidence": {"type": "string", "description": "high, medium, or low."},
+                    "evidence_type": {"type": "string", "description": "vendor_claim, operator_statement, independent_evidence, rbb_inference, or unknown."},
+                },
+                "required": ["brand_name", "technology_category", "forcing_event_type", "detail", "evidence", "confidence", "evidence_type"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "POST", "path": "/technology-lifecycle/forcing-signals",
+            "path_params": [], "query_params": [], "has_body": True,
+            "body_param_names": ["brand_name", "technology_category", "forcing_event_type", "detail", "evidence", "source_url", "confidence", "evidence_type"],
+        },
+    ),
 ]
 
 

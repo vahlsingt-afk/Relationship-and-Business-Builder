@@ -136,6 +136,7 @@ import customers_prospects_common as cpc  # noqa: E402  # RB-2026-09-06 — unif
 import competitor_intelligence as compintel  # noqa: E402  # RB-2026-08-28 — Competitor Intelligence
 import competitor_intelligence_common as compintel_common  # noqa: E402
 import franchisee_finder_common as ff_common  # noqa: E402  # 2026-10-02 — Franchisee Finder Phase 1 (read-only + seed import)
+import technology_lifecycle as tech_lifecycle  # noqa: E402  # 2026-10-02 — Technology Lifecycle Phase 1
 import account_reference_detector  # noqa: E402  # RB-2026-08-28 — links uploaded intelligence-pipeline content to known Blue Sheets/competitors by mechanical name match
 import intelligence_index  # noqa: E402  # RB-2026-08-27 — unified "what do we have on X, and where" index
 import uploaded_document_store  # noqa: E402  # RB-2026-08-31 — retrievable full text for an uploaded document
@@ -11176,6 +11177,108 @@ def get_franchisees_by_brand(brand_name: str, x_api_key: Optional[str] = Header(
                 break
     matches.sort(key=lambda m: (m["brand_relationship"]["unit_count"]["value"] or -1), reverse=True)
     return {"contract": "rb_franchisee_by_brand_v1", "brand_name": brand_name, "match_count": len(matches), "organizations": matches}
+
+
+# ---------------------------------------------------------------------------
+# Technology Lifecycle (Phase 1, 2026-10-02) — read + one cheap/ungated
+# write (forcing signals only). system/technology_lifecycle/README.md,
+# "What exists vs. what's Phase 1": the richer structured record types
+# (relationship events, governance, penetration, change events) are
+# written only through import_technology_lifecycle_research.py's Hunter-
+# packet importer, not a chat-callable endpoint with dozens of nested
+# parameters -- same reasoning competitor-platform research's structured
+# findings go through its own importer rather than createCompetitor.
+# ---------------------------------------------------------------------------
+
+def _resolve_brand_entity_id_or_404(brand_name: str) -> str:
+    graph = ecosystem_intelligence._read_graph()
+    entity_id = ecosystem_intelligence._resolve_entity_id_any_type(brand_name, graph)
+    if not entity_id:
+        raise HTTPException(404, detail=f"'{brand_name}' does not resolve to a known entity in ecosystem_intelligence.json (no exact name/alias match, or ambiguous).")
+    return entity_id
+
+
+@app.get("/technology-lifecycle/profile/{brand_name}", tags=["compute"], operation_id="getTechnologyLifecycleProfile")
+def get_technology_lifecycle_profile(brand_name: str, x_api_key: Optional[str] = Header(None)):
+    """Return everything Technology Lifecycle has on one brand: every
+    tracked technology relationship with its current lifecycle state
+    (selected/contracted/rollout_active/deployed/displaced/etc. -- derived
+    from the most recent non-superseded event, never assumed from the
+    oldest announcement), governance records, penetration observations,
+    reconstructed change-event narratives, and open forcing signals
+    (approaching EOL, leadership change, etc. that haven't yet led to a
+    completed switch). An empty profile (every list empty) is a real,
+    honest answer -- this brand has no technology-lifecycle research on
+    file yet, not an error. brand_name is resolved against
+    ecosystem_intelligence.json's real brand/vendor entities (exact name
+    or alias only, never guessed) -- a 404 means no such entity is
+    tracked at all, which is different from a tracked brand with zero
+    lifecycle evidence."""
+    _auth(x_api_key)
+    brand_entity_id = _resolve_brand_entity_id_or_404(brand_name)
+    return tech_lifecycle.get_entity_technology_profile(brand_entity_id)
+
+
+@app.get("/technology-lifecycle/forcing-signals", tags=["compute"], operation_id="listTechnologyForcingSignals")
+def get_technology_forcing_signals(
+    brand_name: Optional[str] = Query(None, description="Filter to one brand (resolved against ecosystem_intelligence.json)."),
+    technology_category: Optional[str] = Query(None, description="Filter to one category, e.g. 'pos_hardware'."),
+    x_api_key: Optional[str] = Header(None),
+):
+    """List standalone pre-change signals (approaching OS/hardware EOL, a
+    new CTO, a transformation announcement) that haven't yet led to a
+    completed technology switch -- the raw material for a future
+    change-propensity read, not itself a confirmed change. See
+    getTechnologyLifecycleProfile for a specific brand's full picture
+    including any completed change events."""
+    _auth(x_api_key)
+    brand_entity_id = _resolve_brand_entity_id_or_404(brand_name) if brand_name else None
+    if technology_category and technology_category not in tech_lifecycle.TECHNOLOGY_CATEGORIES:
+        raise HTTPException(422, detail=f"technology_category must be one of {sorted(tech_lifecycle.TECHNOLOGY_CATEGORIES)}, got {technology_category!r}.")
+    signals = tech_lifecycle.list_forcing_signals(brand_entity_id=brand_entity_id, technology_category=technology_category)
+    return {"contract": "rb_technology_forcing_signal_list_v1", "signal_count": len(signals), "signals": signals}
+
+
+class CreateTechnologyForcingSignalBody(BaseModel):
+    brand_name: str = Field(..., description="Resolved against ecosystem_intelligence.json -- must already be a tracked brand/vendor entity.")
+    technology_category: str = Field(..., description=f"One of {sorted(tech_lifecycle.TECHNOLOGY_CATEGORIES)}.")
+    forcing_event_type: str = Field(..., description=f"One of {sorted(tech_lifecycle.FORCING_EVENT_TYPES)}.")
+    detail: str = Field(..., description="What was actually observed -- real, specific content, never a generic placeholder.")
+    evidence: str = Field(..., description="The real evidence/excerpt supporting this, never invented.")
+    source_url: Optional[str] = Field(None, description="Omit only when there is genuinely no URL (e.g. firsthand RBB observation).")
+    confidence: str = Field(..., description="One of high/medium/low.")
+    evidence_type: str = Field(..., description=f"One of {sorted(tech_lifecycle.EVIDENCE_TYPES)}. Use 'rbb_inference' for a judgment call, never upgrade it to a stronger type later without new sourcing.")
+
+
+@app.post("/technology-lifecycle/forcing-signals", tags=["write"], operation_id="createTechnologyForcingSignal")
+def post_create_technology_forcing_signal(body: CreateTechnologyForcingSignalBody, x_api_key: Optional[str] = Header(None)):
+    """Record one standalone pre-change signal about a brand's CURRENT
+    stack -- deliberately cheap and ungated (same philosophy as
+    createCompetitor/addCompetitiveNote), since this is observational
+    evidence capture, not a canonical commitment the way createBlueSheetAccount
+    is. Never call this with a signal you inferred without saying so --
+    evidence_type:'rbb_inference' exists exactly for that case. For a
+    brand with no existing ecosystem_intelligence.json entity at all,
+    this returns 404 -- Technology Lifecycle never invents a new entity
+    id scheme; the brand/vendor must be tracked there first."""
+    _auth(x_api_key)
+    brand_entity_id = _resolve_brand_entity_id_or_404(body.brand_name)
+    import uuid as _uuid
+    signal_id = f"tfs-{brand_entity_id}-{_uuid.uuid4().hex[:8]}"
+    try:
+        record = tech_lifecycle.record_forcing_signal(
+            signal_id=signal_id, brand_entity_id=brand_entity_id, entity_level="brand",
+            technology_category=body.technology_category, forcing_event_type=body.forcing_event_type,
+            detail=body.detail, evidence=body.evidence, source_url=body.source_url,
+            confidence=body.confidence, evidence_type=body.evidence_type,
+        )
+    except tech_lifecycle.TechnologyLifecycleError as exc:
+        raise HTTPException(422, detail=str(exc))
+    al.log_mutation_executed(
+        f"createTechnologyForcingSignal: signal_id={signal_id} brand={body.brand_name}",
+        source="POST /technology-lifecycle/forcing-signals",
+    )
+    return {"ok": True, "signal": record}
 
 
 class CreateCompetitiveBriefBody(BaseModel):

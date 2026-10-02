@@ -86,6 +86,7 @@ import ecosystem_intelligence as ei  # noqa: E402
 import intelligence_triage as itriage  # noqa: E402
 import customers_prospects_common as cpc  # noqa: E402
 import intelligence_index  # noqa: E402
+import technology_lifecycle as tech_lifecycle  # noqa: E402  # 2026-10-02 — Technology Lifecycle Phase 1 brief enrichment
 
 VALID_VALIDATION_STATUS = {"unvalidated", "partially_validated", "validated", "invalidated"}
 VALID_GAP_TYPE = {"missing", "stale", "conflicting"}
@@ -512,11 +513,13 @@ def retrieve_existing_intelligence(slug: str) -> dict:
     prior_brief = get_current_brief_version(slug)
 
     entity_relationships: list[dict] = []
+    brand_entity_id: str | None = None
     try:
         graph = ei._read_graph()
         display_name = dossier["account"].get("display_name", slug)
         entity_id, _is_new = ei._resolve_brand_entity_id(display_name, graph)
         if entity_id:
+            brand_entity_id = entity_id
             entities_by_id = {e["id"]: e for e in graph.get("entities") or []}
             # RB-DEFECT-2026-08-29: this list was computed but never actually
             # reached the rendered brief -- render_technology_environment_
@@ -555,6 +558,7 @@ def retrieve_existing_intelligence(slug: str) -> dict:
         "discovery_questions": questions,
         "prior_brief_version": prior_brief,
         "ecosystem_relationships": entity_relationships,
+        "brand_entity_id": brand_entity_id,
         "related_artifacts": related_artifacts,
         "account_intelligence_docs": account_intelligence_docs,
     }
@@ -819,6 +823,48 @@ def render_technology_environment_section(account: dict, ecosystem_relationships
     return lines
 
 
+def render_technology_lifecycle_section(brand_entity_id: str | None) -> list[str]:
+    """The '## Technology Lifecycle Intelligence' block -- Technology
+    Lifecycle Phase 1 brief enrichment (system/technology_lifecycle/
+    README.md, "What exists vs. what's Phase 1"). Distinct from
+    render_technology_environment_section above: that section renders
+    account.technology_stack (Todd's own curated findings) and the
+    ecosystem_intelligence.json vendor-relationship graph (what vendor is
+    used); this one renders the Technology Lifecycle event log's derived
+    CURRENT STATE per relationship (how long it's been there, what state
+    it's in -- selected/rollout_active/deployed/displaced/etc.) plus any
+    open forcing signals -- genuinely different evidence, not a
+    duplicate view. Honestly omitted (returns []) when brand_entity_id is
+    unresolved or nothing is on file yet -- never a placeholder claiming
+    "no technology change history" when the real answer is "not
+    researched yet"."""
+    if not brand_entity_id:
+        return []
+    profile = tech_lifecycle.get_entity_technology_profile(brand_entity_id)
+    if not (profile["relationships"] or profile["forcing_signals"]):
+        return []
+    lines = ["\n## Technology Lifecycle Intelligence"]
+    if profile["relationships"]:
+        lines.append("\n| Category | Vendor/Product | Current State | As of | Confidence |")
+        lines.append("|---|---|---|---|---|")
+        for rel in profile["relationships"]:
+            rk = rel["relationship_key"]
+            state = rel["current_state"]
+            product = rk.get("product") or rk.get("vendor_entity_id") or "unknown"
+            if state:
+                lines.append(
+                    f"| {rk.get('technology_category')} | {product} | {state.get('lifecycle_state')} "
+                    f"| {state.get('observed_at', '')} | {state.get('confidence', 'unknown')} |"
+                )
+            else:
+                lines.append(f"| {rk.get('technology_category')} | {product} | *(no state recorded)* | | |")
+    if profile["forcing_signals"]:
+        lines.append("\n**Open forcing signals (not yet a completed switch):**")
+        for sig in profile["forcing_signals"]:
+            lines.append(f"- [{sig.get('technology_category')}] {sig.get('forcing_event_type')}: {sig.get('detail')} (confidence: {sig.get('confidence')})")
+    return lines
+
+
 def render_related_artifacts_section(intel: dict) -> list[str]:
     """The '## Related Intelligence Artifacts' block -- other RBB
     artifacts (e.g. micro graphs) scoped to this account, with their own
@@ -903,6 +949,8 @@ def render_background_brief(slug: str, *, prepared_for: str = "", purpose: str =
     lines.extend(render_leadership_section(account))
 
     lines.extend(render_technology_environment_section(account, intel.get("ecosystem_relationships")))
+
+    lines.extend(render_technology_lifecycle_section(intel.get("brand_entity_id")))
 
     lines.extend(render_relationship_access_section(account))
 
