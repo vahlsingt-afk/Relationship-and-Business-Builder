@@ -38,6 +38,7 @@ GOVERNANCE_PATH = ROOT / "technology_governance.jsonl"
 PENETRATION_PATH = ROOT / "technology_penetration.jsonl"
 CHANGE_EVENTS_PATH = ROOT / "technology_change_events.jsonl"
 FORCING_SIGNALS_PATH = ROOT / "technology_forcing_signals.jsonl"
+FDD_SOURCES_PATH = ROOT / "fdd_sources.jsonl"
 
 # -- Shared vocabulary (system/SCHEMAS.md, "Technology Lifecycle & Change Events") --
 
@@ -85,6 +86,12 @@ PENETRATION_TYPES = {
 FORCING_EVENT_TYPES = {
     "os_eol", "hardware_eol", "pos_software_eol", "vendor_support_sunset", "compliance",
     "peripheral_incompatibility", "franchise_mandate", "leadership_change", "other",
+}
+
+# -- FDD Technology Governance & Economics (system/technology_lifecycle/
+# FDD_GOVERNANCE_ECONOMICS_BRIEF.md, §2 "FDD Source Record") --
+DOCUMENT_STATUSES = {
+    "current", "historical", "amended", "superseded", "incomplete", "secondary_copy", "not_located",
 }
 
 DEFAULT_VISIBILITY_CLASS = "public_shared"
@@ -170,7 +177,7 @@ def _non_superseded(records: list[dict]) -> list[dict]:
     -- the correcting line replaces it for "current state" purposes, while
     both stay on disk forever for audit (append-only)."""
     superseded_ids = {r.get("supersedes") for r in records if r.get("supersedes")}
-    id_keys = ("event_id", "governance_id", "observation_id", "signal_id")
+    id_keys = ("event_id", "governance_id", "observation_id", "signal_id", "fdd_id")
     def _own_id(r: dict) -> str | None:
         for k in id_keys:
             if k in r:
@@ -353,6 +360,42 @@ def record_forcing_signal(
     return _append(FORCING_SIGNALS_PATH, record)
 
 
+def record_fdd_source(
+    *, fdd_id: str, brand_id: str, fdd_year: str, document_status: str, evidence_type: str,
+    confidence: str, franchisor_entity_id: str | None = None, effective_date: str | None = None,
+    amendment_date: str | None = None, source_url: str | None = None, source_title: str | None = None,
+    accessed_date: str | None = None, prior_fdd_id: str | None = None, superseded_by_fdd_id: str | None = None,
+    notes: str | None = None, visibility_class: str = DEFAULT_VISIBILITY_CLASS, supersedes: str | None = None,
+) -> dict:
+    """One row per FDD document reviewed (brief §2) -- NOT per governance
+    fact; record_governance() below is what a reviewed FDD's actual
+    findings get written as, each citing this fdd_id as source_id.
+    document_status "not_located"/"superseded" are themselves real,
+    honest findings (a document search came up empty, or a newer filing
+    replaced this one) -- never omit a brand's FDD row just because
+    nothing was found; that's the difference between "no FDD exists" and
+    "no FDD was looked for yet" that export_fdd_target_population.py's
+    coverage computation depends on."""
+    graph = _load_graph()
+    if not _entity_exists(brand_id, graph):
+        raise TechnologyLifecycleError(f"brand_id={brand_id!r} does not resolve in ecosystem_intelligence.json")
+    if franchisor_entity_id and not _entity_exists(franchisor_entity_id, graph):
+        raise TechnologyLifecycleError(f"franchisor_entity_id={franchisor_entity_id!r} does not resolve in ecosystem_intelligence.json")
+    _assert_in(document_status, DOCUMENT_STATUSES, "document_status")
+    _assert_in(confidence, CONFIDENCE_LEVELS, "confidence")
+    _assert_in(evidence_type, EVIDENCE_TYPES, "evidence_type")
+    _assert_in(visibility_class, VISIBILITY_CLASSES, "visibility_class")
+    record = {
+        "fdd_id": fdd_id, "brand_id": brand_id, "franchisor_entity_id": franchisor_entity_id,
+        "fdd_year": fdd_year, "effective_date": effective_date, "amendment_date": amendment_date,
+        "source_url": source_url, "source_title": source_title, "accessed_date": accessed_date or today(),
+        "document_status": document_status, "document_confidence": confidence, "confidence": confidence,
+        "evidence_type": evidence_type, "prior_fdd_id": prior_fdd_id, "superseded_by_fdd_id": superseded_by_fdd_id,
+        "notes": notes, "visibility_class": visibility_class, "supersedes": supersedes,
+    }
+    return _append(FDD_SOURCES_PATH, record)
+
+
 # ---------------------------------------------------------------------------
 # Readers / derived views
 # ---------------------------------------------------------------------------
@@ -391,6 +434,11 @@ def list_forcing_signals(brand_entity_id: str | None = None, technology_category
     if technology_category:
         signals = [s for s in signals if s.get("technology_category") == technology_category]
     return signals
+
+
+def list_fdd_sources_for_brand(brand_id: str) -> list[dict]:
+    sources = _non_superseded(load_records(FDD_SOURCES_PATH))
+    return [s for s in sources if s.get("brand_id") == brand_id]
 
 
 def get_entity_technology_profile(brand_entity_id: str) -> dict:

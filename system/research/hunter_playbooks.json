@@ -126,6 +126,15 @@
       "preferred_sources": ["government_or_regulator", "public_filing", "restaurant_or_operator", "trade_press"],
       "exit_criteria": ["Mandates tied to dated disclosure", "Required and optional systems separated", "Fees and replacement obligations captured"]
     },
+    "fdd_governance_economics": {
+      "target_types": ["restaurant_brand"],
+      "default_depth": "forensic",
+      "payload_schema": "rb.fdd_governance_economics_research.v1",
+      "required_modules": ["fdd_source_record", "technology_governance", "technology_economics", "franchisor_change_authority", "historical_fdd_comparison", "permanent_brand_intelligence"],
+      "preferred_sources": ["government_or_regulator", "public_filing", "restaurant_or_operator", "trade_press"],
+      "exit_criteria": ["Current FDD located, dated, and its effective date checked before treating it as current", "Governance separated into authority, requirement, and deployment per category", "Technology-economics fields captured as disclosed ranges, not invented point estimates", "Prior FDD year compared where available; no governance fact silently overwritten", "Research gaps generated for anything not located or not resolvable"],
+      "notes": "system/technology_lifecycle/FDD_GOVERNANCE_ECONOMICS_BRIEF.md is this playbook's full field-level spec. Use `hunter_cycle.py prepare fdd_governance_economics --universe fdd --limit 25` -- export_fdd_target_population.py provides the canonical >90-location brand population locally (no Trusted Chat API call needed; see RBB_PROJECT_CUSTOM_INSTRUCTIONS' Hunter exception)."
+    },
     "restaurant_ai_pilots": {
       "target_types": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "startup", "supplier"],
       "default_depth": "standard",

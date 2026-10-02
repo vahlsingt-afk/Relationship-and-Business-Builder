@@ -18,7 +18,7 @@
         "additionalProperties": false,
         "required": ["target_key", "display_name", "entity_type", "priority", "coverage", "current_state", "gaps", "discovery_domains"],
         "properties": {
-          "target_key": {"type": "string", "pattern": "^(company|competitor|franchisee):.+$"},
+          "target_key": {"type": "string", "pattern": "^(company|competitor|franchisee|fdd):.+$"},
           "display_name": {"type": "string", "minLength": 1},
           "entity_type": {"enum": ["restaurant_brand", "restaurant_technology_company", "restaurant_operator"]},
           "priority": {"enum": ["enterprise_primary", "emerging_primary", "secondary", "explicit"]},
@@ -31,7 +31,7 @@
               "additionalProperties": false,
               "required": ["gap_id", "field", "gap_type", "question", "importance", "source_exporter"],
               "properties": {
-                "gap_id": {"type": "string", "pattern": "^gap:(company|competitor|franchisee):[^:]+:.+$"},
+                "gap_id": {"type": "string", "pattern": "^gap:(company|competitor|franchisee|fdd):[^:]+:.+$"},
                 "field": {"type": "string", "minLength": 1},
                 "gap_type": {"enum": ["missing", "stale", "low_confidence", "verification_needed", "conflicted"]},
                 "question": {"type": "string", "minLength": 1},
