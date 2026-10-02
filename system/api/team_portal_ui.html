@@ -157,11 +157,6 @@
         <button id="mi-tab-earnings">Earnings Center</button>
       </div>
 
-      <label class="mi-noise-toggle">
-        <input type="checkbox" id="mi-hide-noise" checked>
-        Hide stock price/volume noise (price moves, volume spikes, 52-week highs/lows)
-      </label>
-
       <div id="mi-trends-view-wrap">
         <div class="card">
           <h2>Top 5 Restaurant Technology Trends</h2>
@@ -186,6 +181,10 @@
             <option value="">All companies</option>
           </select>
         </div>
+        <label class="mi-noise-toggle">
+          <input type="checkbox" id="mi-hide-noise" checked>
+          Hide stock price/volume noise (price moves, volume spikes, 52-week highs/lows)
+        </label>
         <div id="mi-news-results"><p class="muted">Loading...</p></div>
       </div>
 
@@ -1133,10 +1132,7 @@ document.getElementById('mi-news-side').addEventListener('change', () => {
   loadLatestNews();
 });
 document.getElementById('mi-news-company').addEventListener('change', loadLatestNews);
-document.getElementById('mi-hide-noise').addEventListener('change', () => {
-  loadTopTrends();
-  loadLatestNews();
-});
+document.getElementById('mi-hide-noise').addEventListener('change', loadLatestNews);
 
 // A dropdown of real company names -- built from the earnings watchlist
 // (so Global Payments and every tracked vendor is selectable even with
@@ -1281,8 +1277,7 @@ function trendCardHtml(t) {
 function loadTopTrends() {
   const view = document.getElementById('mi-trends-view');
   const asOf = document.getElementById('mi-trends-asof');
-  const hideNoise = document.getElementById('mi-hide-noise').checked;
-  api('/api/market/trends?hide_noise=' + hideNoise).then((data) => {
+  api('/api/market/trends').then((data) => {
     const trends = data.trends || [];
     asOf.textContent = data.generated_at ? `Updated ${data.generated_at} (refreshes weekly)` : '';
     view.innerHTML = trends.length

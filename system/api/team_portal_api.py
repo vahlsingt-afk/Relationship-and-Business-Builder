@@ -580,14 +580,15 @@ def post_value_wedge(
 # --- Market Intelligence (2026-09-29 additions) -----------------------------
 
 @app.get("/api/market/trends")
-def get_market_trends(hide_noise: bool = False, member: dict = Depends(get_current_member)):
+def get_market_trends(member: dict = Depends(get_current_member)):
     """The persisted weekly snapshot (system/scripts/restaurant_tech_
     trends.py --write) -- never recomputed live on a page load. See that
     module's docstring for the methodology and why direction/confidence
     numbers can legitimately be backed entirely by market-activity
-    volume rather than qualitative news. hide_noise strips bare stock-
-    price/volume evidence citations -- see get_current_trends."""
-    return rtt.get_current_trends(hide_noise=hide_noise)
+    volume rather than qualitative news. Evidence citations always strip
+    bare stock-price/volume moves (2026-10-02 -- no longer an optional
+    hide_noise toggle here; see get_current_trends)."""
+    return rtt.get_current_trends()
 
 
 @app.get("/api/market/news")
