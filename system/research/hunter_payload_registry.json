@@ -11,6 +11,7 @@
     "rb.ownership_funding_ma.v1": {"collection": "records", "required_item_fields": ["target_key"]},
     "rb.supplier_ecosystem_map.v1": {"collection": "records", "required_item_fields": ["target_key"]},
     "rb.hunter_change_monitor.v1": {"collection": "records", "required_item_fields": ["target_key"]},
-    "rb.hunter_industry_theme.v1": {"collection": "patterns", "required_item_fields": ["theme", "target_keys"]}
+    "rb.hunter_industry_theme.v1": {"collection": "patterns", "required_item_fields": ["theme", "target_keys"]},
+    "rb.fdd_governance_economics_research.v1": {"collection": "fdd_governance_economics_findings", "required_item_fields": ["record_type", "payload"]}
   }
 }

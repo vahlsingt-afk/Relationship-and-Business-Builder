@@ -70,6 +70,19 @@ def _vendor_snapshot():
     }
 
 
+def _fdd_snapshot():
+    return {
+        "brands": [{
+            "id": "brand-example-burgers",
+            "name": "Example Burgers",
+            "unit_count": 500.0,
+            "segment": "LSR",
+            "coverage": "none",
+            "research_gaps": ["fdd_governance_economics"],
+        }]
+    }
+
+
 def test_brand_snapshot_becomes_stable_gap_ids():
     target = gaps.normalize_brand_snapshot(_brand_snapshot())[0]
     assert target["target_key"] == "company:brand-example"
@@ -110,6 +123,41 @@ def test_franchisees_excluded_from_brands_only_universe(monkeypatch):
 def test_franchisee_manifest_validates_against_schema(monkeypatch):
     monkeypatch.setattr(gaps.franchisee_exporter, "export_franchisee_research_gaps", lambda **kwargs: _franchisee_snapshot())
     manifest = gaps.build_manifest(universe="franchisees")
+    schema_path = Path(__file__).resolve().parent.parent / "schemas" / "hunter_gap_manifest.schema.json"
+    schema = json.loads(schema_path.read_text())
+    errors = list(Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(manifest))
+    assert errors == []
+
+
+def test_fdd_snapshot_becomes_stable_gap_ids():
+    target = gaps.normalize_fdd_snapshot(_fdd_snapshot())[0]
+    assert target["target_key"] == "fdd:brand-example-burgers"
+    assert target["entity_type"] == "restaurant_brand"
+    assert target["priority"] == "enterprise_primary"
+    assert [gap["gap_id"] for gap in target["gaps"]] == [
+        "gap:fdd:brand-example-burgers:fdd-governance-economics",
+    ]
+
+
+def test_fdd_universe_included_in_manifest(monkeypatch):
+    monkeypatch.setattr(gaps.fdd_exporter, "export_fdd_target_population", lambda **kwargs: _fdd_snapshot())
+    manifest = gaps.build_manifest(universe="fdd")
+    assert manifest["target_count"] == 1
+    assert manifest["targets"][0]["target_key"] == "fdd:brand-example-burgers"
+    assert gaps.FDD_SOURCE in manifest["sources"]
+
+
+def test_fdd_excluded_from_brands_only_universe(monkeypatch):
+    monkeypatch.setattr(gaps.brand_exporter, "export_research_gaps", lambda **kwargs: _brand_snapshot())
+    monkeypatch.setattr(gaps.fdd_exporter, "export_fdd_target_population", lambda **kwargs: _fdd_snapshot())
+    manifest = gaps.build_manifest(universe="brands")
+    target_keys = {t["target_key"] for t in manifest["targets"]}
+    assert target_keys == {"company:brand-example"}
+
+
+def test_fdd_manifest_validates_against_schema(monkeypatch):
+    monkeypatch.setattr(gaps.fdd_exporter, "export_fdd_target_population", lambda **kwargs: _fdd_snapshot())
+    manifest = gaps.build_manifest(universe="fdd")
     schema_path = Path(__file__).resolve().parent.parent / "schemas" / "hunter_gap_manifest.schema.json"
     schema = json.loads(schema_path.read_text())
     errors = list(Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(manifest))

@@ -1119,6 +1119,7 @@ import battle_card as bcard  # noqa: E402
 import value_wedge as vwedge  # noqa: E402
 import competitive_landscape as cland  # noqa: E402
 import vendor_profile_common as vpc  # noqa: E402
+import technology_lifecycle as tech_lifecycle  # noqa: E402
 
 
 def get_vendor_profile(vendor_id: str) -> dict:
@@ -1172,6 +1173,29 @@ def get_brand_profile(brand_id: str) -> dict:
     except bpc.NotFoundError as exc:
         raise NotFoundError(str(exc)) from exc
     return bpc.shareable_view(full)
+
+
+def get_fdd_governance_profile(brand_id: str) -> dict:
+    """FDD Technology Governance & Economics (brief §14, "Team Portal").
+    Everything Technology Lifecycle/FDD has on this brand: tracked
+    technology relationships and their current lifecycle state, governance
+    records (mandated/approved-vendor-list/franchisee-choice/etc.),
+    economics observations, FDD source documents reviewed, detected
+    governance-change events, penetration reconciliation, and open
+    research gaps. No redaction/is_owner branch, same reasoning as
+    get_brand_profile/get_brand_ecosystem_profile above -- this is all
+    public-source research (visibility_class default public_shared, see
+    FDD_GOVERNANCE_ECONOMICS_BRIEF.md's §19), not Todd's private editorial
+    judgment, so every teammate sees the same thing. An empty profile (no
+    exception, every list empty) is this brand's real, honest "nothing on
+    file yet" -- see get_entity_technology_profile's own docstring.
+    Raises NotFoundError only when brand_id itself isn't a tracked entity
+    at all."""
+    graph = ei._read_graph()
+    by_id = ei._index_by_id(graph["entities"])
+    if brand_id not in by_id:
+        raise NotFoundError(f"No entity '{brand_id}'")
+    return tech_lifecycle.get_entity_technology_profile(brand_id)
 
 
 def get_competitor_extended_profile(vendor_id: str) -> dict:

@@ -29,13 +29,14 @@ Run:
 from __future__ import annotations
 
 import hashlib
+import hmac
 import json
 import sys
 import time
 from pathlib import Path
 from typing import Optional
 
-from fastapi import Depends, FastAPI, Header, HTTPException, Request
+from fastapi import Depends, FastAPI, Header, HTTPException, Query, Request
 from fastapi.responses import FileResponse, HTMLResponse, Response, StreamingResponse
 from starlette.middleware.base import BaseHTTPMiddleware
 from pydantic import BaseModel
@@ -57,7 +58,14 @@ CREDENTIALS_PATH = (
 )
 MANIFEST_PATH = SYSTEM_DIR / "team" / "manifest.yaml"
 
-app = FastAPI(title="RBB Team Portal")
+# RB-SECURITY-2026-10-02: the default docs_url/openapi_url/redoc_url would
+# expose this surface's full route map (every /api/admin/* member-management
+# path included) to anyone, unauthenticated, the instant this is reachable
+# over a tunnel -- the exact issue RB-SECURITY-2026-09-03 already found and
+# fixed once on system/api/server.py. Disabled here for the same reason;
+# gated replacements are registered below, behind the same per-teammate
+# bearer-token check every other route in this module uses.
+app = FastAPI(title="RBB Team Portal", docs_url=None, redoc_url=None, openapi_url=None)
 
 
 # ---------------------------------------------------------------------------
@@ -76,6 +84,43 @@ def _load_manifest_members() -> dict[str, dict]:
     import yaml
     manifest = yaml.safe_load(MANIFEST_PATH.read_text(encoding="utf-8")) or {}
     return {m["id"]: m for m in manifest.get("members", [])}
+
+
+def _resolve_member(request: Request, token: str) -> dict:
+    """Shared core of get_current_member below: a raw bearer token (however
+    it was extracted) -> {id, name, is_owner, email}, or a 401.
+
+    Factored out so the gated /openapi.json replacement (see bottom of
+    file) can accept a token the same way Swagger UI's own browser-side
+    fetch needs it -- as a query param, since that fetch can't attach a
+    custom Authorization header -- without duplicating the real
+    credential/manifest/revocation logic."""
+    if not token:
+        raise HTTPException(status_code=401, detail="missing token")
+
+    token_hash = hashlib.sha256(token.encode("utf-8")).hexdigest()
+    creds = _load_credentials()  # read fresh every request — revocation is immediate
+    entry = None
+    member_id = None
+    for mid, rec in creds.items():
+        if hmac.compare_digest(rec.get("token_hash", ""), token_hash):
+            entry = rec
+            member_id = mid
+            break
+    if member_id:
+        request.state.member_id = member_id
+    if not entry or entry.get("revoked_at") or entry.get("suspended_at"):
+        raise HTTPException(status_code=401, detail="invalid, revoked, or suspended token")
+
+    members = _load_manifest_members()
+    member = members.get(member_id)
+    if not member or member.get("revoked_at") or member.get("suspended_at"):
+        raise HTTPException(status_code=401, detail="invalid, revoked, or suspended token")
+
+    return {
+        "id": member_id, "name": member.get("name", member_id), "is_owner": bool(member.get("is_owner")),
+        "email": member.get("email"),
+    }
 
 
 def get_current_member(request: Request, authorization: Optional[str] = Header(None)) -> dict:
@@ -108,32 +153,7 @@ def get_current_member(request: Request, authorization: Optional[str] = Header(N
     if not authorization or not authorization.startswith("Bearer "):
         raise HTTPException(status_code=401, detail="missing or malformed Authorization header")
     token = authorization[len("Bearer "):].strip()
-    if not token:
-        raise HTTPException(status_code=401, detail="missing token")
-
-    token_hash = hashlib.sha256(token.encode("utf-8")).hexdigest()
-    creds = _load_credentials()  # read fresh every request — revocation is immediate
-    entry = None
-    member_id = None
-    for mid, rec in creds.items():
-        if rec.get("token_hash") == token_hash:
-            entry = rec
-            member_id = mid
-            break
-    if member_id:
-        request.state.member_id = member_id
-    if not entry or entry.get("revoked_at") or entry.get("suspended_at"):
-        raise HTTPException(status_code=401, detail="invalid, revoked, or suspended token")
-
-    members = _load_manifest_members()
-    member = members.get(member_id)
-    if not member or member.get("revoked_at") or member.get("suspended_at"):
-        raise HTTPException(status_code=401, detail="invalid, revoked, or suspended token")
-
-    return {
-        "id": member_id, "name": member.get("name", member_id), "is_owner": bool(member.get("is_owner")),
-        "email": member.get("email"),
-    }
+    return _resolve_member(request, token)
 
 
 def require_owner(member: dict = Depends(get_current_member)) -> dict:
@@ -364,6 +384,21 @@ def get_brand_ecosystem_profile(brand_id: str, member: dict = Depends(get_curren
     distinction to make -- these fields are facts either way."""
     try:
         return tts.get_brand_profile(brand_id)
+    except tts.NotFoundError as exc:
+        raise _not_found_to_404(exc)
+
+
+@app.get("/api/brands/{brand_id}/fdd-governance-profile")
+def get_brand_fdd_governance_profile(brand_id: str, member: dict = Depends(get_current_member)):
+    """FDD Technology Governance & Economics (2026-10-02) -- tracked
+    technology relationships, governance (mandated/approved-vendor-list/
+    franchisee-choice/etc.), economics, FDD source documents, detected
+    governance-change events, penetration reconciliation, and open
+    research gaps for this brand. No is_owner branch -- same reasoning as
+    the ecosystem-profile route above: this is all public-source research,
+    not Todd's private judgment, so every teammate sees the same thing."""
+    try:
+        return tts.get_fdd_governance_profile(brand_id)
     except tts.NotFoundError as exc:
         raise _not_found_to_404(exc)
 
@@ -816,3 +851,31 @@ def get_admin_ui():
         content=_ADMIN_UI_PATH.read_text(encoding="utf-8"),
         headers={"Cache-Control": "no-store, no-cache, must-revalidate", "Pragma": "no-cache"},
     )
+
+
+# RB-SECURITY-2026-10-02: gated replacements for the disabled default
+# docs_url/openapi_url (see the FastAPI(...) constructor above) -- same
+# content, same per-teammate bearer-token check every other route in this
+# module uses. `token` query param exists only because Swagger UI's own
+# browser-side fetch to openapi_url can't attach a custom Authorization
+# header; a real Bearer header still works too (same precedent as
+# server.py's x_api_key_q for its own gated /openapi.json).
+@app.get("/openapi.json", include_in_schema=False)
+def get_openapi_json(
+    request: Request,
+    authorization: Optional[str] = Header(None),
+    token: Optional[str] = Query(None),
+):
+    if token:
+        _resolve_member(request, token)
+    else:
+        get_current_member(request, authorization)
+    from fastapi.openapi.utils import get_openapi as _get_openapi
+    return _get_openapi(title=app.title, version="0.1.0", routes=app.routes)
+
+
+@app.get("/docs", response_class=HTMLResponse, include_in_schema=False)
+def get_docs(request: Request, authorization: Optional[str] = Header(None)):
+    get_current_member(request, authorization)
+    from fastapi.openapi.docs import get_swagger_ui_html
+    return get_swagger_ui_html(openapi_url="/openapi.json?token=" + (authorization or "").removeprefix("Bearer ").strip(), title=app.title + " - Docs")

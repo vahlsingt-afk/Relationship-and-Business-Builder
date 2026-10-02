@@ -1,14 +1,99 @@
 # RBB FDD Technology Governance & Economics — Implementation Brief
 
-**Status: received 2026-10-01, not yet implemented.** This is a larger,
-separate program from the Technology Lifecycle Phase 0 work in this same
-folder — recorded here verbatim (lightly reformatted) so it isn't lost,
-and so a future session has the full brief plus a compatibility note
-without re-deriving it. Do not start building against this until a
-dedicated session scopes it properly — it's a significant architecture
-commitment (entity resolution, a new FDD source-record type, economics
-observations, historical-change detection, and a real importer), not a
-quick add.
+**Status: Phase 1 implemented 2026-10-02.** Received 2026-10-01 as a
+larger, separate program from the Technology Lifecycle Phase 0 work in
+this same folder; scoped and built the same week after a live incident
+(a Codex/ChatGPT-Project Hunter task blocked trying to reach the Trusted
+Chat API for this program's `>90`-location population) made the "needs a
+dedicated session" caveat below concrete. See "What Phase 1 actually
+built" directly below for what's real vs. what's still open — the
+original brief text (unedited) follows after that for full field-level
+reference.
+
+**Original framing, 2026-10-01 (superseded by the status above, kept for
+context):** Do not start building against this until a dedicated session
+scopes it properly — it's a significant architecture commitment (entity
+resolution, a new FDD source-record type, economics observations,
+historical-change detection, and a real importer), not a quick add.
+
+## What Phase 1 actually built (2026-10-02)
+
+Governed module: `technology_lifecycle.py` gained `record_fdd_source`,
+`record_economics_observation`, `record_governance_change_event`,
+`record_penetration_reconciliation`, `record_fdd_research_gap`, and a
+mutable `queue_entity_resolution_review`/`resolve_entity_resolution_review`/
+`reject_entity_resolution_review` review queue (deliberately NOT
+append-only, unlike every other store here — see its own section comment
+for why). §3/§4's governance fields (contractual_authority,
+current_requirement, named_vendor_id, grandfathering_status, etc.) needed
+no new writer at all — they fit inside the existing `record_governance()`'s
+`fdd_sourced_fields` dict, which Technology Lifecycle Phase 1 had already
+built generic enough to cover them.
+
+New stores (all in this folder): `fdd_sources.jsonl`,
+`technology_economics.jsonl`, `technology_governance_change_events.jsonl`,
+`technology_penetration_reconciliation.jsonl`, `fdd_research_gaps.jsonl`,
+`entity_resolution_review.json`.
+
+**Population source (the piece that unblocked the live incident):**
+`export_fdd_target_population.py` — every `ecosystem_intelligence.json`
+brand with `unit_count > 90`, batched in groups of 25, coverage computed
+against `fdd_sources.jsonl`. Wired into Hunter as a new `--universe fdd`
+and a dedicated `fdd_governance_economics` playbook
+(`hunter_cycle.py prepare fdd_governance_economics --universe fdd --limit 25`)
+— entirely local, no network call.
+
+**Importer:** `import_fdd_research.py`, same narrow-importer shape as
+`import_technology_lifecycle_research.py` (idempotent content-hash log,
+dry-run/confirm/sweep), dispatching 10 record types including
+`entity_resolution_review` (§1's safety valve — an unresolvable entity
+mention queues for human review instead of a rejection or an invented
+entity). Wired into `hunter_change_dispatch.py` for
+`payload_schema: "rb.fdd_governance_economics_research.v1"`.
+
+**The brief's own "operational addition"** (a sample JSON contract plus
+one simulated brand import, to catch a schema problem on one record
+before hundreds) is done: `FDD_SAMPLE_PACKET.json` in this folder covers
+all 10 record types; `system/tests/test_import_fdd_research.py`'s
+`TestSampleContractSimulatedImport` runs it through the real importer
+against an isolated fixture (never the real `ecosystem_intelligence.json`
+or real stores) and asserts a clean, zero-rejection receipt.
+
+**API + Team Portal + Account Background Brief (§13/§14):**
+`getTechnologyLifecycleProfile` (existing) now also returns
+`fdd_sources`/`economics`/`governance_change_events`/
+`penetration_reconciliation`/`open_research_gaps` — one shared derived
+view, not a parallel endpoint, matching this brief's own Core
+Architectural Principle. New `listFddResearchGaps`,
+`listEntityResolutionReviewQueue`, `resolveEntityResolutionReview`,
+`rejectEntityResolutionReview`. Team Portal:
+`GET /api/brands/{brand_id}/fdd-governance-profile` (read-only, no
+redaction — this is all public-source research). Account Background
+Brief: new `render_fdd_governance_economics_section()`, wired in right
+after the existing Technology Lifecycle section.
+
+**Still open / not built in Phase 1** (real gaps, not silently skipped):
+- **§12 Permanent Brand Intelligence** (franchisor_legal_entity,
+  franchise_term, remodel_cadence, transfer_provisions, etc.) — these
+  belong on brand-level records (`brand_profile_common.py`), out of this
+  technology-specific layer's scope; not touched.
+- **§15 Competitive Intelligence Integration** (vendor-level
+  mandated-relationship/approved-vendor counts automatically surfaced on
+  competitor profiles) and **§16 Opportunity Intelligence** (displacement-
+  opportunity classification from governance+penetration+forcing-signal
+  composition) — both real, designed-for-in-the-brief integrations that
+  need their own scoping pass; the underlying data they'd read
+  (governance, penetration_reconciliation, forcing_signals) all exists
+  now, nothing consumes it for these two purposes yet.
+- **Benchmark computation / change-propensity scoring** — unchanged from
+  Technology Lifecycle Phase 1's own "not yet" list.
+- **No chat-callable creation tool for the structured record types** —
+  by design; these are Hunter-research-pipeline-only, same as Technology
+  Lifecycle Phase 1.
+
+---
+
+## Original brief text (2026-10-01, unedited below)
 
 ## Compatibility with what already exists (as of 2026-10-01)
 

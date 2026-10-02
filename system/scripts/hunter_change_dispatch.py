@@ -14,6 +14,7 @@ import brand_profile_common as bpc  # noqa: E402
 import hunter  # noqa: E402
 import import_competitor_platform_research as competitor_importer  # noqa: E402
 import import_technology_lifecycle_research as tech_lifecycle_importer  # noqa: E402
+import import_fdd_research as fdd_importer  # noqa: E402
 import mutation_policy  # noqa: E402
 
 
@@ -93,6 +94,13 @@ def dispatch(packet: dict, *, dry_run: bool = True) -> dict:
     # pattern, for the technology_replacement_lifecycle playbook's payload.
     if packet.get("payload_schema") == "rb.technology_lifecycle_research.v1":
         imported = tech_lifecycle_importer.import_findings(packet, packet_id=packet["packet_id"], dry_run=dry_run)
+        summary["payload_import"] = imported
+        summary["canonical_applied"] += imported.get("applied", 0)
+
+    # FDD Technology Governance & Economics (2026-10-02): same narrow-importer
+    # pattern, for the fdd_governance_economics playbook's payload.
+    if packet.get("payload_schema") == "rb.fdd_governance_economics_research.v1":
+        imported = fdd_importer.import_findings(packet, packet_id=packet["packet_id"], dry_run=dry_run)
         summary["payload_import"] = imported
         summary["canonical_applied"] += imported.get("applied", 0)
 

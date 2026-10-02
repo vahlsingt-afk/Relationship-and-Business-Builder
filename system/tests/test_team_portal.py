@@ -1131,6 +1131,36 @@ class TestAuth(unittest.TestCase):
         )
         self.assertEqual(resp.status_code, 404)
 
+    def test_docs_and_openapi_not_exposed_unauthenticated(self):
+        """RB-SECURITY-2026-10-02: the default docs_url/openapi_url/redoc_url
+        would hand anyone the full route map (every /api/admin/* path
+        included) with no auth at all -- the same issue RB-SECURITY-2026-09-03
+        already found and fixed once on server.py. Confirms the equivalent
+        fix on team_portal_api.py actually took."""
+        for path in ("/docs", "/openapi.json"):
+            resp = self.client.get(path)
+            self.assertEqual(resp.status_code, 401, f"{path} should require auth")
+        # /redoc has no gated replacement (server.py's own fix didn't add
+        # one either) -- disabled means a plain 404, which discloses
+        # nothing either.
+        self.assertEqual(self.client.get("/redoc").status_code, 404)
+
+    def test_openapi_json_accepts_valid_bearer_or_query_token(self):
+        resp = self.client.get("/openapi.json", headers={"Authorization": f"Bearer {self.token}"})
+        self.assertEqual(resp.status_code, 200)
+        self.assertIn("/api/admin/members", resp.json()["paths"])
+
+        resp = self.client.get(f"/openapi.json?token={self.token}")
+        self.assertEqual(resp.status_code, 200)
+
+        resp = self.client.get("/openapi.json?token=not-a-real-token")
+        self.assertEqual(resp.status_code, 401)
+
+    def test_docs_accepts_valid_bearer_token(self):
+        resp = self.client.get("/docs", headers={"Authorization": f"Bearer {self.token}"})
+        self.assertEqual(resp.status_code, 200)
+        self.assertIn("swagger", resp.text.lower())
+
 
 class TestEcosystemLookupRoutes(unittest.TestCase):
     """Route-level (FastAPI TestClient) coverage for the 2026-09-25
@@ -1397,6 +1427,98 @@ class TestEcosystemLookupRoutes(unittest.TestCase):
     def test_battle_card_route_unknown_vendor_404(self):
         resp = self.client.post("/api/vendors/vendor-does-not-exist/battle-card", headers=self._auth(owner=True))
         self.assertEqual(resp.status_code, 404)
+
+
+class TestFddGovernanceProfileRoute(unittest.TestCase):
+    """FDD Technology Governance & Economics (2026-10-02, brief §14) --
+    GET /api/brands/{brand_id}/fdd-governance-profile. Same auth-fixture
+    pattern as TestAuth/TestEcosystemLookupRoutes, plus isolation of
+    technology_lifecycle.py's own store paths (its real jsonl files are
+    only schema-header-only scaffolding, but isolate anyway -- same
+    discipline as test_technology_lifecycle_api.py)."""
+
+    def setUp(self):
+        import tempfile
+        import hashlib
+        self.tmpdir = tempfile.TemporaryDirectory()
+        tmp = Path(self.tmpdir.name)
+
+        self.token = "test-token-fdd-route"
+        self.creds_path = tmp / "creds.json"
+        self.creds_path.write_text(json.dumps({
+            "jsmith": {"token_hash": hashlib.sha256(self.token.encode()).hexdigest(),
+                       "created_at": "2026-10-02T00:00:00+00:00", "revoked_at": None},
+        }))
+        self.manifest_path = tmp / "manifest.yaml"
+        import yaml
+        self.manifest_path.write_text(yaml.safe_dump({
+            "members": [{"id": "jsmith", "name": "Jane Smith", "added_at": "2026-10-02T00:00:00+00:00", "revoked_at": None}],
+        }))
+        self._manifest_patch = patch.object(team_portal_api, "MANIFEST_PATH", self.manifest_path)
+        self._creds_patch = patch.object(team_portal_api, "CREDENTIALS_PATH", self.creds_path)
+        self._manifest_patch.start()
+        self._creds_patch.start()
+
+        graph_path = tmp / "ecosystem_intelligence.json"
+        graph_path.write_text(json.dumps(_graph_fixture()))
+        self._graph_path_patch = patch.object(tts.ei.core, "ECOSYSTEM_INTELLIGENCE_PATH", graph_path)
+        self._graph_path_patch.start()
+
+        self._tl_orig = {
+            name: getattr(tts.tech_lifecycle, name) for name in (
+                "RELATIONSHIP_EVENTS_PATH", "GOVERNANCE_PATH", "PENETRATION_PATH", "CHANGE_EVENTS_PATH",
+                "FORCING_SIGNALS_PATH", "FDD_SOURCES_PATH", "TECHNOLOGY_ECONOMICS_PATH",
+                "GOVERNANCE_CHANGE_EVENTS_PATH", "PENETRATION_RECONCILIATION_PATH", "FDD_RESEARCH_GAPS_PATH",
+                "ENTITY_RESOLUTION_REVIEW_PATH",
+            )
+        }
+        for name in self._tl_orig:
+            setattr(tts.tech_lifecycle, name, tmp / f"{name}.jsonl")
+
+        self.client = TestClient(team_portal_api.app)
+
+    def tearDown(self):
+        self._manifest_patch.stop()
+        self._creds_patch.stop()
+        self._graph_path_patch.stop()
+        for name, path in self._tl_orig.items():
+            setattr(tts.tech_lifecycle, name, path)
+        self.tmpdir.cleanup()
+
+    def test_requires_auth(self):
+        resp = self.client.get("/api/brands/brand-acme-burgers/fdd-governance-profile")
+        self.assertEqual(resp.status_code, 401)
+
+    def test_known_brand_returns_honest_empty_profile(self):
+        resp = self.client.get(
+            "/api/brands/brand-acme-burgers/fdd-governance-profile",
+            headers={"Authorization": f"Bearer {self.token}"},
+        )
+        self.assertEqual(resp.status_code, 200)
+        body = resp.json()
+        self.assertEqual(body["brand_entity_id"], "brand-acme-burgers")
+        for key in ("fdd_sources", "economics", "governance_change_events", "penetration_reconciliation", "open_research_gaps"):
+            self.assertEqual(body[key], [])
+
+    def test_unknown_brand_404(self):
+        resp = self.client.get(
+            "/api/brands/brand-does-not-exist/fdd-governance-profile",
+            headers={"Authorization": f"Bearer {self.token}"},
+        )
+        self.assertEqual(resp.status_code, 404)
+
+    def test_recorded_fdd_source_surfaces_through_the_route(self):
+        tts.tech_lifecycle.record_fdd_source(
+            fdd_id="fdd-acme-2026", brand_id="brand-acme-burgers", fdd_year="2026",
+            document_status="current", evidence_type="independent_evidence", confidence="high",
+        )
+        resp = self.client.get(
+            "/api/brands/brand-acme-burgers/fdd-governance-profile",
+            headers={"Authorization": f"Bearer {self.token}"},
+        )
+        self.assertEqual(resp.status_code, 200)
+        self.assertEqual(len(resp.json()["fdd_sources"]), 1)
+        self.assertEqual(resp.json()["fdd_sources"][0]["fdd_id"], "fdd-acme-2026")
 
 
 if __name__ == "__main__":

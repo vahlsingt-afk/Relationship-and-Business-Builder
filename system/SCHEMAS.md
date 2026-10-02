@@ -1586,6 +1586,88 @@ Regenerated from `technology_change_events.jsonl` (Phase 1, not yet implemented)
 
 The numeric Change Propensity Score, its variable weighting, and the false-positive/non-switch classifier are intentionally not modeled here — they require enough real switch/non-switch sample size first (Todd's 2026-10-01 scoping decision), and should not be calculated until the event corpus is large and balanced across switches, renewals, abandoned projects, and non-switches. `technology_forcing_signals.jsonl` and `technology_penetration.jsonl` exist now precisely so that evidence is already accumulating by the time that layer is built. The account-management rollup view above is likewise a future derived view, not a new store.
 
+### FDD Technology Governance & Economics — Phase 1, 2026-10-02
+
+Full field-level spec: `system/technology_lifecycle/FDD_GOVERNANCE_ECONOMICS_BRIEF.md` (the brief, plus "What Phase 1 actually built"). Six new stores, all append-only/supersedes except `entity_resolution_review.json` (a mutable workflow queue — see its own note below). Every `brand_id`/`*_entity_id` must already resolve in `ecosystem_intelligence.json`, same invariant as the rest of this layer.
+
+`fdd_sources.jsonl` — one row per FDD document reviewed:
+
+```json
+{
+  "fdd_id": "fdd-chipotle-2026", "brand_id": "brand-chipotle", "franchisor_entity_id": null,
+  "fdd_year": "2026", "effective_date": "2026-04-01", "amendment_date": null,
+  "source_url": "...", "source_title": "...", "accessed_date": "2026-10-02",
+  "document_status": "current | historical | amended | superseded | incomplete | secondary_copy | not_located",
+  "document_confidence": "high | medium | low", "evidence_type": "independent_evidence",
+  "prior_fdd_id": "fdd-chipotle-2024", "superseded_by_fdd_id": null, "notes": "...",
+  "visibility_class": "public_shared", "supersedes": null
+}
+```
+
+Governance facts themselves still go through `technology_governance.jsonl` (above) via the existing `record_governance()` — its `fdd_sourced_fields` dict carries every brief §3/§4 field (`contractual_authority`, `current_requirement`, `named_vendor_id`, `named_product_id`, `approved_alternatives`, `new_store_requirement`, `existing_store_requirement`, `grandfathering_status`, `conversion_deadline`, `franchisee_choice`, `geographic_scope`, `operator_scope`, `source_item`, `source_page`, `source_excerpt_or_summary`, `effective_from`, `effective_to`, `fdd_id`, `last_verified_date`) — authority, requirement, and deployment are kept as separate named fields, never collapsed into one.
+
+`technology_economics.jsonl` — fees/costs/subsidies as disclosed ranges, never invented point estimates:
+
+```json
+{
+  "observation_id": "eco-chipotle-pos-2026", "brand_id": "brand-chipotle", "technology_category": "pos",
+  "fdd_id": "fdd-chipotle-2026", "source_url": "...",
+  "initial_technology_investment": null, "hardware_cost": null, "software_fee": null,
+  "recurring_technology_fee": "1.5% of gross sales, monthly", "cost_range_low": 8000, "cost_range_high": 15000,
+  "cost_unit": "usd_per_location_initial", "franchisee_pays": true, "franchisor_subsidy": false,
+  "vendor_subsidy": false, "supplier_rebate_or_commission": null, "no_cap_disclosed": true,
+  "payment_frequency": "monthly", "notes": "...", "confidence": "high", "evidence_type": "independent_evidence",
+  "observed_at": "2026-10-02", "last_verified_date": "2026-10-02", "visibility_class": "public_shared",
+  "supersedes": null
+}
+```
+
+`technology_governance_change_events.jsonl` — a detected change between two FDD years' governance, kept distinct from the vendor-relationship lifecycle ledger (these are brand × category governance-authority changes, not necessarily tied to one vendor relationship):
+
+```json
+{
+  "change_event_id": "gce-chipotle-pos-2026", "brand_id": "brand-chipotle", "technology_category": "pos",
+  "change_type": "vendor_removed_from_approved_list | vendor_added_to_approved_list | optional_to_mandated | approved_to_exclusive | new_store_mandate_created | grandfathering_created | grandfathering_ended | conversion_deadline_created | technology_fee_increased | technology_fee_decreased | franchisor_authority_changed",
+  "effective_date": "2026-01-01", "from_value": "approved_vendor_list", "to_value": "mandated",
+  "prior_fdd_id": "fdd-chipotle-2024", "new_fdd_id": "fdd-chipotle-2026",
+  "evidence": "...", "source_url": "...", "confidence": "high", "evidence_type": "independent_evidence",
+  "observed_at": "2026-10-02", "visibility_class": "public_shared", "supersedes": null
+}
+```
+
+`technology_penetration_reconciliation.jsonl` — how an FDD governance mandate reconciles with what's actually known to be installed; never overwrites a raw `technology_penetration.jsonl` observation:
+
+```json
+{
+  "reconciliation_id": "rec-chipotle-pos-2026", "relationship_key": {"brand_entity_id": "brand-chipotle", "technology_category": "pos", "vendor_entity_id": "vendor-example"},
+  "reconciliation_status": "standard_vendor | known_competing_installed_base | grandfathering_possible | migration_in_progress | penetration_unknown | conversion_deadline_unknown",
+  "conversion_deadline": "2028-01-01", "evidence": "...", "source_url": "...",
+  "confidence": "medium", "evidence_type": "independent_evidence", "observed_at": "2026-10-02",
+  "visibility_class": "public_shared", "supersedes": null
+}
+```
+
+`fdd_research_gaps.jsonl` — missing information as a structured gap, never silently dropped. Closing a gap is a new record (fresh id) with `status: "resolved"` and `supersedes` naming the gap it resolves:
+
+```json
+{
+  "fdd_gap_id": "gap-chipotle-grandfathering", "brand_id": "brand-chipotle", "status": "open | resolved",
+  "gap_type": "current_vendor_unknown | governance_unknown | approved_vendor_list_incomplete | penetration_unknown | grandfathering_unknown | conversion_deadline_unknown | payment_flexibility_unknown | current_FDD_not_located | historical_FDD_missing | conflicting_vendor_evidence",
+  "technology_category": "pos", "detail": "...", "observed_at": "2026-10-02",
+  "visibility_class": "public_shared", "supersedes": null
+}
+```
+
+`entity_resolution_review.json` — **the one mutable store in this layer** (brief §1's safety valve against silently creating a duplicate entity): `{"items": {"<review_id>": {...}}}`, status changes in place (`pending` → `resolved`/`rejected`), matching `blue_sheets/_portfolio/review_queue.json`'s precedent rather than this layer's own append-only default — a review item's whole point is to be updated, not superseded.
+
+```json
+{
+  "review_id": "err-chipotle-loyalty-vendor", "raw_name_or_identifier": "SamplePoints Loyalty Platform",
+  "context": "...", "candidate_entity_ids": [], "status": "pending | resolved | rejected",
+  "queued_at": "2026-10-02T12:00:00Z", "resolved_entity_id": null, "resolved_at": null
+}
+```
+
 ---
 
 ## Franchisee Finder — `system/franchisee_finder/`

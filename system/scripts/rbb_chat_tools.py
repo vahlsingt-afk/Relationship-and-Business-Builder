@@ -3244,6 +3244,105 @@ _EXTRA_RBB_CHAT_ONLY_TOOLS: list[tuple[dict, dict]] = [
     (
         {
             "type": "function",
+            "name": "listFddResearchGaps",
+            "description": (
+                "List open FDD Technology Governance & Economics research gaps (current_vendor_unknown, "
+                "governance_unknown, approved_vendor_list_incomplete, penetration_unknown, "
+                "grandfathering_unknown, conversion_deadline_unknown, payment_flexibility_unknown, "
+                "current_FDD_not_located, historical_FDD_missing, conflicting_vendor_evidence). "
+                "Cross-brand by default; pass brand_name to scope to one brand (same gaps also appear on "
+                "that brand's getTechnologyLifecycleProfile under open_research_gaps)."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {"brand_name": {"type": "string"}},
+                "required": [],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/technology-lifecycle/fdd-research-gaps",
+            "path_params": [], "query_params": ["brand_name"], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "listEntityResolutionReviewQueue",
+            "description": (
+                "List FDD (or other Technology Lifecycle) research mentions of an entity (vendor, "
+                "franchisor, product) that couldn't be confidently matched to an existing "
+                "ecosystem_intelligence.json entity -- the safety valve against silently creating a "
+                "duplicate entity. Defaults to status='pending' (the actual review queue); pass an "
+                "empty/omitted status explicitly only if you need resolved/rejected history too."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {"status": {"type": "string", "description": "pending, resolved, or rejected. Defaults to pending."}},
+                "required": [],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/technology-lifecycle/entity-resolution-review",
+            "path_params": [], "query_params": ["status"], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "resolveEntityResolutionReview",
+            "description": (
+                "Confirm which real, existing entity a queued, unresolved research mention actually "
+                "refers to -- NEVER a guess; only call this after the user tells you the real entity. "
+                "This never creates a new entity -- resolved_entity_name must already resolve against "
+                "ecosystem_intelligence.json (404 if not)."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "review_id": {"type": "string"},
+                    "resolved_entity_name": {"type": "string", "description": "The real entity's name/alias, e.g. 'PAR Technology'."},
+                },
+                "required": ["review_id", "resolved_entity_name"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "POST", "path": "/technology-lifecycle/entity-resolution-review/{review_id}/resolve",
+            "path_params": ["review_id"], "query_params": [], "has_body": True,
+            "body_param_names": ["resolved_entity_name"],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "rejectEntityResolutionReview",
+            "description": (
+                "Dismiss a queued entity-resolution review item without resolving it to any entity -- "
+                "use when the mention isn't a real new entity at all (a typo, a non-entity term, a "
+                "duplicate of an already-queued item). Never use this to silently approve an uncertain "
+                "match -- call resolveEntityResolutionReview with the real entity instead."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "review_id": {"type": "string"},
+                    "reason": {"type": "string"},
+                },
+                "required": ["review_id", "reason"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "POST", "path": "/technology-lifecycle/entity-resolution-review/{review_id}/reject",
+            "path_params": ["review_id"], "query_params": [], "has_body": True,
+            "body_param_names": ["reason"],
+        },
+    ),
+    (
+        {
+            "type": "function",
             "name": "listPOVEntries",
             "description": (
                 "List the user's atomic POV entries -- their own beliefs, hypotheses, "

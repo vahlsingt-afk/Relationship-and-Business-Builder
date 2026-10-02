@@ -11283,6 +11283,97 @@ def post_create_technology_forcing_signal(body: CreateTechnologyForcingSignalBod
 
 
 # ---------------------------------------------------------------------------
+# FDD Technology Governance & Economics (2026-10-02) — most reads live on
+# getTechnologyLifecycleProfile above (get_entity_technology_profile was
+# extended with fdd_sources/economics/governance_change_events/
+# penetration_reconciliation/open_research_gaps, same "ingest once, expose
+# everywhere" principle the brief's own Core Architectural Principle
+# states). These two routes cover what that profile read can't: the
+# cross-brand research-gap queue and the entity-resolution review queue
+# (brief §1/§17), both of which Hunter's import_fdd_research.py writes to.
+# ---------------------------------------------------------------------------
+
+@app.get("/technology-lifecycle/fdd-research-gaps", tags=["compute"], operation_id="listFddResearchGaps")
+def get_fdd_research_gaps(
+    brand_name: Optional[str] = Query(None, description="Filter to one brand (resolved against ecosystem_intelligence.json)."),
+    x_api_key: Optional[str] = Header(None),
+):
+    """Open FDD research gaps (brief §17) -- current_vendor_unknown,
+    governance_unknown, penetration_unknown, grandfathering_unknown,
+    conversion_deadline_unknown, etc. Cross-brand by default so a review
+    pass can work the whole open queue; pass brand_name to scope to one
+    brand's gaps (same gaps also surface on that brand's
+    getTechnologyLifecycleProfile under open_research_gaps)."""
+    _auth(x_api_key)
+    brand_entity_id = _resolve_brand_entity_id_or_404(brand_name) if brand_name else None
+    gaps = tech_lifecycle.list_fdd_research_gaps(brand_id=brand_entity_id)
+    return {"contract": "rb_fdd_research_gap_list_v1", "gap_count": len(gaps), "gaps": gaps}
+
+
+@app.get("/technology-lifecycle/entity-resolution-review", tags=["compute"], operation_id="listEntityResolutionReviewQueue")
+def get_entity_resolution_review_queue(
+    status: Optional[str] = Query("pending", description=f"One of {sorted(tech_lifecycle.ENTITY_RESOLUTION_REVIEW_STATUSES)}, or omit for every item regardless of status."),
+    x_api_key: Optional[str] = Header(None),
+):
+    """FDD research (or any Technology Lifecycle research) that named an
+    entity it couldn't confidently resolve against ecosystem_
+    intelligence.json -- brief §1's safety valve against silently creating
+    a duplicate entity. Defaults to status='pending' (the actual review
+    queue); pass status=None to see resolved/rejected history too."""
+    _auth(x_api_key)
+    if status and status not in tech_lifecycle.ENTITY_RESOLUTION_REVIEW_STATUSES:
+        raise HTTPException(422, detail=f"status must be one of {sorted(tech_lifecycle.ENTITY_RESOLUTION_REVIEW_STATUSES)}, got {status!r}.")
+    items = tech_lifecycle.list_entity_resolution_review(status=status)
+    return {"contract": "rb_entity_resolution_review_list_v1", "item_count": len(items), "items": items}
+
+
+class ResolveEntityResolutionReviewBody(BaseModel):
+    resolved_entity_name: str = Field(..., description="The real entity's name/alias, resolved against ecosystem_intelligence.json -- must already be a tracked entity. This never creates a new entity.")
+
+
+@app.post("/technology-lifecycle/entity-resolution-review/{review_id}/resolve", tags=["write"], operation_id="resolveEntityResolutionReview")
+def post_resolve_entity_resolution_review(review_id: str, body: ResolveEntityResolutionReviewBody, x_api_key: Optional[str] = Header(None)):
+    """Confirms which real, existing entity an unresolved research mention
+    actually refers to. 404 if review_id doesn't exist or
+    resolved_entity_name doesn't resolve to a real entity -- this never
+    invents a new entity id scheme, same invariant every Technology
+    Lifecycle write enforces."""
+    _auth(x_api_key)
+    resolved_entity_id = _resolve_brand_entity_id_or_404(body.resolved_entity_name)
+    try:
+        record = tech_lifecycle.resolve_entity_resolution_review(review_id, resolved_entity_id=resolved_entity_id)
+    except tech_lifecycle.TechnologyLifecycleError as exc:
+        raise HTTPException(404, detail=str(exc))
+    al.log_mutation_executed(
+        f"resolveEntityResolutionReview: review_id={review_id} resolved_entity_id={resolved_entity_id}",
+        source="POST /technology-lifecycle/entity-resolution-review/{review_id}/resolve",
+    )
+    return {"ok": True, "item": record}
+
+
+class RejectEntityResolutionReviewBody(BaseModel):
+    reason: str = Field(..., description="Why this mention isn't a real resolvable entity (e.g. a typo, a non-entity term, a duplicate of an already-queued item).")
+
+
+@app.post("/technology-lifecycle/entity-resolution-review/{review_id}/reject", tags=["write"], operation_id="rejectEntityResolutionReview")
+def post_reject_entity_resolution_review(review_id: str, body: RejectEntityResolutionReviewBody, x_api_key: Optional[str] = Header(None)):
+    """Dismisses a queued review item without resolving it to any entity --
+    use when the mention isn't a real new entity at all (never use this to
+    silently approve an uncertain match; call resolve with the real entity
+    instead)."""
+    _auth(x_api_key)
+    try:
+        record = tech_lifecycle.reject_entity_resolution_review(review_id, reason=body.reason)
+    except tech_lifecycle.TechnologyLifecycleError as exc:
+        raise HTTPException(404, detail=str(exc))
+    al.log_mutation_executed(
+        f"rejectEntityResolutionReview: review_id={review_id} reason={body.reason}",
+        source="POST /technology-lifecycle/entity-resolution-review/{review_id}/reject",
+    )
+    return {"ok": True, "item": record}
+
+
+# ---------------------------------------------------------------------------
 # User POV Registry (Phase 1, 2026-10-02) — atomic, governed user beliefs
 # and operating principles, distinct from objective intelligence
 # (ecosystem graph) and system doctrine (ARCHITECTURE.md/SCHEMAS.md).

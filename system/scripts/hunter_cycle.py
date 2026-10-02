@@ -54,7 +54,7 @@ def main() -> int:
     prep = sub.add_parser("prepare")
     prep.add_argument("playbook")
     prep.add_argument("--depth")
-    prep.add_argument("--universe", choices=["all", "brands", "competitors", "franchisees"], default="all")
+    prep.add_argument("--universe", choices=["all", "brands", "competitors", "franchisees", "fdd"], default="all")
     prep.add_argument("--target", action="append", dest="target_keys")
     prep.add_argument("--limit", type=int)
     prep.add_argument("--output", required=True)

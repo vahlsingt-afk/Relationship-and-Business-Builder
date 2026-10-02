@@ -47,6 +47,14 @@ implemented) in `FDD_GOVERNANCE_ECONOMICS_BRIEF.md` in this folder.
 | `technology_forcing_signals.jsonl` | Append-only log of standalone pre-change signals observed about a brand's *current* stack (OS/hardware EOL approaching, new CTO, transformation announcement) — not yet a completed switch. | Empty — schema header only. |
 | `category_tenure_benchmarks.json` | Derived tenure statistics (mean/median/p25/p75/n) per technology category and segment. | Stub — `"status": "not_yet_computed"`. Regenerated from the event log once enough events exist; never hand-edited. |
 | `RESEARCH_KICKOFF.md` | How to prepare and finalize the Hunter lifecycle playbook. | Ready to use. |
+| `fdd_sources.jsonl` | FDD Technology Governance & Economics (Phase 1, 2026-10-02) — one row per FDD document reviewed, with `document_status` lifecycle. | Empty — schema header only until real research runs. |
+| `technology_economics.jsonl` | FDD economics observations (fees, costs, subsidies, caps) — disclosed ranges, never invented point estimates. | Empty — schema header only. |
+| `technology_governance_change_events.jsonl` | Detected year-over-year FDD governance changes (`optional_to_mandated`, `technology_fee_increased`, etc.), distinct from the vendor-relationship lifecycle ledger above. | Empty — schema header only. |
+| `technology_penetration_reconciliation.jsonl` | How an FDD governance mandate reconciles with what's actually known to be installed — never overwrites a raw penetration observation. | Empty — schema header only. |
+| `fdd_research_gaps.jsonl` | Structured FDD research gaps (`current_vendor_unknown`, `grandfathering_unknown`, etc.) — closing one is a new record, never an in-place edit. | Empty — schema header only. |
+| `entity_resolution_review.json` | Mutable review queue for research mentions of an entity that couldn't be confidently resolved — the one store in this folder that isn't append-only (status changes in place: pending → resolved/rejected). | Empty until research queues an item. |
+| `FDD_SAMPLE_PACKET.json` | Sample JSON contract covering all 10 FDD record types — the brief's own "operational addition," run through the real importer in `test_import_fdd_research.py` against an isolated fixture. | Ready to use as a schema reference. |
+| `FDD_GOVERNANCE_ECONOMICS_BRIEF.md` | Full FDD Technology Governance & Economics field-level spec, plus what Phase 1 (2026-10-02) actually built vs. what's still open. | Phase 1 implemented. |
 
 ## Two working hypotheses this dataset tests
 

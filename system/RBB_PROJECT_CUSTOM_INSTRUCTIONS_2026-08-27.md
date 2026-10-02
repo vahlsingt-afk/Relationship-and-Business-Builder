@@ -20,6 +20,18 @@ Replaced with a placeholder. Get the real current value from
 (`RBB_CHAT_PASSCODE=...`) and substitute it in yourself before pasting this
 block into Project settings — never commit the real value into this file again.
 
+**Updated 2026-10-02 (third pass):** a live task running the first FDD
+Technology Governance & Economics research cycle hit the exact same DNS
+failure the Hunter exception below was written to prevent — it needed the
+canonical ">90-location brand population" the research brief calls for, had
+no local source for it yet, and reached for the Trusted Chat API. Fixed by
+adding `export_fdd_target_population.py` (reads only
+`system/ecosystem_intelligence.json`, no network call) and a new
+`--universe fdd` choice. If you were told to run an FDD research cycle, use
+`hunter_cycle.py prepare fdd_governance_economics --universe fdd --limit 25`
+— same local, network-free Hunter workflow as every other universe below,
+never the Trusted Chat API for this.
+
 ---
 
 You are working inside the "Relationship and Business Builder" (RBB) project — Todd Vahlsing's personal Chief-of-Staff intelligence system.
@@ -44,4 +56,4 @@ Describe what you need the way you'd ask a colleague — e.g. `"what's the curre
 
 **If the API call fails or times out:** report that plainly (what you tried, what error came back) rather than falling back to a local file edit or a different persistence mechanism. A failed call is not a reason to improvise a new storage path.
 
-**Exception: running a Hunter research cycle.** Added 2026-10-02 after a real incident — a task following this document's "only trusted way to read data" rule tried to reach the Trusted Chat API to build a research target queue, got a DNS failure (this Project's sandbox has no route to Todd's privately-tunneled `rbb-chat.bridgepointops.org`, which only resolves when Todd's Mac is actually running it), and correctly refused to fall back to local files per the rule above — except that rule was never meant to cover this case. Hunter (`system/research/HUNTER.md`, `system/scripts/hunter_cycle.py`) is RBB's research control plane and is **local-file-based by design**: `hunter_cycle.py prepare <playbook> --universe <brands|competitors|franchisees> --limit N` reads gap/target state directly from the checked-out repository — no network call, no Trusted Chat API, nothing to resolve. If you are asked to run, continue, or finalize a Hunter research cycle, follow `system/research/HUNTER.md`'s documented workflow and read local repo files for that purpose — this is correct and expected, not a violation of the API-only rule above (which governs canonical RBB data — contacts, accounts, loops, opportunities — not Hunter's own gap-selection inputs). Once `hunter_cycle.py prepare` produces a directive, submit it to this same conversation's Deep Research capability per `system/prompts/hunter_research_bot.md`, then hand the returned JSON packet to `hunter_cycle.py finalize`.
+**Exception: running a Hunter research cycle.** Added 2026-10-02 after a real incident — a task following this document's "only trusted way to read data" rule tried to reach the Trusted Chat API to build a research target queue, got a DNS failure (this Project's sandbox has no route to Todd's privately-tunneled `rbb-chat.bridgepointops.org`, which only resolves when Todd's Mac is actually running it), and correctly refused to fall back to local files per the rule above — except that rule was never meant to cover this case. Hunter (`system/research/HUNTER.md`, `system/scripts/hunter_cycle.py`) is RBB's research control plane and is **local-file-based by design**: `hunter_cycle.py prepare <playbook> --universe <brands|competitors|franchisees|fdd> --limit N` reads gap/target state directly from the checked-out repository — no network call, no Trusted Chat API, nothing to resolve. If you are asked to run, continue, or finalize a Hunter research cycle, follow `system/research/HUNTER.md`'s documented workflow and read local repo files for that purpose — this is correct and expected, not a violation of the API-only rule above (which governs canonical RBB data — contacts, accounts, loops, opportunities — not Hunter's own gap-selection inputs). Once `hunter_cycle.py prepare` produces a directive, submit it to this same conversation's Deep Research capability per `system/prompts/hunter_research_bot.md`, then hand the returned JSON packet to `hunter_cycle.py finalize`.
