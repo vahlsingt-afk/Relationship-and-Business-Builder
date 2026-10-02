@@ -147,7 +147,11 @@ def _confidence_for(recent_count: int) -> str:
 
 
 def compute_top_trends(*, window_days: int = _DEFAULT_WINDOW_DAYS, top_n: int = _DEFAULT_TOP_N) -> dict:
-    all_items = tmi._load_market_signals_json() + tmi._load_market_signals_earnings_jsonl()
+    all_items = (
+        tmi._load_market_signals_json()
+        + tmi._load_market_signals_earnings_jsonl()
+        + tmi._load_market_signals_feed_jsonl()
+    )
     today = date.today()
     recent_cutoff = (today - timedelta(days=window_days)).isoformat()
     prior_cutoff = (today - timedelta(days=2 * window_days)).isoformat()

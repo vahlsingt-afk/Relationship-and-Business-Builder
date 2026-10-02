@@ -498,6 +498,42 @@ def add_gap_point(
     return {"ok": True, "competitor_slug": slug, "vs_genius": comp["vs_genius"]}
 
 
+def correct_gap_point(
+    slug: str, side: str, old_point: str, new_point: str, *, evidence_id: str | None = None,
+) -> dict:
+    """Fix a gap-analysis point that's factually wrong -- add_gap_point()
+    above is append-only by design (every point is a discrete, sourced
+    claim), but that has no path for correcting one that was simply
+    incorrect, as opposed to adding a new one. Matches by exact existing
+    `point` text rather than evidence_id, since one evidence_id (e.g. a
+    recovered positioning doc) commonly backs several distinct points --
+    matching on evidence_id alone could correct the wrong sibling point.
+    Raises ValueError if old_point doesn't match exactly one entry, so a
+    stale caller surfaces loudly rather than silently correcting nothing
+    or the wrong thing."""
+    if side not in ("genius", "competitor"):
+        raise ValueError("side must be 'genius' or 'competitor'")
+    if not (new_point or "").strip():
+        raise ValueError("new_point must not be empty")
+    data = cic.load_competitor(slug)
+    comp = data["competitor"]
+    key = "genius_advantages" if side == "genius" else "competitor_advantages"
+    entries = (comp.get("vs_genius") or {}).get(key, [])
+    matches = [e for e in entries if e.get("point") == old_point]
+    if not matches:
+        raise ValueError(f"no {key} point matches old_point exactly for {slug!r}")
+    if len(matches) > 1:
+        raise ValueError(f"old_point matches {len(matches)} {key} entries for {slug!r} -- ambiguous")
+    entry = matches[0]
+    entry["point"] = new_point.strip()
+    entry["corrected_at"] = cic.now_iso()
+    if evidence_id is not None:
+        entry["evidence_id"] = evidence_id
+    comp["updated_at"] = cic.now_iso()
+    cic.save_json(cic.competitor_dir(slug) / "competitor.json", comp)
+    return {"ok": True, "competitor_slug": slug, "vs_genius": comp["vs_genius"]}
+
+
 # ---------------------------------------------------------------------------
 # Step 3c — category-scoped RM battle cards (user-supplied, same discipline
 # as add_competitive_note/add_gap_point: structured, never inferred, partial

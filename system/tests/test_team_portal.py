@@ -852,6 +852,59 @@ class TestCompetitorProfileRedaction(unittest.TestCase):
         self.assertNotIn("Todd's POV", redacted)
 
 
+class TestRedactInternalSources(unittest.TestCase):
+    """Real 2026-10-02 finding: the "Todd's POV" section blocklist above
+    never covered this -- competitor_intelligence.py's render_profile()
+    cites every evidence record's raw `source` field verbatim in EVERY
+    category section (Reference customers, Strengths, Weaknesses,
+    Positioning notes, ...), and real production data had "Todd Vahlsing,
+    2026-09-12", "Ryan Hildebrand and Todd Vahlsing Teams conversation",
+    and "Todd-supplied PAR update..." all visible to every teammate
+    loading PAR Technology's Competitor Profile. Confirms the same lesson
+    TestTeamSafeBackgroundBrief below already learned once (a blocklist on
+    one named section misses real content elsewhere) applies here too."""
+
+    def test_internal_source_replaced_with_generic_label(self):
+        markdown = "## Reference customers\n- (2026-09-12) PAR is Wendy's loyalty provider. — *Todd Vahlsing, 2026-09-12*\n"
+        redacted = tts._redact_internal_sources(markdown)
+        self.assertNotIn("Todd Vahlsing", redacted)
+        self.assertIn("Internal RBB research", redacted)
+        self.assertIn("PAR is Wendy's loyalty provider", redacted)  # the claim itself is untouched
+
+    def test_url_source_left_untouched(self):
+        markdown = "## Strengths\n- (2026-09-26) Marquee enterprise logos — *https://partech.com/press-releases/x*\n"
+        redacted = tts._redact_internal_sources(markdown)
+        self.assertEqual(redacted, markdown)
+
+    def test_colleague_name_source_also_redacted(self):
+        """Not just Todd -- any internal/human-supplied attribution, since
+        the signal is "not a URL," not a fixed name list."""
+        markdown = "## Weaknesses\n- (2026-09-12) Some claim. — *Ryan Hildebrand and Todd Vahlsing Teams conversation, 2026-09-12*\n"
+        redacted = tts._redact_internal_sources(markdown)
+        self.assertNotIn("Ryan Hildebrand", redacted)
+        self.assertNotIn("Todd Vahlsing", redacted)
+
+    def test_ask_todd_for_details_pointer_untouched(self):
+        """A deliberately different, already-safe pattern (competitor_
+        intelligence.py's own uploaded-document-mention pointer, fixed
+        separately for a worse confidential-excerpt leak) -- must not be
+        mangled by this regex, which only matches a trailing "— *source*"."""
+        markdown = "## Other evidence\n- (2026-08-28) An uploaded document mentions this competitor: *screenshot.png* — ask Todd for details.\n"
+        redacted = tts._redact_internal_sources(markdown)
+        self.assertEqual(redacted, markdown)
+
+    def test_mixed_sections_only_internal_sources_change(self):
+        markdown = (
+            "## Reference customers\n"
+            "- (2026-09-12) Internal claim. — *Todd Vahlsing, 2026-09-12*\n"
+            "- (2026-09-26) External claim. — *https://example.com/story*\n"
+        )
+        redacted = tts._redact_internal_sources(markdown)
+        self.assertIn("Internal RBB research", redacted)
+        self.assertIn("https://example.com/story", redacted)
+        self.assertNotIn("Todd Vahlsing", redacted)
+
+
 TEST_BRIEF_DISPLAY_NAME = "Test Fixture Team Portal Brand"
 TEST_BRIEF_SLUG = "test-fixture-team-portal-brand"  # must match ei._slug(TEST_BRIEF_DISPLAY_NAME) — resolve_account() derives this from the brand entity's name
 

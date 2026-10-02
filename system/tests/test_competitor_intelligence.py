@@ -185,6 +185,55 @@ class TestGapAnalysis(_IsolatedRootMixin, unittest.TestCase):
             ci.add_gap_point("acme-pos", "genius", "some point", category="not_a_real_product_line")
 
 
+class TestCorrectGapPoint(_IsolatedRootMixin, unittest.TestCase):
+    """Real 2026-10-02 finding: add_gap_point() is append-only by design,
+    with no path for fixing a point that was simply wrong (as opposed to
+    adding a new one). PAR Technology's profile had a factually incorrect
+    "Genius wins: PAR does not process payments itself" point -- PAR does
+    have its own payments/gateway (on Vantiv rails), it's bolted on rather
+    than payments-first. correct_gap_point() is the real fix path."""
+
+    def setUp(self):
+        super().setUp()
+        cic.create_competitor_shell("acme-pos", "Acme POS", None)
+        ci.add_gap_point("acme-pos", "genius", "Genius wins on integration depth")
+        ci.add_gap_point("acme-pos", "genius", "Genius wins on integration depth")  # duplicate, for ambiguity test
+        ci.add_gap_point("acme-pos", "competitor", "Acme wins on price")
+
+    def test_corrects_matching_point_in_place(self):
+        result = ci.correct_gap_point(
+            "acme-pos", "competitor", "Acme wins on price", "Acme wins on price in SMB only",
+            evidence_id="note-0099",
+        )
+        entries = result["vs_genius"]["competitor_advantages"]
+        self.assertEqual(len(entries), 1)  # corrected in place, not appended
+        self.assertEqual(entries[0]["point"], "Acme wins on price in SMB only")
+        self.assertEqual(entries[0]["evidence_id"], "note-0099")
+        self.assertIn("corrected_at", entries[0])
+
+    def test_no_matching_point_raises(self):
+        with self.assertRaises(ValueError):
+            ci.correct_gap_point("acme-pos", "competitor", "a point that was never added", "new text")
+
+    def test_ambiguous_match_raises(self):
+        with self.assertRaises(ValueError):
+            ci.correct_gap_point("acme-pos", "genius", "Genius wins on integration depth", "new text")
+
+    def test_invalid_side_rejected(self):
+        with self.assertRaises(ValueError):
+            ci.correct_gap_point("acme-pos", "nobody", "Acme wins on price", "new text")
+
+    def test_empty_new_point_rejected(self):
+        with self.assertRaises(ValueError):
+            ci.correct_gap_point("acme-pos", "competitor", "Acme wins on price", "   ")
+
+    def test_correction_never_touches_the_other_side(self):
+        ci.correct_gap_point("acme-pos", "competitor", "Acme wins on price", "corrected")
+        data = cic.load_competitor("acme-pos")
+        genius_points = [e["point"] for e in data["competitor"]["vs_genius"]["genius_advantages"]]
+        self.assertEqual(genius_points, ["Genius wins on integration depth", "Genius wins on integration depth"])
+
+
 class TestRenderCompetitorProfile(_IsolatedRootMixin, unittest.TestCase):
     def setUp(self):
         super().setUp()

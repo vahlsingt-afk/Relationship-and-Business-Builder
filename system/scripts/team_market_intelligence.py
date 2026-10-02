@@ -42,7 +42,25 @@ import team_artifact_footer as footer  # noqa: E402
 
 MARKET_SIGNALS_PATH = ROOT / "system" / "inbox" / "market_signals.json"
 MARKET_SIGNALS_EARNINGS_PATH = ROOT / "system" / "inbox" / "market_signals_earnings.jsonl"
+# 2026-10-02: market_source_feeds.py's real, already-scheduled trade-press
+# RSS feeder (7 curated sources) writes here -- real feedback found this
+# file existed and was already being refreshed, but nothing in this module
+# ever read it, so its content never reached Latest News or Top 5 Trends.
+# See system/ROADMAP.md, "Team Portal Latest News / Top 5 Trends" for the
+# full root-cause writeup.
+MARKET_SIGNALS_FEED_PATH = ROOT / "system" / "inbox" / "market_signals_feed.jsonl"
 EARNINGS_CALENDAR_PATH = ROOT / "system" / "earnings_calendar.yaml"
+
+# market_source_feeds.py's own category classifier predates this module's
+# CATEGORY_LABELS taxonomy and uses a few different names for the same real
+# concepts -- normalized here, at the one place this feed is read, rather
+# than changing market_source_feeds.py's own output (daily_brief.py's
+# condensed-industry-context consumer, via market_signals.py, reads that
+# output independently and is untouched by this map).
+_FEED_CATEGORY_NORMALIZE = {
+    "unit_growth": "operator_expansion",
+    "m_and_a": "ma_pe_activity",
+}
 
 
 class NotFoundError(Exception):
@@ -137,6 +155,32 @@ def _load_market_signals_earnings_jsonl() -> list[dict]:
     return items
 
 
+def _load_market_signals_feed_jsonl() -> list[dict]:
+    """market_source_feeds.py's real trade-press RSS output -- the
+    genuinely qualitative vendor+operator content this module was missing
+    (see MARKET_SIGNALS_FEED_PATH's own comment above). Same shape as
+    market_signals_earnings.jsonl's rows; category values get normalized
+    to this module's own taxonomy so _section_for() and CATEGORY_LABELS
+    route/label them correctly."""
+    if not MARKET_SIGNALS_FEED_PATH.exists():
+        return []
+    items = []
+    with open(MARKET_SIGNALS_FEED_PATH, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                item = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            category = item.get("category")
+            if category in _FEED_CATEGORY_NORMALIZE:
+                item["category"] = _FEED_CATEGORY_NORMALIZE[category]
+            items.append(item)
+    return items
+
+
 # Allowlist only -- see module docstring. Never pass a raw signal record
 # through; every field a teammate sees is named explicitly here.
 def _allowlist_news_item(item: dict) -> dict:
@@ -170,7 +214,18 @@ def _section_for(item: dict) -> str:
         return "Earnings"
     if "leadership" in category or "leadership" in signal_type.lower():
         return "Leadership Changes"
-    if any(k in category for k in ("m&a", "acquisition", "funding", "investment")):
+    # "ma_pe" matches this module's own "ma_pe_activity" category value --
+    # real 2026-10-02 finding: that value, and market_source_feeds.py's
+    # "m_and_a" (normalized to it above), never matched any of the other
+    # keys here, so this branch was dead code for every real category this
+    # taxonomy actually produces. "merger"/"acquisition" also checked
+    # against signal_type, matching market_source_feeds.py's own
+    # merger_acquisition/divestiture_selloff/investment_announcement
+    # classifications.
+    if (
+        any(k in category for k in ("m&a", "ma_pe", "acquisition", "funding", "investment"))
+        or any(k in signal_type.lower() for k in ("merger", "acquisition", "divestiture", "investment_announcement"))
+    ):
         return "M&A and Funding"
     # Real 2026-09-29 finding: no record in either underlying feed ever
     # carries source_type == "press_release" -- that literal value never
@@ -194,7 +249,7 @@ def get_latest_news(
     *, days: int = 7, company: Optional[str] = None, category: Optional[str] = None,
     side: Optional[str] = None, watchlist_only: bool = False, hide_noise: bool = False,
 ) -> dict:
-    raw = _load_market_signals_json() + _load_market_signals_earnings_jsonl()
+    raw = _load_market_signals_json() + _load_market_signals_earnings_jsonl() + _load_market_signals_feed_jsonl()
     cutoff = date.today() - timedelta(days=days)
 
     filtered = []
