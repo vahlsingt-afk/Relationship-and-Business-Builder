@@ -1,0 +1,168 @@
+{
+  "org_id": "ff-diversified-restaurant-group",
+  "org_slug": "diversified-restaurant-group",
+  "display_name": "Diversified Restaurant Group",
+  "aliases": [],
+  "linked_graph_entity_id": "operator-diversified-restaurant-group",
+  "headquarters": {
+    "value": "Las Vegas, NV",
+    "confidence_pct": 55,
+    "status": "inferred",
+    "evidence_ids": [
+      "ff-ev-diversified-restaurant-group-0001"
+    ],
+    "as_of": "2026-10-02",
+    "last_verified": "2026-10-02",
+    "source_url": "https://www.franchisetimes.com/franchise_times_top_200/",
+    "confidence_rationale": "Franchise Times location column; not confirmed as headquarters vs. registered address."
+  },
+  "registered_address": null,
+  "ownership": {
+    "structure": null,
+    "owners": []
+  },
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "brand_name": "Taco Bell",
+      "brand_entity_id": "brand-taco-bell",
+      "unit_count": {
+        "value": 342,
+        "confidence_pct": 80,
+        "status": "confirmed",
+        "evidence_ids": [
+          "ff-ev-diversified-restaurant-group-0006",
+          "ff-ev-diversified-restaurant-group-0007"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 342,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Arby’s",
+      "brand_entity_id": "brand-arby-s",
+      "unit_count": {
+        "value": 27,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-diversified-restaurant-group-0008"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 27,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Arby's",
+      "brand_entity_id": "brand-arby-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-diversified-restaurant-group-0009"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    }
+  ],
+  "geographic_footprint": [],
+  "people": [
+    {
+      "name": "Garret Walti",
+      "title": "Director of IT",
+      "role_category": "technology_leader",
+      "confidence_pct": 97,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-diversified-restaurant-group-0002"
+      ],
+      "source_url": "https://cyberlynx.com/podcast/it-should-be-boring-ai-security-and-restaurant-tech-with-garret-walti-ep-229",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "Jon Castro",
+      "title": "IT Operations Manager",
+      "role_category": "operations_leader",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-diversified-restaurant-group-0003"
+      ],
+      "source_url": "https://drgfood.com/jon-castro-champion-of-it-operations/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "SG Ellison",
+      "title": "Chief Executive Officer",
+      "role_category": "ceo",
+      "confidence_pct": 95,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-diversified-restaurant-group-0004"
+      ],
+      "source_url": "https://finance.yahoo.com/sectors/technology/articles/taco-bell-franchisee-reorganizes-executive-164648916.html",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "Todd Kelly",
+      "title": "Brand President",
+      "role_category": "coo",
+      "confidence_pct": 95,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-diversified-restaurant-group-0005"
+      ],
+      "source_url": "https://finance.yahoo.com/sectors/technology/articles/taco-bell-franchisee-reorganizes-executive-164648916.html",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    }
+  ],
+  "technology": {},
+  "confidence_thresholds": {
+    "high_confidence_pct": 85
+  },
+  "research_status": {
+    "last_researched": null,
+    "next_scheduled_review": null,
+    "overall_profile_quality": "medium"
+  },
+  "source_system": "manual_seed_import",
+  "total_identified_units": 369,
+  "template_version": "franchisee-finder-v1",
+  "created_at": "2026-10-02T14:06:23Z",
+  "updated_at": "2026-10-02T14:06:23Z"
+}

@@ -3075,6 +3075,85 @@ _EXTRA_RBB_CHAT_ONLY_TOOLS: list[tuple[dict, dict]] = [
             "path_params": [], "query_params": [], "has_body": False, "body_param_names": [],
         },
     ),
+    (
+        {
+            "type": "function",
+            "name": "listFranchiseeOrganizations",
+            "description": (
+                "List every franchisee organization Franchisee Finder has on file -- "
+                "multi-brand restaurant franchisee groups (e.g. Flynn Group, Sun Holdings) "
+                "and large foodservice contractors (e.g. Sodexo, Aramark) with at least one "
+                "identified restaurant-brand relationship. Call this for 'who are our "
+                "biggest franchisee operators' / 'which franchisees operate more than N "
+                "restaurants' or to find the right org_slug for getFranchiseeProfile. Use "
+                "queryFranchiseesByBrand instead when the question is about one specific "
+                "brand (e.g. 'who are Taco Bell's franchisees')."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "min_units": {"type": "integer", "description": "Only organizations with at least this many total identified units."},
+                    "multi_brand_only": {"type": "boolean", "description": "Only organizations operating 2+ distinct brands."},
+                },
+                "required": [],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/franchisee-organizations",
+            "path_params": [], "query_params": ["min_units", "multi_brand_only"], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "getFranchiseeProfile",
+            "description": (
+                "Return one franchisee organization's full profile: headquarters, "
+                "ownership, legal entities, every brand relationship with its own "
+                "unit-count assertion and history, leadership/people, and the complete "
+                "evidence ledger. Every assertion carries its own confidence_pct and "
+                "status (confirmed/inferred/unresolved/contradicted) -- relay that "
+                "distinction, never present a value here as settled fact without it. "
+                "Call listFranchiseeOrganizations or queryFranchiseesByBrand first if you "
+                "don't already have the org_slug."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {"org_slug": {"type": "string"}},
+                "required": ["org_slug"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/franchisee-organizations/{org_slug}",
+            "path_params": ["org_slug"], "query_params": [], "has_body": False, "body_param_names": [],
+        },
+    ),
+    (
+        {
+            "type": "function",
+            "name": "queryFranchiseesByBrand",
+            "description": (
+                "Answer 'who are the franchisees of brand X' -- every tracked organization "
+                "with a brand relationship matching that brand, each with that "
+                "relationship's own unit count, confidence, and status. An empty result "
+                "means no franchisee relationship is on file yet for that brand (a real, "
+                "honest answer, not an error) -- never fill the gap with general "
+                "knowledge."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {"brand_name": {"type": "string", "description": "e.g. 'Taco Bell'."}},
+                "required": ["brand_name"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "GET", "path": "/franchisee-organizations/by-brand/{brand_name}",
+            "path_params": ["brand_name"], "query_params": [], "has_body": False, "body_param_names": [],
+        },
+    ),
 ]
 
 

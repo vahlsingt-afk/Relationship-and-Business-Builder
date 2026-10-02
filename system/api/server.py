@@ -135,6 +135,7 @@ import relationship_plan  # noqa: E402  # RB-2026-09-08 — Relationship Plan: g
 import customers_prospects_common as cpc  # noqa: E402  # RB-2026-09-06 — unified Account Research/Blue Sheet storage (pre-engagement, upstream of active engagement)
 import competitor_intelligence as compintel  # noqa: E402  # RB-2026-08-28 — Competitor Intelligence
 import competitor_intelligence_common as compintel_common  # noqa: E402
+import franchisee_finder_common as ff_common  # noqa: E402  # 2026-10-02 — Franchisee Finder Phase 1 (read-only + seed import)
 import account_reference_detector  # noqa: E402  # RB-2026-08-28 — links uploaded intelligence-pipeline content to known Blue Sheets/competitors by mechanical name match
 import intelligence_index  # noqa: E402  # RB-2026-08-27 — unified "what do we have on X, and where" index
 import uploaded_document_store  # noqa: E402  # RB-2026-08-31 — retrievable full text for an uploaded document
@@ -11070,6 +11071,111 @@ def get_competitor_profile(competitor_slug: str, x_api_key: Optional[str] = Head
         "pending_reviews": pending_reviews,
         "markdown": compintel.render_competitor_profile(competitor_slug),
     }
+
+
+# ---------------------------------------------------------------------------
+# Franchisee Finder (Phase 1, 2026-10-02) — read-only + seed import only.
+# system/design/FRANCHISEE_FINDER_SPEC.md sections 16/19: Phase 1 is schema +
+# storage + a basic search surface; the review-first submission workflow
+# (submitFranchiseeCorrection / reviewFranchiseeSubmission) and the
+# continuous research-refresh cycle are Phase 2+, not built here. Every
+# organization record was seeded by migrate_franchisee_hierarchy.py from two
+# real public sources (Franchise Times 2026 Restaurant 200 + the existing
+# multi_brand_franchisee_operator entities in ecosystem_intelligence.json) --
+# nothing here is live-researched on call.
+# ---------------------------------------------------------------------------
+
+@app.get("/franchisee-organizations", tags=["compute"], operation_id="listFranchiseeOrganizations")
+def get_franchisee_organizations_list(
+    min_units: Optional[int] = Query(None, ge=0, description="Only organizations whose total_identified_units is at least this."),
+    multi_brand_only: bool = Query(False, description="Only organizations operating 2+ distinct brands."),
+    x_api_key: Optional[str] = Header(None),
+):
+    """List every franchisee organization Franchisee Finder has on file --
+    multi-brand restaurant franchisee groups (e.g. Flynn Group, Sun
+    Holdings) and large foodservice contractors (e.g. Sodexo, Aramark) with
+    at least one identified restaurant-brand relationship. Call this to find
+    the right org_slug for getFranchiseeProfile, or use queryFranchiseesByBrand
+    to search by brand instead of browsing the full list. Each row's
+    brand_count/total_identified_units is a real, already-computed summary,
+    not re-derived on this call."""
+    _auth(x_api_key)
+    reg = ff_common.load_registry()
+    orgs = []
+    for row in reg.get("registry", []):
+        slug = row.get("org_slug") or ""
+        try:
+            org = ff_common.load_organization(slug)["organization"]
+        except FileNotFoundError:
+            continue
+        brand_count = len(org.get("brand_relationships") or [])
+        total_units = org.get("total_identified_units") or 0
+        if multi_brand_only and brand_count < 2:
+            continue
+        if min_units is not None and total_units < min_units:
+            continue
+        orgs.append({
+            "org_slug": slug,
+            "display_name": org.get("display_name"),
+            "brand_count": brand_count,
+            "total_identified_units": total_units,
+            "headquarters": (org.get("headquarters") or {}).get("value"),
+            "overall_profile_quality": (org.get("research_status") or {}).get("overall_profile_quality"),
+        })
+    orgs.sort(key=lambda o: o["total_identified_units"], reverse=True)
+    return {"contract": "rb_franchisee_organization_list_v1", "organization_count": len(orgs), "organizations": orgs}
+
+
+@app.get("/franchisee-organizations/{org_slug}", tags=["compute"], operation_id="getFranchiseeProfile")
+def get_franchisee_profile(org_slug: str, x_api_key: Optional[str] = Header(None)):
+    """Return one franchisee organization's full profile: headquarters,
+    ownership, legal entities, every brand relationship with its own
+    unit-count assertion and history, leadership/people, and the complete
+    evidence ledger every assertion's evidence_ids point into. Every
+    assertion carries its own confidence_pct and status (confirmed /
+    inferred / unresolved / contradicted) -- never present a value from
+    this record as settled fact without surfacing that distinction. Never
+    re-researched live; only what Franchisee Finder already has persisted.
+    Call listFranchiseeOrganizations or queryFranchiseesByBrand first if you
+    don't know the org_slug."""
+    _auth(x_api_key)
+    try:
+        data = ff_common.load_organization(org_slug)
+    except FileNotFoundError:
+        raise HTTPException(404, detail=f"No Franchisee Finder record for org_slug '{org_slug}'. Call listFranchiseeOrganizations to see valid slugs.")
+    return {"organization": data["organization"], "evidence": data["evidence"]}
+
+
+@app.get("/franchisee-organizations/by-brand/{brand_name}", tags=["compute"], operation_id="queryFranchiseesByBrand")
+def get_franchisees_by_brand(brand_name: str, x_api_key: Optional[str] = Header(None)):
+    """Answer 'who are the franchisees of brand X' -- every organization
+    with a brand_relationships entry matching brand_name (case-insensitive
+    exact match against the brand's name as recorded, e.g. 'Taco Bell'),
+    each with that specific relationship's unit count, confidence, and
+    status. Returns an empty organizations list (not a 404) when the brand
+    is tracked but no franchisee relationship is on file yet -- that is a
+    real, honest answer, not an error. Call listFranchiseeOrganizations
+    first if you want to browse by organization instead of by brand."""
+    _auth(x_api_key)
+    needle = brand_name.strip().casefold()
+    reg = ff_common.load_registry()
+    matches = []
+    for row in reg.get("registry", []):
+        slug = row.get("org_slug") or ""
+        try:
+            org = ff_common.load_organization(slug)["organization"]
+        except FileNotFoundError:
+            continue
+        for rel in org.get("brand_relationships") or []:
+            if (rel.get("brand_name") or "").strip().casefold() == needle:
+                matches.append({
+                    "org_slug": slug,
+                    "display_name": org.get("display_name"),
+                    "brand_relationship": rel,
+                })
+                break
+    matches.sort(key=lambda m: (m["brand_relationship"]["unit_count"]["value"] or -1), reverse=True)
+    return {"contract": "rb_franchisee_by_brand_v1", "brand_name": brand_name, "match_count": len(matches), "organizations": matches}
 
 
 class CreateCompetitiveBriefBody(BaseModel):

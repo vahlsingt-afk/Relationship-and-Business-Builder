@@ -844,6 +844,51 @@ domains:
       typo'd slug now creates a new shell rather than failing loudly.
     legacy_status: not_applicable_new_domain
 
+  franchisee_finder:
+    authority_status: operational
+    note: >-
+      RB-2026-10-02, Phase 1 only (schema + storage + 3 read-only API ops +
+      one-time seed import -- see system/design/FRANCHISEE_FINDER_SPEC.md
+      section 16/19). An evidence-backed ownership-resolution system for
+      restaurant franchisee organizations, deliberately its own domain
+      rather than buried inside brand records. Supersedes
+      system/franchisee_hierarchy.json (a static, no-evidence Franchise
+      Times extract) as the canonical store; that file is a seed/import
+      source only (migrate_franchisee_hierarchy.py), never deleted or
+      overwritten by this domain. Confidence lives at the
+      assertion/relationship level (franchisee_finder_common.assertion_field),
+      not the record level -- a headquarters claim and a specific brand's
+      unit count on the same org can each carry different confidence.
+      Investigated before building: a SECOND real prior-art source existed
+      that the spec itself didn't know about -- multibrand_franchisee_
+      operator_ingest.py (2026-09-27) already created 47
+      multi_brand_franchisee_operator entities in
+      industry_ecosystem_intelligence below, with sourced headquarters/
+      leadership/operates-edges. The seed importer reconciles both sources
+      (28 of 47 match a Restaurant 200 operator by name/alias) rather than
+      ignoring the richer one; linked_graph_entity_id cross-references the
+      matched graph entity where one exists.
+    authoritative_store: system/franchisee_finder/organizations/*/{organization.json,evidence.jsonl}
+    projections:
+      - system/franchisee_finder/_portfolio/franchisee_registry.json
+    schemas:
+      - system/scripts/franchisee_finder_common.py (the shape; no separate JSON schema file)
+    mutation_owner:
+      - system/scripts/migrate_franchisee_hierarchy.py (one-time seed import only -- Phase 1 has no live write/submission path)
+      - system/scripts/franchisee_finder_common.py
+    validation: not_yet_built
+    freshness_policy: not_yet_declared
+    conflict_policy: not_yet_declared
+    known_gap: >-
+      Phase 1 only: no legal-entity data, no ownership-structure data, no
+      geographic-footprint data (neither seed source carries any of the
+      three), no write/correction-submission path, and no ChatGPT-research-
+      packet ingestion pipeline. Spec sections 7/10 (Codex processing
+      responsibility, user-contributed intelligence review workflow) and
+      the quarterly/monthly refresh cycle (section 8) are Phase 2+, not
+      built here.
+    legacy_status: not_applicable_new_domain
+
   watchlist:
     authority_status: operational
     note: >-

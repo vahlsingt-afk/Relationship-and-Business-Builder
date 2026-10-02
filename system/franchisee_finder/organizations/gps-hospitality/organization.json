@@ -1,0 +1,169 @@
+{
+  "org_id": "ff-gps-hospitality",
+  "org_slug": "gps-hospitality",
+  "display_name": "GPS Hospitality",
+  "aliases": [],
+  "linked_graph_entity_id": "operator-gps-hospitality",
+  "headquarters": {
+    "value": "Atlanta, GA",
+    "confidence_pct": 55,
+    "status": "inferred",
+    "evidence_ids": [
+      "ff-ev-gps-hospitality-0001"
+    ],
+    "as_of": "2026-10-02",
+    "last_verified": "2026-10-02",
+    "source_url": "https://www.franchisetimes.com/franchise_times_top_200/",
+    "confidence_rationale": "Franchise Times location column; not confirmed as headquarters vs. registered address."
+  },
+  "registered_address": null,
+  "ownership": {
+    "structure": null,
+    "owners": []
+  },
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "brand_name": "Burger King",
+      "brand_entity_id": "brand-burger-king",
+      "unit_count": {
+        "value": 369,
+        "confidence_pct": 80,
+        "status": "confirmed",
+        "evidence_ids": [
+          "ff-ev-gps-hospitality-0006",
+          "ff-ev-gps-hospitality-0007"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 369,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Popeyes",
+      "brand_entity_id": "brand-popeyes",
+      "unit_count": {
+        "value": 16,
+        "confidence_pct": 80,
+        "status": "confirmed",
+        "evidence_ids": [
+          "ff-ev-gps-hospitality-0008",
+          "ff-ev-gps-hospitality-0009"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 16,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Pizza Hut",
+      "brand_entity_id": "brand-pizza-hut",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-gps-hospitality-0010"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    }
+  ],
+  "geographic_footprint": [],
+  "people": [
+    {
+      "name": "Tom Garrett",
+      "title": "Chief Executive Officer & Founder",
+      "role_category": "ceo",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-gps-hospitality-0002"
+      ],
+      "source_url": "https://www.gpshospitality.com/about/leadership/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "Michael Lippert",
+      "title": "President",
+      "role_category": "coo",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-gps-hospitality-0003"
+      ],
+      "source_url": "https://www.gpshospitality.com/about/leadership/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "Misty Black",
+      "title": "Director of IT",
+      "role_category": "technology_leader",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-gps-hospitality-0004"
+      ],
+      "source_url": "https://www.gpshospitality.com/about/leadership/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "Gary Thomas",
+      "title": "Vice President of Operations Support",
+      "role_category": "coo",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-gps-hospitality-0005"
+      ],
+      "source_url": "https://www.gpshospitality.com/about/leadership/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    }
+  ],
+  "technology": {},
+  "confidence_thresholds": {
+    "high_confidence_pct": 85
+  },
+  "research_status": {
+    "last_researched": null,
+    "next_scheduled_review": null,
+    "overall_profile_quality": "medium"
+  },
+  "source_system": "manual_seed_import",
+  "total_identified_units": 385,
+  "template_version": "franchisee-finder-v1",
+  "created_at": "2026-10-02T14:06:23Z",
+  "updated_at": "2026-10-02T14:06:23Z"
+}

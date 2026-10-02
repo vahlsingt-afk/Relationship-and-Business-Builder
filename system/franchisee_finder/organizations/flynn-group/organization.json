@@ -1,0 +1,360 @@
+{
+  "org_id": "ff-flynn-group",
+  "org_slug": "flynn-group",
+  "display_name": "Flynn Group",
+  "aliases": [],
+  "linked_graph_entity_id": "operator-flynn-group",
+  "headquarters": {
+    "value": "Corporate office: 225 Bush Street, Suite 1800, San Francisco, CA 94104; support center in Independence, Ohio.",
+    "confidence_pct": 100,
+    "status": "confirmed",
+    "evidence_ids": [
+      "ff-ev-flynn-group-0001"
+    ],
+    "as_of": "2026-09-27",
+    "last_verified": "2026-09-27",
+    "source_url": "https://flynn.com/our-leaders/"
+  },
+  "registered_address": null,
+  "ownership": {
+    "structure": null,
+    "owners": []
+  },
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "brand_name": "Pizza Hut",
+      "brand_entity_id": "brand-pizza-hut",
+      "unit_count": {
+        "value": 1321,
+        "confidence_pct": 80,
+        "status": "confirmed",
+        "evidence_ids": [
+          "ff-ev-flynn-group-0008",
+          "ff-ev-flynn-group-0009"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 1321,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Applebee’s",
+      "brand_entity_id": "brand-applebee-s",
+      "unit_count": {
+        "value": 460,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-flynn-group-0010"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 460,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Arby’s",
+      "brand_entity_id": "brand-arby-s",
+      "unit_count": {
+        "value": 358,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-flynn-group-0011"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 358,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Wendy’s",
+      "brand_entity_id": "brand-wendy-s",
+      "unit_count": {
+        "value": 340,
+        "confidence_pct": 65,
+        "status": "inferred",
+        "evidence_ids": [
+          "ff-ev-flynn-group-0012"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 340,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Taco Bell",
+      "brand_entity_id": "brand-taco-bell",
+      "unit_count": {
+        "value": 307,
+        "confidence_pct": 80,
+        "status": "confirmed",
+        "evidence_ids": [
+          "ff-ev-flynn-group-0013",
+          "ff-ev-flynn-group-0014"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 307,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Panera Bread",
+      "brand_entity_id": "brand-panera-bread",
+      "unit_count": {
+        "value": 150,
+        "confidence_pct": 80,
+        "status": "confirmed",
+        "evidence_ids": [
+          "ff-ev-flynn-group-0015",
+          "ff-ev-flynn-group-0016"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02",
+        "source_url": "https://www.franchisetimes.com/franchise_times_top_200/"
+      },
+      "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": 150,
+          "unit_count_basis": "Franchise Times 2026 Restaurant 200",
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Applebee's",
+      "brand_entity_id": "brand-applebee-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-flynn-group-0017"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Arby's",
+      "brand_entity_id": "brand-arby-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-flynn-group-0018"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "Wendy's",
+      "brand_entity_id": "brand-wendy-s",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-flynn-group-0019"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "brand_name": "KFC",
+      "brand_entity_id": "brand-kfc",
+      "unit_count": {
+        "value": null,
+        "confidence_pct": null,
+        "status": "unresolved",
+        "evidence_ids": [
+          "ff-ev-flynn-group-0020"
+        ],
+        "as_of": "2026-10-02",
+        "last_verified": "2026-10-02"
+      },
+      "unit_count_basis": null,
+      "history": [
+        {
+          "date": "2026-10-02",
+          "unit_count": null,
+          "unit_count_basis": null,
+          "note": null
+        }
+      ]
+    }
+  ],
+  "geographic_footprint": [],
+  "people": [
+    {
+      "name": "Greg Flynn",
+      "title": "Founder, Chairman & CEO",
+      "role_category": "ceo",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-flynn-group-0002"
+      ],
+      "source_url": "https://flynn.com/our-leaders/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "Ron Bellamy",
+      "title": "President & COO",
+      "role_category": "coo",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-flynn-group-0003"
+      ],
+      "source_url": "https://flynn.com/our-leaders/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "Lauren Leahy",
+      "title": "Chief Transformation Officer",
+      "role_category": "other",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-flynn-group-0004"
+      ],
+      "source_url": "https://flynn.com/our-leaders/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "John Roe",
+      "title": "SVP, Brand Technology",
+      "role_category": "technology_leader",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-flynn-group-0005"
+      ],
+      "source_url": "https://flynn.com/our-leaders/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "David Lombardy",
+      "title": "VP, Enterprise Systems",
+      "role_category": "other",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-flynn-group-0006"
+      ],
+      "source_url": "https://flynn.com/our-leaders/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    },
+    {
+      "name": "Elise Cruel",
+      "title": "VP, Procurement",
+      "role_category": "other",
+      "confidence_pct": 100,
+      "status": "confirmed",
+      "evidence_ids": [
+        "ff-ev-flynn-group-0007"
+      ],
+      "source_url": "https://flynn.com/our-leaders/",
+      "as_of": "2026-10-02",
+      "public_contact_info": null
+    }
+  ],
+  "technology": {},
+  "confidence_thresholds": {
+    "high_confidence_pct": 85
+  },
+  "research_status": {
+    "last_researched": null,
+    "next_scheduled_review": null,
+    "overall_profile_quality": "medium"
+  },
+  "source_system": "manual_seed_import",
+  "total_identified_units": 2936,
+  "template_version": "franchisee-finder-v1",
+  "created_at": "2026-10-02T14:06:22Z",
+  "updated_at": "2026-10-02T14:06:22Z"
+}
