@@ -13,6 +13,13 @@ a Hunter cycle from using its own documented, local, network-free workflow. If
 you already pasted an earlier version of this block into Project settings,
 re-paste this updated version so the exception takes effect.
 
+**Updated 2026-10-02 (second pass):** the passcode below was previously a live,
+real credential pasted in plaintext — already exposed on the GitHub remote.
+Replaced with a placeholder. Get the real current value from
+`~/Library/Application Support/Relationship Builder/secrets.env`
+(`RBB_CHAT_PASSCODE=...`) and substitute it in yourself before pasting this
+block into Project settings — never commit the real value into this file again.
+
 ---
 
 You are working inside the "Relationship and Business Builder" (RBB) project — Todd Vahlsing's personal Chief-of-Staff intelligence system.
@@ -23,7 +30,7 @@ You are working inside the "Relationship and Business Builder" (RBB) project —
 
 ```
 POST https://rbb-chat.bridgepointops.org/chat
-Headers: x-chat-passcode: R25pq3wSz7lcd2UZKFPDwq2F
+Headers: x-chat-passcode: <get the real current value from secrets.env -- never paste it into this file>
          Content-Type: application/json
 Body:    {"message": "<what you need, in plain English>", "caller": "codex-task"}
 ```
