@@ -14,12 +14,14 @@ sys.path.insert(0, str(SCRIPTS_DIR))
 import export_research_gaps as brand_exporter  # noqa: E402
 import export_competitor_research_gaps as competitor_exporter  # noqa: E402
 import export_vendor_extended_profile_gaps as vendor_exporter  # noqa: E402
+import export_franchisee_research_gaps as franchisee_exporter  # noqa: E402
 
 
 SCHEMA = "rb.hunter_gap_manifest.v1"
 BRAND_SOURCE = "system/scripts/export_research_gaps.py"
 COMPETITOR_SOURCE = "system/scripts/export_competitor_research_gaps.py"
 VENDOR_SOURCE = "system/scripts/export_vendor_extended_profile_gaps.py"
+FRANCHISEE_SOURCE = "system/scripts/export_franchisee_research_gaps.py"
 
 _FIELD_QUESTIONS = {
     "leadership": "Who currently leads the company and the functions relevant to restaurant technology decisions?",
@@ -37,6 +39,11 @@ _FIELD_QUESTIONS = {
     "pricing": "What public pricing, fees, or commercial-model evidence exists?",
     "reference_customer": "Which named restaurant references are verified and current?",
     "market_share": "What credible public evidence exists about market presence or installed footprint?",
+    "headquarters": "Where is the organization headquartered, and is that distinct from any registered address on file?",
+    "ownership": "Is this organization privately held, public, or PE-backed, and who owns/controls it?",
+    "legal_entities": "What individual LLCs/corporations/subsidiaries does this organization operate under?",
+    "geographic_footprint": "Which states/regions does this organization actually operate in?",
+    "unit_count_verification": "What current, dated, sourced unit count exists for this organization's brand relationships, beyond a single revenue-ranked publication's figure?",
 }
 
 
@@ -45,9 +52,9 @@ def _slug(value: str) -> str:
 
 
 def _importance(field: str) -> str:
-    if field in {"technology_stack", "key_customers", "reference_customer", "franchise_disclosure"}:
+    if field in {"technology_stack", "key_customers", "reference_customer", "franchise_disclosure", "unit_count_verification"}:
         return "high"
-    if field in {"leadership", "scale", "products", "strengths", "positioning", "recent_news"}:
+    if field in {"leadership", "scale", "products", "strengths", "positioning", "recent_news", "headquarters", "ownership", "legal_entities"}:
         return "medium"
     return "low"
 
@@ -79,6 +86,29 @@ def normalize_brand_snapshot(snapshot: dict) -> list[dict]:
             "current_state": {key: value for key, value in row.items() if key not in {"research_gaps", "coverage"}},
             "gaps": gaps,
             "discovery_domains": ["ownership and leadership changes", "restaurant footprint and financial health", "technology stack and lifecycle", "franchise governance", "new restaurant-industry signals"],
+        })
+    return out
+
+
+def normalize_franchisee_snapshot(snapshot: dict) -> list[dict]:
+    """Franchisee Finder's organizations, normalized to Hunter's target/gap
+    shape. entity_type "restaurant_operator" matches hunter_playbooks.json's
+    existing target_types vocabulary -- franchisee organizations were
+    always a recognized target type, just never had a local gap-manifest
+    source feeding them until this export existed."""
+    out = []
+    for row in snapshot.get("organizations") or []:
+        target_key = f"franchisee:{row['id']}"
+        gaps = [_gap(target_key, field, "missing", FRANCHISEE_SOURCE) for field in row.get("research_gaps") or []]
+        out.append({
+            "target_key": target_key,
+            "display_name": row.get("name") or row["id"],
+            "entity_type": "restaurant_operator",
+            "priority": row.get("priority") or "secondary",
+            "coverage": row.get("coverage") or "unknown",
+            "current_state": {key: value for key, value in row.items() if key not in {"research_gaps", "coverage", "priority"}},
+            "gaps": gaps,
+            "discovery_domains": ["ownership and legal structure", "headquarters and registered address", "leadership and executive team", "geographic footprint", "unit-count verification beyond a single publication"],
         })
     return out
 
@@ -145,6 +175,11 @@ def build_manifest(*, universe: str = "all", target_keys: list[str] | None = Non
             vendor_exporter.export_vendor_extended_profile_gaps(only_gaps=True),
         ))
         sources.extend([COMPETITOR_SOURCE, VENDOR_SOURCE])
+    if universe in {"all", "franchisees"}:
+        targets.extend(normalize_franchisee_snapshot(
+            franchisee_exporter.export_franchisee_research_gaps(only_gaps=True)
+        ))
+        sources.append(FRANCHISEE_SOURCE)
     if target_keys:
         wanted = set(target_keys)
         targets = [target for target in targets if target["target_key"] in wanted]
@@ -163,7 +198,7 @@ def build_manifest(*, universe: str = "all", target_keys: list[str] | None = Non
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build Hunter gap manifest from live RBB state")
-    parser.add_argument("--universe", choices=["all", "brands", "competitors"], default="all")
+    parser.add_argument("--universe", choices=["all", "brands", "competitors", "franchisees"], default="all")
     parser.add_argument("--target", action="append", dest="targets")
     parser.add_argument("--limit", type=int)
     parser.add_argument("--output")
