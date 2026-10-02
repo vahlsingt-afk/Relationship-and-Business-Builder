@@ -4,6 +4,31 @@
 
 ---
 
+### Franchisee Finder — not yet surfaced in the Team Portal (scoped, not started — 2026-10-02)
+
+Todd asked where Franchisee Finder stood with Team Portal inclusion. Checked `team_portal_api.py` and `team_portal_ui.html` directly: zero wiring — no import of `franchisee_finder_common`, no API route, no UI section. Franchisee Finder Phase 1 (storage domain, seed import, 3 read-only operations on `server.py`) is real and complete, but it is a Trusted-Chat-Client/Custom-GPT-only surface today. `FRANCHISEE_FINDER_SPEC.md` §12 describes a full Team Portal feature; this scopes a Phase-1-honest slice of it, not the whole spec.
+
+**What actually exists to build on:**
+
+- Data: `system/franchisee_finder/organizations/<slug>/{organization.json,evidence.jsonl}`, ~109 organizations, seeded by `migrate_franchisee_hierarchy.py` from Franchise Times' "2026 Restaurant 200" + `ecosystem_intelligence.json`'s `multi_brand_franchisee_operator` entities.
+- Reads already live on `server.py`: `listFranchiseeOrganizations` (filters: `min_units`, `multi_brand_only`), `getFranchiseeProfile` (full org + evidence), `queryFranchiseesByBrand` (case-insensitive exact brand match). Their filter/sort logic is simple and portable, but it's inline in route handlers in `server.py`, not in a reusable module — `franchisee_finder_common.py` only has the storage primitives (`load_registry`, `load_organization`, `save_*`), not query logic.
+- **Checked what's actually populated, not just what the schema allows**: across the sampled seeded records, `headquarters`, `brand_relationships` (unit counts with confidence + evidence + history), and `total_identified_units` are real and populated. `ownership`, `legal_entities`, `geographic_footprint`, and `people` are empty/null on every record checked — those are explicitly Phase 2+ fields (spec §16) that the seed import never populates. A Team Portal UI built now must show honest empty states for those sections, not hide them or imply Phase-2 data exists.
+- **Checked for the privacy-leak pattern that bit Competitor Profile and Account Background Brief twice already this session**: evidence.jsonl `source`/`source_url` fields are clean public citations ("Franchise Times 2026 Restaurant 200", "ecosystem_intelligence.json multi_brand_franchisee_operator_ingest") — no internal/personal attribution, because this data was machine-migrated, not authored as Todd's POV. No redaction layer needed for this slice.
+
+**Proposed fix, scoped to what the data actually supports:**
+
+1. New `team_franchisee_finder.py` compute module (mirrors `team_tech_stack.py`'s role: team_portal_api.py routes delegate to it, it does the real reads). Port `server.py`'s existing filter/sort logic into it rather than duplicating it inline in two places — e.g. `search_organizations(q=None, min_units=None, multi_brand_only=False)`, `get_organization_profile(org_slug)`, `search_by_brand(brand_name)`. Both `server.py` and `team_portal_api.py` can then call the same module (or `server.py`'s three handlers are thinned to call it too — worth deciding when building, not now).
+2. Three new `team_portal_api.py` routes, `member: dict = Depends(get_current_member)` auth like every other Team Portal route (not the `x_api_key` scheme `server.py` uses):
+   - `GET /api/franchisees/search?q=&min_units=&multi_brand_only=` — one search box per spec §12's UX intent, matching against org `display_name`/`aliases` *and* `brand_relationships[].brand_name` (brand→franchisee and franchisee→portfolio both work through the same box; person→organization search is not buildable yet — `people` is empty everywhere).
+   - `GET /api/franchisees/{org_slug}` — full profile.
+   - (Brand-only search is just `q=` on the same endpoint — no separate route needed.)
+3. New Team Portal UI section: a search box + result cards (`display_name`, `brand_count`, `total_identified_units`, `headquarters`), click-through to a profile view shaped like spec §12's example — headquarters with its confidence_pct, brand portfolio table (brand, units, confidence, status), research status (`overall_profile_quality`) — plus explicit "not yet researched" placeholders for Ownership, Legal Entities, and Leadership rather than omitting those sections.
+4. Explicitly **not** in this slice: the full filter set spec §12 lists (geography, state, ownership type, confidence, parent organization, named executive) — most would filter against fields that are empty on every current record, so shipping them now would be UI promising data that doesn't exist yet. Add them when Phase 2 research populates those fields. Also not in this slice: `submitFranchiseeCorrection`/`reviewFranchiseeSubmission` (spec §10, explicitly Phase 2+) and the evidence-transparency detail view beyond what the profile already shows inline.
+
+Estimated effort: small — one new compute module (mostly ported logic, not new logic), three thin routes, one new UI section following an existing Team Portal page's structure (e.g. the Technology Lifecycle/FDD governance profile page is the closest shape match: summary card + profile drill-down + explicit "no data yet" states).
+
+---
+
 ### Team Portal Latest News / Top 5 Trends — real automated trade-press feed exists but isn't wired in (scoped, not started — 2026-10-02)
 
 Real feedback: the Team Portal's Latest News tab, filtered to "Restaurant Technology" (vendor-side) with stock-price noise correctly hidden, showed zero items and only 3 total stories for a 30-day window. Investigated before concluding this was a data-thinness problem Todd would just have to live with — it isn't; it's a real, concretely scoped wiring gap.
