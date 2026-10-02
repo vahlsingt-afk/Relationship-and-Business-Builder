@@ -4,6 +4,28 @@
 
 ---
 
+### Team Portal Latest News / Top 5 Trends — real automated trade-press feed exists but isn't wired in (scoped, not started — 2026-10-02)
+
+Real feedback: the Team Portal's Latest News tab, filtered to "Restaurant Technology" (vendor-side) with stock-price noise correctly hidden, showed zero items and only 3 total stories for a 30-day window. Investigated before concluding this was a data-thinness problem Todd would just have to live with — it isn't; it's a real, concretely scoped wiring gap.
+
+**Root cause, confirmed by reading the actual pipeline, not guessed:**
+
+- `team_market_intelligence.py` (`get_latest_news`, powers both Latest News and, via `restaurant_tech_trends.py`, Top 5 Trends) reads exactly two files: `system/inbox/market_signals.json` (Todd's own hand-curated seed — LinkedIn posts, manually added trade-press links) and `system/inbox/market_signals_earnings.jsonl` (the fully-automated SEC/earnings-monitor feed). Measured the earnings feed directly: 78 vendor-side items in the last 30 days, **zero non-noise** — every one is a price move, a volume spike, a 52-week high, or a bare "8-K – Current report" filing. That feed structurally cannot carry qualitative vendor news; it only watches public filings.
+- `market_source_feeds.py` already exists and is a real, working, already-curated qualitative trade-press RSS fetcher — 7 real sources (Restaurant Dive, Restaurant Business, Nation's Restaurant News, QSR Magazine, Hospitality Technology, PYMNTS, Fast Casual), each tagged `side` (operator_demand/vendor_supply) and `category_hints`, with real signal/category/strategic-relevance/AI-application classification, source-health reporting, and fixture fallback. It writes to `system/inbox/market_signals_feed.jsonl`.
+- That fetch step was itself found orphaned once already (`system/INTELLIGENCE_PIPELINE_MAP_2026-08-24.md`, item 7) and fixed 2026-08-24: `refresh_sources.py::refresh_market_feeds()` now runs `market_source_feeds.py --fetch` as part of the scheduled pre-brief-scan automation, and `market_signals.py` already merges `market_signals_feed.jsonl` in. **But that merge only ever flows into `market_signals.py`'s own `.cache/market_signals.json` top-N report — the input to `daily_brief.py`'s condensed industry context, a completely different consumer.** `team_market_intelligence.py` (built 2026-09-29, after that pipeline-map fix) independently re-reads raw JSONL files rather than going through `market_signals.py`'s merge at all — the same pattern it already uses for `market_signals_earnings.jsonl` — and nobody added `market_signals_feed.jsonl` to its own read list when it was built. So real, already-fetched, already-classified trade-press content sits in a file the Team Portal simply never opens.
+
+**Proposed fix, concrete and small (not a new-ingestion project — 7 real sources are already curated and already fetching on schedule):**
+
+1. Add `_load_market_signals_feed_jsonl()` to `team_market_intelligence.py`, parallel to the existing `_load_market_signals_earnings_jsonl()`; merge into `get_latest_news()`'s `raw` list the same way.
+2. Reconcile the category taxonomy gap: `market_source_feeds.py`'s classifier emits `labor`, `inventory`, `unit_growth`, `m_and_a`, `leadership`, `franchise`, `loyalty`, `drive_thru` — several of which don't match `team_market_intelligence.CATEGORY_LABELS`' vocabulary (`operator_expansion`, `ma_pe_activity`, `executive_change`, etc.) or `_section_for()`'s substring checks (`"m_and_a"` won't match the `"m&a"`/`"acquisition"` check, so an M&A item would mis-route to Restaurant Operators/Technology instead of "M&A and Funding"). Needs either a translation map or extending `CATEGORY_LABELS`/`_section_for()` to recognize both vocabularies.
+3. Honest known gap to carry, not silently patch: `market_source_feeds.py` rows have no `restaurant_tech_vendor_implication` field (the "why it matters to GP" line) — `_allowlist_news_item()` already handles a missing field as `None`/blank, so these items would show headline/source/summary/link with no GP-relevance narrative. Acceptable as-is (never fabricate one), but worth a visual distinction in the UI if it reads oddly once live.
+4. Same wiring gap, same fix, applies to `restaurant_tech_trends.py`'s `compute_top_trends()` (reads the same two files) — adding the third feed there is what would actually give Top 5 Trends real qualitative evidence instead of the "entirely public-market price/volume monitoring" disclaimer it currently shows for most categories.
+5. **Operational prerequisite to verify before or right after shipping the code fix**: confirm `market_source_feeds.py --fetch` is actually running and healthy in production (`system/.cache/market_source_feeds_health.json`, not inspectable from this cloud sandbox since it's gitignored/local-only) — wiring in the file is necessary but not sufficient if the scheduled fetch itself isn't currently succeeding on Todd's Mac.
+
+Estimated effort: small, maybe one session — a reader function, a merge, a category reconciliation pass, and tests, reusing an already-built and already-scheduled fetcher rather than building new source onboarding.
+
+---
+
 ### Token-efficient architecture (rbb-chat cost restructuring)
 
 Full plan: `system/RBB_TOKEN_EFFICIENT_ARCHITECTURE_SCOPE_2026-09-19.md`. Restructures how rbb-chat, the capture pipeline, and the document bridge use model tokens so each gets the cheapest-appropriate tier by default (companion: `system/RBB_MODEL_TIER_POLICY_2026-09-19.md`).
