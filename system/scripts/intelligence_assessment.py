@@ -877,6 +877,7 @@ def main() -> int:
         # Just verify imports work
         try:
             import web_scanner  # noqa: F401
+            import gatherer  # noqa: F401
             from intelligence_db import IntelligenceDB  # noqa: F401
             print("intelligence_assessment: smoke OK")
             return 0

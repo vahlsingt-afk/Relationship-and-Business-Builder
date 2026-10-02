@@ -1203,6 +1203,30 @@ tiering:
 
 ---
 
+## Gatherer Daily Change Packet — `system/.cache/gatherer_daily_change.json`
+
+Gatherer is the lightweight daily ecosystem change-detection engine. Its
+authoritative schema is
+`system/schemas/gatherer_daily_change.schema.json`, contract
+`rb.gatherer_daily_change_packet.v1`.
+
+The packet contains:
+
+- a rolling 24-hour `window`;
+- honest `coverage` across configured sources and observed tracked entities;
+- deduplicated `changes`, each explicitly labeled `verification_state:
+  candidate`;
+- `hunter_escalations` that recommend a registered Hunter playbook without
+  launching research or mutating canonical data; and
+- run `stats` for input volume, exclusions, duplicates, changes, and
+  escalations.
+
+Gatherer output is monitoring evidence, not a canonical fact store. A candidate
+headline cannot directly establish a customer relationship, deployment,
+leadership change, transaction, or product state.
+
+---
+
 ## Technology Lifecycle & Change Events — `system/technology_lifecycle/`
 
 **Phase 0 (2026-10-01, revised 2026-10-01 after Deep Research Cycles 7–8): schema documented here, scaffolding files created, no enforcing code yet.** This is a Tier 1 (public, shared) intelligence layer per `system/DATA_TIER_ARCHITECTURE.md` — built from public sources, never Todd's private account judgment — that sits alongside `ecosystem_intelligence.json` rather than inside any account's Tier 2 tree. See `system/technology_lifecycle/README.md` and `RESEARCH_KICKOFF.md` for the operational/workflow side; this section is the field-level record shape.

@@ -11231,6 +11231,7 @@ def _compute_intelligence_assessment_summary(report: dict) -> list[dict]:
         )]
 
     ts = assessment.get("trust_stats") or {}
+    gatherer = assessment.get("phase_2_gatherer") or {}
     p3 = assessment.get("phase_3_convergences") or {}
     p4 = assessment.get("phase_4_proposals") or {}
     proposals: list[dict] = p4.get("proposals") or []
@@ -11249,14 +11250,22 @@ def _compute_intelligence_assessment_summary(report: dict) -> list[dict]:
     proposals_count = ts.get("mutation_proposals", 0)
     confidence = ts.get("confidence", "medium")
     gaps: list[str] = ts.get("intelligence_gaps") or []
+    gatherer_changes: list[dict] = gatherer.get("changes") or []
+    gatherer_escalations: list[dict] = gatherer.get("hunter_escalations") or []
 
     gap_text = f" Gaps: {'; '.join(gaps[:2])}." if gaps else ""
     items.append(_canonical_item(
-        title=f"Intelligence Assessment — {sources_accepted}/{sources_assessed} sources · {items_fetched} items · {convergences} patterns · {proposals_count} proposals",
+        title=(
+            f"Intelligence Assessment — {sources_accepted}/{sources_assessed} sources · "
+            f"{items_fetched} items · {len(gatherer_changes)} 24h changes · "
+            f"{convergences} patterns · {proposals_count} proposals"
+        ),
         summary=(
             f"Sources: {sources_accepted} accepted / {sources_assessed - sources_accepted} rejected. "
             f"Items: {items_fetched} fetched, {items_written} new written to DB, "
             f"{email_classified} email headlines classified. "
+            f"Gatherer: {len(gatherer_changes)} candidate changes and "
+            f"{len(gatherer_escalations)} Hunter escalation candidates in the last 24 hours. "
             f"Convergences: {convergences}. Mutations proposed: {proposals_count}. "
             f"Confidence: {confidence}.{gap_text}"
         ),
@@ -11277,10 +11286,45 @@ def _compute_intelligence_assessment_summary(report: dict) -> list[dict]:
         confidence=confidence,
         extras={
             "trust_stats": ts,
+            "gatherer_changes": len(gatherer_changes),
+            "gatherer_hunter_escalations": len(gatherer_escalations),
             "convergences_detected": convergences,
             "mutation_proposals": proposals_count,
         },
     ))
+
+    # ── Gatherer: material candidate changes in the rolling 24h window ──────
+    # Headlines remain explicitly provisional. Gatherer detects and routes;
+    # Hunter verifies. This section must never be rendered as canonical fact.
+    escalated_ids = {e.get("change_id") for e in gatherer_escalations}
+    for change in gatherer_changes[:5]:
+        entities = change.get("entities") or []
+        entity_text = ", ".join(entities) if entities else "unresolved ecosystem entity"
+        needs_hunter = change.get("change_id") in escalated_ids
+        items.append(_canonical_item(
+            title=f"[24H CANDIDATE] {change.get('title') or 'Untitled change signal'}",
+            summary=(
+                f"Gatherer detected a {change.get('signal_type') or 'general'} signal involving "
+                f"{entity_text}. Source: {change.get('source') or 'unknown'}; "
+                f"observed: {change.get('observed_at') or 'unknown'}; "
+                f"materiality: {change.get('materiality', 0)}/100."
+            ),
+            why_it_matters=(
+                "This is a recent ecosystem-change candidate, not a verified fact. "
+                + ("It has been queued as a Hunter follow-up candidate." if needs_hunter
+                   else "It remains in Gatherer's monitoring layer.")
+            ),
+            recommended_action=(
+                "Let Hunter verify scope, identity, currentness, and contradictory evidence."
+                if needs_hunter else "Monitor for corroboration before any canonical update."
+            ),
+            disposition="act_today" if change.get("materiality", 0) >= 85 else "monitor",
+            grounding="system_detected",
+            freshness="fresh",
+            source_refs=[change.get("source") or "gatherer"],
+            confidence=change.get("confidence") or "medium",
+            extras={"gatherer_change": change, "hunter_escalation_candidate": needs_hunter},
+        ))
 
     # ── Sustained patterns (multi-source) ────────────────────────────────────
     for conv in multi_source[:3]:

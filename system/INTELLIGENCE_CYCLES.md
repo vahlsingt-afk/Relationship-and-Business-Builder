@@ -1,8 +1,8 @@
 # RB Intelligence Cycles
 
-RB has two separate public-intelligence cycles. Hunter is the required research
-agent for both. They must never be combined in reporting, scheduling, or
-proof-of-work.
+RB has two separate public-intelligence engines. Hunter owns deep,
+target-specific research. Gatherer owns broad daily change detection. They must
+never be combined in reporting, scheduling, or proof-of-work.
 
 ## 1. Routine research (baseline construction)
 
@@ -46,13 +46,18 @@ existing baseline.
   announcements, interviews, product/vendor announcements, and credible trade
   reporting.
 - Cadence: daily.
-- Processing: verify, deduplicate while retaining source-count convergence as a
-  signal, compare with the baseline, assess ramifications, generate review-first
-  mutations where required, and cascade material conclusions downstream.
-- Execution: use Hunter's `change_monitor` or `industry_change_scan` playbook.
-  Source collection may remain deterministic, but research interpretation,
-  change events, mutation proposals, and CoS handoffs must use Hunter's packet
-  contract and validator.
+- Processing: Gatherer applies a rolling 24-hour window, normalizes and
+  deduplicates source items, resolves tracked entities, ranks materiality, and
+  emits provisional change candidates. It quantifies which tracked entities
+  were observed and never treats missing coverage as proof of no change.
+- Execution: `system/scripts/intelligence_assessment.py` invokes
+  `system/scripts/gatherer.py` after public-web ingestion. Gatherer's daily
+  packet uses `rb.gatherer_daily_change_packet.v1` and is written to
+  `system/.cache/gatherer_daily_change.json`.
+- Escalation: Gatherer recommends Hunter's `change_monitor`,
+  `industry_change_scan`, or a more specific playbook when a material signal
+  requires verification. Gatherer never launches Hunter, writes canonical
+  claims, or converts a headline directly into a mutation.
 - Proof: each daily receipt reports collection, assessment, record/proposal,
   cascade, and delivery results. It must explicitly state that routine research
   was not performed by the daily cycle.
