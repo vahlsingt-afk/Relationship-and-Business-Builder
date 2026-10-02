@@ -279,6 +279,99 @@ def prepare_cycle(
     }
 
 
+def prepare_gatherer_cycle(
+    playbook: str,
+    *,
+    depth: str | None = None,
+    packet: dict | None = None,
+    limit: int | None = None,
+    five_hour_used_pct: float | None = None,
+    weekly_used_pct: float | None = None,
+    hours_to_weekly_reset: float | None = None,
+    deep_research_available: bool = True,
+) -> dict:
+    """Turn Gatherer's Hunter escalation candidates for one playbook into a
+    research-ready cycle directive.
+
+    Gatherer surfaces candidate changes needing verification but never
+    launches Hunter itself (GATHERER.md). This is the bridge: it takes one
+    Gatherer packet's escalations recommending `playbook`, shapes them into
+    the same `gap_manifest`-style directive `prepare_cycle()` builds from
+    hunter_gap_manifest's tracked universes, and reuses the same
+    plan()/resource_plan()/build_context() machinery so hunter_cycle.py's
+    existing prepare/finalize flow carries them through unchanged. Unlike
+    the tracked universes, a Gatherer target has no prior Hunter coverage
+    history -- build_context() returns an empty prior_context for it, which
+    is accurate, not a bug.
+    """
+    import gatherer
+
+    if packet is None:
+        packet = json.loads(gatherer.CACHE_PATH.read_text(encoding="utf-8"))
+
+    cycle_plan = plan(playbook, depth)
+    capacity = resource_plan(
+        cycle_plan["depth"],
+        five_hour_used_pct=five_hour_used_pct,
+        weekly_used_pct=weekly_used_pct,
+        hours_to_weekly_reset=hours_to_weekly_reset,
+        deep_research_available=deep_research_available,
+    )
+
+    by_change_id = {c["change_id"]: c for c in packet.get("changes") or []}
+    escalations = [e for e in (packet.get("hunter_escalations") or []) if e.get("recommended_playbook") == playbook]
+    if limit is not None:
+        escalations = escalations[:limit]
+
+    targets = []
+    for escalation in escalations:
+        change = by_change_id.get(escalation.get("change_id"), {})
+        target_key = f"gatherer:{escalation['change_id']}"
+        targets.append({
+            "target_key": target_key,
+            "display_name": ", ".join(escalation.get("target_names") or []) or change.get("title") or target_key,
+            "current_state": {
+                "novelty": change.get("novelty"),
+                "materiality": change.get("materiality"),
+                "scores": change.get("scores"),
+                "corroborating_sources": change.get("corroborating_sources") or [],
+            },
+            "discovery_domains": [change["source_url"]] if change.get("source_url") else [],
+            "gaps": [{
+                "gap_id": f"gap:{target_key}:verification",
+                "field": "verification",
+                "gap_type": "verification_needed",
+                "source": "gatherer",
+                "question": escalation.get("reason"),
+            }],
+            "priority": escalation.get("priority"),
+        })
+
+    selected_keys = [target["target_key"] for target in targets]
+    known_gap_ids = [gap["gap_id"] for target in targets for gap in target["gaps"]]
+    discovery_domains = list(dict.fromkeys(
+        domain for target in targets for domain in target["discovery_domains"]
+    ))
+    return {
+        "schema": "rb.hunter_cycle_directive.v1",
+        "prepared_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "source": "gatherer",
+        "packet_id": packet.get("packet_id"),
+        "plan": cycle_plan,
+        "resource_plan": capacity,
+        "gap_manifest": {"generated_at": packet.get("generated_at"), "targets": targets},
+        "prior_context": build_context(selected_keys, cycle_plan["required_modules"]),
+        "packet_requirements": {
+            "prior_state_as_of": packet.get("generated_at"),
+            "known_gap_ids": known_gap_ids,
+            "discovery_domains": discovery_domains,
+            "target_keys": selected_keys,
+            "payload_schema": cycle_plan["payload_schema"],
+            "research_authorized": capacity["status"] == "authorized",
+        },
+    }
+
+
 def _independent_chains(sources: list[dict]) -> int:
     chains = set()
     for source in sources:

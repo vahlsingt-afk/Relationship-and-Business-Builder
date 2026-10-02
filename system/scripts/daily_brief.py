@@ -11252,8 +11252,18 @@ def _compute_intelligence_assessment_summary(report: dict) -> list[dict]:
     gaps: list[str] = ts.get("intelligence_gaps") or []
     gatherer_changes: list[dict] = gatherer.get("changes") or []
     gatherer_escalations: list[dict] = gatherer.get("hunter_escalations") or []
+    gatherer_status: str = gatherer.get("status", "unknown")
+    gatherer_source_health: dict = gatherer.get("source_health") or {}
 
     gap_text = f" Gaps: {'; '.join(gaps[:2])}." if gaps else ""
+    gatherer_degraded_text = ""
+    if gatherer_status == "degraded":
+        failed_names = gatherer_source_health.get("failed_source_names") or []
+        failed_suffix = f" ({', '.join(failed_names[:3])})" if failed_names else ""
+        gatherer_degraded_text = (
+            f" Gatherer source health is degraded this run{failed_suffix} -- a short or empty "
+            f"24h-change count may reflect fetch failures, not a quiet 24 hours."
+        )
     items.append(_canonical_item(
         title=(
             f"Intelligence Assessment — {sources_accepted}/{sources_assessed} sources · "
@@ -11265,7 +11275,8 @@ def _compute_intelligence_assessment_summary(report: dict) -> list[dict]:
             f"Items: {items_fetched} fetched, {items_written} new written to DB, "
             f"{email_classified} email headlines classified. "
             f"Gatherer: {len(gatherer_changes)} candidate changes and "
-            f"{len(gatherer_escalations)} Hunter escalation candidates in the last 24 hours. "
+            f"{len(gatherer_escalations)} Hunter escalation candidates in the last 24 hours."
+            f"{gatherer_degraded_text} "
             f"Convergences: {convergences}. Mutations proposed: {proposals_count}. "
             f"Confidence: {confidence}.{gap_text}"
         ),
@@ -11288,6 +11299,7 @@ def _compute_intelligence_assessment_summary(report: dict) -> list[dict]:
             "trust_stats": ts,
             "gatherer_changes": len(gatherer_changes),
             "gatherer_hunter_escalations": len(gatherer_escalations),
+            "gatherer_status": gatherer_status,
             "convergences_detected": convergences,
             "mutation_proposals": proposals_count,
         },
@@ -11296,6 +11308,35 @@ def _compute_intelligence_assessment_summary(report: dict) -> list[dict]:
     # ── Gatherer: material candidate changes in the rolling 24h window ──────
     # Headlines remain explicitly provisional. Gatherer detects and routes;
     # Hunter verifies. This section must never be rendered as canonical fact.
+    # World/national, restaurant-industry, and restaurant-technology headlines
+    # are separate sections sourced directly from phase_1_web -- they do not
+    # read phase_2_gatherer and are unaffected by its status or filtering.
+    if gatherer_status == "degraded" and not gatherer_changes:
+        failed_names = gatherer_source_health.get("failed_source_names") or []
+        items.append(_canonical_item(
+            title="[GATHERER DEGRADED] 24h change detection incomplete this run",
+            summary=(
+                f"Gatherer's source health is degraded this run "
+                f"({gatherer_source_health.get('failed_sources', 0)} of "
+                f"{gatherer_source_health.get('expected_sources', 0)} configured sources failed"
+                + (f": {', '.join(failed_names[:5])}" if failed_names else "") + "). "
+                "Zero 24h candidate changes does not mean a quiet 24 hours -- it may mean "
+                "Gatherer could not observe some or all of its configured sources."
+            ),
+            why_it_matters=(
+                "An empty candidate-change list is ambiguous without this context. Treat today's "
+                "silence in this section as unverified, not as confirmation that nothing happened "
+                "in the ecosystem."
+            ),
+            recommended_action="Check source connectivity, then re-run intelligence_assessment.py once resolved.",
+            disposition="monitor",
+            grounding="system_detected",
+            freshness="fresh",
+            source_refs=["gatherer"],
+            confidence="low",
+            extras={"gatherer_source_health": gatherer_source_health},
+        ))
+
     escalated_ids = {e.get("change_id") for e in gatherer_escalations}
     for change in gatherer_changes[:5]:
         entities = change.get("entities") or []

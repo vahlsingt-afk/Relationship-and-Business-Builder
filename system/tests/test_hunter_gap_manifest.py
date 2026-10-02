@@ -241,3 +241,60 @@ def test_prepare_without_codex_usage_still_authorizes_chat_research(monkeypatch)
     assert directive["resource_plan"]["codex_work_status"] == "blocked"
     assert directive["packet_requirements"]["research_authorized"] is True
     assert directive["packet_requirements"]["target_keys"] == ["company:brand-example"]
+
+
+def _gatherer_packet():
+    return {
+        "contract": "rb.gatherer_daily_change_packet.v1",
+        "packet_id": "gatherer-20261002T120000Z",
+        "generated_at": "2026-10-02T12:00:00Z",
+        "changes": [
+            {"change_id": "gchg-aaa", "title": "Brand A deploys new platform", "source_url": "https://example.com/a",
+             "novelty": "new_to_rbb", "materiality": 95, "scores": {"impact": 85}, "corroborating_sources": []},
+            {"change_id": "gchg-bbb", "title": "Brand B names new CTO", "source_url": "https://example.com/b",
+             "novelty": "new_to_rbb", "materiality": 75, "scores": {"impact": 75}, "corroborating_sources": []},
+        ],
+        "hunter_escalations": [
+            {"change_id": "gchg-aaa", "target_names": ["Brand A"], "recommended_playbook": "customer_deployment_validation",
+             "reason": "Material 24-hour change signal requires source verification before canonical use.", "priority": "high"},
+            {"change_id": "gchg-bbb", "target_names": ["Brand B"], "recommended_playbook": "leadership_decision_map",
+             "reason": "Material 24-hour change signal requires source verification before canonical use.", "priority": "medium"},
+        ],
+    }
+
+
+def test_prepare_gatherer_cycle_filters_by_playbook_and_builds_directive(monkeypatch):
+    monkeypatch.setattr(hunter, "build_context", lambda keys, modules=None: {"keys": keys})
+    directive = hunter.prepare_gatherer_cycle(
+        "customer_deployment_validation", packet=_gatherer_packet(),
+        five_hour_used_pct=20, weekly_used_pct=25, hours_to_weekly_reset=72,
+    )
+    assert directive["source"] == "gatherer"
+    assert directive["packet_id"] == "gatherer-20261002T120000Z"
+    targets = directive["gap_manifest"]["targets"]
+    assert len(targets) == 1
+    assert targets[0]["target_key"] == "gatherer:gchg-aaa"
+    assert targets[0]["display_name"] == "Brand A"
+    assert targets[0]["current_state"]["materiality"] == 95
+    assert directive["packet_requirements"]["target_keys"] == ["gatherer:gchg-aaa"]
+    assert directive["packet_requirements"]["known_gap_ids"] == ["gap:gatherer:gchg-aaa:verification"]
+    assert directive["packet_requirements"]["discovery_domains"] == ["https://example.com/a"]
+    assert directive["prior_context"] == {"keys": ["gatherer:gchg-aaa"]}
+    assert directive["resource_plan"]["status"] == "authorized"
+
+
+def test_prepare_gatherer_cycle_respects_limit(monkeypatch):
+    monkeypatch.setattr(hunter, "build_context", lambda keys, modules=None: {"keys": keys})
+    packet = _gatherer_packet()
+    packet["hunter_escalations"].append(
+        {"change_id": "gchg-ccc", "target_names": ["Brand C"], "recommended_playbook": "customer_deployment_validation",
+         "reason": "r", "priority": "medium"})
+    directive = hunter.prepare_gatherer_cycle("customer_deployment_validation", packet=packet, limit=1)
+    assert len(directive["gap_manifest"]["targets"]) == 1
+
+
+def test_prepare_gatherer_cycle_empty_when_no_escalations_match_playbook(monkeypatch):
+    monkeypatch.setattr(hunter, "build_context", lambda keys, modules=None: {"keys": keys})
+    directive = hunter.prepare_gatherer_cycle("ownership_funding_ma", packet=_gatherer_packet())
+    assert directive["gap_manifest"]["targets"] == []
+    assert directive["packet_requirements"]["target_keys"] == []
