@@ -137,6 +137,7 @@ import competitor_intelligence as compintel  # noqa: E402  # RB-2026-08-28 — C
 import competitor_intelligence_common as compintel_common  # noqa: E402
 import franchisee_finder_common as ff_common  # noqa: E402  # 2026-10-02 — Franchisee Finder Phase 1 (read-only + seed import)
 import technology_lifecycle as tech_lifecycle  # noqa: E402  # 2026-10-02 — Technology Lifecycle Phase 1
+import user_pov  # noqa: E402  # 2026-10-02 — User POV Registry Phase 1
 import account_reference_detector  # noqa: E402  # RB-2026-08-28 — links uploaded intelligence-pipeline content to known Blue Sheets/competitors by mechanical name match
 import intelligence_index  # noqa: E402  # RB-2026-08-27 — unified "what do we have on X, and where" index
 import uploaded_document_store  # noqa: E402  # RB-2026-08-31 — retrievable full text for an uploaded document
@@ -11279,6 +11280,145 @@ def post_create_technology_forcing_signal(body: CreateTechnologyForcingSignalBod
         source="POST /technology-lifecycle/forcing-signals",
     )
     return {"ok": True, "signal": record}
+
+
+# ---------------------------------------------------------------------------
+# User POV Registry (Phase 1, 2026-10-02) — atomic, governed user beliefs
+# and operating principles, distinct from objective intelligence
+# (ecosystem graph) and system doctrine (ARCHITECTURE.md/SCHEMAS.md).
+# See system/POV_REGISTRY_FEATURE_BRIEF_2026-10-01.md. No framework-import
+# pipeline yet (getPOVFramework/importPOVFramework) -- Phase 1 is the
+# atomic registry only.
+# ---------------------------------------------------------------------------
+
+@app.get("/pov/entries", tags=["compute"], operation_id="listPOVEntries")
+def get_pov_entries_list(
+    scope: Optional[str] = Query(None, description="Filter to one scope, e.g. 'restaurant_technology', 'enterprise_sales'."),
+    type: Optional[str] = Query(None, description=f"Filter to one type: {sorted(user_pov.VALID_TYPES)}."),
+    status: Optional[str] = Query(None, description=f"Filter to one status: {sorted(user_pov.VALID_STATUSES)}. Omit to see every entry including superseded/retired."),
+    x_api_key: Optional[str] = Header(None),
+):
+    """List every atomic POV entry on file -- the user's own beliefs,
+    hypotheses, evaluative lenses, and hard operating boundaries (NOT
+    objective facts about the world -- see getEntitySignals/
+    queryIntelligenceIndex for those). Omit `status` to see the full
+    history including superseded/retired entries; pass status='active'
+    for just what's currently in force. Call this to find a pov_id for
+    getPOVEntry, revisePOVEntry, retirePOVEntry, or attachPOVEvidence."""
+    _auth(x_api_key)
+    if type is not None and type not in user_pov.VALID_TYPES:
+        raise HTTPException(422, detail=f"type must be one of {sorted(user_pov.VALID_TYPES)}, got {type!r}.")
+    if status is not None and status not in user_pov.VALID_STATUSES:
+        raise HTTPException(422, detail=f"status must be one of {sorted(user_pov.VALID_STATUSES)}, got {status!r}.")
+    entries = user_pov.list_pov_entries(scope=scope, entry_type=type, status=status)
+    return {"contract": "rb_pov_entry_list_v1", "entry_count": len(entries), "entries": entries}
+
+
+@app.get("/pov/entries/{pov_id}", tags=["compute"], operation_id="getPOVEntry")
+def get_pov_entry_detail(pov_id: str, x_api_key: Optional[str] = Header(None)):
+    """Return one POV entry plus every evidence record attached to it
+    (supporting/challenging/qualifying). Call listPOVEntries first if you
+    don't have the pov_id."""
+    _auth(x_api_key)
+    try:
+        entry = user_pov.get_pov_entry(pov_id)
+    except user_pov.UserPovError:
+        raise HTTPException(404, detail=f"No POV entry with pov_id '{pov_id}'. Call listPOVEntries to see valid ids.")
+    return {"entry": entry, "evidence": user_pov.list_evidence_for(pov_id)}
+
+
+class AddPOVEntryBody(BaseModel):
+    statement: str = Field(..., description="The exact statement, in the user's own words wherever possible -- never a paraphrase that changes meaning.")
+    type: str = Field(..., description=f"One of {sorted(user_pov.VALID_TYPES)}.")
+    scope: str = Field(..., description="e.g. 'restaurant_technology', 'enterprise_sales', 'ai', 'global'.")
+    conviction: str = Field("informed_belief", description=f"One of {sorted(user_pov.VALID_CONVICTIONS)}.")
+    authorship: str = Field("user_authored", description=f"One of {sorted(user_pov.VALID_AUTHORSHIPS)}. 'rbb_inferred' entries start needs_review:true -- never claim the user said something they didn't.")
+    source_document: Optional[str] = Field(None, description="Where this came from, if applicable.")
+    source_section: Optional[str] = Field(None, description="Section/heading within source_document, if applicable.")
+    applies_to_surfaces: list[str] = Field(default_factory=list, description="Which RBB surfaces should apply this lens, e.g. ['opportunity_scoring', 'account_research'].")
+
+
+@app.post("/pov/entries", tags=["write"], operation_id="addPOVEntry")
+def post_add_pov_entry(body: AddPOVEntryBody, x_api_key: Optional[str] = Header(None)):
+    """Record a new atomic POV entry -- deliberately cheap and ungated for
+    authorship='user_authored' (the user's own direct, verbatim
+    declaration), same philosophy as createCompetitor. Never call this
+    with a belief YOU inferred and present it as authorship='user_authored'
+    -- use 'rbb_inferred' for your own judgment calls, which this starts
+    as needs_review:true rather than immediately authoritative."""
+    _auth(x_api_key)
+    try:
+        entry = user_pov.add_pov_entry(
+            body.statement, body.type, body.scope, conviction=body.conviction, authorship=body.authorship,
+            source_document=body.source_document, source_section=body.source_section,
+            applies_to_surfaces=body.applies_to_surfaces,
+        )
+    except user_pov.UserPovError as exc:
+        raise HTTPException(422, detail=str(exc))
+    return {"ok": True, "entry": entry}
+
+
+class RevisePOVEntryBody(BaseModel):
+    new_statement: str = Field(..., description="The revised statement -- never a silent edit; this creates a new entry and marks the original superseded.")
+    conviction: Optional[str] = Field(None, description=f"One of {sorted(user_pov.VALID_CONVICTIONS)}. Omit to keep the original entry's conviction.")
+    reason: Optional[str] = Field(None, description="Why this is changing, if the user said so.")
+
+
+@app.post("/pov/entries/{pov_id}/revise", tags=["write"], operation_id="revisePOVEntry")
+def post_revise_pov_entry(pov_id: str, body: RevisePOVEntryBody, x_api_key: Optional[str] = Header(None)):
+    """Revise an existing POV entry -- NEVER edits it in place. Creates a
+    new entry carrying the revised statement and marks the original
+    status:'superseded' with superseded_by set, preserving full history
+    (additive-by-default -- see the feature brief's write discipline).
+    Use this only for the user revising their OWN belief directly, not
+    for applying external evidence that merely challenges it -- that's
+    attachPOVEvidence instead, which never changes the entry's statement."""
+    _auth(x_api_key)
+    try:
+        entry = user_pov.revise_pov_entry(pov_id, body.new_statement, conviction=body.conviction, reason=body.reason)
+    except user_pov.UserPovError as exc:
+        raise HTTPException(404 if "No POV entry" in str(exc) else 422, detail=str(exc))
+    return {"ok": True, "entry": entry}
+
+
+class RetirePOVEntryBody(BaseModel):
+    reason: str = Field(..., description="Why this entry no longer applies -- required, never silent.")
+
+
+@app.post("/pov/entries/{pov_id}/retire", tags=["write"], operation_id="retirePOVEntry")
+def post_retire_pov_entry(pov_id: str, body: RetirePOVEntryBody, x_api_key: Optional[str] = Header(None)):
+    """Mark a POV entry retired -- the user no longer holds this belief or
+    applies this rule. The entry and its full evidence history stay on
+    file (never deleted), just excluded from an active-only view."""
+    _auth(x_api_key)
+    try:
+        entry = user_pov.retire_pov_entry(pov_id, reason=body.reason)
+    except user_pov.UserPovError as exc:
+        raise HTTPException(404, detail=str(exc))
+    return {"ok": True, "entry": entry}
+
+
+class AttachPOVEvidenceBody(BaseModel):
+    relation: str = Field(..., description=f"One of {sorted(user_pov.VALID_EVIDENCE_RELATIONS)}.")
+    evidence: str = Field(..., description="The real evidence/observation -- never invented.")
+    source_url: Optional[str] = Field(None, description="Omit only when there is genuinely no URL.")
+    confidence: str = Field("medium", description="high, medium, or low.")
+
+
+@app.post("/pov/entries/{pov_id}/evidence", tags=["write"], operation_id="attachPOVEvidence")
+def post_attach_pov_evidence(pov_id: str, body: AttachPOVEvidenceBody, x_api_key: Optional[str] = Header(None)):
+    """Attach one evidence record to an existing POV entry -- supports,
+    challenges, or qualifies it. Deliberately cheap and ungated, same as
+    addCompetitiveNote. NEVER overwrites or changes the entry's statement
+    -- evidence is independent fact, the belief stays the user's own
+    (feature brief's 'critical separation'). Call revisePOVEntry instead
+    if the user is directly changing their own stated belief."""
+    _auth(x_api_key)
+    try:
+        record = user_pov.attach_pov_evidence(pov_id, body.relation, body.evidence, source_url=body.source_url, confidence=body.confidence)
+    except user_pov.UserPovError as exc:
+        raise HTTPException(404 if "No POV entry" in str(exc) else 422, detail=str(exc))
+    return {"ok": True, "evidence": record}
 
 
 class CreateCompetitiveBriefBody(BaseModel):

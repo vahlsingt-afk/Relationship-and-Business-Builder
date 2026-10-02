@@ -1644,3 +1644,51 @@ Confidence lives at the **assertion**, not the record: `franchisee_finder_common
 ### Explicitly deferred to Phase 2+ (spec sections 7, 10, 14, 16)
 
 No legal-entity data, no ownership-structure data, no geographic-footprint data (neither seed source carries any of the three -- every org's `legal_entities`/`ownership.owners`/`geographic_footprint` is honestly empty, not guessed). No write/correction-submission path (`submitFranchiseeCorrection`/`reviewFranchiseeSubmission` don't exist yet). No ChatGPT-deep-research-packet ingestion pipeline. No quarterly/monthly refresh cycle. `technology` is reserved (spec section 14's category set lives in `franchisee_finder_common.TECHNOLOGY_CATEGORIES`) but never populated in Phase 1.
+
+---
+
+## User POV Registry — `system/pov/`
+
+**Phase 1 (2026-10-02): atomic registry + evidence links only.** Full feature intent: `system/POV_REGISTRY_FEATURE_BRIEF_2026-10-01.md`. Named `user_pov` (not `todds_pov`/`operator_pov`) -- a general RBB capability, user-agnostic by design; Todd is simply the first user populating it. Deliberately separate from objective intelligence (`ecosystem_intelligence.json`) and from system doctrine (this file, `ARCHITECTURE.md`) -- this domain holds what the USER believes or wants used as an evaluative lens, not facts about the market or rules controlling how RBB behaves.
+
+**Real gap closed, investigated before building.** `CANONICAL_REGISTRY.yaml`'s `strategic_theses` domain already flagged this (`authority_status: distributed_consolidation_pending`, `authoritative_store: null`) -- but checking its named `current_stores` found `strategic_events.json`/`.py` is a genuinely different concept (RB's market/industry event-convergence log, not Todd's own beliefs), and a grep across `active_threads.yaml`/`account_intelligence/`/`research/` found only scattered incidental uses of the word "thesis", not a second concentrated source. `system/00_TODD_PROFILE.md`'s "Strategic theses" and "BridgePoint Ops engagement boundaries" sections were the real concentrated content -- now migrated into `user_pov` (`migrate_todd_profile_pov.py`, 11 entries). That file's biography/communication-style/relationship-capital-taxonomy content is deliberately NOT migrated -- identity/configuration, not POV claims.
+
+### Storage shape
+
+- `system/pov/registry.json` -- current canonical projection: `{"entries": [...]}`.
+- `system/pov/events.jsonl` -- immutable append-only history (created/revised/retired events).
+- `system/pov/evidence_links.jsonl` -- supports/challenges/qualifies evidence records.
+- `system/pov/frameworks/` -- reserved for the second, longer-document layer (POV Frameworks) the feature brief describes; empty in Phase 1, no import pipeline exists yet.
+
+### Atomic entry shape
+
+```json
+{
+  "pov_id": "pov-<hex12>",
+  "statement": "Enterprise buyers prefer best-of-breed; platform plays weaken at enterprise scale.",
+  "type": "principle | hypothesis | evaluative_lens | metric | research_question | hard_boundary",
+  "scope": "restaurant_technology | enterprise_sales | ai | business_development | global | ...",
+  "status": "active | testing | qualified | superseded | retired",
+  "conviction": "working_hypothesis | informed_belief | strong_conviction | foundational_principle",
+  "authorship": "user_authored | rbb_inferred",
+  "needs_review": false,
+  "source_document": "system/00_TODD_PROFILE.md",
+  "source_section": "Strategic theses",
+  "applies_to_surfaces": [],
+  "supporting_evidence_ids": [], "challenging_evidence_ids": [], "qualifying_evidence_ids": [],
+  "supersedes": null, "superseded_by": null,
+  "created_at": "2026-10-02T14:38:20Z", "last_reviewed_at": "2026-10-02T14:38:20Z"
+}
+```
+
+### Write discipline (the feature brief's "critical separation")
+
+Additive by default. `user_pov.attach_pov_evidence()` (API: `attachPOVEvidence`) records independent fact that supports, challenges, or qualifies an entry -- it NEVER changes the entry's own `statement`. `user_pov.revise_pov_entry()` (API: `revisePOVEntry`) is for the user directly changing their own stated belief -- it never edits in place; it creates a NEW entry carrying the revised statement and marks the original `status: superseded` with `superseded_by` set, same append-only/supersedes discipline as Technology Lifecycle and EOLMS. `authorship: "rbb_inferred"` entries start `needs_review: true` (an RBB judgment call, not yet confirmed); `authorship: "user_authored"` entries (the user's own verbatim declaration) are never gated.
+
+### API (Phase 1)
+
+`listPOVEntries` (`scope?`, `type?`, `status?`), `getPOVEntry(pov_id)`, `addPOVEntry`, `revisePOVEntry`, `retirePOVEntry`, `attachPOVEvidence` -- `system/api/server.py`, wired into `rbb_chat_tools.py`'s `_EXTRA_RBB_CHAT_ONLY_TOOLS`. KB routing: `system/api/custom_gpt_instructions_compact_8k.md`.
+
+### Explicitly deferred to Phase 2+
+
+POV Frameworks (the longer authored-document layer), `importPOVFramework`/`reviewPOVFrameworkExtraction`/`getPOVFramework` (no framework-import pipeline exists yet -- these would always 404, so they weren't built). A shared review surface with the Overwrite Confirmation Queue (queued, blocked as of this pass) for `needs_review: true` entries -- not resolved; Phase 1 has no review surface beyond `listPOVEntries` itself.
