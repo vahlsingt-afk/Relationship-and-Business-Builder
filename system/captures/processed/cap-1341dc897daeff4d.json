@@ -1,0 +1,67 @@
+{
+  "file_id": "cap-1341dc897daeff4d",
+  "queued_at": "2026-09-22T09:19:03+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-21_1906_candidate-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-21_1906_candidate-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260921-1906-candidate-validation`\n- Research system: `Codex web research`\n- Started at: `2026-09-21 19:06 CDT`\n- Completed at: `2026-09-21 19:08 CDT`\n- Research scope: Four unresolved candidate-page validations for Jack in the Box, Papa Johns, and Cracker Barrel\n- Queue item or vendor: Restaurant365, PAR Technology, and Crunchtime candidate pages\n- Methodology: Candidate-page validation using the direct vendor-published pages; deployment scope and historical limitations retained explicitly\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 3\n- Conflicts found: 1\n- Material takeaway: The Jack in the Box and Papa Johns pages support unusually strong systemwide selections, but Papa Johns is a planned transition through the end of 2027 rather than a completed installed base. The two Cracker Barrel pages support one historical 2016 back-office relationship and are not independent corroboration.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: Jack in the Box\n- Vendor: Restaurant365\n- Product or category: Mandated back-office inventory platform; accounting, financial reporting, AP automation, and multi-entity management at a subset of restaurants\n- Relationship indication: `customer`\n- Deployment scope: `enterprise`\n- Evidence type: `press release`\n- Confidence: `95%`\n- Confidence rationale: Restaurant365 reports a completed rollout across all corporate and franchise locations and quotes the Jack in the Box CTO. This is strong first-party/vendor evidence, though not independent third-party verification.\n- Source title: Jack in the Box Selects Restaurant365 as its Sole Back-Office Inventory Platform\n- Source URL: https://www.restaurant365.com/in-the-news/jack-in-the-box-selects-restaurant365-as-its-sole-back-office-inventory-platform/\n- Publisher or source owner: Restaurant365\n- Published date, if known: 2026-03-05\n- Accessed date: `2026-09-21`\n- Exact supporting excerpt or faithful factual note: Restaurant365 says its inventory platform was mandated and deployed across all 2,128 Jack in the Box corporate and franchise locations after a proof of concept and pilot. It separately says Restaurant365 provides the accounting engine for approximately half of the restaurants.\n- Product-specific evidence: Centralized inventory across 2,128 locations; approximately half also use accounting, real-time financial reporting, AP automation, and multi-entity management.\n- Conflicting or limiting evidence: Vendor-published announcement; the accounting footprint is only approximately half of locations and must not be generalized to the full system.\n- Recommended follow-up: Seek an independent Jack in the Box filing, franchise communication, or implementation update confirming current rollout status and location count.\n\n### Observation 2\n\n- Brand: Papa Johns\n- Vendor: PAR Technology\n- Product or category: PAR POS and PAR OPS for front-of-house ordering, make-line operations, above-restaurant management, labor, inventory, and restaurant management\n- Relationship indication: `customer`\n- Deployment scope: `enterprise`\n- Evidence type: `press release`\n- Confidence: `95%`\n- Confidence rationale: PAR reports a named enterprise selection with an on-record Papa Johns technology executive quote and a defined U.S. rollout plan. Confidence applies to the selection, not to completion of deployment.\n- Source title: Papa Johns Partners with PAR Technology to Power POS and OPS Transformation Across 3,200 U.S. Restaurants\n- Source URL: https://partech.com/news-coverage/papa-johns-partners-with-par-technology-to-power-pos-and-ops-transformation-across-3200-u-s-restaurants/\n- Publisher or source owner: PAR Technology\n- Published date, if known: 2026-01-12\n- Accessed date: `2026-09-21`\n- Exact supporting excerpt or faithful factual note: Papa Johns selected PAR POS and PAR OPS for its next-generation U.S. restaurant stack. The stated plan is to transition corporate and franchise locations from legacy on-premise systems, with full system rollout planned by the end of 2027.\n- Product-specific evidence: PAR POS and PAR OPS; ordering, make-line operations, above-store management, AI-supported labor, inventory, restaurant management, shared data, and unified support.\n- Conflicting or limiting evidence: This is a rollout commitment, not evidence that all 3,200 U.S. restaurants are already live. Do not convert the headline's scope into a current installed-base claim.\n- Recommended follow-up: Track implementation milestones and look for Papa Johns reporting that distinguishes selected, in rollout, and live locations.\n\n### Observation 3\n\n- Brand: Cracker Barrel\n- Vendor: Crunchtime\n- Product or category: Back-of-house restaurant management, labor cost management, inventory cost management, and operational efficiency\n- Relationship indication: `customer`\n- Deployment scope: `historical`\n- Evidence type: `press release`\n- Confidence: `80%`\n- Confidence rationale: Two Crunchtime pages explicitly describe the 2016 selection across the organization, but both are same-publisher pages dated the same day and do not independently confirm that the relationship remains active in 2026.\n- Source title: Cracker Barrel Old Country Store Selects Crunchtime; Cracker Barrel Uses Crunchtime to Optimize BOH\n- Source URL: https://www.crunchtime.com/press/cracker-barrel-old-country-store-selects-crunchtime ; https://www.crunchtime.com/press/cracker-barrel-selects-crunchtime\n- Publisher or source owner: Crunchtime\n- Published date, if known: 2016-06-01\n- Accessed date: `2026-09-21`\n- Exact supporting excerpt or faithful factual note: Crunchtime says Cracker Barrel selected its restaurant-management software in 2016 to improve operational efficiency and reduce labor and inventory costs across the organization.\n- Product-specific evidence: Back-of-house restaurant management, labor cost reduction, inventory cost reduction, operational visibility, and agility.\n- Conflicting or limiting evidence: The selection page says more than 640 locations in 43 states and its company boilerplate says 641; the companion page says more than 680 locations in 45 states while later boilerplate says more than 660. These pages are duplicate first-party evidence and support only a historical 2016 relationship, not a current 2026 footprint.\n- Recommended follow-up: Find a dated Cracker Barrel source or current Crunchtime customer story confirming whether the platform is still deployed and at what scope.\n\n## Negative findings\n\n- Candidate or claim: The two Cracker Barrel URLs might represent independent corroboration or current deployment evidence.\n- Pages checked: Both Crunchtime URLs in the source ledger.\n- Result: They are same-publisher pages dated the same day describing the same 2016 selection. They are useful historical evidence but not independent corroboration and not proof of a current 2026 installed base.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://www.restaurant365.com/in-the-news/jack-in-the-box-selects-restaurant365-as-its-sole-back-office-inventory-platform/ | Press release / vendor news | 2026-09-21 | Observation 1 | Strong systemwide inventory rollout; accounting only at approximately half of restaurants. |\n| https://partech.com/news-coverage/papa-johns-partners-with-par-technology-to-power-pos-and-ops-transformation-across-3200-u-s-restaurants/ | Press release / vendor news | 2026-09-21 | Observation 2 | Strong selection evidence; rollout is planned through end of 2027, not complete. |\n| https://www.crunchtime.com/press/cracker-barrel-old-country-store-selects-crunchtime | Press release | 2026-09-21 | Observation 3 | Historical 2016 selection; same-publisher duplicate evidence. |\n| https://www.crunchtime.com/press/cracker-barrel-selects-crunchtime | Vendor customer story | 2026-09-21 | Observation 3 | Historical 2016 BOH detail; location counts conflict with companion page. |\n\n## Research notes and inferences\n\n- Inference: Jack in the Box has stronger current deployment evidence than most candidate pages because the source describes a completed systemwide rollout and separately scopes the partial accounting footprint.\n- Inference: Papa Johns should be represented as selected/in rollout until a later source confirms live deployment progress; the 3,200 figure is intended rollout scope.\n- Inference: Cracker Barrel's relationship is durable historical evidence but should not be refreshed into a current canonical claim without a more recent source.",
+  "word_count": 1131,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-22T09:23:18+00:00",
+  "processing_result": {
+    "triage_stream_count": 4,
+    "noise_only": false,
+    "persisted_count": 4,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-010",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 1 trigger(s): named. Possible named subjects: Papa Johns, Confidence, Evidence, Deployment, Relationship, Source."
+      },
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-011",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:par_technology' (matched term: 'par technology'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-012",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-013",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Jack in the Box, Papa Johns, Cracker Barrel, PAR Technology, Restaurant365, Crunchtime. Macro/industry signal detected: 11 keyword hit(s) across categorie(s): consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: automation"
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "Jack in the Box",
+        "Papa Johns",
+        "Cracker Barrel",
+        "Restaurant365",
+        "PAR Technology",
+        "Crunchtime"
+      ],
+      "topics": [
+        "candidate-page validations",
+        "vendor relationships",
+        "systemwide selections",
+        "rollout plans"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Follow up on independent Jack in the Box filing to confirm rollout status.",
+        "Track implementation milestones for Papa Johns.",
+        "Find current Cracker Barrel source to confirm platform deployment."
+      ],
+      "why_it_matters": "The findings provide insights into vendor relationships and deployment statuses that could impact operational efficiency."
+    }
+  }
+}

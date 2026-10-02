@@ -1,0 +1,6 @@
+version: 1
+campaigns:
+  - id: genius-user-conference-2026
+    name: Global Payments Genius User Conference 2026
+    status: active
+    created: 2026-07-10

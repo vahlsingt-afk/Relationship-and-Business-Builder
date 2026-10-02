@@ -1,0 +1,23 @@
+{
+  "account_id": "acct-pollo-campero",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-02T14:44:10Z",
+      "generated_for": "",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-02",
+      "path": "system/account_research/accounts/pollo-campero/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-08T13:25:30Z",
+      "generated_for": "",
+      "purpose": "Automated 24h SLA refresh — flagged stale on a prior run and not yet addressed.",
+      "intelligence_verification_date": "2026-09-08",
+      "path": "system/account_research/accounts/pollo-campero/briefs/current/Background_Brief.md",
+      "superseded": false
+    }
+  ]
+}

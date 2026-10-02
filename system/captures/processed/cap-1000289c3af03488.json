@@ -1,0 +1,70 @@
+{
+  "file_id": "cap-1000289c3af03488",
+  "queued_at": "2026-09-23T09:19:03+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-22_0707_candidate-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-22_0707_candidate-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260922-0707-candidate-validation`\n- Research system: `Codex web research`\n- Started at: `2026-09-22 07:07 CDT`\n- Completed at: `2026-09-22 07:12 CDT`\n- Research scope: Four unresolved rank-1 McDonald's candidate-page validations\n- Queue item or vendor: Coates Group, Paytronix, and Restaurant365 candidate pages\n- Methodology: Direct retrieval and page-level validation of vendor-hosted source pages; relationship evidence required an explicit product-use or customer indication rather than a brand mention\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 3\n- Conflicts found: 0\n- Material takeaway: Two Coates posts document historical, single-location McDonald's deployments in Dubai and Shenzhen. A current Restaurant365 landing page indicates adoption among unspecified McDonald's owner-operators, but it does not establish corporate procurement, systemwide use, or the identity and McDonald's footprint of the adjacent testimonial operator. The Paytronix page is editorial analysis only.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: McDonald's\n- Vendor: Coates Group\n- Product or category: Self-order kiosks, digital menu boards, merchandising screens, and digital drive-thru\n- Relationship indication: `customer`\n- Deployment scope: `location-level`\n- Evidence type: `other`\n- Confidence: `90%`\n- Confidence rationale: Coates explicitly credits its Dubai team with helping deliver the named products at the relaunched Jumeirah Beach McDonald's restaurant. The source is vendor-owned and highly specific, but it is historical and supports one UAE location rather than a regional or enterprise-wide deployment.\n- Source title: Congratulations to the McDonald\u2019s MEA Team\n- Source URL: https://coatesgroup.com/insights/blog/congratulations-to-the-mcdonalds-mea-team\n- Publisher or source owner: Coates Group\n- Published date, if known: 2017-05-17\n- Accessed date: `2026-09-22`\n- Exact supporting excerpt or faithful factual note: Coates says the relaunched Jumeirah Beach McDonald's in Dubai featured Coates self-order kiosks, digital menu boards, merchandising screens, and digital drive-thru, and thanks the Coates Dubai team for helping bring the project to life.\n- Product-specific evidence: Self-order kiosks, digital menu boards, merchandising screens, and digital drive-thru.\n- Conflicting or limiting evidence: Historical single-location evidence only; no current-state confirmation and no basis for inferring a UAE, Middle East, or global standard.\n- Recommended follow-up: Seek a current McDonald's UAE or Coates regional source confirming whether the deployment remains active or expanded.\n\n### Observation 2\n\n- Brand: McDonald's\n- Vendor: Coates Group\n- Product or category: Self-order kiosks, indoor and outdoor digital menu boards, Switchboard CMS, and signage\n- Relationship indication: `customer`\n- Deployment scope: `location-level`\n- Evidence type: `other`\n- Confidence: `90%`\n- Confidence rationale: Coates explicitly identifies its products and its China team's delivery effort at a Shenzhen McDonald's Experience of the Future restaurant. The evidence is specific but historical and location-level.\n- Source title: Shenzhen\u2019s Impressive McDonald\u2019s\n- Source URL: https://coatesgroup.com/insights/blog/shenzhens-impressive-mcdonalds\n- Publisher or source owner: Coates Group\n- Published date, if known: 2016-12-15\n- Accessed date: `2026-09-22`\n- Exact supporting excerpt or faithful factual note: Coates says the Shenzhen restaurant featured Coates self-order kiosks, indoor and outdoor digital menu boards running Switchboard CMS, and refreshed signage, and credits the Coates China team.\n- Product-specific evidence: Self-order kiosks, indoor and outdoor digital menu boards, Switchboard CMS, and refreshed signage.\n- Conflicting or limiting evidence: Historical single-location evidence only; it does not establish current use or China-wide deployment.\n- Recommended follow-up: Seek a current McDonald's China or Coates deployment source with location count and current-state language.\n\n### Observation 3\n\n- Brand: McDonald's\n- Vendor: Restaurant365\n- Product or category: Restaurant accounting, accounts-payable automation, daily P&L and financial reporting, bank reconciliation, POS and vendor integrations, multi-location and intercompany reporting, asset management, food and labor cost analysis, and training\n- Relationship indication: `customer`\n- Deployment scope: `franchisee`\n- Evidence type: `testimonial`\n- Confidence: `45%`\n- Confidence rationale: Restaurant365's McDonald's-specific landing page says McDonald's owner-operators choose Restaurant365 and describes relevant workflows. It includes an adjacent testimonial from a 54-location operator, but the retrieved page does not explicitly identify that operator as a McDonald's franchisee or quantify McDonald's locations using the platform. This supports bounded franchisee adoption, not corporate or systemwide deployment.\n- Source title: McDonald\u2019s + Restaurant365\n- Source URL: https://www.restaurant365.com/blog/restaurant-software-for-mcdonalds-franchisees/\n- Publisher or source owner: Restaurant365\n- Published date, if known: unknown\n- Accessed date: `2026-09-22`\n- Exact supporting excerpt or faithful factual note: The page states that McDonald's owner-operators choose Restaurant365 and lists direct POS integration, live P&Ls, partner integrations, multi-location and intercompany reporting, asset management, and actual-versus-theoretical food and labor cost analysis. It also promotes a McDonald's accounting webinar and presents a 54-location operator testimonial without explicitly tying that operator to McDonald's in the retrieved text.\n- Product-specific evidence: Accounting, AP automation, daily P&L reporting, bank reconciliation, POS and partner integrations, multi-location reporting, intercompany transactions, asset management, food and labor cost analysis, and training.\n- Conflicting or limiting evidence: Vendor sales landing page; no named McDonald's operator is unambiguously linked to the testimonial in the retrieved text, no McDonald's location count is stated, and no corporate endorsement or systemwide procurement is asserted.\n- Recommended follow-up: Verify the testimonial operator's brand portfolio from an operator-owned source and seek a named McDonald's franchisee case study with location count.\n\n## Negative findings\n\n- Candidate or claim: McDonald's uses Paytronix for contactless ordering, mobile payments, or loyalty.\n- Pages checked: https://www.paytronix.com/blog/mcdonalds-leads-the-way-into-contactless\n- Result: The article describes McDonald's own Order & Pay app, drive-thru and curbside workflows, mobile payment, and rewards. It does not say McDonald's uses Paytronix or any Paytronix product; the page is editorial analysis and a lead-in to Paytronix's separate contactless offering.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://coatesgroup.com/insights/blog/congratulations-to-the-mcdonalds-mea-team | Vendor blog / project note | 2026-09-22 | Observation 1 | Historical single-location Dubai deployment with explicit Coates products. |\n| https://coatesgroup.com/insights/blog/shenzhens-impressive-mcdonalds | Vendor blog / project note | 2026-09-22 | Observation 2 | Historical single-location Shenzhen deployment with explicit Coates products and CMS. |\n| https://www.paytronix.com/blog/mcdonalds-leads-the-way-into-contactless | Vendor blog | 2026-09-22 | None | Editorial analysis of McDonald's own technology; no Paytronix relationship assertion. |\n| https://www.restaurant365.com/blog/restaurant-software-for-mcdonalds-franchisees/ | Vendor landing page / testimonial | 2026-09-22 | Observation 3 | Supports unspecified owner-operator adoption at low confidence; corporate scope and operator identity remain unproven. |\n\n## Research notes and inferences\n\n- Inference: Coates had at least two documented McDonald's location deployments outside Australia by 2017, but these pages cannot establish that either installation remains active in 2026.\n- Inference: Restaurant365 appears to market to and serve some McDonald's owner-operators, but the page is insufficient to map a named operator, installed base, or enterprise standard.\n- The Paytronix candidate is a false positive created by brand-focused editorial coverage, not customer evidence.\n- No finding in this packet should be written directly to canonical account records without the normal RB review step.",
+  "word_count": 1118,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-23T09:19:17+00:00",
+  "processing_result": {
+    "triage_stream_count": 5,
+    "noise_only": false,
+    "persisted_count": 5,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-001",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 4 trigger(s): named. Possible named subjects: Vendor, Dubai, Jumeirah Beach, Conflicting, The Paytronix, Coates."
+      },
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-002",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'mcdonalds'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-003",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-004",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: McDonald's, Restaurant365, Paytronix, Coates Group. Macro/industry signal detected: 15 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: automation, customer, deployment,"
+      },
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-005",
+        "intelligence_type": "strategic_memory",
+        "extracted_summary": "Strategic memory / thesis signal detected: 1 trigger(s): this supports."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "Coates Group",
+        "Restaurant365",
+        "Paytronix",
+        "McDonald's"
+      ],
+      "topics": [
+        "McDonald's candidate-page validations",
+        "Coates Group deployments",
+        "Restaurant365 adoption",
+        "Paytronix analysis"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Seek a current McDonald's UAE or Coates regional source confirming whether the deployment remains active or expanded.",
+        "Seek a current McDonald's China or Coates deployment source with location count and current-state language.",
+        "Verify the testimonial operator's brand portfolio from an operator-owned source and seek a named McDonald's franchisee case study with location count."
+      ],
+      "why_it_matters": "The findings provide insights into vendor relationships and deployments relevant to McDonald's operations."
+    }
+  }
+}

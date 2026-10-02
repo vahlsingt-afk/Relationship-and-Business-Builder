@@ -1,0 +1,70 @@
+{
+  "title": "P-036: Stale source lowers confidence; display only when decision-relevant",
+  "trace_type": "ri_assessment_doctrine",
+  "source": "relationship_signals_staleness_test",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-25",
+  "sprint": "RB 9.9",
+  "protocol": "P-036",
+  "scenario_id": "p036-case-5",
+  "summary": "The email source was last fetched 36 hours ago (threshold: 24h — stale). relationship_signals.py should mark signals from email as freshness=stale_source_limited and cap confidence at 0.55 per P-036. If the underlying signal would otherwise be strong enough to propose RI, the stale gate should block it. The brief should surface a staleness warning only if it affects the operator's decision (e.g., an active thread contact may have emailed but RB cannot confirm).",
+  "expected_behavior": {
+    "source_freshness": "stale",
+    "confidence_max": 0.55,
+    "ri_assessment_status": "blocked",
+    "block_reason_contains": "source_freshness=stale",
+    "display_recommendation": "show if active-thread relevant; suppress_unless_asked otherwise"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label": "email source marked stale",
+      "description": "source_health.json shows email.fetched_at = 2026-05-23T22:00:00Z (36h ago; threshold 24h). _freshness() in daily_brief.py returns stale_or_missing for email.",
+      "input": {
+        "source": "email",
+        "fetched_at": "2026-05-23T22:00:00Z",
+        "threshold_hours": 24,
+        "age_hours": 36
+      },
+      "expected": "email source tagged stale"
+    },
+    {
+      "step": 2,
+      "label": "_apply_freshness_labels propagates to signals",
+      "description": "relationship_signals.py calls _apply_freshness_labels; email-sourced signals get freshness=stale_source_limited. _ri_assessment_for_signal() caps confidence at 0.55 and sets status=blocked with reason containing 'source_freshness=stale'.",
+      "expected": {
+        "freshness": "stale_source_limited",
+        "confidence_max": 0.55,
+        "ri_assessment_status": "blocked"
+      }
+    },
+    {
+      "step": 3,
+      "label": "Brief shows staleness warning for active-thread contacts",
+      "description": "If an active-thread contact (e.g., Bob Gibson / Toast) may have emailed but the source is stale, the brief surfaces: 'Email is stale (36h) — I cannot confirm whether Bob Gibson replied to your active thread. Refresh email to check.' This is decision-relevant so it IS displayed.",
+      "expected_display": "show",
+      "example_response": "Email source is stale (fetched 36h ago; threshold 24h). I cannot confirm whether contacts on active threads have emailed. My confidence for email-based signals is limited.",
+      "forbidden_response": "Bob Gibson replied to your email — I propose recording a touch."
+    },
+    {
+      "step": 4,
+      "label": "Brief suppresses stale warning for non-relevant contacts",
+      "description": "For non-active-thread, non-RC contacts, the stale-source warning is NOT shown individually. The brief surfaces a single aggregate staleness notice in the Resource Verification section, not per-contact noise.",
+      "expected_display": "suppress_unless_asked for individual non-relevant contacts"
+    }
+  ],
+  "defects": [],
+  "acceptance_criteria": [
+    "stale email source caps confidence at 0.55 per P-036",
+    "ri_assessment.status = blocked for stale-sourced candidates",
+    "blocked.reason contains 'source_freshness=stale'",
+    "brief shows staleness warning when it affects active-thread decision",
+    "brief does NOT show per-contact RI claims from stale data",
+    "no stale source produces a confident RI claim"
+  ],
+  "anti_patterns": [
+    "confidence stays at 0.75+ when source is stale",
+    "proposing a touch mutation based on a stale email signal",
+    "silently suppressing the stale warning even when it affects active-thread judgment"
+  ]
+}

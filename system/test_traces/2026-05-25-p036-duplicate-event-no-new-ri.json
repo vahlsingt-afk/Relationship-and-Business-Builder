@@ -1,0 +1,58 @@
+{
+  "title": "P-036: Duplicate event should not create new RI or display again",
+  "trace_type": "ri_assessment_doctrine",
+  "source": "passive_ri_ingest_dedupe_test",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-25",
+  "sprint": "RB 9.9",
+  "protocol": "P-036",
+  "scenario_id": "p036-case-6",
+  "summary": "passive_ri_ingest runs on two consecutive days. On day 2, the same email-sourced signal for Jeff Wayman is re-detected (same sender, same thread, same event_at date). ri_events.append() should detect the duplicate via the dedupe hash and return was_appended=false. passive_ri_ingest should place the event in duplicates_skipped with ri_assessment.status=duplicate and display_recommendation=suppress. The brief should NOT surface a second proposal for the same touch.",
+  "expected_ri_assessment": {
+    "status": "duplicate",
+    "source": "passive_ri_ingest",
+    "display_recommendation": "suppress",
+    "events_written_count": 0,
+    "duplicates_skipped_count": 1
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label": "Day 1: First ingest — event written",
+      "description": "passive_ri_ingest.py processes an email signal from jeff@example.com on 2026-05-23. Event is new; ri_events.append returns was_appended=true. Result: events_written=1, ri_assessment.status=proposed.",
+      "day": 1,
+      "expected_outcome": "events_written=1; ri_assessment.status=proposed"
+    },
+    {
+      "step": 2,
+      "label": "Day 2: Same signal re-detected",
+      "description": "The email from jeff@example.com on 2026-05-23 is still in the inbox JSON (not removed after processing). passive_ri_ingest runs again. Same source_id/hash, same event_at, same entities. ri_events.append returns was_appended=false (duplicate).",
+      "day": 2,
+      "expected": {
+        "was_appended": false,
+        "ri_assessment_status": "duplicate",
+        "display_recommendation": "suppress"
+      }
+    },
+    {
+      "step": 3,
+      "label": "Brief does not re-surface the duplicate",
+      "description": "Day 2 brief proof row shows ri_assessed_duplicate:1. Brief does NOT say 'I propose a touch for Jeff Wayman' for the duplicate. No RI language about Jeff Wayman unless there is a NEW signal on day 2.",
+      "expected_display": "suppress",
+      "expected_proof_action": "ri_assessed_duplicate:1"
+    }
+  ],
+  "defects": [],
+  "acceptance_criteria": [
+    "ri_events.append returns was_appended=false for exact duplicate",
+    "passive_ri_ingest places event in duplicates_skipped",
+    "ri_assessment.status = duplicate",
+    "ri_assessment.display_recommendation = suppress",
+    "brief proof row shows ri_assessed_duplicate; no RI language re-surfaced"
+  ],
+  "anti_patterns": [
+    "writing a second proposed event for the same signal",
+    "claiming 'I found a new relationship signal for Jeff Wayman' on day 2",
+    "no dedupe check — events_written count increases every daily run for static inbox data"
+  ]
+}

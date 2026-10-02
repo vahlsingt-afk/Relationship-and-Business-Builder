@@ -1,0 +1,198 @@
+{
+  "competitor_id": "comp-revel-systems",
+  "competitor_slug": "revel-systems",
+  "display_name": "Revel Systems",
+  "aliases": [],
+  "vendor_entity_id": "vendor-revel-systems",
+  "primary_category": "pos",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Revel had \"intentionally overlooked payments\" (Isaacman), so Shift4 is pushing its own processing onto the base — possible churn among Revel merchants who don't want forced payments",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:47:19Z"
+      }
+    ],
+    "competitor_advantages": []
+  },
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:46:55Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:55Z",
+  "latest_cos_commentary": {
+    "headline": "Revel is a Shift4 POS lineage; assess its payments conversion alongside Shift4 Dine.",
+    "genius_exposure": "Revel is a Shift4 POS lineage; assess its payments conversion alongside Shift4 Dine.",
+    "competitive_timing": "Shift4 completed its acquisition of Revel in June 2024 and stated the deal brought approximately 18,000 merchant locations and a potential $17B in payments volume.",
+    "sales_response": "Confirm live Revel contracts, renewal dates and Shift4 processing attachment before framing a displacement opportunity.",
+    "risk_and_uncertainty": "Acquisition-era merchant count is stale and payment opportunity is a projection, not realized volume.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 39
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 39,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 2,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Positioning",
+        "Strengths",
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Recent News / Product Updates",
+        "Named Customers"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 3,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  },
+  "vendor_claims": [
+    {
+      "value": "Current indexed Revel content continues to advertise restaurant POS, contactless payments, online ordering and a cloud-based back office.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://revelsystems.com/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Revel Systems",
+      "source_type": "vendor_product_page_search_index",
+      "published_at": "",
+      "deployment_scope": "franchisee",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Full home-page fetch failed; post-Shift4 SKU packaging was not fully visible."
+    },
+    {
+      "value": "Revel maintains an API estate and training material for add-ons including online ordering, delivery management, customer and kitchen displays, and kiosks.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://reveluniversity.revelsystems.com/s/advanced-features",
+      "finding_type": "vendor_stated",
+      "source_owner": "Revel Systems",
+      "source_type": "vendor_training_product_page",
+      "published_at": "",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Availability by contract and future Shift4 roadmap were not established."
+    }
+  ],
+  "product_lineage": [
+    {
+      "value": "Shift4 completed its acquisition of Revel Systems in June 2024.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://investors.shift4.com/news-events/press-releases/detail/221/shift4-acquires-majority-stake-of-german-point-of-sale-company-vectron-systems-ag-and-completes-previously-announced-acquisition-of-revel-systems",
+      "finding_type": "vendor_stated",
+      "source_owner": "Shift4 Investor Relations",
+      "source_type": "primary_investor_press_release",
+      "published_at": "2024-06-14",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "No formal forced-migration timetable was found."
+    }
+  ],
+  "weaknesses": [
+    {
+      "value": "A current Capterra-indexed Revel review sharply criticizes customer service and technical support.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.capterra.com/p/135040/Revel-iPad-POS/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Capterra",
+      "source_type": "verified_review_platform_search_index",
+      "published_at": "2026-09-15",
+      "deployment_scope": "unknown",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "One indexed negative excerpt; full page retrieval failed and prevalence cannot be determined."
+    },
+    {
+      "value": "A self-described ten-year Revel user reported considering departure because of Revel Advantage card-processing rates and repeated fee increases.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.reddit.com/r/POS/comments/1g5yq8d/pos_help/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Reddit r/POS",
+      "source_type": "operator_discussion",
+      "published_at": "",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Anonymous single-user account; contract terms were not independently verified."
+    }
+  ],
+  "strengths": [
+    {
+      "value": "The Capterra-indexed Revel review corpus also surfaces positive themes such as extensive functionality and generally satisfactory experiences.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.capterra.com/p/135040/Revel-iPad-POS/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Capterra",
+      "source_type": "verified_review_platform_search_index",
+      "published_at": "2026-09-15",
+      "deployment_scope": "unknown",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Full page retrieval failed; positive review prevalence was not measured."
+    }
+  ],
+  "trends": {
+    "value": "Revel remained visibly active as a separate API/training/product estate in 2026 even though Shift4's acquisition announcement linked the Revel channel to accelerated SkyTab distribution.",
+    "status": "confirmed",
+    "evidence_ids": [],
+    "confidence": "medium",
+    "as_of": "2026-09-29",
+    "scope": "competitor",
+    "last_reviewed_by": "system:competitor_intelligence_common",
+    "source_url": "https://investors.shift4.com/news-events/press-releases/detail/221/shift4-acquires-majority-stake-of-german-point-of-sale-company-vectron-systems-ag-and-completes-previously-announced-acquisition-of-revel-systems",
+    "finding_type": "inference",
+    "source_owner": "Shift4 / Revel Systems",
+    "source_type": "cross_source_inference",
+    "published_at": "2024-06-14",
+    "deployment_scope": "enterprise",
+    "is_vendor_claim": false,
+    "is_inference": true,
+    "limitations_or_conflicts": "Standalone web presence does not prove long-term strategic autonomy; roadmap remains unknown."
+  }
+}

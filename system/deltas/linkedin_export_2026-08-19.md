@@ -1,0 +1,2277 @@
+# LinkedIn Relationship Intelligence - 2026-08-19
+
+Source: `Complete_LinkedInDataExport_08-19-2026.zip.zip` · Confidence: **89%** · Sources: Connections.csv, messages.csv, invitations.csv · Connections analyzed: 2,874
+
+## Mutation Report
+
+- Knowledge Sources Updated: 1
+- People Imported: 2874
+- Existing People Updated: 2773
+- New People Created: 30
+- Duplicate Candidates: not computed
+- Companies Added: 23
+- Relationship Links Created: 203
+- Knowledge Mutations Applied: 2803
+- Confidence: 89%
+
+- Duplicate Candidates not computed — LinkedIn URL/email match is deterministic, with no ambiguous-name bucket the way HubSpot's/Apple Contacts' name-only matches have.
+
+## What Should Todd Do Now?
+
+### High Priority
+
+- **Daran Adair** (RC Tier · Medium significance · Priority 8.0/10) 🎯  
+  Change: Lead Advisor @ Ameri-Can Hospitality Consulting → Lead Advisor @ Ameri-Can Hospitality Consulting  
+  Action: Reconnect — new employer is a natural pretext for a light-touch check-in.
+- **Bridgett Hendrickson** (RC Tier · High significance · Priority 7.0/10)  
+  Change: Vendor Management @ CAQH → Portfolio Manager @ Balance Theory  
+  Action: Reconnect — new employer is a natural pretext for a light-touch check-in.
+
+### Medium Priority
+
+- **Allie Harrison** (Known Influence · Priority 6.5/10)  
+  Promotion: Founder & Growth @ glowhouse  
+  Action: Send a congratulations note and use it to reopen the relationship.
+- **Brett R. Smith** (Known Influence · Priority 6.5/10)  
+  Promotion: Founding Partner @ Leading Growth Partners, LLC  
+  Action: Send a congratulations note and use it to reopen the relationship.
+- **Don Jose Mathew** (Known Influence · Priority 5.5/10)  
+  Title Change: Founder – Operational Intelligence for Multi-Unit QSR @ QSR Store Shield  
+  Action: Note title change; confirm accuracy and update relationship context.
+- **Chris Szewczyk** (Known Influence · Priority 5.5/10)  
+  Company And Role Change: GTM @ Reducto  
+  Action: Reconnect — new employer is a natural pretext for a light-touch check-in.
+- **Atul Sood** (Known Influence · Priority 5.5/10)  
+  Company And Role Change: Managing Principal @ Sood Advisory  
+  Action: Reconnect — new employer is a natural pretext for a light-touch check-in.
+- **Verlen ®️ Larsen, CTP** (Known Influence · Priority 5.5/10)  
+  Company And Role Change: Director of Enablement @ Medjay  
+  Action: Reconnect — new employer is a natural pretext for a light-touch check-in.
+- **Jonathan W Pritchard** (Known Influence · Priority 5.5/10)  
+  Company And Role Change: Principal @ ZAVANT enterprises  
+  Action: Reconnect — new employer is a natural pretext for a light-touch check-in.
+- **Michelle Foote** (Known Influence · Priority 5.5/10)  
+  Company And Role Change: Sales Operations Manager @ Donyati  
+  Action: Reconnect — new employer is a natural pretext for a light-touch check-in.
+- **Scott Fagan** (Known Influence · Priority 5.5/10)  
+  Company And Role Change: New Logo Account Executive, Emerging Enterprise @ Olo  
+  Action: Reconnect — new employer is a natural pretext for a light-touch check-in.
+- **Robert Reardon** (Known Influence · Priority 5.0/10)  
+  Company Change: Enterprise Sales Director @ CBS NorthStar  
+  Action: Reconnect — new employer is a natural pretext for a light-touch check-in.
+
+## Network Segment Comparison
+
+| Segment | Previous | Current | Delta |
+|---|---:|---:|---:|
+| Total Connections | 3,083 | 3,113 | +30 |
+| Restaurant Technology | 364 | 367 | +3 |
+| Recruiters | 35 | 35 | 0 |
+| Executives (VP+) | 1,200 | 1,213 | +13 |
+| Enterprise Buyers | 849 | 849 | 0 |
+| McDonald's Ecosystem | 125 | 126 | +1 |
+
+## Baseline Comparison
+
+| Metric | Count |
+|---|---:|
+| Prior baseline records | 3,083 |
+| Current baseline records | 3,113 |
+| Connections in export | 2,874 |
+| Matched existing | 2,773 |
+| Net-new relationships | 30 |
+| Lost relationships | 3 |
+| Reconnections | 1 |
+| Conflicts held | 1 |
+
+## Employment Status Reconciliation
+
+| Category | Count |
+|---|---:|
+| New current role | 0 |
+| Ended role, no stated successor | 0 |
+| Stale export conflict suppressed | 1 |
+| Employment dates unavailable | 127 |
+| Needs operator review | 1 |
+
+_Connections.csv carries no employment dates, so this ingest path cannot resolve 'new current role' or 'ended role with no stated successor' on its own — those require a dated LinkedIn profile capture (linkedin_session_reader.py) or explicit operator confirmation._
+
+### Stale Export Conflicts Suppressed
+- **Richard Heyman**: export still shows Scooter's Coffee / EVP | Chief Technology & Innovation Officer; canonical state is no_stated_current_role since 2026-08-06T00:00:00+00:00.
+
+## Professional Change Detection
+
+| Signal | Count |
+|---|---:|
+| Title changes | 116 |
+| Company changes | 87 |
+| Promotions | 2 |
+| Recruiter additions | 0 |
+| Executive additions | 13 |
+| Enterprise buyer additions | 5 |
+| Restaurant-tech adjacency expansion | 2 |
+| Strategic cluster changes | 5 |
+
+### RC Tier Moves
+- **Daran Adair** (company_change): Ameri-Can Hospitality Consulting / Lead Advisor → Ameri-Can Hospitality Consulting / Lead Advisor
+- **Bridgett Hendrickson** (company_and_role_change): CAQH / Vendor Management → Balance Theory / Portfolio Manager
+
+### LKI Tier Moves
+- **Don Jose Mathew** (title_change): QSR Store Shield / Founder – Detecting & Fixing Underperforming Stores in Multi-Unit QSR → QSR Store Shield / Founder – Operational Intelligence for Multi-Unit QSR
+- **Chris Szewczyk** (company_and_role_change): Espresso AI / Developer Relations → Reducto / GTM
+- **Atul Sood** (company_and_role_change): Fountain / Business Development Advisor → Sood Advisory / Managing Principal
+- **Verlen ®️ Larsen, CTP** (company_and_role_change): Trans-formative / Chief Question Asker 🕵🏼 Deep Discovery Coach 💡 Organizational & Personal Visioning → Medjay / Director of Enablement
+- **Patty Dominguez** (title_change): More Leverage Solutions / Founder & AI Authority Advisor | Creator of The Chosen Brand™ System → More Leverage Solutions / Founder, Top Local Pick
+- **Jonathan W Pritchard** (company_and_role_change): Jonathan Pritchard / f/CMO & CEO Advisor (Clarity Work & Persuasion Systems) → ZAVANT enterprises / Principal
+- **Allie Harrison** (promotion): Singulate / Founding GTM → glowhouse / Founder & Growth
+- **Michelle Foote** (company_and_role_change): PAR Technology / Director of Program Management and Business Operations → Donyati / Sales Operations Manager
+- **Robert Reardon** (company_change): Custom Business Solutions / Enterprise Sales Director → CBS NorthStar / Enterprise Sales Director
+- **ryan williams, mba** (title_change): Mistplay / Senior Business Development Manager II → Mistplay / Partnerships & Strategic Business Development
+- **Brett R. Smith** (promotion): Smith Creek Co. / Founder & Owner → Leading Growth Partners, LLC / Founding Partner
+- **Scott Fagan** (company_and_role_change): Kea / Sales Executive → Olo / New Logo Account Executive, Emerging Enterprise
+
+## Strategic Relationship Changes
+
+5 strategic relationships materially increased in value.
+
+### Who Matters Now
+- **Daran Adair**: Ameri-Can Hospitality Consulting / Lead Advisor — LinkedIn export shows company/title movement against prior baseline.
+- **Bridgett Hendrickson**: Balance Theory / Portfolio Manager — LinkedIn export shows company/title movement against prior baseline.
+- **Don Jose Mathew**: QSR Store Shield / Founder – Operational Intelligence for Multi-Unit QSR — LinkedIn export shows company/title movement against prior baseline.
+- **Allie Harrison**: glowhouse / Founder & Growth — LinkedIn export shows company/title movement against prior baseline.
+- **Brett R. Smith**: Leading Growth Partners, LLC / Founding Partner — LinkedIn export shows company/title movement against prior baseline.
+
+### Newly Relevant Contacts
+- **nicolas huguenin**: N & H Biz Ventures / Co-Founder — New relationship has recruiter, executive, enterprise-buyer, or restaurant-tech adjacency.
+- **Gianluca Sardo**: The Glasshouse / President — New relationship has recruiter, executive, enterprise-buyer, or restaurant-tech adjacency.
+- **Bijan Hazemi**: Elevated E-Commerce / Chief Executive Officer — New relationship has recruiter, executive, enterprise-buyer, or restaurant-tech adjacency.
+- **Gabriel Breece**: Trinity Recruiting Solutions / Co-Founder — New relationship has recruiter, executive, enterprise-buyer, or restaurant-tech adjacency.
+- **Mohammad Jaber**: TABsense / Co-Founder and CEO — New relationship has recruiter, executive, enterprise-buyer, or restaurant-tech adjacency.
+- **Payal Pandya**: Equiledger Accounting / Co-Founder — New relationship has recruiter, executive, enterprise-buyer, or restaurant-tech adjacency.
+- **Abrar Ahmed**: Vurks / Chief Marketing Officer — New relationship has recruiter, executive, enterprise-buyer, or restaurant-tech adjacency.
+- **Hitesh Patel**: Gokul System Solutions / Chief Executive Officer — New relationship has recruiter, executive, enterprise-buyer, or restaurant-tech adjacency.
+- **Erik Vanderkin**: JPM Media Canada / Growth Partner — New relationship has recruiter, executive, enterprise-buyer, or restaurant-tech adjacency.
+- **Areeb Rehman**: The Data Harbour / Managing Director — New relationship has recruiter, executive, enterprise-buyer, or restaurant-tech adjacency.
+- **Diana Treptau**: Ur Biz Strategist / Founder - CEO — New relationship has recruiter, executive, enterprise-buyer, or restaurant-tech adjacency.
+- **Jalissaniey Martinez Alvarez**: McDonald's / General Manager — New relationship has recruiter, executive, enterprise-buyer, or restaurant-tech adjacency.
+
+### Account Map Signals
+- **Scott Fagan** → Olo (Olo / New Logo Account Executive, Emerging Enterprise, company_and_role_change)
+
+## Post-Ingest Intelligence
+
+**Dormant relationships resurfaced (2040):**
+
+- Andrew Povec — last touch 702 days ago
+- Cullen Matt — last touch 699 days ago
+- Michael Fulmer — no last_touch on file
+- Atul Singh Chauhan — no last_touch on file
+- Chanae Bowden — no last_touch on file
+- Titus B. Chandra — no last_touch on file
+- Alexander Mahernia — last touch 691 days ago
+- LeRoy Lane — last touch 3408 days ago
+- Freedom Ogun — no last_touch on file
+- Riley O'Mara 📚 — no last_touch on file
+- David Heim — no last_touch on file
+- Tracey Smith — last touch 582 days ago
+- Anthony Moussouri — no last_touch on file
+- Rodolfo Estrada, MS — last touch 644 days ago
+- Jennifer Smith — no last_touch on file
+- Scott Lawton — last touch 694 days ago
+- Joel Toribio — no last_touch on file
+- Kamal Khatwani — no last_touch on file
+- Lincoln Manning — last touch 784 days ago
+- Md Sadat,PMP — no last_touch on file
+- Jonah Friedl — last touch 749 days ago
+- Nick Scaccio — last touch 688 days ago
+- Lauren Stempel — no last_touch on file
+- Rachid Hassan — last touch 412 days ago
+- Jonathan Reynolds — last touch 461 days ago
+- Caroline Pillay — no last_touch on file
+- Darla Haas — no last_touch on file
+- Morgan Swink — last touch 642 days ago
+- Taylor Viersen — last touch 701 days ago
+- Christina Kapeli — no last_touch on file
+- DONNA BROWER — no last_touch on file
+- Grace Li — no last_touch on file
+- Bobby Taylor — no last_touch on file
+- Kashif K. Ghory — no last_touch on file
+- Josh Barnett — no last_touch on file
+- Donna Peters — no last_touch on file
+- Gabe Tuckett — no last_touch on file
+- Carmen Lopez — no last_touch on file
+- Katherine Barone — no last_touch on file
+- Michelle Kilburn — no last_touch on file
+- Roger Di Domenico — last touch 637 days ago
+- Virginia Allen — last touch 703 days ago
+- Christopher Reeves — no last_touch on file
+- Rebecca Hanson — last touch 710 days ago
+- Noor Mohamed Mujahith — no last_touch on file
+- Brendan Leahy — no last_touch on file
+- Shawn Ludmer — no last_touch on file
+- JJ Raflik — no last_touch on file
+- Samuel Pries — last touch 569 days ago
+- Jared Garcia — no last_touch on file
+- Andy Meeks — no last_touch on file
+- Michael Bell — last touch 686 days ago
+- Jhonny Mercado — last touch 616 days ago
+- Ed Biery — last touch 724 days ago
+- Dave McCollum — no last_touch on file
+- Bob Gershberg — last touch 695 days ago
+- Matthew Flanagan — last touch 695 days ago
+- Brooke Sanchez — last touch 1106 days ago
+- Robert Elias — no last_touch on file
+- Davide Stilo — last touch 707 days ago
+- Michael Lewis — no last_touch on file
+- Jessica Finley — last touch 434 days ago
+- Brianna Lemon, CHRS — no last_touch on file
+- John Daniel — last touch 481 days ago
+- Sean Rhodes — last touch 708 days ago
+- Jeannie Caruso — no last_touch on file
+- Stefanie Meyers, PHR, SHRM-CP — no last_touch on file
+- Ed Pausig — last touch 2706 days ago
+- Maria Santos — last touch 534 days ago
+- Robert Alpert — last touch 708 days ago
+- Michael Hotton — no last_touch on file
+- Xavier Mariezcurrena Vega — last touch 397 days ago
+- Stacy Soderstrom, CFE — last touch 574 days ago
+- Doug Austin — last touch 642 days ago
+- Kyle Kane — no last_touch on file
+- Mihail Gishkelyuk — no last_touch on file
+- Molly Hanson — last touch 695 days ago
+- Patrick Williams — last touch 642 days ago
+- Anthony Gartung — no last_touch on file
+- Gregg Glover — no last_touch on file
+- Mark Hadler — last touch 2570 days ago
+- Subiksha Ramachandran — no last_touch on file
+- Cynthia Winter — no last_touch on file
+- Marcia Snyder — last touch 3591 days ago
+- Vedant Patel — no last_touch on file
+- Chuck Shuptrine — last touch 716 days ago
+- Mark Crompton, MBA, CSL — no last_touch on file
+- Adrian Poulisse, MAOL, MCJ — last touch 638 days ago
+- Karen Laos ✨ — no last_touch on file
+- Doug Bengson — last touch 2929 days ago
+- Michael Mullin — no last_touch on file
+- Amber Alexander Boozer — no last_touch on file
+- Michael Willocks — last touch 649 days ago
+- Bernie Salvaggio — no last_touch on file
+- Timothy Minsart — no last_touch on file
+- Philip Daus — last touch 701 days ago
+- Eric Martino — last touch 684 days ago
+- Vishwa Chandra — last touch 695 days ago
+- Rich Rosen — last touch 533 days ago
+- Abbey Karel — last touch 694 days ago
+- Michael Petillo — no last_touch on file
+- Brett Olson — no last_touch on file
+- Andy Hulsey — last touch 709 days ago
+- Craig Niven — no last_touch on file
+- Jon France — no last_touch on file
+- Nicole Hinson — last touch 429 days ago
+- Vincent Marchitello — no last_touch on file
+- Brock Davis — no last_touch on file
+- David Hubbard — no last_touch on file
+- Howard Williams — no last_touch on file
+- Chris Helvajian — no last_touch on file
+- Ryan Wessley — no last_touch on file
+- Pam Behnke — no last_touch on file
+- Jason Curry — last touch 1477 days ago
+- Elise Kowan — last touch 406 days ago
+- Bob Evans — no last_touch on file
+- Jennifer Johnson — last touch 709 days ago
+- Hafsa Zulfiqar — no last_touch on file
+- Cedric Steele — last touch 651 days ago
+- Bob Surbeck — last touch 674 days ago
+- Justin Clay — last touch 554 days ago
+- Ryan Schalles — no last_touch on file
+- Sean Gaffney — no last_touch on file
+- Yusuff Mukarram — no last_touch on file
+- Jahid Hasan — no last_touch on file
+- Robin Weiner, CFE — no last_touch on file
+- Daniel Rodocker, MBA — last touch 643 days ago
+- David Gugava — no last_touch on file
+- Tyler Rostenbach — no last_touch on file
+- Paul Sattler — last touch 709 days ago
+- Benjamin Harlton — no last_touch on file
+- Shawn Gentry — last touch 680 days ago
+- Nicole Wilder — no last_touch on file
+- Nicholas Belsito — no last_touch on file
+- Pavlos Soubassakos — last touch 569 days ago
+- Sandra Verdeja — no last_touch on file
+- Joseph Layne — last touch 1588 days ago
+- Kristen Thomas, JD — last touch 435 days ago
+- Beth Spendlove — last touch 685 days ago
+- Ted Curtin — last touch 642 days ago
+- James Cahill — last touch 695 days ago
+- DeLawn Heald — last touch 462 days ago
+- Matt Huey — last touch 698 days ago
+- Morgan Wilkinson — no last_touch on file
+- Scott Stalnaker — last touch 693 days ago
+- Jack Gibbons — last touch 697 days ago
+- Barb Mileur — no last_touch on file
+- Cody Miller — last touch 531 days ago
+- Julie Bryant — no last_touch on file
+- Doug Rixmann — last touch 413 days ago
+- Kevin Bastedo — last touch 715 days ago
+- Dave Williams — no last_touch on file
+- Sabrina Niland — last touch 634 days ago
+- Brian Hall — last touch 611 days ago
+- Annette Smith — last touch 677 days ago
+- Jose Garcia Jr — no last_touch on file
+- Corey Clayton — no last_touch on file
+- Diana Yan — no last_touch on file
+- Kalie Godwin — last touch 710 days ago
+- David Mauer Jr., MBA, CAM — no last_touch on file
+- Kimberly Gramm, MBA, PhD — last touch 636 days ago
+- Rohit Mull — last touch 635 days ago
+- Charles Coppola — no last_touch on file
+- Anand Yalamanchi — no last_touch on file
+- Mike Wise — last touch 428 days ago
+- Richard Holton — no last_touch on file
+- Raffi Vartian — no last_touch on file
+- Albert Cavagnaro — no last_touch on file
+- Stephanie Simpson — no last_touch on file
+- Sean Cisco — last touch 2896 days ago
+- Richard Feustel — last touch 594 days ago
+- Rich Faltot — last touch 544 days ago
+- Keith Robinson — last touch 711 days ago
+- Debora Rojero Contreras — no last_touch on file
+- Joe Convertino — no last_touch on file
+- Paul Zarnoch — last touch 2919 days ago
+- Harun Basic — no last_touch on file
+- Camille Diaz — no last_touch on file
+- Ryan Goodrich — last touch 691 days ago
+- Anatolie Clevan — no last_touch on file
+- Ryan K McDonald — no last_touch on file
+- Keith Floyd — last touch 2843 days ago
+- Peter McManus — no last_touch on file
+- Satyne Doner — last touch 699 days ago
+- Betty Grindey — no last_touch on file
+- Kate Barone — no last_touch on file
+- Gregory W Lotz, P.E. — last touch 616 days ago
+- Felipe Gomez — last touch 377 days ago
+- Lupe Villarreal — last touch 702 days ago
+- Rick Maack — no last_touch on file
+- Ross Gerdes — no last_touch on file
+- Nick Nastasi — last touch 705 days ago
+- Adem Hyssoli — last touch 421 days ago
+- Darrell Copple — no last_touch on file
+- Sayed Hashim — no last_touch on file
+- Theresa Vitale — last touch 616 days ago
+- Waqqas Mahmood — no last_touch on file
+- James J. Cleveland, EDFP, IOM — no last_touch on file
+- Brian Brindza 🍕 — last touch 632 days ago
+- Ricky Grice — last touch 2929 days ago
+- Rob Gonda — no last_touch on file
+- Peter Genna — last touch 622 days ago
+- Genny Gomez — last touch 712 days ago
+- Jason Holborow — no last_touch on file
+- Lisa Claridge, MBA — last touch 720 days ago
+- Jaimee Green — no last_touch on file
+- Jason Gavin — no last_touch on file
+- Judy Goebel — no last_touch on file
+- Nicole Davis — no last_touch on file
+- Vanessa Pierce — last touch 415 days ago
+- Malou Lomiares — last touch 397 days ago
+- Joel Doherty — last touch 630 days ago
+- Amy Halverson — last touch 699 days ago
+- Patrick Rao — no last_touch on file
+- Sarfaraz Akhter — no last_touch on file
+- Robert Tucker — no last_touch on file
+- Robert Taylor — no last_touch on file
+- Bob Hansen — no last_touch on file
+- James Fowles — last touch 371 days ago
+- Nelly Morgan — no last_touch on file
+- Jeremy Biser — last touch 686 days ago
+- Melissa Filgerleski — last touch 699 days ago
+- Dawn Rinehardt — no last_touch on file
+- Neil Ranney — last touch 860 days ago
+- Dylan Ovesen — no last_touch on file
+- Karlene Pathirana — no last_touch on file
+- Anthony Presley — last touch 656 days ago
+- Melanie Bradley — no last_touch on file
+- Cindy Wagner — no last_touch on file
+- Nicholas Kistler — no last_touch on file
+- Ramya Ganesh — no last_touch on file
+- Mike Messeroff — no last_touch on file
+- Greg Vigil — no last_touch on file
+- Tal Spirer — no last_touch on file
+- Oscar Sanchez — last touch 711 days ago
+- Julie Beichler — no last_touch on file
+- Andrew Mikkola — no last_touch on file
+- Tyler D. Cole — no last_touch on file
+- Bryan Held — no last_touch on file
+- Kshama Swamy — no last_touch on file
+- Tim Creasey — last touch 621 days ago
+- Tim Steffensmeier — no last_touch on file
+- Rachel Foard — no last_touch on file
+- Abhishek Kumar — no last_touch on file
+- Marcie Hooley — no last_touch on file
+- Keith Kas — last touch 621 days ago
+- Nancy Bernard — no last_touch on file
+- Angela Fullerton, RPA, CPM — no last_touch on file
+- Olivia Nielsen — no last_touch on file
+- Gulnoza Jurayeva — no last_touch on file
+- Evan Hurley — last touch 611 days ago
+- Leif Magnuson — no last_touch on file
+- Devan Cohen — no last_touch on file
+- Nidhi Sharma — no last_touch on file
+- Pramod Sharma — no last_touch on file
+- Rasheeda Clark — last touch 686 days ago
+- Harmeet Kaur — no last_touch on file
+- Nathen Dube, RSE — no last_touch on file
+- Taylor DeHart — last touch 684 days ago
+- Paul T Tran — last touch 643 days ago
+- Frederik Creugers — last touch 630 days ago
+- Alex Schlegel — last touch 399 days ago
+- David McDonald — no last_touch on file
+- Spence Sicotte — last touch 715 days ago
+- Andrew Kohn — last touch 712 days ago
+- Bob Hillerud — no last_touch on file
+- Mark Garcia — no last_touch on file
+- Sue Meinecke, MSM — no last_touch on file
+- Jarrod Newman — no last_touch on file
+- Jordan Annis — last touch 700 days ago
+- Tim Fisher — no last_touch on file
+- Julie Tuizer, MS — last touch 616 days ago
+- Jessica Sweet — last touch 700 days ago
+- Greg Sullivan — last touch 650 days ago
+- Darrell Copple — last touch 707 days ago
+- Paul Jurkovic — no last_touch on file
+- Michael Iles II — no last_touch on file
+- Bharat Patil — last touch 1603 days ago
+- Charlotte Hopkins — last touch 696 days ago
+- Rakesh Patel — last touch 873 days ago
+- Aaron Hancart, CFI, EPS — last touch 712 days ago
+- Aysha Hassan — no last_touch on file
+- Anthony Cayce — last touch 650 days ago
+- TANESHA BELL — no last_touch on file
+- Nicole Payne — no last_touch on file
+- Robert Maynard — no last_touch on file
+- Carlos Vargas — no last_touch on file
+- Cara McClendon — no last_touch on file
+- Emily Hedrick, MBA — last touch 412 days ago
+- James Wu — no last_touch on file
+- Art Julian — no last_touch on file
+- Mitch Zenaty — no last_touch on file
+- Stacy Belanger — no last_touch on file
+- Ashleigh Moorehead — last touch 1531 days ago
+- Dr. Rashad Yazdanifard — no last_touch on file
+- Stacey Meyers — no last_touch on file
+- Graham Grant — last touch 518 days ago
+- Tony Rappa — no last_touch on file
+- Clark Browning — last touch 703 days ago
+- Polly Watt — no last_touch on file
+- Kira Hattenbach — last touch 873 days ago
+- Zeeshan Abbas — no last_touch on file
+- Daniel Collins — no last_touch on file
+- Murangiri Vincent, SAS® — no last_touch on file
+- Vik Devjee — no last_touch on file
+- Jeff Caplin — last touch 453 days ago
+- Justin Hastings — no last_touch on file
+- Chance Carlisle — last touch 616 days ago
+- Steven Leo — no last_touch on file
+- Douglas Bowman — last touch 548 days ago
+- Danny Klein — no last_touch on file
+- Ednan Mosallam — no last_touch on file
+- Ryan Ettridge — no last_touch on file
+- Kayla Girgus — no last_touch on file
+- Andrew Hobika Jr. — no last_touch on file
+- Tod Beck — no last_touch on file
+- Cory Schnurr — last touch 632 days ago
+- Jim Dickey — no last_touch on file
+- Michael Lenzi — last touch 680 days ago
+- Audrey Bilsborrow — no last_touch on file
+- Marty Ruby — no last_touch on file
+- Amy Hoover — last touch 614 days ago
+- Hassaan Tariq — no last_touch on file
+- Andre McCain — no last_touch on file
+- Matt Schalsey — no last_touch on file
+- Sara Reckley Kerndt  REALTOR — no last_touch on file
+- Jason Jaax — no last_touch on file
+- Ray Sylvester — no last_touch on file
+- Jason Gonzalez — no last_touch on file
+- Alex Mitchell — no last_touch on file
+- Claire Lawrence — no last_touch on file
+- Stephanie Idland — last touch 693 days ago
+- Edgar Garner — last touch 414 days ago
+- Sean Garcia — no last_touch on file
+- April Donohue — no last_touch on file
+- Dr. Thomas (Tom) DePaoli — last touch 708 days ago
+- Lori Brokaw Stout — no last_touch on file
+- Monica Hayes — last touch 684 days ago
+- Shawn Walchef — last touch 412 days ago
+- Fahad Irfani — no last_touch on file
+- Yousef Zeiad — no last_touch on file
+- Shahzeb Jafri — last touch 435 days ago
+- Scott Sweatman — no last_touch on file
+- Anna Grieco — no last_touch on file
+- Tim Hylton — last touch 693 days ago
+- Rachel Minter, CCXP — no last_touch on file
+- Jean Saintvil — no last_touch on file
+- Jonathan Reistad — last touch 698 days ago
+- Sandy Tryon — last touch 3240 days ago
+- Jesse Stein — last touch 592 days ago
+- George Apostolopoulos — last touch 426 days ago
+- Richard Amador — last touch 709 days ago
+- Melissa Hawthorn — no last_touch on file
+- Joshua Kaihlanen — no last_touch on file
+- Zach Fetter — last touch 386 days ago
+- Lazo Jessica — no last_touch on file
+- Scott Marentay — no last_touch on file
+- Bill Testa — no last_touch on file
+- Ken Mather — no last_touch on file
+- Scott Bracewell — no last_touch on file
+- Steven Downer — no last_touch on file
+- Yeshai Bouskila — last touch 638 days ago
+- Shaun Noone — last touch 703 days ago
+- Karen Grable — no last_touch on file
+- Mina Feuerhaken — no last_touch on file
+- Ariel Lowinsky — no last_touch on file
+- Karl Ruter — no last_touch on file
+- Shenika Harris — last touch 716 days ago
+- Casey Fuentes — last touch 749 days ago
+- Lester Arat — last touch 573 days ago
+- Jamie McNamara — no last_touch on file
+- Paul Timmons — no last_touch on file
+- Barb Smith Gray — no last_touch on file
+- Vincenzo Floreno Jr. — no last_touch on file
+- Paul Fabre — last touch 646 days ago
+- Ami Austin — last touch 419 days ago
+- Antonio Godfrey Sr — no last_touch on file
+- Jay Hornacek — last touch 715 days ago
+- Volodymyr Grushovenko — no last_touch on file
+- Danirrey Asis — no last_touch on file
+- Missy Schaaphok — last touch 616 days ago
+- Ken Xia — last touch 421 days ago
+- Amiel Roncales — no last_touch on file
+- Holly Gustafson — last touch 710 days ago
+- Jamie Izaks — last touch 684 days ago
+- Jack A. King — no last_touch on file
+- Douglas Hollmann — last touch 2599 days ago
+- Brittnay Perlo — last touch 642 days ago
+- Sepehr Moein — last touch 574 days ago
+- Angel Alvarez Saravia — no last_touch on file
+- Kate Norman — last touch 712 days ago
+- Chad Offerdahl — last touch 653 days ago
+- Johanny Payero — last touch 713 days ago
+- Alex Coldea — no last_touch on file
+- Nick Sandilands — last touch 702 days ago
+- Francois Bon — no last_touch on file
+- James Thiele — no last_touch on file
+- Bobby Segars — no last_touch on file
+- John Dang — last touch 688 days ago
+- David Sansenbach — no last_touch on file
+- Caroline Farley — last touch 698 days ago
+- Joseph Gartner — no last_touch on file
+- Suryansh Chauhan — no last_touch on file
+- Paul Molinari — no last_touch on file
+- Sharif Soofi — no last_touch on file
+- Kyle Cottengim — last touch 701 days ago
+- Jennifer Barrett — last touch 706 days ago
+- Lisa Biering — last touch 639 days ago
+- Tejesh Reddy Singasani PhD — no last_touch on file
+- Danielle Shedd — last touch 2000 days ago
+- Jordan Haywood — last touch 691 days ago
+- Greg Miller - PMP, PSM I — last touch 2568 days ago
+- Brittany Foley — last touch 621 days ago
+- Amanda Parafiniuk — no last_touch on file
+- Greg Cathey — last touch 632 days ago
+- Matt Bischof, PSP® — no last_touch on file
+- Jonna L — no last_touch on file
+- Ayush A. Trivedi — last touch 391 days ago
+- Mickelle D. Dylan — no last_touch on file
+- Chris Kullgren — no last_touch on file
+- Danielle Serrano — last touch 632 days ago
+- Doug Townsend — no last_touch on file
+- Kamal Lahria — no last_touch on file
+- Dan Hanks — no last_touch on file
+- Annelle Barnett — no last_touch on file
+- Jacob Munoz — last touch 413 days ago
+- Adrienne Vahlsing — no last_touch on file
+- Mark Salek — last touch 715 days ago
+- Cristian Salazar — no last_touch on file
+- Mayra Valles — last touch 679 days ago
+- Robert Bates — no last_touch on file
+- Kim Aguirre — no last_touch on file
+- Fernando Perez — last touch 709 days ago
+- Amanda Thomas — last touch 712 days ago
+- Jarred LaChance — no last_touch on file
+- Shawnna Harbin — no last_touch on file
+- Adam Kelemen — no last_touch on file
+- Brant Richards — no last_touch on file
+- Aaron Mortensen — no last_touch on file
+- Cody Affleck — no last_touch on file
+- Steven Graves — last touch 702 days ago
+- Robert Tintner — no last_touch on file
+- Maryam Chaney — last touch 693 days ago
+- Bilewane Bienvenu mokili — no last_touch on file
+- PD SINGH — no last_touch on file
+- Callie Evergreen — last touch 695 days ago
+- Holly Sauer — no last_touch on file
+- Paul Graf — no last_touch on file
+- Steven Berkovitz — no last_touch on file
+- Peggy Harding — no last_touch on file
+- Jeff Gallop — last touch 370 days ago
+- Vickie Ostendorf — no last_touch on file
+- Krystyna Reilly — no last_touch on file
+- Mian Muhammad Abdullah Akmal — no last_touch on file
+- Calvin Freeman — last touch 701 days ago
+- Neta Johnson — no last_touch on file
+- Tom McDonald — last touch 3591 days ago
+- Craig Baker — no last_touch on file
+- William Steigert WASHINGTON) — no last_touch on file
+- James Hignett — no last_touch on file
+- Eric Solomon — last touch 670 days ago
+- Seema Paul — no last_touch on file
+- Jason Brockman — no last_touch on file
+- Patrick Currier — last touch 694 days ago
+- Raimond Roßleben — no last_touch on file
+- Niki Schaumberg — no last_touch on file
+- Steve Anichini — no last_touch on file
+- Madison Massingill, SHRM-CP — no last_touch on file
+- Jaume Balcells Sanahuja — last touch 719 days ago
+- Tanya Deveau — no last_touch on file
+- Lisa Scroggins — no last_touch on file
+- Dillon Serley — no last_touch on file
+- Andrew Reason — no last_touch on file
+- Anton Zinchuk — no last_touch on file
+- Rajvir Kahlon — last touch 870 days ago
+- George Roberts — no last_touch on file
+- Brian Campbell — last touch 639 days ago
+- Joel Van Boom — no last_touch on file
+- Christy Wilson — no last_touch on file
+- Trey Cornish — no last_touch on file
+- William Peek — no last_touch on file
+- Raju Malhotra — no last_touch on file
+- Mike Bowers — no last_touch on file
+- Mike Roberson — no last_touch on file
+- Hamza Ahmed Lone — last touch 541 days ago
+- Beth Hussey — no last_touch on file
+- Bhavin Asher — last touch 715 days ago
+- Bilal Iqbal — no last_touch on file
+- Tim Koch — last touch 702 days ago
+- Jade Ideses — no last_touch on file
+- Daryl E. Perez — no last_touch on file
+- Ronald Dorsten — last touch 708 days ago
+- Rick Merancio — no last_touch on file
+- Tommy Smith — no last_touch on file
+- Carmine Provenzano — no last_touch on file
+- Victor Fields — no last_touch on file
+- Jeff Pinc — last touch 459 days ago
+- Matt Goss — last touch 660 days ago
+- Mary Ann McNulty — last touch 645 days ago
+- Jeffrey Boland Sr. — no last_touch on file
+- Nadine Lavigne — no last_touch on file
+- Francis Beaulieu, PMI-CPMAI — no last_touch on file
+- Nate Perry — no last_touch on file
+- Brooks Speirs, CFE — last touch 617 days ago
+- Neil Bryan Racelis — no last_touch on file
+- Brian Wheeler — no last_touch on file
+- Melissa Frerk — no last_touch on file
+- Mariyam Zahra — no last_touch on file
+- Joe Cavaliere — last touch 709 days ago
+- Tomin karerakattil — no last_touch on file
+- David H. Vahlsing — no last_touch on file
+- Mike Rabinoff — no last_touch on file
+- Sean McGuire — last touch 636 days ago
+- Todd LeBlanc — last touch 673 days ago
+- David Michael Janvrin — no last_touch on file
+- Lauren S Moores, PhD — last touch 632 days ago
+- Rochelle Walgenbach — no last_touch on file
+- Kris Bartelt — no last_touch on file
+- Meghan Melillo — last touch 679 days ago
+- Braden Aspelund — last touch 532 days ago
+- Nate Ostendorf — last touch 730 days ago
+- Paul Young — no last_touch on file
+- Jake Menden ChFC® CLU® — no last_touch on file
+- Alec R. Leverton — last touch 698 days ago
+- Cody Andrews — last touch 650 days ago
+- Marita Swift CFE — last touch 686 days ago
+- Paul  J. Baldasaro — last touch 699 days ago
+- Shawn Gancarczyk — last touch 645 days ago
+- Jeremy Theisen — last touch 709 days ago
+- Michael Cheney — no last_touch on file
+- Mitch Nousain — last touch 616 days ago
+- Terri Stenzel — no last_touch on file
+- Mike Young — no last_touch on file
+- Santiago Vallejo — last touch 588 days ago
+- Andy Freivogel — last touch 456 days ago
+- Mike Voshell — no last_touch on file
+- Dean Beaty — last touch 3243 days ago
+- Jose Luis Lozano Elizondo - MBA — last touch 621 days ago
+- Bayonle Omoyele — no last_touch on file
+- Kathy Lopez — no last_touch on file
+- Ryan McGrogan — no last_touch on file
+- Ryan Critelli — no last_touch on file
+- Tim Woehr — last touch 708 days ago
+- Javier Rey — no last_touch on file
+- Kevin Moran — last touch 667 days ago
+- Tarji Carter — last touch 702 days ago
+- Camille Bellin — no last_touch on file
+- Jin Park — no last_touch on file
+- Gene Bradley — no last_touch on file
+- Brian DiCianni, MBA — last touch 1993 days ago
+- Josh Cagle — last touch 3591 days ago
+- Beverly Davis — last touch 647 days ago
+- Tom Le Heux — last touch 554 days ago
+- Bob Lytle — last touch 636 days ago
+- Rich Smith — no last_touch on file
+- Jonathan Massre — no last_touch on file
+- Manu Bajaj — last touch 712 days ago
+- Mark Hartmann — no last_touch on file
+- Christopher Perra — last touch 631 days ago
+- Dave Rause — last touch 750 days ago
+- Dave Burkhart — no last_touch on file
+- Dan Estrada — no last_touch on file
+- Kersten Wagschal Gorski, PMP — no last_touch on file
+- Monique Vann-Brown — no last_touch on file
+- Blake McPherson — no last_touch on file
+- David Grant — last touch 749 days ago
+- Adeel Iqbal Wordpress Developer — no last_touch on file
+- Lauren Fernandez — last touch 698 days ago
+- Nathaniel Chang — no last_touch on file
+- Heather Winters, MBA — last touch 622 days ago
+- Virendra Singh — no last_touch on file
+- Julie Zimmerman — no last_touch on file
+- Misty Lowmack — last touch 695 days ago
+- Ilija Milutinovic 🫆 — no last_touch on file
+- Michael Hansen — no last_touch on file
+- Jason Maceda — no last_touch on file
+- Rahi Roshandel — no last_touch on file
+- Joseph Fioretti — no last_touch on file
+- Allen Joshua Trinidad — no last_touch on file
+- Julie Price, CFE — last touch 618 days ago
+- Nagi Reddy B — no last_touch on file
+- David Mettelman — last touch 446 days ago
+- Pamela Jurgensmier — no last_touch on file
+- Chuck Kasper — last touch 1589 days ago
+- Akshit Shah — last touch 617 days ago
+- George Thenamkodath — last touch 657 days ago
+- Conrod B — last touch 693 days ago
+- Ryan Lowry — no last_touch on file
+- John Mann — last touch 3236 days ago
+- Sudeshna Das — no last_touch on file
+- Dan Mason — last touch 2570 days ago
+- Tracy Hall — no last_touch on file
+- James Umphrey — last touch 867 days ago
+- Lynn Berry AIF®, CWS®, RICP® — no last_touch on file
+- Rachel Birdseye — last touch 871 days ago
+- David Sandberg — no last_touch on file
+- Anshuman Yadav — no last_touch on file
+- Abid Ali — no last_touch on file
+- Brian Gomez — last touch 716 days ago
+- Mark Copeland — no last_touch on file
+- Jaclyn Tramacera-Grace — no last_touch on file
+- Scott Horvath — no last_touch on file
+- Francisco Molina — no last_touch on file
+- Chelsea Nawojski — last touch 684 days ago
+- Steve Curtis — no last_touch on file
+- Grace Blas — no last_touch on file
+- James Albert Silvoza — no last_touch on file
+- Tim Mei — last touch 715 days ago
+- Carl Bachmann — last touch 699 days ago
+- James Gomez — last touch 4508 days ago
+- Abby Huss — no last_touch on file
+- Zaid Habash — no last_touch on file
+- Cody Brandt — last touch 642 days ago
+- Alex Welch — last touch 3589 days ago
+- Lucie Tuan — last touch 702 days ago
+- Ben LaTour — last touch 703 days ago
+- Heather Parish — last touch 2000 days ago
+- Shereen Qumsieh — no last_touch on file
+- Mathilde Ferreira — no last_touch on file
+- Nicole Wasco — no last_touch on file
+- Troy Hooper — last touch 698 days ago
+- Patrick Fitzgerald — no last_touch on file
+- Sanskritee Kapoor — no last_touch on file
+- Brett Clapham — no last_touch on file
+- Daniel Dreymann — last touch 695 days ago
+- Jessica Grelle — no last_touch on file
+- Katy Heintz — no last_touch on file
+- Kent Nyhus — last touch 2929 days ago
+- Elijah Camner — last touch 639 days ago
+- Mike Burns — no last_touch on file
+- Tom Seeker — last touch 693 days ago
+- Holli McKinney — no last_touch on file
+- Youzi Seo — last touch 663 days ago
+- Diane Miller — last touch 639 days ago
+- Jonathan Elster — last touch 698 days ago
+- Jeremy Terman — last touch 572 days ago
+- Christina Gruchy — no last_touch on file
+- Brian Cain — last touch 3243 days ago
+- Dexter Dugdale — no last_touch on file
+- Wendy Hamilton — last touch 603 days ago
+- Dylan Jones — no last_touch on file
+- Alan Toaca — no last_touch on file
+- Joe Vaccaro — no last_touch on file
+- Tripp Mclaughlin — last touch 684 days ago
+- Raj Jenkin — no last_touch on file
+- Jeffrey Baldwin — no last_touch on file
+- Cristian Gamboa Karsulovic — no last_touch on file
+- Melissa Smith-Kennedy — no last_touch on file
+- Joseph Lipson — last touch 708 days ago
+- Geoffrey Chan — no last_touch on file
+- Michael R. Jones, CPTD — no last_touch on file
+- Nabeel Alamgir — no last_touch on file
+- Nick Arduini — last touch 622 days ago
+- Abdul Raheem Mohammed — no last_touch on file
+- Jake Bellerjeau — last touch 706 days ago
+- Tony Torres — no last_touch on file
+- Mike Hatcher — no last_touch on file
+- Jon Brooks — no last_touch on file
+- Amir Mostafavi — last touch 681 days ago
+- Sean Rico BS, BBA, MBA - CIR, PRC — no last_touch on file
+- Gary Miller — no last_touch on file
+- Paul D. Radu — no last_touch on file
+- Liam Gilmore — last touch 699 days ago
+- Nick Owens, CSM — no last_touch on file
+- Lauren Polizzi — no last_touch on file
+- Ben Kaplan — last touch 618 days ago
+- Mike Miccoli — no last_touch on file
+- Chris Jackson — no last_touch on file
+- Alison (Bateman)Templin — no last_touch on file
+- Randy Swain — last touch 593 days ago
+- Alexander Florio — no last_touch on file
+- Frank Raffaelli — no last_touch on file
+- Michael Nienaltowski — no last_touch on file
+- Derek Hoekstra — no last_touch on file
+- Vanessa Bitton — last touch 704 days ago
+- Joel Yaeger — no last_touch on file
+- Rebecca Davis — no last_touch on file
+- Ashley Naggy — no last_touch on file
+- Natalija Paldrmich — no last_touch on file
+- Marcus LaPointe — no last_touch on file
+- Dean Schmaus — no last_touch on file
+- Danny Wylde — no last_touch on file
+- Hector Munoz, MBA — no last_touch on file
+- Stephen Monahan — no last_touch on file
+- Sheilla B. — no last_touch on file
+- Abby Taylor — last touch 660 days ago
+- Alex Sample — no last_touch on file
+- Julius Swolsky — no last_touch on file
+- Crystal Bomnskie Waldron, SHRM-CP — no last_touch on file
+- Brittany Maroney — no last_touch on file
+- Abdul Rehman — last touch 529 days ago
+- Neal Layton — no last_touch on file
+- Jeremy Stano — no last_touch on file
+- Eddie Hensley — last touch 711 days ago
+- Robert Kohl, PMP — last touch 866 days ago
+- Balmeet Singh — last touch 708 days ago
+- James Harrison — no last_touch on file
+- Brian Witte — last touch 584 days ago
+- Levi Ashing — no last_touch on file
+- Khizer Raza — no last_touch on file
+- Bryan Bailey — no last_touch on file
+- Eric Zumm — last touch 621 days ago
+- Mathias Piercy — last touch 691 days ago
+- LUIS V. GATO — no last_touch on file
+- Toby Malbec — last touch 532 days ago
+- David Spirito — last touch 650 days ago
+- Stefan Hertzberg — last touch 697 days ago
+- Panagiota Agridioti — no last_touch on file
+- Kevin Dobson — no last_touch on file
+- Bill Lindsey — no last_touch on file
+- Evert Gruyaert — last touch 687 days ago
+- Leon Chayet — no last_touch on file
+- Scott Temme, CFE — last touch 643 days ago
+- Ken Duda — last touch 706 days ago
+- Chan Nguyen — no last_touch on file
+- Haley Stump, SHRM-CP — no last_touch on file
+- John Cox — last touch 3591 days ago
+- Chris Gillen — last touch 700 days ago
+- Jenna Schwartzhoff — no last_touch on file
+- NDAYISHIMIYE Pacifique — no last_touch on file
+- Robin Dunlap — no last_touch on file
+- Harriet Campbell — last touch 709 days ago
+- Toney D. Washington — no last_touch on file
+- Alonso Castañeda — last touch 694 days ago
+- Jeannine Haney — last touch 412 days ago
+- Lisa McDowell — last touch 715 days ago
+- Trevor Robinson, CFE — last touch 617 days ago
+- Ander Lee  ❤️ Pos system Manufacturer — no last_touch on file
+- Sean Brennan — no last_touch on file
+- Colin Tyndale — last touch 1428 days ago
+- Cody Fransen — no last_touch on file
+- Justin Hoke — no last_touch on file
+- Lawrence Wiley — last touch 607 days ago
+- Rob Lunder — no last_touch on file
+- Craig Kaliebe — last touch 418 days ago
+- Mohamed Hammam — no last_touch on file
+- Łukasz Kolan — last touch 734 days ago
+- Erin Morris — no last_touch on file
+- Marko Pavlovic — no last_touch on file
+- Brian Cooper — last touch 744 days ago
+- Toni Vahlsing — no last_touch on file
+- Lynne Moser — last touch 581 days ago
+- Danny Carberry — no last_touch on file
+- Janelle Milstead — no last_touch on file
+- David Conrad Lysne — no last_touch on file
+- Emelia Hedberg — last touch 621 days ago
+- Dale Del Bello Jr. — last touch 714 days ago
+- Jeron Griffone — no last_touch on file
+- Mary Mount — last touch 621 days ago
+- Karen Sammon — last touch 513 days ago
+- Katie Douglass — no last_touch on file
+- Sarah Kingham — no last_touch on file
+- Alan Hayman — no last_touch on file
+- Markus Van Kempen — no last_touch on file
+- Adam Vande Ven — last touch 642 days ago
+- 🧙🧝Patrick Bobrukiewicz — no last_touch on file
+- Andrew Bettis — no last_touch on file
+- Paul Smith — no last_touch on file
+- Christopher Beck — last touch 775 days ago
+- Joe Yetter — no last_touch on file
+- MD. CHAMON ALI — no last_touch on file
+- Michael Grooms — no last_touch on file
+- austin stone — no last_touch on file
+- Younas Khan — no last_touch on file
+- Cam England — no last_touch on file
+- Marvin C. Bahr — last touch 699 days ago
+- DJ Lescault — no last_touch on file
+- Jan Malinovsky — last touch 686 days ago
+- Gerald Stackowicz — no last_touch on file
+- Sameer Malla Thakuri — no last_touch on file
+- Alexander Joyner — no last_touch on file
+- Amir Hudda — no last_touch on file
+- Kevin Rood — no last_touch on file
+- Charles Jenkins — last touch 712 days ago
+- Sarita Fernandes — no last_touch on file
+- Thomas Leo — last touch 649 days ago
+- Matt Messner — last touch 3235 days ago
+- Tyler Davis — last touch 636 days ago
+- Sara Peoples — no last_touch on file
+- Craig T. Ingram — no last_touch on file
+- Meghan Gowland — last touch 699 days ago
+- Jose Barrios — no last_touch on file
+- Kelly Sinclair — no last_touch on file
+- Cijoy Olickal — last touch 419 days ago
+- Joe McGinnis — no last_touch on file
+- Robert Peterson — no last_touch on file
+- David A. Rause — no last_touch on file
+- Robert MacKenzie — last touch 1688 days ago
+- Andrew Kennedy — no last_touch on file
+- Rashmi Menon — last touch 646 days ago
+- Terence Anderson — last touch 638 days ago
+- Aric Alibrio — last touch 803 days ago
+- James Maddalena — last touch 586 days ago
+- Kathy Giraldo — last touch 2571 days ago
+- Brandon Horvatić — no last_touch on file
+- Christian Moore — last touch 643 days ago
+- Zafar Shaikh — no last_touch on file
+- Kevin Martzolf — no last_touch on file
+- Tyler Seybert — last touch 698 days ago
+- Drew Hutcheson — last touch 2024 days ago
+- Chris Vella — no last_touch on file
+- Tyler Schram — no last_touch on file
+- Betsy Orton — no last_touch on file
+- Lisa Blohm — no last_touch on file
+- Joe Sansone — no last_touch on file
+- Alex Beltrani — no last_touch on file
+- James Mitchell — no last_touch on file
+- David Ramey — no last_touch on file
+- Dacota Lamonde — no last_touch on file
+- Aj Wuthnow — no last_touch on file
+- Thomas Girard — no last_touch on file
+- Robin Gagnon, MBA, CFE, CBI — last touch 698 days ago
+- William Benson — no last_touch on file
+- Graham Chapman, CFE — last touch 698 days ago
+- Mary Ann Lucey Dilling CFEE — no last_touch on file
+- Joe Iacovissi, PMP — no last_touch on file
+- Lisa Wilson — last touch 609 days ago
+- Kari Armstrong — no last_touch on file
+- Samta Chhabra — no last_touch on file
+- Tony Rampacek — last touch 426 days ago
+- Phi Beckham — no last_touch on file
+- JEREMIAH LUNGU — last touch 510 days ago
+- Brendan Bencharit — last touch 709 days ago
+- Mark Johnson — last touch 693 days ago
+- Justin Ferber — last touch 530 days ago
+- Rick Neville — no last_touch on file
+- Eashan Jaiswal — no last_touch on file
+- Jonathan Anderson, CFC, Franchise Analyst — no last_touch on file
+- Marcus Viscidi — no last_touch on file
+- Josh Halpern — last touch 719 days ago
+- Perry Brunson — no last_touch on file
+- Curtis Hendrick — last touch 635 days ago
+- Angel Hernandez — no last_touch on file
+- Orsolya Cypert — last touch 635 days ago
+- Craig Trapino — no last_touch on file
+- Ryan O'Keefe — last touch 684 days ago
+- Genaro Alvarez III — last touch 695 days ago
+- David Pedelty — no last_touch on file
+- Tony Bolden, D.M., M.B.A. — last touch 695 days ago
+- Jeff Horne — last touch 2907 days ago
+- Sanket Sodhani, MBA — no last_touch on file
+- Edgar Delgado — no last_touch on file
+- Maria Isadel Madrid — no last_touch on file
+- Marius Engelbrecht — no last_touch on file
+- Paxton Moreaux — last touch 684 days ago
+- Joe Artiste — last touch 703 days ago
+- Vishal Balija — no last_touch on file
+- Sara Benzel — last touch 711 days ago
+- Jason Mceachern — no last_touch on file
+- John Sammon III — no last_touch on file
+- Paul E Westphal, CIMA® — no last_touch on file
+- Alan Colston — no last_touch on file
+- Muhammad Muzammil — no last_touch on file
+- Grace Hurley — last touch 3290 days ago
+- Saq Anwar — no last_touch on file
+- Jim Sullivan — no last_touch on file
+- Lora Vahlsing — no last_touch on file
+- Mike Walesh — no last_touch on file
+- DOMINIQUE COLLINS — no last_touch on file
+- Yogesh Kiroriwal — no last_touch on file
+- Billy Strunk — last touch 621 days ago
+- Ryan Indovina — last touch 708 days ago
+- Sammy Quatresols — no last_touch on file
+- Christian Mouysset — last touch 2984 days ago
+- Cristian Kokonas — no last_touch on file
+- Christopher Heffernan — no last_touch on file
+- Shweta Khanna — last touch 469 days ago
+- Sal Nazir — no last_touch on file
+- Alexa Reisen — no last_touch on file
+- Mike Wozniak — last touch 406 days ago
+- Brandon Tucker — no last_touch on file
+- Jon Silvertooth — last touch 707 days ago
+- Joey Himmelberg — no last_touch on file
+- Trevor Marsteller, CPA — no last_touch on file
+- Gena Westergaard — no last_touch on file
+- Carol Borba — last touch 644 days ago
+- Angie Andresen — last touch 523 days ago
+- Penny Armbruster — no last_touch on file
+- Ben Roscillo — no last_touch on file
+- Paul Rubin — no last_touch on file
+- John (Jack) Fraser — last touch 2815 days ago
+- Jarrett Dugas — no last_touch on file
+- Renee Waters Dip HIr, LMT, ND — no last_touch on file
+- Marco A. Rodriguez, MBA — no last_touch on file
+- Gary Tomanich, CISSP — no last_touch on file
+- Chris Lane — last touch 715 days ago
+- Barry Prentice, ETA CPP — no last_touch on file
+- Becky Davis — last touch 646 days ago
+- Heidi Thorne — no last_touch on file
+- Maria West — no last_touch on file
+- Reid Neumann — no last_touch on file
+- Jay Drumm — last touch 643 days ago
+- Joe Levi — no last_touch on file
+- Sarah Beckett — last touch 695 days ago
+- Troy Smith — no last_touch on file
+- Patrick Daugherty — no last_touch on file
+- Shelly Thobe — last touch 650 days ago
+- Brittany Fowler — no last_touch on file
+- Heather Monroe - Broussard — no last_touch on file
+- Scott Andrews — no last_touch on file
+- 📈 Marat Matosov — last touch 874 days ago
+- Maureen Maidlow — no last_touch on file
+- Todd Dallapiazza — last touch 709 days ago
+- Tony Campisi — last touch 708 days ago
+- Dylan Ryan — no last_touch on file
+- Mark Gregory — no last_touch on file
+- Larry Thomas — last touch 708 days ago
+- Tosin Adebayo — no last_touch on file
+- Frank Inoa — last touch 622 days ago
+- Mike Boots — last touch 726 days ago
+- John A. Mauro — no last_touch on file
+- Caitli White — no last_touch on file
+- Trent Adams — last touch 702 days ago
+- Gary Lakin — last touch 708 days ago
+- Christopher Cox, MBA, SHRM-CP, sHRBP — no last_touch on file
+- Kevin Denton — no last_touch on file
+- Sukunj Mendpara — no last_touch on file
+- Tiffany Ting — no last_touch on file
+- Vikki Winkler — no last_touch on file
+- Jim Lay — last touch 3589 days ago
+- Alexandrea Stewart — no last_touch on file
+- Allison Davis — last touch 701 days ago
+- Jason Goode — no last_touch on file
+- Tammy S. Durden — no last_touch on file
+- Ali Amir — last touch 411 days ago
+- Tracy Fukuoka, PMP — no last_touch on file
+- Sherri Petkovsek — no last_touch on file
+- Ndileka Aboagye — no last_touch on file
+- Ryan Swalve — last touch 643 days ago
+- Dan Bell — last touch 524 days ago
+- Angelle Humble, CSM — no last_touch on file
+- Anuj Kumar — no last_touch on file
+- Henry Cook — no last_touch on file
+- Luis Rosa Jr — last touch 715 days ago
+- William Turk — last touch 711 days ago
+- Tom Minella — last touch 642 days ago
+- Alp Onurlu — no last_touch on file
+- Austin Blankenship — no last_touch on file
+- Adam B. White — no last_touch on file
+- QBSS Marketing — no last_touch on file
+- Hilary Hanger — no last_touch on file
+- John Madigan — last touch 544 days ago
+- Kerrin Miniutti — no last_touch on file
+- Jacob Grijalva — no last_touch on file
+- Neil Smullian — last touch 400 days ago
+- Jed Sullivan — no last_touch on file
+- Guy Salisch — no last_touch on file
+- Anna Kay Ninan — no last_touch on file
+- Iyas Massoud — last touch 1436 days ago
+- Patience Tucker — no last_touch on file
+- Mark Kupferman — last touch 703 days ago
+- Dave Diehl — no last_touch on file
+- Muhammad Arshan Bilal — no last_touch on file
+- Anoop Menon — no last_touch on file
+- Andy Stelsel — last touch 637 days ago
+- Patrick Cormany — last touch 699 days ago
+- Ameer Khan — no last_touch on file
+- Kalvin D. Hill — last touch 695 days ago
+- Maanav Patel — no last_touch on file
+- Katya Rozenoer — no last_touch on file
+- Andrew Gnoinski — last touch 699 days ago
+- Jason Bradshaw — last touch 632 days ago
+- Josel Lim — no last_touch on file
+- Jay Sellers — no last_touch on file
+- BRANDzUS - Digital Marketing Company — no last_touch on file
+- Elizabeth Jenswold — no last_touch on file
+- Steve Wenzl — no last_touch on file
+- Samantha Hartley — no last_touch on file
+- Jaime Bettencourt — last touch 699 days ago
+- Sandra Guerrero — no last_touch on file
+- Bilal Raza — no last_touch on file
+- Leslie Serrano — last touch 621 days ago
+- Craig Oliver — no last_touch on file
+- Stephen Brown 🚘💯🔊 — no last_touch on file
+- Brad Rostowfske (Ros-tau-ski) — last touch 643 days ago
+- Jameson Trudel — no last_touch on file
+- Benjamin Edmiston — no last_touch on file
+- David Quimby — last touch 714 days ago
+- Chef Laura Vaughn — last touch 637 days ago
+- Aamir Rajan — last touch 642 days ago
+- Princewill Godwin — no last_touch on file
+- Susan Sheetz — no last_touch on file
+- Michael Flores — no last_touch on file
+- Alexander Hess — no last_touch on file
+- Richard Li — last touch 2910 days ago
+- Tracy Lee — no last_touch on file
+- Nadia Hadler — no last_touch on file
+- John Frost — no last_touch on file
+- Robert Lorenzini — no last_touch on file
+- Jared Cartier — no last_touch on file
+- Vladimir Jovanovic — last touch 621 days ago
+- Lisa Egbert — last touch 519 days ago
+- Tushar Agrawal — last touch 709 days ago
+- Mia Baroni — last touch 706 days ago
+- Vinod A Shintre (ex-Amazon) — last touch 379 days ago
+- Oscar Aponte — no last_touch on file
+- Arun Kumar — no last_touch on file
+- Danielle Saglio — last touch 727 days ago
+- Graham Humphreys — last touch 698 days ago
+- Cherish Wang — last touch 1603 days ago
+- Daphne Blake — no last_touch on file
+- Ben Carroll — last touch 705 days ago
+- Whitney Sheng — last touch 414 days ago
+- Kristie Mansur — last touch 708 days ago
+- Steve Funk — no last_touch on file
+- Bill Johnson — no last_touch on file
+- Aryan Raj — no last_touch on file
+- Nicholas Bryant — no last_touch on file
+- Jessica Bueno Moyer — last touch 677 days ago
+- Heather Williams — last touch 2865 days ago
+- J. Jordan Thaeler — no last_touch on file
+- Eric Farrell 🔪🖋 — no last_touch on file
+- Oliver Ostertag — last touch 456 days ago
+- Sophie Taylor — no last_touch on file
+- Heather Trotter — last touch 666 days ago
+- Joshua Khoury — no last_touch on file
+- 🥪 Deric Rosenbaum — last touch 700 days ago
+- Chauntel Gerald — no last_touch on file
+- Kaleb Zenz — no last_touch on file
+- Kaitlyn Glackin — last touch 433 days ago
+- Antony Dugdale — no last_touch on file
+- Tom Miller — no last_touch on file
+- Michael Peguero — no last_touch on file
+- Stephanie Stopczynski — no last_touch on file
+- Brian Kriegler — no last_touch on file
+- Yariv Reches — no last_touch on file
+- Stephanie Szatrowski — last touch 631 days ago
+- Garrett McCurrach — last touch 677 days ago
+- Joe Adelizzi — no last_touch on file
+- Adam Osier — no last_touch on file
+- Patrick Yearout — last touch 702 days ago
+- Gordon Bowman — no last_touch on file
+- Tom Pierce — no last_touch on file
+- Mark Hoyland — no last_touch on file
+- Michael Brown, MBA, PHR — no last_touch on file
+- Justin Sellers — no last_touch on file
+- Carl Orsbourn — no last_touch on file
+- Bill Brown — no last_touch on file
+- Kimberly Holtrop — no last_touch on file
+- Todd Wamsley — no last_touch on file
+- Jay "Canada's Restaurant Guy" Ashton 🇨🇦🍁 — no last_touch on file
+- Tony Allegro — last touch 623 days ago
+- John Morrison — last touch 551 days ago
+- Anthony Fryer — no last_touch on file
+- Zerrick Pearson — no last_touch on file
+- Doug Gabbard — last touch 699 days ago
+- Nick Martinez — no last_touch on file
+- Danny Bruns — last touch 645 days ago
+- Kevin W. Marriott, MBA — no last_touch on file
+- Raquel Murillo — no last_touch on file
+- Alicia Simper — no last_touch on file
+- John Glibowski — last touch 699 days ago
+- JohnMichael Broussard MBA — no last_touch on file
+- Avner Harel — last touch 419 days ago
+- Claudio J Muñoz — last touch 638 days ago
+- Toni Carpenter — last touch 695 days ago
+- Duncan Wardle — last touch 621 days ago
+- Gagan Sinha — last touch 670 days ago
+- Melanie Teed-Murch, MBA — last touch 677 days ago
+- Louis Cantu — no last_touch on file
+- Muhammad Abdullah — no last_touch on file
+- Chris Harrison, MBA — no last_touch on file
+- Bakhat Ali — no last_touch on file
+- Roger Jorns — no last_touch on file
+- Jared Drieling — last touch 644 days ago
+- Chris Hardwick 📦 — no last_touch on file
+- Kim Schmitz — last touch 708 days ago
+- Jeffrey Kane — no last_touch on file
+- Tom Cooney — no last_touch on file
+- Kim Wegner, CPA, CVA, CGMA — no last_touch on file
+- Nayra Rufino — no last_touch on file
+- Stacey Williams — last touch 711 days ago
+- Jeff Danley — no last_touch on file
+- Tim Bales — no last_touch on file
+- Holly Gaetano — last touch 691 days ago
+- Christine adel — no last_touch on file
+- Steven Brooks — last touch 3576 days ago
+- Norman Paulsen — no last_touch on file
+- Phil Crawford — last touch 701 days ago
+- Scott Vahlsing — no last_touch on file
+- Spencer Michiel — no last_touch on file
+- Ken Freid — no last_touch on file
+- Alyssa Cooper — no last_touch on file
+- Julian Henry — no last_touch on file
+- Kanishk Agarwal — no last_touch on file
+- Lucy Jin — no last_touch on file
+- Preyas Kulshrestha — no last_touch on file
+- Ron May — last touch 587 days ago
+- Kristine Ambas — no last_touch on file
+- Karan Jiandani — no last_touch on file
+- Jesse Ávila — last touch 711 days ago
+- Bryan Fischer — no last_touch on file
+- Raymond Fernandez — last touch 708 days ago
+- Adam Oldenburg — last touch 681 days ago
+- Kara Meyer — no last_touch on file
+- Kelsey Regier, MBA — no last_touch on file
+- Allen Hooser — last touch 698 days ago
+- Misty Fraser — no last_touch on file
+- Dara Chen — no last_touch on file
+- Jenny Drum — last touch 3241 days ago
+- Darius Green — no last_touch on file
+- Dustin C. Sandoval — no last_touch on file
+- Audrey Hogan🖖 — no last_touch on file
+- Tony Palagano — last touch 749 days ago
+- Brian Rudrud — no last_touch on file
+- Ershadul Hoque — no last_touch on file
+- Mark Felts — last touch 701 days ago
+- eric paulson — no last_touch on file
+- Mandy Detwiler — no last_touch on file
+- Crystal Derouin — last touch 574 days ago
+- Chris Marin — last touch 658 days ago
+- Craig Williams, MBA — no last_touch on file
+- Jonas Texier — no last_touch on file
+- Jennifer Dodd — last touch 688 days ago
+- Hannah Hall — last touch 421 days ago
+- Amanda Beam, ETA CPP — no last_touch on file
+- Richard Ray — no last_touch on file
+- Matthew Halpert — no last_touch on file
+- Min Kwak — last touch 639 days ago
+- Jason Wolfe — no last_touch on file
+- Julie Dessauer — last touch 684 days ago
+- Joseph Tota — no last_touch on file
+- Patrick Wilson — no last_touch on file
+- Jen Abernathy — no last_touch on file
+- Edith Wiseman — no last_touch on file
+- James Perduto — no last_touch on file
+- Mariel Lako, MBA, CPA, CIA, CISA, CFE — no last_touch on file
+- Ed Mueller — no last_touch on file
+- Mary Ann Dilling — no last_touch on file
+- Jim Mahaney — no last_touch on file
+- Jamie King — last touch 576 days ago
+- Stephen Lee — no last_touch on file
+- Mike Costanza — no last_touch on file
+- Tracy Simpson — no last_touch on file
+- Kathryn Simon — no last_touch on file
+- James Burdick, MBA — last touch 699 days ago
+- Shane Morris, MBA — no last_touch on file
+- Erin O'Keefe — no last_touch on file
+- Brian “BMH” Mula-Howard — no last_touch on file
+- Allie Haskell🎩 — no last_touch on file
+- Gracy . — no last_touch on file
+- Jennifer Moore — last touch 643 days ago
+- Ava Tichenor — last touch 604 days ago
+- Bridgett Hendrickson — last touch 2032 days ago
+- Annie Horneland — no last_touch on file
+- Rad Hopson — no last_touch on file
+- Alex Meehan — no last_touch on file
+- George Spencer — last touch 638 days ago
+- Amanda Kahalehoe — last touch 677 days ago
+- Jenny Widman — no last_touch on file
+- Andrew Van Ella — no last_touch on file
+- Akshesh Shah — no last_touch on file
+- Katie Hullett — no last_touch on file
+- Marcy Knox — last touch 688 days ago
+- Melanie King — no last_touch on file
+- Michael Zielinski — last touch 736 days ago
+- Michael Maurer — no last_touch on file
+- Norm Thielman — no last_touch on file
+- Jane E. (Powell) — no last_touch on file
+- Kaitlyn Ianiro — last touch 658 days ago
+- Shahzad Ahmed — no last_touch on file
+- paul young — no last_touch on file
+- Ryan A. Lopez — last touch 2925 days ago
+- Todd Luke — last touch 1550 days ago
+- Blaine Johnson — no last_touch on file
+- Richard Reutti — last touch 679 days ago
+- Daniel Conners — last touch 698 days ago
+- Rikesh Patel — last touch 757 days ago
+- Rebecca Daun — no last_touch on file
+- Michael de Caro — no last_touch on file
+- Natasha Mtshali — last touch 723 days ago
+- Andrew Walling — no last_touch on file
+- Zach Halferty — no last_touch on file
+- Claire Groves — last touch 699 days ago
+- Greg Richards, CFSP — last touch 632 days ago
+- Shelong Yang — last touch 380 days ago
+- Farrokh Larijani — last touch 639 days ago
+- Naresh V (He/Him) — no last_touch on file
+- Ben Mansoor — last touch 617 days ago
+- Albert Tejera — no last_touch on file
+- Laura (Horan) Stoiber — no last_touch on file
+- Daniela Gallardo — no last_touch on file
+- Chelsea Pavey, PMP — last touch 703 days ago
+- Rajab Shabbir — no last_touch on file
+- William Binkley — no last_touch on file
+- Naveen Kumar Mote — no last_touch on file
+- Tim Burge — last touch 743 days ago
+- Peter Czimback — last touch 708 days ago
+- Kyle Welch — last touch 749 days ago
+- David Greenberg — no last_touch on file
+- Michelle Irving — no last_touch on file
+- Warren Gerlowski — no last_touch on file
+- Robert Guerrero — last touch 631 days ago
+- Dan Puma 🐆 — no last_touch on file
+- Brandon Hunt — last touch 698 days ago
+- Ashure Hartkopf — last touch 529 days ago
+- India Bulkeley Broussard — last touch 699 days ago
+- Jayeshkumar (JK) Nair — no last_touch on file
+- Rob Marcinowski — no last_touch on file
+- Camilo Escruceria Luna — no last_touch on file
+- Julie Sobczyk Mitchell — last touch 692 days ago
+- Michael Draper — no last_touch on file
+- Alissa Lawton O'Farrell — no last_touch on file
+- Jenni Jayne — no last_touch on file
+- Keaton Swett — last touch 639 days ago
+- Tim Lakin — no last_touch on file
+- Josh Evans — no last_touch on file
+- Daniel Fragoso — no last_touch on file
+- Jonathan Sharkey — no last_touch on file
+- Ruben Cabrera — no last_touch on file
+- Samaresh Mondal — no last_touch on file
+- Candice Levy Thompson — no last_touch on file
+- Yaro Tsyhanenko — no last_touch on file
+- Josh Kern — last touch 684 days ago
+- Trey Rush — no last_touch on file
+- Lauren Immel — last touch 714 days ago
+- Matt Rolfe — no last_touch on file
+- Ray Williams — no last_touch on file
+- Kofi Acquaah — last touch 703 days ago
+- Thamba Tharmalingam — last touch 713 days ago
+- Doug Stanley — no last_touch on file
+- James Carrigan — last touch 695 days ago
+- Jessica Nguyen — last touch 631 days ago
+- Ryan Vandertie — no last_touch on file
+- Daniel Christopher — last touch 698 days ago
+- Skyler Mickunas — last touch 554 days ago
+- Victoria Tran — no last_touch on file
+- Osama Wasim — no last_touch on file
+- John Goehler — last touch 2865 days ago
+- Corey Conklin — no last_touch on file
+- Spring Ashmore — no last_touch on file
+- Alan Sherritt — last touch 1702 days ago
+- Sascha Dutta (nee Taylor) — no last_touch on file
+- Bill Stewart — no last_touch on file
+- Peggy Massey — last touch 667 days ago
+- Dan Dwyer — no last_touch on file
+- Jeff Tutt — no last_touch on file
+- Ken Caldwell — last touch 687 days ago
+- Dariush Ajami — last touch 651 days ago
+- Amanda Lober — last touch 705 days ago
+- Luke Daleo-Wotton — no last_touch on file
+- David Offerdahl — last touch 677 days ago
+- Evan Ferber — last touch 692 days ago
+- Dora Burke — last touch 702 days ago
+- Jonathan Andrews — last touch 703 days ago
+- Shivam Kumar (ISTQB Certified) — no last_touch on file
+- Eric Haulotte — last touch 639 days ago
+- Jon Cassell — no last_touch on file
+- Bruce Nollert — no last_touch on file
+- Natalia Micheletti — no last_touch on file
+- Benjamin Tenzer — last touch 677 days ago
+- Ryan Bronson — no last_touch on file
+- Doug Langner — no last_touch on file
+- Scott Ford — no last_touch on file
+- Glenn W Gerlach III — last touch 700 days ago
+- Gary Ren — no last_touch on file
+- Hannah Zeigle — no last_touch on file
+- Joanne Zimmerman — last touch 3585 days ago
+- Elise Bay — no last_touch on file
+- Logan Jarquin — no last_touch on file
+- Kriti Sharma — no last_touch on file
+- Ehtisham Ejaz — no last_touch on file
+- Jeremy Williams — no last_touch on file
+- Mohamed Omer — last touch 635 days ago
+- Sloan Clay — no last_touch on file
+- Richard Van Egtern — no last_touch on file
+- Margaret Jurineack — no last_touch on file
+- Matt Tyler — last touch 607 days ago
+- Michael Zammar — no last_touch on file
+- William McCormick — last touch 623 days ago
+- Ed Kavanagh — no last_touch on file
+- Andrew Kraus — no last_touch on file
+- Tanveer Ghani — no last_touch on file
+- Tom Perella — last touch 836 days ago
+- Al Ogorzalek — no last_touch on file
+- Molly McGuigan, RD — last touch 562 days ago
+- Anthony Niven — no last_touch on file
+- Tom McEvoy — last touch 716 days ago
+- Keith Buys — no last_touch on file
+- Milton Molina, MBA — last touch 681 days ago
+- Sree Boyella — last touch 695 days ago
+- Bill Sullivan — last touch 488 days ago
+- Laura Nutt — no last_touch on file
+- Igor Mitrovski — no last_touch on file
+- Juan Espinoza — no last_touch on file
+- Craig Leonard — last touch 373 days ago
+- Paul Demos — no last_touch on file
+- Nicole Schiera — no last_touch on file
+- Dean Smith — no last_touch on file
+- Sandra K. Connor — no last_touch on file
+- Ewan Thompson — no last_touch on file
+- Michelle Alvarez — last touch 713 days ago
+- Tom Holland — last touch 681 days ago
+- Sherrie Walter — last touch 583 days ago
+- Ashley Jackson — no last_touch on file
+- Julie Hauser-Blanner — last touch 687 days ago
+- Michael Chorey — last touch 638 days ago
+- Tommy LaRocca — no last_touch on file
+- Jeremy Souders — no last_touch on file
+- Fernando Ramos — no last_touch on file
+- Monie Yang — no last_touch on file
+- Mark Romero — no last_touch on file
+- Ryan Zacche — last touch 579 days ago
+- Deanna Bronsell — last touch 582 days ago
+- Cindy Busi — last touch 624 days ago
+- Abelardo Garza — no last_touch on file
+- Frankie Urban — no last_touch on file
+- Obrie Scarbrough — no last_touch on file
+- Eric Seals, CAPM — last touch 420 days ago
+- Rob Rinke — no last_touch on file
+- Robert Sweers — last touch 677 days ago
+- Undraye Blake — last touch 709 days ago
+- Rosaleen Tully — no last_touch on file
+- Joel Taylor — last touch 638 days ago
+- Kendrick Huang — no last_touch on file
+- Agnes M. Sokol — no last_touch on file
+- Travis Pillon — no last_touch on file
+- Zaid Jamshaid — no last_touch on file
+- Paul Paulick — last touch 638 days ago
+- Rob Ireland — last touch 418 days ago
+- Sasha Davis — last touch 670 days ago
+- Brett R. Smith — last touch 553 days ago
+- Carl Erikson — no last_touch on file
+- Jennifer Compton — no last_touch on file
+- Milady Rivera — no last_touch on file
+- Anthony Smullen — no last_touch on file
+- Katie Martin, MBA — no last_touch on file
+- Brandon Dennis — no last_touch on file
+- Dr. Daniel O'Connell — no last_touch on file
+- Mike Collins — no last_touch on file
+- Engleberg Rimando — no last_touch on file
+- Jensen Andrews — last touch 636 days ago
+- Elizabeth Wickham — no last_touch on file
+- Indrawati Singh — no last_touch on file
+- Leslie Dodwell — no last_touch on file
+- Daniel Smith — last touch 3588 days ago
+- Timothy Downey — last touch 630 days ago
+- Christie Cruz — last touch 694 days ago
+- Maaz Hasnain — no last_touch on file
+- Manimaran Balasubramanian — last touch 707 days ago
+- Debra Francis — last touch 710 days ago
+- Tom Cheek — last touch 688 days ago
+- Steve Siran — last touch 3243 days ago
+- Carla Franke — last touch 635 days ago
+- John Mahoney — no last_touch on file
+- Brad Garde — no last_touch on file
+- Josh Bronn — no last_touch on file
+- James J Carso — last touch 748 days ago
+- Keith Gervis — no last_touch on file
+- Kevin Clements — no last_touch on file
+- Dana Durrance, PMP — last touch 408 days ago
+- Irshad P Abdulla — no last_touch on file
+- Lisa Hughes — last touch 590 days ago
+- Mitchell McQuade — no last_touch on file
+- Lindsey Matheus — no last_touch on file
+- Michael Leitinger — no last_touch on file
+- Alborz Rafat — no last_touch on file
+- Brandon Smith — last touch 708 days ago
+- Jamie Puentes — no last_touch on file
+- Mandra Gruber — no last_touch on file
+- Quantic Media — no last_touch on file
+- Trevor Walford — no last_touch on file
+- Judy 🇨🇦 — no last_touch on file
+- Lindsay S. Buck (Cohen) — last touch 708 days ago
+- Ryan M. Hill, Sr. PMP — no last_touch on file
+- M. Barry Westrum — last touch 702 days ago
+- Mike Thorp — last touch 610 days ago
+- Nirmal Intwala — last touch 712 days ago
+- Jim Jackson — last touch 3127 days ago
+- Josh Fertel — no last_touch on file
+- David Hernandez — last touch 708 days ago
+- Brian Lew — no last_touch on file
+- Amy Mason — no last_touch on file
+- Alan Gardner — last touch 610 days ago
+- David Howell — no last_touch on file
+- Andrew OConnor — no last_touch on file
+- Rajib Hasan — no last_touch on file
+- Carrie Stollenwerk — no last_touch on file
+- Ron DiNella — no last_touch on file
+- John Scott, MBA, CTP — last touch 709 days ago
+- MJ Worsham — last touch 703 days ago
+- Carson Dickens — last touch 643 days ago
+- Courtney Moyers, MBA — last touch 643 days ago
+- Jana Filipovic — no last_touch on file
+- Max Tuleberg — no last_touch on file
+- Karl Schubert — no last_touch on file
+- Tracey Morgan — no last_touch on file
+- Norm Beisher — no last_touch on file
+- Seyi Oshinowo, MBA, PMP, CAL, CSPO, PgMP — last touch 684 days ago
+- Willem-Jan Bodingius — no last_touch on file
+- John Dittig — last touch 413 days ago
+- Gregg Brickman — last touch 631 days ago
+- Jeff Wood — last touch 644 days ago
+- Staci Jessee — no last_touch on file
+- Lindsey Brainard — last touch 687 days ago
+- Kelby Leuthold — last touch 697 days ago
+- Chris LaColla — no last_touch on file
+- Taj Penaso — no last_touch on file
+- Zachary Ewing — no last_touch on file
+- Nadeem Bajwa — no last_touch on file
+- Misty Berlin — no last_touch on file
+- Brandon Thornton E.A. — no last_touch on file
+- Jim Huling — no last_touch on file
+- Katelyn DiViccaro — no last_touch on file
+- Brett Hyde — no last_touch on file
+- Judy Schear — no last_touch on file
+- Jacob Pierce — last touch 705 days ago
+- Peter Wolf — no last_touch on file
+- Dhaval Agarwal — last touch 505 days ago
+- Matt Wampler — no last_touch on file
+- Robert (Bob) Rosell — no last_touch on file
+- Cody Ehlers — last touch 698 days ago
+- Adam Enright — no last_touch on file
+- Marcus Wasdin — last touch 712 days ago
+- Bill Watters — no last_touch on file
+- Heather Munro — no last_touch on file
+- Jim Roddy — no last_touch on file
+- John Beckett — no last_touch on file
+- Nicholas Badilla — no last_touch on file
+- Deborah Rooney, M.S., Ed. — last touch 726 days ago
+- Adam Larson — no last_touch on file
+- Elisabeth Sebourn, PMP,PSM,CSPO — no last_touch on file
+- Jim Bridenbaugh — last touch 643 days ago
+- Court Muehlmeier — last touch 456 days ago
+- Thomas Peters — no last_touch on file
+- Ryan Blevins — no last_touch on file
+- Greg Autenrieth — no last_touch on file
+- Rajib Akhter — no last_touch on file
+- Mark Bowser — no last_touch on file
+- Hassen Seid — no last_touch on file
+- Brett Bruns — last touch 643 days ago
+- Henry Ellis — no last_touch on file
+- G. Howland Blackiston — last touch 709 days ago
+- Eloise Allan — last touch 803 days ago
+- Sarah R. Taylor, PhD — no last_touch on file
+- Sanjaya Edirisinghe — no last_touch on file
+- Nicole Range, MBA — no last_touch on file
+- Danielle Shedd — last touch 734 days ago
+- Ellie Russitano — no last_touch on file
+- Jose Torres — last touch 3234 days ago
+- Subham Bhattacharjee — no last_touch on file
+- Ross Robinson — no last_touch on file
+- Hieu Bui — no last_touch on file
+- Maria Maier, MBA — no last_touch on file
+- Carla Kenas — no last_touch on file
+- Dean Isaacs — no last_touch on file
+- Lezter Alonzo — no last_touch on file
+- Michael Taylor PCI-ISA, PCIP, OTP-Pro — no last_touch on file
+- Ryan Liew — last touch 387 days ago
+- Deniz Balci — no last_touch on file
+- Holly Mulder — last touch 717 days ago
+- Jeffrey Solomon — last touch 369 days ago
+- Connor McGury — last touch 636 days ago
+- Tom Shortall — last touch 420 days ago
+- Brooke Attenhofer, MBA — last touch 683 days ago
+- Michael Vorsanger — no last_touch on file
+- Joshua Helm — no last_touch on file
+- Farzin Rezvani — no last_touch on file
+- Keith Story — no last_touch on file
+- Ashley Campos — no last_touch on file
+- Jeff Malone — no last_touch on file
+- David Skinner — no last_touch on file
+- Eric Applequist — last touch 686 days ago
+- Joe Messineo — no last_touch on file
+- Chad Radtke — no last_touch on file
+- Rishabh Dubey — no last_touch on file
+- dick martin — no last_touch on file
+- Rob Grimes — no last_touch on file
+- Tahil Raul Mascarenhas — no last_touch on file
+- Craig Richards — last touch 621 days ago
+- Paul Macaluso — last touch 684 days ago
+- Adrian M — last touch 1415 days ago
+- Saumya Karki — no last_touch on file
+- Dan Dermody — last touch 440 days ago
+- Numan Ud Din — no last_touch on file
+- Jay Michels — no last_touch on file
+- Austin Fabel — last touch 659 days ago
+- Tanya Yilanjian — no last_touch on file
+- Teresa Sanders — last touch 709 days ago
+- Paul Seifert — last touch 728 days ago
+- Ayodele Afolalu (GHL Expert) — no last_touch on file
+- Justin Lichtenstaedter — last touch 638 days ago
+- Grace Morello (Presnick) — no last_touch on file
+- April Hendricks — no last_touch on file
+- Sam Chau — no last_touch on file
+- Nicole Buchanan-Bear — last touch 734 days ago
+- Timothy Morton — last touch 840 days ago
+- Heather Krebsbach — last touch 710 days ago
+- Rich Erickson — last touch 2929 days ago
+- John Stephanian — last touch 643 days ago
+- Dan Mason — no last_touch on file
+- Mike Braun — no last_touch on file
+- Sandi Ma — last touch 408 days ago
+- Kara Lust — no last_touch on file
+- Saul Camejo — no last_touch on file
+- Co Tang — no last_touch on file
+- Kelly Roddy, CFE — no last_touch on file
+- Mike Haskell — no last_touch on file
+- Gregory Winningham — no last_touch on file
+- Jason Riggs — last touch 425 days ago
+- Chad Coghlan — last touch 682 days ago
+- Crystal Duncan, MBA, FMP — last touch 691 days ago
+- Travis DeYoung — no last_touch on file
+- Chad Volkerts — no last_touch on file
+- Amit Mehta — last touch 2477 days ago
+- Nick Dhanani — no last_touch on file
+- Tyler Barnier — no last_touch on file
+- Robert Reardon — last touch 531 days ago
+- Kent Carpenter — last touch 695 days ago
+- Denni Barton — last touch 713 days ago
+- Trevor Shimizu — last touch 2037 days ago
+- Jim Cohen — no last_touch on file
+- Greg Miller — no last_touch on file
+- Ansari Mohammed — no last_touch on file
+- Michael Wang — no last_touch on file
+- Lamont Glendinning — no last_touch on file
+- John Moody — last touch 551 days ago
+- Brandon Smith — last touch 700 days ago
+- Christos Giorgou — last touch 699 days ago
+- Lowell Phillips — last touch 644 days ago
+- Ann Franzese Bourne — no last_touch on file
+- Ryan O'Malley — last touch 575 days ago
+- Leon Milbeck Jr — last touch 3241 days ago
+- Dean Selby, C.M. — no last_touch on file
+- Chuck McKay — last touch 716 days ago
+- Ashwin Rajput — no last_touch on file
+- Kurt Dathe — no last_touch on file
+- Katie Hutton — no last_touch on file
+- Brianna Raulerson — no last_touch on file
+- Mandi Brandon — no last_touch on file
+- Skip Kimpel — last touch 412 days ago
+- Richard Heyman — last touch 702 days ago
+- Eve Metheny — last touch 618 days ago
+- Ashish Tulsian — no last_touch on file
+- Nassir Jamal — no last_touch on file
+- Rick Posey — last touch 713 days ago
+- Naveen Sharma — no last_touch on file
+- David Cagle — no last_touch on file
+- Michael James McAuliffe — no last_touch on file
+- Marc Taft — last touch 635 days ago
+- Alexis DePietro — last touch 645 days ago
+- Chris Kim — last touch 678 days ago
+- Kim DeCarolis — last touch 708 days ago
+- Athena Abe — no last_touch on file
+- Roddy Gibbs — no last_touch on file
+- Alex Kuen — last touch 623 days ago
+- Ashley Beck Cuellar — last touch 401 days ago
+- Karim Abd El Razek — no last_touch on file
+- Dr. Kevin Bentley, Ed.D., MSIS, MBA — no last_touch on file
+- Elliot Maras — no last_touch on file
+- Kamal Mishra — no last_touch on file
+- Thomas Lang — no last_touch on file
+- Rebecca Sullivan — no last_touch on file
+- Samuel Zats — no last_touch on file
+- Dalton Mullins — no last_touch on file
+- Joe Johal — last touch 575 days ago
+- Jaime Nino — last touch 707 days ago
+- Uvais Saiyed — no last_touch on file
+- Kristofer Swanson - CPA, CFF, CFE, CAMS — no last_touch on file
+- Megan Richardson — last touch 554 days ago
+- Michael Darby — no last_touch on file
+- Christin Marvin — no last_touch on file
+- Kelly Crummer — last touch 694 days ago
+- Kevin Miller — last touch 716 days ago
+- Kelly Siegel — no last_touch on file
+- Kristina Helmer — last touch 687 days ago
+- Joel Sumner — no last_touch on file
+- Tammy Krug-Pickart — no last_touch on file
+- Robert Blackwell — no last_touch on file
+- Sean Fogarty — last touch 387 days ago
+- Tracy Gallimore — no last_touch on file
+- Jim Holthouser — last touch 694 days ago
+- Janessa Price, RICP®️ — no last_touch on file
+- Sankalp Rajorea — no last_touch on file
+- Tiffany Niles, MBA, PHR, SHRM-CP — last touch 708 days ago
+- Raefe Waltman — no last_touch on file
+- William Knavel — no last_touch on file
+- Rance Strausbaugh — no last_touch on file
+- Ken Kanzaki, CFE — last touch 576 days ago
+- Todd Schroeder — no last_touch on file
+- James Wendt — no last_touch on file
+- Marshall Scarborough — last touch 677 days ago
+- Nancy Griffin — no last_touch on file
+- Sierra Reed — no last_touch on file
+- Julius Cox — last touch 610 days ago
+- Shelly Rupel — no last_touch on file
+- Mark Gozzo — last touch 699 days ago
+- Alex Ugrin — no last_touch on file
+- Mark Shallow — no last_touch on file
+- Shane Gau — no last_touch on file
+- Adam Klaers — last touch 672 days ago
+- Joseph Ortiz — last touch 705 days ago
+- Ryan Johnson — last touch 707 days ago
+- Eric Buff — last touch 642 days ago
+- David  A. Rause — no last_touch on file
+- Georgiann Froemke — last touch 3585 days ago
+- Alicia DiStefano — last touch 700 days ago
+- Julie Lynn Graves — last touch 470 days ago
+- Todd Swingley — last touch 477 days ago
+- Glenn Bierman — no last_touch on file
+- Michael Wimmer — no last_touch on file
+- Roberto Bonilla Cascante — no last_touch on file
+- Jim Barke — no last_touch on file
+- Guy Groves — no last_touch on file
+- Shekhar Karad — no last_touch on file
+- Tina Conrad — no last_touch on file
+- Greg Taylor — no last_touch on file
+- Jason Barron — last touch 2821 days ago
+- Larry Harvey — last touch 693 days ago
+- Sriram Subramanian — no last_touch on file
+- Nick Jarecke — last touch 702 days ago
+- Jeff Wilkinson — no last_touch on file
+- Josiah Dawes — no last_touch on file
+- Riza Gallon — last touch 552 days ago
+- Piyush Jain — no last_touch on file
+- Miguel Solares — no last_touch on file
+- Emily Croll Townley — last touch 567 days ago
+- Jamie Landis — last touch 610 days ago
+- DelightFul Bean — no last_touch on file
+- Jack McCluskey — no last_touch on file
+- Eugene Drezner — last touch 701 days ago
+- John Helyar — no last_touch on file
+- Jake Meyers — no last_touch on file
+- Ajay Dev PS — no last_touch on file
+- Josh Gardner — last touch 694 days ago
+- Andrea Jonas — no last_touch on file
+- Michelle Zettl — no last_touch on file
+- Faizan Ali Sopariwala — last touch 687 days ago
+- Morne Erasmus — last touch 667 days ago
+- James Casey — last touch 701 days ago
+- Tim Lyon — no last_touch on file
+- Zachary McLaughlin — last touch 715 days ago
+- Paul Chousa — no last_touch on file
+- Samuel Stanovich 🐔 — last touch 642 days ago
+- Kristina M. Gansser — no last_touch on file
+- Andy Zysk — no last_touch on file
+- Scott Shoemaker, MBA — last touch 632 days ago
+- Sanaya Jijina — last touch 2570 days ago
+- Morgan Stotz — last touch 588 days ago
+- Paul Roy Barli — last touch 695 days ago
+- Kristopher Thomas — no last_touch on file
+- Tori Dundas — no last_touch on file
+- Mary Capps — no last_touch on file
+- Md Shahrukh Khan — no last_touch on file
+- Tyler Schmidt — no last_touch on file
+- Jodie Cohen — no last_touch on file
+- Tom Scanlan — no last_touch on file
+- Elizabeth Boswell, CTP — no last_touch on file
+- Jake Meyers — no last_touch on file
+- Josh Bidwell — last touch 696 days ago
+- John Schattinger — last touch 695 days ago
+- Colin Sanburg — no last_touch on file
+- Emma Higgins — no last_touch on file
+- Daniel (Danny) Ryback — last touch 621 days ago
+- Tim Forseth — no last_touch on file
+- Eric Blumenthal — last touch 695 days ago
+- Suzi Quinn — no last_touch on file
+- Lena Wakefield — last touch 638 days ago
+- Blessilla Villegas — no last_touch on file
+- Julie Ambrosini — last touch 428 days ago
+- Ryan Skrzypczynski — no last_touch on file
+- Stephen Dixon — last touch 695 days ago
+- Liz Bazner — last touch 621 days ago
+- Saskia Andrews — last touch 510 days ago
+- Thibaud Denolle — no last_touch on file
+- Scott Murphy — last touch 663 days ago
+- Britton Frampton — last touch 630 days ago
+- Michael Senuta — last touch 631 days ago
+- Brandon E. Shepherd — last touch 643 days ago
+- Melissa Lupo — no last_touch on file
+- Christina Leis — no last_touch on file
+- Alisia Kleinmann — no last_touch on file
+- Mark Romero — last touch 377 days ago
+- Rick Miller — last touch 721 days ago
+- Shasta Whites — no last_touch on file
+- Karim Bassiouny — last touch 699 days ago
+- Tj Mosher — no last_touch on file
+- Naman Kshetri — no last_touch on file
+- Sam Kampner — no last_touch on file
+- Todd Lawrence — no last_touch on file
+- Eric Daly — last touch 691 days ago
+- Jorge Pappa — last touch 726 days ago
+- Roi Yosef — last touch 711 days ago
+- Sean McLendon CFS®, CRC®, CCS® — last touch 621 days ago
+- Neal Tully — no last_touch on file
+- Andy Hutcherson — last touch 638 days ago
+- Brett Belfiore — no last_touch on file
+- Chris Kalisperas — last touch 681 days ago
+- Daryl L. Cunningham — last touch 709 days ago
+- Joseph Trotsky — last touch 2563 days ago
+- Jègil Dugger — no last_touch on file
+- Ray Oliveira — no last_touch on file
+- Kevin Wegner — no last_touch on file
+- Nick Bouse — last touch 586 days ago
+- Sean Markel — no last_touch on file
+- Charlie Pogacar — no last_touch on file
+- Liz Polk — last touch 681 days ago
+- Scott Tarkenton — no last_touch on file
+- John Bianchi — no last_touch on file
+- Claire Hayek — last touch 369 days ago
+- Kristin Kroeger — last touch 709 days ago
+- Michael Smith — no last_touch on file
+- Morgan Clark — last touch 695 days ago
+- Sharon Falkman — no last_touch on file
+- Sean Rauseo — no last_touch on file
+- Angela Diffly — no last_touch on file
+- Cristal Craven — last touch 441 days ago
+- Ceacellia Blackketter — no last_touch on file
+- Mark Karkoska — last touch 695 days ago
+- Michael Benson — last touch 614 days ago
+- Laura Robles — last touch 616 days ago
+- Rachael Bailey Levy — no last_touch on file
+- Dominic Johnson — last touch 664 days ago
+- Dom Trombino — no last_touch on file
+- Heather Wyatt🧜‍♀️ — no last_touch on file
+- Prajwol Basyal — no last_touch on file
+- Courtney Henderson — last touch 691 days ago
+- Reilly Berk — last touch 699 days ago
+- Micky Barrera — last touch 712 days ago
+- Charlie Pankey — last touch 621 days ago
+- Todd Staley — last touch 680 days ago
+- Christie Bellino — last touch 709 days ago
+- Kelsey Garton — no last_touch on file
+- John Wilson — last touch 708 days ago
+- Charles Hayes  CRC CEC — last touch 621 days ago
+- Karen Leonard — no last_touch on file
+- Greg Belling — no last_touch on file
+- Eric Stepp, CSM — last touch 680 days ago
+- Jeff Fernley — last touch 607 days ago
+- Joshua Boshard — no last_touch on file
+- Rayshon Ward — last touch 729 days ago
+- Stephen Bass — no last_touch on file
+- Michael Tilma — last touch 371 days ago
+- Bradley Blodgett — last touch 645 days ago
+- Tamara Haslam — no last_touch on file
+- Biplob Chandra Shil — no last_touch on file
+- Josiah Hodges — no last_touch on file
+- Sri Divel — last touch 688 days ago
+- John Enzmann — last touch 677 days ago
+- Kenneth Moyer, OTP Pro — last touch 540 days ago
+- Lyndsay Campbell — last touch 421 days ago
+- Thomas Hannah — no last_touch on file
+- Muhammad Abdullah Al Kafy — no last_touch on file
+- Roman Abakumov — last touch 1606 days ago
+- Ebere Promise Okoroji — no last_touch on file
+- Charlie Parfet — last touch 682 days ago
+- Robert Delmont — no last_touch on file
+- Andrew Glantz — last touch 699 days ago
+- Anel Paul — no last_touch on file
+- Sarena Diamond — last touch 405 days ago
+- VINCENT SURDO — no last_touch on file
+- Kyle Crawford — no last_touch on file
+- Nathan Joslin — no last_touch on file
+- Aaron Thomason — no last_touch on file
+- Elizabeth Galicia — no last_touch on file
+- Brad Anderson — last touch 610 days ago
+- Tom Eckhardt — last touch 643 days ago
+- Nolan Schachter — no last_touch on file
+- Kupakwashe Desmond Mukurumbira — no last_touch on file
+- Dana Baggett — last touch 695 days ago
+- Gregg Murphy — last touch 708 days ago
+- Maria Ramirez — no last_touch on file
+- Fayaz Ahmad Saeed — last touch 2545 days ago
+- Greg McKeown — last touch 631 days ago
+- Brent Nurre — no last_touch on file
+- Rick Loftus — no last_touch on file
+- Dianne Tetzlaff — no last_touch on file
+- Cris Tina Spillett — last touch 639 days ago
+- Alarica Sautter — no last_touch on file
+- Sydney Guerrero — last touch 2581 days ago
+- Stuart Kelleher — no last_touch on file
+- Jill Manuel — no last_touch on file
+- Mary Parks — last touch 635 days ago
+- Karine Westbrook — last touch 1435 days ago
+- Omer Ramot — last touch 711 days ago
+- Sarah Brown — no last_touch on file
+- Barry Rosenblatt, CLU — no last_touch on file
+- Liam Graham — no last_touch on file
+- Jeffrey Whitlow — last touch 656 days ago
+- Tim Thompson — last touch 633 days ago
+- AMY BLACK — no last_touch on file
+- James Wallace — last touch 667 days ago
+- Vincent McClendon — no last_touch on file
+- Greg Stone — no last_touch on file
+- Nadia Velasquez — last touch 709 days ago
+- Kelly Plas — no last_touch on file
+- Mike Van Nus — last touch 553 days ago
+- Nick Schmidt — last touch 648 days ago
+- Adam Clatterbuck — last touch 695 days ago
+- Martin Guzman — last touch 694 days ago
+- Julie Jarboe — no last_touch on file
+- Nathaniel Bennett — no last_touch on file
+- Umar Shakoor — no last_touch on file
+- Zachary Matthews, CPA, CISA, CFE — no last_touch on file
+- Ken Folisi — last touch 644 days ago
+- Danielle Padula — last touch 665 days ago
+- Dan Easley — no last_touch on file
+- Alex Romero — no last_touch on file
+- Kevin Burke — last touch 555 days ago
+- Loren Prizant — last touch 616 days ago
+- Philip Chang — last touch 686 days ago
+- Rob Bauer — last touch 649 days ago
+- Marianne Pawlowski — last touch 413 days ago
+- Sam Danley — last touch 699 days ago
+- Ashhad Zeeshan — no last_touch on file
+- John Bosworth — no last_touch on file
+- Elliot Peters — no last_touch on file
+- Brian Hillard — no last_touch on file
+- Max Tsygankov — last touch 392 days ago
+- Beth Hurwitz — no last_touch on file
+- Jeff Goldberg — no last_touch on file
+- Michelle Moerchen — last touch 3117 days ago
+- Keith Casab — no last_touch on file
+- Bridget Kesner — no last_touch on file
+- Kristy Hintz — last touch 708 days ago
+- Brooke Teetz — last touch 708 days ago
+- Marcella Blodgett — last touch 2856 days ago
+- Ben Conniff — last touch 650 days ago
+- Tereze (Gegaj) Montjoy — last touch 633 days ago
+- Asha Devasia — last touch 639 days ago
+- Craig Meyer — last touch 2849 days ago
+- Gibson Gouveia — last touch 720 days ago
+- Dennis M. Wilson - AI for the Enterprise — no last_touch on file
+- CHAD CAZEL — last touch 426 days ago
+- Sarah McAngus — no last_touch on file
+- Tara Gimenez — last touch 621 days ago
+- Barry Wells — last touch 611 days ago
+- Eric Lam — last touch 483 days ago
+- Vincent Ciaccia — no last_touch on file
+- Amy Krause — last touch 578 days ago
+- Daniel Gerhart — no last_touch on file
+- Sean McAnally — last touch 698 days ago
+- Serge Voronov — last touch 567 days ago
+- Ren Hong — last touch 1435 days ago
+- Steve Woo — no last_touch on file
+- Ryan Jones — last touch 609 days ago
+- Jose Alberto Hernandez — last touch 709 days ago
+- James O'Reilly — last touch 674 days ago
+- Taylor Goldner — no last_touch on file
+- Brad Schaeffer — no last_touch on file
+- Mike Lingo — last touch 651 days ago
+- Abdul Kabeer Mughal — no last_touch on file
+- Colleen Hogan — last touch 2296 days ago
+- Kendra Melamed — last touch 705 days ago
+- John Smith Jr — no last_touch on file
+- Von Dawson, CFE — last touch 617 days ago
+- Denise Harris — no last_touch on file
+- Tonia Martin — no last_touch on file
+- Chandrashekar Ramesh — no last_touch on file
+- Deanna Schulz — no last_touch on file
+- Wade Allen — last touch 703 days ago
+- Eric Ritchie — last touch 710 days ago
+- Scott Dobrydney — no last_touch on file
+- Robin Doss — no last_touch on file
+- Callie Tucker — no last_touch on file
+- Chris Dull — last touch 616 days ago
+- Joshua Tuokkola — no last_touch on file
+- Debbie Emery — no last_touch on file
+- Stephen Thompson — last touch 604 days ago
+- Michael Sien — last touch 680 days ago
+- Mike Wells — no last_touch on file
+- Mallory Blaszczak — last touch 2816 days ago
+- Paul Goodman — no last_touch on file
+- Gary Yip — last touch 677 days ago
+- Jeffrey Schwarz — no last_touch on file
+- Crosby Schultz — no last_touch on file
+- Terri Stark — no last_touch on file
+- Rob Warnke — no last_touch on file
+- FABRIZIO DAMIANI — no last_touch on file
+- Alexis Parra — last touch 670 days ago
+- Katherine Ware — last touch 713 days ago
+- Tiffany Disher — no last_touch on file
+- Mohammed Ahmed — last touch 710 days ago
+- Richard Anthony — no last_touch on file
+- Stephanie Hrabal — no last_touch on file
+- R.J. Amos — last touch 650 days ago
+- Lisa Dean — no last_touch on file
+- Giovanni Bucciero — no last_touch on file
+- Mahwish Iqbal — last touch 374 days ago
+- Bob Thomas — last touch 756 days ago
+- Katie Herrick — last touch 694 days ago
+- Corey Fine — last touch 698 days ago
+- Greg Carroll — last touch 421 days ago
+- Craig Hamill — last touch 632 days ago
+- A. Todd Lennig — no last_touch on file
+- James Gelose — last touch 3236 days ago
+- Maia Tekle — no last_touch on file
+- Michael Lichtenstein — no last_touch on file
+- Katie Thomas — last touch 860 days ago
+- Joshua Goodman — last touch 699 days ago
+- Umesh K Nawani — last touch 1661 days ago
+- Nicole Falbo — no last_touch on file
+- Kim Griffin — last touch 2929 days ago
+- Tarun Jayaswal — no last_touch on file
+- Abhishek Bauri — no last_touch on file
+- Lorna Allen — no last_touch on file
+- Cashimear Oparah — no last_touch on file
+- David Smith — no last_touch on file
+- David Pavesic — last touch 2891 days ago
+- Ramniwas Chhimpa — no last_touch on file
+- Jill Wendt, CSM — no last_touch on file
+- Daniel Tsentsiper — last touch 393 days ago
+- Joe Steinman — no last_touch on file
+- mehdi bolouri — last touch 2571 days ago
+- Trevor Rodabaugh — no last_touch on file
+- Mike Dube — last touch 775 days ago
+- Kristy Meier — last touch 874 days ago
+- Emily Rizzo — last touch 489 days ago
+- Jake Buscher — no last_touch on file
+- Neil Pierce — no last_touch on file
+- Enu Waktola — last touch 632 days ago
+- Chad Chawanda — last touch 702 days ago
+- Christian Hess — last touch 698 days ago
+- Brian Burchill — no last_touch on file
+- Lyndsey Patel — last touch 681 days ago
+- Allan Reini — no last_touch on file
+- Brandy Walker, MBA — last touch 635 days ago
+- Trisha Luce — no last_touch on file
+- Ana Balorio — last touch 734 days ago
+- Patrick Spychalski — no last_touch on file
+- Dallin Pender — no last_touch on file
+- Shelby Biffert — no last_touch on file
+- Umer Dawood — no last_touch on file
+- Dan Weninger — no last_touch on file
+- Jennifer Seress — no last_touch on file
+- Jycen Loften — no last_touch on file
+- Sailynn Doyle — last touch 415 days ago
+- BRYAN VALDEZ — no last_touch on file
+- Nicole Talercio — no last_touch on file
+- Pamela Tibbot — last touch 650 days ago
+- Kyla Temple Pietrowski — no last_touch on file
+- Kelly Griffin — no last_touch on file
+- Pamela Gore, CFE — last touch 618 days ago
+- Stevan Dragas — no last_touch on file
+- Franklin Flores — last touch 786 days ago
+- Orlando Pangilinan — last touch 3241 days ago
+- Rakib Roman — no last_touch on file
+- Rob Bowers — last touch 702 days ago
+- Bobby Gelestathis — last touch 708 days ago
+- Alex Hult — no last_touch on file
+- Sara Miller — no last_touch on file
+- Victor Trevino — last touch 677 days ago
+- Michael Norton — no last_touch on file
+- Alex Rusticus — last touch 602 days ago
+- Mikey Henninger 🏈💰 — last touch 663 days ago
+- Michael Davis — no last_touch on file
+- Ali Rehman — no last_touch on file
+- Ian Skane — no last_touch on file
+- Thomas Angstadt — last touch 456 days ago
+- Manish Kanjipuram — no last_touch on file
+- Jason Rusk — last touch 711 days ago
+- Mark Mele, CFE — last touch 693 days ago
+- John Lucas — last touch 692 days ago
+- Carrie Dillmann — no last_touch on file
+- Eric Thompson — last touch 709 days ago
+- Jonathan Hubbard — no last_touch on file
+- Sara Davis — no last_touch on file
+- Chris Crichton — last touch 701 days ago
+- Perse Faily — last touch 419 days ago
+- Jamie Schuh — no last_touch on file
+- Troy Preston — no last_touch on file
+- 🍔 Sean Thompson 🍟 — no last_touch on file
+- Daniel Olea — no last_touch on file
+- Ravi Chouhan — no last_touch on file
+- Nancy D'Angelo — no last_touch on file
+- Erle Dardick — no last_touch on file
+- Md Rahman — last touch 710 days ago
+- Riad Mahamudul — no last_touch on file
+- Greg Hand — no last_touch on file
+- Bobbie Collies — last touch 3133 days ago
+- Ann Petrie — no last_touch on file
+- Windy Sebastian-Dean — last touch 404 days ago
+- Chris Greenburg — last touch 660 days ago
+- Nimra Ashiq — no last_touch on file
+- Kevin Linden — last touch 638 days ago
+- Steve Anthony — last touch 716 days ago
+- Scott Harvey — last touch 595 days ago
+- Holly Sanders — no last_touch on file
+- Lisa Thompson, MBA, MHRLR, PCC, CMQ/OE, SHRM-SCP — no last_touch on file
+- Mason Steffes — last touch 709 days ago
+- Jared Wierman — no last_touch on file
+- Amber Dobsovic — last touch 698 days ago
+- Doug Kozlow — last touch 621 days ago
+- Lissa Bowen — last touch 695 days ago
+- Rohan Nayak — no last_touch on file
+- Bob Mathews — no last_touch on file
+- Eki Ramdhani — no last_touch on file
+- Andy Leuthe — last touch 692 days ago
+- Justin Theese — no last_touch on file
+- Jake Philpotts — last touch 680 days ago
+- Tom Jenkins, CFE — last touch 715 days ago
+- John Robert — no last_touch on file
+- Aditya Pakharia — no last_touch on file
+- Jay Douros — no last_touch on file
+- Andrew Albrecht — no last_touch on file
+- Tony Adams, MBA — no last_touch on file
+- Guillermo Perales — no last_touch on file
+- Jesse Pamperin — no last_touch on file
+- William Hensley — last touch 3240 days ago
+- Kristi Jankowski — last touch 635 days ago
+- Jimmy Frischling — no last_touch on file
+- Jeremy DuPont — last touch 631 days ago
+- Kevin Zalnis — last touch 456 days ago
+- Ryan Schnitzler — no last_touch on file
+- Sergey Mkhitaryan — no last_touch on file
+- II Luscri — last touch 636 days ago
+- Marco Schlueter — last touch 636 days ago
+- Mike McFeely, CAPM® — no last_touch on file
+- Jacob Slater — last touch 615 days ago
+- Lisa Neice — no last_touch on file
+- Louella Burch — last touch 695 days ago
+- Richard Shank — last touch 632 days ago
+- Don Crocker — last touch 694 days ago
+- John Raju B — no last_touch on file
+- Aaron Hardy — last touch 681 days ago
+- Justin Terracio — no last_touch on file
+- Holli McInturff — no last_touch on file
+- Jessica DeLaet (Williams) — no last_touch on file
+- 🚀 Mike Wooten, M.A. — no last_touch on file
+- Rob Morasco C.E.C. — last touch 636 days ago
+- Ben Vellema — last touch 714 days ago
+- John Herman — last touch 1535 days ago
+- Ken Wright — no last_touch on file
+- Justin Jatczak — no last_touch on file
+- Stephanie Harris — last touch 712 days ago
+- Brett Wetzel — last touch 639 days ago
+- Ladoris Banks — no last_touch on file
+- Christi Brown — no last_touch on file
+- Ashley Tate — no last_touch on file
+- Miguel Gomez — no last_touch on file
+- Alexi Raymond — no last_touch on file
+- Mayra Romero-Fernandez — last touch 715 days ago
+- Shawn Morris — no last_touch on file
+- Steph Garfrerick — last touch 700 days ago
+- Carla Schwesinger — no last_touch on file
+- David Beaman — no last_touch on file
+- Temidayo Oke (Temidayohorke) — no last_touch on file
+- Lucas Botta, MSM — last touch 622 days ago
+- Matt Anderson — no last_touch on file
+- Bill Sveen — no last_touch on file
+
+**Warm introduction candidates (2):**
+
+- Alec Maurer (NEON) — via Eli Chmouni   🖥  🎶  📶: LMI (DRR 30.5); works at NEON.
+- Jalissaniey Martinez Alvarez (McDonald's) — via Bruce Sellnow: inner-tier RC (DRR 92.3); works at McDonald's; domain expertise: domain match: hospitality_foodservice, mcdonald_ecosystem.
+
+
+## Intelligence Trust Statistics
+
+- Confidence score: **89%**
+- Sources present: Connections.csv, messages.csv, invitations.csv
+- Source coverage: 50% of known LinkedIn export files
+- Connections analyzed: 2,874
+- Baseline records: 3,113
+- Connection coverage: 92% of baseline
+- Note: Confidence reflects source breadth and connection coverage relative to baseline.
+
+## Graph Mutations
+
+- Persistent graph mutated: True
+- Baseline entries added: 30
+- Baseline entries updated: 207
+- Relationship strength mutations: 4
+- Strategic importance mutations: 5
+- Opportunity graph mutations: 7
+- Who Matters Now mutations: 5
+- Mutation tag: `linkedin_delta_2026-08-19`
+- Updated company/title/source/note/tag fields where LinkedIn created deterministic baseline deltas.
+- Did not auto-promote relationship tier or trust score from LinkedIn edge alone.
+- Generated Who Matters Now and outreach queues as review-first CoS mutations.
+
+## Daily Brief Mutations
+
+- Cache path: `system/.cache/linkedin_ingest_latest.json`
+- Section: LinkedIn Relationship Delta
+- Items available for brief: 12
+- 5 strategic relationships materially increased in value.
+- 2 promotion events detected.
+- 7 suggested outreach queue items generated.
+
+## Persistence Verification
+
+- Status: persisted
+- Source tag: `linkedin_export_2026-08-19`
+- Post-write validation: baseline_json_written_delta_markdown_written_cache_written
+- Wrote: `system/_snapshots/baseline_index.pre-linkedin-ingest-2026-08-19.json`
+- Wrote: `system/baseline_index.json`
+- Wrote: `system/deltas/linkedin_export_2026-08-19.md`
+- Wrote: `system/.cache/linkedin_ingest_latest.json`
+
+## Activity Files Detected
+
+| File | Rows |
+|---|---:|
+| messages | 22,871 |
+| invitations | 357 |
+| comments | 0 |
+| shares | 0 |
+| reactions | 0 |
+
+## Guardrails
+
+- Enhanced baseline; did not replace operator-owned fields wholesale.
+- Did not promote signal_class from LinkedIn connection alone.
+- Did not treat LinkedIn export presence as last_touch.
+- Held operator-confirmed conflicts instead of overwriting them.
+- Suppressed stale export company/role against a dated or operator-confirmed no_stated_current_role state instead of restoring it.
+
+## Open Questions
+
+- Daran Adair: confirm current_company (canonical='Ameri-Can Hospitality Consulting', LinkedIn='Franchise Grade').
+
+*Generated by `system/scripts/linkedin_ingest.py` on 2026-08-19.*

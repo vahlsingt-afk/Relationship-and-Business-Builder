@@ -1,0 +1,168 @@
+# Archived legacy workspaces (folded in 2026-08-13, not version-controlled)
+/_archive/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS temporary
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python (in case we add validation scripts)
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+
+# Session ephemera (not RB-canonical)
+# (Add patterns here as the workflow surfaces them.)
+# Scratch build output from ad-hoc deck/workbook generation (contains node_modules,
+# rendered previews, intermediate build dirs) — regeneratable, not RB system state.
+# RB-2026-09-05: /output/ (singular) removed -- confirmed zero live script
+# references, only a single stale leftover file (archived). /outputs/ is the
+# one real scratch dir; kept as the only pattern here going forward.
+/outputs/
+/tmp/
+
+# Computed caches — derived from canonical files, regeneratable.
+system/.cache/
+
+# Team Portal raw request-traffic log — high-volume, no editorial value
+# in git history (unlike system/audit/'s curated low-volume events).
+system/team/usage_log/
+
+# RB API request log — high-volume and can contain live credentials
+# (e.g. x_api_key query params) logged verbatim from real requests.
+system/api/request.log
+
+# Automation runtime logs.
+system/automation/*.log
+system/automation/*.error.log
+
+# Generated daily brief artifacts — built by morning_pipeline.py, not canonical state.
+# latest_brief.json and latest.html are re-built each morning from baseline + caches.
+# Dated subdirs (e.g. system/published/daily/2026-05-24/) are ephemeral run outputs.
+# To archive a specific brief, copy it intentionally and commit with a clear message.
+system/published/
+
+# Auto-snapshots from mutations.py — git history already preserves prior state.
+# Date-tagged milestone snapshots (e.g. baseline_index.2026-05-12.json) ARE versioned.
+system/_snapshots/*.pre-*.json
+system/_snapshots/*.pre-*.jsonl
+system/_snapshots/*.pre-*.md
+system/_snapshots/*.pre-*.yaml
+# HTML pre-publish snapshots (RB 9.9: added to cover publish.py html snapshots).
+system/_snapshots/*.pre-*.html
+
+# Weekly file-copy backup from friday_eow_routine.py (RB-2026-08-24) — same
+# rationale as system/_snapshots/ above: git history already preserves prior
+# state, and this copies multi-megabyte files (baseline_index.json,
+# ecosystem_intelligence.json) every week, which would bloat the repo
+# indefinitely if tracked. The backup's value is a local, git-independent
+# restore point, not something that itself needs version control.
+system/_backups/
+
+# Live inbox data — operator-private calendar and email. Fetched per session.
+system/inbox/*.json
+system/inbox/conversation_artifacts/**
+
+# Auto-generated daily output — rebuilt each morning from canonical state.
+system/today.md
+
+# Generated .xlsx exports from ecosystem_export.py — rebuilt on demand from
+# system/ecosystem_intelligence.json, not canonical state.
+system/exports/
+
+# Project-root scratch output for ad-hoc .docx/.xlsx exports and QA/
+# comparison passes (brief_compare/, canonical_brief_qa/, docx_qa/) --
+# same "regeneratable, not canonical state" rationale as system/exports/
+# above. Canonical documents live under customers_prospects/accounts/
+# <slug>/briefs/current/ and /current/; this is local working output.
+/deliverables/
+
+# Persistent memory store — operator-private runtime data.
+system/strategic_memory.json
+
+# Tooling directory — local development helpers, not part of the RB product.
+.tools/
+
+# Legacy thread exports / transfer bundles. Treat as source artifacts, not canonical state.
+RB 8.0 transfer data/**
+
+# Employer policy source documents — contain employer-confidential text.
+# Only the extracted structured YAML under system/employers/*/policies/ is committed.
+system/employers/*/source_docs/**
+
+# Microsoft Office lock files (created while a .docx/.xlsx/.pptx is open).
+~$*
+
+# Claude Code local-machine config — permissions/paths specific to this machine,
+# and active git worktree checkouts. Not shared state.
+.claude/settings.local.json
+.claude/worktrees/
+
+# Ad-hoc scratch workspaces for deck/document generation (contain node_modules,
+# rendered previews, intermediate build dirs) — regeneratable, not RB system state.
+# RB-2026-09-05: bare .tmp/ was missing from this pattern (only .tmp_*/ globs
+# matched) and had accidentally committed a node_modules tree under
+# .tmp/pollo-title/ -- untracked via `git rm -r --cached` before adding this.
+.tmp/
+.tmp_*/
+.codex_work/
+# RB-2026-09-19: same pattern as .tmp/ above -- document-rendering fidelity
+# checks (a_render/b_render/diff_pages triplets against reference briefs),
+# confirmed via inspection to be verification scratch, not final deliverables
+# (real Background Briefs live under customers_prospects/.../briefs/current/).
+# Untracked when found; not deleted here -- see the working-tree cleanup note
+# in RBB_TOKEN_EFFICIENT_ARCHITECTURE_SCOPE_2026-09-19.md before removing it.
+.codex-tmp/
+
+# ChatGPT Intelligence Drop (RB-2026-09-19) — the README and the packet
+# contract template are real, committed specification; the packets
+# themselves (deep-research evidence .md/.png dropped for the next sweep)
+# are local runtime intelligence, already captured into system/captures/ by
+# the time the sweep runs, same reasoning as the live inbox rule above.
+system/inbox/chatgpt_intelligence_drop/*
+!system/inbox/chatgpt_intelligence_drop/README
+
+# Adaptive research scheduler runtime telemetry — operational churn, not
+# durable state. (deep_research_coverage.json in the same directory is
+# durable scheduler state and stays tracked.)
+system/research/adaptive_research_usage.jsonl
+
+# Node.js dependency trees -- same recurring problem as the .tmp/pollo-title/
+# node_modules incident noted above. The project-root one is actually a
+# symlink to a Codex runtime cache outside the repo (~/.cache/codex-runtimes/
+# .../node_modules), not a real local install -- no trailing slash, so the
+# pattern matches the symlink itself, not just a real directory named this.
+node_modules
+
+# Runtime file locks (e.g. competitor_intelligence_common.py's
+# _registry_lock() -- RB-DEFECT-071 atomic-write fix). Concurrency-control
+# artifacts, not persistent state; a stale committed lock on a fresh clone
+# would look like a lock already held. Caught after accidentally committing
+# one during 2026-09-19 working-tree cleanup.
+*.lock
+
+# Weekly-plan-carryover consumption snapshots — same rationale as the other
+# _snapshots/*.pre-*.* patterns above (git history isn't the restore point
+# for these; weekly_plan_generator.py's own consume-and-unlink step is the
+# real lifecycle, confirmed already running normally as of 2026-09-19).
+system/_snapshots/weekly_plan_carryover.consumed-*.json
+
+# LibreOffice lock files (created while a spreadsheet/doc is open)
+.~lock.*#
+system/artifacts/jeff_coffland_product_map/genius_n_review/source.pptx

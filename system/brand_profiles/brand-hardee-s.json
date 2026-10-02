@@ -1,0 +1,142 @@
+{
+  "brand_id": "brand-hardee-s",
+  "brand_name": "Hardee's",
+  "identity": {
+    "parent_ownership": {
+      "value": "CKE Restaurants Holdings, Inc.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "hq_city_state": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "founded_year": {
+      "value": "1960",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "market_identity": {
+      "value": "Limited-service / quick-service restaurant brand",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "ownership_type": {
+      "value": "Private / private-equity-backed",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "operating_structure": {
+      "value": "Brand operates through a franchise-led or mixed restaurant system; source-specific scope should be preserved.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    }
+  },
+  "synopsis": {
+    "value": "Hardee's is a limited-service restaurant brand. It sits within CKE Restaurants Holdings, Inc.; the reviewed evidence indicates a franchise-led or mixed operating model. For RBB, ownership and operator structure should be kept separate from any technology deployment claims, and only explicitly evidenced technology relationships are included here.",
+    "status": "reported",
+    "evidence_ids": [
+      "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+    ],
+    "confidence": "medium",
+    "as_of": "2026-09-29",
+    "scope": "brand",
+    "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": 1574.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchised_units": {
+      "value": 1370.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "company_owned_units": {
+      "value": 204.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [],
+  "pain_points": [],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-29T15:48:18Z",
+  "updated_at": "2026-09-29T15:48:18Z",
+  "trajectory": {
+    "badge": "Flat",
+    "metric_used": "unit_delta_pct",
+    "value_pct": -1.440200375704446,
+    "as_of_year": "2024",
+    "underlying": {
+      "system_sales_usd": 1831300000.0,
+      "unit_count": 1574.0,
+      "auv_usd": 1155000.0,
+      "sales_delta_pct": -5.251448675496689,
+      "units_delta_pct": -1.440200375704446
+    },
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

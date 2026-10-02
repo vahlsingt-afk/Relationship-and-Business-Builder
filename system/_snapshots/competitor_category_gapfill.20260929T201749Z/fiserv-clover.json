@@ -1,0 +1,131 @@
+{
+  "competitor_id": "comp-fiserv-clover",
+  "competitor_slug": "fiserv-clover",
+  "display_name": "Fiserv (Clover)",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "Current restaurant-technology positioning for Fiserv (Clover) was not established with sufficient confidence in this bounded pass.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Clover revenue only +2% reported in Q2 2026 (+13% adjusted)",
+        "evidence_id": "note-0007",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "FY2026 organic revenue guide cut to −1% to flat; adj. EPS $7.20–7.40",
+        "evidence_id": "note-0008",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "Oct 29, 2025: stock fell 44% (worst day ever) after guidance cut; ~65% decline in 2025",
+        "evidence_id": "note-0009",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "Portfolio review; divested student-loan servicing, managed ATM, India SMB/fuel",
+        "evidence_id": "note-0010",
+        "added_at": "2026-09-26T12:23:31Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "#1 share of ex-top-250 US restaurants: ~20%, ~175k locations",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "Clover GPV +9% (+11% ex gateway conversion) Q2 2026",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:23:31Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated evidence does not prove performance, ROI, reliability, implementation quality, or systemwide deployment; independent validation remains incomplete.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "rbb-packet:rbb-competitor-category-gapfill-20260929-batches02-04",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:10Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T20:16:48Z",
+  "latest_cos_commentary": {
+    "headline": "Unresolved vendor; no competitive claim should be made without further verification.",
+    "genius_exposure": [],
+    "competitive_timing": "Evidence reviewed as of 2026-09-29.",
+    "sales_response": "Track for account influence or future expansion into Genius categories.",
+    "risk_and_uncertainty": "Evidence quality varies; unresolved records were intentionally left empty rather than guessed.",
+    "priority": "P3",
+    "confidence": 45,
+    "sources": []
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 7,
+    "pack_claim_count": 20,
+    "pack_claims_with_url": 17,
+    "pack_claims_inherited_url": 4,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 3,
+      "legacy_claims_need_date_and_current_status_check": 20,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  },
+  "canonical_company_name": "Fiserv (Clover)",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 45,
+    "sources": []
+  },
+  "operating_status": "unclear",
+  "relationship_class_recommendation": "unclassified_vendor",
+  "negative_findings": [
+    {
+      "value": "No sufficiently unambiguous current restaurant-specific product evidence was established in this pass; no Genius overlap assigned.",
+      "confidence": 60,
+      "sources": []
+    }
+  ],
+  "product_lineage": []
+}

@@ -1,0 +1,54 @@
+{
+  "file_id": "cap-5ca4326000c75eb1",
+  "queued_at": "2026-10-01T10:42:27+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-30_worldpay_supplemental_account_depth_audit.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-30_worldpay_supplemental_account_depth_audit",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Drop \u2014 Worldpay Supplemental Account Depth Audit\n\n## Batch receipt\n\n- Date: 2026-09-30\n- Scope: One bounded audit of the 85 accounts added from the Worldpay ABM backbook.\n- Purpose: Separate brand-wide footprint from the exact Worldpay merchant/entity footprint, normalize obviously inconsistent operating segments, and expose missing Worldpay relationship ownership.\n- Usage gate: Eligible at start (36% five-hour and 55% weekly usage consumed); research was bounded to seven public-footprint validations plus portfolio-wide classification and governance cleanup.\n\n## Pages checked and observations added\n\n| Account | Observation | Scope | Confidence | Source |\n|---|---|---|---:|---|\n| The Coffee Bean & Tea Leaf | Official directory reports 193 U.S. locations. | U.S. brand footprint; WP merchant scope still unknown | 90% | https://www.coffeebean.com/store/index.html |\n| Caribou Coffee | Company states more than 800 locations in 11 countries. | Global brand footprint; numbered WP record may be one merchant/site | 85% | https://www.cariboucoffee.com/about-us/ |\n| Jamba | Official directory reports 720 U.S. locations. | U.S. brand footprint | 90% | https://locations.jamba.com/ |\n| Hungry Howie's | Company states nearly 500 stores in 18 states. | Approximate U.S. brand footprint | 90% | https://hungryhowies.com/about-us |\n| Carvel | Official directory reports 374 U.S. locations. | U.S. brand footprint | 90% | https://locations.carvel.com/ |\n| Bruegger's | Bagel Brands reported 181 locations as of October 2023. | Brand footprint; dated | 75% | https://www.brueggers.com/wp-content/uploads/2024/06/BB-ESG-Report-2023.pdf |\n| Uno Pizzeria & Grill | Company states 100 restaurants in 20 states, D.C. and international markets. | Global brand footprint | 90% | https://unos.com/about/ |\n\n## Portfolio-wide findings\n\n- 64 of 85 supplemental rows initially lacked any location count.\n- All 85 supplemental rows lacked a named RM or Worldpay relationship owner.\n- A material share are legal entities, franchisees, numbered stores, licensed sites, or holding companies. Applying a brand-wide count to those records would overstate the scope of Worldpay's relationship.\n- Existing source segments mixed cuisine, service model, ownership type and channel. The workbook now normalizes obvious cases while preserving an explicit account-type field.\n- Every supplemental row now asks: who at Worldpay owns the relationship, what merchant IDs/legal entities are included, and whether the relationship is enterprise, franchisee or single-site?\n\n## Conflicts and negative findings\n\n- A public brand footprint does not prove Worldpay processes all locations.\n- Numbered records such as Caribou Coffee #1243, Friendly Ice Cream #7776, Robek's #289 and Smashburger #1567 may represent individual merchants/sites; their brand footprint is context, not WP scope.\n- Public counts for Bruegger's are dated and should be refreshed before a formal forecast.\n- No reliable internal owner was found for the 85 supplemental rows; ownership remains an explicit Worldpay meeting question rather than an inferred assignment.\n\n## Remaining follow-up\n\n1. Worldpay supplies relationship owner, merchant/legal entity and enterprise/franchise/site scope for every supplemental row.\n2. Research the remaining brand/chain rows with missing footprints, prioritizing A/B meeting accounts.\n3. Park unresolved legal-entity rows unless Worldpay confirms multi-unit or enterprise buying authority.\n4. Once scope is confirmed, convert only the qualified subset into scored opportunities.",
+  "word_count": 508,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-10-01T10:42:35+00:00",
+  "processing_result": {
+    "triage_stream_count": 4,
+    "noise_only": false,
+    "persisted_count": 4,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-10-01T10:42:27+00:00-001",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 1 trigger(s): named. Possible named subjects: Worldpay, All, Portfolio, Applying."
+      },
+      {
+        "item_id": "INT-2026-10-01T10:42:27+00:00-002",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'franchisee'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-10-01T10:42:27+00:00-003",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-10-01T10:42:27+00:00-004",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Jamba, Caribou Coffee, Smashburger, Coffee Bean & Tea Leaf, Worldpay. Macro/industry signal detected: 6 keyword hit(s) across categorie(s): industry_trend, market_signal, vendor_tech. Key terms: enterprise, forecast, franchise, multi-unit, pos"
+      }
+    ],
+    "generic_streams_suppressed": false,
+    "generic_streams_suppressed_count": 0,
+    "exec_mutations": 0,
+    "executive_declaration_mutations": 0,
+    "structured_import_reconciled": false,
+    "structured_import_applied": null,
+    "structured_import_deduped": null,
+    "structured_import_queued": null,
+    "structured_import_rejected": null,
+    "canonical_targets_changed": null,
+    "canonical_mutation_statement": "executive_declaration_mutations=0; no structured deep-research sidecar findings to reconcile for this capture.",
+    "llm_summary": null
+  }
+}

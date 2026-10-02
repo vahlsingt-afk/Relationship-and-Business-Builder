@@ -1,0 +1,236 @@
+{
+  "competitor_id": "comp-qu",
+  "competitor_slug": "qu",
+  "display_name": "Qu",
+  "aliases": [
+    "Qu POS"
+  ],
+  "vendor_entity_id": "vendor-qu",
+  "primary_category": "pos",
+  "competes_on": [
+    "payments",
+    "pos",
+    "restaurant_os_platform"
+  ],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Jack in the Box: 2,100+ restaurants in 15 months; \"Qu's platform gives us the speed and stability we need\" (Doug Cook, CTO)",
+        "evidence_id": "note-0013",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "Offline/edge resilience claim; 0.2% order failure rate",
+        "evidence_id": "note-0014",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "Now bundling payments (Qu Pay, Jul 2026) — direct overlap with Genius+Worldpay bundle",
+        "evidence_id": "note-0015",
+        "added_at": "2026-09-26T12:23:31Z"
+      }
+    ]
+  },
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:46:55Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:55Z",
+  "latest_cos_commentary": {
+    "headline": "Qu now competes on the POS-and-payments bundle in addition to ordering and kitchen flows.",
+    "genius_exposure": "Qu now competes on the POS-and-payments bundle in addition to ordering and kitchen flows.",
+    "competitive_timing": "Qu Pay, embedded payments for enterprise QSR, launched July 2026; Roy Rogers was an early customer. Second check: Qu reports a completed rollout to more than 2,100 Jack in the Box restaurants in 15 months.",
+    "sales_response": "Confirm Qu Pay rollout, processor economics and operational support in Roy Rogers and Jack in the Box opportunities.",
+    "risk_and_uncertainty": "Early adoption is not evidence of systemwide Qu Pay conversion. Company-reported completion; verify exact active POS and payment modules at each franchisee.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 5
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 5,
+    "pack_claim_count": 18,
+    "pack_claims_with_url": 13,
+    "pack_claims_inherited_url": 2,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 5,
+      "legacy_claims_need_date_and_current_status_check": 18,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  },
+  "vendor_claims": [
+    {
+      "value": "Enterprise unified-commerce platform focused on QSR and fast-casual restaurants.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Qu's architecture is centered on unified enterprise commerce across POS, kiosk, drive-thru, online and third-party ordering with centralized menus and data.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Architecture does not independently validate implementation or operational performance."
+    },
+    {
+      "value": "Qu markets a 99.997% uptime figure.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Claim requires contractual SLA definition, measurement period, exclusions, and denominator before being treated as independently validated reliability."
+    }
+  ],
+  "products": [
+    {
+      "value": "Qu POS (POS)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Qu Kiosk (Self-Service)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Qu Drive-Thru (Drive-Thru)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Qu Online Ordering (Digital Ordering)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Qu Third-Party Ordering (Order Aggregation/Integration)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Qu Menu Management (Centralized Menu Management)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Qu Data/Commerce Platform (Unified Commerce/Data)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Qu's own status history documents backend, reporting, integration, and POS-adjacent incidents.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "marketplace_reported",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Recorded incidents do not by themselves disprove the stated uptime percentage."
+    }
+  ]
+}

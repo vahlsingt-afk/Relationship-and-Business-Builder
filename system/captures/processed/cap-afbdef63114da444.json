@@ -1,0 +1,64 @@
+{
+  "file_id": "cap-afbdef63114da444",
+  "queued_at": "2026-09-22T09:19:03+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-21_2206_candidate-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-21_2206_candidate-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260921-2206-candidate-validation`\n- Research system: `Codex web research`\n- Started at: `2026-09-21 22:06 CDT`\n- Completed at: `2026-09-21 22:07 CDT`\n- Research scope: Four unresolved candidate-page validations for Popeyes and Pizza Hut\n- Queue item or vendor: Crunchtime, Restaurant365, and Paytronix candidate pages\n- Methodology: Direct retrieval and page-level validation of vendor-hosted source pages; relationship evidence required an explicit use or customer indication rather than a brand mention\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 1\n- Conflicts found: 0\n- Material takeaway: Restaurant365's 2023 webinar supports franchisee-level Popeyes adoption for accounting automation and real-time financial visibility, but it does not establish a Popeyes corporate or systemwide standard. Two Crunchtime leadership articles and one Paytronix strategy article are brand mentions only and must remain negative findings.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: Popeyes\n- Vendor: Restaurant365\n- Product or category: Restaurant accounting, accounts-payable automation, multi-location financial visibility, inter-store transactions, real-time reporting, operations, and business intelligence\n- Relationship indication: `customer`\n- Deployment scope: `franchisee`\n- Evidence type: `other`\n- Confidence: `65%`\n- Confidence rationale: Restaurant365's webinar explicitly presents finance leaders from multi-unit Burger King and Popeyes franchisees describing accounting automation, alongside Restaurant365 solutions and customer-success personnel. The page supports franchisee use and product scope, but does not identify all operators or quantify the Popeyes footprint; it is not evidence of a Popeyes enterprise standard.\n- Source title: How Burger King and Popeye's Franchisees are Automating Accounting Processes\n- Source URL: https://www.restaurant365.com/webinars/recorded-webinars/how-burger-king-and-popeyes-franchisees-are-automating-accounting-processes/\n- Publisher or source owner: Restaurant365\n- Published date, if known: 2023-06-23\n- Accessed date: `2026-09-21`\n- Exact supporting excerpt or faithful factual note: The webinar description says finance teams at multi-unit Burger King and Popeyes franchisees are eliminating manual accounting tasks, reducing errors, and making data-driven decisions using real-time data. Topics include scaling without additional overhead, multi-location visibility, inter-store transactions, and AP automation; the session also demonstrates Restaurant365 operations and business-intelligence solutions.\n- Product-specific evidence: Accounting-process automation, accounts payable, real-time financial data, multi-location visibility, inter-store transactions, operations, and business intelligence.\n- Conflicting or limiting evidence: Franchisee scope only. The page names speaker roles but does not clearly associate every person with an operator in the retrieved page, give a Popeyes location count, or assert corporate procurement, endorsement, or systemwide deployment.\n- Recommended follow-up: Identify the Popeyes franchisee operator or operators represented by the speakers and seek an operator-owned source or named case study with location count and current deployment status.\n\n## Negative findings\n\n- Candidate or claim: Popeyes uses Crunchtime products.\n- Pages checked: https://www.crunchtime.com/blog/women-in-restaurant-leadership-execs-from-shake-shake-7-brew-popeyes-share-key-insights-for-growth-representation and https://www.crunchtime.com/blog/women-in-restaurant-tech-how-franchisee-experience-shapes-popeyes-growth-and-operations\n- Result: Both pages summarize Popeyes executive Devin Games's participation in Crunchtime's 2024 Ops Summit and discuss leadership, franchisee support, training, and operational growth. Neither page identifies a Crunchtime product, purchase, deployment, integration, or customer relationship. Event participation alone is not customer evidence.\n\n- Candidate or claim: Pizza Hut uses Paytronix for loyalty, mobile engagement, or digital ordering.\n- Pages checked: https://www.paytronix.com/blog/why-dominos-overtook-pizza-hut-and-what-you-can-learn-from-it\n- Result: The 2017 Paytronix article analyzes Domino's and Pizza Hut digital strategies and mentions Pizza Hut's loyalty program. It does not say Pizza Hut uses Paytronix or any Paytronix product.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://www.crunchtime.com/blog/women-in-restaurant-leadership-execs-from-shake-shake-7-brew-popeyes-share-key-insights-for-growth-representation | Vendor blog / event recap | 2026-09-21 | None | Leadership-panel recap; no Crunchtime product or customer assertion. |\n| https://www.crunchtime.com/blog/women-in-restaurant-tech-how-franchisee-experience-shapes-popeyes-growth-and-operations | Vendor blog / event recap | 2026-09-21 | None | Popeyes operations profile; no Crunchtime product or deployment assertion. |\n| https://www.restaurant365.com/webinars/recorded-webinars/how-burger-king-and-popeyes-franchisees-are-automating-accounting-processes/ | Webinar | 2026-09-21 | Observation 1 | Supports franchisee-level use and workflow scope; operator identity and location count remain unresolved. |\n| https://www.paytronix.com/blog/why-dominos-overtook-pizza-hut-and-what-you-can-learn-from-it | Vendor blog | 2026-09-21 | None | Competitive strategy analysis; no Pizza Hut-Paytronix relationship assertion. |\n\n## Research notes and inferences\n\n- Inference: Restaurant365 has adoption among at least some Popeyes franchisees, but the candidate page cannot establish brand-wide use or the size of the installed base.\n- Inference: Vendor-hosted conference recaps and competitive analyses are high-recall mention sources; without explicit product-use language they should remain negative candidate results.\n- No finding in this packet should be written directly to canonical account records without the normal RB review step.",
+  "word_count": 712,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-22T09:23:20+00:00",
+  "processing_result": {
+    "triage_stream_count": 4,
+    "noise_only": false,
+    "persisted_count": 4,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-014",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 1 trigger(s): named. Possible named subjects: Negative, Candidate, Popeyes, Identify, Crunchtime, Recommended."
+      },
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-015",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'franchisee'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-016",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-017",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Domino's, Pizza Hut, Burger King, Popeyes, Restaurant365, Crunchtime, Paytronix. Macro/industry signal detected: 12 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: auto"
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "Popeyes",
+        "Pizza Hut",
+        "Restaurant365",
+        "Crunchtime",
+        "Paytronix"
+      ],
+      "topics": [
+        "candidate-page validations",
+        "franchisee-level adoption",
+        "accounting automation",
+        "financial visibility"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Identify the Popeyes franchisee operator or operators represented by the speakers and seek an operator-owned source or named case study with location count and current deployment status."
+      ],
+      "why_it_matters": "This research identifies potential franchisee-level adoption of accounting automation solutions that could impact operational efficiency."
+    }
+  }
+}

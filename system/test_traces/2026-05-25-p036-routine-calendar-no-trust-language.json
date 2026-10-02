@@ -1,0 +1,66 @@
+{
+  "title": "P-036: Routine calendar item assessed but no trust language displayed",
+  "trace_type": "ri_assessment_doctrine",
+  "source": "daily_brief_display_gate_test",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-25",
+  "sprint": "RB 9.9",
+  "protocol": "P-036",
+  "scenario_id": "p036-case-2",
+  "summary": "A recurring 1:1 with a non-baseline colleague is on today's calendar. RB should internally assess it for RI (does it involve an RC? active-thread company? recruiting context?) and determine it is irrelevant. The daily brief should include the meeting in the calendar section but should NOT produce trust/RI language, signal proposals, or relationship state claims about this meeting.",
+  "expected_ri_assessment": {
+    "status": "irrelevant",
+    "source": "relationship_signals",
+    "source_freshness": "fresh",
+    "display_recommendation": "suppress"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label": "calendar_overlay processes routine meeting",
+      "description": "calendar_overlay.py finds a calendar event: '1:1 with Kevin (BridgePoint internal)' from 14:00-14:30. Kevin is not in baseline_index. No active-thread company match. Meeting has no recruiting, intro, or opportunity signal.",
+      "input": {
+        "source": "calendar",
+        "event_title": "1:1 with Kevin (BridgePoint internal)",
+        "event_at": "2026-05-25T14:00:00Z",
+        "attendees": ["kevin@bridgepointops.com"],
+        "baseline_match": null,
+        "active_thread_match": null
+      },
+      "expected_signal_type": null,
+      "expected_ri_assessment_status": "irrelevant"
+    },
+    {
+      "step": 2,
+      "label": "relationship_signals computes no RI signal",
+      "description": "relationship_signals.py processes the calendar event. No baseline match, no thread match, no opportunity keywords. Signal not emitted or emitted with strategic_relevance=low and ri_assessment.status=irrelevant.",
+      "expected_outcome": "either no signal emitted, or ri_assessment.status=irrelevant and display_recommendation=suppress"
+    },
+    {
+      "step": 3,
+      "label": "Daily brief includes meeting but no trust language",
+      "description": "The daily brief lists the 1:1 in the meeting schedule section. The response does NOT include phrases like 'relationship signal', 'trust updated', 'I propose recording', or 'last_touch'. Proof row shows ri_assessed_irrelevant or negative_scan_recorded.",
+      "expected_display": "suppress",
+      "forbidden_phrases_in_response": [
+        "trust updated",
+        "relationship state",
+        "I propose recording",
+        "last_touch updated",
+        "proposed RI"
+      ]
+    }
+  ],
+  "defects": [],
+  "acceptance_criteria": [
+    "meeting appears in calendar section of brief",
+    "NO trust/RI language in response about this meeting",
+    "ri_assessment.status = irrelevant OR signal not emitted",
+    "ri_assessment.display_recommendation = suppress",
+    "proof row does NOT show proposed or recorded for this calendar event"
+  ],
+  "anti_patterns": [
+    "treating every calendar event as a relationship intelligence opportunity",
+    "producing 'I propose recording a last_touch for Kevin' for a routine internal meeting",
+    "displaying RI machinery output for irrelevant inputs"
+  ]
+}

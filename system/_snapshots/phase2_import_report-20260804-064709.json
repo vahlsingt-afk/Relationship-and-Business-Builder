@@ -1,0 +1,185 @@
+{
+  "phase2_file": "system/research/phase2_online_ordering_evidence_draft_2026-08-03.json",
+  "category": "Online Ordering",
+  "rows_processed": 24,
+  "rows_skipped": 0,
+  "dry_run": true,
+  "added": 20,
+  "updated": 2,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 20,
+    "enrich_existing_relationship": 2,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 0,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 1,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 1
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Olo",
+        "customer": "Denny's",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-denny-s-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Cracker Barrel",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-cracker-barrel-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Portillo's",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-portillo-s-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Slim Chickens",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-slim-chickens-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "ChowNow",
+        "customer": "Ollie's",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-ollie-s-online-ordering-unknown-vendor-chownow"
+      },
+      {
+        "vendor": "Grubhub for Restaurants",
+        "customer": "Flippin' Pizza",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-flippin-pizza-online-ordering-franchisee-deployment-vendor-grubhub-for-restaurants"
+      },
+      {
+        "vendor": "Uber Direct / Uber Eats for Merchants",
+        "customer": "White Castle",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-white-castle-online-ordering-unknown-vendor-uber-direct-uber-eats-for-merchants"
+      },
+      {
+        "vendor": "Uber Direct / Uber Eats for Merchants",
+        "customer": "McDonald's",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-mcdonald-s-online-ordering-unknown-vendor-uber-direct-uber-eats-for-merchants"
+      },
+      {
+        "vendor": "ItsaCheckmate",
+        "customer": "Wendy's",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-wendy-s-online-ordering-unknown-vendor-itsacheckmate"
+      },
+      {
+        "vendor": "ItsaCheckmate",
+        "customer": "Arby's",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-arby-s-online-ordering-unknown-vendor-itsacheckmate"
+      },
+      {
+        "vendor": "Deliverect",
+        "customer": "Papa John's",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-papa-john-s-online-ordering-unknown-vendor-deliverect"
+      },
+      {
+        "vendor": "Deliverect",
+        "customer": "Little Caesars",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-little-caesars-online-ordering-unknown-vendor-deliverect"
+      },
+      {
+        "vendor": "Ordermark / Nextbite",
+        "customer": "Nathan's Famous",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-nathan-s-famous-online-ordering-unknown-vendor-ordermark-nextbite"
+      },
+      {
+        "vendor": "Snackpass",
+        "customer": "Pokemoto",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-pokemoto-online-ordering-unknown-vendor-snackpass"
+      },
+      {
+        "vendor": "Snackpass",
+        "customer": "Presotea",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-presotea-online-ordering-unknown-vendor-snackpass"
+      },
+      {
+        "vendor": "Otter",
+        "customer": "Skyline Chili",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-skyline-chili-online-ordering-unknown-vendor-otter"
+      },
+      {
+        "vendor": "Otter",
+        "customer": "McDonald's",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-mcdonald-s-online-ordering-franchisee-deployment-vendor-otter"
+      },
+      {
+        "vendor": "Otter",
+        "customer": "Just Salad",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-just-salad-online-ordering-unknown-vendor-otter"
+      },
+      {
+        "vendor": "Popmenu",
+        "customer": "Max's Restaurant",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-max-s-restaurant-online-ordering-unknown-vendor-popmenu"
+      },
+      {
+        "vendor": "Popmenu",
+        "customer": "Kelly Companies",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-kelly-companies-online-ordering-unknown-vendor-popmenu"
+      }
+    ],
+    "enrich_existing_relationship": [
+      {
+        "vendor": "Olo",
+        "customer": "Waffle House",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-waffle-house-online-ordering-unknown-reference-only-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Five Guys",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-five-guys-online-ordering-unknown-reference-only-vendor-olo"
+      }
+    ],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [
+      {
+        "vendor": "ItsaCheckmate",
+        "customer": "Buffalo Wild Wings",
+        "tech_category": "Online Ordering",
+        "relationship_id": null
+      }
+    ],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": [
+      {
+        "vendor": "ChowNow",
+        "customer": "Yolk",
+        "tech_category": "Online Ordering",
+        "relationship_id": null
+      }
+    ]
+  }
+}

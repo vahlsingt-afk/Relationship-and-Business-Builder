@@ -1,0 +1,114 @@
+# RB Test Trace — touchContact projection sync defect: Jeff Wayman card frontmatter stale after successful update
+
+**Trace ID:** T-2026-05-18-004  
+**Captured at:** 2026-05-18  
+**Source:** chatgpt_relationship_bridge_9_0  
+**Operator:** Todd Vahlsing  
+**Trace type:** projection_sync_defect_test  
+**Session:** rb-touchcontact-jeff-wayman-projection-sync-2026-05-18  
+
+## Summary
+
+User requested updating Jeff Wayman's last_touch to 2026-05-12 based on recent text/call interaction evidence. touchContact succeeded and DRR scoring reflected fresh recency consistent with the 2026-05-12 touch, but getCard still returned RC card frontmatter with last_touch: 2025-12-29. This indicates a materialized card projection/cache sync defect between the mutable baseline/scoring layer and the rendered RC card file/frontmatter.
+
+## Steps
+
+### 1. User requested Jeff Wayman last_touch update
+
+**User prompt**
+
+```text
+Update Jeff Wayman’s last touch to 2026-05-12 based on recent text/call interaction evidence. After updating, show his DRR score or card/loop context and confirm the stale last-touch issue is resolved.
+```
+
+**Tool / API call**
+
+- intended_operation: `Update jeff-wayman last_touch to 2026-05-12.`
+- endpoint: `touchContact`
+- response_status: `200`
+- response_summary:
+```text
+touchContact returned {ok: true, id: 'jeff-wayman'}.
+```
+
+**Assistant response**
+
+```text
+Assistant called touchContact for contact id jeff-wayman with date 2026-05-12 and source noting recent text/call evidence: 25 messages, 5 calls, last interaction 2026-05-12.
+```
+
+**Mutation confirmation:** Mutation succeeded at the contact/index layer.
+
+
+### 2. Card validation exposed stale frontmatter
+
+**Tool / API call**
+
+- intended_operation: `Validate rendered RC card reflects updated last_touch.`
+- endpoint: `getCard`
+- response_status: `200`
+- response_summary:
+```text
+Returned Jeff Wayman card with state ACTIVE, tier inner, trust_state stable, momentum positive, but frontmatter still contained last_touch: 2025-12-29.
+```
+
+**Assistant response**
+
+```text
+Assistant called getCard for jeff-wayman. Card content still showed frontmatter last_touch: 2025-12-29 despite successful touchContact mutation.
+```
+
+**Post-mutation validation:** Rendered/materialized RC card did not reflect updated touch date.
+
+
+### 3. DRR validation reflected fresh recency
+
+**Tool / API call**
+
+- intended_operation: `Validate scoring/index layer after touchContact mutation.`
+- endpoint: `getDrrScore`
+- response_status: `200`
+- response_summary:
+```text
+Returned id jeff-wayman, signal_class RC, rc_tier inner, score 92.0, recency component 0.984.
+```
+
+**Assistant response**
+
+```text
+Assistant called getDrrScore for jeff-wayman. DRR score was 92.0 with recency component 0.984, consistent with a fresh last_touch of 2026-05-12 rather than the stale 2025-12-29 card value.
+```
+
+**Post-mutation validation:** Scoring layer appears to reflect the updated 2026-05-12 touch date.
+
+
+## Defects
+
+### TOUCHCONTACT-PROJECTION-SYNC-001 — touchContact update not propagated to materialized RC card frontmatter
+
+**Severity:** medium
+
+After touchContact succeeded for jeff-wayman with date 2026-05-12, getDrrScore reflected fresh recency, but getCard still returned frontmatter last_touch: 2025-12-29. This indicates the baseline/index update and DRR scoring are updated, while the materialized RC card/frontmatter projection remains stale.
+
+**Recommendation:** Ensure touchContact either updates the materialized RC card frontmatter synchronously, invalidates and rebuilds the card projection/cache, or returns a warning that card projection is stale until a refresh job runs.
+
+
+### TOUCHCONTACT-VALIDATION-CONFLICT-001 — Validation surfaces conflicting last_touch states across RB endpoints
+
+**Severity:** medium
+
+Different endpoints presented conflicting last_touch evidence after the update: touchContact confirmed success and DRR recency reflected fresh touch, while getCard displayed the old date. This can mislead the assistant/user when confirming whether the stale last-touch issue is resolved.
+
+**Recommendation:** Add a canonical last_touch field to getCard response outside markdown content, or expose projection freshness metadata so clients can distinguish canonical state from rendered card cache.
+
+
+## Raw verbatim paste
+
+This block is the operator-provided verbatim text. RB has not interpreted or summarized it; it is preserved here for replay.
+
+```text
+Key result for Codex: touchContact succeeded for jeff-wayman with date 2026-05-12. getDrrScore returned score 92.0 and recency component 0.984, supporting that the scoring/index layer incorporated the fresh touch date. However, getCard returned Jeff Wayman's RC card content with YAML/frontmatter line 'last_touch: 2025-12-29'. This is a materialized card projection sync defect: the canonical/index layer and DRR updated, but the card frontmatter remained stale.
+```
+
+---
+*Generated by `system/scripts/test_trace.py`. Secrets redacted before persistence.*

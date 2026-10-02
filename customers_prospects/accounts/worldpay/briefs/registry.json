@@ -1,0 +1,32 @@
+{
+  "account_id": "acct-worldpay",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-08-28T11:15:58Z",
+      "generated_for": "Todd",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-28",
+      "path": "system/account_research/accounts/worldpay/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-08-28T13:55:16Z",
+      "generated_for": "Worldpay Master Account Plan",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-28",
+      "path": "system/account_research/accounts/worldpay/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-25T16:12:10Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-25",
+      "path": "customers_prospects/accounts/worldpay/briefs/current/Background_Brief.md",
+      "superseded": false
+    }
+  ]
+}

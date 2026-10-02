@@ -1,0 +1,18 @@
+{
+  "competitor_slug": "presto-presto-voice",
+  "vendor_display_name": "Presto (Presto Voice)",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "**SEC cease-and-desist (Jan 14, 2025):** Presto made \"materially false and misleading statements\" about Presto Voice; \"the vast majority of drive-thru orders placed through this version of Presto Voice required human intervention\" (Nov 2021–May 2023). No civil penalty, citing cooperation"
+    },
+    {
+      "point": "CKE (a past Presto customer) signed Genius as its exclusive POS with \"end-to-end drive-thru technology\" (May 2026); Presto's status at CKE after that is not found"
+    }
+  ]
+}

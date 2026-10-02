@@ -1,0 +1,79 @@
+{
+  "competitor_id": "comp-acrelec",
+  "competitor_slug": "acrelec",
+  "display_name": "Acrelec",
+  "aliases": [],
+  "vendor_entity_id": "vendor-acrelec",
+  "primary_category": "kiosks",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Leadership transition (below)",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:23:34Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "McDonald's approved DMB hardware provider (alongside Coates)",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:23:34Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-10-02T09:47:02Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:02Z",
+  "latest_cos_commentary": {
+    "headline": "DMB, kiosk and timer portfolio can compete with several Genius lines at global QSRs.",
+    "genius_exposure": "DMB, kiosk and timer portfolio can compete with several Genius lines at global QSRs.",
+    "competitive_timing": "Current Acrelec product portfolio lists kiosk, digital menu boards, speaker posts and Qtimer for restaurants.",
+    "sales_response": "Validate product-specific deployed footprints and McDonald’s approved hardware status from a current primary source.",
+    "risk_and_uncertainty": "Undated product page does not establish deployment at any named brand; accessed 2026-09-28.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 27
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 27,
+    "pack_claim_count": 10,
+    "pack_claims_with_url": 7,
+    "pack_claims_inherited_url": 4,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 3,
+      "legacy_claims_need_date_and_current_status_check": 10,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "competitor_slug": "mood-media",
+  "vendor_display_name": "Mood Media",
+  "brand_id": "brand-mcdonald-s",
+  "brand_name": "McDonald's",
+  "category": null,
+  "competes_on": [
+    "kitchen_drive_thru"
+  ],
+  "circle1_genius_strengths": [
+    {
+      "category": "Kitchen Drive Thru",
+      "point": "AI camera vehicle detection (car type/colour), unlimited-lane support, order-to-vehicle sync across linebusters/menu boards/handhelds, lane-level dashboards, headsets + cameras + cloud software stack",
+      "why_it_matters": "Source: https://www.globalpayments.com/en-gb/point-of-sale/enterprise/drive-thru"
+    },
+    {
+      "category": "Kitchen Drive Thru",
+      "point": "Integrated with POS/KDS/menu boards; in scope for CKE",
+      "why_it_matters": "Source: https://investors.globalpayments.com/news-events/press-releases/detail/508/global-payments-announces-exclusive-agreement-with-cke"
+    },
+    {
+      "category": "Kitchen Drive Thru",
+      "point": "Cortopassi: \"very broad success … drive-through and quick service restaurants\"",
+      "why_it_matters": "Source: https://www.fool.com/earnings/call-transcripts/2026/05/06/global-payments-gpn-q1-2026-earnings-transcript/"
+    }
+  ],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "2020 bankruptcy history"
+    }
+  ]
+}

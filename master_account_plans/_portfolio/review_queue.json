@@ -1,0 +1,17 @@
+{
+  "pending_reviews": [
+    {
+      "vendor_slug": "worldpay",
+      "account_id": "DEL TACO LLC",
+      "kind": "score_review_suggested",
+      "evidence_id": "sig-2019-09-10-brand-del-taco-vendor-relationship-formed",
+      "reason": "New material signal (vendor_relationship_formed): Del Taco Partners With Postmates To Bring Mexican And American Favorites Directly To Your Door - PR Newswire. Del Taco Partners With Postmates To Bring Mexican And American Favorites Directly To Your ",
+      "current_score": 83.00000000000001,
+      "current_tier": "Tier 2",
+      "status": "rejected",
+      "queued_at": "2026-09-02T15:10:18Z",
+      "resolved_at": "2026-09-08T14:59:58Z",
+      "resolution_reason": "Reviewed and rejected 2026-09-08: underlying signal is a 2019-09-10 Del Taco/Postmates delivery-partnership PR item (strategic_relevance_score 0.3, tagged only to brand-del-taco), not a payments-relevant vendor signal. Only surfaced as a 2026-09-02 review item because that is when the signal was captured into ecosystem_intelligence.json, not when the underlying event happened -- captured_at vs event_at recency confusion, not a real new development on the Worldpay/Del Taco relationship."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "account_id": "acct-subway",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-11T16:13:49Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-11",
+      "path": "customers_prospects/accounts/subway/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-15T13:22:59Z",
+      "generated_for": "",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-15",
+      "path": "customers_prospects/accounts/subway/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-15T14:18:03Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-15",
+      "path": "customers_prospects/accounts/subway/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-09-25T16:12:10Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-25",
+      "path": "customers_prospects/accounts/subway/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 5,
+      "generated_at": "2026-09-29T09:19:05Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-29",
+      "path": "customers_prospects/accounts/subway/briefs/current/Background_Brief.md",
+      "superseded": false
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "competitor_id": "comp-restroworks",
+  "competitor_slug": "restroworks",
+  "display_name": "Restroworks",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [
+    "pos",
+    "restaurant_os_platform"
+  ],
+  "positioning_summary": "Restroworks is supported in this pass as a restaurant-technology vendor in: pos, menu management, restaurant os platform.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:46:57Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:57Z",
+  "latest_cos_commentary": {
+    "headline": "Direct Genius portfolio overlap identified.",
+    "genius_exposure": [
+      "pos",
+      "restaurant_os_platform"
+    ],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Validate account-level incumbent and deployment scope before positioning against Genius.",
+    "risk_and_uncertainty": "Evidence quality varies materially across this long-tail batch; unresolved names remain deliberately unclassified rather than guessed.",
+    "priority": "P2",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://www.restroworks.com/restaurant-pos-system/",
+        "title": "Restroworks restaurant technology portfolio",
+        "publisher": "Restroworks",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 77,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership beyond founders",
+        "pricing model",
+        "financial health/funding status"
+      ]
+    }
+  },
+  "canonical_company_name": "Restroworks",
+  "website": "https://www.restroworks.com/restaurant-pos-system/",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://www.restroworks.com/restaurant-pos-system/",
+        "title": "Restroworks restaurant technology portfolio",
+        "publisher": "Restroworks",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "product_line_competitor",
+  "restaurant_tech_categories": [
+    {
+      "category": "pos",
+      "basis": "Current evidence supports pos as a restaurant-facing category for Restroworks.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.restroworks.com/restaurant-pos-system/",
+          "title": "Restroworks restaurant technology portfolio",
+          "publisher": "Restroworks",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "menu_management",
+      "basis": "Current evidence supports menu management as a restaurant-facing category for Restroworks.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.restroworks.com/restaurant-pos-system/",
+          "title": "Restroworks restaurant technology portfolio",
+          "publisher": "Restroworks",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "restaurant_os_platform",
+      "basis": "Current evidence supports restaurant os platform as a restaurant-facing category for Restroworks.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.restroworks.com/restaurant-pos-system/",
+          "title": "Restroworks restaurant technology portfolio",
+          "publisher": "Restroworks",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "Restroworks Restaurant POS (pos, menu_management, restaurant_os_platform)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.restroworks.com/restaurant-pos-system/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Vendor has current restaurant-specific product evidence in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.restroworks.com/restaurant-pos-system/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "A 2024 App Store reviewer praised Cockpit's real-time analytics and detailed but understandable operational insights, while another 2024 review described the newer version as faster and richer than the earlier application.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://apps.apple.com/in/app/cockpit-by-restroworks/id1082127795",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Apple App Store reviewers",
+      "source_type": "independent app marketplace",
+      "published_at": "2024-10-17",
+      "deployment_scope": "Cockpit mobile analytics app",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Approximately 30–35% confidence. Small self-selected sample, but materially newer than the 2020 complaint."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated product evidence does not by itself establish ROI, reliability, implementation quality, or systemwide customer adoption; independent validation remains a research gap.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.restroworks.com/restaurant-pos-system/",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [],
+  "product_lineage": [
+    {
+      "value": "Restroworks currently presents an enterprise restaurant-management platform spanning POS, inventory management, kitchen automation, self-ordering kiosks and analytics.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.linkedin.com/company/restroworks-technologies",
+      "finding_type": "vendor_stated",
+      "source_owner": "Restroworks",
+      "source_type": "vendor-controlled company profile",
+      "deployment_scope": "QSR, fine dining, casual dining and cafes across multiple global markets",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "The Restroworks homepage exposes back-of-house families for Inventory Management, Supply Chain Management, Delivery Management and Base Kitchen.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.restroworks.com/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Restroworks",
+      "source_type": "vendor primary homepage",
+      "deployment_scope": "Restaurant back-of-house and multi-site operations",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Restroworks announced RestroNext CX Suite on March 21, 2025 as a guest-experience product-family expansion.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.restroworks.com/news/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Restroworks",
+      "source_type": "vendor primary newsroom",
+      "published_at": "2025-03-21",
+      "deployment_scope": "Restaurant guest experience",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Restroworks is the post-2024 brand identity for Posist, while current company material still exposes Posist as a product/legacy identity.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.restroworks.com/news/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Restroworks",
+      "source_type": "vendor primary newsroom",
+      "published_at": "2024-04-10",
+      "deployment_scope": "Corporate/platform brand lineage",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "The rebrand is company-announced; current LinkedIn still lists Posist, demonstrating legacy overlap."
+    },
+    {
+      "value": "Apple lists the developer of Cockpit By Restroworks as Posist Technologies Pvt. Ltd., independently corroborating the Restroworks/Posist lineage at the app-distribution layer.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://apps.apple.com/in/app/cockpit-by-restroworks/id1082127795",
+      "finding_type": "independently_verified",
+      "source_owner": "Apple App Store",
+      "source_type": "independent app marketplace",
+      "deployment_scope": "Restroworks Cockpit mobile analytics app",
+      "is_vendor_claim": false,
+      "is_inference": false
+    }
+  ],
+  "negative_findings": [],
+  "conflicts_notes": [],
+  "category_assessment_status": "researched",
+  "category_assessment_packet_id": "rbb-competitor-category-gapfill-20260929-batches02-04",
+  "category_assessed_at": "2026-09-29",
+  "weaknesses": [
+    {
+      "value": "A 2020 App Store reviewer reported that some Cockpit functions did not support iPhone X and newer devices and that the calendar did not work properly.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://apps.apple.com/in/app/cockpit-by-restroworks/id1082127795",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Apple App Store reviewer",
+      "source_type": "independent app marketplace",
+      "published_at": "2020-10-07",
+      "deployment_scope": "Cockpit iOS app",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Approximately 25–30% confidence. Old single review and likely stale after subsequent releases."
+    }
+  ]
+}

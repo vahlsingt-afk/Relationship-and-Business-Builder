@@ -1,0 +1,155 @@
+{
+  "brand_id": "brand-boiling-crab",
+  "brand_name": "Boiling Crab",
+  "identity": {
+    "parent_ownership": {
+      "value": "The Boiling Crab organization",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "hq_city_state": {
+      "value": "Southern California, USA",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "founded_year": {
+      "value": "2004",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "market_identity": {
+      "value": "Cajun seafood boil casual dining",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "ownership_type": {
+      "value": "Private — founder/family-led",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "operating_structure": {
+      "value": "Canonical pack does not populate a reliable company/franchise ownership split for this brand.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "conflicts_notes": {
+      "value": "Canonical company/franchise split is not populated; do not infer it from total locations.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    }
+  },
+  "synopsis": {
+    "value": "Boiling Crab is a cajun seafood boil casual dining brand. Its ownership maps to The Boiling Crab organization. Canonical pack does not populate a reliable company/franchise ownership split for this brand. The company/franchise operating split remains qualified and should not be inferred without stronger evidence. For RBB, account planning should map the actual decision center for POS, payments and restaurant technology and test opportunities against labor impact, throughput, guest experience, reliability and measurable restaurant-level ROI.",
+    "status": "reported",
+    "evidence_ids": [
+      "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+    ],
+    "confidence": "medium",
+    "as_of": "2026-09-29",
+    "scope": "brand",
+    "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": 26.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchised_units": {
+      "value": 15.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "company_owned_units": {
+      "value": 11.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [],
+  "pain_points": [],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-29T10:38:37Z",
+  "updated_at": "2026-09-29T10:39:32Z",
+  "trajectory": {
+    "badge": "Growing",
+    "metric_used": "unit_delta_pct",
+    "value_pct": 8.333333333333332,
+    "as_of_year": "2024",
+    "underlying": {
+      "system_sales_usd": 167700000.0,
+      "unit_count": 26.0,
+      "auv_usd": 6710000.0,
+      "sales_delta_pct": 9.53625081645983,
+      "units_delta_pct": 8.333333333333332
+    },
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

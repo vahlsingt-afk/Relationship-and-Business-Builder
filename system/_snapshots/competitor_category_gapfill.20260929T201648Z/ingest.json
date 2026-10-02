@@ -1,0 +1,58 @@
+{
+  "competitor_id": "comp-ingest",
+  "competitor_slug": "ingest",
+  "display_name": "Ingest",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:09Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:33Z",
+  "latest_cos_commentary": {
+    "headline": "Ingest is a small, New Orleans-based restaurant back-office/BI platform that unifies POS, inventory, vendor, and reservation data into one reporting layer.",
+    "genius_exposure": "Overlaps with Genius's back_office reporting/analytics ambitions; does not compete on POS or payments directly, instead sitting as a data-aggregation layer across whatever POS an operator already runs.",
+    "competitive_timing": "Small-scale (~$6.3M total raised); no major funding or customer announcements found as of research date.",
+    "sales_response": "When a prospect mentions Ingest, clarify whether they're using it purely for cross-system reporting versus considering it as a broader operations platform — its scope is narrower than a full back-office suite like Restaurant365.",
+    "risk_and_uncertainty": "No named restaurant customers, leadership names, or current pricing were found in sourceable material; company scale and market traction are largely unverified beyond aggregator-reported funding totals.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 51
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 51,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Named Customers",
+        "Pricing signals",
+        "Snapshot",
+        "Strengths",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "named restaurant customer scope",
+        "current pricing",
+        "operator ROI evidence"
+      ]
+    }
+  }
+}

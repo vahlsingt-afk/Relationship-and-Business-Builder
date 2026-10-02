@@ -1,0 +1,71 @@
+{
+  "file_id": "cap-4300bb10252dd1a5",
+  "queued_at": "2026-09-21T09:23:08+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-20_1906_candidate-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-20_1906_candidate-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260920-1906-candidate-validation`\n- Research system: `Codex web research`\n- Started at: `2026-09-20 19:06 CDT`\n- Completed at: `2026-09-20 19:09 CDT`\n- Research scope: Four unresolved candidate pages for Chipotle Mexican Grill and Burger King\n- Queue item or vendor: Thanx and Restaurant365 candidate-page validation\n- Methodology: Direct retrieval and page-level validation of vendor-hosted source pages\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 1\n- Conflicts found: 1 source-internal scope discrepancy\n- Material takeaway: Restaurant365 documents a completed GPS Hospitality rollout to roughly 400 Burger King restaurants, covering forecasting, labor, food variance, ordering, invoicing, scheduling, and reporting. The deployment is franchisee-scoped, not Burger King corporate or brand-wide. The Thanx-hosted Chipotle podcast does not assert that Chipotle uses Thanx.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: Burger King\n- Vendor: Restaurant365\n- Product or category: Restaurant back-office platform: forecasting, labor and scheduling, food variance, electronic ordering and invoicing, operational reporting, and partner integrations\n- Relationship indication: `customer`\n- Deployment scope: `franchisee`\n- Evidence type: `case study`\n- Confidence: `95%`\n- Confidence rationale: Restaurant365's direct case study names GPS Hospitality, describes the prior RTI system and parallel pilot, quotes GPS's VP of Operations Support, specifies the deployed workflows, and says the rollout reached roughly 400 Burger King stores in four weeks. Two additional Restaurant365 pages independently identify Burger King franchisee users and quote the same GPS executive. The evidence does not establish a Burger King corporate selection or every-location deployment.\n- Source title: How GPS Hospitality Rolled Out R365 to 400 Burger King Locations in One Month\n- Source URL: https://www.restaurant365.com/case-studies/how-gps-hospitality-rolled-out-r365-to-400-burger-kings-in-one-month/\n- Publisher or source owner: Restaurant365\n- Published date, if known: 2026-04-28; page metadata says modified 2026-08-26\n- Accessed date: `2026-09-20`\n- Exact supporting excerpt or faithful factual note: Restaurant365 says GPS tested R365 alongside RTI, then deployed it to roughly 400 Burger King restaurants in four weeks using remote training. The page attributes the selection to R365's willingness to support GPS's precise forecasting and labor requirements.\n- Product-specific evidence: Custom 15-minute forecasting and labor matrices; food-variance reporting; electronic ordering and invoicing; accounting and payroll partner connections; cash, punch-change, and menu reports; forecasting, scheduling, and ordering workflows.\n- Conflicting or limiting evidence: Franchisee scope only. The page's metadata description says nearly 400 locations across eight states, while the body says nearly 400 Burger King locations across 12 states. The headline rounds the count to 400, while the body repeatedly says roughly or nearly 400. A January 2025 marketing page describes GPS as a 500+ unit multi-concept operator, so that larger number cannot be treated as Burger King-only.\n- Recommended follow-up: Seek a GPS Hospitality or Burger King source confirming the current exact Burger King location count and state footprint; retain the relationship as a GPS franchisee deployment rather than a Burger King enterprise standard.\n\n### Observation 2\n\n- Brand: Burger King\n- Vendor: Restaurant365\n- Product or category: Accounting, store operations, workforce management, inventory, forecasting, labor, and reporting\n- Relationship indication: `customer`\n- Deployment scope: `franchisee`\n- Evidence type: `other`\n- Confidence: `70%`\n- Confidence rationale: Restaurant365's Burger King landing page says franchisee owners use the platform and includes anonymized 70-unit and 21-unit franchisee examples. Its later marketing article names GPS Hospitality and quotes a GPS operations executive. This supports franchisee use but does not independently identify the two anonymized operators or prove a brand-wide relationship.\n- Source title: R365 Gives Burger King Franchisees the Royal Treatment; How R365 Helps BK Franchisees Save 10+ Hours Per Week\n- Source URL: https://www.restaurant365.com/blog/r365-gives-burger-king-franchisees-the-royal-treatment/\n- Publisher or source owner: Restaurant365\n- Published date, if known: 2023-11-01; page metadata says modified 2026-04-16\n- Accessed date: `2026-09-20`\n- Exact supporting excerpt or faithful factual note: The 2023 page describes Burger King franchisee use and anonymized 70-unit and 21-unit deployments. The 2025 page says Restaurant365 provides Burger King franchisees with automated AP, real-time P&L reporting, predictive forecasting, labor and financial information, and quotes GPS Hospitality on 15-minute forecasting.\n- Product-specific evidence: Accounting, store operations, workforce management, inventory, automated AP, real-time P&L reporting, predictive forecasting, labor information, and centralized reporting.\n- Conflicting or limiting evidence: Two operators are anonymous, and much of both pages is marketing copy. The stated savings and usage claims are vendor-reported. The 500+ unit GPS figure is multi-concept, not a Burger King-only count.\n- Recommended follow-up: Identify the anonymized 70-unit and 21-unit Burger King franchisees before creating separate operator-level relationships.\n\n## Negative findings\n\n- Candidate or claim: Chipotle Mexican Grill uses Thanx for loyalty, CRM, or digital ordering.\n- Pages checked: https://www.thanx.com/food-fighters-podcast/tressie-lieberman-vp-digital-off-premise-chipotle-mexican-grill\n- Result: The page is a Thanx-hosted interview with a Chipotle executive about Chipotle's own digital, loyalty, CRM, ordering, delivery, and operational work. It does not say Chipotle uses Thanx. A host reference to concepts Thanx also discusses is not a customer assertion. The page should remain a negative candidate result.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://www.thanx.com/food-fighters-podcast/tressie-lieberman-vp-digital-off-premise-chipotle-mexican-grill | Podcast transcript | 2026-09-20 | No | Vendor-hosted interview; no Thanx customer claim. Page migration markup is dated 2026, while the interview content is clearly pandemic-era; original publication date is not established. |\n| https://www.restaurant365.com/case-studies/how-gps-hospitality-rolled-out-r365-to-400-burger-kings-in-one-month/ | Case study | 2026-09-20 | Observation 1 | Strong direct evidence for a completed GPS Hospitality franchisee rollout. Internal eight-state versus 12-state discrepancy retained. |\n| https://www.restaurant365.com/blog/r365-gives-burger-king-franchisees-the-royal-treatment/ | Product/customer marketing page | 2026-09-20 | Observation 2 | Supports Burger King franchisee use but two example operators are unnamed. |\n| https://www.restaurant365.com/blog/how-r365-helps-burger-king-franchisees-save-10-hours-per-week/ | Product/customer marketing page | 2026-09-20 | Observations 1 and 2 | Names GPS Hospitality and gives product detail; 500+ units are explicitly multi-concept. |\n\n## Research notes and inferences\n\n- Inference: Restaurant365 has meaningful adoption among Burger King franchisees, but these sources do not prove endorsement, procurement, or deployment by Burger King corporate.\n- Inference: The roughly 400-store GPS rollout is material marketplace evidence even though exact location and state counts vary within the vendor's own page.\n- No finding in this packet should be written directly to canonical account records without the normal RB review step.",
+  "word_count": 1025,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-21T09:23:31+00:00",
+  "processing_result": {
+    "triage_stream_count": 5,
+    "noise_only": false,
+    "persisted_count": 5,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-012",
+        "intelligence_type": "career_pipeline_update",
+        "extracted_summary": "Career/opportunity pipeline signal detected: 1 trigger(s): interview with. Detected stage: interviewing."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-013",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'franchisee'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-014",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-015",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Chipotle, Burger King, Restaurant365, Thanx. Macro/industry signal detected: 16 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: back office, crm, customer, deployment, "
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-016",
+        "intelligence_type": "strategic_memory",
+        "extracted_summary": "Strategic memory / thesis signal detected: 1 trigger(s): this supports."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [
+        "Tressie Lieberman"
+      ],
+      "companies_mentioned": [
+        "Chipotle Mexican Grill",
+        "Burger King",
+        "Restaurant365",
+        "Thanx",
+        "GPS Hospitality"
+      ],
+      "topics": [
+        "Candidate page validation",
+        "Restaurant365 deployment at Burger King",
+        "Chipotle and Thanx relationship"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Seek a GPS Hospitality or Burger King source confirming the current exact Burger King location count and state footprint",
+        "Identify the anonymized 70-unit and 21-unit Burger King franchisees before creating separate operator-level relationships"
+      ],
+      "why_it_matters": "The findings indicate significant deployment of Restaurant365 among Burger King franchisees, which could impact operational efficiencies."
+    }
+  }
+}

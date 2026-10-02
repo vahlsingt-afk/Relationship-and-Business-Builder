@@ -1,0 +1,83 @@
+{
+  "vendor_slug": "worldpay",
+  "display_name": "Worldpay",
+  "vendor_entity_id": "vendor-worldpay",
+  "last_evidence_date": "2026-09-30",
+  "last_ingested_at": "2026-09-30T15:06:24Z",
+  "dashboard": {
+    "total_accounts": 115,
+    "scored_portfolio": 30,
+    "supplemental": 85,
+    "a_priority_additions": 18
+  },
+  "scoring_model": [
+    {
+      "dimension": "Strategic Value",
+      "weight": 0.2,
+      "1_low": "Small/low leverage",
+      "3_medium": "Meaningful footprint",
+      "5_high": "Transformational scale",
+      "interpretation": "Account size, tier, franchise leverage"
+    },
+    {
+      "dimension": "Active Buying Trigger",
+      "weight": 0.2,
+      "1_low": "No trigger",
+      "3_medium": "Research/discovery signal",
+      "5_high": "Active decision or internal lead",
+      "interpretation": "Time-sensitive commercial motion"
+    },
+    {
+      "dimension": "Relationship / Access",
+      "weight": 0.15,
+      "1_low": "No path",
+      "3_medium": "Named RM/internal route",
+      "5_high": "Active customer access",
+      "interpretation": "Ability to influence outcome"
+    },
+    {
+      "dimension": "Incumbent Lifecycle",
+      "weight": 0.15,
+      "1_low": "New/locked",
+      "3_medium": "Established or unclear",
+      "5_high": "Decision window/aging",
+      "interpretation": "Switchability, not just age"
+    },
+    {
+      "dimension": "Deployment Health",
+      "weight": 0.1,
+      "1_low": "Healthy/positive",
+      "3_medium": "Unknown/mixed",
+      "5_high": "Material issue reported",
+      "interpretation": "Crack signal or implementation need"
+    },
+    {
+      "dimension": "Adjacent Whitespace",
+      "weight": 0.15,
+      "1_low": "Stack entrenched",
+      "3_medium": "Some gaps",
+      "5_high": "Many verified/qualifiable gaps",
+      "interpretation": "Unknown is not automatically whitespace"
+    },
+    {
+      "dimension": "Internal Coordination",
+      "weight": 0.05,
+      "1_low": "Simple",
+      "3_medium": "Several owners",
+      "5_high": "Urgent cross-team alignment",
+      "interpretation": "Need to merge leads/owners/actions"
+    },
+    {
+      "dimension": "Formula"
+    },
+    {
+      "dimension": "Total Score",
+      "weight": "SUM of each (dimension score ÷ 5 × dimension weight)"
+    },
+    {
+      "dimension": "Priority Bands",
+      "weight": "P1 ≥ 78 | P2 65–77.9 | P3 < 65"
+    }
+  ],
+  "source_workbook_filename": "Worldpay_Master_Account_Plan_2026-09-30.xlsx"
+}

@@ -1,0 +1,20 @@
+{
+  "file_id": "cap-5cb02578df5a9344",
+  "queued_at": "2026-07-01T12:22:37+00:00",
+  "source_id": "just_press_record",
+  "source_label": "Just Press Record",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-01/05-58-34.m4a",
+  "capture_type": "meeting",
+  "title_hint": "Just Press Record \u2014 2026-07-01 05-58-34",
+  "transcription_method": "whisper_local",
+  "transcript": "This is a test for the RB system. I spoke with Jeff Waman yesterday and talked about the industry, the restaurant industry and starting with global payments. So Jeff is definitely a good guy, a great contact. He's also looking so if there's any way we can help him for, you know, introductions to potential new jobs or roles within the industry, we should do that.",
+  "word_count": 66,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-07-01T14:06:15+00:00",
+  "processing_result": {
+    "triage_stream_count": 0,
+    "triage_type_count": 3,
+    "noise_only": false
+  }
+}

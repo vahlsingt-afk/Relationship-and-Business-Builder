@@ -1,0 +1,51 @@
+{
+  "title": "Default daily brief now relationship-led but still missing grounding and ignore sections",
+  "trace_type": "daily_brief_default_behavior_progress",
+  "source": "chatgpt_relationship_bridge_9_0",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-19",
+  "session_id": "rb-default-daily-brief-third-test-2026-05-19",
+  "summary": "User tested the bare/default prompt 'Show me my daily briefing.' The response was much closer to canonical RB: it led with active threads, overdue loops, weekly follow-ups, relationship risks, warm clusters, DRR scores, calendar, feed-health warning, and suggested leverage moves. It did not drift into generic industry news. Remaining gaps: no visible grounding labels, no explicit what-to-ignore section, no reconciliation prompts, no source-refresh commands, and limited explicit separation of system-detected vs stored-state vs stale-source-limited claims.",
+  "observed_issue": "Default daily brief now appears relationship-led and operational, but still misses several canonical CoS contract elements.",
+  "steps": [
+    {
+      "step": 1,
+      "label": "User requested default daily briefing after Action remount",
+      "timestamp": "2026-05-19",
+      "user_prompt": "Show me my daily briefing.",
+      "assistant_response": "Generated Daily Brief \u2014 Tuesday, May 19, 2026. Sections included Highest-priority active threads (Genius/Global Payments, Patrick Nelson, Ish Singh/Maho), Overdue loops, This week's key follow-ups, Relationship risk/dormant relationships, Warm clusters currently alive, Strongest current DRR scores, Upcoming calendar, Feed health warning, and Suggested leverage move today.",
+      "intended_operation": "Render canonical RB CoS daily brief by default.",
+      "endpoint": "getDailyBrief",
+      "response_status": 200,
+      "response_summary": "Response was operational and relationship-led, using stored thread/loop/DRR/calendar/feed state. It avoided generic industry/news drift.",
+      "mutation_confirmation": "No mutation expected; read-only daily brief test.",
+      "post_validation": "User supplied full output for Codex assessment.",
+      "observed_issue": "Improved default behavior, still missing grounding labels/what-to-ignore/reconciliation prompts."
+    }
+  ],
+  "defects": [
+    {
+      "id": "DB-GROUNDING-DEFAULT-003",
+      "title": "Grounding labels absent from improved default daily brief",
+      "severity": "medium",
+      "description": "The response did not visibly label priorities as system_detected, inferred, manual_user_provided, or stale_source_limited. It did mention feed staleness and stored-state reliance, but not as structured labels per item.",
+      "recommendation": "Make grounding labels part of the API-rendered canonical daily brief sections so the GPT cannot omit them."
+    },
+    {
+      "id": "DB-WHAT-TO-IGNORE-DEFAULT-001",
+      "title": "Default daily brief missing explicit what-to-ignore section",
+      "severity": "medium",
+      "description": "The canonical brief should include suppressed/noise items and restraint guidance. The improved response did not include a 'What to ignore' section.",
+      "recommendation": "Add what_to_ignore to the canonical rendered daily brief and require it before any optional industry context."
+    },
+    {
+      "id": "DB-RECONCILIATION-DEFAULT-001",
+      "title": "Default daily brief missing reconciliation prompts",
+      "severity": "medium",
+      "description": "The response surfaced stale feeds and unmapped calendar attendees, but did not convert them into micro-reconciliation prompts or source-refresh commands.",
+      "recommendation": "Render reconciliation prompts explicitly, including source refresh actions and narrow user questions for unmapped attendees or stale state."
+    }
+  ],
+  "raw_text": "Third default daily brief test is much improved: no generic industry news; active threads, loops, DRR, calendar, feed health, and leverage moves are foregrounded. It includes a feed-health warning and says the brief is operating mostly from stored thread/loop state rather than fresh inbound signals. Remaining canonical gaps: grounding labels, what-to-ignore, reconciliation prompts, explicit source-refresh commands, and per-item freshness/confidence.",
+  "trace_id": "T-2026-05-19-004"
+}

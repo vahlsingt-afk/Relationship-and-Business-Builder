@@ -1,0 +1,54 @@
+{
+  "competitor_id": "comp-decision-logic",
+  "competitor_slug": "decision-logic",
+  "display_name": "Decision Logic",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:33Z",
+  "latest_cos_commentary": {
+    "headline": "Decision Logic is a back-office restaurant management platform (inventory, labor, food cost, reporting) that just entered a POS integration partnership with CBS NorthStar in August 2026.",
+    "genius_exposure": "Competes with Genius's back_office product line directly; does not itself offer POS or payments, and its new CBS NorthStar partnership positions it as a back-office layer sitting on top of a third-party POS rather than a full-stack competitor.",
+    "competitive_timing": "The CBS NorthStar integration (announced August 18, 2026) is the most current, sourceable development and suggests Decision Logic is actively expanding POS-agnostic reach through partnerships rather than building its own POS.",
+    "sales_response": "Where Decision Logic is present at an account, it signals a back-office/analytics need rather than direct POS displacement -- worth understanding whether the account's POS is already integrated with it (e.g., via the new CBS NorthStar partnership) before framing a back-office conversation.",
+    "risk_and_uncertainty": "Leadership appears to have changed between an undated (~2021) case study and the 2026 announcement (different named CEO); financial health, pricing, and true customer count are not independently sourced.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 47
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 47,
+    "pack_claim_count": 5,
+    "pack_claims_with_url": 5,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Pricing signals",
+        "Weaknesses / Vulnerabilities (independent)",
+        "Financial / Market Health"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "No independent financial/funding data found",
+        "No pricing model found",
+        "Aviture case study is undated (approx. 2021 based on internal timeline references) and should be re-verified for current accuracy"
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "graph-review-preview",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd '.tmp_preview' && python3 -m http.server 8934"],
+      "port": 8934
+    },
+    {
+      "name": "team-portal",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "uvicorn", "system.api.team_portal_api:app", "--host", "127.0.0.1", "--port", "8767"],
+      "port": 8767
+    },
+    {
+      "name": "team-portal-dev",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "uvicorn", "system.api.team_portal_api:app", "--host", "127.0.0.1", "--port", "8768", "--loop", "asyncio", "--http", "h11"],
+      "port": 8768
+    }
+  ]
+}

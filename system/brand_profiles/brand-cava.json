@@ -1,0 +1,332 @@
+{
+  "brand_id": "brand-cava",
+  "brand_name": "Cava",
+  "identity": {
+    "parent_ownership": {
+      "value": "CAVA Group, Inc.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "hq_city_state": {
+      "value": "Washington, D.C., USA",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "founded_year": {
+      "value": "2011",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "market_identity": {
+      "value": "Mediterranean fast casual",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "ownership_type": {
+      "value": "Public — NYSE: CAVA",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "operating_structure": {
+      "value": "367 units in canonical pack: 367 company-owned / 0 franchisee-owned.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    }
+  },
+  "synopsis": {
+    "value": "Cava is a mediterranean fast casual brand. It sits within CAVA Group, Inc., so parent-level enterprise architecture, procurement and technology relationships are material to account strategy. The canonical estate is fully company-operated, so successful technology can be deployed centrally without franchise governance. For RBB, prioritize the operating workflows, payments/digital experience, labor impact, reliability and measurable restaurant-level ROI appropriate to the concept.",
+    "status": "reported",
+    "evidence_ids": [
+      "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+    ],
+    "confidence": "high",
+    "as_of": "2026-09-29",
+    "scope": "brand",
+    "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": 367.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchised_units": {
+      "value": 0.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "company_owned_units": {
+      "value": 367.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [
+    {
+      "signal_type": "other",
+      "value": "8-K  - Current report",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-03",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1639438/000162828026051556/0001628280-26-051556-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] CAVA Group, Inc. (CAVA) ↑4.3% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-05",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] CAVA Group, Inc. (CAVA) ↓6.0% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-06",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "financial_health",
+      "value": "8-K  - Current report",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-11",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1639438/000162828026055709/0001628280-26-055709-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📊 VOLUME SPIKE] CAVA Group, Inc. (CAVA) 1.9x normal volume — elevated activity",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-11",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] CAVA Group, Inc. (CAVA) ↑14.2% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-12",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📊 VOLUME SPIKE] CAVA Group, Inc. (CAVA) 3.2x normal volume — elevated activity",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-12",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] CAVA Group, Inc. (CAVA) ↑3.1% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-14",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] CAVA Group, Inc. (CAVA) ↓3.9% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-18",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] CAVA Group, Inc. (CAVA) ↑4.9% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-19",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] CAVA Group, Inc. (CAVA) ↓3.7% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-25",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] CAVA Group, Inc. (CAVA) ↓7.1% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-01",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] CAVA Group, Inc. (CAVA) ↓4.4% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-10",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] CAVA Group, Inc. (CAVA) ↑3.5% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-11",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] CAVA Group, Inc. (CAVA) ↓8.9% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-15",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📊 VOLUME SPIKE] CAVA Group, Inc. (CAVA) 2.9x normal volume — elevated activity",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-15",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] CAVA Group, Inc. (CAVA) ↑3.0% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "visibility": "team_shareable",
+      "source_url": "https://finance.yahoo.com/quote/CAVA"
+    }
+  ],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-25T21:08:00Z",
+  "updated_at": "2026-09-30T11:57:59Z",
+  "trajectory": {
+    "badge": "Growing",
+    "metric_used": "unit_delta_pct",
+    "value_pct": 18.77022653721683,
+    "as_of_year": "2024",
+    "underlying": {
+      "system_sales_usd": 954273000.0,
+      "unit_count": 367.0,
+      "auv_usd": 2865000.0,
+      "sales_delta_pct": 33.08133210609991,
+      "units_delta_pct": 18.77022653721683
+    },
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-22T05:32:26-05:00",
+  "account_id": "global-payments",
+  "source": "outlook_computer_use",
+  "window_days": 7,
+  "inbox": [
+    {
+      "counterpart_name": "Nicholas Hulayew",
+      "counterpart_email": null,
+      "subject": "Nicholas Hulayew mentioned you in \"Subway RFP - Global Payments Executive Summary\".",
+      "received_at": "2026-09-21",
+      "unread": false
+    },
+    {
+      "counterpart_name": "SharePoint Online",
+      "counterpart_email": null,
+      "subject": "Dale McKee mentioned you in \"Subway RFP - Global Payments Executive Summary\".",
+      "received_at": "2026-09-21",
+      "unread": false
+    },
+    {
+      "counterpart_name": "globalpayments@workhuman.com",
+      "counterpart_email": "globalpayments@workhuman.com",
+      "subject": "Your Bravo+ Thank You Award from Zakary Bertram",
+      "received_at": "2026-09-21",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Dale McKee",
+      "counterpart_email": null,
+      "subject": "Dale McKee replied to a comment in \"Subway RFP - Global Payments Executive Summary\"",
+      "received_at": "2026-09-21",
+      "unread": false
+    },
+    {
+      "counterpart_name": "SharePoint Online",
+      "counterpart_email": null,
+      "subject": "Nicholas Hulayew replied to a comment in \"Subway RFP - Global Payments Executive Summary\"",
+      "received_at": "2026-09-21",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Nicholas Hulayew",
+      "counterpart_email": null,
+      "subject": "Nicholas Hulayew replied to a comment in \"Subway RFP - Global Payments Executive Summary\"",
+      "received_at": "2026-09-21",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Michael Schwartz",
+      "counterpart_email": null,
+      "subject": "Fw: Division of Responsibilities Reference for Monday\u2019s Discussion",
+      "received_at": "2026-09-21",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Michael Morris",
+      "counterpart_email": null,
+      "subject": "Re: Spencertech/Genius Subway RFP",
+      "received_at": "2026-09-21",
+      "unread": false,
+      "occurrence": 1
+    },
+    {
+      "counterpart_name": "Nicholas Hulayew",
+      "counterpart_email": null,
+      "subject": "Re: Spencertech/Genius Subway RFP",
+      "received_at": "2026-09-21",
+      "unread": false,
+      "occurrence": 1
+    },
+    {
+      "counterpart_name": "Ryan Hildebrand in Teams",
+      "counterpart_email": null,
+      "subject": "Ryan Hildebrand sent a message",
+      "received_at": "2026-09-21",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Nicholas Hulayew",
+      "counterpart_email": null,
+      "subject": "Re: Spencertech/Genius Subway RFP",
+      "received_at": "2026-09-21",
+      "unread": false,
+      "occurrence": 2
+    },
+    {
+      "counterpart_name": "noreply",
+      "counterpart_email": null,
+      "subject": "Your password will expire in 14 days.",
+      "received_at": "2026-09-21",
+      "unread": false
+    }
+  ],
+  "sent": [
+    {
+      "counterpart_name": "Michael Morris",
+      "counterpart_email": null,
+      "subject": "Accepted: Subway RFP - Genius and Spencer",
+      "sent_at": "2026-09-22T05:23:00-05:00"
+    },
+    {
+      "counterpart_name": "Scott Welvaert",
+      "counterpart_email": null,
+      "subject": "Accepted: Subway RFP - KIOSK & KDS Hardware Work Session (PART 2)",
+      "sent_at": "2026-09-22T05:23:00-05:00"
+    },
+    {
+      "counterpart_name": "Scott Welvaert",
+      "counterpart_email": null,
+      "subject": "Accepted: Subway RFP - KIOSK & KDS Hardware Work Session (PART 2)",
+      "sent_at": "2026-09-21"
+    },
+    {
+      "counterpart_name": "Nicholas Hulayew",
+      "counterpart_email": null,
+      "subject": "Todd Vahlsing replied to a comment in \"Subway RFP - Global Payments Executive Summary\"",
+      "sent_at": "2026-09-21",
+      "occurrence": 1
+    },
+    {
+      "counterpart_name": "Nicholas Hulayew",
+      "counterpart_email": null,
+      "subject": "Todd Vahlsing replied to a comment in \"Subway RFP - Global Payments Executive Summary\"",
+      "sent_at": "2026-09-21",
+      "occurrence": 2
+    },
+    {
+      "counterpart_name": "Scott Welvaert",
+      "counterpart_email": null,
+      "subject": "Todd Vahlsing left a comment in \"Subway RFP - Global Payments Executive Summary\"",
+      "sent_at": "2026-09-21"
+    },
+    {
+      "counterpart_name": "Michael Schwartz, Michael Estabrooks, Ryan Hildebrand",
+      "counterpart_email": null,
+      "subject": "Re: Division of Responsibilities Reference for Monday\u2019s Discussion",
+      "sent_at": "2026-09-21"
+    },
+    {
+      "counterpart_name": "Nicholas Hulayew",
+      "counterpart_email": null,
+      "subject": "FW: Division of Responsibilities Reference for Monday\u2019s Discussion",
+      "sent_at": "2026-09-21"
+    },
+    {
+      "counterpart_name": "Michael Morris",
+      "counterpart_email": null,
+      "subject": "Accepted: Subway RFP - Genius and Spencer",
+      "sent_at": "2026-09-21"
+    }
+  ],
+  "calendar": [
+    {
+      "title": "Subway RFP - Genius and Spencer",
+      "date": "2026-09-22",
+      "start": "2026-09-22T09:00:00-05:00",
+      "end": "2026-09-22T09:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - KIOSK & KDS Hardware Work Session (PART 2)",
+      "date": "2026-09-22",
+      "start": "2026-09-22T10:30:00-05:00",
+      "end": "2026-09-22T11:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway Consolidated Pricing Working Session",
+      "date": "2026-09-22",
+      "start": "2026-09-22T11:00:00-05:00",
+      "end": "2026-09-22T12:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "WP Backbook Marketing / Sales Alignment",
+      "date": "2026-09-22",
+      "start": "2026-09-22T11:30:00-05:00",
+      "end": "2026-09-22T12:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Global Payments Follow-Up Meeting",
+      "date": "2026-09-22",
+      "start": "2026-09-22T14:00:00-05:00",
+      "end": "2026-09-22T15:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "FS/TEC",
+      "date": "2026-09-23",
+      "start": "2026-09-23",
+      "end": "2026-09-26",
+      "location": null
+    },
+    {
+      "title": "FS/Tec",
+      "date": "2026-09-23",
+      "start": "2026-09-23T05:00:00-05:00",
+      "end": "2026-09-25T17:00:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Flight to Dallas",
+      "date": "2026-09-23",
+      "start": "2026-09-23T07:00:00-05:00",
+      "end": "2026-09-23T10:00:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Thursday)",
+      "date": "2026-09-24",
+      "start": "2026-09-24T09:30:00-05:00",
+      "end": "2026-09-24T10:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Flight Home",
+      "date": "2026-09-25",
+      "start": "2026-09-25T09:00:00-05:00",
+      "end": "2026-09-25T11:30:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Maddie Wedding",
+      "date": "2026-09-26",
+      "start": "2026-09-26T16:00:00-05:00",
+      "end": "2026-09-26T16:30:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Monday)",
+      "date": "2026-09-28",
+      "start": "2026-09-28T11:00:00-05:00",
+      "end": "2026-09-28T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    }
+  ]
+}

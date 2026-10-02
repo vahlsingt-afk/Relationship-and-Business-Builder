@@ -1,0 +1,13 @@
+{
+  "subject_id": "subject-qu--brand-mcdonald-s",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-29T11:53:53Z",
+      "generated_for": "todd",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/qu--brand-mcdonald-s/current/Qu-vs-Genius-McDonalds_Value-Wedge.json",
+      "superseded": false
+    }
+  ]
+}

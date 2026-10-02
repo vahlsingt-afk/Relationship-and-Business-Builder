@@ -1,0 +1,63 @@
+{
+  "competitor_id": "comp-bikky",
+  "competitor_slug": "bikky",
+  "display_name": "Bikky",
+  "aliases": [],
+  "vendor_entity_id": "vendor-bikky",
+  "primary_category": "loyalty",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Integrates with Fiserv and PAR POS, OpenTable, Uber Eats and DoorDash",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:47:20Z"
+      },
+      {
+        "point": "Published results: Eggs Up Grill +11% same-store sales; Groucho's +22% monthly guests (company case studies)",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:20Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:46:58Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:58Z",
+  "latest_cos_commentary": {
+    "headline": "CDP and guest analytics overlap Genius customer insight, rather than functioning as a standalone loyalty engine.",
+    "genius_exposure": "CDP and guest analytics overlap Genius customer insight, rather than functioning as a standalone loyalty engine.",
+    "competitive_timing": "Bikky describes its offering as a restaurant customer data platform combining in-store, loyalty and off-premise guest signals.",
+    "sales_response": "Map guest identity coverage and attribution at named accounts, with consent and data portability in scope.",
+    "risk_and_uncertainty": "Vendor page includes outcome testimonials; they should not be generalized across customers.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 46
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 46,
+    "pack_claim_count": 10,
+    "pack_claims_with_url": 8,
+    "pack_claims_inherited_url": 6,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 2,
+      "legacy_claims_need_date_and_current_status_check": 10,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "competitor_id": "comp-mako-networks",
+  "competitor_slug": "mako-networks",
+  "display_name": "Mako Networks",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Mako Networks markets its underlying platform as PCI DSS-certified in a way that lets merchants inherit that certification directly, which it presents as reducing the complexity/cost of achieving PCI compliance independently — a specific differentiator versus generic network vendors.",
+        "evidence_id": "note-0002",
+        "added_at": "2026-09-29T15:44:12Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:09Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:34Z",
+  "latest_cos_commentary": {
+    "headline": "Mako Networks is a PCI-DSS-focused network/SD-WAN vendor for distributed QSR and convenience-retail locations, not a POS or payments processor itself.",
+    "genius_exposure": "Indirect exposure: sits adjacent to Genius's payments stack as network infrastructure supporting PCI compliance at the store level, rather than competing directly on POS, payments, or loyalty products.",
+    "competitive_timing": "No recent funding, acquisition, or major product-launch news found as of research date.",
+    "sales_response": "Mako Networks is typically a network/connectivity layer underneath a POS and payments stack, not a replacement for either — treat it as complementary infrastructure an operator may already have in place rather than a head-to-head competitor.",
+    "risk_and_uncertainty": "No named restaurant customers, leadership, financials, or headquarters location were confirmed in public sources reviewed.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 57
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 57,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Named Customers",
+        "Pricing signals",
+        "Recent News / Product Updates",
+        "Snapshot",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "named restaurant customer scope",
+        "current pricing",
+        "financial health"
+      ]
+    }
+  }
+}

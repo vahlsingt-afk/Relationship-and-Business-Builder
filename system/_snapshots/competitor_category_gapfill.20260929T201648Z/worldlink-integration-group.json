@@ -1,0 +1,54 @@
+{
+  "competitor_id": "comp-worldlink-integration-group",
+  "competitor_slug": "worldlink-integration-group",
+  "display_name": "Worldlink Integration Group",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:09Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:38Z",
+  "latest_cos_commentary": {
+    "headline": "Worldlink Integration Group is a field-services integrator that handles multi-site POS, signage, and networking equipment rollouts for restaurant and retail chains, rather than a POS/payments software vendor itself.",
+    "genius_exposure": "Does not compete with Genius's pos, payments, or loyalty_engagement software directly; the overlap is in the field-deployment/installation layer that supports rollouts of POS hardware, including hardware that could belong to Genius or its competitors.",
+    "competitive_timing": "Long-established (20+ years) with a stable enterprise deployment client base; no recent funding, acquisition, or leadership news identified in this research pass.",
+    "sales_response": "Treat as a potential implementation/channel partner rather than a head-to-head competitor; useful to know if a prospect already uses Worldlink for store-opening logistics, since that relationship may extend to whichever POS is being installed.",
+    "risk_and_uncertainty": "No ownership, leadership, or financial details were found; all scale claims are vendor-self-reported and unaudited.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 117
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 117,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Pricing signals",
+        "C-Suite & Leadership",
+        "Financial / Market Health"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "leadership/ownership structure",
+        "revenue or financial health signals (privately held, none disclosed)",
+        "confirm whether Worldlink partners with or competes against Genius's own field-services/rollout offering"
+      ]
+    }
+  }
+}

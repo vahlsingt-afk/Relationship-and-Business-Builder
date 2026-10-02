@@ -1,0 +1,13 @@
+{
+  "registry": [
+    {
+      "vendor_slug": "worldpay",
+      "display_name": "Worldpay",
+      "vendor_entity_id": "vendor-worldpay",
+      "workbook_path": "master_account_plans/vendors/worldpay/current/Worldpay_Master_Account_Plan.xlsx",
+      "first_ingested_at": "2026-08-28T13:40:38Z",
+      "last_ingested_at": "2026-09-30T15:06:24Z",
+      "status": "active"
+    }
+  ]
+}

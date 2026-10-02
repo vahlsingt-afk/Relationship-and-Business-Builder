@@ -1,0 +1,75 @@
+{
+  "competitor_id": "comp-compeat",
+  "competitor_slug": "compeat",
+  "display_name": "Compeat",
+  "aliases": [],
+  "vendor_entity_id": "vendor-compeat",
+  "primary_category": "inventory",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-09-29T14:57:13Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:13Z",
+  "latest_cos_commentary": {
+    "headline": "Compeat customers face an announced platform migration and potential back-office re-evaluation.",
+    "genius_exposure": "Compeat customers face an announced platform migration and potential back-office re-evaluation.",
+    "competitive_timing": "Restaurant365 says Compeat Advantage will reach end of life July 1, 2027 and customers will transition to R365.",
+    "sales_response": "Identify Compeat Advantage users and migration dates; quantify data conversion and implementation risk for a Genius Back Office discussion.",
+    "risk_and_uncertainty": "End-of-life announcement does not establish an individual customer migration decision.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 32
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 32,
+    "pack_claim_count": 4,
+    "pack_claims_with_url": 1,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Positioning",
+        "Strengths",
+        "Weaknesses / Vulnerabilities",
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Recent News / Product Updates",
+        "Named Customers"
+      ],
+      "unlinked_pack_claims": 3,
+      "legacy_claims_need_date_and_current_status_check": 4,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

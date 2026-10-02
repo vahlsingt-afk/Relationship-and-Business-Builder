@@ -1,0 +1,49 @@
+{
+  "file_id": "cap-329cc50ba257021b",
+  "queued_at": "2026-07-31T14:44:58+00:00",
+  "source_id": "just_press_record",
+  "source_label": "Just Press Record",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-31/09-29-03.m4a",
+  "capture_type": "meeting",
+  "title_hint": "Just Press Record \u2014 2026-07-31 09-29-03",
+  "transcription_method": "whisper_local",
+  "transcript": "This will be a meeting between the World Pay team, Brian Bailey and Avery Churchwell and myself on the little caesars email that was sent over to us yesterday and just kind of a download and what do we want to do about it? Hey Avery, how are you? Good, how are you? I'm doing great. You're jumping out of plane this afternoon? Yeah, I'm out of the hotel here in 30 minutes. Oh gosh. Headed back home then. Yeah, I was in Snadi meeting with photosazers that came into our head for corporate office here to we were pitching Canadian processing to them. Yeah, so they actually there was a genius set up in the customer experience center and so when we were in the room for a meeting they got by the genius set up and what it was and that's kind of a practice conversation about. That's awesome. That's really awesome. Hey Brian. Brian, how are you doing today? Good. Happy Friday to you both. Thank you. I'm just interested in learning what happened and how you guys want to play it where you look next up and it's cool that it can happen kind of organically so that's that's really nice. Yeah, I was kind of funny. I think it was I don't know why I actually even sent a text of the set up. There's a little genius set up in our client experience center and I sent it to Tracy and like what are you guys doing? You starting a set up shop here or what? No, and it's funny. I went to the restroom and came back and literally two minutes later and and Avery's having a conversation about genius. Like it worked. Yeah, that's amazing. It's a wonderful evening and a nice set up. It looked like crap. Yeah. Well, that's interesting. So part of it was Kiosks in Spain, Avery, what they were talking about. That is a separate conversation that Brian had with their consultants. Yeah, that's incredible. Telling me, yeah, free and paid though, incredibly expensive, specific to Kiosks. And then when I talked to Brian later about that, he mentioned those were predominantly in Spain. Okay. So tell me a little bit more. What are they looking to accomplish or are they just kind of kicking tires and how do you want to play this? I think right now we just want to send them some information. I don't think that they're necessarily ready to start any kind of sales conversations. It sounds like they went down this road with Oracle a year or two ago and it was way too expensive and they're for it to use brands. It's not Brian daily brand from Little Feesers. He said they were burned by that and kind of stopped looking for a one-stop Kiosk solution after the Oracle experience. So I think our best bet is to probably just get them as much information as possible. Maybe suggests we could do a demo, but like not. I would want to do a warm in jail. Yeah. First and foremost, kind of get them the information and just start having those conversations. I think so. Oh, go ahead, Brian. And adding to that real quick, I think what they're looking for is solutions and Brian mentioned from registered to POS to back office and everything in between. But the challenge Brian said multiple times was when he goes into markets like India or like he said Thailand, it's like it's so easy for them to run down the street and get a Casio or something cheap that works. And so prices really ee in those regions. Yep. When you know the guy can know somebody that can rig something up for a hundred bucks, it makes it a big exorbitant to go in with a significant dollar amount tied to these things. So I think he's just wanting some awareness and maybe not necessarily a one-pager, but maybe multiple of here are our products that we offer and then what regions. I don't know if we have a map. I'm sure we do. It kind of shows where we're able to play. Yeah. It would be useful just to be able to hand in that and say, hey, you know, here's kind of what we have from a high level and then see where the conversation goes from there and see if it peaks enough interest for them to pick it back up. Yeah, I don't know that we would want to rush into a demo either. I do think warm intro and just a conversation about what they're looking to accomplish because there's going to be some pain points there that are going to be a little more universal. You know, if everyone's running out to Casio to get a cheap system, they have no visibility over the sales in those regions. So there's going to be some benefit to them to kind of standardizing and unifying if we can deliver it at the right price and if we can bundle it with world pay, you know, then we make ourselves even stickier. So I think, I think, Avery, I think you're exactly right, a warm intro and a conversation with you in the room. I don't want you leaving this. I want you in as the partner on this and let's just kind of explore what they're looking for and take a consulting role rather than a sales were shoving down something to let's find out more about them and then, you know, hopefully that'll lead to a conversation that is more salesy, but I don't want to have a sales conversation off the bat with them. And also just say for your so you're aware with little scissors is they can take about two years to really make any moves with anything too. So this could be something where we're consulting and bringing it up for a while. You know, we've got we there was a product that we were talking to them about yesterday that we've been talking about for three years that what's going to be signed. But you know, now they're saying 2027, right? So it's this is something where we made us need to continue to build that relationship and trust and genius and just keep 100% just so you know, this is almost every enterprise brand we will deal with will be a 12-day teen month and maybe 24 month sales cycle. That doesn't scare me and I'm not looking for the quick when I'm looking for us to build the relationship so that we cement a long term sale with them. Great. Cool. So I'll leave it next step if you want to set up a warm intro. We can just equip them with some stuff. Do you have any, I mean, Brian, what do you think? Should we do a warm intro first or just send them information on what countries are available and specifically, you know, I just want to see what you have available. I think it wants something we can hand them so that he can kind of bring it up. I can address somewhere. Let me let me get a shorter duck together with a map. I'm not I haven't seen a map yet. I'm sure one exists someplace, but let me and I'll deliver that to you early next week, Avery. And then we can take the next step from there. Great. That word. Awesome. Well, have have a good flight back and have a great weekend both of you. Thanks for your time. Thanks for your time. Yeah. Bye. Bye.",
+  "word_count": 1286,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-07-31T14:45:09+00:00",
+  "processing_result": {
+    "triage_stream_count": 5,
+    "noise_only": false,
+    "persisted_count": 5,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-07-31T14:44:58+00:00-001",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 5 trigger(s): intro, meeting with. Possible named subjects: World Pay, Brian Bailey, Avery Churchwell, Hey Avery, Good, You."
+      },
+      {
+        "item_id": "INT-2026-07-31T14:44:58+00:00-002",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'account_dossier:global_payments' (matched term: 'genius'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-07-31T14:44:58+00:00-003",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Ncr Voyix' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-07-31T14:44:58+00:00-004",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Macro/industry signal detected: 5 keyword hit(s) across categorie(s): consumer_behavior, industry_trend, vendor_tech. Key terms: back office, customer, enterprise, kiosk, pos."
+      },
+      {
+        "item_id": "INT-2026-07-31T14:44:58+00:00-005",
+        "intelligence_type": "strategic_memory",
+        "extracted_summary": "Strategic memory / thesis signal detected: 10 trigger(s): i think."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": null
+  }
+}

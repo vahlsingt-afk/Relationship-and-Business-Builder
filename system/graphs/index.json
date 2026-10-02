@@ -1,0 +1,40 @@
+{
+  "contract": "rb_graph_registry_v1",
+  "graphs": [
+    {
+      "activation_terms": [
+        "mcdonalds",
+        "mcdonald's",
+        "nsn",
+        "storetech",
+        "store tech",
+        "field office",
+        "coop",
+        "co-op",
+        "rfm",
+        "otm",
+        "stim",
+        "fbp",
+        "otp",
+        "site id",
+        "store code"
+      ],
+      "counts": {
+        "edges": 127842,
+        "nodes": 19798,
+        "operator_entities_with_stores": 1340,
+        "stores_with_operator_entity": 14076
+      },
+      "graph_id": "micro_ecosystem:mcdonalds_us_ops",
+      "graph_slug": "mcdonalds_us_ops",
+      "graph_type": "micro_ecosystem",
+      "index_path": "system/graphs/micro/mcdonalds_us_ops/index.json",
+      "name": "McDonald's US Operations Micro Ecosystem",
+      "source_workbook": "NSN Lookup 2026-09 SEP.xlsx",
+      "status": "partial",
+      "updated_at": "2026-09-22T19:32:11"
+    }
+  ],
+  "updated_at": "2026-09-22T19:32:11",
+  "version": 1
+}

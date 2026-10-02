@@ -1,0 +1,26 @@
+---
+id: 2026-03-16-floyd-gonsalves-linkedin-evidence-rollup
+person: floyd-gonsalves
+date: 2026-03-10
+channel: linkedin_aggregate
+direction: bidirectional
+substance: medium
+duration_min: null
+artifact: /tmp/li_extract2_v2 (LinkedIn export 2026-03-16, files: messages.csv, Comments.csv, Recommendations_*.csv, Endorsement_*.csv, Invitations.csv)
+---
+
+## Summary
+Roll-up of all LinkedIn-derived evidence for Floyd Gonsalves as of the 2026-03-16 export. This is a synthesized initial-load IB, not a per-interaction record. Future ingestions of new data will produce per-interaction IBs.
+
+- **Public comments**: Todd has commented 3 time(s) addressing them. Most recent: "Floyd Gonsalves - Exactly.
+That’s the part a lot of tech companies miss. Restaurants don’t have a reporting problem — th"
+- **Invitation history**: they invited Todd (2026-02-17)
+
+## Signal implication
+Promoted to **LMI** in baseline. Reason: 3 comment(s) addressing them.
+
+## Loops opened
+- (none)
+
+## Loops closed
+- (none)

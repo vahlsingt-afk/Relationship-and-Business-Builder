@@ -1,0 +1,136 @@
+{
+  "campaign_id": "genius-user-conference-2026",
+  "generated_at": "2026-10-02T10:13:27+00:00",
+  "eligible_enterprise_prospects": 149,
+  "invited_not_registered": 3,
+  "registered": 0,
+  "not_yet_invited": 146,
+  "declined": 0,
+  "attended": 0,
+  "company_count": 120,
+  "worldpay_customer_conversion_opportunities": 3,
+  "top_target_brands": [
+    {
+      "company": "Church's Texas Chicken",
+      "contact_count": 1,
+      "best_contact_name": "Jeff Caplin",
+      "best_contact_score": 64
+    },
+    {
+      "company": "Del Taco",
+      "contact_count": 1,
+      "best_contact_name": "David OCallaghan",
+      "best_contact_score": 54
+    },
+    {
+      "company": "Five Guys Enterprises",
+      "contact_count": 2,
+      "best_contact_name": "MJ Worsham",
+      "best_contact_score": 52
+    },
+    {
+      "company": "Taco John's International, Inc.",
+      "contact_count": 1,
+      "best_contact_name": "Tom Perella",
+      "best_contact_score": 47
+    },
+    {
+      "company": "Groucho's Deli",
+      "contact_count": 1,
+      "best_contact_name": "\ud83e\udd6a Deric Rosenbaum",
+      "best_contact_score": 47
+    },
+    {
+      "company": "Wingstop Restaurants Inc.",
+      "contact_count": 3,
+      "best_contact_name": "Lucie Tuan",
+      "best_contact_score": 46
+    },
+    {
+      "company": "Thrive Restaurant Group",
+      "contact_count": 2,
+      "best_contact_name": "\ud83d\udc27Patrick Bobrukiewicz",
+      "best_contact_score": 45
+    },
+    {
+      "company": "Brasa Peruvian Kitchen (Official)",
+      "contact_count": 1,
+      "best_contact_name": "Michel Falcon",
+      "best_contact_score": 44
+    },
+    {
+      "company": "unPLUG Dining",
+      "contact_count": 1,
+      "best_contact_name": "T. Oliver Lee",
+      "best_contact_score": 44
+    },
+    {
+      "company": "Tempo Hospitality Group",
+      "contact_count": 1,
+      "best_contact_name": "Bruce Nelson",
+      "best_contact_score": 42
+    }
+  ],
+  "highest_value_relationships": [
+    {
+      "name": "Jeff Caplin",
+      "company": "Church's Texas Chicken",
+      "score": 64,
+      "tier": "Tier 0 \u2014 Worldpay Customer, Ready to Convert"
+    },
+    {
+      "name": "David OCallaghan",
+      "company": "Del Taco",
+      "score": 54,
+      "tier": "Tier 1 \u2014 Must Invite"
+    },
+    {
+      "name": "MJ Worsham",
+      "company": "Five Guys Enterprises",
+      "score": 52,
+      "tier": "Tier 0 \u2014 Worldpay Customer, Ready to Convert"
+    },
+    {
+      "name": "Tom Perella",
+      "company": "Taco John's International, Inc.",
+      "score": 47,
+      "tier": "Tier 2 \u2014 Should Invite"
+    },
+    {
+      "name": "\ud83e\udd6a Deric Rosenbaum",
+      "company": "Groucho's Deli",
+      "score": 47,
+      "tier": "Tier 2 \u2014 Should Invite"
+    },
+    {
+      "name": "Lucie Tuan",
+      "company": "Wingstop Restaurants Inc.",
+      "score": 46,
+      "tier": "Tier 2 \u2014 Should Invite"
+    },
+    {
+      "name": "\ud83d\udc27Patrick Bobrukiewicz",
+      "company": "Thrive Restaurant Group",
+      "score": 45,
+      "tier": "Tier 2 \u2014 Should Invite"
+    },
+    {
+      "name": "Michel Falcon",
+      "company": "Brasa Peruvian Kitchen (Official)",
+      "score": 44,
+      "tier": "Tier 2 \u2014 Should Invite"
+    },
+    {
+      "name": "T. Oliver Lee",
+      "company": "unPLUG Dining",
+      "score": 44,
+      "tier": "Tier 2 \u2014 Should Invite"
+    },
+    {
+      "name": "Zerrick Pearson",
+      "company": "Five Guys Enterprises",
+      "score": 43,
+      "tier": "Tier 0 \u2014 Worldpay Customer, Ready to Convert"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "competitor_id": "comp-marketman-meal-ticket-psg",
+  "competitor_slug": "marketman-meal-ticket-psg",
+  "display_name": "MarketMan (Meal Ticket / PSG)",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "Current restaurant-technology positioning for MarketMan (Meal Ticket / PSG) was not established with sufficient confidence in this bounded pass.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Square integration strengthens its SMB funnel",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:22Z"
+      },
+      {
+        "point": "Supplier-side data from Meal Ticket",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:47:22Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated evidence does not prove performance, ROI, reliability, implementation quality, or systemwide deployment; independent validation remains incomplete.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "rbb-packet:rbb-competitor-category-gapfill-20260929-batches02-04",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:47:04Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:04Z",
+  "latest_cos_commentary": {
+    "headline": "Unresolved vendor; no competitive claim should be made without further verification.",
+    "genius_exposure": [],
+    "competitive_timing": "Evidence reviewed as of 2026-09-29.",
+    "sales_response": "Track for account influence or future expansion into Genius categories.",
+    "risk_and_uncertainty": "Evidence quality varies; unresolved records were intentionally left empty rather than guessed.",
+    "priority": "P3",
+    "confidence": 45,
+    "sources": []
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 63,
+    "pack_claim_count": 11,
+    "pack_claims_with_url": 6,
+    "pack_claims_inherited_url": 4,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 5,
+      "legacy_claims_need_date_and_current_status_check": 11,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  },
+  "canonical_company_name": "MarketMan (Meal Ticket / PSG)",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 45,
+    "sources": []
+  },
+  "operating_status": "unclear",
+  "relationship_class_recommendation": "unclassified_vendor",
+  "negative_findings": [
+    {
+      "value": "No sufficiently unambiguous current restaurant-specific product evidence was established in this pass; no Genius overlap assigned.",
+      "confidence": 60,
+      "sources": []
+    }
+  ],
+  "product_lineage": [],
+  "restaurant_tech_categories": [],
+  "conflicts_notes": [],
+  "category_assessment_status": "researched",
+  "category_assessment_packet_id": "rbb-competitor-category-gapfill-20260929-batches02-04",
+  "category_assessed_at": "2026-09-29"
+}

@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-02T04:02:49-05:00",
+  "account_id": "global-payments",
+  "source": "outlook_computer_use",
+  "window_days": 7,
+  "inbox": [
+    {
+      "counterpart_name": "ServiceNotice@wageworks.com",
+      "counterpart_email": "ServiceNotice@wageworks.com",
+      "subject": "Account Activity Alert",
+      "received_at": "2026-10-02T02:06:00-05:00",
+      "unread": true
+    },
+    {
+      "counterpart_name": "noreply",
+      "counterpart_email": null,
+      "subject": "Your password will expire in 3 days.",
+      "received_at": "2026-10-02T00:01:00-05:00",
+      "unread": true
+    },
+    {
+      "counterpart_name": "Corporate Communications",
+      "counterpart_email": null,
+      "subject": "Unified Workday and title updates are live: One Global Payments, ready to win as one team",
+      "received_at": "2026-10-01",
+      "unread": true
+    },
+    {
+      "counterpart_name": "Timothy Bucci",
+      "counterpart_email": null,
+      "subject": "Re: Pollo Campero DMB Location Mix for Today\u2019s Meeting",
+      "received_at": "2026-10-01",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Ed Garner",
+      "counterpart_email": null,
+      "subject": "May I have your input, please?",
+      "received_at": "2026-10-01",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Corporate Communications",
+      "counterpart_email": null,
+      "subject": "Tap In to major integration milestones",
+      "received_at": "2026-10-01",
+      "unread": false
+    },
+    {
+      "counterpart_name": "no-reply@travelinc.com",
+      "counterpart_email": "no-reply@travelinc.com",
+      "subject": "Your Verification Code",
+      "received_at": "2026-10-01",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Emburse Professional",
+      "counterpart_email": null,
+      "subject": "Jerome Barrientos on behalf of Atlanta AP has a question about one of your expenses",
+      "received_at": "2026-10-01",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Global Payments Perks at Work",
+      "counterpart_email": null,
+      "subject": "The Employee Car Buying Program",
+      "received_at": "2026-10-01",
+      "unread": false
+    },
+    {
+      "counterpart_name": "noreply",
+      "counterpart_email": null,
+      "subject": "Your password will expire in 4 days.",
+      "received_at": "2026-10-01",
+      "unread": false
+    }
+  ],
+  "sent": [
+    {
+      "counterpart_name": "Michael Estabrooks, Ryan Hildebrand",
+      "counterpart_email": null,
+      "subject": "Pollo Campero Pricing Part 3",
+      "sent_at": "2026-10-01"
+    },
+    {
+      "counterpart_name": "Timothy Bucci, Mary Santiago, Ryan Hildebrand",
+      "counterpart_email": null,
+      "subject": "Re: Pollo Campero DMB Location Mix for Today\u2019s Meeting",
+      "sent_at": "2026-10-01"
+    },
+    {
+      "counterpart_name": "Ryan Hildebrand",
+      "counterpart_email": null,
+      "subject": "FW: Genius Overview Deck",
+      "sent_at": "2026-10-01"
+    },
+    {
+      "counterpart_name": "Tracy Gallimore",
+      "counterpart_email": null,
+      "subject": "Accepted: A Little Friday - Sales Town Hall Series",
+      "sent_at": "2026-10-01"
+    },
+    {
+      "counterpart_name": "Todd Vahlsing",
+      "counterpart_email": null,
+      "subject": "FW: Action Required",
+      "sent_at": "2026-10-01"
+    }
+  ],
+  "calendar": [
+    {
+      "title": "Pollo Campero Pricing Part 3",
+      "date": "2026-10-02",
+      "start": "2026-10-02T10:30:00-05:00",
+      "end": "2026-10-02T11:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Learning from Your Previous Experiences",
+      "date": "2026-10-02",
+      "start": "2026-10-02T13:30:00-05:00",
+      "end": "2026-10-02T14:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Monday)",
+      "date": "2026-10-05",
+      "start": "2026-10-05T11:00:00-05:00",
+      "end": "2026-10-05T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Connect with Jeff Coffland - McDonalds",
+      "date": "2026-10-05",
+      "start": "2026-10-05T15:30:00-05:00",
+      "end": "2026-10-05T16:00:00-05:00",
+      "location": null
+    },
+    {
+      "title": "WP BackBook Sales/Marketing Weekly Sync",
+      "date": "2026-10-06",
+      "start": "2026-10-06T14:00:00-05:00",
+      "end": "2026-10-06T14:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Josh/Todd connect - DMB/DTD",
+      "date": "2026-10-07",
+      "start": "2026-10-07T10:00:00-05:00",
+      "end": "2026-10-07T10:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Thursday)",
+      "date": "2026-10-08",
+      "start": "2026-10-08T09:30:00-05:00",
+      "end": "2026-10-08T10:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "A Little Friday - Sales Town Hall Series ",
+      "date": "2026-10-08",
+      "start": "2026-10-08T10:30:00-05:00",
+      "end": "2026-10-08T11:30:00-05:00",
+      "location": "https://us-1506.join.gong.io/global-payments-us/jerry.gallimore/6575986815786887444"
+    },
+    {
+      "title": "Regroup - WP BackBook ICP Review",
+      "date": "2026-10-08",
+      "start": "2026-10-08T11:00:00-05:00",
+      "end": "2026-10-08T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    }
+  ]
+}

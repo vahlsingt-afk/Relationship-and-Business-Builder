@@ -1,0 +1,67 @@
+{
+  "file_id": "cap-e0bd9d6acff9200a",
+  "queued_at": "2026-09-23T09:19:03+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-22_2207_bite-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-22_2207_bite-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260922-2207-bite-validation`\n- Research system: `ChatGPT Deep Research`\n- Started at: `2026-09-22 22:07 CDT`\n- Completed at: `2026-09-22 22:10 CDT`\n- Research scope: Direct-competitor customer-page mining\n- Queue item or vendor: `competitor:bite`\n- Methodology: Four first-party Bite customer and case-study pages were opened and assessed. Vendor-authored results remain attributed claims and were not written into canonical records.\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 4\n- Conflicts found: 1\n- Material takeaway: Bite has named kiosk deployments ranging from all five Tiki Taco locations to 16 of 43 Urbane Cafe locations, plus older named-customer evidence for Crazy Bowls & Wraps and an early-stage Bonchon rollout. The evidence supports kiosk ordering and specific integrations, but not a broad systemwide footprint beyond the stated scopes.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: Urbane Cafe\n- Vendor: Bite\n- Product or category: Self-service kiosks; Thanx loyalty integration\n- Relationship indication: customer\n- Deployment scope: regional\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: Bite's dated first-party case study names an Urbane Cafe marketing executive, a recent three-month measurement period, and 16 live kiosk locations out of 43 total.\n- Source title: Urbane Cafe: How Guest-First Kiosk Technology Drove a 22% Lift in Check Average Across 16 Locations\n- Source URL: https://blog.getbite.com/articles/urbane-cafe-how-guest-first-kiosk-technology-drove-a-22-lift-in-check-average-across-16-locations\n- Publisher or source owner: Bite\n- Published date, if known: 2026-03-05\n- Accessed date: 2026-09-22\n- Exact supporting excerpt or faithful factual note: The case study reports 16 live Bite kiosk locations during October 14, 2025 through January 14, 2026, and says every new Urbane Cafe build now includes Bite kiosks.\n- Product-specific evidence: Bite kiosks were integrated with Thanx loyalty so guests could identify themselves and access rewards at the kiosk.\n- Conflicting or limiting evidence: Only 16 of 43 locations were live in the measured period; \u201cevery new build\u201d does not mean the full existing estate was deployed. Performance results are vendor-authored.\n- Recommended follow-up: Confirm the current live-location count and POS/payment integrations directly with Urbane Cafe.\n\n### Observation 2\n\n- Brand: Tiki Taco\n- Vendor: Bite\n- Product or category: Self-service kiosks; AI recommendations; group ordering\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: Bite's dated case study names Tiki Taco's CEO and explicitly states deployment in all five locations.\n- Source title: How Bite's Agility and Partnership Approach Drove a Kiosk Switch for Tiki Taco\n- Source URL: https://blog.getbite.com/articles/how-bites-agility-and-partnership-approach-drove-a-kiosk-switch-for-tiki-taco\n- Publisher or source owner: Bite\n- Published date, if known: 2026-01-16\n- Accessed date: 2026-09-22\n- Exact supporting excerpt or faithful factual note: The page says Bite powers all five Tiki Taco locations and delivered a group-ordering enhancement within seven days.\n- Product-specific evidence: Self-service ordering, group-order ticket separation, upsell and recommendation logic, on-site deployment support, and reported kiosk-versus-cashier performance.\n- Conflicting or limiting evidence: The overview says all five locations use Bite, while the performance footnote covers four active kiosks during January 1 through October 31, 2025. Treat the performance figures as four-kiosk-period data, not five-location results.\n- Recommended follow-up: Confirm whether every location currently has one or more live kiosks and identify the integrated POS, loyalty, and payment products.\n\n### Observation 3\n\n- Brand: Crazy Bowls & Wraps\n- Vendor: Bite\n- Product or category: Self-service kiosks\n- Relationship indication: customer\n- Deployment scope: unknown\n- Evidence type: testimonial\n- Confidence: 75%\n- Confidence rationale: Bite hosts a named customer page with a testimonial from the brand's former COO of IT, but the page is undated and does not state how many of the 16 units deployed kiosks.\n- Source title: Crazy Bowls\n- Source URL: https://www.getbite.com/case-studies/crazy-bowls\n- Publisher or source owner: Bite\n- Published date, if known: unknown\n- Accessed date: 2026-09-22\n- Exact supporting excerpt or faithful factual note: The former COO of IT describes a Bite partnership, kiosk check-average growth, labor reallocation, and improved order accuracy.\n- Product-specific evidence: Restaurant self-service kiosks with menu filtering and customization.\n- Conflicting or limiting evidence: Currentness and deployed-location count are unspecified; the executive title is marked former, and the 38% check-average claim is vendor-hosted.\n- Recommended follow-up: Verify whether the deployment is still active and obtain the current location count and integrations.\n\n### Observation 4\n\n- Brand: Bonchon\n- Vendor: Bite\n- Product or category: Self-service kiosks\n- Relationship indication: customer\n- Deployment scope: franchisee\n- Evidence type: press release\n- Confidence: 75%\n- Confidence rationale: Bite's dated first-party news page explicitly calls the relationship a partnership and describes kiosks being introduced at existing and new U.S. stores, but gives no deployed-site count.\n- Source title: Bonchon Opens 150th US Store & Introduced New Bite Kiosks\n- Source URL: https://blog.getbite.com/articles/bonchon-opens-150th-us-store-introduced-new-bite-kiosks\n- Publisher or source owner: Bite\n- Published date, if known: 2025-03-04\n- Accessed date: 2026-09-22\n- Exact supporting excerpt or faithful factual note: The page says many existing and new Bonchon stores were introducing Bite kiosks and that tests produced higher check totals and guest satisfaction.\n- Product-specific evidence: Bite self-service kiosk ordering in the U.S. franchise system.\n- Conflicting or limiting evidence: This is early-rollout language, not evidence of deployment across all 150 U.S. stores; no current count or technical integrations are named.\n- Recommended follow-up: Check Bonchon's franchise technology standards and current kiosk rollout count.\n\n## Negative findings\n\n- Candidate or claim: Bite has an enterprise-wide deployment across every named customer estate.\n- Pages checked: All four pages in the source ledger.\n- Result: Unsupported. Tiki Taco is explicitly all five locations; Urbane Cafe was 16 of 43 during the measured period; Crazy Bowls & Wraps gives no deployment count; Bonchon describes adoption by many existing and new stores rather than the entire system.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://blog.getbite.com/articles/urbane-cafe-how-guest-first-kiosk-technology-drove-a-22-lift-in-check-average-across-16-locations | case study | 2026-09-22 | 1 | Productive; recent measured scope and Thanx integration. |\n| https://blog.getbite.com/articles/how-bites-agility-and-partnership-approach-drove-a-kiosk-switch-for-tiki-taco | case study | 2026-09-22 | 2 | Productive; all-location claim, with four-active-kiosk result period. |\n| https://www.getbite.com/case-studies/crazy-bowls | testimonial | 2026-09-22 | 3 | Productive but undated and scope-limited. |\n| https://blog.getbite.com/articles/bonchon-opens-150th-us-store-introduced-new-bite-kiosks | press release | 2026-09-22 | 4 | Productive early-rollout evidence; no systemwide inference. |\n\n## Research notes and inferences\n\n- Inference: Bite's strongest visible proof is in kiosk ordering for small and midsize fast-casual chains, with integration value appearing important. This packet does not establish a core POS replacement role.\n- Inference: The Tiki Taco case suggests support responsiveness and custom feature delivery are part of Bite's competitive positioning, but the unnamed predecessor cannot be identified safely from this evidence.",
+  "word_count": 1119,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-23T09:19:32+00:00",
+  "processing_result": {
+    "triage_stream_count": 4,
+    "noise_only": false,
+    "persisted_count": 4,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-023",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 9 trigger(s): introduced, named. Possible named subjects: Introduced New Bite Kiosks, Bite, Store, Recommended, Material, Publisher."
+      },
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-024",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'franchisee'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-025",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Thanx. Macro/industry signal detected: 18 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: competitive, competitor, customer, deployment, enterprise, fast casual, franch"
+      },
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-026",
+        "intelligence_type": "strategic_memory",
+        "extracted_summary": "Strategic memory / thesis signal detected: 1 trigger(s): positioning."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "Bites",
+        "Urbane Cafe",
+        "Tiki Taco",
+        "Crazy Bowls & Wraps",
+        "Bonchon"
+      ],
+      "topics": [
+        "kiosk deployments",
+        "customer case studies",
+        "vendor partnerships",
+        "performance metrics"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Confirm the current live-location count and POS/payment integrations directly with Urbane Cafe.",
+        "Confirm whether every location currently has one or more live kiosks and identify the integrated POS, loyalty, and payment products.",
+        "Verify whether the deployment is still active and obtain the current location count and integrations.",
+        "Check Bonchon's franchise technology standards and current kiosk rollout count."
+      ],
+      "why_it_matters": "The insights on kiosk deployments and vendor partnerships could inform strategic decisions on technology integration and customer engagement."
+    }
+  }
+}

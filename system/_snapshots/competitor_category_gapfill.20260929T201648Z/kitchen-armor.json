@@ -1,0 +1,59 @@
+{
+  "competitor_id": "comp-kitchen-armor",
+  "competitor_slug": "kitchen-armor",
+  "display_name": "Kitchen Armor",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:33Z",
+  "latest_cos_commentary": {
+    "headline": "Kitchen Armor is a longtime (since 1991) ruggedized kitchen-hardware vendor, now bundling Android and Windows PoE all-in-one touchscreen KDS devices, partnered with QSR Automations/Crunchtime.",
+    "genius_exposure": "Competes in kitchen_drive_thru hardware (KDS terminals) rather than software; a hardware-layer alternative/complement to Genius's own KDS hardware and software stack, particularly relevant where operators choose best-of-breed rugged hardware separate from their POS vendor.",
+    "competitive_timing": "Recently expanded its hardware line with an Android option alongside its existing Windows-based systems, broadening OS choice for operators.",
+    "sales_response": "If a prospect already runs Kitchen Armor hardware, confirm whether it's paired with Crunchtime/QSR Automations software or another KDS software layer, since Kitchen Armor itself is primarily a hardware/consulting vendor, not a software platform.",
+    "risk_and_uncertainty": "Only one named restaurant customer (Flanigan's) found in public sources; no disclosed leadership team, financials, or independent operator ROI data beyond vendor-published case studies.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 52
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 52,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Pricing signals",
+        "Snapshot",
+        "Strengths",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "broader named customer scope",
+        "current pricing",
+        "financial health",
+        "operator ROI evidence beyond vendor case study"
+      ]
+    }
+  }
+}

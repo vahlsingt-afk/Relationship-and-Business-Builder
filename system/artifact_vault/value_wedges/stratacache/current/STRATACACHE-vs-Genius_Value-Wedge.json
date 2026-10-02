@@ -1,0 +1,18 @@
+{
+  "competitor_slug": "stratacache",
+  "vendor_display_name": "STRATACACHE",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "**Layoffs (Mar 2026):** confirmed at Dayton HQ, \"below the 50-employee threshold\" for WARN; industry sources say ~50% of Scala software staff affected. Riegel: \"The continued challenges with tariffs and the global memory spike/supply chain availability difficulties are certainly headwinds.\""
+    },
+    {
+      "point": "**Asset \"firesale\" (2026):** Scala sold to VertiseIT (May 2026); PRN sold to Perion (Aug 2026); Real Digital Media and X20 shut down; Dayton real estate auctioned"
+    }
+  ]
+}

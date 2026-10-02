@@ -1,0 +1,50 @@
+{
+  "competitor_id": "comp-swipe-savvy-pos",
+  "competitor_slug": "swipe-savvy-pos",
+  "display_name": "Swipe Savvy POS",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:06Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:36Z",
+  "latest_cos_commentary": {
+    "headline": "Swipe Savvy is an Orlando-based, founder-led unified POS/payments/loyalty platform that acquired restaurant social-impact marketing platform GiftAMeal in April 2026 to expand its guest-engagement offering.",
+    "genius_exposure": "Directly competes with Genius across POS, payments, and loyalty_engagement product lines as an all-in-one platform aimed at small-to-midsize multi-industry merchants including restaurants.",
+    "competitive_timing": "Made an acquisition (GiftAMeal, April 2026) to add a differentiated cause-marketing/loyalty feature (meal-donation-triggered engagement) to its platform, expanding beyond core POS/payments into social-impact guest engagement.",
+    "sales_response": "In small-merchant/independent-restaurant competitive situations, note that Swipe Savvy bundles POS, payments, and loyalty at a low published entry price point ($69/mo); confirm total cost of ownership including payment processing rates, which are not disclosed on the public pricing page.",
+    "risk_and_uncertainty": "Published pricing covers the software tier only; full payment-processing rate structure was not disclosed in sourced materials, so direct cost comparisons should be treated as incomplete.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 94
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 94,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "payment processing rate structure",
+        "named restaurant customers beyond GiftAMeal network",
+        "total customer/location count"
+      ]
+    }
+  }
+}

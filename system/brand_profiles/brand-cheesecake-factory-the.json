@@ -1,0 +1,144 @@
+{
+  "brand_id": "brand-cheesecake-factory-the",
+  "brand_name": "Cheesecake Factory, The",
+  "identity": {
+    "parent_ownership": {
+      "value": "The Cheesecake Factory Incorporated",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "hq_city_state": {
+      "value": "Calabasas Hills, California, USA",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "founded_year": {
+      "value": "1978",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "market_identity": {
+      "value": "Experiential full-service casual dining",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "ownership_type": {
+      "value": "Public — NASDAQ: CAKE",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "operating_structure": {
+      "value": "215 units in canonical pack: 215 company-owned / 0 franchisee-owned.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    }
+  },
+  "synopsis": {
+    "value": "Cheesecake Factory, The is a experiential full-service casual dining brand. It sits within The Cheesecake Factory Incorporated, so parent-level enterprise architecture, procurement and technology relationships are material to account strategy. The canonical estate is fully company-operated, so successful technology can be deployed centrally without franchise governance. For RBB, prioritize the operating workflows, payments/digital experience, labor impact, reliability and measurable restaurant-level ROI appropriate to the concept.",
+    "status": "reported",
+    "evidence_ids": [
+      "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+    ],
+    "confidence": "high",
+    "as_of": "2026-09-29",
+    "scope": "brand",
+    "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": 215.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchised_units": {
+      "value": 0.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "company_owned_units": {
+      "value": 215.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [],
+  "pain_points": [],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-29T10:38:37Z",
+  "updated_at": "2026-09-29T10:39:32Z",
+  "trajectory": {
+    "badge": "Flat",
+    "metric_used": "unit_delta_pct",
+    "value_pct": -0.4629629629629629,
+    "as_of_year": "2024",
+    "underlying": {
+      "system_sales_usd": 2661627000.0,
+      "unit_count": 215.0,
+      "auv_usd": 12350000.0,
+      "sales_delta_pct": 2.5649058636658952,
+      "units_delta_pct": -0.4629629629629629
+    },
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

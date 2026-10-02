@@ -1,0 +1,517 @@
+{
+  "competitor_id": "comp-ziosk",
+  "competitor_slug": "ziosk",
+  "display_name": "Ziosk",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [
+    "loyalty_engagement",
+    "payments"
+  ],
+  "positioning_summary": "Ziosk is supported in this pass as a restaurant-technology vendor in: kiosks, payments, loyalty.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:46:57Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:57Z",
+  "latest_cos_commentary": {
+    "headline": "Direct Genius portfolio overlap identified.",
+    "genius_exposure": [
+      "payments",
+      "loyalty_engagement"
+    ],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Validate account-level incumbent and deployment scope before positioning against Genius.",
+    "risk_and_uncertainty": "Evidence quality varies materially across this long-tail batch; unresolved names remain deliberately unclassified rather than guessed.",
+    "priority": "P2",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://www.ziosk.com/",
+        "title": "Ziosk restaurant technology portfolio",
+        "publisher": "Ziosk",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 112,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "Current ownership/parent company",
+        "Leadership",
+        "Pricing model"
+      ]
+    }
+  },
+  "canonical_company_name": "Ziosk",
+  "website": "https://www.ziosk.com/",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://www.ziosk.com/",
+        "title": "Ziosk restaurant technology portfolio",
+        "publisher": "Ziosk",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "product_line_competitor",
+  "restaurant_tech_categories": [
+    {
+      "category": "kiosks",
+      "basis": "Current evidence supports kiosks as a restaurant-facing category for Ziosk.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.ziosk.com/",
+          "title": "Ziosk restaurant technology portfolio",
+          "publisher": "Ziosk",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "payments",
+      "basis": "Current evidence supports payments as a restaurant-facing category for Ziosk.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.ziosk.com/",
+          "title": "Ziosk restaurant technology portfolio",
+          "publisher": "Ziosk",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "loyalty",
+      "basis": "Current evidence supports loyalty as a restaurant-facing category for Ziosk.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.ziosk.com/",
+          "title": "Ziosk restaurant technology portfolio",
+          "publisher": "Ziosk",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "Ziosk Digital Check Presenter (kiosks, payments, loyalty)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.ziosk.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Ziosk Guest-Facing Tabletop Tablet (kiosks, payments, loyalty)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.ziosk.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Ziosk Server Handheld (kiosks, payments, loyalty)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.ziosk.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Vendor has current restaurant-specific product evidence in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.ziosk.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Nation's Restaurant News reported that Bloomin' Brands said roughly 80% of customers in Outback test restaurants were paying through Ziosk and that systemwide rollout was planned by the end of April 2025.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.nrn.com/casual-dining/bloomin-brands-looks-to-turn-around-outback-steakhouse",
+      "finding_type": "independently_verified",
+      "source_owner": "Nation's Restaurant News / Informa",
+      "source_type": "restaurant trade publication",
+      "published_at": "2025-02-26",
+      "deployment_scope": "pilot",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "The approximately 80% figure is operator-reported rather than audited and differs from Ziosk's generalized 90%+ vendor claim."
+    },
+    {
+      "value": "NRN reported that Outback was using Ziosk for pay-at-table and guest feedback, including restaurant- and shift-level satisfaction measurement.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.nrn.com/casual-dining/bloomin-brands-looks-to-turn-around-outback-steakhouse",
+      "finding_type": "independently_verified",
+      "source_owner": "Nation's Restaurant News / Informa",
+      "source_type": "restaurant trade publication",
+      "published_at": "2025-02-26",
+      "deployment_scope": "pilot",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Does not independently quantify ROI, labor savings or fleet reliability."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated product evidence does not by itself establish ROI, reliability, implementation quality, or systemwide customer adoption; independent validation remains a research gap.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.ziosk.com/",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    },
+    {
+      "value": "Restaurant commentary about employee pressure to drive device use and customers preferring human or POS interaction indicates a plausible change-management risk when tabletop adoption targets are operationally important.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.reddit.com/r/olivegarden/comments/1jmst8o/ziosk/",
+      "finding_type": "inference",
+      "source_owner": "Reddit / r/olivegarden",
+      "source_type": "analyst inference from community commentary",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": true,
+      "limitations_or_conflicts": "High reported Outback uptake demonstrates that the risk is not universal."
+    }
+  ],
+  "key_customers": [
+    {
+      "value": "Ziosk publicly displays customer logos including Chili's, Cheddar's, Olive Garden, Red Robin, Texas Roadhouse, Yard House, Outback, Miller's Ale House, Kona Grill, Bubba's 33 and STK.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.ziosk.com/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Ziosk",
+      "source_type": "vendor customer/reference presentation",
+      "deployment_scope": "unknown",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Current contract status, product mix and estate size are not established for every logo."
+    }
+  ],
+  "recent_news": [],
+  "product_lineage": [
+    {
+      "value": "Ziosk launched DigiSite in August 2024 as an app-plugin location-intelligence product using Bluetooth sensors and explicitly sought early adopters.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.businesswire.com/news/home/20240828780364/en/Ziosk-Unveils-DigiSite-Product-to-Transform-Business-Operations-Through-Location-Intelligence",
+      "finding_type": "vendor_stated",
+      "source_owner": "Ziosk via Business Wire",
+      "source_type": "press release",
+      "published_at": "2024-08-28",
+      "deployment_scope": "pilot",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Vendor accuracy and setup claims were not independently validated; early-adopter language means launch evidence was pre-scale."
+    },
+    {
+      "value": "Ziosk's support site exposes DigiSite sensor documentation and product-guide material for Aurizon, Tablet Pro, zMini and Ziosk Go.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://help.ziosk.com/kb/en/digisite-sensors-389836",
+      "finding_type": "vendor_stated",
+      "source_owner": "Ziosk",
+      "source_type": "vendor knowledge base",
+      "deployment_scope": "unknown",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Documentation visibility does not prove active new-sales status or deployment scale."
+    }
+  ],
+  "negative_findings": [],
+  "conflicts_notes": [],
+  "category_assessment_status": "researched",
+  "category_assessment_packet_id": "rbb-competitor-category-gapfill-20260929-batches02-04",
+  "category_assessed_at": "2026-09-29",
+  "vendor_claims": [
+    {
+      "value": "Ziosk markets a restaurant platform comprising zMini, Ziosk Pro, Drop & Pay, zConnect, games/content and data or AI insight functions.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.ziosk.com/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Ziosk",
+      "source_type": "vendor platform overview",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Vendor performance metrics are not treated as independent proof."
+    },
+    {
+      "value": "Ziosk positions zMini for guest ordering, payment, loyalty, feedback, upselling and games at the table and claims 90%+ payment usage and 3x ROI within 90 days.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.ziosk.com/products/ziosk-mini",
+      "finding_type": "vendor_stated",
+      "source_owner": "Ziosk",
+      "source_type": "vendor product page",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Outback test reporting cited approximately 80% usage, showing realized adoption can differ from vendor headline metrics."
+    },
+    {
+      "value": "Ziosk Pro is marketed as a server handheld and POS extension supporting ordering, payments, floor plans and pickup or to-go workflows.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.ziosk.com/products/ziosk-pro",
+      "finding_type": "vendor_stated",
+      "source_owner": "Ziosk",
+      "source_type": "vendor product page",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "No independent speed, labor-productivity or reliability benchmark was validated."
+    },
+    {
+      "value": "Ziosk positions Drop & Pay as a digital check presenter supporting payment, tipping, feedback and loyalty for higher-touch restaurant service.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.ziosk.com/products/drop-pay",
+      "finding_type": "vendor_stated",
+      "source_owner": "Ziosk",
+      "source_type": "vendor product page",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "No independent Drop & Pay-specific adoption or usability study was located."
+    },
+    {
+      "value": "Ziosk markets zConnect as a content and marketing studio for changing promotions across one or many locations, including targeting and A/B testing.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.ziosk.com/products/zconnectcopy",
+      "finding_type": "vendor_stated",
+      "source_owner": "Ziosk",
+      "source_type": "vendor product page",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "No independent campaign-lift or marketing-user usability evidence was validated."
+    },
+    {
+      "value": "Ziosk lists compatibility with POS platforms including Aloha, Oracle or Micros or Simphony, Positouch, Rezku and Xpient; payment providers including Fiserv or First Data, Worldpay, TSYS, Chase, Shift4 and FreedomPay; and loyalty providers including Punchh and Paytronix.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.ziosk.com/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Ziosk",
+      "source_type": "vendor platform overview",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Listed compatibility does not establish version coverage, implementation effort or support quality."
+    }
+  ],
+  "weaknesses": [
+    {
+      "value": "An Olive Garden server commenting on Reddit said their Ziosks worked only about half the time and that gift cards could fail to read, requiring POS fallback.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.reddit.com/r/olivegarden/comments/1jmst8o/ziosk/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Reddit / r/olivegarden",
+      "source_type": "restaurant-worker community commentary",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Cannot be generalized into a fleet failure rate; conflicts with vendor ruggedness and efficiency positioning."
+    },
+    {
+      "value": "Multiple comments in an Olive Garden discussion described Ziosk workflows for large parties or certain item-entry scenarios as slower or more awkward than manual alternatives.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.reddit.com/r/olivegarden/comments/1jmst8o/ziosk/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Reddit / r/olivegarden",
+      "source_type": "restaurant-worker community commentary",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Restaurant configuration, menu design and staff training may drive the experience."
+    },
+    {
+      "value": "Community commenters described tabletop devices as occupying table space, feeling impersonal to some guests and raising cleanliness concerns.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.reddit.com/r/olivegarden/comments/1jmst8o/ziosk/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Reddit / r/olivegarden",
+      "source_type": "guest and restaurant-worker community commentary",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "High Outback uptake indicates these objections are not universal."
+    },
+    {
+      "value": "One guest reported a dark or nonworking Ziosk unit, a replacement device and then a blank paper receipt that required manager or POS fallback.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.reddit.com/r/olivegarden/comments/1jmst8o/ziosk/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Reddit / r/olivegarden",
+      "source_type": "guest community anecdote",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Provides no incidence or fleet-level reliability information."
+    },
+    {
+      "value": "Restaurant-worker commentary reports that some guests refuse tabletop or self-service payment readers and prefer server-mediated service.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.reddit.com/r/Serverlife/comments/1ozulud/anyone_else_get_customers_who_like_refuse_to_use/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Reddit / r/Serverlife",
+      "source_type": "restaurant-worker community commentary",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Does not establish Ziosk-specific overall adoption; Outback evidence shows high uptake can coexist with resistant guests."
+    }
+  ]
+}

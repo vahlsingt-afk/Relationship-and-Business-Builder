@@ -1,0 +1,216 @@
+{
+  "competitor_id": "comp-ovation",
+  "competitor_slug": "ovation",
+  "display_name": "Ovation",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [
+    "loyalty_engagement"
+  ],
+  "positioning_summary": "Ovation is supported in this pass as a restaurant-technology vendor in: customer feedback, loyalty, bi analytics.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T20:16:48Z",
+  "latest_cos_commentary": {
+    "headline": "Direct Genius portfolio overlap identified.",
+    "genius_exposure": [
+      "loyalty_engagement"
+    ],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Validate account-level incumbent and deployment scope before positioning against Genius.",
+    "risk_and_uncertainty": "Evidence quality varies materially across this long-tail batch; unresolved names remain deliberately unclassified rather than guessed.",
+    "priority": "P2",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://ovationup.com/",
+        "title": "Ovation restaurant technology portfolio",
+        "publisher": "Ovation",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 70,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Pricing signals",
+        "Recent News / Product Updates",
+        "Snapshot",
+        "Strengths",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "current pricing",
+        "broader named customer scope",
+        "operator-specific ROI evidence"
+      ]
+    }
+  },
+  "canonical_company_name": "Ovation",
+  "website": "https://ovationup.com/",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://ovationup.com/",
+        "title": "Ovation restaurant technology portfolio",
+        "publisher": "Ovation",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "product_line_competitor",
+  "restaurant_tech_categories": [
+    {
+      "category": "customer_feedback",
+      "basis": "Current evidence supports customer feedback as a restaurant-facing category for Ovation.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://ovationup.com/",
+          "title": "Ovation restaurant technology portfolio",
+          "publisher": "Ovation",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "loyalty",
+      "basis": "Current evidence supports loyalty as a restaurant-facing category for Ovation.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://ovationup.com/",
+          "title": "Ovation restaurant technology portfolio",
+          "publisher": "Ovation",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "bi_analytics",
+      "basis": "Current evidence supports bi analytics as a restaurant-facing category for Ovation.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://ovationup.com/",
+          "title": "Ovation restaurant technology portfolio",
+          "publisher": "Ovation",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "Ovation Guest Feedback (customer_feedback, loyalty, bi_analytics)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://ovationup.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Guest Recovery (customer_feedback, loyalty, bi_analytics)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://ovationup.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Text Marketing (customer_feedback, loyalty, bi_analytics)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://ovationup.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Vendor has current restaurant-specific product evidence in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://ovationup.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated product evidence does not by itself establish ROI, reliability, implementation quality, or systemwide customer adoption; independent validation remains a research gap.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://ovationup.com/",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [],
+  "product_lineage": []
+}

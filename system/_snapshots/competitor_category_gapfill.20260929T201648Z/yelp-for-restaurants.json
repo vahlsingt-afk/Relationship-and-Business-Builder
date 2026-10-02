@@ -1,0 +1,52 @@
+{
+  "competitor_id": "comp-yelp-for-restaurants",
+  "competitor_slug": "yelp-for-restaurants",
+  "display_name": "Yelp for Restaurants",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:38Z",
+  "latest_cos_commentary": {
+    "headline": "Yelp for Restaurants is a reservations, waitlist, and AI phone-answering suite bundled with Yelp's consumer discovery platform, sold on a flat monthly subscription rather than per-cover fees, with customers including Snooze and Brinker International.",
+    "genius_exposure": "Adjacent to Genius's loyalty_engagement line via guest/reservation management; does not compete on core pos, payments, or back_office.",
+    "competitive_timing": "Actively expanding its AI feature set (Yelp Host AI answering) as a differentiator against traditional reservation platforms.",
+    "sales_response": "Relevant mainly in reservation/waitlist and guest-discovery conversations, not core POS or payments deals.",
+    "risk_and_uncertainty": "No leadership or restaurant-segment-specific financial detail was verified; the Brinker International customer relationship's current scope is unconfirmed.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 111
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 111,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "Financial performance specific to the restaurant/reservations segment (Yelp Inc. is public but does not break this out cleanly)",
+        "Independent verification of Brinker International as an active customer"
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "competitor_slug": "verifone",
+  "vendor_display_name": "Verifone",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [
+    "payments"
+  ],
+  "circle1_genius_strengths": [
+    {
+      "category": "Payments",
+      "point": "Enterprise omnichannel acquirer; restaurants page claims work with \"7 of the world's largest Quick Service Restaurants\" and integrations with hundreds of hospitality POS/PMS (partners: Agilysys, NCR Aloha, Oracle, Olo, Qikserve, FreedomPay)",
+      "why_it_matters": "Source: https://www.worldpay.com/en/industries/restaurants"
+    },
+    {
+      "category": "Payments",
+      "point": "Brings enterprise restaurant relationships: \"Strong, early interest in Genius from Worldpay's enterprise restaurant clients … cross-sell opportunities we simply could not have accessed previously\" (Bready)",
+      "why_it_matters": "Source: https://www.fool.com/earnings/call-transcripts/2026/05/06/global-payments-gpn-q1-2026-earnings-transcript/"
+    },
+    {
+      "category": "Payments",
+      "point": "Worldpay lacked a unified POS; Genius fills \"longstanding product gap\"",
+      "why_it_matters": "Source: https://www.paymentsdive.com/news/global-payments-touts-genius-gains/819560/"
+    }
+  ],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": []
+}

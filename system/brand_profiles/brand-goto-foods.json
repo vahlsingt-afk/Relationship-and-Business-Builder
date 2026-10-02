@@ -1,0 +1,138 @@
+{
+  "brand_id": "brand-goto-foods",
+  "brand_name": "GoTo Foods",
+  "identity": {
+    "parent_ownership": {
+      "value": "Roark Capital Group (Atlanta-based private equity)",
+      "status": "confirmed",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-30-rebuild-8brands"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "hq_city_state": {
+      "value": "Sandy Springs, Georgia, USA",
+      "status": "confirmed",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-30-rebuild-8brands"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "founded_year": {
+      "value": "2004 (as Focus Brands; renamed GoTo Foods in 2023)",
+      "status": "confirmed",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-30-rebuild-8brands"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "market_identity": {
+      "value": "Multi-brand fast-casual/QSR restaurant franchisor (bakery-cafe, ice cream, sandwich, and Southwest-grill concepts)",
+      "status": "confirmed",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-30-rebuild-8brands"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "ownership_type": {
+      "value": "Private — Roark Capital-backed",
+      "status": "confirmed",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-30-rebuild-8brands"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "operating_structure": {
+      "value": "6,700+ units across 7 brands (Auntie Anne's, Carvel, Cinnabon, Jamba, McAlister's Deli, Moe's Southwest Grill, Schlotzsky's); company-owned vs. franchised split not verified in this pass",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-30-rebuild-8brands"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    }
+  },
+  "synopsis": {
+    "value": "GoTo Foods (formerly Focus Brands, renamed 2023) is a multi-brand restaurant franchisor owned by Roark Capital Group, operating 6,700+ locations globally across seven brands: Auntie Anne's, Carvel, Cinnabon, Jamba, McAlister's Deli, Moe's Southwest Grill, and Schlotzsky's. Headquartered in Sandy Springs, Georgia. For RBB, treat as a multi-brand franchisor account — technology decisions likely route through a shared platform team serving all seven brands rather than brand-by-brand, similar in structure to other Roark-backed multi-brand portfolios (e.g. Inspire Brands).",
+    "status": "reported",
+    "evidence_ids": [
+      "top500-profile-gapfill::2026-09-30-rebuild-8brands"
+    ],
+    "confidence": "high",
+    "as_of": "2026-09-30",
+    "scope": "brand",
+    "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "franchised_units": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "company_owned_units": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [],
+  "pain_points": [],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-30T10:44:36Z",
+  "updated_at": "2026-09-30T10:44:36Z",
+  "trajectory": {
+    "badge": "insufficient_data",
+    "metric_used": null,
+    "value_pct": null,
+    "as_of_year": null,
+    "underlying": null,
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

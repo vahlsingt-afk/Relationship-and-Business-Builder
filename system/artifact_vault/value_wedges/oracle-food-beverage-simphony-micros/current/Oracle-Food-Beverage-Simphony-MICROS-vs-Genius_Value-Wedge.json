@@ -1,0 +1,18 @@
+{
+  "competitor_slug": "oracle-food-beverage-simphony-micros",
+  "vendor_display_name": "Oracle Food & Beverage (Simphony / MICROS)",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Parent focus on AI infrastructure; ongoing company-wide layoffs (≈21,000 roles cut in past year; restructuring budget raised to ~$2.8B). F&B-specific impact not found"
+    },
+    {
+      "point": "Viewed by PAR CEO as lacking restaurant focus"
+    }
+  ]
+}

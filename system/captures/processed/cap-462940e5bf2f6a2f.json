@@ -1,0 +1,59 @@
+{
+  "file_id": "cap-462940e5bf2f6a2f",
+  "queued_at": "2026-09-21T09:23:08+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-20_1607_candidate-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-20_1607_candidate-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260920-1607-candidate-validation`\n- Research system: `Codex web research`\n- Started at: `2026-09-20 16:07 CDT`\n- Completed at: `2026-09-20 16:08 CDT`\n- Research scope: Validate four unresolved candidate URLs for Wendy's and Dunkin'.\n- Queue item or vendor: Restaurant365, Crunchtime, and Paytronix mention-candidate pages.\n- Methodology: Direct-page candidate validation using vendor-owned pages. A page was treated as relationship evidence only when its article body asserted product use or implementation by the named brand or an identified franchisee.\n\n## Executive result\n\n- Pages reviewed: 4 candidate URLs (the second Restaurant365 URL redirects to the first article)\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 1\n- Conflicts found: 0\n- Material takeaway: Crunchtime provides strong first-party evidence that Dunkin' implemented the Teamworx labor and scheduling tool across its franchise network. The Paytronix Dunkin' page is editorial analysis only, and the two Wendy's URLs resolve to one Restaurant365 article that discusses a Wendy's franchisee without clearly asserting that the franchisee uses Restaurant365.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: Dunkin'\n- Vendor: Crunchtime\n- Product or category: Teamworx labor and employee scheduling\n- Relationship indication: customer\n- Deployment scope: franchisee network\n- Evidence type: vendor blog reporting a named customer presentation\n- Confidence: 90%\n- Confidence rationale: Crunchtime names Dunkin's Senior Product Manager, describes implementation of Teamworx across thousands of franchise locations, and reports a measured scheduling result. The source is vendor-owned, so independent confirmation would still improve confidence.\n- Source title: How Dunkin\u2019 Creates Schedules in Half the Time Across its Vast Franchise Network\n- Source URL: https://www.crunchtime.com/blog/how-dunkin-cut-time-to-create-schedules-in-half-across-its-vast-franchise-network\n- Publisher or source owner: Crunchtime\n- Published date, if known: 2024-12-20\n- Accessed date: 2026-09-20\n- Exact supporting excerpt or faithful factual note: The page says Peter McDonough, Senior Product Manager at Dunkin', discussed implementing Crunchtime's Teamworx labor and scheduling tool across Dunkin's franchise network with thousands of locations. It reports that schedule creation time was reduced by 50%.\n- Product-specific evidence: Teamworx supports automated scheduling, sales forecasting, manager review across locations, mobile access, and templates for traditional, non-traditional, combo-store, and alternative distribution formats.\n- Conflicting or limiting evidence: Dunkin' is fully franchised and the page says adoption was demonstrated to franchisees rather than mandated; it does not establish that every location deployed Teamworx. The evidence is published by the vendor.\n- Recommended follow-up: Seek an Inspire Brands or Dunkin' primary source, procurement artifact, or current franchise documentation to confirm adoption breadth and present status.\n\n## Negative findings\n\n- Candidate or claim: Wendy's or Wendy's franchisee Cotti Foods uses Restaurant365.\n- Pages checked: `https://www.restaurant365.com/blog/wendys-franchisee-is-all-squared-up-for-elevating-employees-from-within/` and `https://www.restaurant365.com/blog/restaurant-software-for-wendys-franchisees/`.\n- Result: The second candidate redirects to the first article. The article identifies Cotti Foods as a 225-unit franchisee of Wendy's, Taco Bell, and Pieology and separately describes Restaurant365 workforce capabilities, but it does not explicitly say that Cotti Foods or its Wendy's restaurants use Restaurant365. This is insufficient to create a deployment mapping.\n\n- Candidate or claim: Dunkin' uses Paytronix for its rewards program.\n- Pages checked: `https://www.paytronix.com/blog/what-you-can-learn-from-the-new-dunkin-rewards-program`.\n- Result: The Paytronix-authored article analyzes Dunkin's 2022 rewards redesign and includes the author's interpretation of its strategy. It does not identify Dunkin' as a Paytronix customer, deployment, integration, or partner.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://www.restaurant365.com/blog/wendys-franchisee-is-all-squared-up-for-elevating-employees-from-within/ | Vendor blog | 2026-09-20 | None | Names Cotti Foods as a Wendy's franchisee but does not assert R365 use. |\n| https://www.restaurant365.com/blog/restaurant-software-for-wendys-franchisees/ | Vendor blog redirect | 2026-09-20 | None | Redirects to the preceding article; no separate relationship evidence. |\n| https://www.crunchtime.com/blog/how-dunkin-cut-time-to-create-schedules-in-half-across-its-vast-franchise-network | Vendor blog / customer presentation recap | 2026-09-20 | Observation 1 | Names Teamworx implementation across Dunkin's franchise network and reports a 50% reduction in schedule-creation time. |\n| https://www.paytronix.com/blog/what-you-can-learn-from-the-new-dunkin-rewards-program | Vendor blog | 2026-09-20 | None | Editorial analysis of Dunkin' Rewards; no Paytronix relationship assertion. |\n\n## Research notes and inferences\n\n- Inference: The Crunchtime evidence supports broad network implementation but not universal location-level adoption because franchise participation is described as persuasion-based rather than mandatory.\n- Review instruction: Preserve the Restaurant365 and Paytronix URLs as validated negative findings. Route the Dunkin'\u2013Crunchtime mapping through normal morning-cycle review before canonical persistence.",
+  "word_count": 703,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-21T09:23:28+00:00",
+  "processing_result": {
+    "triage_stream_count": 3,
+    "noise_only": false,
+    "persisted_count": 3,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-009",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 10 trigger(s): named, network. Possible named subjects: Vast Franchise Network, Evidence, Publisher, The Paytronix Dunkin, Deployment, Time Across."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-010",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'franchisee'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-011",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Inspire Brands, Wendy's, Taco Bell, Dunkin', Restaurant365, Crunchtime, Paytronix. Macro/industry signal detected: 6 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal. Key terms: customer, deploy"
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [
+        "Peter McDonough"
+      ],
+      "companies_mentioned": [
+        "Dunkin'",
+        "Crunchtime",
+        "Restaurant365",
+        "Paytronix"
+      ],
+      "topics": [
+        "Dunkin' implementation of Teamworx",
+        "Wendy's franchisee relationship with Restaurant365",
+        "Dunkin' rewards program analysis"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Seek an Inspire Brands or Dunkin' primary source to confirm adoption breadth of Teamworx."
+      ],
+      "why_it_matters": "The findings provide insights into Dunkin's operational efficiencies and vendor relationships, which may impact strategic decisions."
+    }
+  }
+}

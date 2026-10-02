@@ -1,0 +1,73 @@
+{
+  "competitor_id": "comp-squirrel-systems",
+  "competitor_slug": "squirrel-systems",
+  "display_name": "Squirrel Systems",
+  "aliases": [],
+  "vendor_entity_id": "vendor-squirrel-systems",
+  "primary_category": "pos",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Long installed base in hospitality/casinos",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:47:19Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-10-02T09:47:03Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:03Z",
+  "latest_cos_commentary": {
+    "headline": "Established hospitality POS remains relevant in full-service and multi-unit replacements.",
+    "genius_exposure": "Established hospitality POS remains relevant in full-service and multi-unit replacements.",
+    "competitive_timing": "Squirrel offers a restaurant POS platform with payments, digital ordering and kitchen automation. Second check: Squirrel described integration with Shift4 payments in Canada following Shift4’s acquisition of Eigen.",
+    "sales_response": "Check chain-specific terminal estate, processor integration and migration cost before positioning Genius.",
+    "risk_and_uncertainty": "Current product page does not provide audited restaurant footprint; accessed 2026-09-28. Canadian integration does not establish U.S. processing attachment or exclusive relationship.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 36
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 36,
+    "pack_claim_count": 10,
+    "pack_claims_with_url": 5,
+    "pack_claims_inherited_url": 3,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 5,
+      "legacy_claims_need_date_and_current_status_check": 10,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

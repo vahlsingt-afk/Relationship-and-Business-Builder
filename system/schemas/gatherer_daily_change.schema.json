@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RBB Gatherer Daily Change Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract", "packet_id", "generated_at", "window", "coverage", "changes", "hunter_escalations", "stats"],
+  "properties": {
+    "contract": {"const": "rb.gatherer_daily_change_packet.v1"},
+    "packet_id": {"type": "string"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end", "hours"],
+      "properties": {
+        "start": {"type": "string", "format": "date-time"},
+        "end": {"type": "string", "format": "date-time"},
+        "hours": {"const": 24}
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tracked_entities_total", "tracked_entities_observed", "sources_observed", "domains_observed", "limitations"],
+      "properties": {
+        "tracked_entities_total": {"type": "integer", "minimum": 0},
+        "tracked_entities_observed": {"type": "array", "items": {"type": "string"}},
+        "sources_observed": {"type": "array", "items": {"type": "string"}},
+        "domains_observed": {"type": "array", "items": {"type": "string"}},
+        "limitations": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["change_id", "title", "summary", "observed_at", "date_precision", "entities", "signal_type", "domain", "source", "source_url", "confidence", "materiality", "verification_state"],
+        "properties": {
+          "change_id": {"type": "string"},
+          "title": {"type": "string"},
+          "summary": {"type": "string"},
+          "observed_at": {"type": "string"},
+          "date_precision": {"enum": ["time", "day"]},
+          "entities": {"type": "array", "items": {"type": "string"}},
+          "signal_type": {"type": "string"},
+          "domain": {"type": "string"},
+          "source": {"type": "string"},
+          "source_url": {"type": "string"},
+          "confidence": {"enum": ["low", "medium", "high"]},
+          "materiality": {"type": "integer", "minimum": 0, "maximum": 100},
+          "verification_state": {"const": "candidate"}
+        }
+      }
+    },
+    "hunter_escalations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["change_id", "target_names", "recommended_playbook", "reason", "priority"],
+        "properties": {
+          "change_id": {"type": "string"},
+          "target_names": {"type": "array", "items": {"type": "string"}},
+          "recommended_playbook": {"type": "string"},
+          "reason": {"type": "string"},
+          "priority": {"enum": ["low", "medium", "high"]}
+        }
+      }
+    },
+    "stats": {"type": "object"}
+  }
+}
+

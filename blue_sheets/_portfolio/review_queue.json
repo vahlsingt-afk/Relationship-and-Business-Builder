@@ -1,0 +1,74 @@
+{
+  "pending_reviews": [
+    {
+      "account_id": "acct-pollo-campero",
+      "kind": "signal_notification",
+      "path": null,
+      "new_value": null,
+      "reason": "New intelligence today for category='payments', posture='substantiated' -- no unambiguous technology_stack row to auto-apply. Needs human review.",
+      "evidence_id": null,
+      "status": "pending"
+    },
+    {
+      "account_id": "acct-pollo-campero",
+      "kind": "signal_notification",
+      "path": null,
+      "new_value": null,
+      "reason": "New intelligence today for category='payments', posture='substantiated' -- no unambiguous technology_stack row to auto-apply. Needs human review.",
+      "evidence_id": null,
+      "status": "pending",
+      "queued_at": "2026-09-14T21:19:25Z"
+    },
+    {
+      "account_id": "acct-subway",
+      "kind": "signal_notification",
+      "path": null,
+      "new_value": null,
+      "reason": "New intelligence today for category='payments', posture='substantiated' -- no unambiguous technology_stack row to auto-apply. Needs human review.",
+      "evidence_id": null,
+      "status": "pending",
+      "queued_at": "2026-09-28T20:47:23Z"
+    },
+    {
+      "account_id": "acct-pollo-campero",
+      "kind": "signal_notification",
+      "path": null,
+      "new_value": null,
+      "reason": "New intelligence today for category='payments', posture='substantiated' -- no unambiguous technology_stack row to auto-apply. Needs human review.",
+      "evidence_id": null,
+      "status": "pending",
+      "queued_at": "2026-09-28T20:47:23Z"
+    },
+    {
+      "account_id": "acct-subway",
+      "kind": "signal_notification",
+      "path": null,
+      "new_value": null,
+      "reason": "New intelligence today for category='payments', posture='substantiated' -- no unambiguous technology_stack row to auto-apply. Needs human review.",
+      "evidence_id": null,
+      "status": "pending",
+      "queued_at": "2026-09-28T20:56:26Z"
+    },
+    {
+      "account_id": "acct-pollo-campero",
+      "kind": "signal_notification",
+      "path": null,
+      "new_value": null,
+      "reason": "New intelligence today for category='payments', posture='substantiated' -- no unambiguous technology_stack row to auto-apply. Needs human review.",
+      "evidence_id": null,
+      "status": "pending",
+      "queued_at": "2026-09-28T20:56:26Z"
+    },
+    {
+      "account_id": "acct-pollo-campero",
+      "kind": "signal_notification",
+      "path": null,
+      "new_value": null,
+      "reason": "New intelligence today for category='payments', posture='provisional' -- no unambiguous technology_stack row to auto-apply. Needs human review.",
+      "evidence_id": null,
+      "status": "pending",
+      "queued_at": "2026-09-29T10:55:58Z"
+    }
+  ],
+  "note": "Empty because nothing is pending, not because the pipeline is missing. _engine/impact_review.py (built 2026-08-21) now populates this queue when a governance-gated change (Section 8) is proposed - see its process_event() function. It ran once, in --apply mode, against a synthetic dry-run event for Pollo Campero to prove the safe-apply/queue split works end to end; that test event and its one queued item were reverted afterward so this file reflects only real state. The routine is still NOT wired into any live RBB canonical-registry mutation script (system/scripts/mutations.py, ri_events.py, ecosystem_intelligence.py, eolms.py) - it must be called explicitly for now. See _standard/GAP_REPORT_2026-08-21.md."
+}

@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "category": "pos",
+      "created_at": "2026-05-27T15:55:40+00:00",
+      "customer_brand": "Blaze Pizza",
+      "flags": [
+        "vendor_claimed_relationship",
+        "module_scope_unverified",
+        "deployment_depth_unknown"
+      ],
+      "recommended_checks": [
+        "Find operator/vendor primary statement or case study.",
+        "Verify whether this is POS, online ordering, loyalty, or another Qu module.",
+        "Verify deployment depth: pilot, partial, franchisee subset, or systemwide.",
+        "Check whether customer relationship applies to holding-company siblings."
+      ],
+      "relationship_id": "rel-brand-blaze-pizza-pos-system-of-record-pos-logo-or-customer-page-vendor-qu",
+      "source": {
+        "captured_at": "2026-05-27T10:56:00-05:00",
+        "event_at": "2026-05-27",
+        "type": "linkedin_vendor_post",
+        "url": null
+      },
+      "source_signal_id": "li_sig_20260527_4bd22b3304",
+      "status": "open",
+      "task_id": "verify-rel-brand-blaze-pizza-pos-system-of-record-pos-logo-or-customer-page-vendor-qu",
+      "updated_at": "2026-05-27T15:55:40+00:00",
+      "vendor": "Qu",
+      "verification_state": "needs_verification",
+      "weak_signal_classification": "vendor_claimed"
+    },
+    {
+      "category": "pos",
+      "created_at": "2026-05-27T15:55:40+00:00",
+      "customer_brand": "Dave's Hot Chicken",
+      "flags": [
+        "vendor_claimed_relationship",
+        "module_scope_unverified",
+        "deployment_depth_unknown"
+      ],
+      "recommended_checks": [
+        "Find operator/vendor primary statement or case study.",
+        "Verify whether this is POS, online ordering, loyalty, or another Qu module.",
+        "Verify deployment depth: pilot, partial, franchisee subset, or systemwide.",
+        "Check whether customer relationship applies to holding-company siblings."
+      ],
+      "relationship_id": "rel-brand-dave-s-hot-chicken-pos-system-of-record-pos-logo-or-customer-page-vendor-qu",
+      "source": {
+        "captured_at": "2026-05-27T10:56:00-05:00",
+        "event_at": "2026-05-27",
+        "type": "linkedin_vendor_post",
+        "url": null
+      },
+      "source_signal_id": "li_sig_20260527_4bd22b3304",
+      "status": "open",
+      "task_id": "verify-rel-brand-dave-s-hot-chicken-pos-system-of-record-pos-logo-or-customer-page-vendor-qu",
+      "updated_at": "2026-05-27T15:55:40+00:00",
+      "vendor": "Qu",
+      "verification_state": "needs_verification",
+      "weak_signal_classification": "vendor_claimed"
+    },
+    {
+      "category": "pos",
+      "created_at": "2026-05-27T15:55:40+00:00",
+      "customer_brand": "GoTo Foods",
+      "flags": [
+        "vendor_claimed_relationship",
+        "module_scope_unverified",
+        "deployment_depth_unknown"
+      ],
+      "holding_company_expansion_review": {
+        "candidate_brands": [
+          "Auntie Anne's",
+          "Carvel",
+          "Cinnabon",
+          "Jamba",
+          "Moe's Southwest Grill",
+          "Schlotzsky's"
+        ],
+        "platform": "GoTo Foods",
+        "warning": "Do not infer sibling-brand deployment without corroboration."
+      },
+      "recommended_checks": [
+        "Find operator/vendor primary statement or case study.",
+        "Verify whether this is POS, online ordering, loyalty, or another Qu module.",
+        "Verify deployment depth: pilot, partial, franchisee subset, or systemwide.",
+        "Check whether customer relationship applies to holding-company siblings."
+      ],
+      "relationship_id": "rel-brand-goto-foods-pos-system-of-record-pos-logo-or-customer-page-vendor-qu",
+      "source": {
+        "captured_at": "2026-05-27T10:56:00-05:00",
+        "event_at": "2026-05-27",
+        "type": "linkedin_vendor_post",
+        "url": null
+      },
+      "source_signal_id": "li_sig_20260527_4bd22b3304",
+      "status": "open",
+      "task_id": "verify-rel-brand-goto-foods-pos-system-of-record-pos-logo-or-customer-page-vendor-qu",
+      "updated_at": "2026-05-27T15:55:40+00:00",
+      "vendor": "Qu",
+      "verification_state": "needs_verification",
+      "weak_signal_classification": "vendor_claimed"
+    },
+    {
+      "category": "pos",
+      "created_at": "2026-05-27T15:55:40+00:00",
+      "customer_brand": "Playa Bowls",
+      "flags": [
+        "vendor_claimed_relationship",
+        "module_scope_unverified",
+        "deployment_depth_unknown"
+      ],
+      "recommended_checks": [
+        "Find operator/vendor primary statement or case study.",
+        "Verify whether this is POS, online ordering, loyalty, or another Qu module.",
+        "Verify deployment depth: pilot, partial, franchisee subset, or systemwide.",
+        "Check whether customer relationship applies to holding-company siblings."
+      ],
+      "relationship_id": "rel-brand-playa-bowls-pos-system-of-record-pos-logo-or-customer-page-vendor-qu",
+      "source": {
+        "captured_at": "2026-05-27T10:56:00-05:00",
+        "event_at": "2026-05-27",
+        "type": "linkedin_vendor_post",
+        "url": null
+      },
+      "source_signal_id": "li_sig_20260527_4bd22b3304",
+      "status": "open",
+      "task_id": "verify-rel-brand-playa-bowls-pos-system-of-record-pos-logo-or-customer-page-vendor-qu",
+      "updated_at": "2026-05-27T15:55:40+00:00",
+      "vendor": "Qu",
+      "verification_state": "needs_verification",
+      "weak_signal_classification": "vendor_claimed"
+    }
+  ],
+  "updated_at": "2026-05-27T15:55:40+00:00",
+  "version": 1
+}

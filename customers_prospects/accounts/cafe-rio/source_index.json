@@ -1,0 +1,41 @@
+{
+  "account_id": "acct-cafe-rio",
+  "sources": [
+    {
+      "source_id": "src-cafe-rio-0001",
+      "durable_source_id": "https://www.linkedin.com/posts/cafe-rio_join-us-in-welcoming-mike-burns-as-chief-activity-7467762899529293825-UP7C",
+      "type": "public_reference",
+      "description": "Café Rio announces Mike Burns as CEO",
+      "linked_evidence_ids": ["ev-cafe-rio-0001"]
+    },
+    {
+      "source_id": "src-cafe-rio-0002",
+      "durable_source_id": "https://www.restaurantdive.com/news/cafe-rio-new-ceo-mike-burns-and-pizza/821664/",
+      "type": "public_reference",
+      "description": "Restaurant Dive: Café Rio hires new CEO amid operational reset",
+      "linked_evidence_ids": ["ev-cafe-rio-0002"]
+    },
+    {
+      "source_id": "src-cafe-rio-0003",
+      "durable_source_id": "https://www.freemanspogli.com/news/freeman-spogli-co-acquires-a-majority-interest-in-cafe-rio-inc/",
+      "type": "public_reference",
+      "description": "Freeman Spogli acquisition and company background",
+      "linked_evidence_ids": ["ev-cafe-rio-0003"]
+    },
+    {
+      "source_id": "src-cafe-rio-0004",
+      "durable_source_id": "system/ecosystem_intelligence.json#brand-cafe-rio-mexican-grill",
+      "type": "internal_dataset",
+      "description": "Technomic-derived sales/unit figures already in RBB's ecosystem graph",
+      "linked_evidence_ids": ["ev-cafe-rio-0004"]
+    },
+    {
+      "source_id": "src-cafe-rio-0005",
+      "durable_source_id": "internal:zakary-bertram-cafe-rio-background-brief-2026-08-27",
+      "type": "prepared_brief",
+      "description": "Canonical Café Rio Background Brief prepared for Zakary Bertram, 2026-08-27",
+      "linked_evidence_ids": ["ev-cafe-rio-0005"]
+    }
+  ],
+  "note": "Seeded from the canonical Café Rio Background Brief (account_background_brief.py implementation, 2026-08-27)."
+}

@@ -1,0 +1,78 @@
+{
+  "competitor_id": "comp-tenzo",
+  "competitor_slug": "tenzo",
+  "display_name": "Tenzo",
+  "aliases": [],
+  "vendor_entity_id": "vendor-tenzo",
+  "primary_category": "back_office",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Claims +15% labor productivity and −80% food waste for customers",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:22Z"
+      },
+      {
+        "point": "US logos: Lettuce Entertain You, PrimoHoagies, Parker Restaurant Group",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:47:22Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-09-29T14:57:13Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:13Z",
+  "latest_cos_commentary": {
+    "headline": "Funded analytics specialist can become an overlay to existing POS and labor systems.",
+    "genius_exposure": "Funded analytics specialist can become an overlay to existing POS and labor systems.",
+    "competitive_timing": "Tenzo announced a $5M Series A extension in April 2026 for restaurant performance analytics. Second check: Tenzo reported Bill’s trialed its operations platform at ten sites in a June 2026 company news item.",
+    "sales_response": "Benchmark forecast accuracy and operations actionability before competing on dashboards alone.",
+    "risk_and_uncertainty": "Funding and stated growth plans do not establish a live account deployment. Ten-site trial is not systemwide deployment; company page republishes external reporting.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 64
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 64,
+    "pack_claim_count": 11,
+    "pack_claims_with_url": 8,
+    "pack_claims_inherited_url": 7,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 3,
+      "legacy_claims_need_date_and_current_status_check": 11,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

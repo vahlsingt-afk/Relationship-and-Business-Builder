@@ -1,0 +1,155 @@
+{
+  "brand_id": "brand-thirsty-lion-gastropub",
+  "brand_name": "Thirsty Lion Gastropub",
+  "identity": {
+    "parent_ownership": {
+      "value": "Concept Entertainment Group / Thirsty Lion",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "hq_city_state": {
+      "value": "Portland, Oregon, USA brand roots",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "founded_year": {
+      "value": "2006",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "market_identity": {
+      "value": "Gastropub and American casual dining",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "ownership_type": {
+      "value": "Private — restaurant group",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "operating_structure": {
+      "value": "Canonical pack does not populate a reliable company/franchise ownership split for this brand.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "conflicts_notes": {
+      "value": "Canonical company/franchise split is not populated; do not infer it.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    }
+  },
+  "synopsis": {
+    "value": "Thirsty Lion Gastropub is a gastropub and american casual dining brand. Its ownership maps to Concept Entertainment Group / Thirsty Lion. Canonical pack does not populate a reliable company/franchise ownership split for this brand. The operating split remains qualified rather than inferred. For RBB, the CoS view is to identify the true technology decision center and prioritize solutions that make or save money, simplify manager/staff work, or measurably improve guest experience. POS/payments, digital ordering and loyalty, labor, throughput, reliability and restaurant-level ROI remain the core filters.",
+    "status": "reported",
+    "evidence_ids": [
+      "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+    ],
+    "confidence": "medium",
+    "as_of": "2026-09-29",
+    "scope": "brand",
+    "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": 13.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchised_units": {
+      "value": 0.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "company_owned_units": {
+      "value": 13.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [],
+  "pain_points": [],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-29T10:38:38Z",
+  "updated_at": "2026-09-29T10:39:32Z",
+  "trajectory": {
+    "badge": "Growing",
+    "metric_used": "unit_delta_pct",
+    "value_pct": 8.333333333333332,
+    "as_of_year": "2024",
+    "underlying": {
+      "system_sales_usd": 66600000.0,
+      "unit_count": 13.0,
+      "auv_usd": 5737000.0,
+      "sales_delta_pct": -0.5034584758803053,
+      "units_delta_pct": 8.333333333333332
+    },
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

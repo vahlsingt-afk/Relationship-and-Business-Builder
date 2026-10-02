@@ -1,0 +1,29 @@
+{
+  "subject_id": "subject-stratacache",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-27T09:18:36Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/stratacache/current/STRATACACHE_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-29T09:19:10Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/stratacache/current/STRATACACHE_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-10-01T10:43:16Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/stratacache/current/STRATACACHE_Competitive-Brief.md",
+      "superseded": false
+    }
+  ]
+}

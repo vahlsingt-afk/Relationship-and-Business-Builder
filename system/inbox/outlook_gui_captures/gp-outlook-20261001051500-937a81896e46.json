@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-01T05:15:00-05:00",
+  "account_id": "global-payments",
+  "source": "outlook_computer_use",
+  "window_days": 7,
+  "inbox": [
+    {
+      "counterpart_name": "Global Payments Perks at Work",
+      "counterpart_email": null,
+      "subject": "The Employee Car Buying Program",
+      "received_at": "2026-10-01T00:52:00-05:00",
+      "unread": true
+    },
+    {
+      "counterpart_name": "noreply",
+      "counterpart_email": null,
+      "subject": "Your password will expire in 4 days.",
+      "received_at": "2026-10-01T00:08:00-05:00",
+      "unread": true
+    },
+    {
+      "counterpart_name": "Corporate Communications",
+      "counterpart_email": null,
+      "subject": "What to expect - One Workday launch",
+      "received_at": "2026-09-30",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Nichole Viviani",
+      "counterpart_email": null,
+      "subject": "See your path. Own your growth. Take your career global.",
+      "received_at": "2026-09-30",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Bailey, Bryan (WP)",
+      "counterpart_email": null,
+      "subject": "RE: Restaurant Technology at Five Guys",
+      "received_at": "2026-09-30",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Churchwell, Avery (WP)",
+      "counterpart_email": null,
+      "subject": "Automatic reply: Restaurant Technology at Five Guys",
+      "received_at": "2026-09-30",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Emburse Professional",
+      "counterpart_email": null,
+      "subject": "Your Report Has Been Approved and Sent for Further Review",
+      "received_at": "2026-09-30",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Ryan Hildebrand",
+      "counterpart_email": null,
+      "subject": "Re: Restaurant Technology at Five Guys",
+      "received_at": "2026-09-30",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Douglas, Melissa (WP)",
+      "counterpart_email": null,
+      "subject": "FW: Restaurant Technology at Five Guys",
+      "received_at": "2026-09-30",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Emburse Professional",
+      "counterpart_email": null,
+      "subject": "Password Changed",
+      "received_at": "2026-09-30",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Emburse Professional",
+      "counterpart_email": null,
+      "subject": "Emburse Professional Wallet Expense Import Notification",
+      "received_at": "2026-09-30",
+      "unread": false
+    }
+  ],
+  "sent": [
+    {
+      "counterpart_name": "Ryan Hildebrand, Michael Estabrooks",
+      "counterpart_email": null,
+      "subject": "Pollo Campero pricing part 2",
+      "sent_at": "2026-09-30"
+    },
+    {
+      "counterpart_name": "Bailey, Bryan (WP), Douglas, Melissa (WP), Churchwell, Avery (WP)",
+      "counterpart_email": null,
+      "subject": "Re: Restaurant Technology at Five Guys",
+      "sent_at": "2026-09-30"
+    },
+    {
+      "counterpart_name": "Douglas, Melissa (WP), Churchwell, Avery (WP), Bailey, Bryan (WP)",
+      "counterpart_email": null,
+      "subject": "Re: Restaurant Technology at Five Guys",
+      "sent_at": "2026-09-30"
+    },
+    {
+      "counterpart_name": "Ryan Hildebrand",
+      "counterpart_email": null,
+      "subject": "FW: Restaurant Technology at Five Guys",
+      "sent_at": "2026-09-30"
+    },
+    {
+      "counterpart_name": "Claire Whelen",
+      "counterpart_email": null,
+      "subject": "Accepted: Regroup - WP BackBook ICP Review",
+      "sent_at": "2026-09-30"
+    },
+    {
+      "counterpart_name": "Claire Whelen",
+      "counterpart_email": null,
+      "subject": "Todd Vahlsing shared \"Worldpay_Master_Account_Plan_2026-09-30_DEEPENED\" with you",
+      "sent_at": "2026-09-30"
+    },
+    {
+      "counterpart_name": "Mary Santiago, Ryan Hildebrand, Timothy Bucci",
+      "counterpart_email": null,
+      "subject": "Pollo Campero DMB Location Mix for Today\u2019s Meeting",
+      "sent_at": "2026-09-30"
+    }
+  ],
+  "calendar": [
+    {
+      "title": "Pollo Campero pricing part 2",
+      "date": "2026-10-01",
+      "start": "2026-10-01T09:00:00-05:00",
+      "end": "2026-10-01T09:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Thursday)",
+      "date": "2026-10-01",
+      "start": "2026-10-01T09:30:00-05:00",
+      "end": "2026-10-01T10:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "A Little Friday - Sales Town Hall Series",
+      "date": "2026-10-01",
+      "start": "2026-10-01T10:30:00-05:00",
+      "end": "2026-10-01T11:30:00-05:00",
+      "location": "Gong"
+    },
+    {
+      "title": "Learning from Your Previous Experiences",
+      "date": "2026-10-02",
+      "start": "2026-10-02",
+      "end": null,
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Monday)",
+      "date": "2026-10-05",
+      "start": "2026-10-05T09:00:00-05:00",
+      "end": "2026-10-05T09:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Connect with Jeff Coffland - McDonalds",
+      "date": "2026-10-05",
+      "start": "2026-10-05T09:30:00-05:00",
+      "end": "2026-10-05T10:00:00-05:00",
+      "location": null
+    },
+    {
+      "title": "WP BackBook Sales/Marketing Weekly Sync",
+      "date": "2026-10-06",
+      "start": "2026-10-06T10:30:00-05:00",
+      "end": "2026-10-06T11:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Josh/Todd connect - DMB/DTD",
+      "date": "2026-10-07",
+      "start": "2026-10-07T09:30:00-05:00",
+      "end": "2026-10-07T10:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    }
+  ]
+}

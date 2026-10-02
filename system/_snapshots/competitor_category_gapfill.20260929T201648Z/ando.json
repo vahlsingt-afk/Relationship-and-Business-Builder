@@ -1,0 +1,48 @@
+{
+  "competitor_id": "comp-ando",
+  "competitor_slug": "ando",
+  "display_name": "Ando",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:30Z",
+  "latest_cos_commentary": {
+    "headline": "Ando was David Chang's app-only delivery restaurant concept, acquired by Uber Eats in January 2018, and has not operated independently since.",
+    "genius_exposure": "None currently — Ando is defunct as a standalone company and never competed directly on pos/payments; it was a delivery-only restaurant concept, not a technology platform vendor.",
+    "competitive_timing": "No current activity; this entity appears to be a legacy/stale record.",
+    "sales_response": "Not a live competitive consideration in any current sales conversation.",
+    "risk_and_uncertainty": "Recommend confirming whether this vendor record should remain active in the competitor-tracking system, since the only sourceable facts are an 8-year-old acquisition and shutdown.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 8
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 8,
+    "pack_claim_count": 1,
+    "pack_claims_with_url": 1,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 1,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "confirm whether this entity should be retired from active competitor tracking"
+      ]
+    }
+  }
+}

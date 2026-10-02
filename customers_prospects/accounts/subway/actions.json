@@ -1,0 +1,41 @@
+{
+  "account_id": "acct-subway",
+  "actions": [
+    {
+      "action_id": "act-subway-001",
+      "opportunity_id": "opp-subway-na-connected-restaurant-rfp",
+      "type": "internal",
+      "issue": "Bid scope and owners",
+      "description": "Align Genius and Worldpay bid/account teams, confirm scopes and owners.",
+      "owner": "Nicholas Hulayew / Stacey (surname to confirm)",
+      "target": "Before internal draft target 2026-09-18",
+      "status": "open",
+      "closure_criteria": "Named team, scope decision, account handoff owner.",
+      "blocker": "Owner and completion evidence pending"
+    },
+    {
+      "action_id": "act-subway-002",
+      "opportunity_id": "opp-subway-na-connected-restaurant-rfp",
+      "type": "response",
+      "issue": "Integration proof",
+      "description": "Resolve SPOS kiosk integration, payment pairing, Canopy, Fresh Connect, network and ADA gaps.",
+      "owner": "Andy Grindstaff / assigned integration owner",
+      "target": "Before submission 2026-09-22",
+      "status": "open",
+      "closure_criteria": "Every applicable RFP integration response backed by evidence.",
+      "blocker": "Owner and completion evidence pending"
+    },
+    {
+      "action_id": "act-subway-003",
+      "opportunity_id": "opp-subway-na-connected-restaurant-rfp",
+      "type": "response",
+      "issue": "Pricing and capacity",
+      "description": "Complete hardware, installation and DMB grids with quantified rollout capacity and per-store economics.",
+      "owner": "Commercial lead to assign; pricing workbook owner Michael",
+      "target": "Before submission 2026-09-22",
+      "status": "open",
+      "closure_criteria": "All applicable pricing cells and capacity answers approved.",
+      "blocker": "Owner and completion evidence pending"
+    }
+  ]
+}

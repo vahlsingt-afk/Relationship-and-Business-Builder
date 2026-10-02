@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:RBB Diagnostic Test Contact
+N:Contact;RBB Diagnostic Test;;;
+ORG:BridgePoint Test Lab
+TITLE:Diagnostic Validation Contact
+EMAIL;TYPE=INTERNET:rbb.diagnostic.test.contact@example.com
+TEL;TYPE=CELL:+15550109999
+NOTE:Synthetic diagnostic contact for RBB validation. Not a real person.
+END:VCARD

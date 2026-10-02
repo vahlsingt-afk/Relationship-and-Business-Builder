@@ -1,0 +1,51 @@
+{
+  "title": "LinkedIn solicitation assessment canonical CoS evaluation gap",
+  "captured_at": "2026-05-19T12:00:00-05:00",
+  "trace_type": "field_defect",
+  "source": "ChatGPT Custom GPT / operator supplied summary",
+  "operator": "Todd Vahlsing",
+  "summary": "A low-value LinkedIn solicitation was correctly recognized as spam-like, but the response stayed in smart advisory commentary instead of canonical RB operational judgment. Missing fields included classification, trust/relevance/risk, workflow disposition, confidence, persistence recommendation, and explicit noise suppression.",
+  "observed_issue": "Good advice was not sufficient: the response did not produce machine-usable CoS decision support for a low-value manual LinkedIn signal.",
+  "steps": [
+    {
+      "step": 1,
+      "user_prompt": "User supplied screenshot of inbound LinkedIn DM from Jeremy Collins promoting LinkedIn growth/engagement services via socideveloper.com.",
+      "assistant_response": "Classified outreach as likely spam/low-value engagement solicitation and advised avoid engagement, maintain authentic executive positioning, and prioritize real industry relationships over vanity metrics.",
+      "intended_operation": "Manual LinkedIn/message signal assessment",
+      "endpoint": "none; conversational assessment only",
+      "response_status": "not_applicable",
+      "response_summary": "Directionally correct but advisory; lacked canonical RB classification and workflow disposition.",
+      "observed_issue": "No relationship classification, operational decision state, confidence score, machine-usable signal extraction, or persistence recommendation."
+    },
+    {
+      "step": 2,
+      "user_prompt": "assess this output from the CoS point of view - is this sufficient and is it cannonical",
+      "assistant_response": "Evaluated the prior answer as directionally correct but not canonical; identified missing structured operationalization and produced a canonical target response example.",
+      "intended_operation": "CoS canonicality review",
+      "endpoint": "none; conversational review only",
+      "response_status": "not_applicable",
+      "response_summary": "Correctly surfaced the architectural gap: RB must classify, operationalize, suppress noise, preserve executive attention, and produce reusable structured judgment."
+    }
+  ],
+  "defects": [
+    {
+      "id": "MANUAL-LI-COS-SCHEMA-001",
+      "title": "Manual LinkedIn solicitation assessment lacks mandatory CoS decision schema",
+      "severity": "medium",
+      "recommendation": "Require relationship value, trust signal, strategic relevance, signal type, risk, action, workflow disposition, persistence recommendation, and confidence for manual LinkedIn/message assessments."
+    },
+    {
+      "id": "NOISE-SUPPRESSION-DISPOSITION-001",
+      "title": "Low-value solicitation was not explicitly resolved into a no-action suppression state",
+      "severity": "medium",
+      "recommendation": "Low-value solicitations should terminate quickly with action=ignore, workflow=suppress/archive, persist_ri=no, loop=none, and a short governance reason."
+    },
+    {
+      "id": "ADVISORY-MODE-DRIFT-001",
+      "title": "Response drifted into smart advisor prose instead of reusable operational judgment",
+      "severity": "medium",
+      "recommendation": "Harden the Custom GPT prompt so manual social/message signal assessments cannot be satisfied by freeform commentary alone."
+    }
+  ],
+  "trace_id": "T-2026-05-19-007"
+}

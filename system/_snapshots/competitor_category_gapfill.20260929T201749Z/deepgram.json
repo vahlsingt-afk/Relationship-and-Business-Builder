@@ -1,0 +1,210 @@
+{
+  "competitor_id": "comp-deepgram",
+  "competitor_slug": "deepgram",
+  "display_name": "Deepgram",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [
+    "kitchen_drive_thru"
+  ],
+  "positioning_summary": "Deepgram currently markets restaurant-facing capabilities across drive thru ai, ai solution 1, reservations guest management.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T20:16:48Z",
+  "latest_cos_commentary": {
+    "headline": "Direct Genius overlap identified.",
+    "genius_exposure": [
+      "kitchen_drive_thru"
+    ],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Validate account-level incumbent and deployment scope before competitive positioning.",
+    "risk_and_uncertainty": "Long-tail evidence quality varies; unresolved vendors were left unclassified rather than guessed.",
+    "priority": "P2",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://deepgram.com/solutions/restaurants",
+        "title": "Deepgram for Restaurants",
+        "publisher": "Deepgram",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 27,
+    "pack_claim_count": 4,
+    "pack_claims_with_url": 4,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": true,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "named restaurant customer disclosure",
+        "pricing model",
+        "current leadership beyond founder/CEO"
+      ]
+    }
+  },
+  "canonical_company_name": "Deepgram",
+  "website": "https://deepgram.com/solutions/restaurants",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://deepgram.com/solutions/restaurants",
+        "title": "Deepgram for Restaurants",
+        "publisher": "Deepgram",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "product_line_competitor",
+  "restaurant_tech_categories": [
+    {
+      "category": "drive_thru_ai",
+      "basis": "Current restaurant-specific evidence supports drive thru ai for Deepgram.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://deepgram.com/solutions/restaurants",
+          "title": "Deepgram for Restaurants",
+          "publisher": "Deepgram",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "ai_solution_1",
+      "basis": "Current restaurant-specific evidence supports ai solution 1 for Deepgram.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://deepgram.com/solutions/restaurants",
+          "title": "Deepgram for Restaurants",
+          "publisher": "Deepgram",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "reservations_guest_management",
+      "basis": "Current restaurant-specific evidence supports reservations guest management for Deepgram.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://deepgram.com/solutions/restaurants",
+          "title": "Deepgram for Restaurants",
+          "publisher": "Deepgram",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "Deepgram Voice AI Ordering (drive_thru_ai, ai_solution_1, reservations_guest_management)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://deepgram.com/solutions/restaurants",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Audio Intelligence (drive_thru_ai, ai_solution_1, reservations_guest_management)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://deepgram.com/solutions/restaurants",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Employee Assist (drive_thru_ai, ai_solution_1, reservations_guest_management)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://deepgram.com/solutions/restaurants",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Current restaurant-specific product/use-case evidence exists in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://deepgram.com/solutions/restaurants",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated evidence is not independent proof of ROI, reliability, implementation quality, or systemwide adoption. Independent validation remains incomplete in this bounded gap-fill pass.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://deepgram.com/solutions/restaurants",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [],
+  "product_lineage": []
+}

@@ -1,0 +1,722 @@
+[
+  {
+    "brand": "Taco Bell",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/resource/mas-taco-bell-case-study-delaget-and-dailypay/"
+  },
+  {
+    "brand": "Taco Bell",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/smooth-roll-out-of-restaurant365-at-blcos-29-kfc-taco-bell-and-aw-locations-kicks-off-efficiency-gains/"
+  },
+  {
+    "brand": "Panera Bread",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/blog/customer-spotlight-how-panera-bread-drives-customer-loyalty-and-empowers-teams"
+  },
+  {
+    "brand": "Jack in the Box",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/in-the-news/jack-in-the-box-selects-restaurant365-as-its-sole-back-office-inventory-platform/"
+  },
+  {
+    "brand": "Papa Johns",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/news-coverage/papa-johns-partners-with-par-technology-to-power-pos-and-ops-transformation-across-3200-u-s-restaurants/"
+  },
+  {
+    "brand": "Cracker Barrel",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/cracker-barrel-old-country-store-selects-crunchtime"
+  },
+  {
+    "brand": "Cracker Barrel",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/cracker-barrel-selects-crunchtime"
+  },
+  {
+    "brand": "Five Guys",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/five-guys-ny-streamlines-operations-and-scales-with-paperchase-and-restaurant365/"
+  },
+  {
+    "brand": "Church's Texas Chicken",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/churchs-texas-chicken-selected-par-punchh-to-revolutionize-customer-engagement-and-loyalty/"
+  },
+  {
+    "brand": "Smoothie King",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/smoothie-king-selects-crunchtime-to-improve-profitability-and-efficiency-across-franchise-network"
+  },
+  {
+    "brand": "Cooper's Hawk Winery & Restaurants",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/coopers-hawk-winery-and-restaurant-tracks-100-of-costs/"
+  },
+  {
+    "brand": "Jack's Family Restaurants",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/jacks-family-restaurants-selects-par-technologys-unified-platform-to-power-guest-experience-across-all-locations/"
+  },
+  {
+    "brand": "MOD Pizza",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/mod-pizza-and-par-technology-celebrate-over-10-years-of-partnership-surpassing-5m-loyalty-members/"
+  },
+  {
+    "brand": "Torchy's Tacos",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/torchys-tacos-lights-up-customer-experience-with-new-loyalty-program-powered-by-par-technologys-par-punchh-platform/"
+  },
+  {
+    "brand": "Black Bear Diner",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/black-bear-diner-gains-efficiencies/"
+  },
+  {
+    "brand": "Hungry Howie's Pizza",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/in-the-news/hungry-howies-selects-restaurant365-as-its-systemwide-back-office-operations-platform/"
+  },
+  {
+    "brand": "Taco John's",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/news-coverage/papa-johns-partners-with-par-technology-to-power-pos-and-ops-transformation-across-3200-u-s-restaurants/"
+  },
+  {
+    "brand": "California Pizza Kitchen",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/california-fish-grill-save-1-in-food-costs-at-its-34-locations-thanks-to-restaurant365-reporting-tools/"
+  },
+  {
+    "brand": "Blaze Pizza",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/how-a-blaze-pizza-franchisee-streamlined-operations-across-25-locations/"
+  },
+  {
+    "brand": "Pizza Ranch",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/ihop-franchisee-to-double-footprint-with-restaurant365/"
+  },
+  {
+    "brand": "Pizza Ranch",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/village-inn-franchisee-quadruples-footprint-with-r365/"
+  },
+  {
+    "brand": "Pizza Ranch",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/how-a-jimmy-johns-franchisee-saved-96-hours-and-cut-food-costs-by-2-points/"
+  },
+  {
+    "brand": "Pizza Ranch",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/whataburger-franchisee-tracks-toward-tripling-footprint-with-restaurant365/"
+  },
+  {
+    "brand": "Pizza Ranch",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/taco-johns-franchisee-saves-2-5-on-food-costs-in-first-year-with-r365/"
+  },
+  {
+    "brand": "Pizza Ranch",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/carls-jr-franchisee-sdc-restaurants-llc-streamlines-accounting-processes-by-50-with-r365/"
+  },
+  {
+    "brand": "Pizza Ranch",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/lion-chaser-development-group-preps-daves-hot-chicken-franchisees-for-growth/"
+  },
+  {
+    "brand": "Pizza Ranch",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/tropical-smoothie-cafe-franchisee-wins-with-restaurant365-accounting/"
+  },
+  {
+    "brand": "Pizza Ranch",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/how-a-blaze-pizza-franchisee-streamlined-operations-across-25-locations/"
+  },
+  {
+    "brand": "Long John Silver's",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/resource/long-john-silvers-and-delageat-coach-case-study/"
+  },
+  {
+    "brand": "Sbarro",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/how-pizza-icon-sbarro-thrives-with-real-time-data/"
+  },
+  {
+    "brand": "Kura Sushi",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/kura-sushi-usa-selects-crunchtime"
+  },
+  {
+    "brand": "Village Inn",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/village-inn-franchisee-quadruples-footprint-with-r365/"
+  },
+  {
+    "brand": "California Fish Grill",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/california-fish-grill-save-1-in-food-costs-at-its-34-locations-thanks-to-restaurant365-reporting-tools/"
+  },
+  {
+    "brand": "Taco Bueno",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/taco-bueno-selects-par-technology-to-elevate-restaurant-operations-and-scale-growth/"
+  },
+  {
+    "brand": "Kona Grill",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/kona-grill-reduces-costs-1-5/"
+  },
+  {
+    "brand": "Gong Cha",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/blog/customer-spotlight-gong-chas-franchise-business-leader-rebecca-kahn"
+  },
+  {
+    "brand": "Gong Cha",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/blog/3-key-ways-pressed-juicery-gong-cha-and-global-partners-elevate-brand-standards-in-every-store"
+  },
+  {
+    "brand": "Pizza Factory",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/pizza-factory-selects-par-technologys-unified-platform-to-power-restaurant-operations-and-digital-growth/"
+  },
+  {
+    "brand": "Luby's",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/how-lubys-replaced-a-fragmented-back-office-stack-with-a-single-unified-platform/"
+  },
+  {
+    "brand": "Burgerville",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/ct-blog/burgerville-partnership"
+  },
+  {
+    "brand": "Burgerville",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/blog/blog/customer-interview-burgerville"
+  },
+  {
+    "brand": "Snarf's Sandwiches",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/snarfs-sandwiches-slices-food-cost-by-4/"
+  },
+  {
+    "brand": "Le Pain Quotidien",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/le-pain-quotidien-selects-crunchtime-back-office-solution"
+  },
+  {
+    "brand": "Mr. Pickle's Sandwich Shop",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/mr-pickles-sandwich-shop-deepens-decade-long-partnership-with-par-technology-adds-loyalty-and-ordering-to-drive-engagement/"
+  },
+  {
+    "brand": "Fuddruckers",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/fuddruckers-selects-crunchtime-back-office-solution"
+  },
+  {
+    "brand": "Gold Star Chili",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/gold-star-chili-expands-partnership-with-par-technology-to-fully-unified-platform/"
+  },
+  {
+    "brand": "Au Bon Pain",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/au-bon-pain-partnership"
+  },
+  {
+    "brand": "Au Bon Pain",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/au-bon-pain-selects-crunchtime-back-office-solution"
+  },
+  {
+    "brand": "Pressed Juicery",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/blog/3-key-ways-pressed-juicery-gong-cha-and-global-partners-elevate-brand-standards-in-every-store"
+  },
+  {
+    "brand": "Boudin Bakery",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/boudin-bakery-selects-crunchtime-for-back-office-business-intelligence-and-team-management"
+  },
+  {
+    "brand": "Matchbox",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/matchbox-llc-finds-its-perfect-match/"
+  },
+  {
+    "brand": "Stand Restaurants, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/blog/3-key-ways-pressed-juicery-gong-cha-and-global-partners-elevate-brand-standards-in-every-store"
+  },
+  {
+    "brand": "Stand Restaurants, The",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/blog/metric-monday-understanding-customer-satisfaction-metrics/"
+  },
+  {
+    "brand": "Black Rock Bar & Grill",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/how-black-rock-coffee-bar-built-scalable-systems-and-stronger-leadership/"
+  },
+  {
+    "brand": "Winking Lizard Tavern",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/winking-lizard-tavern-increases-employee-training-engagement-by-2000-training-completions-monthly/"
+  },
+  {
+    "brand": "Ward's Restaurant",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/crunchtime-named-as-finalist-in-2012-stevie-awards-for-sales-and-customer-service"
+  },
+  {
+    "brand": "Ward's Restaurant",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/2025/03/25/eg-america-selects-par-technology-to-transform-customer-loyalty-with-their-new-smartrewards-program/"
+  },
+  {
+    "brand": "Ward's Restaurant",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/eg-america-selects-par-technology-to-transform-customer-loyalty-with-their-new-smartrewards-program/"
+  },
+  {
+    "brand": "Ward's Restaurant",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/par-technologys-punchh-annual-customer-awards-celebrates-leaders-in-loyalty/"
+  },
+  {
+    "brand": "Ward's Restaurant",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/raceway-selects-par-technology-to-power-its-new-rewards-program/"
+  },
+  {
+    "brand": "Ward's Restaurant",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/par-technology-announces-winners-of-the-par-engagement-customer-awards/"
+  },
+  {
+    "brand": "Ward's Restaurant",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/blog/introducing-restaurant365-customer-excellence-awards-2025/"
+  },
+  {
+    "brand": "Ward's Restaurant",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/in-the-news/restaurant365-announces-winners-of-the-2025-customer-excellence-awards/"
+  },
+  {
+    "brand": "Luke's Lobster",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/lukes-lobster/"
+  },
+  {
+    "brand": "Planta Restaurants",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/garden-fresh-restaurant-corporation-selected-crunchtime-to-power-souplantation-sweet-tomatoes-back-office-operations"
+  },
+  {
+    "brand": "Layne's Chicken Fingers",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/laynes-chicken-fingers-selects-par-technology-to-power-loyalty-and-ordering-as-brand-accelerates-growth/"
+  },
+  {
+    "brand": "Calif Chicken Cafe",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/california-fish-grill-save-1-in-food-costs-at-its-34-locations-thanks-to-restaurant365-reporting-tools/"
+  },
+  {
+    "brand": "Taco Stand, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/blog/3-key-ways-pressed-juicery-gong-cha-and-global-partners-elevate-brand-standards-in-every-store"
+  },
+  {
+    "brand": "Taco Stand, The",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/blog/metric-monday-understanding-customer-satisfaction-metrics/"
+  },
+  {
+    "brand": "Big Chicken",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/2022/06/29/big-chicken-selects-par-technologys-brink-data-central-and-par-pay-to-streamline-digital-operations/"
+  },
+  {
+    "brand": "Big Chicken",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/resource/big-chickens-partnership-with-par-technology-is-a-slam-dunk/"
+  },
+  {
+    "brand": "Burger Village",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/village-inn-franchisee-quadruples-footprint-with-r365/"
+  },
+  {
+    "brand": "Country Kitchen",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/cracker-barrel-old-country-store-selects-crunchtime"
+  },
+  {
+    "brand": "Kerbey Lane Cafe",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/case-studies/kerbey-lane-cuts-costs-and-improves-efficiency/"
+  },
+  {
+    "brand": "Daily Grill",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/resource/mas-taco-bell-case-study-delaget-and-dailypay/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/kura-sushi-usa-selects-crunchtime"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/smoothie-king-selects-crunchtime-to-improve-profitability-and-efficiency-across-franchise-network"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/buffets-inc-selects-crunchtime-back-office-solution"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/blog/3-key-ways-pressed-juicery-gong-cha-and-global-partners-elevate-brand-standards-in-every-store"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/garden-fresh-restaurant-corporation-selected-crunchtime-to-power-souplantation-sweet-tomatoes-back-office-operations"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/crunchtime-named-as-finalist-in-2012-stevie-awards-for-sales-and-customer-service"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/native-new-yorker-wings-grill-selects-crunchtime-to-power-their-back-office"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/au-bon-pain-partnership"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/fuddruckers-selects-crunchtime-back-office-solution"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/the-briad-group-partnership"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/cracker-barrel-old-country-store-selects-crunchtime"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/a-letter-to-our-customers-from-bill-bellissimo-ceo"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/boudin-restaurant-partnership"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/boudin-bakery-selects-crunchtime-for-back-office-business-intelligence-and-team-management"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/crunchtime-appoints-nani-mcdonnell-as-chief-customer-officer-to-elevate-customer-experience"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/food-logistics-selects-crunchtime-announces-its-2013-fl100"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/crunchtime-announces-completion-of-rollout-of-restaurant-back-office-platform-at-amc-theatres"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/le-pain-quotidien-selects-crunchtime-back-office-solution"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/cracker-barrel-selects-crunchtime"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/crunchtime-appoints-new-cxo-to-lead-all-facets-of-customer-experience"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/au-bon-pain-selects-crunchtime-back-office-solution"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "crunchtime",
+    "vendor_entity_id": "vendor-crunchtime",
+    "source_url": "https://www.crunchtime.com/press/crunchtimes-ops-summit-set-to-be-biggest-customer-event-in-its-history"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/par-technology-and-nomadgo-partner-to-revolutionize-restaurant-inventory-management-with-ai-powered-counting-solution/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/par-technology-launches-new-gift-card-solution-to-drive-customer-loyalty-and-revenue/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/torchys-tacos-lights-up-customer-experience-with-new-loyalty-program-powered-by-par-technologys-par-punchh-platform/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/eg-america-selects-par-technology-to-transform-customer-loyalty-with-their-new-smartrewards-program/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/par-technologys-punchh-annual-customer-awards-celebrates-leaders-in-loyalty/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/raceway-selects-par-technology-to-power-its-new-rewards-program/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/taco-bueno-selects-par-technology-to-elevate-restaurant-operations-and-scale-growth/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/laynes-chicken-fingers-selects-par-technology-to-power-loyalty-and-ordering-as-brand-accelerates-growth/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/mr-pickles-sandwich-shop-deepens-decade-long-partnership-with-par-technology-adds-loyalty-and-ordering-to-drive-engagement/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/precitaste-announces-new-partnership-with-par-technology/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/par-punchh-and-yumpingo-partner-to-elevate-customer-experience-for-restaurant-brands/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/churchs-texas-chicken-selected-par-punchh-to-revolutionize-customer-engagement-and-loyalty/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/par-technology-announces-winners-of-the-par-engagement-customer-awards/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/mod-pizza-and-par-technology-celebrate-over-10-years-of-partnership-surpassing-5m-loyalty-members/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/jacks-family-restaurants-selects-par-technologys-unified-platform-to-power-guest-experience-across-all-locations/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/pizza-factory-selects-par-technologys-unified-platform-to-power-restaurant-operations-and-digital-growth/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/bolla-oil-selects-par-technology-to-power-its-first-customer-loyalty-program/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "par",
+    "vendor_entity_id": "vendor-par-technology",
+    "source_url": "https://partech.com/press-releases/gold-star-chili-expands-partnership-with-par-technology-to-fully-unified-platform/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/press/restaurant365-recognizes-new-certified-partners/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/press/compeat-ctuit-announce-customer-benefits-acquisition-progress/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/press/restaurant365-receives-19-5m-in-funding-from-bessemer-venture-partners/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/press/restaurant365-raises-20-million-from-bessemer-venture-partners/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "r365",
+    "vendor_entity_id": "vendor-restaurant365",
+    "source_url": "https://www.restaurant365.com/press/why-todays-customer-experience-requires-technology-human-touch/"
+  }
+]

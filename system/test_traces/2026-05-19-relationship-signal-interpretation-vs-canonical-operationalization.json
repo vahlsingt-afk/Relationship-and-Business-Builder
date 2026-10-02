@@ -1,0 +1,69 @@
+{
+  "title": "Relationship Signal Interpretation vs Canonical Operationalization",
+  "trace_id": "T-2026-05-19-009",
+  "captured_at": "2026-05-19T13:30:00-05:00",
+  "trace_type": "field_defect",
+  "source": "ChatGPT manual SMS/iMessage screenshot assessment",
+  "operator": "Todd",
+  "summary": "Manual Jeff Coffland SMS/iMessage exchange produced useful qualitative relationship interpretation but no canonical RB signal scores, trust stats, state mutation plan, loop updates, DRR projection, or persistence evidence.",
+  "observed_issue": "Helpful relationship commentary is not sufficient. RB must operationalize relationship intelligence into measurable, persistent, traceable state.",
+  "steps": [
+    {
+      "step": 1,
+      "user_prompt": "SMS/iMessage exchange with Jeff Coffland: emotional check-in, job search discussion, Genius migration/help desk commentary, company recommendations, Unisys assistance offer, Harri investigation through McDonald's VMO contacts, continued supportive engagement.",
+      "intended_operation": "manual_relationship_intake",
+      "endpoint": null,
+      "response_summary": "Original response produced qualitative relationship interpretation only.",
+      "observed_issue": "The assistant correctly understood the relationship but did not return machine-actionable RB state."
+    },
+    {
+      "step": 2,
+      "user_feedback": "There were no trust stats; this was helpful but non-canonical, more prose than anything else.",
+      "response_summary": "Canonical output requirement clarified: structured signals, quantified trust intelligence, persistent mutation plan, observable operational outputs.",
+      "observed_issue": "No stats or mutation visibility were shown, so the response could not be audited or persisted."
+    },
+    {
+      "step": 3,
+      "intended_operation": "implement_manual_relationship_intake",
+      "endpoint": "POST /manual_relationship_intake",
+      "response_summary": "Added deterministic manual RI classifier plus API endpoint; regenerated OpenAPI schemas; verified Jeff sample produces structured outputs and proposed writes.",
+      "post_validation": "manual_relationship_intake.py returned relationship_warmth, advocacy_signal, sponsorship_signal, insider_access_signal, opportunity_signal, trust metrics, DRR projection, touchContact candidate, and loopAdd candidate."
+    }
+  ],
+  "defects": [
+    {
+      "id": "MANUAL-RI-CANONICALIZATION-001",
+      "title": "Manual relationship artifacts produced prose instead of RB state",
+      "severity": "high",
+      "recommendation": "Route manual screenshots and pasted messages through manual_relationship_intake before responding."
+    },
+    {
+      "id": "TRUST-STATS-VISIBILITY-001",
+      "title": "Trust metrics were not surfaced",
+      "severity": "high",
+      "recommendation": "Manual RI responses must include trust score, advocacy probability, sponsor probability, strategic value, dormancy risk, and DRR projection when a baseline match exists."
+    },
+    {
+      "id": "MUTATION-VISIBILITY-001",
+      "title": "No RC/loop/DRR mutation evidence was visible",
+      "severity": "high",
+      "recommendation": "Manual RI responses must show writes performed, writes pending confirmation, blocked writes, and post-write validation requirements."
+    }
+  ],
+  "regression_sample": {
+    "command": "python3 system/scripts/manual_relationship_intake.py --id jeff-coffland --event-at 2026-05-19 --captured-at 2026-05-19 --text \"Jeff said Been thinking about you, discussed job search and industry transitions, commented on Genius migration and help desk risk, recommended companies and opportunities, offered to assist with Unisys internally, and offered to investigate Harri via McDonald's VMO contacts.\"",
+    "expected_signal_types": [
+      "relationship_warmth",
+      "advocacy_signal",
+      "sponsorship_signal",
+      "insider_access_signal",
+      "opportunity_signal"
+    ],
+    "expected_outputs": [
+      "trust metrics",
+      "DRR projection",
+      "proposed touchContact",
+      "proposed loopAdd"
+    ]
+  }
+}

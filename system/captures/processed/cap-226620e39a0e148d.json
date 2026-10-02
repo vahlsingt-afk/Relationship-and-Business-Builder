@@ -1,0 +1,62 @@
+{
+  "file_id": "cap-226620e39a0e148d",
+  "queued_at": "2026-09-27T09:17:45+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-26_1305_acrelec-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-26_1305_acrelec-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260926-1305-acrelec-validation`\n- Research system: `ChatGPT Deep Research`\n- Started at: `2026-09-26 13:05 CDT`\n- Completed at: `2026-09-26 13:07 CDT`\n- Research scope: Direct-competitor customer-page mining\n- Queue item or vendor: `competitor:acrelec`\n- Methodology: Four first-party Acrelec customer case studies were opened and assessed. Vendor-authored results remain attributed claims and were not written into canonical records.\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 4\n- Company/competitor profile observations added or revised: 0\n- Conflicts found: 1\n- Material takeaway: Acrelec has named, product-specific self-service deployments at BIM'S, Steak 'n Shake, Jollibee UK, and Dunkin U.S. The pages show credible kiosk hardware, ordering software, POS, loyalty, and cash-automation integration depth, but three sources describe 2021-era deployments and none establishes a current 2026 global estate.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: BIM'S\n- Vendor: Acrelec; Glory\n- Product or category: K27 self-service kiosk; CI-Hybrid 15 cash automation; payment and loyalty scanning\n- Relationship indication: customer\n- Deployment scope: location-level\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: Acrelec's dated first-party case study names BIM'S and its managing director, identifies the products, and describes the second London restaurant deployment.\n- Source title: Passion for Customer Service: BIM'S Installs Joint Kiosk & Cash Self-Service Solution\n- Source URL: https://acrelec.com/casestudies/passion-for-customer-service-bims-installs-joint-kiosk-cash-self-service-solution/\n- Publisher or source owner: Acrelec\n- Published date, if known: 2023-06-08\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: The case study says BIM'S installed Acrelec's K27 kiosk integrated with Glory's CI-Hybrid 15 payment station when opening its second restaurant; the named executive reports 25% more sales through self-service than the counter till.\n- Product-specific evidence: K27 self-ordering, CI-Hybrid 15 cash handling, card and mobile-wallet payments, barcode-scanner loyalty support, and cash/card payment choice.\n- Conflicting or limiting evidence: This is a vendor-authored result from one newly opened location; it does not establish deployment across a larger BIM'S estate or continued use in 2026.\n- Recommended follow-up: Confirm the current BIM'S location count, live kiosk estate, and software/POS integration.\n\n### Observation 2\n\n- Brand: Steak 'n Shake\n- Vendor: Acrelec\n- Product or category: DOT15 and planned K22 PRO self-ordering kiosks; DOT19 application; Aloha and Glory CI integration\n- Relationship indication: customer\n- Deployment scope: historical\n- Evidence type: case study\n- Confidence: 90%\n- Confidence rationale: Acrelec's dated first-party case study explicitly names Steak 'n Shake inside the deployment narrative and reports observed pilot and rollout counts.\n- Source title: Cooking up self-service for America's leading steakburger restaurant\n- Source URL: https://acrelec.com/casestudies/cooking-up-self-service-for-americas-leading-steakburger-restaurant/\n- Publisher or source owner: Acrelec\n- Published date, if known: 2021-10-28\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: Acrelec reports a DOT15 pilot at select Steak 'n Shake locations, deployment at more than 60 locations, and a plan to install K22 PRO kiosks at 500 stores by the end of 2021.\n- Product-specific evidence: Self-ordering hardware and UI, real-time Aloha POS communication, Glory CI cash-management integration, upsell and limited-time-offer logic, loyalty and scanning features, and ADA-oriented interaction design.\n- Conflicting or limiting evidence: The page shifts from DOT15 pilot hardware to a planned K22 PRO rollout and future DOT19 application. The 500-store figure is a 2021 plan, not proof of completed rollout or current 2026 use.\n- Recommended follow-up: Locate a current Steak 'n Shake technology source confirming live kiosk count and which Acrelec hardware/software generation remains deployed.\n\n### Observation 3\n\n- Brand: Jollibee\n- Vendor: Acrelec\n- Product or category: K27 self-ordering kiosks; DOT XIX software; NCR/Aloha POS integration\n- Relationship indication: customer\n- Deployment scope: regional\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: Acrelec's dated first-party case study names Jollibee, the UK pilot, installed kiosk and location counts, and specific software and POS integrations.\n- Source title: Upselling the joy of chicken with Jollibee\n- Source URL: https://acrelec.com/casestudies/upselling-the-joy-of-chicken-with-jollibee/\n- Publisher or source owner: Acrelec\n- Published date, if known: 2021-09-23\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: Acrelec reports that a Leicester Square pilot was followed by 17 additional K27 kiosks at four UK locations by the end of June 2021.\n- Product-specific evidence: K27 hardware, DOT XIX UI and ordering software, Barclays EFT reader, personalized upsells and limited-time offers, NCR/Aloha real-time POS integration, and dine-in/takeaway modes.\n- Conflicting or limiting evidence: The source is UK-scoped and historical. Five additional sites, 15-20 more sites, a drive-thru, content management, digital menu boards, and Philippines expansion were plans under discussion, not completed deployments.\n- Recommended follow-up: Confirm the current UK estate and whether Acrelec expanded beyond the original UK deployment.\n\n### Observation 4\n\n- Brand: Dunkin'\n- Vendor: Acrelec\n- Product or category: K27 self-ordering kiosks; DOT XIX software; Simphony POS, gift-card, and loyalty integration\n- Relationship indication: customer\n- Deployment scope: regional\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: Acrelec's first-party PDF names Dunkin', specific products and integrations, and a measured U.S. rollout count through May 2021.\n- Source title: Customized kiosk solution increases throughput\n- Source URL: https://acrelec.com/wp-content/themes/themeacrelec/assetsv3/landingdunkin/Acrelec_CAESTUDY_dunkin_intranet.pdf\n- Publisher or source owner: Acrelec\n- Published date, if known: 2021\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: The case study says a custom K27 pilot at one busy U.S. store expanded to more than 320 kiosks at over 235 locations through the end of May 2021.\n- Product-specific evidence: K27 hardware with camera and EFT-reader modules, DOT XIX UI, Simphony POS integration, gift cards, loyalty, upsell options, and ADA-oriented interaction design.\n- Conflicting or limiting evidence: The source is historical and U.S.-scoped; the reported 17% average-check lift is vendor-authored and the page does not establish current 2026 use or a systemwide Dunkin' deployment.\n- Recommended follow-up: Verify current live location and kiosk counts and whether the Simphony, loyalty, and gift-card integrations remain active.\n\n## Negative findings\n\n- Candidate or claim: Acrelec's named QSR relationships establish current 2026 global, enterprise-wide deployments.\n- Pages checked: All four pages in the source ledger.\n- Result: Unsupported. BIM'S is location-level; Jollibee is a four-location UK rollout; Dunkin' is a historical partial U.S. rollout; Steak 'n Shake mixes completed 2021 counts with planned expansion.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://acrelec.com/casestudies/passion-for-customer-service-bims-installs-joint-kiosk-cash-self-service-solution/ | case study | 2026-09-26 | 1 | Productive; named K27 plus Glory cash-automation deployment. |\n| https://acrelec.com/casestudies/cooking-up-self-service-for-americas-leading-steakburger-restaurant/ | case study | 2026-09-26 | 2 | Productive historical rollout; planned figures kept separate from completed deployment. |\n| https://acrelec.com/casestudies/upselling-the-joy-of-chicken-with-jollibee/ | case study | 2026-09-26 | 3 | Productive UK deployment evidence with NCR/Aloha integration. |\n| https://acrelec.com/wp-content/themes/themeacrelec/assetsv3/landingdunkin/Acrelec_CAESTUDY_dunkin_intranet.pdf | case study | 2026-09-26 | 4 | Productive historical U.S. deployment evidence with Simphony, loyalty, and gift-card integration. |\n\n## Research notes and inferences\n\n- Inference: Acrelec's competitive strength is end-to-end customization across kiosk hardware, ordering UI, POS, loyalty, payments, and cash automation. This packet does not establish that Acrelec supplies the core POS itself.\n- Inference: The strongest visible large-chain proof in this batch is historical and regionally scoped, so current-estate verification should precede any 2026 competitive installed-base claim.",
+  "word_count": 1200,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-27T09:18:04+00:00",
+  "processing_result": {
+    "triage_stream_count": 3,
+    "noise_only": false,
+    "persisted_count": 3,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-001",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 4 trigger(s): named. Possible named subjects: Productive, Acrelec, Material, Negative, Conflicts, Steak."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-002",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Ncr Voyix' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-003",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Steak 'n Shake, Jollibee, Square, Acrelec. Macro/industry signal detected: 20 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: automation, competitive, competitor, custo"
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "Acrelec",
+        "BIM'S",
+        "Steak 'n Shake",
+        "Jollibee",
+        "Dunkin"
+      ],
+      "topics": [
+        "Acrelec customer case studies",
+        "self-service kiosk deployments",
+        "historical technology rollouts",
+        "current deployment verification"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Confirm the current BIM'S location count, live kiosk estate, and software/POS integration.",
+        "Locate a current Steak 'n Shake technology source confirming live kiosk count and which Acrelec hardware/software generation remains deployed.",
+        "Confirm the current UK estate and whether Acrelec expanded beyond the original UK deployment.",
+        "Verify current live location and kiosk counts and whether the Simphony, loyalty, and gift-card integrations remain active."
+      ],
+      "why_it_matters": "The findings highlight the need for verification of current deployments and technology integration in key customer relationships."
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "subject_id": "subject-presto",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-29T09:19:15Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/presto/current/Presto-vs-Genius_Value-Wedge.json",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-30T09:21:25Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/presto/current/Presto-vs-Genius_Value-Wedge.json",
+      "superseded": false
+    }
+  ]
+}

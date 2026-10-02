@@ -1,0 +1,29 @@
+{
+  "subject_id": "subject-par-technology--brand-mcdonald-s",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-28T15:21:06Z",
+      "generated_for": "todd",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/par-technology--brand-mcdonald-s/current/PAR-Technology-vs-Genius-McDonalds_Value-Wedge.json",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-28T15:30:30Z",
+      "generated_for": "todd",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/par-technology--brand-mcdonald-s/current/PAR-Technology-vs-Genius-McDonalds_Value-Wedge.json",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-29T11:52:27Z",
+      "generated_for": "todd",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/par-technology--brand-mcdonald-s/current/PAR-Technology-vs-Genius-McDonalds_Value-Wedge.json",
+      "superseded": false
+    }
+  ]
+}

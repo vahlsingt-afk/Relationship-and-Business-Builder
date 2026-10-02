@@ -1,0 +1,84 @@
+{
+  "competitor_id": "comp-olo",
+  "competitor_slug": "olo",
+  "display_name": "Olo",
+  "aliases": [],
+  "vendor_entity_id": "vendor-olo",
+  "primary_category": "loyalty",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Loyalty is newly acquired (Spendgo, ~120 brands) — integration still in progress in 2026",
+        "evidence_id": "note-0009",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "Stock fell >65% during 4 years public before take-private",
+        "evidence_id": "note-0010",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "No longer discloses financials post take-private",
+        "evidence_id": "note-0011",
+        "added_at": "2026-09-26T12:23:32Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Dominant enterprise digital-ordering footprint; ~65% of Olo customers already run loyalty programs (cross-sell base)",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "\"Loyalty is foundational to guest engagement, and bringing this in-house lets us move faster\" (Noah Glass, CEO)",
+        "evidence_id": "note-0007",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "Payments partners Stripe and FreedomPay for in-store (Feb 2025)",
+        "evidence_id": "note-0008",
+        "added_at": "2026-09-26T12:23:32Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:47:00Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:00Z",
+  "latest_cos_commentary": {
+    "headline": "Olo spans direct ordering, delivery and payments/loyalty adjacency at multi-unit brands.",
+    "genius_exposure": "Olo spans direct ordering, delivery and payments/loyalty adjacency at multi-unit brands.",
+    "competitive_timing": "Olo announced on September 23 that Scooter’s Coffee digital ordering now runs on Olo and added a first delivery channel. Latest check: Olo’s Winter 2026 release states Olo Loyalty is available, with deeper integration planned.",
+    "sales_response": "Map ordering and delivery orchestration by account before pitching overlapping Genius components.",
+    "risk_and_uncertainty": "The pack labels Olo as Loyalty; its primary category here is digital commerce and ordering. Availability and planned integration should not be conflated with customer adoption.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 11
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 11,
+    "pack_claim_count": 20,
+    "pack_claims_with_url": 18,
+    "pack_claims_inherited_url": 4,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 2,
+      "legacy_claims_need_date_and_current_status_check": 20,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

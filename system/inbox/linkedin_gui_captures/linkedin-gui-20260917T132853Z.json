@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-09-17T13:28:53Z",
+  "source": "linkedin_gui_capture",
+  "scope": "visible_conversation_list",
+  "conversations": [
+    {"name": "Hannah Hall", "display_time": "8:22 AM", "preview": "You: Hey stranger! You going to be at FSTEC?", "unread": false, "sponsored": false},
+    {"name": "Andy EKAA-QINGHUA PENG", "display_time": "6:58 AM", "preview": "Andy EKAA-QINGHUA: Hi Todd, thanks for connecting. Quick intro: I'm Andy, founder of EKAA - we make fanless IP67 outdoor high-brightness displays used for drive-thru menu boards and outdoor kiosks.", "unread": false, "sponsored": false},
+    {"name": "Varshith P", "display_time": "12:51 AM", "preview": "Varshith: Following up on an invitation to join the 13th International L.E.A.D Summit for Women as a speaker.", "unread": false, "sponsored": false},
+    {"name": "Badass Bunch Power Hour", "display_time": "Sep 16", "preview": "WENDY: What a great boss you have", "unread": true, "sponsored": false},
+    {"name": "John McCarthy", "display_time": "Sep 16", "preview": "John: Are you able to join the Zoom?", "unread": false, "sponsored": false},
+    {"name": "Sal Nazir", "display_time": "Sep 16", "preview": "Sal: got it and looking forward to it", "unread": false, "sponsored": false},
+    {"name": "Ian Siegel", "display_time": "Sep 16", "preview": "Sponsored: Try ZipRecruiter for Free Today!", "unread": false, "sponsored": true},
+    {"name": "Atul, Brian, and you", "display_time": "Sep 15", "preview": "Atul: Booked!", "unread": false, "sponsored": false},
+    {"name": "Jane Campbell", "display_time": "Sep 15", "preview": "Jane: We provide targeted and verified email contact lists for outbound campaigns.", "unread": false, "sponsored": false},
+    {"name": "Joseph Cope, M. Ed - The Empathy Guy", "display_time": "Sep 14", "preview": "Joseph Cope, M. Ed: Good stuff! Looks like good work you're doing! Cheers!", "unread": false, "sponsored": false},
+    {"name": "Adrian Olmos", "display_time": "Sep 14", "preview": "InMail: Opportunity for Payment Processing Professionals - Free Clover Placements + Vetted Appointments", "unread": false, "sponsored": false},
+    {"name": "Mark Brage", "display_time": "Sep 14", "preview": "Mark: Hello and thank you for connecting Todd; I look forward to knowing you better.", "unread": false, "sponsored": false},
+    {"name": "Brian Wasserman", "display_time": "Sep 14", "preview": "You: 9:30 your time please", "unread": false, "sponsored": false},
+    {"name": "ABEGAIL TAMAYO", "display_time": "Sep 14", "preview": "InMail: Free administrative assistant?", "unread": false, "sponsored": false},
+    {"name": "DANIEL SETSER", "display_time": "Sep 13", "preview": "DANIEL: Hi Todd, Any open roles for me?", "unread": false, "sponsored": false},
+    {"name": "Claire Hayek", "display_time": "Sep 12", "preview": "Claire: Can you grab a copy of my new book? Would love to catch up soon too!", "unread": false, "sponsored": false},
+    {"name": "Seth Temko", "display_time": "Sep 12", "preview": "Seth: Ohhh... ok", "unread": false, "sponsored": false},
+    {"name": "Vahidin Suljanovic", "display_time": "Sep 10", "preview": "Vahidin: I appreciate the reply though :)", "unread": false, "sponsored": false},
+    {"name": "Rakesh Chandra", "display_time": "Sep 10", "preview": "Rakesh: Thank you. I have received your email address and will forward it to the project team.", "unread": false, "sponsored": false},
+    {"name": "Dhruv Majumdar", "display_time": "Sep 9", "preview": "Dhruv: Thank you so much.", "unread": false, "sponsored": false},
+    {"name": "John Adams", "display_time": "Sep 8", "preview": "John sent a post", "unread": false, "sponsored": false},
+    {"name": "Josh Wesolowski", "display_time": "Sep 8", "preview": "Josh: Thanks Todd", "unread": false, "sponsored": false},
+    {"name": "Krish Gopalakrishnan", "display_time": "Sep 8", "preview": "Krish: Ran into your profile and thought of connecting with you.", "unread": false, "sponsored": false},
+    {"name": "Bijan Hazemi", "display_time": "Sep 8", "preview": "Bijan: Thanks for letting me know", "unread": false, "sponsored": false}
+  ]
+}

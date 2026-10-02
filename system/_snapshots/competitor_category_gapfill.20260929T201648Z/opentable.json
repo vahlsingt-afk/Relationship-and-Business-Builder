@@ -1,0 +1,63 @@
+{
+  "competitor_id": "comp-opentable",
+  "competitor_slug": "opentable",
+  "display_name": "OpenTable",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "OpenTable faces growing competition from Resy and Tock, which merged (both under American Express ownership) to form a reservations marketplace of approximately 25,000 restaurants.",
+        "evidence_id": "note-0002",
+        "added_at": "2026-09-29T15:44:13Z"
+      }
+    ],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:09Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:34Z",
+  "latest_cos_commentary": {
+    "headline": "OpenTable, owned by Booking Holdings, remains the largest restaurant reservations platform by scale (60,000+ restaurants, ~1.8B annual seatings), now facing a serious competitive challenge from the merged Resy/Tock (American Express) marketplace.",
+    "genius_exposure": "Adjacent to Genius primarily through reservation/guest-management touchpoints that intersect with loyalty_engagement and table/guest data; not a direct POS or payments competitor, though reservation data increasingly feeds guest-engagement and CRM use cases.",
+    "competitive_timing": "OpenTable's move to require restaurants to designate it as their primary reservation system, combined with the Resy/Tock merger under American Express, signals active competitive repositioning in the reservations category.",
+    "sales_response": "Reservation-platform choice (OpenTable vs. Resy/Tock) is generally a separate purchasing decision from POS/payments, but it's worth understanding which platform an operator uses since it affects available guest-data integrations for loyalty and CRM use cases.",
+    "risk_and_uncertainty": "Specific terms and dates of the Resy/Tock merger under American Express were not independently verified in this research pass; treat as a reported competitive dynamic pending direct confirmation.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 68
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 68,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Named Customers",
+        "Pricing signals",
+        "Snapshot",
+        "Strengths"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership specifics",
+        "current pricing",
+        "named restaurant customer scope beyond aggregate counts"
+      ]
+    }
+  }
+}

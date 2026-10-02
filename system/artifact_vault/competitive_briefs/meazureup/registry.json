@@ -1,0 +1,29 @@
+{
+  "subject_id": "subject-meazureup",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-27T09:18:38Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/meazureup/current/MeazureUp_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-29T09:19:12Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/meazureup/current/MeazureUp_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-10-01T10:43:18Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/meazureup/current/MeazureUp_Competitive-Brief.md",
+      "superseded": false
+    }
+  ]
+}

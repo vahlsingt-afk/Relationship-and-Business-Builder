@@ -1,0 +1,24 @@
+openapi: 3.1.0
+info:
+  title: RBB Diagnostic Health Check
+  description: "Minimal single-operation schema used only to diagnose whether OpenAI's\
+    \ Custom GPT platform actually invokes Actions for this account/workspace. Not\
+    \ used by the live RBB GPT."
+  version: 0.0.1
+servers:
+- url: https://rb-api.bridgepointops.org
+  description: RB API tunnel
+paths:
+  /health:
+    get:
+      tags:
+      - meta
+      summary: Health Check
+      description: Liveness probe. No auth required. Returns ok:true and the caller's user-agent.
+      operationId: getHealth
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}

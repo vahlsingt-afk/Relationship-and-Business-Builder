@@ -1,0 +1,30 @@
+{
+  "file_id": "cap-3640b0bade26ad38",
+  "queued_at": "2026-09-08T18:19:19+00:00",
+  "source_id": "just_press_record",
+  "source_label": "Just Press Record",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-08/12-57-34.m4a",
+  "capture_type": "meeting",
+  "title_hint": "Just Press Record \u2014 2026-09-08 12-57-34",
+  "transcription_method": "whisper_local",
+  "transcript": "2.5Mb sdb 3.5Mb sdb 3.5Mb sdb 3.5Mb sdb 3.5Mb sdb 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5% 1.5%",
+  "word_count": 206,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-09T09:15:49+00:00",
+  "processing_result": {
+    "triage_stream_count": 0,
+    "noise_only": true,
+    "persisted_count": 0,
+    "persisted_items": [],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [],
+      "topics": [],
+      "decisions": [],
+      "action_items": [],
+      "why_it_matters": "Casual conversation, no follow-up needed."
+    }
+  }
+}

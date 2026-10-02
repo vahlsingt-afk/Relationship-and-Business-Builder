@@ -1,0 +1,295 @@
+{
+  "account_id": "acct-cafe-rio",
+  "questions": [
+    {
+      "question_id": "dq-cafe-rio-0001",
+      "topic": "Business and Operating Priorities",
+      "question": "What are the CEO's measurable turnaround objectives?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0002",
+      "topic": "Business and Operating Priorities",
+      "question": "Which operating metrics are currently under the most pressure?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0003",
+      "topic": "Business and Operating Priorities",
+      "question": "Where do speed, cleanliness, food consistency and order accuracy break down?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0004",
+      "topic": "Business and Operating Priorities",
+      "question": "What must improve before Café Rio resumes expansion?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0005",
+      "topic": "Business and Operating Priorities",
+      "question": "What projects already have executive sponsorship and funding?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0006",
+      "topic": "Loyalty and Digital",
+      "question": "Is Café Rio still using Punchh?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0007",
+      "topic": "Loyalty and Digital",
+      "question": "What percentage of sales and transactions come through loyalty?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0008",
+      "topic": "Loyalty and Digital",
+      "question": "How are loyalty members segmented and measured?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0009",
+      "topic": "Loyalty and Digital",
+      "question": "What are the current app, ordering and delivery platforms?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0010",
+      "topic": "Loyalty and Digital",
+      "question": "How is Café Rio reducing reliance on discounts?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0011",
+      "topic": "Loyalty and Digital",
+      "question": "Who owns digital engagement and customer data?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0012",
+      "topic": "Payments",
+      "question": "Who processes in-store and digital payments?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0013",
+      "topic": "Payments",
+      "question": "Which gateway is used?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0014",
+      "topic": "Payments",
+      "question": "Are all channels consolidated?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0015",
+      "topic": "Payments",
+      "question": "What is the annual card volume?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0016",
+      "topic": "Payments",
+      "question": "When do the relevant agreements renew?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0017",
+      "topic": "Payments",
+      "question": "Are authorization, chargeback, fraud or effective-rate issues creating pain?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0018",
+      "topic": "Restaurant Technology",
+      "question": "Is Aloha still the enterprise POS?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0019",
+      "topic": "Restaurant Technology",
+      "question": "What hardware is currently installed?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0020",
+      "topic": "Restaurant Technology",
+      "question": "Are there refresh, support or operating-system deadlines?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0021",
+      "topic": "Restaurant Technology",
+      "question": "Which platforms support KDS, menu management, back office, inventory and labor?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0022",
+      "topic": "Restaurant Technology",
+      "question": "Are there integration or data-quality problems?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0023",
+      "topic": "Restaurant Technology",
+      "question": "Which systems prevent managers from acting quickly?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0024",
+      "topic": "Decision Process",
+      "question": "Who owns technology strategy?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0025",
+      "topic": "Decision Process",
+      "question": "Who owns loyalty, payments and digital commerce?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0026",
+      "topic": "Decision Process",
+      "question": "Who controls operations and restaurant standards?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0027",
+      "topic": "Decision Process",
+      "question": "What role does Freeman Spogli play in capital allocation?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0028",
+      "topic": "Decision Process",
+      "question": "Is there an existing Global Payments relationship owner?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    },
+    {
+      "question_id": "dq-cafe-rio-0029",
+      "topic": "Decision Process",
+      "question": "What are the next renewal, budgeting and vendor-review dates?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-08-27"
+    }
+  ]
+}

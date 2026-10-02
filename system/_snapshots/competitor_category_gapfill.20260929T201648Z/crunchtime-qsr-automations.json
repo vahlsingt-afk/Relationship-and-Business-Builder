@@ -1,0 +1,73 @@
+{
+  "competitor_id": "comp-crunchtime-qsr-automations",
+  "competitor_slug": "crunchtime-qsr-automations",
+  "display_name": "Crunchtime (+ QSR Automations)",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Enterprise dominance per competitor-trade framing: \"Dominates enterprise with 150,000+ locations\"",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:35Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-09-29T14:57:11Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:11Z",
+  "latest_cos_commentary": {
+    "headline": "Combined KDS, inventory and task workflows directly contest Genius Kitchen and Back Office.",
+    "genius_exposure": "Combined KDS, inventory and task workflows directly contest Genius Kitchen and Back Office.",
+    "competitive_timing": "September 16 launch links Crunchtime Kitchen KDS with Ops Execution and Inventory workflows following its 2025 QSR Automations merger. Second check: Crunchtime described its post-merger reach as 850+ brands and 150,000+ locations in September 2026.",
+    "sales_response": "At shared prospects, test on-line waste capture, task completion and manager workflow burden with an operator-led proof.",
+    "risk_and_uncertainty": "Announcement describes a product launch; customer deployment and measured ROI require independent validation. Company-reported combined reach; brands and sites may span different modules and geographies.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 30
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 30,
+    "pack_claim_count": 13,
+    "pack_claims_with_url": 8,
+    "pack_claims_inherited_url": 5,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 5,
+      "legacy_claims_need_date_and_current_status_check": 13,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

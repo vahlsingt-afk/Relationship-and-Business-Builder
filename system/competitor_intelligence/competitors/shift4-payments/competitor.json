@@ -1,0 +1,235 @@
+{
+  "competitor_id": "comp-shift4-payments",
+  "competitor_slug": "shift4-payments",
+  "display_name": "Shift4 Payments",
+  "aliases": [
+    "Shift4",
+    "FOUR"
+  ],
+  "vendor_entity_id": "vendor-shift4-payments",
+  "primary_category": "payments",
+  "competes_on": [
+    "payments",
+    "pos",
+    "restaurant_os_platform"
+  ],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Cut 2026 outlook on Middle East travel disruption (~$25M Q3) and FX (~$20M); shares fell",
+        "evidence_id": "note-0011",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "Organic growth (11%) much lower than headline (M&A-driven)",
+        "evidence_id": "note-0013",
+        "added_at": "2026-09-26T12:23:32Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Aggressive international POS rollout: Shift4 Dine launched in Spain and Australia; Shift4 One in 12 countries (target 15 by YE)",
+        "evidence_id": "note-0008",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "Stadiums/venues overlap with Genius S&E: new customer Buffalo Bills",
+        "evidence_id": "note-0009",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "Global Blue acquisition (~$1.5B announced 2025) completed",
+        "evidence_id": "note-0010",
+        "added_at": "2026-09-26T12:23:32Z"
+      }
+    ]
+  },
+  "category_battle_cards": {
+    "payments": {
+      "status": "source_backed",
+      "confidence_pct": 75,
+      "rm_plain_english_posture": "Treat Shift4 as a broadening payments-platform competitor, not merely a processor. Its acquisition strategy is filling payment-method gaps so merchants have fewer reasons to use another provider.",
+      "listen_for": [
+        "Shift4 using DCC, ACH, and account-to-account payments to argue merchants no longer need another payment provider."
+      ],
+      "discovery_questions": [
+        "Which restaurant transaction types materially require account-to-account payments today, and what adoption or economics have been demonstrated beyond private-dining and event deposits?"
+      ],
+      "when_to_bring_todd_in": "Bring Todd in when Shift4 uses A2A, ACH, DCC, or high-ticket restaurant-payment use cases to support a consolidated-payments pitch.",
+      "red_flags": [],
+      "evidence_ids": [
+        "note-0001",
+        "note-0002"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T14:06:02Z"
+    },
+    "pos": {
+      "status": "source_backed",
+      "confidence_pct": 70,
+      "rm_plain_english_posture": "Shift4 positions restaurants as a core complex-commerce vertical with POS and payments at the employee/guest transaction point. Counter on restaurant operating depth and the economics of an integrated Genius/Worldpay stack.",
+      "listen_for": [],
+      "discovery_questions": [],
+      "when_to_bring_todd_in": "Bring Todd in when Shift4 presents POS and payments as one enterprise commerce decision.",
+      "red_flags": [],
+      "evidence_ids": [
+        "note-0003"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T14:05:18Z"
+    },
+    "platform": {
+      "status": "source_backed",
+      "confidence_pct": 75,
+      "rm_plain_english_posture": "Shift4's strategic objective is payments-platform consolidation: add capabilities until merchants no longer need another provider. Treat its commerce-software expansion and payment-method acquisitions as one platform strategy.",
+      "listen_for": [
+        "A 'one provider' or vendor-fragmentation argument spanning payment methods and commerce software."
+      ],
+      "discovery_questions": [],
+      "when_to_bring_todd_in": "Bring Todd in when vendor consolidation or 'one provider' becomes a central buying criterion.",
+      "red_flags": [],
+      "evidence_ids": [
+        "note-0002"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T14:06:11Z"
+    }
+  },
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:46:56Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:56Z",
+  "latest_cos_commentary": {
+    "headline": "Restaurant POS and payments bundle overlaps Genius, while Shift4 also competes in venues.",
+    "genius_exposure": "Restaurant POS and payments bundle overlaps Genius, while Shift4 also competes in venues.",
+    "competitive_timing": "SkyTab POS was rebranded Shift4 Dine on May 12, 2026. Latest check: Shift4 disclosed Q2 2026 non-GAAP net income of $119M in its investor materials.",
+    "sales_response": "Track enterprise reference wins and compare all-in payments cost and rollout service under the new Dine packaging.",
+    "risk_and_uncertainty": "Rebrand alone does not prove a new enterprise product or installation. Group-wide non-GAAP metric, not Shift4 Dine profit; use filing reconciliation and acquisition context.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 10
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 10,
+    "pack_claim_count": 18,
+    "pack_claims_with_url": 17,
+    "pack_claims_inherited_url": 5,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 1,
+      "legacy_claims_need_date_and_current_status_check": 18,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  },
+  "vendor_claims": [
+    {
+      "value": "Shift4 Dine is presented as an all-in-one restaurant POS offering combining software, hardware and payments.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://dine.shift4.com/en-US",
+      "finding_type": "vendor_stated",
+      "source_owner": "Shift4",
+      "source_type": "vendor_product_page_search_index",
+      "published_at": "",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Full page retrieval failed; relationship to SkyTab remains ambiguous."
+    },
+    {
+      "value": "Shift4 markets a turnkey online-ordering capability integrated with its restaurant POS environment.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.shift4.com/online-ordering",
+      "finding_type": "vendor_stated",
+      "source_owner": "Shift4",
+      "source_type": "vendor_product_page_search_index",
+      "published_at": "",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Direct open returned HTTP 403; compatibility boundaries across Dine, SkyTab and Revel were not resolved."
+    },
+    {
+      "value": "Shift4's current Customer Hub estate includes business-management functions such as reporting, employee scheduling and remote POS management in indexed product content.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://lh.shift4.com/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Shift4",
+      "source_type": "vendor_application_endpoint",
+      "published_at": "",
+      "deployment_scope": "franchisee",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Exact Lighthouse-to-Customer-Hub rebrand and migration history remains unclear."
+    }
+  ],
+  "product_lineage": [
+    {
+      "value": "Shift4 completed its acquisition of Revel Systems in June 2024 and said Revel's direct and dealer distribution could be used to accelerate SkyTab distribution.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://investors.shift4.com/news-events/press-releases/detail/221/shift4-acquires-majority-stake-of-german-point-of-sale-company-vectron-systems-ag-and-completes-previously-announced-acquisition-of-revel-systems",
+      "finding_type": "vendor_stated",
+      "source_owner": "Shift4 Investor Relations",
+      "source_type": "primary_investor_press_release",
+      "published_at": "2024-06-14",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "The announcement does not define a Revel-to-SkyTab migration timetable."
+    }
+  ],
+  "weaknesses": [
+    {
+      "value": "An independent Shift4 review synthesis reports recurring merchant complaints about unexpected or changing fees and frustration with contract, cancellation and auto-renewal terms.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.barpatrol.net/shift4-review-pros-and-cons/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Bar Patrol",
+      "source_type": "independent_secondary_review",
+      "published_at": "",
+      "deployment_scope": "unknown",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Underlying reviews span different Shift4 products and contract vintages; complaint prevalence cannot be calculated."
+    }
+  ]
+}

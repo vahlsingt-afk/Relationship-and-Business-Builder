@@ -1,0 +1,63 @@
+{
+  "file_id": "cap-974f554065874264",
+  "queued_at": "2026-09-22T09:19:03+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-21_1305_mcdonalds-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-21_1305_mcdonalds-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260921-1305-mcdonalds-validation`\n- Research system: `ChatGPT Deep Research`\n- Started at: `2026-09-21 13:05 CDT`\n- Completed at: `2026-09-21 13:07 CDT`\n- Research scope: Validate four unresolved Coates Group pages associated with McDonald's.\n- Queue item or vendor: `company:brand-mcdonald-s`\n- Methodology: Direct vendor-page validation with product, geographic-scope, recency, and deployment checks.\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 3\n- Conflicts found: 0\n- Material takeaway: A June 2026 Coates page provides strong current evidence that Coates is a McDonald's China supplier supporting signage solutions at regional scale. A 2019 Japan page supports product-specific event-display evidence for indoor digital menu boards, community notice boards, and Switchboard, but not installed use. Two older convention pages corroborate a long-standing McDonald's relationship, especially in Australia, without establishing specific deployments.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: McDonald's China\n- Vendor: Coates Group\n- Product or category: Signage solutions; sourcing, signage design, customer service, quality, and support\n- Relationship indication: customer\n- Deployment scope: regional\n- Evidence type: other \u2014 supplier award / vendor news\n- Confidence: 90%\n- Confidence rationale: The June 2026 vendor page reports McDonald's China's 2025 Best Supplier Award, describes Coates as a global McDonald's partner for more than 50 years, and says the 90-plus-person China team helps deliver signage solutions at scale. The relationship is current and region-specific, although the page does not enumerate installed products.\n- Source title: Coates Group Receives McDonald's China's Highest Supplier Recognition\n- Source URL: https://coatesgroup.com/insights/blog/coates-group-receives-mcdonalds-chinas-highest-supplier-recognition\n- Publisher or source owner: Coates Group\n- Published date, if known: 2026-06-23\n- Accessed date: 2026-09-21\n- Exact supporting excerpt or faithful factual note: Coates reports receiving McDonald's China's top supplier award for 2025 after an earlier 2023 award and describes a long-term global partnership serving multiple markets.\n- Product-specific evidence: The page identifies signage design and signage-product functions and says the China operation delivers signage solutions at scale; it does not specify digital menu boards, kiosks, or exact location counts.\n- Conflicting or limiting evidence: Vendor-authored award coverage; current supplier status is strong, but the exact product estate and enterprise coverage remain unspecified.\n- Recommended follow-up: Seek a McDonald's China-controlled supplier announcement or a current Coates China case study that names installed products and rollout scope.\n\n### Observation 2\n\n- Brand: McDonald's Japan\n- Vendor: Coates Group\n- Product or category: Indoor digital menu boards, community notice boards, and Switchboard\n- Relationship indication: partner\n- Deployment scope: historical\n- Evidence type: other \u2014 event recap\n- Confidence: 55%\n- Confidence rationale: The vendor page says Coates's Japan team displayed named products at McDonald's Japan's January 2019 Kick Off Meeting. That supports a product-specific working relationship or demonstration, not a live restaurant deployment.\n- Source title: McDonald's Kick Off Meeting 2019\n- Source URL: https://coatesgroup.com/insights/blog/mcdonalds-kick-off-meeting-2019\n- Publisher or source owner: Coates Group\n- Published date, if known: 2019-03-25\n- Accessed date: 2026-09-21\n- Exact supporting excerpt or faithful factual note: Coates reports participating in the McDonald's Japan event and displaying indoor digital menu boards, community notice boards, and a Switchboard question-and-answer booth.\n- Product-specific evidence: Named event-display products are indoor digital menu boards, community notice boards, and Switchboard.\n- Conflicting or limiting evidence: No claim of installation, purchase, customer rollout, location count, or continued use after 2019.\n- Recommended follow-up: Find a current Japan case study, award, installation reference, or McDonald's-controlled source before classifying any product as deployed.\n\n### Observation 3\n\n- Brand: McDonald's Australia\n- Vendor: Coates Group\n- Product or category: Unspecified QSR technology / signage partnership\n- Relationship indication: partner\n- Deployment scope: historical\n- Evidence type: other \u2014 event recap\n- Confidence: 65%\n- Confidence rationale: A 2017 vendor event recap explicitly describes a partnership with McDonald's Australia lasting more than 45 years. It corroborates longevity and geography but does not name a product or installed scope.\n- Source title: Coates X Unstoppable: 2017 McDonald's Owner Operator Convention\n- Source URL: https://coatesgroup.com/insights/blog/coates-x-unstoppable-2017-mcdonalds-owner-operator-convention\n- Publisher or source owner: Coates Group\n- Published date, if known: 2017-11-20\n- Accessed date: 2026-09-21\n- Exact supporting excerpt or faithful factual note: Coates characterizes its McDonald's Australia relationship as a partnership extending for more than 45 years and reports attending the Australia/New Zealand owner-operator convention.\n- Product-specific evidence: None on this page.\n- Conflicting or limiting evidence: Historical and vendor-authored; this page alone cannot establish present-day status or product scope.\n- Recommended follow-up: Use the already validated McDonald's ANZ case study for product scope and retain this page only as historical relationship corroboration.\n\n## Negative findings\n\n- Candidate or claim: The 2018 McDonald's Worldwide Convention page might establish a deployed Coates product.\n- Pages checked: https://coatesgroup.com/insights/blog/coates-x-mcdonalds-worldwide-convention\n- Result: The page says Coates was invited to showcase technology to McDonald's corporate representatives, owner-operators, and suppliers, but it does not identify the technology or assert a purchase, installation, or deployment. Treat it as relationship context, not customer-product evidence.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://coatesgroup.com/insights/blog/coates-group-receives-mcdonalds-chinas-highest-supplier-recognition | supplier award / vendor news | 2026-09-21 | 1 | Current China supplier evidence; exact product estate is unspecified. |\n| https://coatesgroup.com/insights/blog/mcdonalds-kick-off-meeting-2019 | event recap | 2026-09-21 | 2 | Product-specific event display, not deployment proof. |\n| https://coatesgroup.com/insights/blog/coates-x-mcdonalds-worldwide-convention | event recap | 2026-09-21 | none | Invited technology showcase only; no product or deployment detail. |\n| https://coatesgroup.com/insights/blog/coates-x-unstoppable-2017-mcdonalds-owner-operator-convention | event recap | 2026-09-21 | 3 | Historical Australia partnership corroboration; product unspecified. |\n\n## Research notes and inferences\n\n- Inference: The combination of the 2026 China supplier award and older regional event evidence supports a genuinely multi-market McDonald's relationship, but geography and product scope must stay attached to each observation.\n- Inference: Event participation is useful relationship context and candidate validation, but it should not be promoted into installed-base evidence without a case study, deployment announcement, or customer-controlled source.",
+  "word_count": 989,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-22T09:23:12+00:00",
+  "processing_result": {
+    "triage_stream_count": 4,
+    "noise_only": false,
+    "persisted_count": 4,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-002",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 3 trigger(s): named, promoted. Possible named subjects: Named, Japan, Product, Coates, January, Kick Off Meeting."
+      },
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-003",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'mcdonalds'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-004",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-005",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: McDonald's, Coates Group. Macro/industry signal detected: 10 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: customer, deployment, digital menu, enterprise, kiosk, oper"
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "Coates Group",
+        "McDonald's"
+      ],
+      "topics": [
+        "McDonald's supplier validation",
+        "Coates Group partnership",
+        "signage solutions",
+        "historical relationships"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Seek a McDonald's China-controlled supplier announcement or a current Coates China case study that names installed products and rollout scope.",
+        "Find a current Japan case study, award, installation reference, or McDonald's-controlled source before classifying any product as deployed.",
+        "Use the already validated McDonald's ANZ case study for product scope and retain this page only as historical relationship corroboration."
+      ],
+      "why_it_matters": "The validation of supplier relationships and product evidence is crucial for understanding market dynamics and partnership effectiveness."
+    }
+  }
+}

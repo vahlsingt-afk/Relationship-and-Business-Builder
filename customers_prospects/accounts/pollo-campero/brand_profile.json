@@ -1,0 +1,241 @@
+{
+  "account_id": "acct-pollo-campero",
+  "identity_ownership_footprint": [
+    {
+      "category": "identity_heritage",
+      "value": "Founded in Guatemala in 1971; family-centered brand built on deeply seasoned fried/roasted chicken and Central American heritage.",
+      "strategic_implication": "Technology must preserve distinctive brand expression, not homogenize it.",
+      "status": "confirmed",
+      "confidence": "high",
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "evidence_ids": [
+        "ev-pollo-campero-0009"
+      ],
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "category": "ownership",
+      "value": "Part of family-owned multilatina CMI / CMI Foods.",
+      "strategic_implication": "Potential global/family governance above Campero USA.",
+      "status": "confirmed",
+      "confidence": "high",
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "evidence_ids": [
+        "ev-pollo-campero-0009"
+      ],
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "category": "global_scale",
+      "value": "CMI brand page reports 370+ restaurants, 7,000+ employees and operations across eight countries.",
+      "strategic_implication": "Global support can differentiate, but only with country-by-country proof.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "evidence_ids": [
+        "ev-pollo-campero-0009"
+      ],
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "category": "us_footprint",
+      "value": "Company announced more than 150 U.S. restaurants in June 2026.",
+      "strategic_implication": "Use 150+ as current directional count; RFP scope still requires reconciliation.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-06-29",
+      "scope": "account",
+      "evidence_ids": [
+        "ev-pollo-campero-0009"
+      ],
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "category": "growth_goal",
+      "value": "Current company release targets 250 U.S. locations by 2030.",
+      "strategic_implication": "New-store deployment, standards, uptime and lifecycle support are strategic.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-06-29",
+      "scope": "account",
+      "evidence_ids": [
+        "ev-pollo-campero-0009"
+      ],
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "category": "growth_markets",
+      "value": "CMI identified Florida and California as key growth markets.",
+      "strategic_implication": "Regional rollout/service coverage and environmental/site variance matter.",
+      "status": "reported",
+      "confidence": "medium",
+      "as_of": "2024-06-20",
+      "scope": "account",
+      "evidence_ids": [],
+      "last_reviewed_by": "human:Todd Vahlsing"
+    }
+  ],
+  "leadership": [
+    {
+      "category": "us_leadership",
+      "value": "Luis Javier Rodas is publicly identified as Managing Director/COO; Karla Patino became VP U.S. Marketing & Sales in June 2026.",
+      "strategic_implication": "Potential business/user influences; roles in DMB decision must be confirmed.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-06-29",
+      "scope": "account",
+      "evidence_ids": [
+        "ev-pollo-campero-0009",
+        "ev-pollo-campero-0010"
+      ],
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "category": "global_leadership",
+      "value": "CMI identifies Juan Jose Gutierrez Mayorga as Chairman of CMI Foods; current CMI release names Jose Gregorio Baquero as global CEO of Pollo Campero.",
+      "strategic_implication": "Potential ownership/global governance above U.S. buyers.",
+      "status": "reported",
+      "confidence": "medium_high",
+      "as_of": "2026",
+      "scope": "account",
+      "evidence_ids": [
+        "ev-pollo-campero-0009"
+      ],
+      "last_reviewed_by": "human:Todd Vahlsing"
+    }
+  ],
+  "technology_payment_landscape": {
+    "ref": "See technology_stack in account.json for the full layer-by-layer view.",
+    "highlights": [
+      {
+        "category": "digital_ordering",
+        "value": "Official U.S. ordering route is hosted on Olo.",
+        "strategic_implication": "Olo is a verified integration boundary.",
+        "status": "confirmed",
+        "confidence": "high",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "evidence_ids": [
+          "ev-pollo-campero-0009"
+        ],
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "category": "rewards",
+        "value": "Campero Rewards earns 10 points per $1 in-store, online or app; program is tiered and migrated prior-member balances.",
+        "strategic_implication": "Omnichannel identity, offers and loyalty continuity are material.",
+        "status": "confirmed",
+        "confidence": "high",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "evidence_ids": [
+          "ev-pollo-campero-0009"
+        ],
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    ]
+  },
+  "brand_digital_cx_strategy": [
+    {
+      "category": "brand_ambition",
+      "value": "Karla Patino stated a goal of making Campero the most-loved brand for the U.S. Hispanic community while growth also reaches new audiences.",
+      "strategic_implication": "DMB should support culturally authentic content plus local relevance and agile promotion.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-06-29",
+      "scope": "account",
+      "evidence_ids": [
+        "ev-pollo-campero-0009"
+      ],
+      "last_reviewed_by": "human:Todd Vahlsing"
+    }
+  ],
+  "account_economics_scale": [
+    {
+      "category": "economics_scale",
+      "value": "Working 2024 baseline is $334.2M in U.S. system sales and approximately $3.165M AUV; the current working card-volume estimate is $200M+.",
+      "strategic_implication": "Commercially meaningful account, but figures require live validation.",
+      "status": "hypothesis",
+      "confidence": "medium",
+      "as_of": "2026-08-20",
+      "scope": "account",
+      "evidence_ids": [
+        "ev-pollo-campero-0011"
+      ],
+      "last_reviewed_by": "human:Todd Vahlsing"
+    }
+  ],
+  "relationship_history": [
+    {
+      "category": "relationship_history",
+      "value": "Scott O'Neill remains a dormant warm relationship. The Aug. 12 call created direct access to Randy Mulato, Diego Haro, Jorge de la Parra and Terry Fresquez; Randy responded positively Aug. 21 and committed to share statements. Jorge is a key stakeholder in both payments and the DMB RFI, knows Ryan's boss Tracy, and texted Tracy shortly after the meeting.",
+      "strategic_implication": "Jorge is the central known cross-workstream stakeholder and now has a confirmed executive relationship path into our organization. The outreach is a positive mobilization signal, but Jorge has not yet demonstrated all three Coach tests or verified Economic Buyer authority.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "evidence_ids": [
+        "ev-pollo-campero-0001",
+        "ev-pollo-campero-0003",
+        "ev-pollo-campero-0004",
+        "ev-pollo-campero-0010"
+      ],
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "category": "current_pursuit",
+      "value": "Global Payments/Genius submitted the DMB RFI response on 2026-08-21. Pollo Campero advanced the procurement to a formal RFP and delivered the updated TDR and SOW/pricing template on 2026-08-26. Revised response is due 2026-09-04.",
+      "strategic_implication": "Active competitive procurement. DMB remains the primary motion; Worldpay/payments and broader Genius consolidation are optional expansion paths, not prerequisites.",
+      "status": "confirmed",
+      "confidence": "high",
+      "as_of": "2026-08-27",
+      "scope": "opportunity:opp-pollo-campero-dmb-payments",
+      "evidence_ids": [
+        "ev-pollo-campero-0013",
+        "ev-pollo-campero-0014",
+        "ev-pollo-campero-0015",
+        "ev-pollo-campero-0016"
+      ],
+      "last_reviewed_by": "human:Todd Vahlsing"
+    }
+  ],
+  "opportunities": {
+    "active": [
+      "opp-pollo-campero-dmb-payments"
+    ],
+    "historical": [],
+    "parked": []
+  },
+  "known_contradictions": [
+    "ct-pollo-campero-0001"
+  ],
+  "open_questions": [
+    "Which brand standards and content approvals are mandatory?",
+    "Who owns capital, technology standards and final approval?",
+    "Is current DMB scope U.S.-only or intended as a global standard?",
+    "Exact open, corporate/franchise and in-scope counts?",
+    "Which markets and store formats dominate the RFP?",
+    "Who sponsors DMB and who owns final recommendation?",
+    "Does global leadership approve vendor, platform or capital?",
+    "Which Olo modules and integrations are in scope?",
+    "Who is current loyalty vendor and data owner?",
+    "How will DMB success be measured—sales, accuracy, speed, brand metrics or labor?",
+    "Validate current sales, card volume, digital mix and corporate/franchise split.",
+    "What did Jorge communicate to Tracy, what action followed, and will Jorge provide customer access, internal guidance and advocacy?",
+    "When are the sessions, how does Jorge influence each decision, who else attends, and who decides?",
+    "Which Oracle and NCR products and versions are deployed by location?",
+    "What exact APIs, middleware and certifications are available for pricing, availability, order confirmation and transaction-aware upselling?",
+    "What is the location-level display/player/mount/lane inventory, including age and ownership?",
+    "Is transaction-aware dynamic upselling mandatory at launch or acceptable as a pilot/later phase?",
+    "What storage duration, insurance value, reporting frequency and disposition rules apply to removed equipment?",
+    "What content request volumes and standard, urgent and emergency turnaround expectations apply?",
+    "What support hours, severity definitions, restoration targets and onsite dispatch times are required?"
+  ],
+  "freshness": {
+    "last_updated": "2026-08-27",
+    "next_scheduled_review": "Before 2026-09-04 submission or on material new intelligence"
+  }
+}

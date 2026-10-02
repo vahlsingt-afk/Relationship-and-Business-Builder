@@ -1,0 +1,77 @@
+{
+  "subject_id": "subject-par-technology",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-25T16:12:10Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/par-technology/current/PAR-Technology_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-25T16:12:27Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/par-technology/current/PAR-Technology_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-26T09:20:49Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/par-technology/current/PAR-Technology_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-09-27T09:18:33Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/par-technology/current/PAR-Technology_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 5,
+      "generated_at": "2026-09-29T09:19:05Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/par-technology/current/PAR-Technology_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 6,
+      "generated_at": "2026-09-29T10:51:11Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/par-technology/current/PAR-Technology_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 7,
+      "generated_at": "2026-09-29T14:57:05Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/par-technology/current/PAR-Technology_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 8,
+      "generated_at": "2026-09-30T21:52:40Z",
+      "generated_for": "todd",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/par-technology/current/PAR-Technology_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 9,
+      "generated_at": "2026-10-01T10:43:10Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/par-technology/current/PAR-Technology_Competitive-Brief.md",
+      "superseded": false
+    }
+  ]
+}

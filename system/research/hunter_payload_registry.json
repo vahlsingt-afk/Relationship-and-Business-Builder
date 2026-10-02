@@ -1,0 +1,16 @@
+{
+  "schema": "rb.hunter_payload_registry.v1",
+  "updated_at": "2026-10-02T00:00:00Z",
+  "payloads": {
+    "rb.brand_company_profile.v1": {"collection": "records", "required_item_fields": ["target_key"]},
+    "rb.technology_stack_research.v1": {"collection": "records", "required_item_fields": ["target_key"]},
+    "rb.vendor_extended_profile.v1": {"collection": "records", "required_item_fields": ["target_key"]},
+    "rb.competitor_platform_research.v1": {"collection": "findings", "required_item_fields": []},
+    "rb.technology_lifecycle_research.v1": {"collection": "lifecycle_events", "required_item_fields": []},
+    "rb.leadership_decision_map.v1": {"collection": "records", "required_item_fields": ["target_key"]},
+    "rb.ownership_funding_ma.v1": {"collection": "records", "required_item_fields": ["target_key"]},
+    "rb.supplier_ecosystem_map.v1": {"collection": "records", "required_item_fields": ["target_key"]},
+    "rb.hunter_change_monitor.v1": {"collection": "records", "required_item_fields": ["target_key"]},
+    "rb.hunter_industry_theme.v1": {"collection": "patterns", "required_item_fields": ["theme", "target_keys"]}
+  }
+}

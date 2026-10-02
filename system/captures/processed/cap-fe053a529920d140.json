@@ -1,0 +1,48 @@
+{
+  "file_id": "cap-fe053a529920d140",
+  "queued_at": "2026-09-22T09:19:03+00:00",
+  "source_id": "icloud_screenshots",
+  "source_label": "iCloud Drive Screenshots & Documents",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/com~apple~CloudDocs/RB Captures/2026-09-21_opsavor_linkedin_post.png",
+  "capture_type": "pasted_content",
+  "title_hint": "iCloud Drive Screenshots & Documents \u2014 RB Captures 2026-09-21_opsavor_linkedin_post",
+  "transcription_method": "image_ocr",
+  "transcript": "**Transcription:**\n\n5:33  \nAdded 1 attachment  \nRelationship & B...  \n\u00b7 todds.macbook...  \nAdded 1 attachment  \n\nBrian Wasserman likes this  \nJoseph Prifitera  \nFounder & CEO, OPSAVOR | Building AI-Powered Operations  \nThe POS should be the system of record\u2014not the owner\u2019s operating brain.  \nThat lesson is why I\u2019m building OPSAVOR.  \nAfter operating in restaurants, I saw how often sales, labor, schedules, vendor invoices, and expenses live in different places. The owner becomes the integration layer: hunting for numbers, reconciling reports, and figuring out what changed after the fact.  \nOPSAVOR is being built to give owners a clear operating picture: what changed, what needs attention, and what action to take next. Restaurants are our starting point because the problem is real, expansive, and deeply familiar. \nWe\u2019re early, building through a controlled pilot at Sicilly Coal Fired Pizza and learning directly from their teams. The goal is simple: help independent owners spend less time chasing information and more time running a stronger business.  \nIf you\u2019re a restaurant owner, operator, or building in restaurant technology, I\u2019d love to compare notes!  \n#RestaurantTechnology #Hospitality #SmallBusiness #AI #Operations  \n\nWhat would you like me to do with this LinkedIn post \u2014summarize it, research OPSAVOR/Joseph Prifitera, draft a comment or outreach message, or capture it as business intelligence in RB?  \n5:33 PM  \nSave for the intelligence sweep  \n\nWorking for 29s  \nI\u2019ll route this through RB\u2019s live intelligence-ingestion path and verify the saved record from the API response.  \nThinking  \n\n204 files  \n+3.4K  -1.1K  \n\n+ Follow up  \n\n---\n\n**Content Description:**\nThis is a screenshot of a message discussing a LinkedIn post related to OPSAVOR, including requests for further actions regarding the content.",
+  "word_count": 268,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-22T09:23:10+00:00",
+  "processing_result": {
+    "triage_stream_count": 1,
+    "noise_only": false,
+    "persisted_count": 1,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-001",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Macro/industry signal detected: 6 keyword hit(s) across categorie(s): competitive, industry_trend, vendor_tech. Key terms: hospitality, integration, operator, pos, restaurant, restaurant ai."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [
+        "Brian Wasserman",
+        "Joseph Prifitera"
+      ],
+      "companies_mentioned": [
+        "OPSAVOR",
+        "Sicilly Coal Fired Pizza"
+      ],
+      "topics": [
+        "restaurant technology",
+        "AI in operations",
+        "business intelligence"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Route OPSAVOR's LinkedIn post through RB\u2019s live intelligence-ingestion path"
+      ],
+      "why_it_matters": "The discussion involves a new technology aimed at improving operations for restaurant owners, which could impact business efficiency."
+    }
+  }
+}

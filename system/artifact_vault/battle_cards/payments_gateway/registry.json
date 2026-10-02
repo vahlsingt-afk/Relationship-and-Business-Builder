@@ -1,0 +1,45 @@
+{
+  "subject_id": "subject-payments_gateway",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-25T16:12:20Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/payments_gateway/current/Payments-Gateway_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-28T09:24:42Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/payments_gateway/current/Payments-Gateway_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-29T09:19:14Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/payments_gateway/current/Payments-Gateway_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-09-29T14:57:15Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/payments_gateway/current/Payments-Gateway_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 5,
+      "generated_at": "2026-10-02T09:47:07Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/payments_gateway/current/Payments-Gateway_Battle-Card.md",
+      "superseded": false
+    }
+  ]
+}

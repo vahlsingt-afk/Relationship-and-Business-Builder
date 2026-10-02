@@ -1,0 +1,15 @@
+{
+  "competitor_slug": "square-for-restaurants-block",
+  "vendor_display_name": "Square for Restaurants (Block)",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Block cut ~4,000 staff (~40–50%, from >10,000 to <6,000) on Feb 26, 2026, citing AI — possible support/service risk"
+    }
+  ]
+}

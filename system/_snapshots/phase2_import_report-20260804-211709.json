@@ -1,0 +1,141 @@
+{
+  "phase2_file": "system/research/phase2_training_franchise_mgmt_evidence_draft_2026-08-03.json",
+  "category": "Training/LMS + Franchise Mgmt",
+  "rows_processed": 17,
+  "rows_skipped": 0,
+  "dry_run": false,
+  "added": 17,
+  "updated": 0,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 15,
+    "enrich_existing_relationship": 0,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 2,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 0,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Opus Training",
+        "customer": "Five Guys",
+        "tech_category": "Training/LMS",
+        "relationship_id": "rel-brand-five-guys-training-lms-franchisee-deployment-vendor-opus-training"
+      },
+      {
+        "vendor": "Opus Training",
+        "customer": "Newk's Eatery",
+        "tech_category": "Training/LMS",
+        "relationship_id": "rel-brand-newk-s-eatery-training-lms-unknown-vendor-opus-training"
+      },
+      {
+        "vendor": "Opus Training",
+        "customer": "Smashburger",
+        "tech_category": "Training/LMS",
+        "relationship_id": "rel-brand-smashburger-training-lms-franchisee-deployment-vendor-opus-training"
+      },
+      {
+        "vendor": "Opus Training",
+        "customer": "PLANTA",
+        "tech_category": "Training/LMS",
+        "relationship_id": "rel-brand-planta-restaurants-training-lms-unknown-vendor-opus-training"
+      },
+      {
+        "vendor": "Opus Training",
+        "customer": "Just Salad",
+        "tech_category": "Training/LMS",
+        "relationship_id": "rel-brand-just-salad-training-lms-pilot-vendor-opus-training"
+      },
+      {
+        "vendor": "Schoox",
+        "customer": "Subway",
+        "tech_category": "Training/LMS",
+        "relationship_id": "rel-brand-subway-training-lms-unknown-vendor-schoox"
+      },
+      {
+        "vendor": "Schoox",
+        "customer": "Checkers & Rally's",
+        "tech_category": "Training/LMS",
+        "relationship_id": "rel-brand-checkers-rally-s-training-lms-unknown-vendor-schoox"
+      },
+      {
+        "vendor": "Schoox",
+        "customer": "Tropical Smoothie Cafe",
+        "tech_category": "Training/LMS",
+        "relationship_id": "rel-brand-tropical-smoothie-cafe-training-lms-unknown-vendor-schoox"
+      },
+      {
+        "vendor": "FranConnect",
+        "customer": "Tropical Smoothie Cafe",
+        "tech_category": "Franchise Management",
+        "relationship_id": "rel-brand-tropical-smoothie-cafe-franchise-management-unknown-vendor-franconnect"
+      },
+      {
+        "vendor": "FranConnect",
+        "customer": "Teriyaki Madness",
+        "tech_category": "Franchise Management",
+        "relationship_id": "rel-brand-teriyaki-madness-franchise-management-hardware-reseller-service-provider-vendor-franconnect"
+      },
+      {
+        "vendor": "FranConnect",
+        "customer": "Tony Roma's",
+        "tech_category": "Franchise Management",
+        "relationship_id": "rel-brand-tony-roma-s-franchise-management-unknown-vendor-franconnect"
+      },
+      {
+        "vendor": "FranConnect",
+        "customer": "Blaze Pizza",
+        "tech_category": "Franchise Management",
+        "relationship_id": "rel-brand-blaze-pizza-franchise-management-unknown-vendor-franconnect"
+      },
+      {
+        "vendor": "Naranga",
+        "customer": "Pizza Factory",
+        "tech_category": "Franchise Management",
+        "relationship_id": "rel-brand-pizza-factory-franchise-management-unknown-vendor-naranga"
+      },
+      {
+        "vendor": "Naranga",
+        "customer": "Arooga's Grille House & Sports Bar",
+        "tech_category": "Franchise Management",
+        "relationship_id": "rel-brand-arooga-s-grille-house-sports-bar-franchise-management-franchisee-deployment-vendor-naranga"
+      },
+      {
+        "vendor": "Naranga",
+        "customer": "HoneyBaked Ham",
+        "tech_category": "Franchise Management",
+        "relationship_id": "rel-brand-honeybaked-ham-franchise-management-unknown-vendor-naranga"
+      }
+    ],
+    "enrich_existing_relationship": [],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [
+      {
+        "vendor": "FranConnect",
+        "customer": "Arby's",
+        "tech_category": "Franchise Management",
+        "relationship_id": "rel-brand-arby-s-franchise-management-acquirer-or-payments-vendor-franconnect"
+      },
+      {
+        "vendor": "FranConnect",
+        "customer": "Friendly's",
+        "tech_category": "Franchise Management",
+        "relationship_id": "rel-brand-friendly-s-franchise-management-unknown-vendor-franconnect"
+      }
+    ],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

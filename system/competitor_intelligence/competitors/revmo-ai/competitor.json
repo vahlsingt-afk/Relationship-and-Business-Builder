@@ -1,0 +1,257 @@
+{
+  "competitor_id": "comp-revmo-ai",
+  "competitor_slug": "revmo-ai",
+  "display_name": "Revmo AI",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "Revmo AI is supported in this pass as a restaurant-technology vendor in: ai solution 1, online ordering, reservations guest management.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:46:57Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:57Z",
+  "latest_cos_commentary": {
+    "headline": "Adjacent restaurant-tech vendor; no supported direct Genius overlap.",
+    "genius_exposure": [],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Monitor for expansion into Genius categories and verify account-level influence before treating as a direct competitor.",
+    "risk_and_uncertainty": "Evidence quality varies materially across this long-tail batch; unresolved names remain deliberately unclassified rather than guessed.",
+    "priority": "P3",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://revmo.ai/restaurants/",
+        "title": "AI Messaging for Restaurants & Cafes",
+        "publisher": "Revmo AI",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      },
+      {
+        "url": "https://revmo.ai/news",
+        "title": "Revmo AI Newsroom",
+        "publisher": "Revmo AI",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "other"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 80,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "company founding date/funding history",
+        "pricing model",
+        "additional named customers beyond Donatos"
+      ]
+    }
+  },
+  "canonical_company_name": "Revmo AI",
+  "website": "https://revmo.ai/restaurants/",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://revmo.ai/restaurants/",
+        "title": "AI Messaging for Restaurants & Cafes",
+        "publisher": "Revmo AI",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "adjacent_ecosystem_vendor",
+  "restaurant_tech_categories": [
+    {
+      "category": "ai_solution_1",
+      "basis": "Current evidence supports ai solution 1 as a restaurant-facing category for Revmo AI.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://revmo.ai/restaurants/",
+          "title": "AI Messaging for Restaurants & Cafes",
+          "publisher": "Revmo AI",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        },
+        {
+          "url": "https://revmo.ai/news",
+          "title": "Revmo AI Newsroom",
+          "publisher": "Revmo AI",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "other"
+        }
+      ]
+    },
+    {
+      "category": "online_ordering",
+      "basis": "Current evidence supports online ordering as a restaurant-facing category for Revmo AI.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://revmo.ai/restaurants/",
+          "title": "AI Messaging for Restaurants & Cafes",
+          "publisher": "Revmo AI",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        },
+        {
+          "url": "https://revmo.ai/news",
+          "title": "Revmo AI Newsroom",
+          "publisher": "Revmo AI",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "other"
+        }
+      ]
+    },
+    {
+      "category": "reservations_guest_management",
+      "basis": "Current evidence supports reservations guest management as a restaurant-facing category for Revmo AI.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://revmo.ai/restaurants/",
+          "title": "AI Messaging for Restaurants & Cafes",
+          "publisher": "Revmo AI",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        },
+        {
+          "url": "https://revmo.ai/news",
+          "title": "Revmo AI Newsroom",
+          "publisher": "Revmo AI",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "other"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "Revmo Restaurant Voice AI (ai_solution_1, online_ordering, reservations_guest_management)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://revmo.ai/restaurants/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Voice AI Ordering Hub (ai_solution_1, online_ordering, reservations_guest_management)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://revmo.ai/restaurants/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Vendor has current restaurant-specific product evidence in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://revmo.ai/restaurants/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated product evidence does not by itself establish ROI, reliability, implementation quality, or systemwide customer adoption; independent validation remains a research gap.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://revmo.ai/restaurants/",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [
+    {
+      "value": "Donatos",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://revmo.ai/industries/restaurants",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": false
+    }
+  ],
+  "recent_news": [
+    {
+      "value": "Revmo announced PizzaEye, a computer-vision pizza quality tool.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-08-12",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://revmo.ai/news",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": false
+    }
+  ],
+  "product_lineage": [],
+  "negative_findings": [],
+  "conflicts_notes": [],
+  "category_assessment_status": "researched",
+  "category_assessment_packet_id": "rbb-competitor-category-gapfill-20260929-batches02-04",
+  "category_assessed_at": "2026-09-29"
+}

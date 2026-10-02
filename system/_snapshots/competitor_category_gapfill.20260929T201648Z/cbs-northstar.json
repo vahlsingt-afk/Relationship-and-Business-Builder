@@ -1,0 +1,50 @@
+{
+  "competitor_id": "comp-cbs-northstar",
+  "competitor_slug": "cbs-northstar",
+  "display_name": "CBS NorthStar",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:06Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:31Z",
+  "latest_cos_commentary": {
+    "headline": "CBS NorthStar is a legacy US restaurant POS vendor (since 1994) claiming 10,000+ restaurant customers, offering nationwide rollout and managed hardware/help-desk services.",
+    "genius_exposure": "Direct pos competitor, particularly for multi-unit chains needing nationwide rollout, hardware procurement and 24/7 help-desk services bundled with POS.",
+    "competitive_timing": "No recent (2026) funding, leadership change, or major product launch found in this pass — appears to be a stable, long-tenured incumbent rather than a fast-moving disruptor.",
+    "sales_response": "Where CBS NorthStar is the incumbent POS, expect the relationship to be long-standing (decades); displacement conversations likely need to address migration risk and depth of nationwide field-service coverage.",
+    "risk_and_uncertainty": "10,000+ restaurant customer claim is vendor-sourced; no independent confirmation or named enterprise logos were found.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 16
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 16,
+    "pack_claim_count": 1,
+    "pack_claims_with_url": 1,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "named enterprise customer scope",
+        "financial health"
+      ]
+    }
+  }
+}

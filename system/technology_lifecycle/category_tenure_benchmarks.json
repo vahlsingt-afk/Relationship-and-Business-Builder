@@ -1,0 +1,10 @@
+{
+  "schema": "rb.category_tenure_benchmarks.v1",
+  "_do_not_hand_edit": "This file is DERIVED, not authored. It is regenerated from technology_change_events.jsonl by a future Phase 1 script. Never add or edit a category entry by hand -- if a number needs to change, add or correct an event in technology_change_events.jsonl instead and regenerate.",
+  "status": "not_yet_computed",
+  "minimum_sample_size": 5,
+  "minimum_sample_size_note": "A category/segment with fewer than this many qualifying events must report 'insufficient_sample', never a mean/median/percentile computed from too few points (see system/SCHEMAS.md, 'Technology Lifecycle & Change Events' section).",
+  "generated_at": null,
+  "generated_from_event_count": 0,
+  "categories": {}
+}

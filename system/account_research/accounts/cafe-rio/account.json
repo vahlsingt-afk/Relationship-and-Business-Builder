@@ -1,0 +1,321 @@
+{
+  "account_id": "acct-cafe-rio",
+  "account_slug": "cafe-rio",
+  "display_name": "Café Rio Fresh Modern Mexican",
+  "aliases": [
+    "Cafe Rio",
+    "Café Rio",
+    "Cafe Rio Fresh Modern Mexican",
+    "Cafe Rio Mexican Grill"
+  ],
+  "portfolio_status": {
+    "value": "Research and qualification -- not yet a confirmed active opportunity",
+    "status": "confirmed",
+    "evidence_ids": [
+      "ev-cafe-rio-0005"
+    ],
+    "confidence": "high",
+    "as_of": "2026-08-27",
+    "scope": "account",
+    "last_reviewed_by": "human:todd"
+  },
+  "owners": [],
+  "executive_summary": "Café Rio Fresh Modern Mexican is a Salt Lake City-based fast-casual Mexican chain with approximately 150-160 company-owned restaurants. The company is majority-owned by private equity firm Freeman Spogli and appointed Mike Burns as CEO in June 2026.\n\nCafé Rio is currently undertaking an operational and brand reset. Management has publicly acknowledged slower service, inconsistent restaurant cleanliness, unpopular menu changes and declining comparable sales. The immediate focus is restoring food quality, improving execution and rebuilding guest frequency before accelerating new-unit growth around 2028.\n\nCafé Rio is a current or former Punchh loyalty customer, and management says loyalty members account for upward of 50% of transactions. That makes loyalty and guest engagement especially important to the turnaround. Beyond Punchh and an older reference to Aloha POS, research has uncovered almost no reliable current information about Café Rio's technology stack.\n\nThe account should be treated as a strong discovery target rather than a qualified sales pursuit.",
+  "current_business_situation": "Mike Burns became CEO in June 2026 after leading Latitude Food Group, the parent organization of &pizza and Tijuana Flats.\n\nBurns has publicly described several issues facing the company: Café Rio had \"lost its way\" operationally; changes to established menu items frustrated longtime customers; service became slower; restaurant cleanliness declined; same-store sales were down approximately 2.3% during the first part of 2026; heavy spending on third-party delivery and discounting generated transactions that were not necessarily profitable; the brand needs to restore its core experience before resuming aggressive expansion.\n\nImmediate priorities: (1) restore original recipes and food quality; (2) improve restaurant speed, friendliness and cleanliness; (3) rebuild guest trust and visit frequency; (4) reduce dependence on indiscriminate discounting; (5) return to positive comparable sales; (6) prepare the operating platform for renewed growth beginning around 2028.\n\nThis turnaround is the most important context for any conversation with Café Rio.",
+  "leadership": {
+    "confirmed": [
+      {
+        "name": "Mike Burns",
+        "title": "Chief Executive Officer",
+        "notes": "Joined Café Rio in 2026 after leadership roles with Latitude Food Group, &pizza, Tijuana Flats, Rave Restaurant Group, Pei Wei and Bojangles.",
+        "evidence_ids": [
+          "ev-cafe-rio-0001",
+          "ev-cafe-rio-0002"
+        ],
+        "last_verified": "2026-08-27"
+      }
+    ],
+    "reported_unverified": [
+      {
+        "name": "Abe Hollands",
+        "title": "COO",
+        "evidence_ids": [
+          "ev-cafe-rio-0005"
+        ]
+      },
+      {
+        "name": "Shea Bodet",
+        "title": "CFO",
+        "evidence_ids": [
+          "ev-cafe-rio-0005"
+        ]
+      },
+      {
+        "name": "Cortney Worle",
+        "title": "Chief People Officer",
+        "evidence_ids": [
+          "ev-cafe-rio-0005"
+        ]
+      },
+      {
+        "name": "Todd Paladini",
+        "title": "CIO",
+        "evidence_ids": [
+          "ev-cafe-rio-0005"
+        ]
+      },
+      {
+        "name": "Wilfredo Rojas",
+        "title": "VP or senior leader, Information Technology",
+        "evidence_ids": [
+          "ev-cafe-rio-0005"
+        ]
+      },
+      {
+        "name": "Keith Karas",
+        "title": "SVP, Supply Chain",
+        "evidence_ids": [
+          "ev-cafe-rio-0005"
+        ]
+      },
+      {
+        "name": "Doug Branigan",
+        "title": "Chief Development Officer",
+        "evidence_ids": [
+          "ev-cafe-rio-0005"
+        ]
+      },
+      {
+        "name": "Jackie Crynes and/or Ben Craner",
+        "title": "Marketing leadership",
+        "evidence_ids": [
+          "ev-cafe-rio-0005"
+        ]
+      }
+    ]
+  },
+  "technology_stack": [
+    {
+      "layer": "Loyalty",
+      "vendor": "Punchh",
+      "current_state": "Current or former Punchh loyalty customer since approximately 2015. Loyalty members reportedly ~50% of transactions.",
+      "status": "Verify",
+      "confidence": "medium",
+      "evidence_ids": [
+        "ev-cafe-rio-0005"
+      ],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "POS",
+      "vendor": "Aloha",
+      "current_state": "Historical reference only -- current POS platform and version unconfirmed.",
+      "status": "Verify",
+      "confidence": "low",
+      "evidence_ids": [
+        "ev-cafe-rio-0005"
+      ],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Payment processor / acquirer",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Payment gateway",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "POS and payment hardware",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Digital ordering platform",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Mobile app architecture",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Delivery integrations",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "KDS",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Digital menu boards",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Menu management platform",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Drive-thru technology and timers",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Back-office / restaurant-operations systems",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Inventory / food-cost management",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Labor / workforce management",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Networking / managed services",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Kiosks",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    },
+    {
+      "layer": "Analytics / guest-data infrastructure",
+      "vendor": "unknown",
+      "current_state": "No reliable evidence found.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-27",
+      "scope": "account",
+      "last_reviewed_by": "human:todd"
+    }
+  ],
+  "commercial_models": [],
+  "buying_influences": [],
+  "opportunities": [],
+  "qualification": {
+    "criteria": []
+  },
+  "strategic_position": {},
+  "bottom_line": "Café Rio is a centralized, PE-backed restaurant brand with a new CEO, visible operating challenges and a strategically important loyalty population. Its technology environment remains unusually opaque.\n\nThe account is worth pursuing because the turnaround creates potential need across loyalty, payments, restaurant execution and growth readiness. It is not yet qualified because we still lack a confirmed sponsor, current stack, internal owner, commercial timing and a defined buying event.\n\nCurrent recommendation: validate the relationship and stack, identify the operational trigger, and then determine whether Café Rio should advance from a research target into an active opportunity.",
+  "latest_review": {
+    "blue_sheet_owner": "Todd Vahlsing",
+    "core_contributors": [
+      "Zakary Bertram"
+    ],
+    "last_reviewed": "2026-08-27",
+    "review_status": "seeded_from_canonical_brief",
+    "next_formal_review": null,
+    "current_critical_test": "Validate leadership, current technology stack, and confirm loyalty/payments contract timing."
+  },
+  "template_version": "0.1-account-background-brief-seed",
+  "updated_at": "2026-08-27T00:00:00Z"
+}

@@ -1,0 +1,3161 @@
+{
+  "cycle_id": "competitor_platform_cycle_2026-09-28",
+  "brief": "Fresh platform-level strengths/weaknesses baseline",
+  "created_at": "2026-09-28T18:17:01.815580Z",
+  "updated_at": "2026-10-02T10:45:01Z",
+  "live_roster_snapshot": {
+    "captured_at": "2026-10-01T00:17:39Z",
+    "competitor_count": 196,
+    "relationship_class_counts": {
+      "product_line_competitor": 47,
+      "adjacent_ecosystem_vendor": 42,
+      "unclassified_vendor": 107
+    },
+    "entries": [
+      {
+        "slug": "par-technology",
+        "display_name": "PAR Technology",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "toast",
+        "display_name": "Toast",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "ncr",
+        "display_name": "NCR Voyix",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "nory",
+        "display_name": "Nory",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "oracle-food-beverage-simphony-micros",
+        "display_name": "Oracle Food & Beverage (Simphony / MICROS)",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "qu",
+        "display_name": "Qu",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "restaurant365",
+        "display_name": "Restaurant365",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "revel-systems",
+        "display_name": "Revel Systems",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "mood-media",
+        "display_name": "Mood Media",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "shift4-payments",
+        "display_name": "Shift4 Payments",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "fiserv",
+        "display_name": "Fiserv",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "cbs-northstar",
+        "display_name": "CBS NorthStar",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "freedompay",
+        "display_name": "FreedomPay",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "iconex",
+        "display_name": "Iconex",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "iw",
+        "display_name": "IW",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "kluck",
+        "display_name": "Kluck",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "stickypos",
+        "display_name": "StickyPOS",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "swipe-savvy-pos",
+        "display_name": "Swipe Savvy POS",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "verifone",
+        "display_name": "Verifone",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "adyen",
+        "display_name": "Adyen",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "hp",
+        "display_name": "HP",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "posiflex",
+        "display_name": "Posiflex",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "rds",
+        "display_name": "RDS",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "tabit",
+        "display_name": "Tabit",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "touchpoint",
+        "display_name": "Touchpoint",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "transaction-network-services",
+        "display_name": "Transaction Network Services",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "tray",
+        "display_name": "TRAY",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "yelp-for-restaurants",
+        "display_name": "Yelp for Restaurants",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "agilysys",
+        "display_name": "Agilysys",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "level-10",
+        "display_name": "Level 10",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "otter",
+        "display_name": "Otter",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "restroworks",
+        "display_name": "Restroworks",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "retail-technology-group",
+        "display_name": "Retail Technology Group",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "spoton",
+        "display_name": "SpotOn",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "star-micronics",
+        "display_name": "Star Micronics",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "upm-adhesive-materials",
+        "display_name": "UPM Adhesive Materials",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "xpr-pos",
+        "display_name": "XPR POS",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "858-partners",
+        "display_name": "858 Partners",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "directv",
+        "display_name": "DIRECTV",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "hostie",
+        "display_name": "Hostie",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "marqii",
+        "display_name": "Marqii",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "ovation",
+        "display_name": "Ovation",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "rockbot",
+        "display_name": "Rockbot",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "slang-ai",
+        "display_name": "Slang AI",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "tattle",
+        "display_name": "Tattle",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "ziosk",
+        "display_name": "Ziosk",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "alchemer",
+        "display_name": "Alchemer",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "arc",
+        "display_name": "Arc",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "canopy",
+        "display_name": "Canopy",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "constrata",
+        "display_name": "ConStrata",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "custom-channels",
+        "display_name": "Custom Channels",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "ecolab",
+        "display_name": "Ecolab",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "field-advantage",
+        "display_name": "Field Advantage",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "kitchen-armor",
+        "display_name": "Kitchen Armor",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "mirus",
+        "display_name": "Mirus",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "perfect-company",
+        "display_name": "Perfect Company",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "revmo-ai",
+        "display_name": "Revmo AI",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "solugenix",
+        "display_name": "Solugenix",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "soundhound-ai",
+        "display_name": "SoundHound AI",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "synergysuite",
+        "display_name": "SynergySuite",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "tcg",
+        "display_name": "TCG",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "tiphaus",
+        "display_name": "TipHaus",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "7shifts",
+        "display_name": "7shifts",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "all-gravy",
+        "display_name": "All Gravy",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "back-office",
+        "display_name": "Back Office",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "berry-ai",
+        "display_name": "Berry AI",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "bixolon",
+        "display_name": "BIXOLON",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "branch",
+        "display_name": "Branch",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "chetu",
+        "display_name": "Chetu",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "glory",
+        "display_name": "Glory",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "transact-technologies",
+        "display_name": "TransAct Technologies",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "trison",
+        "display_name": "TRISON",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "5-5",
+        "display_name": "5&5",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "axial-shift",
+        "display_name": "Axial Shift",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "envysion",
+        "display_name": "Envysion",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "epson",
+        "display_name": "Epson",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "fusion-connect",
+        "display_name": "Fusion Connect",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "hat-design-works",
+        "display_name": "HAT Design Works",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "hi-auto",
+        "display_name": "Hi Auto",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "qsrsoft",
+        "display_name": "QSRSoft",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "revenue-management-solutions",
+        "display_name": "Revenue Management Solutions",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "rosnet",
+        "display_name": "Rosnet",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "savi",
+        "display_name": "Savi",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "shenzhen-electron-technology-co-ltd",
+        "display_name": "Shenzhen Electron Technology Co., Ltd.",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "sona",
+        "display_name": "Sona",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "truemeter",
+        "display_name": "TrueMeter",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "u-experten",
+        "display_name": "U-Experten",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "ando",
+        "display_name": "Ando",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "cap-energy",
+        "display_name": "Cap Energy",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "comcast-business",
+        "display_name": "Comcast Business",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "decision-logic",
+        "display_name": "Decision Logic",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "heytruffle",
+        "display_name": "heytruffle",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "incept-ai",
+        "display_name": "Incept AI",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "precitaste",
+        "display_name": "PreciTaste",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "reality-based-group",
+        "display_name": "Reality Based Group",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "resideo",
+        "display_name": "Resideo",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "vox-ai",
+        "display_name": "Vox AI",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "xenia",
+        "display_name": "Xenia",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "bikky",
+        "display_name": "Bikky",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "card-market",
+        "display_name": "Card Market",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "cogs-well",
+        "display_name": "COGS-Well",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "crunchtime",
+        "display_name": "Crunchtime",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "datadelivers",
+        "display_name": "DataDelivers",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "deepgram",
+        "display_name": "Deepgram",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "dinova",
+        "display_name": "Dinova",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "ecard-systems",
+        "display_name": "eCard Systems",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "fresh-kds",
+        "display_name": "Fresh KDS",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "incentivio",
+        "display_name": "Incentivio",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "nastar",
+        "display_name": "NAStar",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "paytronix",
+        "display_name": "Paytronix",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "vibes",
+        "display_name": "Vibes",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "apex-order-pickup",
+        "display_name": "Apex Order Pickup",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "bite",
+        "display_name": "Bite",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "elo",
+        "display_name": "Elo",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "loop-ai",
+        "display_name": "Loop AI",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "mako-networks",
+        "display_name": "Mako Networks",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "menu-order-ai",
+        "display_name": "Menu-Order AI",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "nibble-one",
+        "display_name": "Nibble ONE",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "olo",
+        "display_name": "Olo",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "onosys",
+        "display_name": "Onosys",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "sparkfly",
+        "display_name": "Sparkfly",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "tillster",
+        "display_name": "Tillster",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "unplug",
+        "display_name": "unPLUG",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "3-owl-inc",
+        "display_name": "3 Owl Inc",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "ai2cs",
+        "display_name": "AI2CS",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "altametrics",
+        "display_name": "Altametrics",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "conversenow",
+        "display_name": "ConverseNow",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "dsa-signage",
+        "display_name": "DSA Signage",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "essintial-enterprise-solutions",
+        "display_name": "Essintial Enterprise Solutions",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "frandata",
+        "display_name": "FRANdata",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "hughes",
+        "display_name": "Hughes",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "one-source",
+        "display_name": "One Source",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "spectrum-business",
+        "display_name": "Spectrum Business",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "worldlink-integration-group",
+        "display_name": "Worldlink Integration Group",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "entegra-procurement-services",
+        "display_name": "Entegra Procurement Services",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "fourth-enterprises",
+        "display_name": "Fourth Enterprises",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "hang",
+        "display_name": "Hang",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "harri",
+        "display_name": "Harri",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "harris-technologies-inc",
+        "display_name": "Harris Technologies Inc.",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "ingest",
+        "display_name": "Ingest",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "landed-management",
+        "display_name": "Landed Management",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "loman-ai",
+        "display_name": "Loman AI",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "marigold",
+        "display_name": "Marigold",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "microtouch-systems",
+        "display_name": "MicroTouch Systems",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "momos",
+        "display_name": "Momos",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "opentable",
+        "display_name": "OpenTable",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "sagent",
+        "display_name": "Sagent",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "scale-computing",
+        "display_name": "Scale Computing",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "sunday",
+        "display_name": "sunday",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "telaid",
+        "display_name": "Telaid",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "touch-dynamic-inc",
+        "display_name": "Touch Dynamic, Inc.",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "voicify",
+        "display_name": "Voicify",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "square",
+        "display_name": "Square",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "fiserv-clover",
+        "display_name": "Fiserv (Clover)",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "stripe",
+        "display_name": "Stripe",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "thanx",
+        "display_name": "Thanx",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "sevenrooms",
+        "display_name": "SevenRooms",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "coates-group",
+        "display_name": "Coates Group",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "hme-hm-electronics",
+        "display_name": "HME (HM Electronics)",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "adjacent-kitchen-voice-players-brief",
+        "display_name": "Adjacent kitchen / voice players (brief)",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "stratacache",
+        "display_name": "STRATACACHE",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "rise-vision",
+        "display_name": "Rise Vision",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "raydiant",
+        "display_name": "Raydiant",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "spectrio",
+        "display_name": "Spectrio",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "acrelec",
+        "display_name": "Acrelec",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "crunchtime-qsr-automations",
+        "display_name": "Crunchtime (+ QSR Automations)",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "marginedge",
+        "display_name": "MarginEdge",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "craftable",
+        "display_name": "Craftable",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "fourth-hotschedules",
+        "display_name": "Fourth (HotSchedules)",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "square-for-restaurants-block",
+        "display_name": "Square for Restaurants (Block)",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "squirrel-systems",
+        "display_name": "Squirrel Systems",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "lightspeed-commerce-lightspeed-restaurant-upserve",
+        "display_name": "Lightspeed Commerce (Lightspeed Restaurant / Upserve)",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "upserve-skyview-equity",
+        "display_name": "Upserve (Skyview Equity)",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "block-square-payments",
+        "display_name": "Block / Square (payments)",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "elavon-u-s-bank",
+        "display_name": "Elavon (U.S. Bank)",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "jpmorgan-payments",
+        "display_name": "JPMorgan Payments",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "cardfree",
+        "display_name": "CardFree",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "nuvei",
+        "display_name": "Nuvei",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "yumpingo",
+        "display_name": "Yumpingo",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "preferred-patron",
+        "display_name": "Preferred Patron",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "craver",
+        "display_name": "Craver",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "adyen-talon-one",
+        "display_name": "Adyen / Talon.One",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "presto-presto-voice",
+        "display_name": "Presto (Presto Voice)",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "omilia",
+        "display_name": "Omilia",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "delaget",
+        "display_name": "Delaget",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "jolt",
+        "display_name": "Jolt",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "meazureup",
+        "display_name": "MeazureUp",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "wand-digital",
+        "display_name": "WAND Digital",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "grubbrr",
+        "display_name": "GRUBBRR",
+        "relationship_class": "adjacent_ecosystem_vendor"
+      },
+      {
+        "slug": "samsung-vxt-commercial-displays",
+        "display_name": "Samsung (VXT + commercial displays)",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "marketman-meal-ticket-psg",
+        "display_name": "MarketMan (Meal Ticket / PSG)",
+        "relationship_class": "unclassified_vendor"
+      },
+      {
+        "slug": "tenzo",
+        "display_name": "Tenzo",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "compeat",
+        "display_name": "Compeat",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "presto",
+        "display_name": "Presto",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "nova",
+        "display_name": "Nova",
+        "relationship_class": "product_line_competitor"
+      },
+      {
+        "slug": "doordash-dashos",
+        "display_name": "DoorDash / DashOS",
+        "relationship_class": "product_line_competitor"
+      }
+    ]
+  },
+  "competitors": [
+    {
+      "slug": "par-technology",
+      "display_name": "PAR Technology",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-28_1323_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "PAR POS",
+        "PAR Ordering",
+        "PAR Engagement",
+        "Punchh Loyalty / PAR Engagement Loyalty",
+        "Guest360 by PAR",
+        "PAR OPS"
+      ],
+      "completed_at": "2026-09-28T18:30:56.587644Z",
+      "blocker": null
+    },
+    {
+      "slug": "toast",
+      "display_name": "Toast",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-28_1323_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Toast Platform / Operations Suite",
+        "Marketing Suite",
+        "Digital Storefront Suite",
+        "Supplier & Accounting Suite",
+        "Management Suite",
+        "Payroll Suite / Team Management Suite",
+        "Commercial hardware / KDS / kiosk / handheld POS",
+        "Toast IQ"
+      ],
+      "completed_at": "2026-09-28T18:30:56.587644Z",
+      "blocker": null
+    },
+    {
+      "slug": "ncr",
+      "display_name": "NCR Voyix",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1041_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Aloha Next",
+        "Aloha POS",
+        "Aloha Cloud",
+        "Aloha Essentials"
+      ],
+      "completed_at": "2026-09-29T15:42:35Z",
+      "blocker": null
+    },
+    {
+      "slug": "nory",
+      "display_name": "Nory",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-28_1323_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Nory restaurant operating system",
+        "Workforce Management",
+        "Inventory / ordering",
+        "Payroll",
+        "BI / forecasting"
+      ],
+      "completed_at": "2026-09-28T18:30:56.587644Z",
+      "blocker": null
+    },
+    {
+      "slug": "oracle-food-beverage-simphony-micros",
+      "display_name": "Oracle Food & Beverage (Simphony / MICROS)",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1041_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Oracle Simphony POS",
+        "Oracle MICROS software and hardware estate"
+      ],
+      "completed_at": "2026-09-29T15:42:35Z",
+      "blocker": null
+    },
+    {
+      "slug": "qu",
+      "display_name": "Qu",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-28_1323_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Unified Commerce Platform",
+        "Qu POS",
+        "Kiosk / Drive-Thru / Third-Party Ordering / Online Ordering",
+        "Platform reliability/data layer"
+      ],
+      "completed_at": "2026-09-28T18:30:56.587644Z",
+      "blocker": null
+    },
+    {
+      "slug": "restaurant365",
+      "display_name": "Restaurant365",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1041_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "R365 Accounting",
+        "R365 Operations and Inventory",
+        "R365 Workforce, Scheduling, and Payroll",
+        "R365 Employee Training",
+        "R365 API and OData",
+        "Compeat and Ctuit RADAR legacy estate"
+      ],
+      "completed_at": "2026-09-29T15:42:35Z",
+      "blocker": null
+    },
+    {
+      "slug": "revel-systems",
+      "display_name": "Revel Systems",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1041_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Revel Systems POS",
+        "Revel Advantage",
+        "Revel add-on and API ecosystem"
+      ],
+      "completed_at": "2026-09-29T15:42:35Z",
+      "blocker": null
+    },
+    {
+      "slug": "mood-media",
+      "display_name": "Mood Media",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1041_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Mood Music and Pandora for Business",
+        "Harmony, Digital Signage, Menu Boards, and Mood TV",
+        "Drive-Thru Systems"
+      ],
+      "completed_at": "2026-09-29T15:42:35Z",
+      "blocker": null
+    },
+    {
+      "slug": "shift4-payments",
+      "display_name": "Shift4 Payments",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1041_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "SkyTab",
+        "Shift4 Dine",
+        "Shift4 Online Ordering",
+        "Customer Hub and Lighthouse lineage",
+        "Revel Systems"
+      ],
+      "completed_at": "2026-09-29T15:42:35Z",
+      "blocker": null
+    },
+    {
+      "slug": "fiserv",
+      "display_name": "Fiserv",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1041_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Clover Dining and Clover POS",
+        "BentoBox"
+      ],
+      "completed_at": "2026-09-29T15:42:35Z",
+      "blocker": null
+    },
+    {
+      "slug": "cbs-northstar",
+      "display_name": "CBS NorthStar",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1623_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "NorthStar Core POS",
+        "Online Ordering",
+        "tipOUT",
+        "kitchenAI",
+        "Recipe Viewer",
+        "open API/integration ecosystem"
+      ],
+      "completed_at": "2026-09-29T21:36:45Z",
+      "blocker": null
+    },
+    {
+      "slug": "freedompay",
+      "display_name": "FreedomPay",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1041_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "FreedomPay Commerce Platform and payment gateway"
+      ],
+      "completed_at": "2026-09-29T15:42:35Z",
+      "blocker": null
+    },
+    {
+      "slug": "iconex",
+      "display_name": "Iconex",
+      "relationship_class": "unclassified_vendor",
+      "status": "completed",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-10-02_0441_iconex_deep-research.json",
+      "products_platforms_covered": [
+        "Iconex Sticky Media",
+        "MAXStick",
+        "Iconex Connect RFID",
+        "linerless restaurant order-identification media",
+        "tamper-evident/freshness labels",
+        "printer/media compatibility"
+      ],
+      "completed_at": "2026-10-02T09:45:18Z",
+      "blocker": null
+    },
+    {
+      "slug": "iw",
+      "display_name": "IW",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "kluck",
+      "display_name": "Kluck",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "stickypos",
+      "display_name": "StickyPOS",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "swipe-savvy-pos",
+      "display_name": "Swipe Savvy POS",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "verifone",
+      "display_name": "Verifone",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1623_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Verifone payments platform",
+        "Victa",
+        "P400"
+      ],
+      "completed_at": "2026-09-29T21:36:45Z",
+      "blocker": null
+    },
+    {
+      "slug": "adyen",
+      "display_name": "Adyen",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "hp",
+      "display_name": "HP",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "posiflex",
+      "display_name": "Posiflex",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "rds",
+      "display_name": "RDS",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1623_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Genius for Restaurants Enterprise POS",
+        "NCR Voyix Aloha",
+        "PAR restaurant POS",
+        "SpotOn",
+        "Maitre D",
+        "PAR PixelPoint",
+        "NCR Voyix/Radiant",
+        "S4 Hospitality"
+      ],
+      "completed_at": "2026-09-29T21:36:45Z",
+      "blocker": null
+    },
+    {
+      "slug": "tabit",
+      "display_name": "Tabit",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1623_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Tabit PAD",
+        "Tabit Chef",
+        "Tabit Guest",
+        "Tabit Analytics",
+        "Tabit Shift",
+        "Tabit Hotels",
+        "Tabit Order",
+        "Tabit Wheels",
+        "Tabit Kiosk",
+        "Tabit Gift Cards",
+        "Tabit Kitchen",
+        "Tabit Feedback"
+      ],
+      "completed_at": "2026-09-29T21:36:45Z",
+      "blocker": null
+    },
+    {
+      "slug": "touchpoint",
+      "display_name": "Touchpoint",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1623_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "POS",
+        "KDS",
+        "online ordering",
+        "mobile apps",
+        "kiosks",
+        "loyalty/rewards",
+        "marketing",
+        "gift cards",
+        "CDP/guest data",
+        "LineBuster/drive-through",
+        "delivery integrations",
+        "payments"
+      ],
+      "completed_at": "2026-09-29T21:36:45Z",
+      "blocker": null
+    },
+    {
+      "slug": "transaction-network-services",
+      "display_name": "Transaction Network Services",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "tray",
+      "display_name": "TRAY",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1623_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "TRAY Cloud POS",
+        "digital ordering/tableside service",
+        "KDS",
+        "TRAY HQ",
+        "open API/integration layer"
+      ],
+      "completed_at": "2026-09-29T21:36:45Z",
+      "blocker": null
+    },
+    {
+      "slug": "yelp-for-restaurants",
+      "display_name": "Yelp for Restaurants",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "agilysys",
+      "display_name": "Agilysys",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "level-10",
+      "display_name": "Level 10",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "otter",
+      "display_name": "Otter",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "restroworks",
+      "display_name": "Restroworks",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1623_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "POS",
+        "Inventory Management",
+        "Supply Chain Management",
+        "Delivery Management",
+        "Base Kitchen",
+        "Kitchen Suite",
+        "Self-Ordering Kiosks",
+        "analytics",
+        "Cockpit By Restroworks",
+        "RestroNext CX Suite"
+      ],
+      "completed_at": "2026-09-29T21:36:45Z",
+      "blocker": null
+    },
+    {
+      "slug": "retail-technology-group",
+      "display_name": "Retail Technology Group",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "spoton",
+      "display_name": "SpotOn",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "star-micronics",
+      "display_name": "Star Micronics",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "upm-adhesive-materials",
+      "display_name": "UPM Adhesive Materials",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "xpr-pos",
+      "display_name": "XPR POS",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "858-partners",
+      "display_name": "858 Partners",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "directv",
+      "display_name": "DIRECTV",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "hostie",
+      "display_name": "Hostie",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "marqii",
+      "display_name": "Marqii",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "ovation",
+      "display_name": "Ovation",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1623_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Guest Feedback",
+        "Guest Recovery",
+        "Operational Insights",
+        "Operational Improvement",
+        "Text Marketing",
+        "Reputation Management",
+        "long-form/order-aware surveys",
+        "Winback"
+      ],
+      "completed_at": "2026-09-29T21:36:45Z",
+      "blocker": null
+    },
+    {
+      "slug": "rockbot",
+      "display_name": "Rockbot",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1924_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Rockbot Music",
+        "Audio Messaging",
+        "Rockbot Request",
+        "Digital Signage / Menu Boards",
+        "Rockbot TV",
+        "Music Videos",
+        "Retail Media / Advertising",
+        "Media Players & Devices"
+      ],
+      "completed_at": "2026-09-30T03:20:03Z",
+      "blocker": null
+    },
+    {
+      "slug": "slang-ai",
+      "display_name": "Slang AI",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "tattle",
+      "display_name": "Tattle",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "ziosk",
+      "display_name": "Ziosk",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1924_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Ziosk Mini / zMini",
+        "Ziosk Pro",
+        "Drop & Pay",
+        "zConnect",
+        "Games / premium content",
+        "Ziosk Intelligence",
+        "DigiSite",
+        "Aurizon / Tablet Pro / Ziosk Go support-visible products"
+      ],
+      "completed_at": "2026-09-30T03:20:03Z",
+      "blocker": null
+    },
+    {
+      "slug": "alchemer",
+      "display_name": "Alchemer",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "arc",
+      "display_name": "Arc",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "canopy",
+      "display_name": "Canopy",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "constrata",
+      "display_name": "ConStrata",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "custom-channels",
+      "display_name": "Custom Channels",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "ecolab",
+      "display_name": "Ecolab",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "field-advantage",
+      "display_name": "Field Advantage",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "kitchen-armor",
+      "display_name": "Kitchen Armor",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "mirus",
+      "display_name": "Mirus",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1924_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Mirus data management / integration layer",
+        "Report Writer / custom reporting"
+      ],
+      "completed_at": "2026-09-30T03:20:03Z",
+      "blocker": null
+    },
+    {
+      "slug": "perfect-company",
+      "display_name": "Perfect Company",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1924_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "KitchenPro",
+        "KitchenPro GRILL / FRY / MAKE / PACK / DRINK / DRIVE-THRU",
+        "Perfect Kitchen PRO / Perfect Drink / Perfect Bake / Perfect Blend"
+      ],
+      "completed_at": "2026-09-30T03:20:03Z",
+      "blocker": null
+    },
+    {
+      "slug": "revmo-ai",
+      "display_name": "Revmo AI",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "solugenix",
+      "display_name": "Solugenix",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "soundhound-ai",
+      "display_name": "SoundHound AI",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "synergysuite",
+      "display_name": "SynergySuite",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-29_1924_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "AI Forecasting",
+        "AI Ordering",
+        "Inventory Management",
+        "Purchasing",
+        "Labor & Scheduling",
+        "Reporting & Analytics",
+        "Operations",
+        "Food Safety",
+        "Cash Management",
+        "Human Resources",
+        "Manager by SynergySuite",
+        "Cover by SynergySuite",
+        "Clocking / Timekeeping mobile capability"
+      ],
+      "completed_at": "2026-09-30T03:20:03Z",
+      "blocker": null
+    },
+    {
+      "slug": "tcg",
+      "display_name": "TCG",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "tiphaus",
+      "display_name": "TipHaus",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-30_0722_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "TipHaus tip-management platform",
+        "Earned Tip Access / HausMoney / HausDirect",
+        "Employee App"
+      ],
+      "completed_at": "2026-09-30T15:32:32Z",
+      "blocker": null
+    },
+    {
+      "slug": "7shifts",
+      "display_name": "7shifts",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "all-gravy",
+      "display_name": "All Gravy",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-30_0722_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "All Gravy People OS / employee app",
+        "AI Colleague / AI workflows",
+        "Learning / onboarding / handbooks",
+        "HRIS / scheduling / ATS / surveys / whistleblower"
+      ],
+      "completed_at": "2026-09-30T15:32:32Z",
+      "blocker": null
+    },
+    {
+      "slug": "back-office",
+      "display_name": "Back Office",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-30_0722_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "Back Office Accounting",
+        "Food Cost Management / Inventory / Recipe Costing / Ordering",
+        "Restaurant Payroll"
+      ],
+      "completed_at": "2026-09-30T15:32:32Z",
+      "blocker": null
+    },
+    {
+      "slug": "berry-ai",
+      "display_name": "Berry AI",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-30_0722_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "AI Drive-Thru Timer",
+        "AI Dining Room / Counter Timer",
+        "Security / Loss Prevention"
+      ],
+      "completed_at": "2026-09-30T15:32:32Z",
+      "blocker": null
+    },
+    {
+      "slug": "bixolon",
+      "display_name": "BIXOLON",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "branch",
+      "display_name": "Branch",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "chetu",
+      "display_name": "Chetu",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "glory",
+      "display_name": "Glory",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "transact-technologies",
+      "display_name": "TransAct Technologies",
+      "relationship_class": "product_line_competitor",
+      "status": "complete",
+      "qualifying_packet_path": "system/inbox/chatgpt_intelligence_drop/2026-09-30_0722_competitor-platforms_deep-research.md",
+      "products_platforms_covered": [
+        "BOHA! Control Center",
+        "BOHA! Ops: Labeling, Food Prep, Checklist, Timer, Media",
+        "BOHA! Temp",
+        "BOHA! Sense",
+        "BOHA! Terminal / WorkStation / labeling hardware"
+      ],
+      "completed_at": "2026-09-30T15:32:32Z",
+      "blocker": null
+    },
+    {
+      "slug": "trison",
+      "display_name": "TRISON",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": "Completed ordinary-ChatGPT Deep Research job awaits local export and validation; Mac locked during transfer. Resume https://chatgpt.com/c/6abd7caa-9b08-83ea-b7f6-f3dc1656ac0f after unlock."
+    },
+    {
+      "slug": "5-5",
+      "display_name": "5&5",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "axial-shift",
+      "display_name": "Axial Shift",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": "Completed ordinary-ChatGPT Deep Research job awaits local export and validation; Mac locked during transfer. Resume https://chatgpt.com/c/6abd7caa-9b08-83ea-b7f6-f3dc1656ac0f after unlock."
+    },
+    {
+      "slug": "envysion",
+      "display_name": "Envysion",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "epson",
+      "display_name": "Epson",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "fusion-connect",
+      "display_name": "Fusion Connect",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "hat-design-works",
+      "display_name": "HAT Design Works",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "hi-auto",
+      "display_name": "Hi Auto",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "qsrsoft",
+      "display_name": "QSRSoft",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": "Completed ordinary-ChatGPT Deep Research job awaits local export and validation; Mac locked during transfer. Resume https://chatgpt.com/c/6abd7caa-9b08-83ea-b7f6-f3dc1656ac0f after unlock."
+    },
+    {
+      "slug": "revenue-management-solutions",
+      "display_name": "Revenue Management Solutions",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "rosnet",
+      "display_name": "Rosnet",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "savi",
+      "display_name": "Savi",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "shenzhen-electron-technology-co-ltd",
+      "display_name": "Shenzhen Electron Technology Co., Ltd.",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "sona",
+      "display_name": "Sona",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "truemeter",
+      "display_name": "TrueMeter",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "u-experten",
+      "display_name": "U-Experten",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "ando",
+      "display_name": "Ando",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "cap-energy",
+      "display_name": "Cap Energy",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "comcast-business",
+      "display_name": "Comcast Business",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "decision-logic",
+      "display_name": "Decision Logic",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "heytruffle",
+      "display_name": "heytruffle",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "incept-ai",
+      "display_name": "Incept AI",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "precitaste",
+      "display_name": "PreciTaste",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "reality-based-group",
+      "display_name": "Reality Based Group",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "resideo",
+      "display_name": "Resideo",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "vox-ai",
+      "display_name": "Vox AI",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "xenia",
+      "display_name": "Xenia",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "bikky",
+      "display_name": "Bikky",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "card-market",
+      "display_name": "Card Market",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "cogs-well",
+      "display_name": "COGS-Well",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "crunchtime",
+      "display_name": "Crunchtime",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "datadelivers",
+      "display_name": "DataDelivers",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "deepgram",
+      "display_name": "Deepgram",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "dinova",
+      "display_name": "Dinova",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "ecard-systems",
+      "display_name": "eCard Systems",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "fresh-kds",
+      "display_name": "Fresh KDS",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "incentivio",
+      "display_name": "Incentivio",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "nastar",
+      "display_name": "NAStar",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "paytronix",
+      "display_name": "Paytronix",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "vibes",
+      "display_name": "Vibes",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "apex-order-pickup",
+      "display_name": "Apex Order Pickup",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "bite",
+      "display_name": "Bite",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "elo",
+      "display_name": "Elo",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "loop-ai",
+      "display_name": "Loop AI",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "mako-networks",
+      "display_name": "Mako Networks",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "menu-order-ai",
+      "display_name": "Menu-Order AI",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "nibble-one",
+      "display_name": "Nibble ONE",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "olo",
+      "display_name": "Olo",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "onosys",
+      "display_name": "Onosys",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "sparkfly",
+      "display_name": "Sparkfly",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "tillster",
+      "display_name": "Tillster",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "unplug",
+      "display_name": "unPLUG",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "3-owl-inc",
+      "display_name": "3 Owl Inc",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "ai2cs",
+      "display_name": "AI2CS",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "altametrics",
+      "display_name": "Altametrics",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "conversenow",
+      "display_name": "ConverseNow",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "dsa-signage",
+      "display_name": "DSA Signage",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "essintial-enterprise-solutions",
+      "display_name": "Essintial Enterprise Solutions",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "frandata",
+      "display_name": "FRANdata",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "hughes",
+      "display_name": "Hughes",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "one-source",
+      "display_name": "One Source",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "spectrum-business",
+      "display_name": "Spectrum Business",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "worldlink-integration-group",
+      "display_name": "Worldlink Integration Group",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "entegra-procurement-services",
+      "display_name": "Entegra Procurement Services",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "fourth-enterprises",
+      "display_name": "Fourth Enterprises",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "hang",
+      "display_name": "Hang",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "harri",
+      "display_name": "Harri",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "harris-technologies-inc",
+      "display_name": "Harris Technologies Inc.",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "ingest",
+      "display_name": "Ingest",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "landed-management",
+      "display_name": "Landed Management",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "loman-ai",
+      "display_name": "Loman AI",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "marigold",
+      "display_name": "Marigold",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "microtouch-systems",
+      "display_name": "MicroTouch Systems",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "momos",
+      "display_name": "Momos",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "opentable",
+      "display_name": "OpenTable",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "sagent",
+      "display_name": "Sagent",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "scale-computing",
+      "display_name": "Scale Computing",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "sunday",
+      "display_name": "sunday",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "telaid",
+      "display_name": "Telaid",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "touch-dynamic-inc",
+      "display_name": "Touch Dynamic, Inc.",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "voicify",
+      "display_name": "Voicify",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "square",
+      "display_name": "Square",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "fiserv-clover",
+      "display_name": "Fiserv (Clover)",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "stripe",
+      "display_name": "Stripe",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "thanx",
+      "display_name": "Thanx",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "sevenrooms",
+      "display_name": "SevenRooms",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "coates-group",
+      "display_name": "Coates Group",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "hme-hm-electronics",
+      "display_name": "HME (HM Electronics)",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "adjacent-kitchen-voice-players-brief",
+      "display_name": "Adjacent kitchen / voice players (brief)",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "stratacache",
+      "display_name": "STRATACACHE",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "rise-vision",
+      "display_name": "Rise Vision",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "raydiant",
+      "display_name": "Raydiant",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "spectrio",
+      "display_name": "Spectrio",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "acrelec",
+      "display_name": "Acrelec",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "crunchtime-qsr-automations",
+      "display_name": "Crunchtime (+ QSR Automations)",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "marginedge",
+      "display_name": "MarginEdge",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "craftable",
+      "display_name": "Craftable",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "fourth-hotschedules",
+      "display_name": "Fourth (HotSchedules)",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "square-for-restaurants-block",
+      "display_name": "Square for Restaurants (Block)",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "squirrel-systems",
+      "display_name": "Squirrel Systems",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "lightspeed-commerce-lightspeed-restaurant-upserve",
+      "display_name": "Lightspeed Commerce (Lightspeed Restaurant / Upserve)",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "upserve-skyview-equity",
+      "display_name": "Upserve (Skyview Equity)",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "block-square-payments",
+      "display_name": "Block / Square (payments)",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "elavon-u-s-bank",
+      "display_name": "Elavon (U.S. Bank)",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "jpmorgan-payments",
+      "display_name": "JPMorgan Payments",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "cardfree",
+      "display_name": "CardFree",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "nuvei",
+      "display_name": "Nuvei",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "yumpingo",
+      "display_name": "Yumpingo",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "preferred-patron",
+      "display_name": "Preferred Patron",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "craver",
+      "display_name": "Craver",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "adyen-talon-one",
+      "display_name": "Adyen / Talon.One",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "presto-presto-voice",
+      "display_name": "Presto (Presto Voice)",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "omilia",
+      "display_name": "Omilia",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "delaget",
+      "display_name": "Delaget",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "jolt",
+      "display_name": "Jolt",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "meazureup",
+      "display_name": "MeazureUp",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "wand-digital",
+      "display_name": "WAND Digital",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "grubbrr",
+      "display_name": "GRUBBRR",
+      "relationship_class": "adjacent_ecosystem_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "samsung-vxt-commercial-displays",
+      "display_name": "Samsung (VXT + commercial displays)",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "marketman-meal-ticket-psg",
+      "display_name": "MarketMan (Meal Ticket / PSG)",
+      "relationship_class": "unclassified_vendor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "tenzo",
+      "display_name": "Tenzo",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "compeat",
+      "display_name": "Compeat",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "presto",
+      "display_name": "Presto",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "nova",
+      "display_name": "Nova",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    },
+    {
+      "slug": "doordash-dashos",
+      "display_name": "DoorDash / DashOS",
+      "relationship_class": "product_line_competitor",
+      "status": "pending",
+      "qualifying_packet_path": null,
+      "products_platforms_covered": [],
+      "completed_at": null,
+      "blocker": null
+    }
+  ]
+}

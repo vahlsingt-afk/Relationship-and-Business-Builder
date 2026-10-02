@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rbb.local/schemas/hunter_gap_manifest.schema.json",
+  "title": "Hunter Authoritative RBB Gap Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "generated_at", "sources", "target_count", "gap_count", "targets"],
+  "properties": {
+    "schema": {"const": "rb.hunter_gap_manifest.v1"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "sources": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "target_count": {"type": "integer", "minimum": 0},
+    "gap_count": {"type": "integer", "minimum": 0},
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["target_key", "display_name", "entity_type", "priority", "coverage", "current_state", "gaps", "discovery_domains"],
+        "properties": {
+          "target_key": {"type": "string", "pattern": "^(company|competitor):.+$"},
+          "display_name": {"type": "string", "minLength": 1},
+          "entity_type": {"enum": ["restaurant_brand", "restaurant_technology_company"]},
+          "priority": {"enum": ["enterprise_primary", "emerging_primary", "secondary", "explicit"]},
+          "coverage": {"type": "string", "minLength": 1},
+          "current_state": {"type": "object"},
+          "gaps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["gap_id", "field", "gap_type", "question", "importance", "source_exporter"],
+              "properties": {
+                "gap_id": {"type": "string", "pattern": "^gap:(company|competitor):[^:]+:.+$"},
+                "field": {"type": "string", "minLength": 1},
+                "gap_type": {"enum": ["missing", "stale", "low_confidence", "verification_needed", "conflicted"]},
+                "question": {"type": "string", "minLength": 1},
+                "importance": {"enum": ["critical", "high", "medium", "low"]},
+                "source_exporter": {"type": "string", "minLength": 1}
+              }
+            }
+          },
+          "discovery_domains": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

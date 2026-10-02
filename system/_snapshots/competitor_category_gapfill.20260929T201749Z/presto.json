@@ -1,0 +1,197 @@
+{
+  "competitor_id": "comp-presto",
+  "competitor_slug": "presto",
+  "display_name": "Presto",
+  "aliases": [
+    "Presto Voice"
+  ],
+  "vendor_entity_id": "vendor-presto",
+  "primary_category": "voice_ai",
+  "competes_on": [
+    "kitchen_drive_thru"
+  ],
+  "positioning_summary": "Presto is supported in this pass as a restaurant-technology vendor in: drive thru ai, ai solution 1.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "products": [
+    {
+      "value": "Presto Voice (drive_thru_ai, ai_solution_1)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://presto.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Vendor has current restaurant-specific product evidence in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://presto.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "weaknesses": [],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated product evidence does not by itself establish ROI, reliability, implementation quality, or systemwide customer adoption; independent validation remains a research gap.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://presto.com/",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [
+    {
+      "value": "Presto announced $10 million in new funding to accelerate its restaurant Voice AI business.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://presto.com/category/press-releases/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": false
+    }
+  ],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:13Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T20:16:48Z",
+  "canonical_company_name": "Presto",
+  "website": "https://presto.com/",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://presto.com/",
+        "title": "Presto Voice",
+        "publisher": "Presto",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "product_line_competitor",
+  "restaurant_tech_categories": [
+    {
+      "category": "drive_thru_ai",
+      "basis": "Current evidence supports drive thru ai as a restaurant-facing category for Presto.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://presto.com/",
+          "title": "Presto Voice",
+          "publisher": "Presto",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        },
+        {
+          "url": "https://presto.com/category/press-releases/",
+          "title": "Presto Press Releases",
+          "publisher": "Presto",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "other"
+        }
+      ]
+    },
+    {
+      "category": "ai_solution_1",
+      "basis": "Current evidence supports ai solution 1 as a restaurant-facing category for Presto.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://presto.com/",
+          "title": "Presto Voice",
+          "publisher": "Presto",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        },
+        {
+          "url": "https://presto.com/category/press-releases/",
+          "title": "Presto Press Releases",
+          "publisher": "Presto",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "other"
+        }
+      ]
+    }
+  ],
+  "product_lineage": [],
+  "latest_cos_commentary": {
+    "headline": "Direct Genius portfolio overlap identified.",
+    "genius_exposure": [
+      "kitchen_drive_thru"
+    ],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Validate account-level incumbent and deployment scope before positioning against Genius.",
+    "risk_and_uncertainty": "Evidence quality varies materially across this long-tail batch; unresolved names remain deliberately unclassified rather than guessed.",
+    "priority": "P2",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://presto.com/",
+        "title": "Presto Voice",
+        "publisher": "Presto",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      },
+      {
+        "url": "https://presto.com/category/press-releases/",
+        "title": "Presto Press Releases",
+        "publisher": "Presto",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "other"
+      }
+    ]
+  }
+}

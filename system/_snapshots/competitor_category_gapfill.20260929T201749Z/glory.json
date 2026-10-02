@@ -1,0 +1,209 @@
+{
+  "competitor_id": "comp-glory",
+  "competitor_slug": "glory",
+  "display_name": "Glory",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "Glory currently markets restaurant-facing capabilities across payments, pos hardware, kiosks.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T20:16:48Z",
+  "latest_cos_commentary": {
+    "headline": "Adjacent restaurant-tech vendor; no supported direct Genius overlap.",
+    "genius_exposure": [],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Monitor for account influence or expansion into Genius categories; verify before treating as a direct competitor.",
+    "risk_and_uncertainty": "Long-tail evidence quality varies; unresolved vendors were left unclassified rather than guessed.",
+    "priority": "P3",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://www.glory-global.com/en-us/industries/food-and-beverage-en-us",
+        "title": "Food & Beverage",
+        "publisher": "Glory Global",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 39,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Pricing signals",
+        "Named Customers"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership",
+        "named restaurant customer",
+        "pricing"
+      ]
+    }
+  },
+  "canonical_company_name": "Glory",
+  "website": "https://www.glory-global.com/en-us/industries/food-and-beverage-en-us/quick-service-restaurants",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://www.glory-global.com/en-us/industries/food-and-beverage-en-us",
+        "title": "Food & Beverage",
+        "publisher": "Glory Global",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "adjacent_ecosystem_vendor",
+  "restaurant_tech_categories": [
+    {
+      "category": "payments",
+      "basis": "Current restaurant-specific evidence supports payments for Glory.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.glory-global.com/en-us/industries/food-and-beverage-en-us",
+          "title": "Food & Beverage",
+          "publisher": "Glory Global",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "pos_hardware",
+      "basis": "Current restaurant-specific evidence supports pos hardware for Glory.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.glory-global.com/en-us/industries/food-and-beverage-en-us",
+          "title": "Food & Beverage",
+          "publisher": "Glory Global",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "kiosks",
+      "basis": "Current restaurant-specific evidence supports kiosks for Glory.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.glory-global.com/en-us/industries/food-and-beverage-en-us",
+          "title": "Food & Beverage",
+          "publisher": "Glory Global",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "Cash automation (payments, pos_hardware, kiosks)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.glory-global.com/en-us/industries/food-and-beverage-en-us",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Order-pay kiosks (payments, pos_hardware, kiosks)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.glory-global.com/en-us/industries/food-and-beverage-en-us",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Current restaurant-specific product/use-case evidence exists in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.glory-global.com/en-us/industries/food-and-beverage-en-us",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated evidence is not independent proof of ROI, reliability, implementation quality, or systemwide adoption. Independent validation remains incomplete in this bounded gap-fill pass.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.glory-global.com/en-us/industries/food-and-beverage-en-us",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [
+    {
+      "value": "McDonald's",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.glory-global.com/en-us/industries/food-and-beverage-en-us",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": false
+    }
+  ],
+  "recent_news": [],
+  "product_lineage": []
+}

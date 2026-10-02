@@ -1,0 +1,21 @@
+{
+  "file_id": "cap-77af8fc3c98d832a",
+  "queued_at": "2026-07-03T09:03:25+00:00",
+  "source_id": "just_press_record",
+  "source_label": "Just Press Record",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-02/08-33-02.m4a",
+  "capture_type": "meeting",
+  "title_hint": "Just Press Record \u2014 2026-07-02 08-33-02",
+  "transcription_method": "whisper_local",
+  "transcript": "I just ordered the tub and shower surround for the bathroom project. Let's update the to-do list.",
+  "word_count": 17,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-07-06T16:28:50+00:00",
+  "processing_result": {
+    "triage_stream_count": 0,
+    "noise_only": true,
+    "persisted_count": 0,
+    "exec_mutations": 0
+  }
+}

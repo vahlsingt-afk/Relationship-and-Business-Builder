@@ -1,0 +1,65 @@
+{
+  "competitor_id": "comp-menu-order-ai",
+  "competitor_slug": "menu-order-ai",
+  "display_name": "Menu-Order AI",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "MENU-ORDER AI surpassed 110,000 downloads and became the #1 app for GLP-1 meal searches on the U.S. Apple App Store, according to a company press release.",
+        "evidence_id": "note-0002",
+        "added_at": "2026-09-29T15:44:12Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:09Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:34Z",
+  "latest_cos_commentary": {
+    "headline": "Menu-Order AI is a consumer-facing diner app (launched October 2025) that surfaces GLP-1-friendly menu items and offers restaurants a no-integration QR-code program, not a POS or back-office system.",
+    "genius_exposure": "Minimal direct overlap with Genius's core product lines (pos, payments, back_office, kitchen_drive_thru, loyalty_engagement, digital_menu_boards); it is a consumer discovery/marketing layer that sits on top of a restaurant's existing menu and technology stack without requiring POS integration.",
+    "competitive_timing": "Recently launched (October 2025) and growing quickly by download count in a narrow, trend-driven (GLP-1) niche as of research date.",
+    "sales_response": "This is not a head-to-head competitor to Genius's product lines; if it comes up, frame it as a marketing/discovery add-on an operator might run alongside, not instead of, their POS and payments platform.",
+    "risk_and_uncertainty": "No restaurant partner names, pricing, leadership, or funding information were found; long-term relevance depends on continued growth of the GLP-1-focused dining trend.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 60
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 60,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Named Customers",
+        "Pricing signals",
+        "Recent News / Product Updates",
+        "Snapshot",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "named restaurant partner scope",
+        "pricing/business model for restaurants",
+        "financial health"
+      ]
+    }
+  }
+}

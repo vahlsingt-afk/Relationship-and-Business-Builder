@@ -1,0 +1,184 @@
+{
+  "competitor_id": "comp-savi",
+  "competitor_slug": "savi",
+  "display_name": "Savi",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [
+    "digital_menu_boards"
+  ],
+  "positioning_summary": "Savi currently markets restaurant-facing capabilities across digital menu boards, in restaurant media.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:46:58Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:58Z",
+  "latest_cos_commentary": {
+    "headline": "Direct Genius overlap identified.",
+    "genius_exposure": [
+      "digital_menu_boards"
+    ],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Validate account-level incumbent and deployment scope before competitive positioning.",
+    "risk_and_uncertainty": "Long-tail evidence quality varies; unresolved vendors were left unclassified rather than guessed.",
+    "priority": "P2",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://www.saviiq.com/solutions/commercial/bars-and-restaurants",
+        "title": "Savi restaurant technology evidence",
+        "publisher": "Savi",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 83,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "leadership/CEO",
+        "funding/financial health",
+        "additional named customers beyond Swig"
+      ]
+    }
+  },
+  "canonical_company_name": "Savi",
+  "website": "https://www.saviiq.com/solutions/commercial/bars-and-restaurants",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://www.saviiq.com/solutions/commercial/bars-and-restaurants",
+        "title": "Savi restaurant technology evidence",
+        "publisher": "Savi",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "product_line_competitor",
+  "restaurant_tech_categories": [
+    {
+      "category": "digital_menu_boards",
+      "basis": "Current restaurant-specific evidence supports digital menu boards for Savi.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.saviiq.com/solutions/commercial/bars-and-restaurants",
+          "title": "Savi restaurant technology evidence",
+          "publisher": "Savi",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "in_restaurant_media",
+      "basis": "Current restaurant-specific evidence supports in restaurant media for Savi.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.saviiq.com/solutions/commercial/bars-and-restaurants",
+          "title": "Savi restaurant technology evidence",
+          "publisher": "Savi",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "SAVI iQ (digital_menu_boards, in_restaurant_media)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.saviiq.com/solutions/commercial/bars-and-restaurants",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "SAVI Digital Signage (digital_menu_boards, in_restaurant_media)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.saviiq.com/solutions/commercial/bars-and-restaurants",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Current restaurant-specific product/use-case evidence exists in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.saviiq.com/solutions/commercial/bars-and-restaurants",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated evidence is not independent proof of ROI, reliability, implementation quality, or systemwide adoption. Independent validation remains incomplete in this bounded gap-fill pass.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.saviiq.com/solutions/commercial/bars-and-restaurants",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [],
+  "product_lineage": [],
+  "negative_findings": [],
+  "conflicts_notes": [],
+  "category_assessment_status": "researched",
+  "category_assessment_packet_id": "rbb-competitor-category-gapfill-20260929-batches02-04",
+  "category_assessed_at": "2026-09-29"
+}

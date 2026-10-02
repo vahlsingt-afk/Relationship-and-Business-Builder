@@ -1,0 +1,207 @@
+{
+  "competitor_id": "comp-ncr",
+  "competitor_slug": "ncr",
+  "display_name": "NCR Voyix",
+  "aliases": [
+    "NCR Corporation",
+    "NCR Voyix",
+    "NCR Aloha",
+    "Aloha POS",
+    "NCR",
+    "NCR Voyix (Aloha)"
+  ],
+  "vendor_entity_id": "vendor-ncr",
+  "primary_category": "pos",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Shrinking reported revenue: Q2 2026 revenue $523M (−21% reported; +1% pro forma); restaurant revenue $158M (−23%); FY26 revenue guide −13% to −18% (−2% to −3% pro forma)",
+        "evidence_id": "note-0007",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "Hardware outsourced to Ennoconn (Foxconn subsidiary) from Jan 2026; hardware revenue reported net from Q2 2026",
+        "evidence_id": "note-0008",
+        "added_at": "2026-09-26T12:23:31Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Huge installed base; restaurant adj. EBITDA margin 36.7% (Q2 2026)",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "Claims to have \"reclaimed the top position in new restaurant deployments\" (Dec 2025)",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "Remaining contract value $286M (+65% YoY)",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:23:31Z"
+      }
+    ]
+  },
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:46:55Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:55Z",
+  "latest_cos_commentary": {
+    "headline": "NCR Voyix, under CEO James G. Kelly since February 2025, claims global #1 POS software installation share and reclaimed the top spot in new restaurant POS deployments as of December 2025.",
+    "genius_exposure": "Direct, large-scale competitor to Genius across pos and payments; NCR Voyix (including its Aloha POS line) is one of the largest-scale incumbents in restaurant POS globally, competing head-to-head for enterprise and multi-unit restaurant accounts.",
+    "competitive_timing": "Recent leadership change (CEO Kelly, Feb 2025, ex-EVO Payments) and a December 2025 press push emphasizing reclaimed restaurant-deployment leadership suggest an active competitive repositioning effort underway.",
+    "sales_response": "Where NCR Voyix/Aloha is the incumbent, expect an operator relationship already built around NCR's platform-led enterprise strategy; probe for specific pain points (support, integration flexibility, cost) rather than assuming displacement is easy given NCR's stated installed-base scale.",
+    "risk_and_uncertainty": "Market-leadership and installation figures are NCR Voyix's own claims from its press release, not independently verified third-party data; treat specific numbers (e.g., '#1 globally') as company-reported positioning.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 64
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 64,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Named Customers",
+        "Positioning",
+        "Pricing signals",
+        "Recent News / Product Updates",
+        "Snapshot",
+        "Strengths",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "named restaurant customer scope with specific brand names",
+        "current pricing",
+        "detailed financial health (revenue/margin trends)"
+      ]
+    }
+  },
+  "vendor_claims": [
+    {
+      "value": "NCR Voyix currently positions Aloha Next as its restaurant-commerce-platform umbrella.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.ncr.com/industry/restaurants",
+      "finding_type": "vendor_stated",
+      "source_owner": "NCR Voyix",
+      "source_type": "vendor_platform_page",
+      "published_at": "",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Product-generation boundaries between Aloha Next and other Aloha families are not explicit."
+    },
+    {
+      "value": "NCR markets Aloha restaurant POS around order capture/routing and point-of-service payments intended to reduce staff movement and operational friction.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.ncrvoyix.com/platform/restaurant-applications/ordering-fulfillment/point-of-sale?srsltid=AU7gw4Wtq4jNlO8cJsuMTs2JQRVnHlmC1CreQ9YLCx1F1VExNyMdqH63",
+      "finding_type": "vendor_stated",
+      "source_owner": "NCR Voyix",
+      "source_type": "vendor_product_page",
+      "published_at": "",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Operational outcome claims were not independently validated."
+    }
+  ],
+  "product_lineage": [
+    {
+      "value": "NCR's current pricing estate distinguishes Aloha Cloud from Aloha Essentials, with Essentials described as combining cloud benefits with on-site redundancy.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://shop.ncrvoyix.com/restaurant/aloha-cloud-pos/buy/pricing",
+      "finding_type": "vendor_stated",
+      "source_owner": "NCR Voyix",
+      "source_type": "vendor_pricing_product_page",
+      "published_at": "",
+      "deployment_scope": "franchisee",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Relationship to Aloha Next and core Aloha POS remains ambiguous."
+    },
+    {
+      "value": "NCR's older Aloha POS documentation site states that it is no longer updated and directs users to a newer DEVEX knowledge hub.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://docs.ncrvoyix.com/restaurant/aloha-pos/about/overview",
+      "finding_type": "vendor_stated",
+      "source_owner": "NCR Voyix",
+      "source_type": "vendor_documentation",
+      "published_at": "",
+      "deployment_scope": "historical",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Documentation migration does not itself mean the Aloha product is discontinued."
+    }
+  ],
+  "weaknesses": [
+    {
+      "value": "A Reddit Aloha discussion contains a third-party technician's report that they could not make a merchant's Aloha payments more reliable.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.reddit.com/r/alohapos/comments/17n5rhj/time_for_a_pos_change_we_are_thru_with_aloha/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Reddit r/alohapos",
+      "source_type": "operator_technician_discussion",
+      "published_at": "",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Anonymous single-thread anecdote; hardware, processor and configuration details are unknown."
+    }
+  ],
+  "products": [],
+  "strengths": [],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated evidence does not prove performance, ROI, reliability, implementation quality, or systemwide deployment; independent validation remains incomplete.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "rbb-packet:rbb-competitor-category-gapfill-20260929-batches02-04",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": []
+}

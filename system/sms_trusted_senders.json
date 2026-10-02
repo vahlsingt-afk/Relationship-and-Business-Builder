@@ -1,0 +1,18 @@
+{
+  "_comment": "SMS intelligence config. mode='all': all inbound messages processed except exempt_handles. exempt_handles: phone numbers (10-digit, no dashes) or email addresses for family/friends to exclude.",
+  "mode": "all",
+  "trusted_handles": [],
+  "exempt_handles": [
+    "3039812167",
+    "3184508687",
+    "6309405128",
+    "7153670111",
+    "7153678344",
+    "9202034964",
+    "9202512141",
+    "9205740956",
+    "9208416459",
+    "9209790796",
+    "9209796825"
+  ]
+}

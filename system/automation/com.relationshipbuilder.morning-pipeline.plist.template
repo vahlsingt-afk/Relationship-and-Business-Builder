@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Template — render this to:
+      ~/Library/LaunchAgents/com.relationshipbuilder.morning-pipeline.plist
+
+  The job runs before the native ChatGPT Task. It builds the local canonical
+  artifact that ChatGPT reads through the RB Action.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.relationshipbuilder.morning-pipeline</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>__PYTHON__</string>
+        <string>__SECRETS_RUNNER__</string>
+        <string>__PYTHON__</string>
+        <string>__WRAPPER__</string>
+        <string>--brief-only</string>
+    </array>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>RB_PROJECT_DIR</key>
+        <string>__PROJECT_DIR__</string>
+    </dict>
+
+    <!-- Run at 5:00am local time, before the 5:05am ChatGPT Task. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key><integer>5</integer>
+        <key>Minute</key><integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>__LOG_OUT__</string>
+    <key>StandardErrorPath</key>
+    <string>__LOG_ERR__</string>
+
+    <key>WorkingDirectory</key>
+    <string>__PROJECT_DIR__</string>
+
+    <key>LowPriorityIO</key>
+    <true/>
+    <key>Nice</key>
+    <integer>5</integer>
+</dict>
+</plist>

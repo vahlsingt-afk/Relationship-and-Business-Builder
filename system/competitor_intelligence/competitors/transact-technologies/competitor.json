@@ -1,0 +1,336 @@
+{
+  "competitor_id": "comp-transact-technologies",
+  "competitor_slug": "transact-technologies",
+  "display_name": "TransAct Technologies",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [
+    "back_office"
+  ],
+  "positioning_summary": "TransAct Technologies currently markets restaurant-facing capabilities across back office operations, ops execution, printing receipt media.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "TransAct's FY2025 10-K names its direct competitors for the BOHA! foodservice/food-safety platform as Crunchtime Information Systems (including its Zenput and Squadle brands), Digi International, Avery Dennison, Ecolab, ITD Food Safety, Daymark Safety Systems, Integrated Control Corp, and Toast, Inc.",
+        "evidence_id": "note-0002",
+        "added_at": "2026-09-29T15:44:15Z"
+      }
+    ],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-10-01",
+  "last_synced_at": "2026-10-02T09:46:58Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:58Z",
+  "latest_cos_commentary": {
+    "headline": "Direct Genius overlap identified.",
+    "genius_exposure": [
+      "back_office"
+    ],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Validate account-level incumbent and deployment scope before competitive positioning.",
+    "risk_and_uncertainty": "Long-tail evidence quality varies; unresolved vendors were left unclassified rather than guessed.",
+    "priority": "P2",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://transacttech.gcs-web.com/news-releases/news-release-details/transact-technologies-launches-next-generation-enterprise-grade",
+        "title": "TransAct Technologies Launches the Next Generation Enterprise-Grade BOHA! SaaS Platform",
+        "publisher": "TransAct Technologies",
+        "published_at": "2026-06-30",
+        "accessed_at": "2026-09-29",
+        "source_type": "filing"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 104,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 1,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Named Customers",
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "Total FY2025 revenue and BOHA! segment revenue breakdown (not disclosed in the 10-K section reviewed)",
+        "Named restaurant chain customers"
+      ]
+    }
+  },
+  "canonical_company_name": "TransAct Technologies",
+  "website": "https://transacttech.gcs-web.com/news-releases/news-release-details/transact-technologies-launches-next-generation-enterprise-grade",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://transacttech.gcs-web.com/news-releases/news-release-details/transact-technologies-launches-next-generation-enterprise-grade",
+        "title": "TransAct Technologies Launches the Next Generation Enterprise-Grade BOHA! SaaS Platform",
+        "publisher": "TransAct Technologies",
+        "published_at": "2026-06-30",
+        "accessed_at": "2026-09-29",
+        "source_type": "filing"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "product_line_competitor",
+  "restaurant_tech_categories": [
+    {
+      "category": "back_office_operations",
+      "basis": "Current restaurant-specific evidence supports back office operations for TransAct Technologies.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://transacttech.gcs-web.com/news-releases/news-release-details/transact-technologies-launches-next-generation-enterprise-grade",
+          "title": "TransAct Technologies Launches the Next Generation Enterprise-Grade BOHA! SaaS Platform",
+          "publisher": "TransAct Technologies",
+          "published_at": "2026-06-30",
+          "accessed_at": "2026-09-29",
+          "source_type": "filing"
+        }
+      ]
+    },
+    {
+      "category": "ops_execution",
+      "basis": "Current restaurant-specific evidence supports ops execution for TransAct Technologies.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://transacttech.gcs-web.com/news-releases/news-release-details/transact-technologies-launches-next-generation-enterprise-grade",
+          "title": "TransAct Technologies Launches the Next Generation Enterprise-Grade BOHA! SaaS Platform",
+          "publisher": "TransAct Technologies",
+          "published_at": "2026-06-30",
+          "accessed_at": "2026-09-29",
+          "source_type": "filing"
+        }
+      ]
+    },
+    {
+      "category": "printing_receipt_media",
+      "basis": "Current restaurant-specific evidence supports printing receipt media for TransAct Technologies.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://transacttech.gcs-web.com/news-releases/news-release-details/transact-technologies-launches-next-generation-enterprise-grade",
+          "title": "TransAct Technologies Launches the Next Generation Enterprise-Grade BOHA! SaaS Platform",
+          "publisher": "TransAct Technologies",
+          "published_at": "2026-06-30",
+          "accessed_at": "2026-09-29",
+          "source_type": "filing"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "BOHA! SaaS Platform (back_office_operations, ops_execution, printing_receipt_media)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://transacttech.gcs-web.com/news-releases/news-release-details/transact-technologies-launches-next-generation-enterprise-grade",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Current restaurant-specific product/use-case evidence exists in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://transacttech.gcs-web.com/news-releases/news-release-details/transact-technologies-launches-next-generation-enterprise-grade",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "BOHA Ops showed a 4.8/5 App Store rating from 90 ratings and combines labeling, food prep, checklist, timer, and media functionality.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://apps.apple.com/us/app/boha-ops/id1504532007",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Apple App Store",
+      "source_type": "app marketplace",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Detailed negative review distribution was not available."
+    },
+    {
+      "value": "BOHA Temp showed a 4.5/5 App Store rating from 91 ratings.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://apps.apple.com/us/app/boha-temp/id1504527527",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Apple App Store",
+      "source_type": "app marketplace",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Rating alone does not establish enterprise reliability."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated evidence is not independent proof of ROI, reliability, implementation quality, or systemwide adoption. Independent validation remains incomplete in this bounded gap-fill pass.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://transacttech.gcs-web.com/news-releases/news-release-details/transact-technologies-launches-next-generation-enterprise-grade",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    },
+    {
+      "value": "TransAct's 2026 Form 10-K states that the BOHA transition may involve code defects, engineering-resource demands, service interruptions, third-party hosting reliance, and support-capacity risk.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1017303/000114036126009238/ef20064326_10k.htm",
+      "finding_type": "independently_verified",
+      "source_owner": "U.S. SEC / TransAct Technologies",
+      "source_type": "SEC Form 10-K",
+      "published_at": "2026-03-12",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Risk disclosure describes possible outcomes, not confirmed disruption."
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [
+    {
+      "value": "TransAct launched its next-generation enterprise BOHA! SaaS platform on Microsoft Azure.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-06-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://transacttech.gcs-web.com/news-releases/news-release-details/transact-technologies-launches-next-generation-enterprise-grade",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": false
+    }
+  ],
+  "product_lineage": [
+    {
+      "value": "TransAct acquired a perpetual non-exclusive royalty-free license to BOHA Control Center, Ops modules, Temp, and Sense source code from Avery Dennison, which retains ownership.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1017303/000114036126009238/ef20064326_10k.htm",
+      "finding_type": "independently_verified",
+      "source_owner": "U.S. SEC / TransAct Technologies",
+      "source_type": "SEC Form 10-K",
+      "published_at": "2026-03-12",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Avery retains ownership despite broad perpetual usage rights."
+    }
+  ],
+  "negative_findings": [],
+  "conflicts_notes": [],
+  "category_assessment_status": "researched",
+  "category_assessment_packet_id": "rbb-competitor-category-gapfill-20260929-batches02-04",
+  "category_assessed_at": "2026-09-29",
+  "vendor_claims": [
+    {
+      "value": "TransAct positions BOHA as a platform centralizing multi-location foodservice workflows, compliance, and visibility.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.transact-tech.com/",
+      "finding_type": "vendor_stated",
+      "source_owner": "TransAct Technologies",
+      "source_type": "vendor website",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": ""
+    }
+  ],
+  "weaknesses": [
+    {
+      "value": "BOHA Temp release notes document fixes for a first-time QR-code-login crash and improvements to stability and log-loading speed.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://apps.apple.com/us/app/boha-temp/id1504527527",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Apple App Store / TransAct Technologies",
+      "source_type": "application release notes",
+      "published_at": "2026-07-13",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Fixes establish defects existed but not that they were widespread."
+    }
+  ],
+  "trends": {
+    "value": "The BOHA source-code transaction gives TransAct greater modification freedom while transferring more hosting, maintenance, and support responsibility.",
+    "status": "confirmed",
+    "evidence_ids": [],
+    "confidence": "high",
+    "as_of": "2026-09-30",
+    "scope": "competitor",
+    "last_reviewed_by": "system:competitor_intelligence_common",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1017303/000114036126009238/ef20064326_10k.htm",
+    "finding_type": "inference",
+    "source_owner": "U.S. SEC / TransAct Technologies",
+    "source_type": "SEC Form 10-K",
+    "published_at": "2026-03-12",
+    "deployment_scope": "enterprise",
+    "is_vendor_claim": false,
+    "is_inference": true,
+    "limitations_or_conflicts": "Strategic implication inferred from rights and responsibilities."
+  }
+}

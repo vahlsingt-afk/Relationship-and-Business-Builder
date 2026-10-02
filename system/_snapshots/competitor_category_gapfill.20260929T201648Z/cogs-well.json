@@ -1,0 +1,56 @@
+{
+  "competitor_id": "comp-cogs-well",
+  "competitor_slug": "cogs-well",
+  "display_name": "COGS-Well",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "COGS-Well states that restaurant operators commonly reduce cost of goods sold by 3-5% using its platform.",
+        "evidence_id": "note-0002",
+        "added_at": "2026-09-29T15:44:08Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:31Z",
+  "latest_cos_commentary": {
+    "headline": "COGS-Well is a restaurant inventory and recipe-costing platform integrated into PAR Technology's partner ecosystem, marketed on a 3-5% typical COGS reduction.",
+    "genius_exposure": "Competes on back_office inventory/food-cost management, and is notable as an integration partner of PAR Technology (a POS competitor).",
+    "competitive_timing": "No 2026-specific news or funding found in this pass; positioned as an established, integration-focused point solution.",
+    "sales_response": "Where a prospect already integrates COGS-Well via their POS partner ecosystem, treat inventory/food-cost depth as the comparison point, not general POS features.",
+    "risk_and_uncertainty": "ROI and customer-scale claims are vendor-stated; no named enterprise customers or financial data were verifiable in this pass.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 17
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 17,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "named restaurant customer scope",
+        "financial health"
+      ]
+    }
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "phase2_file": "system/research/phase2_back_office_inventory_evidence_draft_2026-08-03.json",
+  "category": "Back Office/Inventory",
+  "rows_processed": 31,
+  "rows_skipped": 0,
+  "dry_run": true,
+  "added": 30,
+  "updated": 0,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 27,
+    "enrich_existing_relationship": 0,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 3,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 0,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 1
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Restaurant365",
+        "customer": "Burger King",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-burger-king-inventory-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Whataburger",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-whataburger-inventory-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Carl's Jr.",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-carl-s-jr-inventory-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Dave's Hot Chicken",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-dave-s-hot-chicken-inventory-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Tropical Smoothie Cafe",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-tropical-smoothie-cafe-inventory-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Black Rock Coffee Bar",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-black-rock-coffee-bar-inventory-unknown-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Jimmy John's",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-jimmy-john-s-inventory-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Taziki's Mediterranean Cafe",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-taziki-s-mediterranean-cafe-inventory-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Wingstop",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-wingstop-inventory-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Taco Bell",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-taco-bell-inventory-franchisee-deployment-vendor-crunchtime"
+      },
+      {
+        "vendor": "MarginEdge",
+        "customer": "Burger 21",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-burger-21-inventory-unknown-vendor-marginedge"
+      },
+      {
+        "vendor": "MarginEdge",
+        "customer": "Sunday in Brooklyn",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-sunday-in-brooklyn-inventory-unknown-vendor-marginedge"
+      },
+      {
+        "vendor": "Apicbase",
+        "customer": "Heavenly Desserts",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-heavenly-desserts-inventory-unknown-vendor-apicbase"
+      },
+      {
+        "vendor": "Apicbase",
+        "customer": "Restaurant Company Europe",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-restaurant-company-europe-inventory-unknown-vendor-apicbase"
+      },
+      {
+        "vendor": "Apicbase",
+        "customer": "Bright Kitchen",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-bright-kitchen-inventory-unknown-vendor-apicbase"
+      },
+      {
+        "vendor": "Fourth",
+        "customer": "Chili's Grill & Bar",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-chili-s-grill-bar-inventory-unknown-vendor-fourth"
+      },
+      {
+        "vendor": "Fourth",
+        "customer": "Noodles & Company",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-noodles-company-inventory-unknown-vendor-fourth"
+      },
+      {
+        "vendor": "Craftable",
+        "customer": "TC Restaurant Group",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-tc-restaurant-group-inventory-unknown-vendor-craftable"
+      },
+      {
+        "vendor": "Ottimate",
+        "customer": "Thrive Restaurant Group",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-thrive-restaurant-group-inventory-unknown-vendor-ottimate"
+      },
+      {
+        "vendor": "Ottimate",
+        "customer": "Prime Steak Concepts",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-prime-steak-concepts-inventory-unknown-vendor-ottimate"
+      },
+      {
+        "vendor": "Nory",
+        "customer": "Black Sheep Coffee",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-black-sheep-coffee-inventory-unknown-vendor-nory"
+      },
+      {
+        "vendor": "Nory",
+        "customer": "Pieminister",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-pieminister-inventory-unknown-vendor-nory"
+      },
+      {
+        "vendor": "Nory",
+        "customer": "Rocksalt",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-rocksalt-inventory-unknown-vendor-nory"
+      },
+      {
+        "vendor": "Nory",
+        "customer": "Tasty African Food",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-tasty-african-food-inventory-unknown-vendor-nory"
+      },
+      {
+        "vendor": "Nory",
+        "customer": "CUPP",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-cupp-inventory-unknown-vendor-nory"
+      },
+      {
+        "vendor": "xtraCHEF",
+        "customer": "Dos Toros Taqueria",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-dos-toros-taqueria-inventory-unknown-vendor-xtrachef"
+      },
+      {
+        "vendor": "xtraCHEF",
+        "customer": "ThinkFoodGroup",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-thinkfoodgroup-jose-andres-inventory-unknown-vendor-xtrachef"
+      }
+    ],
+    "enrich_existing_relationship": [],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [
+      {
+        "vendor": "Compeat",
+        "customer": "Taffer's Tavern",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-taffer-s-tavern-inventory-unknown-vendor-compeat"
+      },
+      {
+        "vendor": "BlueCart",
+        "customer": "Jimmy John's",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-jimmy-john-s-inventory-franchisee-deployment-vendor-bluecart"
+      },
+      {
+        "vendor": "BlueCart",
+        "customer": "Neighborhood Restaurant Group",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-neighborhood-restaurant-group-inventory-unknown-vendor-bluecart"
+      }
+    ],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": [
+      {
+        "vendor": "Galley Solutions",
+        "customer": "&pizza",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": null
+      }
+    ]
+  }
+}

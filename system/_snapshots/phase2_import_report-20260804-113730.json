@@ -1,0 +1,100 @@
+{
+  "phase2_file": "system/research/phase2_computer_vision_robotics_evidence_draft_2026-08-03.json",
+  "category": "Computer Vision/Robotics",
+  "rows_processed": 10,
+  "rows_skipped": 0,
+  "dry_run": false,
+  "added": 7,
+  "updated": 0,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 6,
+    "enrich_existing_relationship": 0,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 1,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 3,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Miso Robotics",
+        "customer": "White Castle",
+        "tech_category": "Computer Vision/Robotics",
+        "relationship_id": "rel-brand-white-castle-computer-vision-robotics-approved-hardware-vendor-vendor-miso-robotics"
+      },
+      {
+        "vendor": "Miso Robotics",
+        "customer": "Wing Zone",
+        "tech_category": "Computer Vision/Robotics",
+        "relationship_id": "rel-brand-wing-zone-computer-vision-robotics-unknown-vendor-miso-robotics"
+      },
+      {
+        "vendor": "Miso Robotics",
+        "customer": "Insert Coin",
+        "tech_category": "Computer Vision/Robotics",
+        "relationship_id": "rel-brand-insert-coin-computer-vision-robotics-unknown-vendor-miso-robotics"
+      },
+      {
+        "vendor": "Picnic",
+        "customer": "Moto Pizza",
+        "tech_category": "Computer Vision/Robotics",
+        "relationship_id": "rel-brand-moto-pizza-computer-vision-robotics-unknown-vendor-picnic"
+      },
+      {
+        "vendor": "Picnic",
+        "customer": "Speedy Eats",
+        "tech_category": "Computer Vision/Robotics",
+        "relationship_id": "rel-brand-speedy-eats-computer-vision-robotics-unknown-vendor-picnic"
+      },
+      {
+        "vendor": "Nala Robotics",
+        "customer": "Re-Up",
+        "tech_category": "Computer Vision/Robotics",
+        "relationship_id": "rel-brand-re-up-computer-vision-robotics-unknown-vendor-nala-robotics"
+      }
+    ],
+    "enrich_existing_relationship": [],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [
+      {
+        "vendor": "Miso Robotics",
+        "customer": "Chipotle",
+        "tech_category": "Computer Vision/Robotics",
+        "relationship_id": "rel-brand-chipotle-mexican-grill-computer-vision-robotics-pilot-vendor-miso-robotics"
+      }
+    ],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [
+      {
+        "vendor": "Miso Robotics",
+        "customer": "Jack in the Box",
+        "tech_category": "Computer Vision/Robotics",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Miso Robotics",
+        "customer": "Buffalo Wild Wings",
+        "tech_category": "Computer Vision/Robotics",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Miso Robotics",
+        "customer": "Panera Bread",
+        "tech_category": "Computer Vision/Robotics",
+        "relationship_id": null
+      }
+    ],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

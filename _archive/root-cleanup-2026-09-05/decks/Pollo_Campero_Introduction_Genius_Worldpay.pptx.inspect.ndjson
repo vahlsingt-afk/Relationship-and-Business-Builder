@@ -1,0 +1,11 @@
+{"kind":"deck","id":"pr/ctb3gj","name":"Deck"}
+{"kind":"layout","layoutId":"38d0c463-3e05-4744-b36c-8dd1f931df23","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"cce72ddc-54d1-475a-8c22-60e556025b6f","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/qz00ed","slide":1,"title":"Introduction to","textShapes":1}
+{"kind":"shape","id":"sh/nelcrqdc","slide":1,"name":"global-payments-blue-panel-rounded-end","bbox":[280,84,382,554]}
+{"kind":"shape","id":"sh/mdcbilcr","slide":1,"name":"global-payments-blue-panel-base","bbox":[14,84,410,554]}
+{"kind":"textbox","id":"sh/0butgbul","slide":1,"name":"welcome-title","text":"Introduction to\nGenius + Worldpay","textPreview":"Introduction to | Genius + Worldpay","textChars":33,"textLines":2,"bbox":[72,278,520,154]}
+{"kind":"image","id":"im/1g3ix07u","slide":1,"name":"","alt":"Pollo Campero website food spread with fried chicken, sandwich, sides, tortillas, and empanadas","bbox":[14,38,1252,644]}
+{"kind":"image","id":"im/srahkv6x","slide":1,"name":"","alt":"Global Payments and Worldpay combined logo","bbox":[68,126,520,62]}
+{"kind":"image","id":"im/qpszilo7","slide":1,"name":"","alt":"Official Pollo Campero logo","bbox":[79,474,245,84]}
+{"kind":"notes","id":"nt/qz00ed","slide":1,"text":"[Sources]\n- Background image: user-provided screenshot captured from the Pollo Campero website.\n- Pollo Campero logo: user-provided official logo image.\n- Global Payments × Worldpay lockup: user-provided logo image.\n- Visual reference: user-provided Title Slide.pdf.\n- Pollo Campero brand context: https://us.campero.com/our-story\n[/Sources]"}

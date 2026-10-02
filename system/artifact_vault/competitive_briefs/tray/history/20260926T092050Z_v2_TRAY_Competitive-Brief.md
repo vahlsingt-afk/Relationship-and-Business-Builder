@@ -1,0 +1,22 @@
+# TRAY — Competitor Intelligence Profile
+
+*Last evidence: 2026-09-12 | Last synced: 2026-09-25T16:12:28Z | 7 evidence record(s)*
+
+## Todd's POV
+In discussing Wendy’s selection of TRAY, Ryan Hildebrand said the Wendy’s team was very complimentary of Genius and its technology, said Genius’s APIs were strongest in the field, and identified kiosk as a Genius gap. Todd noted he did not think TRAY was especially strong in kiosk either.
+
+## Strengths
+- (2026-09-12) TRAY’s published product suite includes core POS, handheld/tableside ordering and EMV payment, online ordering, enterprise menu management, KDS, self-service kiosk, TRAY HQ multi-location management/reporting, and an integrations ecosystem/open APIs. — *TRAY official product and integrations pages, accessed 2026-09-12: https://tray.com/ ; https://tray.com/integrationsandpartners/*
+- (2026-09-12) TRAY does offer first-party self-service kiosk capability: dedicated hardware or kiosk mode on existing POS terminals, centralized menu/price management, offline operation, and documented deployment at Arctic Circle. Therefore the open competitive question is kiosk maturity and Wendy’s-scale fit, not absence of a kiosk product. — *TRAY official kiosk and Arctic Circle pages, accessed 2026-09-12: https://tray.com/self-service-kiosk/ ; https://tray.com/tray-named-point-of-sale-provider-for-arctic-circle-restaurants/*
+
+## Market share data
+- (2026-09-12) TRAY has documented enterprise-scale proof through IHOP: TRAY says it is deployed in about 96% of IHOP locations, and its 2023 announcement described a rollout addressing more than 1,600 US restaurants. TRAY’s current site claims more than 2,000 restaurants overall. These are vendor-published claims. — *TRAY official IHOP announcement and company site, accessed 2026-09-12: https://tray.com/tray-selected-as-pos-platform-for-ihop/ ; https://tray.com/*
+
+## Customer wins
+- (2026-09-12) Seth Temko told Todd Vahlsing on 2026-09-11 that TRAY had just won Wendy’s and potentially would have to do a lot of franchisee selling. Todd said Genius had been hoping to win the Wendy’s business, making this an upset for Genius. — *Seth Temko LinkedIn message and Todd Vahlsing context, 2026-09-11*
+
+## Positioning notes
+- (2026-09-12) TRAY publicly positions its platform as cloud-native, Android-based enterprise POS that can run on new Android devices or legacy x86/Windows-era hardware. It claims processor and hardware independence plus automatic peer-to-peer offline operation without on-premise servers/controllers. — *TRAY official Cloud POS and homepage, accessed 2026-09-12: https://tray.com/cloud-pos/ ; https://tray.com/*
+
+## Other evidence
+- (2026-09-12) Ryan Hildebrand told Todd Vahlsing on 2026-09-12 that his team’s understanding was that acquiring TRAY had been in play in connection with the Wendy’s decision. This is reported internal understanding, not a confirmed acquisition fact. — *Ryan Hildebrand Teams conversation, 2026-09-12*

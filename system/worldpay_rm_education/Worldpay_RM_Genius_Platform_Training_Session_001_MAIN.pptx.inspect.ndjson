@@ -1,0 +1,221 @@
+{"kind":"deck","id":"pr/dnspto","name":"Deck"}
+{"kind":"layout","layoutId":"846437be-c1fe-410c-accd-e7236246d330","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"b22a635c-c8a7-45f2-8d66-4b6e1f7a4574","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/qpc23y","slide":1,"title":"Genius Platform + Restaurant Tech Stack","textShapes":6}
+{"kind":"textbox","id":"sh/6tgvup0j","slide":1,"text":"Genius Platform + Restaurant Tech Stack","textPreview":"Genius Platform + Restaurant Tech Stack","textChars":39,"textLines":1,"bbox":[72,108,860,136]}
+{"kind":"textbox","id":"sh/twrepkza","slide":1,"text":"A 20-minute field primer for Worldpay relationship managers","textPreview":"A 20-minute field primer for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[76,270,760,38]}
+{"kind":"textbox","id":"sh/svydwzip","slide":1,"text":"Payments are the doorway. Operations are the buying reason.","textPreview":"Payments are the doorway. Operations are the buying reason.","textChars":59,"textLines":1,"bbox":[76,390,720,74]}
+{"kind":"textbox","id":"sh/jqpcjah8","slide":1,"text":"Q&A: 10 minutes","textPreview":"Q&A: 10 minutes","textChars":15,"textLines":1,"bbox":[76,520,260,34]}
+{"kind":"shape","id":"sh/ipgvq50n","slide":1,"bbox":[950,0,330,720]}
+{"kind":"textbox","id":"sh/5s7ulkzy","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[990,84,190,96]}
+{"kind":"textbox","id":"sh/krydsfit","slide":1,"text":"Restaurant platform fluency","textPreview":"Restaurant platform fluency","textChars":27,"textLines":1,"bbox":[994,188,220,120]}
+{"kind":"notes","id":"nt/qpc23y","slide":1,"text":"Open by anchoring the audience: this is for RMs who already understand payments. We are teaching the restaurant operating context around payments.\n\n[Sources]\nCourse 001 markdown training draft.\nEnterprise Restaurant Platform Intelligence Framework v1."}
+{"kind":"slide","id":"sl/6q6dne","slide":2,"title":"WORLDPAY RM EDUCATION | SESSION 001","textShapes":9}
+{"kind":"textbox","id":"sh/4v6xovid","slide":2,"name":"kicker","text":"WORLDPAY RM EDUCATION | SESSION 001","textPreview":"WORLDPAY RM EDUCATION | SESSION 001","textChars":35,"textLines":1,"bbox":[72,38,760,26]}
+{"kind":"textbox","id":"sh/3uxwfqhs","slide":2,"name":"slide-title","text":"The market moved from payments decisions to platform decisions","textPreview":"The market moved from payments decisions to platform decisions","textChars":62,"textLines":1,"bbox":[72,76,960,92]}
+{"kind":"textbox","id":"sh/i9ofml0n","slide":2,"text":"Old buying model","textPreview":"Old buying model","textChars":16,"textLines":1,"bbox":[110,210,360,40]}
+{"kind":"textbox","id":"sh/d0zyl0za","slide":2,"text":"New buying model","textPreview":"New buying model","textChars":16,"textLines":1,"bbox":[810,210,360,40]}
+{"kind":"textbox","id":"sh/szqxsvip","slide":2,"text":"POS vs POS\nPayments vs Payments","textPreview":"POS vs POS | Payments vs Payments","textChars":31,"textLines":2,"bbox":[100,280,380,150]}
+{"kind":"shape","id":"sh/ryhgjqh4","slide":2,"bbox":[555,315,170,76]}
+{"kind":"textbox","id":"sh/qxofq50j","slide":2,"text":"Restaurant Operating Platform\nAI + Commerce + Payments + Operations","textPreview":"Restaurant Operating Platform | AI + Commerce + Payments + Operations","textChars":67,"textLines":2,"bbox":[782,276,410,164]}
+{"kind":"textbox","id":"sh/t4ve9gzq","slide":2,"text":"RM takeaway: a payment trigger may be a signal that the broader stack is changing.","textPreview":"RM takeaway: a payment trigger may be a signal that the broader stack is changing.","textChars":82,"textLines":1,"bbox":[174,520,930,44]}
+{"kind":"shape","id":"sh/83mxgbi5","slide":2,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/m1gny9w7","slide":2,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/n2porexs","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/6q6dne","slide":2,"text":"Use this slide to reset the mental model. The RM does not need to sell all layers. They need to recognize when the merchant is actually talking about operating-platform pressure.\n\n[Sources]\nEnterprise Restaurant Platform Intelligence Framework v1, slide: The Market Has Changed."}
+{"kind":"slide","id":"sl/ld9hxz","slide":3,"title":"WORLDPAY RM EDUCATION | SESSION 001","textShapes":9}
+{"kind":"textbox","id":"sh/rulor2xo","slide":3,"name":"kicker","text":"WORLDPAY RM EDUCATION | SESSION 001","textPreview":"WORLDPAY RM EDUCATION | SESSION 001","textChars":35,"textLines":1,"bbox":[72,38,760,26]}
+{"kind":"textbox","id":"sh/svu507y9","slide":3,"name":"slide-title","text":"The posture: diagnose pain, educate, and earn the right","textPreview":"The posture: diagnose pain, educate, and earn the right","textChars":55,"textLines":1,"bbox":[72,76,960,92]}
+{"kind":"shape","id":"sh/twn6tcfe","slide":3,"bbox":[82,210,6,310]}
+{"kind":"textbox","id":"sh/ipcnuxgr","slide":3,"text":"What competitors may try","textPreview":"What competitors may try","textChars":24,"textLines":1,"bbox":[102,210,505,34]}
+{"kind":"textbox","id":"sh/jqlonixc","slide":3,"text":"- Use one installed product to force the next sale\n- Bundle weaker services into the account\n- Create switching friction instead of customer value\n- Turn platform breadth into pressure","textPreview":"- Use one installed product to force the next sale | - Bundle weaker services into the account | - Create switching friction instead of c...","textChars":184,"textLines":4,"bbox":[102,258,505,262]}
+{"kind":"shape","id":"sh/4ru5wnyx","slide":3,"bbox":[672,210,6,310]}
+{"kind":"textbox","id":"sh/5s36psfi","slide":3,"text":"What Worldpay + Genius should do","textPreview":"What Worldpay + Genius should do","textChars":32,"textLines":1,"bbox":[692,210,505,34]}
+{"kind":"textbox","id":"sh/2lwn6hgb","slide":3,"text":"- Start with the customer's business problem\n- Show where payments fits in the ecosystem\n- Educate on the choices available\n- Recommend the right next step\n- Earn more business through trust","textPreview":"- Start with the customer's business problem | - Show where payments fits in the ecosystem | - Educate on the choices available | - Recom...","textChars":190,"textLines":5,"bbox":[692,258,505,262]}
+{"kind":"textbox","id":"sh/3m5ozmxw","slide":3,"text":"We value choice. We do not strong-arm customers into doing more business with us. We earn that right.","textPreview":"We value choice. We do not strong-arm customers into doing more business with us. We earn that right.","textChars":101,"textLines":1,"bbox":[126,570,1030,50]}
+{"kind":"shape","id":"sh/fidsr2to","slide":3,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/eh4bixs3","slide":3,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/1kvatcbu","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/ld9hxz","slide":3,"text":"This is the training guardrail. RMs should understand the ecosystem so they can identify pain and offer credible options. The goal is not to use payment relationships as leverage to force inferior products or services.\n\n[Sources]\nTodd feedback, 2026-07-30."}
+{"kind":"slide","id":"sl/chajhi","slide":4,"title":"WORLDPAY RM EDUCATION | SESSION 001","textShapes":9}
+{"kind":"textbox","id":"sh/nitgbmhg","slide":4,"name":"kicker","text":"WORLDPAY RM EDUCATION | SESSION 001","textPreview":"WORLDPAY RM EDUCATION | SESSION 001","textChars":35,"textLines":1,"bbox":[72,38,760,26]}
+{"kind":"textbox","id":"sh/8j2xkri1","slide":4,"name":"slide-title","text":"Corporate and store teams buy for different reasons","textPreview":"Corporate and store teams buy for different reasons","textChars":51,"textLines":1,"bbox":[72,76,960,92]}
+{"kind":"shape","id":"sh/9kbydczm","slide":4,"bbox":[82,205,6,330]}
+{"kind":"textbox","id":"sh/alkzmh0r","slide":4,"text":"Corporate customer wants","textPreview":"Corporate customer wants","textChars":24,"textLines":1,"bbox":[102,205,505,34]}
+{"kind":"textbox","id":"sh/vmtgfmhc","slide":4,"text":"- Top-line sales enhanced\n- A tangible win for the system\n- A personal victory they can point to\n- Vendor consolidation and control\n- Reduced or no franchisee noise","textPreview":"- Top-line sales enhanced | - A tangible win for the system | - A personal victory they can point to | - Vendor consolidation and control...","textChars":164,"textLines":5,"bbox":[102,253,505,282]}
+{"kind":"shape","id":"sh/wn2horix","slide":4,"bbox":[672,205,6,330]}
+{"kind":"textbox","id":"sh/xovyhwzi","slide":4,"text":"Store / franchisee operator wants","textPreview":"Store / franchisee operator wants","textChars":33,"textLines":1,"bbox":[692,205,505,34]}
+{"kind":"textbox","id":"sh/qpgfax0n","slide":4,"text":"- Speed during rush\n- Uptime and reliability\n- Easy training for staff\n- Fast support when something breaks\n- Tools that make labor easier","textPreview":"- Speed during rush | - Uptime and reliability | - Easy training for staff | - Fast support when something breaks | - Tools that make lab...","textChars":138,"textLines":5,"bbox":[692,253,505,282]}
+{"kind":"textbox","id":"sh/bq9g32h8","slide":4,"text":"Your POV: platform value has to create corporate proof without creating store-level noise.","textPreview":"Your POV: platform value has to create corporate proof without creating store-level noise.","textChars":90,"textLines":1,"bbox":[132,565,1016,44]}
+{"kind":"shape","id":"sh/nmxgn65g","slide":4,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/ml4felov","slide":4,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/9ofypgnm","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/chajhi","slide":4,"text":"Use Todd's POV here. Corporate buyers want a top-line story, a tangible system result, and low franchisee noise. Store and franchisee operators judge the platform by speed, uptime, training, support, and whether it helps the rush go better.\n\n[Sources]\nTodd feedback, 2026-07-30.\n2026 QSR / Global Payments Resilient Restaurant research."}
+{"kind":"slide","id":"sl/37nxj1","slide":5,"title":"Genius is a full restaurant commerce suite","textShapes":13}
+{"kind":"textbox","id":"sh/x0fmhcv2","slide":5,"text":"Genius is a full restaurant commerce suite","textPreview":"Genius is a full restaurant commerce suite","textChars":42,"textLines":1,"bbox":[92,70,980,70]}
+{"kind":"shape","id":"sh/axonmxwb","slide":5,"bbox":[190,180,660,300]}
+{"kind":"textbox","id":"sh/byx4f2dw","slide":5,"text":"genius","textPreview":"genius","textChars":6,"textLines":1,"bbox":[350,160,340,58]}
+{"kind":"textbox","id":"sh/ov6lkne5","slide":5,"text":"Point of Sale","textPreview":"Point of Sale","textChars":13,"textLines":1,"bbox":[220,250,180,78]}
+{"kind":"textbox","id":"sh/9wfmdsvq","slide":5,"text":"Kitchen","textPreview":"Kitchen","textChars":7,"textLines":1,"bbox":[450,250,180,78]}
+{"kind":"textbox","id":"sh/mt43idwf","slide":5,"text":"Back Office","textPreview":"Back Office","textChars":11,"textLines":1,"bbox":[680,250,180,78]}
+{"kind":"textbox","id":"sh/nud4bidk","slide":5,"text":"Drive-Thru","textPreview":"Drive-Thru","textChars":10,"textLines":1,"bbox":[220,365,180,78]}
+{"kind":"textbox","id":"sh/0rmlgne9","slide":5,"text":"Digital Menu Boards","textPreview":"Digital Menu Boards","textChars":19,"textLines":1,"bbox":[450,365,180,78]}
+{"kind":"textbox","id":"sh/1svm9svu","slide":5,"text":"Kiosk","textPreview":"Kiosk","textChars":5,"textLines":1,"bbox":[680,365,180,78]}
+{"kind":"textbox","id":"sh/9obut8z2","slide":5,"text":"Connects to third-party integrations","textPreview":"Connects to third-party integrations","textChars":36,"textLines":1,"bbox":[360,118,380,30]}
+{"kind":"textbox","id":"sh/8nit03yh","slide":5,"text":"Built for busy restaurant operators\nEasy to get started and scale\nConnects the front and back of house","textPreview":"Built for busy restaurant operators | Easy to get started and scale | Connects the front and back of house","textChars":102,"textLines":3,"bbox":[900,265,280,130]}
+{"kind":"textbox","id":"sh/nm9cryhw","slide":5,"text":"RM takeaway: Genius gives you more than a processing conversation. It gives you a platform conversation.","textPreview":"RM takeaway: Genius gives you more than a processing conversation. It gives you a platform conversation.","textChars":104,"textLines":1,"bbox":[136,575,1008,42]}
+{"kind":"shape","id":"sh/ml0bytgb","slide":5,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/lkrupoz6","slide":5,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/0jitwjyl","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/37nxj1","slide":5,"text":"This slide is a simplified training version of the master pitch deck's full-suite functionality slide. Use it to establish breadth before teaching the parts.\n\n[Sources]\nGenius - QSR Master Pitch Deck 1, slide 10: Providing a full suite of functionality."}
+{"kind":"slide","id":"sl/ubq3so","slide":6,"title":"WORLDPAY RM EDUCATION | SESSION 001","textShapes":20}
+{"kind":"textbox","id":"sh/dcr2xsve","slide":6,"name":"kicker","text":"WORLDPAY RM EDUCATION | SESSION 001","textPreview":"WORLDPAY RM EDUCATION | SESSION 001","textChars":35,"textLines":1,"bbox":[72,38,760,26]}
+{"kind":"textbox","id":"sh/qp03mdc3","slide":6,"name":"slide-title","text":"The ecosystem connects front of house to back of house","textPreview":"The ecosystem connects front of house to back of house","textChars":54,"textLines":1,"bbox":[72,76,960,92]}
+{"kind":"textbox","id":"sh/bq9kvido","slide":6,"text":"Run efficiently","textPreview":"Run efficiently","textChars":15,"textLines":1,"bbox":[110,196,300,34]}
+{"kind":"textbox","id":"sh/0f2ls7u5","slide":6,"text":"Grow revenue","textPreview":"Grow revenue","textChars":12,"textLines":1,"bbox":[866,196,300,34]}
+{"kind":"shape","id":"sh/lgb21cvq","slide":6,"bbox":[108,272,1050,42]}
+{"kind":"textbox","id":"sh/yd03qxcz","slide":6,"text":"PAYMENTS","textPreview":"PAYMENTS","textChars":8,"textLines":1,"bbox":[530,281,220,30]}
+{"kind":"textbox","id":"sh/zetkz2dk","slide":6,"text":"Point of Sale","textPreview":"Point of Sale","textChars":13,"textLines":1,"bbox":[110,340,210,28]}
+{"kind":"textbox","id":"sh/gjy1w3u1","slide":6,"text":"Cloud-native POS, order flow, offline mode, centralized control.","textPreview":"Cloud-native POS, order flow, offline mode, centralized control.","textChars":64,"textLines":1,"bbox":[325,342,270,54]}
+{"kind":"textbox","id":"sh/1k72p8vm","slide":6,"text":"Kitchen","textPreview":"Kitchen","textChars":7,"textLines":1,"bbox":[110,412,210,28]}
+{"kind":"textbox","id":"sh/dwvydkn2","slide":6,"text":"Real-time routing, smart bumping, synchronized fulfillment.","textPreview":"Real-time routing, smart bumping, synchronized fulfillment.","textChars":59,"textLines":1,"bbox":[325,414,270,54]}
+{"kind":"textbox","id":"sh/sbmx4f6h","slide":6,"text":"Back Office","textPreview":"Back Office","textChars":11,"textLines":1,"bbox":[110,484,210,28]}
+{"kind":"textbox","id":"sh/ratwba5w","slide":6,"text":"Sales, inventory, labor and actionable operating insight.","textPreview":"Sales, inventory, labor and actionable operating insight.","textChars":57,"textLines":1,"bbox":[325,486,270,54]}
+{"kind":"textbox","id":"sh/q9kf25ob","slide":6,"text":"Drive-Thru","textPreview":"Drive-Thru","textChars":10,"textLines":1,"bbox":[690,340,235,28]}
+{"kind":"textbox","id":"sh/10vy14ny","slide":6,"text":"Throughput, order sequence, cameras, timers and voice AI.","textPreview":"Throughput, order sequence, cameras, timers and voice AI.","textChars":57,"textLines":1,"bbox":[930,342,245,54]}
+{"kind":"textbox","id":"sh/0zmx8z6t","slide":6,"text":"Digital Menu Boards","textPreview":"Digital Menu Boards","textChars":19,"textLines":1,"bbox":[690,412,235,28]}
+{"kind":"textbox","id":"sh/fydgzu58","slide":6,"text":"Real-time menu updates, pricing sync and suggestive selling.","textPreview":"Real-time menu updates, pricing sync and suggestive selling.","textChars":60,"textLines":1,"bbox":[930,414,245,54]}
+{"kind":"textbox","id":"sh/ex4f6pon","slide":6,"text":"Kiosk","textPreview":"Kiosk","textChars":5,"textLines":1,"bbox":[690,484,235,28]}
+{"kind":"textbox","id":"sh/p4fy54na","slide":6,"text":"Guest self-ordering, loyalty and payment options.","textPreview":"Guest self-ordering, loyalty and payment options.","textChars":49,"textLines":1,"bbox":[930,486,245,54]}
+{"kind":"textbox","id":"sh/o36xcz6p","slide":6,"text":"Payments is the common thread, but the business problem may live anywhere in the ecosystem.","textPreview":"Payments is the common thread, but the business problem may live anywhere in the ecosystem.","textChars":91,"textLines":1,"bbox":[140,585,1000,34]}
+{"kind":"shape","id":"sh/8je9o7ix","slide":6,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/tk7qxczi","slide":6,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/6hwrmx07","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/ubq3so","slide":6,"text":"This slide adapts the stronger ecosystem story from the QSR master deck and IKEA deck. The visual point is that payments runs across growth and efficiency workflows.\n\n[Sources]\nGenius - QSR Master Pitch Deck 1, slide 125: The ecosystem that delivers it all.\nGenius POS for IKEA PDF, page 5: The ecosystem that delivers it all."}
+{"kind":"slide","id":"sl/ru4p3j","slide":7,"title":"WORLDPAY RM EDUCATION | SESSION 001","textShapes":11}
+{"kind":"textbox","id":"sh/2p8z25ob","slide":7,"name":"kicker","text":"WORLDPAY RM EDUCATION | SESSION 001","textPreview":"WORLDPAY RM EDUCATION | SESSION 001","textChars":35,"textLines":1,"bbox":[72,38,760,26]}
+{"kind":"textbox","id":"sh/pczid072","slide":7,"name":"slide-title","text":"Store level: name the three operating zones","textPreview":"Store level: name the three operating zones","textChars":43,"textLines":1,"bbox":[72,76,960,92]}
+{"kind":"shape","id":"sh/obqh4v6h","slide":7,"bbox":[72,205,6,335]}
+{"kind":"textbox","id":"sh/beh0fap8","slide":7,"text":"Front of house","textPreview":"Front of house","textChars":14,"textLines":1,"bbox":[92,205,340,34]}
+{"kind":"textbox","id":"sh/ad8z65on","slide":7,"text":"- POS software and hardware\n- Payment processing\n- Contactless payments\n- Online/mobile ordering and delivery\n- Kiosk software and hardware\n- Indoor digital menu boards","textPreview":"- POS software and hardware | - Payment processing | - Contactless payments | - Online/mobile ordering and delivery | - Kiosk software an...","textChars":168,"textLines":6,"bbox":[92,253,340,287]}
+{"kind":"shape","id":"sh/xgjihk7y","slide":7,"bbox":[460,205,6,335]}
+{"kind":"textbox","id":"sh/cfqh8f6t","slide":7,"text":"Middle of house","textPreview":"Middle of house","textChars":15,"textLines":1,"bbox":[480,205,340,34]}
+{"kind":"textbox","id":"sh/zi10jup4","slide":7,"text":"- Kitchen manager\n- KDS\n- Order management\n- Fulfillment management\n- Employee tracking and training","textPreview":"- Kitchen manager | - KDS | - Order management | - Fulfillment management | - Employee tracking and training","textChars":100,"textLines":5,"bbox":[480,253,340,287]}
+{"kind":"shape","id":"sh/yhszapoj","slide":7,"bbox":[848,205,6,335]}
+{"kind":"textbox","id":"sh/ojutgjmp","slide":7,"text":"Drive-thru","textPreview":"Drive-thru","textChars":10,"textLines":1,"bbox":[868,205,340,34]}
+{"kind":"textbox","id":"sh/9k3u9o3a","slide":7,"text":"- Outdoor digital menu boards\n- Drive-thru manager\n- Drive-thru vision\n- Handheld POS\n- Voice AI ordering integrations","textPreview":"- Outdoor digital menu boards | - Drive-thru manager | - Drive-thru vision | - Handheld POS | - Voice AI ordering integrations","textChars":118,"textLines":5,"bbox":[868,253,340,287]}
+{"kind":"textbox","id":"sh/mhcbet4j","slide":7,"text":"This is the vocabulary layer: RMs do not need to demo it, but they should recognize it.","textPreview":"This is the vocabulary layer: RMs do not need to demo it, but they should recognize it.","textChars":87,"textLines":1,"bbox":[132,575,1016,34]}
+{"kind":"shape","id":"sh/nils7el4","slide":7,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/w7utk3ml","slide":7,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/x83ud836","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/ru4p3j","slide":7,"text":"This simplifies the QSR master deck's store-level slide into three operating zones RMs can remember.\n\n[Sources]\nGenius - QSR Master Pitch Deck 1, slide 72: Genius Cloud Store Level."}
+{"kind":"slide","id":"sl/hqlvgn","slide":8,"title":"WORLDPAY RM EDUCATION | SESSION 001","textShapes":17}
+{"kind":"textbox","id":"sh/a5cv6dk3","slide":8,"name":"kicker","text":"WORLDPAY RM EDUCATION | SESSION 001","textPreview":"WORLDPAY RM EDUCATION | SESSION 001","textChars":35,"textLines":1,"bbox":[72,38,760,26]}
+{"kind":"textbox","id":"sh/x8ne183u","slide":8,"name":"slide-title","text":"A payment sits inside a much larger restaurant workflow","textPreview":"A payment sits inside a much larger restaurant workflow","textChars":55,"textLines":1,"bbox":[72,76,960,92]}
+{"kind":"textbox","id":"sh/c7ed8329","slide":8,"text":"Guest demand can enter through many channels:","textPreview":"Guest demand can enter through many channels:","textChars":45,"textLines":1,"bbox":[96,192,760,34]}
+{"kind":"textbox","id":"sh/3ilwvyls","slide":8,"text":"Counter POS","textPreview":"Counter POS","textChars":11,"textLines":1,"bbox":[88,250,176,58]}
+{"kind":"textbox","id":"sh/2hcv2tk7","slide":8,"text":"Drive-thru","textPreview":"Drive-thru","textChars":10,"textLines":1,"bbox":[276,250,176,58]}
+{"kind":"textbox","id":"sh/p43ex83y","slide":8,"text":"Online orders","textPreview":"Online orders","textChars":13,"textLines":1,"bbox":[464,250,176,58]}
+{"kind":"textbox","id":"sh/o3ud432d","slide":8,"text":"Kiosk","textPreview":"Kiosk","textChars":5,"textLines":1,"bbox":[652,250,176,58]}
+{"kind":"textbox","id":"sh/fe1crylg","slide":8,"text":"Delivery","textPreview":"Delivery","textChars":8,"textLines":1,"bbox":[840,250,176,58]}
+{"kind":"textbox","id":"sh/edsvytkb","slide":8,"text":"Handheld","textPreview":"Handheld","textChars":8,"textLines":1,"bbox":[1028,250,176,58]}
+{"kind":"shape","id":"sh/0r6l0z6l","slide":8,"bbox":[590,322,80,70]}
+{"kind":"textbox","id":"sh/1cfm9476","slide":8,"text":"POS captures order","textPreview":"POS captures order","textChars":18,"textLines":1,"bbox":[68,430,208,72]}
+{"kind":"shape","id":"sh/epo3ypof","slide":8,"bbox":[274,452,44,30]}
+{"kind":"textbox","id":"sh/zqx47up0","slide":8,"text":"Payment authorizes","textPreview":"Payment authorizes","textChars":18,"textLines":1,"bbox":[308,430,208,72]}
+{"kind":"shape","id":"sh/cn6lwf69","slide":8,"bbox":[514,452,44,30]}
+{"kind":"textbox","id":"sh/dofm5k7u","slide":8,"text":"Loyalty identifies guest","textPreview":"Loyalty identifies guest","textChars":24,"textLines":1,"bbox":[548,430,208,72]}
+{"kind":"shape","id":"sh/ql43upoj","slide":8,"bbox":[754,452,44,30]}
+{"kind":"textbox","id":"sh/rmx43up4","slide":8,"text":"KDS routes production","textPreview":"KDS routes production","textChars":21,"textLines":1,"bbox":[788,430,208,72]}
+{"kind":"shape","id":"sh/wjq58j6t","slide":8,"bbox":[994,452,44,30]}
+{"kind":"textbox","id":"sh/xkzmho7e","slide":8,"text":"Reporting reconciles","textPreview":"Reporting reconciles","textChars":20,"textLines":1,"bbox":[1028,430,208,72]}
+{"kind":"textbox","id":"sh/lovu5kv6","slide":8,"text":"RM takeaway: when any channel, payment path, or kitchen handoff is fragmented, the merchant has platform pain.","textPreview":"RM takeaway: when any channel, payment path, or kitchen handoff is fragmented, the merchant has platform pain.","textChars":110,"textLines":1,"bbox":[112,565,1056,44]}
+{"kind":"shape","id":"sh/knmdcful","slide":8,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/jmtc3ad0","slide":8,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/ylkva5cf","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/hqlvgn","slide":8,"text":"This is the bridge from payments into restaurant tech. Add the missing channels explicitly: drive-thru, online orders, kiosks, delivery, loyalty, and KDS. Payment is critical, but it is one step in a multi-channel operating flow.\n\n[Sources]\nTodd feedback, 2026-07-30.\nGenius POS for IKEA PDF, pages 5-6.\nCourse 001 restaurant stack overview."}
+{"kind":"slide","id":"sl/kq8f63","slide":9,"title":"WORLDPAY RM EDUCATION | SESSION 001","textShapes":11}
+{"kind":"textbox","id":"sh/xwvupgrq","slide":9,"name":"kicker","text":"WORLDPAY RM EDUCATION | SESSION 001","textPreview":"WORLDPAY RM EDUCATION | SESSION 001","textChars":35,"textLines":1,"bbox":[72,38,760,26]}
+{"kind":"textbox","id":"sh/a94be18z","slide":9,"name":"slide-title","text":"Integrations show where payments touches the ecosystem","textPreview":"Integrations show where payments touches the ecosystem","textChars":54,"textLines":1,"bbox":[72,76,960,92]}
+{"kind":"shape","id":"sh/vadcn69k","slide":9,"bbox":[74,215,6,270]}
+{"kind":"textbox","id":"sh/kz6tkvq1","slide":9,"text":"Order channels","textPreview":"Order channels","textChars":14,"textLines":1,"bbox":[94,215,310,34]}
+{"kind":"textbox","id":"sh/50fut0rm","slide":9,"text":"- Delivery\n- Online ordering\n- Kiosk\n- Voice AI ordering","textPreview":"- Delivery | - Online ordering | - Kiosk | - Voice AI ordering","textChars":56,"textLines":4,"bbox":[94,263,310,222]}
+{"kind":"shape","id":"sh/ixobil8b","slide":9,"bbox":[474,215,6,270]}
+{"kind":"textbox","id":"sh/jyxcrq9g","slide":9,"text":"Guest + operations","textPreview":"Guest + operations","textChars":18,"textLines":1,"bbox":[494,215,310,34]}
+{"kind":"textbox","id":"sh/s36tovqd","slide":9,"text":"- Gift and loyalty\n- Back office\n- Labor and scheduling\n- Reporting and data","textPreview":"- Gift and loyalty | - Back office | - Labor and scheduling | - Reporting and data","textChars":76,"textLines":4,"bbox":[494,263,310,222]}
+{"kind":"shape","id":"sh/t4zux0ry","slide":9,"bbox":[874,215,6,270]}
+{"kind":"textbox","id":"sh/dwjit8re","slide":9,"text":"Money movement","textPreview":"Money movement","textChars":14,"textLines":1,"bbox":[894,215,310,34]}
+{"kind":"textbox","id":"sh/cvahk3qt","slide":9,"text":"- Payment processing\n- Contactless payments\n- Gateways and routing\n- Fraud, settlement, reconciliation","textPreview":"- Payment processing | - Contactless payments | - Gateways and routing | - Fraud, settlement, reconciliation","textChars":102,"textLines":4,"bbox":[894,263,310,222]}
+{"kind":"textbox","id":"sh/ba10ry98","slide":9,"text":"When an account has too many disconnected providers, the RM should hear opportunity and risk.","textPreview":"When an account has too many disconnected providers, the RM should hear opportunity and risk.","textChars":93,"textLines":1,"bbox":[134,565,1010,42]}
+{"kind":"shape","id":"sh/q9szit8n","slide":9,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/l03ixsra","slide":9,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/0zahonqp","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/kq8f63","slide":9,"text":"This is a training-friendly abstraction of the master deck's integrations slide. Do not overwhelm RMs with every logo. Teach the categories and what to listen for.\n\n[Sources]\nGenius - QSR Master Pitch Deck 1, slide 18: Integrations."}
+{"kind":"slide","id":"sl/tnbmuj","slide":10,"title":"WORLDPAY RM EDUCATION | SESSION 001","textShapes":9}
+{"kind":"textbox","id":"sh/yxsvixcf","slide":10,"name":"kicker","text":"WORLDPAY RM EDUCATION | SESSION 001","textPreview":"WORLDPAY RM EDUCATION | SESSION 001","textChars":35,"textLines":1,"bbox":[72,38,760,26]}
+{"kind":"textbox","id":"sh/l0jedcbq","slide":10,"name":"slide-title","text":"Fragmentation is the pain RMs should learn to spot","textPreview":"Fragmentation is the pain RMs should learn to spot","textChars":50,"textLines":1,"bbox":[72,76,960,92]}
+{"kind":"textbox","id":"sh/kzadk7u5","slide":10,"text":"Common symptoms","textPreview":"Common symptoms","textChars":15,"textLines":1,"bbox":[100,205,360,32]}
+{"kind":"textbox","id":"sh/72lwfmtw","slide":10,"text":"- Different POS by region or franchisee\n- Online and in-store payments split\n- Kitchen receives orders from too many sources\n- Reporting does not tie out\n- Multiple vendors point at each other\n- Rollouts take too long","textPreview":"- Different POS by region or franchisee | - Online and in-store payments split | - Kitchen receives orders from too many sources | - Repo...","textChars":217,"textLines":6,"bbox":[100,255,510,238]}
+{"kind":"textbox","id":"sh/m1sfmhcb","slide":10,"text":"What it creates","textPreview":"What it creates","textChars":15,"textLines":1,"bbox":[720,205,360,32]}
+{"kind":"textbox","id":"sh/9o3ehcb2","slide":10,"text":"- Support escalation\n- Manual reconciliation\n- Franchisee frustration\n- Slower innovation\n- Risk during peak periods\n- Harder platform decisions","textPreview":"- Support escalation | - Manual reconciliation | - Franchisee frustration | - Slower innovation | - Risk during peak periods | - Harder p...","textChars":144,"textLines":6,"bbox":[720,255,470,238]}
+{"kind":"textbox","id":"sh/83uxoruh","slide":10,"text":"Discovery moves from \"Who processes you?\" to \"Where does the transaction path break?\"","textPreview":"Discovery moves from \"Who processes you?\" to \"Where does the transaction path break?\"","textChars":85,"textLines":1,"bbox":[172,555,936,58]}
+{"kind":"shape","id":"sh/vqlwjmts","slide":10,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/upcfqhc7","slide":10,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/0fqt0fyp","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/tnbmuj","slide":10,"text":"This borrows directly from the competitor matrix whitepaper's framing: the hidden costs of fragmentation are integration fatigue, data silos, support complexity, offline inconsistency, and rollout friction.\n\n[Sources]\nGenius competitor matrix whitepaper."}
+{"kind":"slide","id":"sl/m16fpl","slide":11,"title":"WORLDPAY RM EDUCATION | SESSION 001","textShapes":11}
+{"kind":"textbox","id":"sh/4veps3il","slide":11,"name":"kicker","text":"WORLDPAY RM EDUCATION | SESSION 001","textPreview":"WORLDPAY RM EDUCATION | SESSION 001","textChars":35,"textLines":1,"bbox":[72,38,760,26]}
+{"kind":"textbox","id":"sh/3u58zyhg","slide":11,"name":"slide-title","text":"Competitors sit in categories, not just logo lists","textPreview":"Competitors sit in categories, not just logo lists","textChars":50,"textLines":1,"bbox":[72,76,960,92]}
+{"kind":"shape","id":"sh/2tw7qt0v","slide":11,"bbox":[82,200,6,330]}
+{"kind":"textbox","id":"sh/hsnqxoza","slide":11,"text":"Enterprise POS / platforms","textPreview":"Enterprise POS / platforms","textChars":26,"textLines":1,"bbox":[102,200,325,34]}
+{"kind":"textbox","id":"sh/grepo3ip","slide":11,"text":"- Oracle Simphony / MICROS\n- NCR Aloha / NCR Voyix\n- PAR Brink\n- Qu\n- Toast\n- Genius","textPreview":"- Oracle Simphony / MICROS | - NCR Aloha / NCR Voyix | - PAR Brink | - Qu | - Toast | - Genius","textChars":84,"textLines":6,"bbox":[102,248,325,282]}
+{"kind":"shape","id":"sh/fql8vyh4","slide":11,"bbox":[468,200,6,330]}
+{"kind":"textbox","id":"sh/upc7mt0j","slide":11,"text":"Payments / gateway","textPreview":"Payments / gateway","textChars":18,"textLines":1,"bbox":[488,200,335,34]}
+{"kind":"textbox","id":"sh/to3qtozy","slide":11,"text":"- Worldpay\n- Fiserv\n- FreedomPay\n- Adyen / Stripe / Shift4\n- Aurus / Cybersource / ACI\n- NCR Connected Payments / OPI","textPreview":"- Worldpay | - Fiserv | - FreedomPay | - Adyen / Stripe / Shift4 | - Aurus / Cybersource / ACI | - NCR Connected Payments / OPI","textChars":117,"textLines":6,"bbox":[488,248,335,282]}
+{"kind":"shape","id":"sh/snupkjit","slide":11,"bbox":[864,200,6,330]}
+{"kind":"textbox","id":"sh/m18f6p8z","slide":11,"text":"Adjacent stack","textPreview":"Adjacent stack","textChars":14,"textLines":1,"bbox":[884,200,325,34]}
+{"kind":"textbox","id":"sh/72hgzupk","slide":11,"text":"- Olo / Lunchbox / Tillster\n- Punchh / Paytronix\n- Bite / QikServe / Mashgin\n- QSR Automations\n- Restaurant365 / Crunchtime\n- HotSchedules / Fourth","textPreview":"- Olo / Lunchbox / Tillster | - Punchh / Paytronix | - Bite / QikServe / Mashgin | - QSR Automations | - Restaurant365 / Crunchtime | - H...","textChars":147,"textLines":6,"bbox":[884,248,325,282]}
+{"kind":"textbox","id":"sh/83qx8zq5","slide":11,"text":"Use names to orient discovery. Do not turn the first conversation into a vendor debate.","textPreview":"Use names to orient discovery. Do not turn the first conversation into a vendor debate.","textChars":87,"textLines":1,"bbox":[140,580,1000,34]}
+{"kind":"shape","id":"sh/94zy147q","slide":11,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/yx8f2p83","slide":11,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/zyhwvapo","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/m16fpl","slide":11,"text":"This slide gives RMs enough vocabulary to understand account notes and calendar invites. It is deliberately category-based, not a battlecard.\n\n[Sources]\nWorldpay 30 Account Capture Plan v1.\nGenius competitor matrix whitepaper.\nEnterprise Restaurant Platform Intelligence Framework v1."}
+{"kind":"slide","id":"sl/d7qksd","slide":12,"title":"WORLDPAY RM EDUCATION | SESSION 001","textShapes":11}
+{"kind":"textbox","id":"sh/c3ylk3uh","slide":12,"name":"kicker","text":"WORLDPAY RM EDUCATION | SESSION 001","textPreview":"WORLDPAY RM EDUCATION | SESSION 001","textChars":35,"textLines":1,"bbox":[72,38,760,26]}
+{"kind":"textbox","id":"sh/r2p4rytw","slide":12,"name":"slide-title","text":"Corporate proof: platform value has to scale without noise","textPreview":"Corporate proof: platform value has to scale without noise","textChars":58,"textLines":1,"bbox":[72,76,960,92]}
+{"kind":"shape","id":"sh/q1g3itcb","slide":12,"bbox":[74,210,6,250]}
+{"kind":"textbox","id":"sh/18rmxsby","slide":12,"text":"A&W","textPreview":"A&W","textChars":3,"textLines":1,"bbox":[94,210,330,34]}
+{"kind":"textbox","id":"sh/07ilonud","slide":12,"text":"- 1,000+ restaurant modernization\n- Fragmented stack unified\n- Speed of service and visibility improved","textPreview":"- 1,000+ restaurant modernization | - Fragmented stack unified | - Speed of service and visibility improved","textChars":103,"textLines":3,"bbox":[94,258,330,202]}
+{"kind":"shape","id":"sh/z694vits","slide":12,"bbox":[464,210,6,250]}
+{"kind":"textbox","id":"sh/e503mdc7","slide":12,"text":"CosMc's","textPreview":"CosMc's","textChars":7,"textLines":1,"bbox":[484,210,330,34]}
+{"kind":"textbox","id":"sh/9cbm1sbu","slide":12,"text":"- Single supplier helped move faster\n- Cloud POS, kiosks, DMBs, commerce platform\n- Useful proof for new concepts","textPreview":"- Single supplier helped move faster | - Cloud POS, kiosks, DMBs, commerce platform | - Useful proof for new concepts","textChars":113,"textLines":3,"bbox":[484,258,330,202]}
+{"kind":"shape","id":"sh/obi5snup","slide":12,"bbox":[854,210,6,250]}
+{"kind":"textbox","id":"sh/i18zapcz","slide":12,"text":"7Brew","textPreview":"7Brew","textChars":5,"textLines":1,"bbox":[874,210,330,34]}
+{"kind":"textbox","id":"sh/j21g3utk","slide":12,"text":"- 530+ locations deployed in 9 weeks\n- Centralized control and consistent workflows\n- Useful proof for rapid growth","textPreview":"- 530+ locations deployed in 9 weeks | - Centralized control and consistent workflows | - Useful proof for rapid growth","textChars":115,"textLines":3,"bbox":[874,258,330,202]}
+{"kind":"textbox","id":"sh/43ahczu5","slide":12,"text":"RM takeaway: proof matters because corporate buyers need a tangible system win and low field disruption.","textPreview":"RM takeaway: proof matters because corporate buyers need a tangible system win and low field disruption.","textChars":104,"textLines":1,"bbox":[128,555,1024,52]}
+{"kind":"shape","id":"sh/5ojy54bq","slide":12,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/6psze9cb","slide":12,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/rq1g7etw","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/d7qksd","slide":12,"text":"Use one proof point only if time is tight. The learning objective is not customer-story memorization; it is understanding what corporate buyers are trying to prove.\n\n[Sources]\nGenius WP - RM taining.pptx, slides 10-12.\nTodd corporate-buyer POV, 2026-07-30."}
+{"kind":"slide","id":"sl/tvpsx8","slide":13,"title":"WORLDPAY RM EDUCATION | SESSION 001","textShapes":7}
+{"kind":"textbox","id":"sh/n21ofid4","slide":13,"name":"kicker","text":"WORLDPAY RM EDUCATION | SESSION 001","textPreview":"WORLDPAY RM EDUCATION | SESSION 001","textChars":35,"textLines":1,"bbox":[72,38,760,26]}
+{"kind":"textbox","id":"sh/o3u5onup","slide":13,"name":"slide-title","text":"The RM job is to capture the wedge","textPreview":"The RM job is to capture the wedge","textChars":34,"textLines":1,"bbox":[72,76,960,92]}
+{"kind":"textbox","id":"sh/9436hsva","slide":13,"text":"Ask five questions before bringing Genius in:","textPreview":"Ask five questions before bringing Genius in:","textChars":45,"textLines":1,"bbox":[96,196,940,40]}
+{"kind":"textbox","id":"sh/edsnidcn","slide":13,"text":"1. What POS and payment architecture do you run today?\n2. Is that consistent across corporate, franchise, online, kiosk, and drive-thru?\n3. What is changing: contract, migration, pilot, support issue, new format, or acquisition?\n4. Who owns the decision: IT, operations, finance, procurement, or franchisees?\n5. What breaks during peak volume or when connectivity fails?","textPreview":"1. What POS and payment architecture do you run today? | 2. Is that consistent across corporate, franchise, online, kiosk, and drive-thru...","textChars":370,"textLines":5,"bbox":[112,270,1030,250]}
+{"kind":"textbox","id":"sh/zy1obids","slide":13,"text":"Next best action: document the stack, name the trigger, identify the owner, and set the Genius discovery step.","textPreview":"Next best action: document the stack, name the trigger, identify the owner, and set the Genius discovery step.","textChars":110,"textLines":1,"bbox":[112,555,1030,62]}
+{"kind":"shape","id":"sh/0za5knud","slide":13,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/10j6d8vy","slide":13,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/q98netcb","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/tvpsx8","slide":13,"text":"This should become the RM muscle memory. It comes straight from the capture-plan workshop objective: validate facts, identify sellable wedges, and leave with a named next action.\n\n[Sources]\nWorldpay 30 Account Capture Plan v1, RM Briefings."}
+{"kind":"slide","id":"sl/y0o1di","slide":14,"title":"WORLDPAY RM EDUCATION | SESSION 001","textShapes":9}
+{"kind":"textbox","id":"sh/4zux4v65","slide":14,"name":"kicker","text":"WORLDPAY RM EDUCATION | SESSION 001","textPreview":"WORLDPAY RM EDUCATION | SESSION 001","textChars":35,"textLines":1,"bbox":[72,38,760,26]}
+{"kind":"textbox","id":"sh/3ylwba5k","slide":14,"name":"slide-title","text":"Close with one practical exercise","textPreview":"Close with one practical exercise","textChars":33,"textLines":1,"bbox":[72,76,960,92]}
+{"kind":"textbox","id":"sh/2xcf25oz","slide":14,"text":"For one assigned account, fill in the platform map:","textPreview":"For one assigned account, fill in the platform map:","textChars":51,"textLines":1,"bbox":[96,195,920,38]}
+{"kind":"textbox","id":"sh/hw3e90ne","slide":14,"text":"- Current POS\n- Payment processor / gateway\n- Digital ordering\n- Loyalty / CRM\n- Kitchen / KDS","textPreview":"- Current POS | - Payment processor / gateway | - Digital ordering | - Loyalty / CRM | - Kitchen / KDS","textChars":94,"textLines":5,"bbox":[138,270,430,210]}
+{"kind":"textbox","id":"sh/gvax0v6t","slide":14,"text":"- Hardware footprint\n- Current trigger\n- Decision owner\n- Likely wedge\n- Next best action","textPreview":"- Hardware footprint | - Current trigger | - Decision owner | - Likely wedge | - Next best action","textChars":89,"textLines":5,"bbox":[692,270,430,210]}
+{"kind":"textbox","id":"sh/fa1w7q58","slide":14,"text":"Future sessions go deep on each piece: POS, KDS, drive-thru, kiosk, DMB, loyalty, back office, hardware, support, integrations.","textPreview":"Future sessions go deep on each piece: POS, KDS, drive-thru, kiosk, DMB, loyalty, back office, hardware, support, integrations.","textChars":127,"textLines":1,"bbox":[126,502,1030,44]}
+{"kind":"textbox","id":"sh/u9sfelon","slide":14,"text":"Q&A: What would you ask next before bringing Genius in?","textPreview":"Q&A: What would you ask next before bringing Genius in?","textChars":55,"textLines":1,"bbox":[160,560,960,58]}
+{"kind":"shape","id":"sh/t8je5gni","slide":14,"bbox":[72,666,1136,1]}
+{"kind":"textbox","id":"sh/s7axcb6x","slide":14,"text":"Genius platform training for Worldpay relationship managers","textPreview":"Genius platform training for Worldpay relationship managers","textChars":59,"textLines":1,"bbox":[72,676,760,24]}
+{"kind":"textbox","id":"sh/it0vq18r","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1160,676,48,24]}
+{"kind":"notes","id":"nt/y0o1di","slide":14,"text":"This is the handoff into the 10-minute Q&A. Reinforce that Session 001 is only the orientation map; future trainings go deeper on each Genius platform component.\n\n[Sources]\nWorldpay 30 Account Capture Plan v1.\nEnterprise Sales New Hire Playbook, learn by listening and asking questions.\nTodd note: future training will be on each piece of the Genius platform."}

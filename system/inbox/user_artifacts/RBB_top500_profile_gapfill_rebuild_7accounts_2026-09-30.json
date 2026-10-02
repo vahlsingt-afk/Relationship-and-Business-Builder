@@ -1,0 +1,207 @@
+{
+  "dataset": {
+    "name": "RBB Top-500 Company Profile Gap Fill — Rebuild for 7 Real Accounts + GoTo Foods",
+    "version": "2026-09-30-rebuild-8brands",
+    "record_count": 6,
+    "merge_policy": "Targeted rebuild of Tier 1 canonical public profiles for the 7 accounts with real Tier 2 research, plus a new profile for GoTo Foods (current name for the Focus Brands entity). Every field below carries real, cited public sources unlike the original batched gapfill packets. Only fields with a genuinely findable, confidently-verifiable public source are populated; already-correct existing fields are left out rather than resubmitted with identical text (the ingest mechanism only records new sources when the value itself changes). See system/DATA_TIER_ARCHITECTURE.md for the Phase 2 context this rebuild closes out.",
+    "records": [
+      {
+        "rank": null,
+        "canonical_brand_id": "brand-mcdonald-s",
+        "brand_name": "McDonald's",
+        "company_profile": {
+          "parent_ownership": {
+            "value": "Independent, publicly traded company (NYSE: MCD); no external corporate parent",
+            "confidence": 97,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/McDonald%27s",
+              "https://corporate.mcdonalds.com"
+            ]
+          },
+          "headquarters": {
+            "value": "Chicago, Illinois, USA",
+            "confidence": 97,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/McDonald%27s",
+              "https://corporate.mcdonalds.com"
+            ]
+          }
+        }
+      },
+      {
+        "rank": null,
+        "canonical_brand_id": "brand-del-taco",
+        "brand_name": "Del Taco",
+        "company_profile": {
+          "headquarters": {
+            "value": "Lake Forest, California, USA",
+            "confidence": 96,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Del_Taco",
+              "https://www.bbb.org/us/ca/lake-forest/profile/carry-out-food/del-taco-llc-1126-100015314"
+            ]
+          },
+          "founded": {
+            "value": "1964",
+            "confidence": 95,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Del_Taco"
+            ]
+          }
+        }
+      },
+      {
+        "rank": null,
+        "canonical_brand_id": "brand-church-s-texas-chicken",
+        "brand_name": "Church's Texas Chicken",
+        "company_profile": {
+          "headquarters": {
+            "value": "Atlanta, Georgia, USA",
+            "confidence": 92,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Church%27s_Texas_Chicken"
+            ]
+          },
+          "founded": {
+            "value": "1952 (San Antonio, Texas)",
+            "confidence": 93,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Church%27s_Texas_Chicken"
+            ]
+          }
+        }
+      },
+      {
+        "rank": null,
+        "canonical_brand_id": "brand-five-guys",
+        "brand_name": "Five Guys",
+        "company_profile": {
+          "parent_ownership": {
+            "value": "Privately held by the Murrell family; no external corporate parent",
+            "confidence": 93,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Five_Guys"
+            ]
+          },
+          "headquarters": {
+            "value": "Alexandria, Virginia, USA",
+            "confidence": 92,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://craft.co/five-guys/locations",
+              "https://corporateofficehq.com/five-guys-corporate-office/"
+            ]
+          }
+        }
+      },
+      {
+        "rank": null,
+        "canonical_brand_id": "brand-subway",
+        "brand_name": "Subway",
+        "company_profile": {
+          "headquarters": {
+            "value": "Shelton, Connecticut, USA and Miami, Florida, USA (dual headquarters)",
+            "confidence": 88,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://newsroom.subway.com/2023-10-23-Subway-Opens-New-Connecticut-Dual-Headquarters-in-Shelton",
+              "https://www.nrn.com/quick-service/subway-opens-new-dual-headquarters-building-in-miami",
+              "https://hartfordbusiness.com/article/subway-opens-new-global-headquarters-in-miami/"
+            ]
+          }
+        }
+      },
+      {
+        "rank": null,
+        "canonical_brand_id": "brand-goto-foods",
+        "brand_name": "GoTo Foods",
+        "company_profile": {
+          "market_identity": {
+            "value": "Multi-brand fast-casual/QSR restaurant franchisor (bakery-cafe, ice cream, sandwich, and Southwest-grill concepts)",
+            "confidence": 90,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GoTo_Foods",
+              "https://www.restaurantbusinessonline.com/operations/focus-brands-changing-its-name-goto-foods"
+            ]
+          },
+          "parent_ownership": {
+            "value": "Roark Capital Group (Atlanta-based private equity)",
+            "confidence": 93,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GoTo_Foods",
+              "https://www.restaurantdive.com/news/focus-brands-renames-itself-go-to-foods/708004/"
+            ]
+          },
+          "ownership_type": {
+            "value": "Private — Roark Capital-backed",
+            "confidence": 93,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GoTo_Foods"
+            ]
+          },
+          "headquarters": {
+            "value": "Sandy Springs, Georgia, USA",
+            "confidence": 90,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GoTo_Foods"
+            ]
+          },
+          "founded": {
+            "value": "2004 (as Focus Brands; renamed GoTo Foods in 2023)",
+            "confidence": 90,
+            "status": "confirmed",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GoTo_Foods",
+              "https://www.nrn.com/food-trends/auntie-anne-s-and-cinnabon-parent-company-focus-brands-rebrands-to-goto-foods"
+            ]
+          },
+          "operating_structure": {
+            "value": "6,700+ units across 7 brands (Auntie Anne's, Carvel, Cinnabon, Jamba, McAlister's Deli, Moe's Southwest Grill, Schlotzsky's); company-owned vs. franchised split not verified in this pass",
+            "confidence": 78,
+            "status": "reported",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GoTo_Foods",
+              "https://www.restaurantdive.com/news/focus-brands-renames-itself-go-to-foods/708004/"
+            ]
+          },
+          "synopsis": {
+            "value": "GoTo Foods (formerly Focus Brands, renamed 2023) is a multi-brand restaurant franchisor owned by Roark Capital Group, operating 6,700+ locations globally across seven brands: Auntie Anne's, Carvel, Cinnabon, Jamba, McAlister's Deli, Moe's Southwest Grill, and Schlotzsky's. Headquartered in Sandy Springs, Georgia. For RBB, treat as a multi-brand franchisor account — technology decisions likely route through a shared platform team serving all seven brands rather than brand-by-brand, similar in structure to other Roark-backed multi-brand portfolios (e.g. Inspire Brands).",
+            "confidence": 88,
+            "status": "reported",
+            "as_of": "2026-09-30",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GoTo_Foods",
+              "https://www.qsrmagazine.com/story/inside-the-ongoing-unification-of-goto-foods/"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

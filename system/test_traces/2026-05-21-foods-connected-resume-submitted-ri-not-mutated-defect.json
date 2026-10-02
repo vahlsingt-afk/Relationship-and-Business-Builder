@@ -1,0 +1,26 @@
+{
+  "trace_id": "T-2026-05-21-005",
+  "title": "Foods Connected resume-submitted RI not mutated",
+  "captured_at": "2026-05-21T19:00:00-05:00",
+  "source": "Codex / operator-provided RB 9.0 defect report",
+  "operator": "Todd",
+  "trace_type": "field_defect",
+  "severity": "HIGH",
+  "category": "Relationship Intelligence / Persistence / Artifact Mutation / Opportunity State",
+  "summary": "Sarah/Foods Connected progressed to resume submitted, but RB analyzed without showing canonical mutation proof.",
+  "expected_stage": "resume_submitted",
+  "expected_mutations": [
+    "create_or_update_contact:sarah-mcangus",
+    "touch_contact:jeff-staley",
+    "create_or_update_company:foods-connected",
+    "create_or_update_opportunity:foods-connected-commercial-director-north-america",
+    "create_relationship_edge:jeff-staley-to-sarah-mcangus",
+    "create_loop:await-sarah-response-after-resume",
+    "create_loop:prepare-next-interview",
+    "create_loop:research-foods-connected-leadership-us-expansion",
+    "create_loop:prepare-mcdonalds-food-safety-surecheck-story",
+    "create_loop:prepare-enterprise-farming-examples",
+    "update_who_matters_now:active_thread_boost"
+  ],
+  "regression_anchor": "POST /opportunity_intake with stage=resume_submitted must return post-submission loops and stage-aware opportunity artifact fields."
+}

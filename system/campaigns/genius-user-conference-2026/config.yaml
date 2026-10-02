@@ -1,0 +1,164 @@
+# Genius User Conference 2026 — campaign config.
+#
+# Runs exclusively over the operator's own personal network already in
+# baseline_index.json (LinkedIn connections + personal contacts) — never
+# over any Global Payments CRM/customer/account export. See the open
+# AI-governance flag at
+# system/employers/global-payments/policies/code-of-conduct.yaml:79-87.
+campaign_id: genius-user-conference-2026
+name: Global Payments Genius User Conference 2026
+
+data_scope:
+  source: personal_network_only   # hard-enforced at runtime; engine refuses to run on anything else
+
+eligibility:
+  # Seed list for people the operator already personally knows registered
+  # before this campaign existed — NOT derived from any registration system
+  # export. Populate by hand if applicable; leave empty otherwise.
+  known_registered_contact_ids: []
+
+  # Added 2026-07-13 with the relationship-first reweight: an executive
+  # title + strong personal relationship alone no longer implies "invite" —
+  # the contact must actually work at a restaurant brand/large franchise
+  # organization (is_restaurant_operator), or be a confirmed Genius/Worldpay
+  # customer (which bypasses this gate — see is_included()). Without this,
+  # relationship-first scoring surfaces the operator's own strong personal
+  # relationships regardless of company, including restaurant-tech vendors
+  # (confirmed live: QSRSoft, Telaid Industries, Logic Controls, HR-4U all
+  # reached Tier 1 before this gate existed). A
+  # 'restaurant-affiliation-override' tag lets a genuine restaurant-brand
+  # contact through if the keyword heuristic misses their company name.
+  require_restaurant_affiliation: true
+
+  include_if_any:
+    - tag_in: [starting-lineup, all-star, opportunity-relationship, referral-partner, connector]
+    - signal_class_in: [LKI, RC]
+    - current_role_matches:
+        - "VP"
+        - "SVP"
+        - "EVP"
+        - "Chief"
+        - "Head of"
+        - "Owner"
+        - "President"
+        - "Founder"
+        - "Director"
+
+  exclude_if_any:
+    # User-curated: named restaurant-payments competitors of Global Payments.
+    # Empty until the operator populates it — never inferred from any
+    # employer system.
+    - current_company_in: []
+      reason: competitor
+      mode: exclude
+    - tag_in: [consultant, vendor-conflict]
+      reason: consultant_or_vendor
+      mode: exclude
+    # 2026-07-14: "Benchmark Sixty Restaurant Services." — verified against
+    # baseline_index.json notes, which explicitly describe it as "Strategic
+    # advisor for consultant referral network concept... the Jim Taylor
+    # program for entrepreneurs," not a restaurant operator.
+    - current_company_in: ["Benchmark Sixty Restaurant Services."]
+      reason: consultant_or_vendor
+      mode: exclude
+    # Both current_company spellings seen in baseline for the operator's own employer.
+    - current_company_in: ["Global Payments Inc.", "Global Payments Inc. (e-HPS)"]
+      reason: employee_of_hosting_company
+      mode: exclude
+    - already_registered: true
+      reason: already_registered
+      mode: exclude
+    - is_recruiter: true
+      reason: recruiter
+      mode: exclude
+    # Added 2026-07-13, relationship-first model's explicit exclude
+    # categories — curated named-company lists, same pattern as
+    # 'competitor' above (a company name doesn't reliably self-identify as
+    # a vendor/agency/media outlet, so this is operator judgment, not a
+    # keyword guess). restaurant_technology_vendor is pre-populated with
+    # the vendors confirmed live in this campaign's own roster (companies
+    # that were reaching Tier 1 on relationship/title alone despite selling
+    # *to* restaurants, not being one) — add more as they're spotted.
+    # 2026-07-14 addition: "Touchpoint Restaurant Solutions" — verified
+    # against baseline_index.json, not just taken on the GPT's word. All 3
+    # contacts there carry Sales/Business-Development titles (VP Sales &
+    # BD, Business Development Manager/Lead) — a solutions vendor selling
+    # to restaurants, not an operator.
+    - current_company_in: ["QSRSoft", "Telaid Industries, Inc.", "Logic Controls", "HR-4U INC.", "Touchpoint Restaurant Solutions"]
+      reason: restaurant_technology_vendor
+      mode: exclude
+    # Added 2026-07-14: confirmed live (via GPT round-trip) as false
+    # positives of the is_restaurant_operator keyword heuristic — "QSR
+    # Store Shield" and "Restaurant Leaders Lunch" both contain a
+    # restaurant-operator keyword ("qsr", "restaurant") as a standalone
+    # word, satisfying require_restaurant_affiliation, but neither is an
+    # actual multi-unit restaurant brand/franchise organization.
+    - current_company_in: ["QSR Store Shield", "Restaurant Leaders Lunch"]
+      reason: not_a_restaurant_brand
+      mode: exclude
+    # User-curated: named payment-industry companies (not GP/Worldpay
+    # itself — that's the employee_of_hosting_company rule above). Empty
+    # until the operator populates it.
+    - current_company_in: []
+      reason: payment_company
+      mode: exclude
+    # User-curated: consulting/agency firms not otherwise caught by the
+    # tags.consultant/vendor-conflict rule above. Empty until populated.
+    - current_company_in: []
+      reason: agency
+      mode: exclude
+    # User-curated: media outlets, publications, industry analysts
+    # (Gartner/Forrester-class). Empty until populated.
+    - current_company_in: []
+      reason: media
+      mode: exclude
+    - current_company_in: []
+      reason: analyst
+      mode: exclude
+    # Event-specific, not a general engine rule: McDonald's
+    # operators/franchisees excluded for the Genius User Conference
+    # specifically, per operator instruction.
+    - current_company_in: ["McDonald's", "McDonalds", "McDonald's Corporation", "McDonald's USA"]
+      reason: event_specific_exclusion
+      mode: exclude
+
+# Relationship-first weighted model, superseding the 2026-07-13 (Phase 8)
+# "current customer dominates" model — the operator explicitly reversed the
+# priority order: relationship strength first, buying authority second,
+# strategic brand value third, recent engagement fourth, existing invite
+# status a small last nudge. Registration status is deliberately NOT a
+# scoring input — it's a workflow state (status field / eligibility filter),
+# not a permanent trait of the person. current_customer, champion_reference_
+# potential, enterprise_brand, current_opportunity kept at 0 (available, not
+# part of this model — strategic_brand_value supersedes current_customer/
+# enterprise_brand as the "recognized brand" dimension) rather than removed,
+# so re-enabling any of them later is a one-line change, not a rebuild.
+scoring:
+  weights:
+    existing_relationship: 40          # relationship strength — 40%
+    executive_decision_maker: 15       # executive/buying authority (CIO/VP IT/etc.) — split of 25%
+    technology_operations_leadership: 10  # ...remaining half of buying authority
+    strategic_brand_value: 20          # strategic brand value (known customer > restaurant operator > other) — 20%
+    recent_engagement: 10              # recent engagement — 10%, from interaction_capture.py
+    existing_invite_status: 5          # already invited, not yet registered — 5% nudge
+    current_customer: 0
+    champion_reference_potential: 0
+    enterprise_brand: 0
+    current_opportunity: 0
+  # User-curated: named enterprise restaurant brands. Empty until populated.
+  enterprise_brand_list: []
+  penalties:
+    competitor: -100
+
+tiering:
+  mode: score_bands
+  bands:
+    - {id: tier_1_must_invite, label: "Tier 1 — Must Invite", min_score: 50}
+    - {id: tier_2_should_invite, label: "Tier 2 — Should Invite", min_score: 25}
+    - {id: tier_3_consider, label: "Tier 3 — Consider", min_score: 10}
+  # Overrides the score-band tier for any known-customer contact who has
+  # been invited but not yet registered — highest-probability conversion,
+  # regardless of their score-band tier. See apply_customer_contact_list().
+  tier_0:
+    id: tier_0_worldpay_conversion
+    label: "Tier 0 — Worldpay Customer, Ready to Convert"

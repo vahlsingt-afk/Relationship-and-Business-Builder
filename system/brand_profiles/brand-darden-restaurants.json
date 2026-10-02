@@ -1,0 +1,185 @@
+{
+  "brand_id": "brand-darden-restaurants",
+  "brand_name": "Darden Restaurants",
+  "identity": {
+    "parent_ownership": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "hq_city_state": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "founded_year": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "synopsis": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "brand",
+    "last_reviewed_by": null
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "franchised_units": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "company_owned_units": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [
+    {
+      "signal_type": "other",
+      "value": "[🔺 52W HIGH] Darden Restaurants (DRI) near 52-week high — watch for announcement",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-06-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/DRI"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Darden Restaurants (DRI) ↓3.8% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-06-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/DRI"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Darden Restaurants (DRI) ↓3.7% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-07-13",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/DRI"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Darden Restaurants (DRI) ↑4.0% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-12",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/DRI"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Darden Restaurants (DRI) ↓3.5% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-27",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/DRI"
+    },
+    {
+      "signal_type": "other",
+      "value": "10-K  - Annual report [Section 13 and 15(d), not S-K Item 405]",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-07-24",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/940944/000094094426000025/0000940944-26-000025-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "8-K  - Current report",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-24",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/940944/000094094426000035/0000940944-26-000035-index.htm"
+    },
+    {
+      "signal_type": "financial_health",
+      "value": "8-K  - Current report",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-24",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/940944/000094094426000032/0000940944-26-000032-index.htm"
+    }
+  ],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-25T21:08:00Z",
+  "updated_at": "2026-09-25T21:08:04Z",
+  "trajectory": {
+    "badge": "insufficient_data",
+    "metric_used": null,
+    "value_pct": null,
+    "as_of_year": null,
+    "underlying": null,
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

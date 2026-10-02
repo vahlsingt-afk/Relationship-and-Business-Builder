@@ -1,0 +1,38 @@
+{
+  "subject_id": "subject-mcdonalds",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-29T10:22:16Z",
+      "generated_for": "test-verification-2026-09-29",
+      "purpose": "Single-call preparation",
+      "path": "system/artifact_vault/green_sheets/mcdonalds/current/McDonalds_Green-Sheet.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-29T15:59:00Z",
+      "generated_for": "zak-bertram",
+      "purpose": "Single-call preparation",
+      "path": "system/artifact_vault/green_sheets/mcdonalds/current/McDonalds_Green-Sheet.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-29T16:03:32Z",
+      "generated_for": "jsmith",
+      "purpose": "Single-call preparation",
+      "path": "system/artifact_vault/green_sheets/mcdonalds/current/McDonalds_Green-Sheet.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-09-29T16:09:56Z",
+      "generated_for": "dev-verify-temp",
+      "purpose": "Single-call preparation",
+      "path": "system/artifact_vault/green_sheets/mcdonalds/current/McDonalds_Green-Sheet.md",
+      "superseded": false
+    }
+  ],
+  "data_owner_id": "todd"
+}

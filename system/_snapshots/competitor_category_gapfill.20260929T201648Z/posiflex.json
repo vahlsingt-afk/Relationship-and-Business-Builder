@@ -1,0 +1,64 @@
+{
+  "competitor_id": "comp-posiflex",
+  "competitor_slug": "posiflex",
+  "display_name": "Posiflex",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Posiflex has grown historically through acquisition, including KIOSK Information Systems (a self-service kiosk manufacturer) and Portwell (a specialty embedded-computing supplier), expanding its hardware portfolio beyond its original POS terminal line.",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-29T15:44:13Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:35Z",
+  "latest_cos_commentary": {
+    "headline": "Posiflex is a POS/self-service hardware manufacturer (GT Series, Mozart BT, Mercury/Cachet kiosks) that has grown via acquisition (KIOSK Information Systems, Portwell) and partners with software vendors like GRUBBRR and Restroworks for end-to-end deployments.",
+    "genius_exposure": "Competes at the hardware layer with Genius's own POS terminal and kiosk hardware, particularly in self-service kiosk and kitchen display form factors; operates a partner-ecosystem model (bundling with third-party software) rather than selling its own full software stack.",
+    "competitive_timing": "Active presence at industry trade shows (RetailNOW 2026) with a broadened hardware portfolio suggests continued investment in the self-service kiosk and restaurant hardware categories.",
+    "sales_response": "Posiflex is a hardware vendor that pairs with various software partners — if it's in a deal, identify which software layer (GRUBBRR, Restroworks, or another) is paired with it, since that combination, not Posiflex alone, determines the actual competitive product.",
+    "risk_and_uncertainty": "Exact dates of the KIOSK Information Systems and Portwell acquisitions were not independently re-verified in this research pass; no named restaurant customers or financial details were confirmed.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 72
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 72,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Named Customers",
+        "Pricing signals",
+        "Snapshot",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "named restaurant customer scope",
+        "current pricing",
+        "financial health"
+      ]
+    }
+  }
+}

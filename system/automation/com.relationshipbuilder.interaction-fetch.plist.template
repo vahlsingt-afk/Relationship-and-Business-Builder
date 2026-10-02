@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Template — do not edit directly. Run:
+      python3 system/scripts/launchagent_install.py
+  which substitutes the placeholder paths and writes the resolved plist to
+  ~/Library/LaunchAgents/com.relationshipbuilder.interaction-fetch.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.relationshipbuilder.interaction-fetch</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>__PYTHON__</string>
+        <string>__WRAPPER__</string>
+    </array>
+
+    <!-- Run three times daily: 6:30am, 12:30pm, 6:30pm local time -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Hour</key><integer>6</integer>
+            <key>Minute</key><integer>30</integer>
+        </dict>
+        <dict>
+            <key>Hour</key><integer>12</integer>
+            <key>Minute</key><integer>30</integer>
+        </dict>
+        <dict>
+            <key>Hour</key><integer>18</integer>
+            <key>Minute</key><integer>30</integer>
+        </dict>
+    </array>
+
+    <!-- Run once on load so the user sees data immediately -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- Log file paths -->
+    <key>StandardOutPath</key>
+    <string>__LOG_OUT__</string>
+    <key>StandardErrorPath</key>
+    <string>__LOG_ERR__</string>
+
+    <!-- Working directory so relative paths in scripts resolve -->
+    <key>WorkingDirectory</key>
+    <string>__PROJECT_DIR__</string>
+
+    <!-- Avoid swamping the system if the user is on battery and idle -->
+    <key>LowPriorityIO</key>
+    <true/>
+    <key>Nice</key>
+    <integer>5</integer>
+</dict>
+</plist>

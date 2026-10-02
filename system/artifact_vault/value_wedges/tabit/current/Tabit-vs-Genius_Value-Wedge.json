@@ -1,0 +1,62 @@
+{
+  "competitor_slug": "tabit",
+  "vendor_display_name": "Tabit",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [
+    "back_office",
+    "kitchen_drive_thru",
+    "pos",
+    "restaurant_os_platform"
+  ],
+  "circle1_genius_strengths": [
+    {
+      "category": "Back Office",
+      "point": "Enterprise labor scheduling (incl. Fair Workweek compliance US/CA), inventory \"down to the ounce,\" KPI dashboards, Mobile Manager app; POS/hardware-agnostic; Sysco and US Foods supplier integrations; Data Stream add-on for BI export",
+      "why_it_matters": "Source: https://www.globalpayments.com/point-of-sale/enterprise/back-office"
+    },
+    {
+      "category": "Back Office",
+      "point": "POS-agnostic claim widens addressable market beyond Genius POS",
+      "why_it_matters": "Source: https://www.globalpayments.com/point-of-sale/enterprise/back-office"
+    },
+    {
+      "category": "Back Office",
+      "point": "Included in CKE bundle",
+      "why_it_matters": "Source: https://investors.globalpayments.com/news-events/press-releases/detail/508/global-payments-announces-exclusive-agreement-with-cke"
+    },
+    {
+      "category": "Kitchen Drive Thru",
+      "point": "AI camera vehicle detection (car type/colour), unlimited-lane support, order-to-vehicle sync across linebusters/menu boards/handhelds, lane-level dashboards, headsets + cameras + cloud software stack",
+      "why_it_matters": "Source: https://www.globalpayments.com/en-gb/point-of-sale/enterprise/drive-thru"
+    },
+    {
+      "category": "Kitchen Drive Thru",
+      "point": "Integrated with POS/KDS/menu boards; in scope for CKE",
+      "why_it_matters": "Source: https://investors.globalpayments.com/news-events/press-releases/detail/508/global-payments-announces-exclusive-agreement-with-cke"
+    },
+    {
+      "category": "Kitchen Drive Thru",
+      "point": "Cortopassi: \"very broad success … drive-through and quick service restaurants\"",
+      "why_it_matters": "Source: https://www.fool.com/earnings/call-transcripts/2026/05/06/global-payments-gpn-q1-2026-earnings-transcript/"
+    },
+    {
+      "category": "POS",
+      "point": "\"One powerful, cloud-based platform\" unifying POS, kiosk, KDS, inventory, labor, payments for QSR, food-service management, and sports & entertainment venues; consolidation lets GPN \"extend our commerce technology to a broader set of customers … even if they do not have the scale of a typical enterprise customer\" (Terry Roberts)",
+      "why_it_matters": "Source: https://geniusforenterprise.com/home"
+    },
+    {
+      "category": "POS",
+      "point": "Momentum metrics: Genius bookings +25% sequentially in Q1 and again in Q2 2026, \"nearly doubled year-over-year\" (Q1); new Genius locations +50% YoY (Q2); new-customer yields +75% YoY",
+      "why_it_matters": "Source: https://geniusforenterprise.com/home"
+    },
+    {
+      "category": "POS",
+      "point": "Bundle breadth — CKE deal spans POS, kitchen, loyalty, reporting, drive-thru, menu boards, kiosks, payments, back office: \"We wanted a partner that could offer more capabilities as part of a single, integrated solution.\" (Ryan Mollenkopf, VP IT, CKE)",
+      "why_it_matters": "Source: https://investors.globalpayments.com/news-events/press-releases/detail/508/global-payments-announces-exclusive-agreement-with-cke"
+    }
+  ],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": []
+}

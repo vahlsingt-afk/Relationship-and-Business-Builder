@@ -1,0 +1,141 @@
+# personal_operating_system.yaml — RB Personal Operating System
+# ─────────────────────────────────────────────────────────────────────────────
+# Defines Todd's life domains, weekly energy allocation, and key commitments.
+# The daily brief uses this to surface a "Personal Operating System" section
+# that frames the week's energy across domains — not just career/opportunity.
+#
+# Edit this file to reflect your current season and priorities.
+# The brief will adapt accordingly.
+# ─────────────────────────────────────────────────────────────────────────────
+
+version: "1.2"
+last_updated: "2026-07-23"
+
+# ---------------------------------------------------------------------------
+# Current Season Note
+# ---------------------------------------------------------------------------
+# Active role: Account Executive, Genius / Global Payments Inc.
+# Current operating mode: live-role execution — meetings, account research,
+# pricing work, relationship context capture, and deal/account preparation.
+# BridgePoint Ops: wind-down only; no new engagements.
+# Foods Connected / legacy job-search loops: closed or passive only.
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# Life Domains
+# ---------------------------------------------------------------------------
+
+domains:
+
+  - id: role_onboarding
+    label: "GP Onboarding"
+    allocation: 25
+    description: "Operating in Account Executive role at Genius / Global Payments — enterprise restaurant vertical"
+    current_focus: "Live account execution: meetings, pricing, target-account research, stakeholder mapping, account strategy, and restaurant-tech/payment value framing"
+    active_commitments:
+      - "Keep meeting days prepared: agenda, desired outcome, account context, and follow-up path"
+      - "Complete Ikea pricing work and record assumptions before pricing discussions"
+      - "Build target-account research with stakeholder map, incumbent stack, likely pain, and next action"
+      - "Develop and refine 'software-funded payments' narrative tailored to CFO/VP-Tech buyers"
+      - "Identify Global Payments internal champions and restaurant vertical peers"
+    weekly_goal: "Advance live account execution daily: one prepared meeting, account research block, pricing deliverable, or internal relationship move"
+
+  - id: relationship_capital
+    label: "Relationship Capital"
+    allocation: 25
+    description: "Maintaining and deepening the professional network built over 35 years"
+    current_focus: "Role-supporting relationship capital — keep high-trust internal and restaurant-tech relationships current without letting stale historical loops clutter the day"
+    active_commitments:
+      - "Capture meaningful touches with Paul McCarthy, Jeff Wayman, Ryan Hildebrand, and other high-trust role-relevant contacts"
+      - "Reconnect with restaurant operator contacts only when tied to a concrete account, meeting, or useful signal"
+      - "Suppress or close historical job-search/advisory loops that no longer matter"
+    weekly_goal: "Keep relationship context current for the relationships that improve live account execution"
+
+  - id: thought_leadership
+    label: "Thought Leadership"
+    allocation: 25
+    description: "Publishing and establishing voice in restaurant-tech — now with enterprise credibility of a Global Payments role"
+    current_focus: "LinkedIn presence as restaurant domain expert entering payments — software-funded payments thesis, operator simplification narrative, AI-mirage positioning"
+    active_commitments:
+      - "Announce Global Payments move on LinkedIn with a thesis-forward framing"
+      - "Restaurant-tech consolidation thesis post (1,137+ signals accumulated)"
+      - "Establish cadence of 1 substantive post per week once role begins"
+    weekly_goal: "One substantive LinkedIn post per week minimum"
+
+  - id: bridgepoint_wind_down
+    label: "BridgePoint Wind-Down"
+    allocation: 10
+    description: "Orderly wind-down of BridgePoint Ops advisory practice — no new engagements"
+    current_focus: "Keep closed; ensure no old advisory obligations bleed into Global Payments role"
+    active_commitments:
+      - "Review any resurfaced BridgePoint commitments and close or suppress them if obsolete"
+      - "Confirm no conflict-of-interest issues with Global Payments engagement terms"
+    weekly_goal: "Keep BridgePoint obligations at zero active commitments"
+
+  - id: faith_ministry
+    label: "Faith & Ministry"
+    allocation: 10
+    description: "Personal faith practice and ministry commitments"
+    current_focus: "Active ministry commitments — protect this time as career transition creates pressure"
+    active_commitments: []
+    weekly_goal: "Honor scheduled commitments; protect this time — transition pressure is not a reason to skip"
+
+  - id: family
+    label: "Family"
+    allocation: 5
+    description: "Marriage, home, family relationships"
+    current_focus: "Protect family time during the transition window — role excitement should not crowd this out"
+    active_commitments: []
+    weekly_goal: "Intentional presence — especially important during high-energy transition periods"
+
+# ---------------------------------------------------------------------------
+# Weekly Rhythm
+# ---------------------------------------------------------------------------
+
+weekly_rhythm:
+  monday:
+    mode: "Attack"
+    intent: "Set the week. Advance the top pre-start preparation task and one relationship outreach."
+    priorities: ["review weekly plan", "target account research", "send transition outreach to 1-2 contacts"]
+
+  tuesday:
+    mode: "Execution"
+    intent: "Deepest work day. Long-form preparation, research, or writing."
+    priorities: ["target account mapping", "thought leadership content", "competitive landscape research"]
+
+  wednesday:
+    mode: "Execution"
+    intent: "Calls and meetings. Mid-week relationship checkpoint."
+    priorities: ["relationship outreach calls", "loop check", "BridgePoint wind-down tasks"]
+
+  thursday:
+    mode: "Close"
+    intent: "Push open items to resolution before end of week."
+    priorities: ["meetings", "pricing for Ikea", "account research"]
+
+  friday:
+    mode: "Review + Restore"
+    intent: "Assess the week. Prepare next week. Protect personal/family time after noon."
+    priorities: ["weekly scorecard review", "next-week plan draft", "relationship appreciation"]
+
+  saturday:
+    mode: "Restore"
+    intent: "Minimal professional activity. Faith, family, health."
+    priorities: ["faith", "family", "health"]
+
+  sunday:
+    mode: "Prepare"
+    intent: "Light re-entry. Review the week ahead. Protect morning for faith."
+    priorities: ["faith", "review Monday brief mentally", "prepare for Monday attack mode"]
+
+# ---------------------------------------------------------------------------
+# Operating Principles
+# ---------------------------------------------------------------------------
+
+operating_principles:
+  - "The Global Payments role is the primary commitment — all other activity supports or is subordinate to it."
+  - "No new BridgePoint engagements. Existing commitments close by 2026-07-01."
+  - "Transition outreach is relationship capital work, not career search — keep it genuine and brief."
+  - "LinkedIn content must be thesis-backed, not opinion-only. 2 external sources minimum."
+  - "Career transition should not crowd out faith, marriage, or health. Those are non-negotiable."
+  - "Every week ends with a scorecard. Busy ≠ productive."

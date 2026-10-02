@@ -1,0 +1,134 @@
+{
+  "_schema": "rb_account_dossier_v1",
+  "artifact_id": "account_dossier:global_payments",
+  "created_at": "2026-06-04",
+  "last_updated": "2026-07-27",
+  "entity": "Global Payments Inc.",
+  "summary": "Global Payments Inc. (NYSE: GPN) is a payment technology company. Restaurant division operates under the Genius brand (formerly Xenial). Genius provides POS, payments-adjacent restaurant platform capability, and operational technology to restaurant operators. Active RB interest has shifted from role pursuit to operating execution: Todd is now inside the Global Payments / Genius role and is building account intelligence with Worldpay relationship managers to defend/expand enterprise payment relationships.",
+  "opportunity_state": "active_role",
+  "opportunity_state_history": [
+    {"state": "role_exploration", "as_of": "2026-06-04", "evidence": "Mike Schwartz (LKI) thread; two open watchlist loops."},
+    {"state": "decision_stage", "as_of": "2026-06-09", "evidence": "Email from Christian Jackson (Senior Recruiter, e-HPS/Global Payments), subject 'Final Feedback- Sales Executive': 'I received final feedback from your interviews. Do you have time for a quick call tomorrow?' (gmail thread 19eaebc325e420ee, 2026-06-09T23:33:44Z). Corroborated same evening by SMS from Ryan Hildebrand (+12154509933): 'Christian Jackson from our team should be reaching out to you if she has not already' / 'Please call or text with any questions' (msg-201516/msg-201518, 2026-06-10T00:23-00:37Z)."}
+  ],
+  "key_contacts": [
+    {
+      "contact_id": "mike-schwartz",
+      "name": "Mike Schwartz",
+      "title": "Unknown — Genius/Xenial division",
+      "signal_class": "LKI",
+      "relationship": "Active role exploration contact. Open loops for Genius/Xenial rebrand and role status.",
+      "last_touch": null,
+      "loop_ids": [
+        "L-2026-05-08-007",
+        "L-2026-05-26-001"
+      ],
+      "aliases": {"emails": [], "phones": []}
+    },
+    {
+      "contact_id": "ryan-hildebrand",
+      "name": "Ryan Hildebrand",
+      "title": "Senior Director Account Executives",
+      "signal_class": "VC",
+      "relationship": "Global Payments HQ relationship. 2026-06-09/10: proactively coordinated recruiter (Christian Jackson) outreach by SMS — evidence of internal hiring-team engagement on the Sales Executive opportunity.",
+      "last_touch": "2026-06-10",
+      "loop_ids": [],
+      "aliases": {"emails": ["ryan.hildebrand1@yahoo.com"], "phones": ["+12154509933"]}
+    },
+    {
+      "contact_id": "maggie-benson",
+      "name": "Maggie Benson",
+      "title": "Worldpay account relationship contact — verify exact title",
+      "signal_class": "VC",
+      "relationship": "High-value account-hunting partner. July 2026 JPR calls linked Maggie to Dutch Bros, Del Taco/Yadav, Steak 'n Shake, LaRosa's, Church's, Golden Corral, and Graeter's account strategy. Use her portfolio as a recurring account-intelligence lane.",
+      "last_touch": "2026-07-22",
+      "loop_ids": [
+        "L-2026-07-23-004",
+        "L-2026-07-23-005",
+        "L-2026-07-23-006"
+      ],
+      "aliases": {"emails": [], "phones": []}
+    },
+    {
+      "contact_id": "stacey-davis-worldpay",
+      "name": "Stacey Davis",
+      "title": "Worldpay relationship manager — Starbucks, Domino's, Subway, Wendy's",
+      "signal_class": "VC",
+      "relationship": "Enterprise RM and account-intelligence source. 2026-07-23 JPR call surfaced Starbucks recovery path, Domino's 10-year renewal / Canada implementation, Subway global complexity, Wendy's active Genius/RFP signal, and need for concise Genius/Global education materials.",
+      "last_touch": "2026-07-23",
+      "loop_ids": [
+        "L-2026-07-24-002"
+      ],
+      "aliases": {"emails": [], "phones": []}
+    },
+    {
+      "contact_id": "tom-cheek",
+      "name": "Tom Cheek",
+      "title": "Restaurant Sales Executive",
+      "signal_class": "LMI",
+      "relationship": "Restaurant segment contact. LMI — not actively engaged.",
+      "last_touch": "2024-09-30",
+      "loop_ids": [],
+      "aliases": {"emails": [], "phones": []}
+    },
+    {
+      "contact_id": "christian-jackson-gpn",
+      "name": "Christian Jackson",
+      "title": "Senior Recruiter",
+      "signal_class": "VC",
+      "relationship": "Recruiter handling the Sales Executive opportunity. 2026-06-09: emailed final interview feedback and requested a follow-up call — the opportunity has reached decision stage.",
+      "last_touch": "2026-06-09",
+      "loop_ids": [],
+      "aliases": {"emails": ["cj77746@globalpayments.com", "christian.jackson@e-hps.com"], "phones": []}
+    }
+  ],
+  "intelligence": {
+    "rebrand_status": "Xenial rebranded to Genius under Global Payments Inc. restaurant division.",
+    "role_opportunity": "Resolved: Todd accepted the Global Payments / Genius role. The active opportunity is now execution inside the role, not hiring follow-up.",
+    "competitive_context": "Competes with PAR Technology / Brink, Toast, Qu, NCR Voyix, Shift4, Oracle Hospitality, and gateway/payment routing ecosystems. July 2026 Worldpay JPR calls sharpened the threat: Toast is coming upmarket to take POS + payments; PAR and Qu are using embedded payments, API fees, and data/CDP leverage; FreedomPay can be useful through Worldpay reseller economics but may add cost/complexity for restaurants.",
+    "watch_priority": "CRITICAL — active operating account-research lane.",
+    "jpr_account_intelligence_2026_07_23": {
+      "source_note": "system/account_intelligence/2026-07-23-jpr-worldpay-accounts.md",
+      "source_captures": [
+        "cap-ca1da04d58e6c383",
+        "cap-e6e16242730470c7"
+      ],
+      "strategic_read": "Worldpay relationship managers are the sensing layer for Genius account opportunity. Todd should help them identify account pain, payment-defense risk, gateway complexity, and product-fit openings without forcing a disconnected POS sales motion.",
+      "priority_accounts": {
+        "Campero": "Active Genius N lead from Dale McKee on 2026-07-27. Calendar-source intelligence: 127 U.S. locations, roughly half Aloha and half Oracle Simphony, migrating toward Oracle but open to Genius, Fiserv in-store processing, OLOPay/Stripe online, Valutec gift cards, $200MM+ annual card volume. Todd user context: Pollo Campero was a Punchh customer while Todd was at Punchh; Fernando Perez appears to be from a cold LinkedIn outreach campaign, not a NomadGo relationship path. Treat as a high-priority Oracle migration-intercept opportunity; source note system/account_intelligence/2026-07-27-campero-genius-lead.md.",
+        "Little Caesars": "High-value, long-cycle international Genius cultivation opportunity opened organically on 2026-07-30/31 after Little Caesars saw the Genius setup in the client experience center and asked about register/POS-to-back-office capabilities outside North America. Avery Churchwell owns the Worldpay relationship and reports roughly $6MM annual Worldpay revenue and strong customer engagement. Customer uses a homegrown POS; modular API-forward products may be the best initial wedge. India and Thailand illustrate price-sensitive markets. Separate consultant context suggests expensive FreedomPay kiosks predominantly in Spain, but geography, scope, and economics require verification. Little Caesars previously abandoned an Oracle one-stop exploration as too expensive. Todd owes Avery a short capabilities deck and supported-region map by 2026-08-03, followed by a warm consultative introduction if interest develops. Source note system/account_intelligence/2026-07-31-little-caesars-genius-international-opportunity.md.",
+        "Dutch Bros": "Design-partner candidate in Maggie's portfolio. Already using Genius; use joint Worldpay/Genius QBR or annual review to ask what would make Genius more enterprise-ready and whether direct Worldpay routing can reduce gateway cost/complexity.",
+        "Church's": "Feedback-recovery account. Prior Genius evaluation was rejected as a 'junior varsity platform.' Todd reached out to Jeff Caplin and received no response; use Maggie to confirm whether the Qu/Oracle decision is final before considering soft re-entry.",
+        "Choice Hotels": "Active gateway/acquiring RFP surfaced through Worldpay hospitality context. David Lee may be the key hospitality sales intelligence source.",
+        "IHG": "Recently signed / boarding in the next couple of months through the FreedomPay-relevant hospitality path.",
+        "GoTo Foods": "Moving through FreedomPay; map POS/gateway/acquirer economics.",
+        "Steak 'n Shake": "Moving through FreedomPay; map POS/gateway/acquirer economics.",
+        "Caribou Coffee": "Lost direct relationship/economics to Toast/payfac model even where traffic may remain on Worldpay rails; use as payment-defense lesson.",
+        "Firehouse": "Similar Toast/payfac direct-relationship loss signal.",
+        "Starbucks": "Worldpay recovery account; Chase commitment runs until November 2026; Worldpay positioned to win more U.S. volume and recently signed Canada as secondary/dual acquirer.",
+        "Domino's": "Strongest/tightest relationship in Stacey's book; 10-year U.S. renewal plus Canada implementation. Treat as relationship model/reference, not near-term displacement target.",
+        "Subway": "High-complexity global account with frequent leadership/contact churn and profitability pressure; watch for card-present/global acquiring gaps.",
+        "Wendy's": "Active Genius involvement and decision expected around end of July 2026; follow up after month-end."
+      }
+    }
+  },
+  "open_loops": [
+    "EL-2026-07-30-001: Deliver Little Caesars Genius capabilities/region deck to Avery Churchwell and cultivate a warm international discovery path.",
+    "L-2026-07-23-003: Complete Global Payments account research block.",
+    "L-2026-07-23-004: Set recurring Maggie / Worldpay account-hunting sync.",
+    "L-2026-07-23-005: Research Del Taco / Yadav Enterprises.",
+    "L-2026-07-23-006: Have Maggie confirm Church's Q/Oracle status; do not treat Jeff Caplin as an active call path without new response evidence.",
+    "L-2026-07-24-002: Send Stacey Davis concise Genius/Global education materials and set monthly enterprise RM check-in.",
+    "L-2026-07-24-003: Unblock Maggie/Nick Dutch Bros coordination and prepare Dutch Bros design-partner POV.",
+    "L-2026-07-27-001: Convert Campero Genius N lead into confirmed opportunity brief and merchant intro path."
+  ],
+  "next_actions": [
+    "For Little Caesars: build a concise register-to-back-office capabilities deck with a supported-country/region map by 2026-08-03; route it through Avery Churchwell and Bryan Bailey, then earn a warm consultative discovery conversation without forcing an early demo.",
+    "For Campero: use Dale McKee's 2026-07-27 lead to confirm Oracle migration timeline, decision owner, stack details, and merchant intro path; frame Genius around reducing migration risk and consolidating POS/payments complexity.",
+    "Answer the IKEA proposal question and send the Monica proposal today; this remains separate from the Worldpay account-research lane.",
+    "Call Jeff Wayman today; Jeff Caplin is not the call target.",
+    "Turn the July 23 Worldpay JPR findings into a prioritized account research table: account, RM owner, current stack, gateway/acquirer flow, pain signal, likely Genius wedge, next action.",
+    "For Stacey Davis: send high-level Genius/Global education materials and propose monthly check-in around Starbucks, Domino's, Subway, Wendy's.",
+    "For Maggie / Dutch Bros: coordinate Nick engagement and draft design-partner QBR/annual-review POV.",
+    "For Church's: have Maggie confirm Q/Oracle decision status before any new Genius re-entry motion."
+  ]
+}

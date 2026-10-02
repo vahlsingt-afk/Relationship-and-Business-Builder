@@ -1,0 +1,51 @@
+{
+  "competitor_id": "comp-crunchtime",
+  "competitor_slug": "crunchtime",
+  "display_name": "Crunchtime",
+  "aliases": [
+    "CrunchTime!"
+  ],
+  "vendor_entity_id": "vendor-crunchtime",
+  "primary_category": "labor_workforce",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:46:59Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:59Z",
+  "latest_cos_commentary": {
+    "headline": "Crunchtime is a major restaurant back-office/operations-management platform (inventory, scheduling, food safety, compliance) used by large chains including Chipotle, Culver's, Domino's, Dunkin', Five Guys and P.F. Chang's across 150,000+ locations, led by CEO John Raguin.",
+    "genius_exposure": "Directly competes on back_office and labor_workforce (inventory, scheduling, compliance, food safety) — a significant incumbent in enterprise restaurant back-office software.",
+    "competitive_timing": "April 2026 AI-capability launch (faster inventory counts, compliance auto-verification, natural-language data queries) shows active investment in AI differentiation. Note: a secondary search result referenced a 'recent merger with QSR Automations' expanding Crunchtime into kitchen automation and guest management, but no independently sourceable press release or filing confirming this specific transaction could be located in this pass — it should be treated as unverified, not fact, until confirmed in a follow-up research cycle.",
+    "sales_response": "Where Crunchtime is the incumbent back-office system at a large chain, expect deep integration across inventory, scheduling and compliance — displacement requires matching that breadth, not just a single-module comparison.",
+    "risk_and_uncertainty": "The claimed QSR Automations merger/kitchen-automation expansion could not be independently confirmed in this research pass — do not repeat as verified until sourced directly.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 24
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 24,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 1,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "verify reported QSR Automations merger/acquisition with a direct source",
+        "current ownership/investor structure"
+      ]
+    }
+  }
+}

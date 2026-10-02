@@ -1,0 +1,58 @@
+{
+  "competitor_id": "comp-harri",
+  "competitor_slug": "harri",
+  "display_name": "Harri",
+  "aliases": [],
+  "vendor_entity_id": "vendor-harri",
+  "primary_category": "labor_workforce",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "**Jack in the Box: all 2,112 US locations** rolled out in five months (completed Dec 1, 2025) across 70+ franchise organizations; integrates with **Qu, R365 and DnA** — \"make their lives easier\" (Doug Cook, CTO)",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:47:22Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-10-02T09:47:01Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:01Z",
+  "latest_cos_commentary": {
+    "headline": "Enterprise workforce incumbent limits the near-term labor wedge at Jack in the Box.",
+    "genius_exposure": "Enterprise workforce incumbent limits the near-term labor wedge at Jack in the Box.",
+    "competitive_timing": "Harri reported completion of workforce rollout across all 2,112 U.S. Jack in the Box locations by December 1, 2025, announced September 2026.",
+    "sales_response": "Confirm current operating results and integration boundaries with franchisees before proposing complementary tools.",
+    "risk_and_uncertainty": "Company-authored release reports completion; no independent store audit included.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 65
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 65,
+    "pack_claim_count": 10,
+    "pack_claims_with_url": 6,
+    "pack_claims_inherited_url": 5,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 4,
+      "legacy_claims_need_date_and_current_status_check": 10,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

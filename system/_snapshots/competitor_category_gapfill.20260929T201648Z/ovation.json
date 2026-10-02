@@ -1,0 +1,58 @@
+{
+  "competitor_id": "comp-ovation",
+  "competitor_slug": "ovation",
+  "display_name": "Ovation",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:35Z",
+  "latest_cos_commentary": {
+    "headline": "Ovation is a venture-backed ($9M+ total raised) guest-feedback and reputation platform used by multi-unit chains including Big Chicken, Mooyah, and Friendly's, notable for having raised a funding round directly from its own restaurant customers.",
+    "genius_exposure": "Adjacent to Genius's loyalty_engagement line via guest-sentiment capture and real-time service-recovery workflows; does not compete on POS or payments directly.",
+    "competitive_timing": "The unusual customer-funded raise ($3M from its own restaurant customers) signals a loyal, engaged customer base and could be a relevant talking point when discussing vendor stickiness in this category.",
+    "sales_response": "If Ovation is already deployed for guest feedback, treat it as a point solution that can sit alongside a Genius loyalty/engagement offering rather than assuming full displacement is required.",
+    "risk_and_uncertainty": "Exact dates and sequencing of Ovation's multiple funding rounds were not fully disambiguated across sources; current pricing and leadership team were not confirmed.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 70
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 70,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Pricing signals",
+        "Recent News / Product Updates",
+        "Snapshot",
+        "Strengths",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "current pricing",
+        "broader named customer scope",
+        "operator-specific ROI evidence"
+      ]
+    }
+  }
+}

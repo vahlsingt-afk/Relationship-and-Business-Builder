@@ -1,0 +1,60 @@
+{
+  "file_id": "cap-cc700ecc017788ee",
+  "queued_at": "2026-09-17T09:19:02+00:00",
+  "source_id": "just_press_record",
+  "source_label": "Just Press Record",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-16/12-03-08.m4a",
+  "capture_type": "meeting",
+  "title_hint": "Just Press Record \u2014 2026-09-16 12-03-08",
+  "transcription_method": "whisper_local",
+  "transcript": "I got. Well, I just started going over with the folks that logged in early just going over the completion. Matrix here and I think we gained 2.2% completion from yesterday to today. I think I showed you 20. The biggest the biggest need right now is the key asked portion. And so I might send out an email to the key asked folks and just make sure to light that fire and say, Hey, we, we got a lot of responses here that need to be, you know, double check and verified and added the installation and managed services piece is probably second most important. But we do have we do have some answers in there for the quality of piece. And they would just need like 50 of them double check. But we do need 48 responses. DMV is largely the one that's most completed. A lot of those responses came, you know, naturally in responsive. So you just need to basically double check a lot of those from that and we should be ready to go there. The functionality matrix. I'm working on some of the pieces with that too, but we only have three that we have questions on and I believe I have. I think Keith was looking for looking for looking at one with Mary and then the other two are on my plate, which I have reached out to other smis to get answers on those. So that's kind of where we stand at a grand total and I know we had a lot of price of meetings today and discussions on, you know, whittling that down and getting it where to go. Does anybody have any questions or anything regarding the completion or anything else? Because it's two different teams and you guys do it too, but do we want to break out K Austin KDS? That's not the only phone that 10, unless you guys are constantly keeping together. I don't really care. You're saying that you seem to be responsible there. Yeah. So I guess, yeah, I guess it really doesn't matter. It's only the hard work portion. So, okay. I know what about this plan. No, I plan after this meeting, I'll send up a bunch of emails. And we're going just saying, hey, let's make sure that is right after today. We have two days left. It's going to be a day and a half, ideally, to get it all done. So if, if you get done with putting in, make time, it has to be great. But maybe what I'll do is I'll send this whole picture snapshot to everybody and just saying, you know, here at the top, the top two things need to work on here the next day or so. Let's say that that, I don't have anything else new. I've been going through and cleaning things up and making sure that we get all the, you know, all this completion ready to go. And then just basically waiting on the pricing and then, and then we're golden. Questions, we're submitted yesterday. So I think they, I think somebody said they'll get those back tomorrow. So hoping to get answers on the two questions that we had. And then hopefully that will help too. Any questions? A quick question. I don't know if Mike asked for Brooks or whoever. We asked Brian Russell about the networks, which is getting cost for that or no. If not, I can, I can pick them up about that. I think that's one gap. That's well. No, we have not asked him that. Okay. I'll ping him. Mike and I'll see you on it. Already. Yeah, I'll say that. I don't have much news just keeping track of everything and, you know, I can send emails out this afternoon to let everyone know how many days we got left and, you know, what we're doing. We can do to nudge people to get things completed faster. And then I'll just edit as I go. Sounds good. Thank you, Scott. Yeah. Now there's a lot. Now there's a lot here. Appreciate everyone jumping in. And then I know, I know we want to get this done by Friday. I don't want to like incur bad luck. But if we need Monday and Tuesday. Yeah, I'm around. Scott. Okay. I'm not trying to win. So if I need to ping someone, we can. So, but hopefully we have it pretty much all done. And then you and I can kind of come through it and go through it one last time. That'll be the backup plan. Does ask your recovery plan. Yeah, yeah, yeah. So I don't want to rush it either. Yeah, we're trying to target that. So like, you know, I want to make sure everything is polished as possible. All right. Well, this is a short one, I think, but we all have plenty of meetings to go to. If anyone has any questions, reach out to me. I mean, I'm going through something and, you know, need my call on something. Feel free to reach out. If you need help with something, let me know. Again, if you're putting a content in, don't try and make it look fancy or, you know, I'll go through it and make sure that's clean. So. Sounds good. Thanks, Scott. Todd, I'll give you a call shortly. Yeah, sounds good. All right. Scott, I have one question. You got to go. Scott, everyone question on the on the kiosk car. Where? Yeah. Is Brian and him chiming on that? Or is this just my team doing this? I want to make sure we're not doubling up on that. I think I think it's just just your team. The key asked when the KDS folks. And just the strictly our grip age. The hard, right? Yeah, we're pricing that's, yeah, that's where that's where it's like on the ring and can jump in. I'll expand that a little bit. Okay, so we need to chime in on some of these. I see that. I'm sure we can. Okay, let me see what's going on here. Okay, thank you. Thanks, Scott. Thanks. Take care. Bye-bye. Bye-bye.",
+  "word_count": 1044,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-17T09:22:14+00:00",
+  "processing_result": {
+    "triage_stream_count": 3,
+    "noise_only": false,
+    "persisted_count": 3,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-17T09:19:02+00:00-017",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 3 trigger(s): left, reached out. Possible named subjects: So, Mary, And, Keith, Sounds, But."
+      },
+      {
+        "item_id": "INT-2026-09-17T09:19:02+00:00-018",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Macro/industry signal detected: 3 keyword hit(s) across categorie(s): vendor_tech. Key terms: kds, kiosk, pos."
+      },
+      {
+        "item_id": "INT-2026-09-17T09:19:02+00:00-019",
+        "intelligence_type": "strategic_memory",
+        "extracted_summary": "Strategic memory / thesis signal detected: 10 trigger(s): i believe, i think."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [
+        "Keith",
+        "Mary",
+        "Brian Russell",
+        "Scott",
+        "Mike"
+      ],
+      "companies_mentioned": [],
+      "topics": [
+        "completion matrix",
+        "key asked portion",
+        "functionality matrix",
+        "pricing discussions"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Scott: send out emails to key asked folks",
+        "Mike: ping Brian Russell about the networks cost"
+      ],
+      "why_it_matters": "The discussion focuses on project completion and key tasks that need to be addressed promptly."
+    }
+  }
+}

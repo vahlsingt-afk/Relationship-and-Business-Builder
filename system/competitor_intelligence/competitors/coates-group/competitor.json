@@ -1,0 +1,78 @@
+{
+  "competitor_id": "comp-coates-group",
+  "competitor_slug": "coates-group",
+  "display_name": "Coates Group",
+  "aliases": [],
+  "vendor_entity_id": "vendor-coates-group",
+  "primary_category": "drive_thru_ai",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "McDonald's global digital-menu-board CMS provider (5-year deal announced Aug 2022) and one of two approved hardware providers (with Acrelec) — \"one global provider that could deliver our digital CMS vision\" (Hashim Amin, McDonald's VP global product & engineering)",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:23:33Z"
+      },
+      {
+        "point": "50-year McDonald's relationship",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:33Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-10-02T09:47:01Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:01Z",
+  "latest_cos_commentary": {
+    "headline": "A relevant McDonald’s DMB incumbent and direct Genius DMB positioning benchmark.",
+    "genius_exposure": "A relevant McDonald’s DMB incumbent and direct Genius DMB positioning benchmark.",
+    "competitive_timing": "Coates still presents Switchboard CMS and indoor/outdoor QSR menu-board hardware; the McDonald’s global CMS selection in the pack dates to August 2022. Latest check: Coates reported receiving McDonald’s China’s 2025 Best Supplier Award at a 2026 supplier meeting.",
+    "sales_response": "Verify the 2022 contract’s current term, deployed site count, approved hardware scope and any second-source tests with McDonald’s.",
+    "risk_and_uncertainty": "Current site confirms product positioning, not the 2026 status or renewal date of the McDonald’s agreement. Supplier recognition confirms relationship but not present contract term or installed CMS footprint.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 19
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 19,
+    "pack_claim_count": 11,
+    "pack_claims_with_url": 8,
+    "pack_claims_inherited_url": 3,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 3,
+      "legacy_claims_need_date_and_current_status_check": 11,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

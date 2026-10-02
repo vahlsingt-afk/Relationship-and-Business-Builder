@@ -1,0 +1,76 @@
+{
+  "competitor_id": "comp-adjacent-kitchen-voice-players-brief",
+  "competitor_slug": "adjacent-kitchen-voice-players-brief",
+  "display_name": "Adjacent kitchen / voice players (brief)",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-26",
+  "last_synced_at": "2026-09-29T14:57:10Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:10Z",
+  "latest_cos_commentary": {
+    "headline": "Cross-reference brief, not an independent competitor organization.",
+    "genius_exposure": "Individual vendors in this brief are evaluated in their own rows.",
+    "competitive_timing": "No separate corporate event or product launch applies to this grouped note.",
+    "sales_response": "Use the Crunchtime/QSR Automations, Presto and Omilia rows for account-level comparisons; do not count this as a separate rival.",
+    "risk_and_uncertainty": "A grouped research note can double-count companies and distort threat rankings.",
+    "priority": "P3 taxonomy",
+    "status": "cross-reference / not a discrete entity",
+    "as_of_date": "2026-09-28",
+    "pack_order": 21
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 21,
+    "pack_claim_count": 5,
+    "pack_claims_with_url": 4,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Snapshot",
+        "Positioning",
+        "Strengths",
+        "Weaknesses / Vulnerabilities",
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Recent News / Product Updates",
+        "Named Customers"
+      ],
+      "unlinked_pack_claims": 1,
+      "legacy_claims_need_date_and_current_status_check": 5,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

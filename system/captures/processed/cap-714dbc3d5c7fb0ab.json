@@ -1,0 +1,77 @@
+{
+  "file_id": "cap-714dbc3d5c7fb0ab",
+  "queued_at": "2026-09-30T09:19:34+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-29_1906_all-gravy-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-29_1906_all-gravy-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260929-1906-all-gravy-validation`\n- Research system: `Codex web research`\n- Started at: `2026-09-29 19:06 CDT`\n- Completed at: `2026-09-29 19:09 CDT`\n- Research scope: Validate four first-party All Gravy customer pages for named restaurant deployments, product scope, rollout status, and operating limitations.\n- Queue item or vendor: `competitor:all-gravy`\n- Methodology: First-party customer-page validation with enterprise-versus-pilot scope, operator-group identity, outcome-causality, and recency boundaries preserved. The homepage and resource index were used only for discovery.\n\n## Executive result\n\n- Pages reviewed: 6\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 4\n- Company/competitor profile observations added or revised: 0\n- Conflicts found: 3\n- Material takeaway: All Gravy publishes named restaurant evidence for Mildreds, The DRG, Wok to Walk, and Honest Burgers across frontline communication, learning, onboarding, compliance, knowledge access, and AI-assisted employee support. Three pages describe broad organizational use; Wok to Walk is explicitly a selected-location test with a global-rollout goal, so its 100-plus-site footprint must not be recorded as a completed deployment.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: Mildreds\n- Vendor: All Gravy\n- Product or category: Employee communication, learning management, onboarding, compliance training, chat, and AI-assisted employee Q&A and quiz creation\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: customer story\n- Confidence: 90%\n- Confidence rationale: All Gravy's named customer page identifies Mildreds' Head of People & Vibe, states a 250-plus-employee scale, and describes concrete company-wide workflows and outcomes.\n- Source title: Mildred's case study: how they run their teams on All Gravy\n- Source URL: https://www.allgravy.com/cases/mildreds\n- Publisher or source owner: All Gravy\n- Published date, if known: Undated\n- Accessed date: 2026-09-29\n- Exact supporting excerpt or faithful factual note: Mildreds moved from a clunky, email-heavy toolset to one All Gravy app combining communication, LMS, and the employee starting journey; the page says compliance training that previously took days or weeks can be completed in hours, while an AI assistant answers questions and builds quizzes.\n- Product-specific evidence: Communication and recognition feeds, chat, onboarding, LMS, compliance learning, AI answers, and AI-generated quizzes are explicit.\n- Conflicting or limiting evidence: The source is vendor-authored and undated. It does not state the number of locations, implementation date, contract scope, or independent measurement of the reported time savings.\n- Recommended follow-up: Confirm current deployment scope and connected HR, payroll, or scheduling systems in a Mildreds-controlled source.\n\n### Observation 2\n\n- Brand: The DRG\n- Vendor: All Gravy\n- Product or category: Frontline employee communication and learning platform\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: customer story\n- Confidence: 90%\n- Confidence rationale: The page names The DRG's Head of People, gives a 1,500-employee scale, and describes consolidated communication and training use across a growing multi-brand restaurant group.\n- Source title: The DRG case study: how they run their teams on All Gravy\n- Source URL: https://www.allgravy.com/cases/the-drg\n- Publisher or source owner: All Gravy\n- Published date, if known: Undated\n- Accessed date: 2026-09-29\n- Exact supporting excerpt or faithful factual note: The DRG replaced a platform that suffered login, training-discovery, communication, and engagement problems with an All Gravy app combining messaging-style communication and short-video training in one place.\n- Product-specific evidence: Internal communication, short-form learning, engagement, and vendor-supported feature development are explicit.\n- Conflicting or limiting evidence: The DRG is a restaurant operator group rather than a single consumer brand. The vendor-authored page does not name the included brands, locations, rollout date, or quantitative engagement measures.\n- Recommended follow-up: Map The DRG's current restaurant brands and confirm whether every brand and location uses the same All Gravy tenant and modules.\n\n### Observation 3\n\n- Brand: Wok to Walk\n- Vendor: All Gravy\n- Product or category: Frontline operational updates, structured onboarding, training refreshers, and manager/HQ completion visibility\n- Relationship indication: pilot\n- Deployment scope: pilot\n- Evidence type: customer story\n- Confidence: 95%\n- Confidence rationale: The named page quotes Wok to Walk's COO and explicitly says the company is testing All Gravy at a selected number of locations while considering a global rollout.\n- Source title: Wok to Walk case study: how they run their teams on All Gravy\n- Source URL: https://www.allgravy.com/cases/wok-to-walk\n- Publisher or source owner: All Gravy\n- Published date, if known: Undated\n- Accessed date: 2026-09-29\n- Exact supporting excerpt or faithful factual note: Wok to Walk is testing All Gravy at selected locations for operational updates, repeatable onboarding, training refreshers, and manager/HQ visibility; the page presents 500-plus employees and more than 100 restaurants as the intended connected footprint and alignment goal.\n- Product-specific evidence: Central operational updates, structured onboarding, training refreshers, and completion visibility are explicit.\n- Conflicting or limiting evidence: The page also uses rollout language, but its clearest status statement says selected-location testing and a hoped-for global rollout. The 500-plus-employee and 100-plus-restaurant figures therefore describe a target or company footprint, not a verified completed deployment.\n- Recommended follow-up: Confirm pilot locations, go-live date, evaluation criteria, and whether a global rollout was approved or completed.\n\n### Observation 4\n\n- Brand: Honest Burgers\n- Vendor: All Gravy\n- Product or category: Unified employee communication, knowledge and resources, onboarding, AI-assisted answers, and work-life-boundary controls\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: customer story\n- Confidence: 95%\n- Confidence rationale: All Gravy's customer page names Honest Burgers' Head of Restaurant Systems, states a 400-employee scale, and describes daily use and whole-team onboarding and engagement.\n- Source title: Honest Burgers case study: how they run their teams on All Gravy\n- Source URL: https://www.allgravy.com/cases/honest-burgers\n- Publisher or source owner: All Gravy\n- Published date, if known: Undated\n- Accessed date: 2026-09-29\n- Exact supporting excerpt or faithful factual note: Honest Burgers replaced a seven-tool employee experience and the sunsetting Workplace by Meta with one All Gravy app for communication, knowledge, resources, onboarding, and AI-powered answers; the page says the team engages with it daily.\n- Product-specific evidence: Communication, knowledge access, resources, onboarding, AI answers, and controls supporting off-hours disconnection are explicit.\n- Conflicting or limiting evidence: The source is vendor-authored and undated. It does not state location count, implementation date, adoption percentage, which seven tools were displaced, or whether every listed capability is used at every site.\n- Recommended follow-up: Confirm current location coverage, integrations, displaced systems, and adoption metrics from an Honest Burgers-controlled source.\n\n## Negative findings\n\n- Candidate or claim: Wok to Walk has completed an All Gravy rollout across more than 100 restaurants and 500-plus employees.\n- Pages checked: https://www.allgravy.com/cases/wok-to-walk\n- Result: The page explicitly says Wok to Walk is testing All Gravy at a selected number of locations and is looking to roll it out globally. The larger figures are treated as company scale or rollout goals, not completed deployment evidence.\n\n- Candidate or claim: All Gravy is a restaurant POS, payments, ordering, or loyalty system.\n- Pages checked: All Gravy homepage, resource index, and the four customer pages.\n- Result: The reviewed pages support employee communication, learning, onboarding, compliance, knowledge, and AI-assisted workforce workflows. They do not establish All Gravy as a transaction-system vendor.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://www.allgravy.com/ | Product and customer overview | 2026-09-29 | Discovery only | Used to locate customer stories and understand product positioning; broad scale claims were not promoted as deployment facts. |\n| https://www.allgravy.com/resources | Customer-story index | 2026-09-29 | Discovery only | Used to select four named restaurant pages; summaries were not treated as independent corroboration. |\n| https://www.allgravy.com/cases/mildreds | Customer story | 2026-09-29 | 1 | Named 250-plus-employee restaurant deployment; vendor-authored and undated. |\n| https://www.allgravy.com/cases/the-drg | Customer story | 2026-09-29 | 2 | Named 1,500-employee multi-brand operator use; brands and rollout measures undisclosed. |\n| https://www.allgravy.com/cases/wok-to-walk | Customer story | 2026-09-29 | 3 | Explicit selected-location test; global footprint is a goal rather than completed scope. |\n| https://www.allgravy.com/cases/honest-burgers | Customer story | 2026-09-29 | 4 | Named 400-employee use with concrete modules; vendor-authored and undated. |\n\n## Research notes and inferences\n\n- Inference: All Gravy competes in the hospitality frontline-employee experience layer rather than in core restaurant transaction systems.\n- Inference: The customer evidence is strongest for communication, onboarding, learning, and knowledge access; AI capability claims are product-specific but still vendor-authored and lack independent outcome validation.\n- Review instruction: Preserve Wok to Walk as a pilot until a later source proves broader deployment, and keep The DRG as an operator-group relationship unless its individual restaurant brands are explicitly mapped.",
+  "word_count": 1428,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-30T09:20:44+00:00",
+  "processing_result": {
+    "triage_stream_count": 4,
+    "noise_only": false,
+    "persisted_count": 4,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-30T09:19:34+00:00-024",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 9 trigger(s): named, promoted. Possible named subjects: Named, All Gravy, Mildreds, Material, Head, Wok."
+      },
+      {
+        "item_id": "INT-2026-09-30T09:19:34+00:00-025",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-30T09:19:34+00:00-026",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Macro/industry signal detected: 16 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: competitor, consumer, customer, deployment, enterprise, hospitality, integration, loyalty."
+      },
+      {
+        "item_id": "INT-2026-09-30T09:19:34+00:00-027",
+        "intelligence_type": "strategic_memory",
+        "extracted_summary": "Strategic memory / thesis signal detected: 1 trigger(s): positioning."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "All Gravy",
+        "Mildreds",
+        "The DRG",
+        "Wok to Walk",
+        "Honest Burgers"
+      ],
+      "topics": [
+        "customer page validation",
+        "employee communication",
+        "learning management",
+        "onboarding"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Confirm current deployment scope and connected HR, payroll, or scheduling systems in a Mildreds-controlled source.",
+        "Map The DRG's current restaurant brands and confirm whether every brand and location uses the same All Gravy tenant and modules.",
+        "Confirm pilot locations, go-live date, evaluation criteria, and whether a global rollout was approved or completed.",
+        "Confirm current location coverage, integrations, displaced systems, and adoption metrics from an Honest Burgers-controlled source."
+      ],
+      "why_it_matters": "The validation of customer pages for All Gravy provides insights into their deployment and operational effectiveness in the restaurant industry."
+    },
+    "structured_import_reconciled": true,
+    "structured_import_packet_id": "dr-20260929-1906-all-gravy-validation",
+    "structured_import_applied": 4,
+    "structured_import_deduped": 0,
+    "structured_import_queued": 0,
+    "structured_import_rejected": 0,
+    "canonical_targets_changed": [
+      "competitor:all-gravy"
+    ],
+    "canonical_mutation_statement": "4 structured finding(s) applied to canonical record(s) for: competitor:all-gravy."
+  }
+}

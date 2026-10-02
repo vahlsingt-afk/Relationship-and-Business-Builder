@@ -1,0 +1,47 @@
+{
+  "account_id": "acct-subway",
+  "identity_ownership_footprint": [
+    {
+      "category": "footprint",
+      "value": "More than 35,000 locations worldwide; RFP planning ceiling up to 5,000 U.S. restaurants.",
+      "strategic_implication": "Large potential program; rollout and operator economics must be tested.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-09-15"
+    }
+  ],
+  "technology_payment_landscape": {
+    "ref": "See technology_stack in account.json.",
+    "highlights": []
+  },
+  "relationship_history": [
+    {
+      "category": "worldpay_relationship",
+      "value": "September 15 internal Worldpay call identifies Stacey as Subway relationship manager; team had just learned of RFP and seeks joint alignment.",
+      "strategic_implication": "Use one internal account posture while respecting RFP contact rules.",
+      "status": "reported",
+      "confidence": "medium",
+      "as_of": "2026-09-15"
+    }
+  ],
+  "opportunities": {
+    "active": [
+      "opp-subway-na-connected-restaurant-rfp"
+    ],
+    "historical": [],
+    "parked": []
+  },
+  "known_contradictions": [
+    "RFP workbook cites approximately 25 stores in 2026 in Market Coverage and approximately 200 in its instructions."
+  ],
+  "open_questions": [
+    "Who funds store-level investment?",
+    "What is Worldpay’s current Subway relationship status and payment footprint?",
+    "What kiosk-to-SPOS delivery path is feasible?",
+    "What rollout capacity is credible?"
+  ],
+  "freshness": {
+    "last_updated": "2026-09-15",
+    "next_scheduled_review": "Before September 22 RFP submission"
+  }
+}

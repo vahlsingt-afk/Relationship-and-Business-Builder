@@ -1,0 +1,665 @@
+{
+  "portfolio_status": "research_stage",
+  "opportunities": [
+    {
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "name": "Second-Source DMB / POS Hardware Optionality / Drive-Thru Timer Wedge",
+      "workstreams": [
+        "digital_menu_boards",
+        "pos_hardware",
+        "drive_thru_timer"
+      ],
+      "stage": "Pre-discovery -- pressure-testing thesis privately before a broader McDonald's motion",
+      "single_sales_objective": {
+        "value": "Secure a McDonald's-sponsored evaluation of one realistic Global Payments/Genius wedge in the core restaurant environment -- second-source DMB as the lead path, POS hardware optionality second, camera-based drive-thru timer third -- without forcing a core-platform replacement conversation.",
+        "status": "confirmed",
+        "evidence_ids": [
+          "ev-mcdonalds-0001"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-06",
+        "scope": "opportunity:opp-mcdonalds-dmb-hardware-timer",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "customer_stated_objective": {
+        "value": "Not yet directly McDonald's-stated -- inferred from public Q2 2026 signals: management frames the U.S. miss as an execution problem, is prioritizing practical execution/reliability/franchisee value over broad re-platforming, and is investing in Edge/Google Cloud platform consistency.",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0004"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-04",
+        "scope": "opportunity:opp-mcdonalds-dmb-hardware-timer",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "commercial_hypothesis": {
+        "value": "unknown -- no pricing/commercial model has been proposed or validated for this opportunity yet.",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "opportunity:opp-mcdonalds-dmb-hardware-timer",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    }
+  ],
+  "qualification": {
+    "criteria": [
+      {
+        "answer": "Account potential",
+        "current_read": "Exceptional",
+        "next_step": "Use Jeff Coffland / Bruce Sellnow pressure-testing to identify who owns each of the three approval paths"
+      },
+      {
+        "answer": "Strategic fit",
+        "current_read": "High for second-source DMB, approved POS hardware, and camera-based drive-thru timing",
+        "next_step": "Validate McDonald's ownership and proof requirements for each path"
+      },
+      {
+        "answer": "Champion coverage",
+        "current_read": "Not yet established -- Bruce Sellnow is the strongest coach candidate",
+        "next_step": "Develop Amanda Thomas, Mike Skog, or an operations leader into a champion after discovery establishes problem ownership"
+      }
+    ]
+  },
+  "strategic_position": {
+    "euphoria_panic": {
+      "current_state": {
+        "value": "Actively pressure-testing a pre-discovery thesis privately -- not yet in front of McDonald's.",
+        "status": "confirmed",
+        "evidence_ids": [
+          "ev-mcdonalds-0001"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-06",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "reason": {
+        "value": "CosMc's closure could be misread as a signal against Global Payments/Genius if not proactively reframed as ecosystem-familiarity proof, not failure.",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0001"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "timing": {
+        "value": "August-September 2026 window -- validate DMB/hardware ownership and proof requirements before McDonald's locks its next public narrative at Investor Day.",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0004"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-04",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    },
+    "competition": {
+      "value": "Coates (global DMB CMS + approved DMB hardware), NCR and PAR (domestic POS hardware -- NCR the weaker incumbent per field intelligence), installed loop-detector vendors for drive-thru timing.",
+      "status": "reported",
+      "evidence_ids": [
+        "ev-mcdonalds-0003"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-08-03",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    "position": {
+      "place_in_funnel": "Pre-discovery -- pressure-testing thesis with trusted contacts before a McDonald's-facing conversation",
+      "customer_priority": "Not yet confirmed -- inferred execution/reliability/supplier-risk priority from public Q2 signals, not McDonald's-stated",
+      "critical_test": "Identify who owns DMB second-source evaluation, POS hardware approval, and drive-thru timing standards, and what proof each requires",
+      "position_vs_competition": {
+        "value": "Not yet engaged directly -- CosMc's gives ecosystem-familiarity credibility, not core-estate proof.",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0001"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "immediate_move": "Reactivate Jeff Coffland on supplier-qualification process; pressure-test thesis with Bruce Sellnow"
+    },
+    "strengths": [
+      {
+        "value": "CosMc's publicly confirms Global Payments was selected via a comprehensive process across 4 restaurant-tech domains",
+        "possible_action": "Use as ecosystem-familiarity proof, not core-estate readiness proof",
+        "best_action_plan": "Build the CosMc's proof package (contracted scope, deployment evidence, uptime, support model) before any broader McDonald's meeting",
+        "owner": "Todd Vahlsing",
+        "target": "Aug-Sep 2026"
+      },
+      {
+        "value": "McDonald's is single-sourced on U.S. drive-thru DMB, with field intelligence that the incumbent (Coates) rollout is struggling",
+        "possible_action": "Lead with second-source DMB as the primary wedge",
+        "best_action_plan": "Confirm who owns DMB supplier-risk evaluation",
+        "owner": "Todd Vahlsing",
+        "target": "Week 2"
+      },
+      {
+        "value": "Dual domestic POS hardware sourcing (PAR, NCR) with meaningful reported dissatisfaction around NCR",
+        "possible_action": "Position approved hardware optionality as the second wedge",
+        "best_action_plan": "Validate whether NCR dissatisfaction is actionable and ties to uptime/service",
+        "owner": "Todd Vahlsing",
+        "target": "Week 2"
+      },
+      {
+        "value": "Camera-based drive-thru timer has real CosMc's production history and can be evaluated against the loop-detector baseline without touching NEWPOS",
+        "possible_action": "Position as a third, contained approval path",
+        "best_action_plan": "Assemble camera-timer performance evidence (accuracy, day/night, privacy/security)",
+        "owner": "Todd Vahlsing",
+        "target": "Days 31-90"
+      }
+    ],
+    "red_flags": [
+      {
+        "value": "CosMc's closure could be interpreted as a technology failure",
+        "possible_action": "Reframe proactively",
+        "best_action_plan": "Lead with documented performance and internal McDonald's validation; separate concept outcome from technology evidence",
+        "owner": "Todd Vahlsing",
+        "target": "Ongoing"
+      },
+      {
+        "value": "\"Proven\" language could exceed the actual evidence",
+        "possible_action": "Use precise language",
+        "best_action_plan": "Say competitively selected and proven in the ecosystem/production, not proven globally",
+        "owner": "Todd Vahlsing",
+        "target": "Ongoing"
+      },
+      {
+        "value": "A core-POS-framed pitch could trigger platform resistance",
+        "possible_action": "Lead with modular framing",
+        "best_action_plan": "Lead with a modular use case and coexistence architecture, never core-platform replacement",
+        "owner": "Todd Vahlsing",
+        "target": "Ongoing"
+      },
+      {
+        "value": "Corporate interest without franchisee/operator buy-in, especially amid real NOA-reported cash-flow pressure",
+        "possible_action": "Build restaurant-level economics",
+        "best_action_plan": "Include an owner/operator validator early; frame any wedge on capital efficiency and lifecycle cost, not capability alone",
+        "owner": "Todd Vahlsing",
+        "target": "Ongoing"
+      },
+      {
+        "value": "Existing suppliers (Coates, NCR, PAR) could mobilize against Genius once aware of the approach",
+        "possible_action": "Scope outreach carefully",
+        "best_action_plan": "Identify the integration/partner posture before broad outreach",
+        "owner": "Todd Vahlsing",
+        "target": "Before Week 3"
+      }
+    ]
+  },
+  "buying_influences": [
+    {
+      "name": "Bruce Sellnow",
+      "title": "McDonald's, Strategic Technology Integration Manager",
+      "location": null,
+      "role_etuc": {
+        "value": "Coach (technical)",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High -- RC inner circle, direct McDonald's seat",
+      "mode": {
+        "value": "Trusted informal advisor",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown -- to be tested in the first conversation",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Unknown",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": "Strongest coach candidate -- not yet a confirmed champion",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Strongest combination of trust, direct McDonald's seat, and technology-integration relevance",
+      "access": "Direct -- RC inner-circle relationship",
+      "next_step": "Pressure-test the thesis privately; ask where it's naive and who the right first sponsor is",
+      "owner": "Todd Vahlsing"
+    },
+    {
+      "name": "Jeff Coffland",
+      "title": "McDonald's, Senior Supplier Manager",
+      "location": null,
+      "role_etuc": {
+        "value": "Coach (supplier process / gatekeeper)",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0007"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-11",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High -- RC inner circle",
+      "mode": {
+        "value": "Reactivated relationship; call-based",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0007"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-11",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Wants a routing/reference product package he can use to reconnect insiders to today's Genius portfolio",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0007"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-11",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Can route to Justine Power and CosMc's/Xenial-familiar McDonald's insiders",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": "Real, working relationship -- confirmed via a real 2026-08-11 call, not yet a champion",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0007"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-11",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Can explain qualification, procurement, sponsorship, and incumbent dynamics",
+      "access": "Direct -- real call held 2026-08-11",
+      "next_step": "Send the product-lineage package; receive Justine Power introduction",
+      "owner": "Todd Vahlsing"
+    },
+    {
+      "name": "David Lee",
+      "title": "Global Payments, Sr. Sales Executive, Enterprise N.A., Hospitality",
+      "location": null,
+      "role_etuc": {
+        "value": "Internal enablement reviewer (not McDonald's-side)",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "Medium -- internal Global Payments sounding board",
+      "mode": {
+        "value": "Internal review",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Unknown",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": "Identified in a real JPR call as a useful internal sounding board",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0001"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Can pressure-test whether the camera-timer story and RM enablement motion are usable by Worldpay relationship managers",
+      "access": "Direct -- internal Global Payments colleague",
+      "next_step": "Review the McDonald's timer wedge and RM enablement brief before external outreach",
+      "owner": "Todd Vahlsing"
+    },
+    {
+      "name": "Dave Richards",
+      "title": "Logic Controls, VP Enterprise Accounts",
+      "location": null,
+      "role_etuc": {
+        "value": "Coach (hardware / account-strategy)",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High -- RC inner circle, former PAR",
+      "mode": {
+        "value": "Trusted long-standing relationship",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Unknown",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": "Deep McDonald's-account history and current hardware perspective",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Deep McDonald's-account history and current hardware perspective",
+      "access": "Direct -- RC inner-circle relationship",
+      "next_step": "Test the hardware/certification and incumbent-coexistence assumptions",
+      "owner": "Todd Vahlsing"
+    },
+    {
+      "name": "Amanda Thomas",
+      "title": "McDonald's, Operations Technology Manager",
+      "location": null,
+      "role_etuc": {
+        "value": "Potential validator / future champion",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "Medium -- relevant role, relationship stale (last touch 2024-09-06)",
+      "mode": {
+        "value": "Warm reintroduction needed",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Unknown",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": "Relevant role, not yet champion-grade -- relationship needs reactivation",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Relevant role, but relationship is stale and not yet champion-grade",
+      "access": "Indirect -- needs warm reintroduction after Bruce validates the thesis",
+      "next_step": "Seek warm reintroduction; ask for operational discovery, not sponsorship",
+      "owner": "Todd Vahlsing"
+    },
+    {
+      "name": "Mike Skog",
+      "title": "McDonald's, Manager - Infrastructure Hardware",
+      "location": null,
+      "role_etuc": {
+        "value": "Hardware architecture / certification validator",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "Medium -- best relevant LKI for infrastructure fit",
+      "mode": {
+        "value": "No direct relationship yet",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Unknown",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": "Best relevant LKI for infrastructure fit (last touch 2025-11-27)",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-mcdonalds-0005"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-03",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Best relevant LKI for infrastructure fit",
+      "access": "Indirect -- confirm via Bruce, Dave, or Jeff whether he is the correct early technical reviewer",
+      "next_step": "Do not approach directly until routed by a coach",
+      "owner": "Todd Vahlsing"
+    }
+  ],
+  "technology_stack": [
+    {
+      "layer": "Core POS / NEWPOS",
+      "vendor": "NEWPOS (McDonald's-owned platform); Capgemini embedded post-sale",
+      "current_state": "Deeply embedded U.S. platform, protected by years of operating process and Edge/platform investment",
+      "confidence": "high",
+      "status": "Confirmed"
+    },
+    {
+      "layer": "Drive-thru DMB",
+      "vendor": "Coates (global DMB CMS + approved DMB hardware)",
+      "current_state": "Single-sourced in the U.S.; field intelligence indicates rollout pain -- unvalidated",
+      "confidence": "medium",
+      "status": "Verify"
+    },
+    {
+      "layer": "POS Hardware",
+      "vendor": "PAR and NCR (dual domestic sources)",
+      "current_state": "NCR dissatisfaction reported as meaningful; HP globally approved, implications not yet understood",
+      "confidence": "medium",
+      "status": "Verify"
+    },
+    {
+      "layer": "DMB Architecture / Media Player",
+      "vendor": "unknown",
+      "current_state": "Genius may be able to power DMB without a separate media player -- not yet validated for McDonald's",
+      "confidence": "low",
+      "status": "Open"
+    },
+    {
+      "layer": "Drive-thru Timer / Vehicle Detection",
+      "vendor": "Loop-detector systems (incumbent)",
+      "current_state": "Predominant McDonald's timing baseline per field assessment; camera-based alternative not yet evaluated",
+      "confidence": "medium",
+      "status": "Verify"
+    },
+    {
+      "layer": "Kiosks / Mobile / Loyalty",
+      "vendor": "McDonald's-owned customer platform; Mastercard/SessionM/Test & Learn referenced publicly",
+      "current_state": "Global standardization underway; loyalty is McDonald's-owned -- out of scope for Genius pursuit",
+      "confidence": "medium",
+      "status": "Confirmed"
+    },
+    {
+      "layer": "Back Office / Workforce",
+      "vendor": "QSRSoft (back office); Harri (workforce)",
+      "current_state": "Field assessment: QSRSoft entrenched in domestic U.S. back office for cash, inventory, reporting",
+      "confidence": "medium",
+      "status": "Verify"
+    },
+    {
+      "layer": "Edge / Cloud / AI Platform",
+      "vendor": "Google Cloud / Edge",
+      "current_state": "Strategic investment; restaurant connectivity, AI, IoT, operational intelligence, live in hundreds of U.S. restaurants",
+      "confidence": "high",
+      "status": "Confirmed"
+    },
+    {
+      "layer": "Payments",
+      "vendor": "Market/relationship-dependent",
+      "current_state": "Global Payments relationship creates relevance but no confirmed McDonald's core payments wedge",
+      "confidence": "low",
+      "status": "Open"
+    }
+  ],
+  "commercial_models": [],
+  "latest_review": {
+    "blue_sheet_owner": "Todd Vahlsing",
+    "last_reviewed": "2026-08-27",
+    "core_contributors": "Todd Vahlsing",
+    "review_status": "Initial build from real account_intelligence corpus",
+    "current_critical_test": "Identify who owns DMB second-source evaluation, POS hardware approval, and drive-thru timing standards",
+    "next_formal_review": "After first pressure-test conversations with Bruce Sellnow / Jeff Coffland"
+  },
+  "bottom_line": "Global Payments/Genius should not approach McDonald's as a broad platform-replacement opportunity. The realistic path is a narrow, operational wedge -- second-source DMB, approved POS hardware optionality, and camera-based drive-thru timing -- that helps McDonald's reduce supplier risk and improve U.S. execution without challenging its core strategy. CosMc's is credibility proof, not a claim that the core estate should move.",
+  "account_id": "acct-mcdonalds",
+  "account_slug": "mcdonalds",
+  "display_name": "McDonald's",
+  "aliases": [
+    "McDonald's Corporation",
+    "McDonald's USA",
+    "McDonalds"
+  ],
+  "owners": [
+    {
+      "name": "Todd Vahlsing",
+      "role": "account_owner"
+    }
+  ],
+  "brand_profile_ref": "brand_profile.json",
+  "updated_at": "2026-08-27T20:44:51Z",
+  "template_version": "blue-sheet-v1"
+}

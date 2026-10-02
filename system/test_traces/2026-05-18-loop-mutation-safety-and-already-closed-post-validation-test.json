@@ -1,0 +1,55 @@
+{
+  "title": "Loop mutation safety and already-closed post-validation test",
+  "trace_type": "loop_mutation_safety_test",
+  "source": "chatgpt_relationship_bridge_9_0",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-18",
+  "session_id": "rb-loop-close-validation-2026-05-18",
+  "summary": "User asked to close loop L-2026-05-08-017 because the CRM pipeline state was updated, then show updated loops and confirm it no longer appeared overdue. closeLoop returned an already-closed/id-not-found error, but a subsequent getLoops post-validation confirmed the desired final state: L-2026-05-08-017 was closed and absent from the overdue bucket.",
+  "observed_issue": null,
+  "steps": [
+    {
+      "step": 1,
+      "label": "User requested loop close mutation",
+      "timestamp": null,
+      "user_prompt": "Close loop L-2026-05-08-017 because I updated the CRM pipeline state. After closing it, show me the updated loops summary and confirm it no longer appears overdue.",
+      "assistant_response": "Assistant called closeLoop with id L-2026-05-08-017 and reason 'CRM pipeline state updated by Todd on 2026-05-18.'",
+      "intended_operation": "Close loop L-2026-05-08-017.",
+      "endpoint": "closeLoop",
+      "request_params": null,
+      "response_status": 409,
+      "response_summary": "Tool returned error: loop-close failed (id not found or already closed).",
+      "mutation_confirmation": "Mutation was not newly applied by this call because the loop was already closed.",
+      "post_validation": null,
+      "user_feedback": null,
+      "observed_issue": null
+    },
+    {
+      "step": 2,
+      "label": "Post-validation via getLoops",
+      "timestamp": null,
+      "user_prompt": null,
+      "assistant_response": "Assistant called getLoops for 2026-05-18 and inspected buckets.",
+      "intended_operation": "Validate final loop state after failed/duplicate close attempt.",
+      "endpoint": "getLoops",
+      "request_params": null,
+      "response_status": 200,
+      "response_summary": "Returned totals: overdue=4, due_today=0, this_week=9, future=9, closed=4. Closed bucket included L-2026-05-08-017 with status '**closed** \u2014 CRM pipeline state updated by Todd on 2026-05-18.' Overdue bucket did not include L-2026-05-08-017.",
+      "mutation_confirmation": "Desired final state confirmed despite closeLoop returning already-closed.",
+      "post_validation": "L-2026-05-08-017 is closed and absent from overdue loops.",
+      "user_feedback": null,
+      "observed_issue": null
+    }
+  ],
+  "defects": [
+    {
+      "id": "LOOP-CLOSE-ALREADY-CLOSED-001",
+      "title": "closeLoop returned id-not-found-or-already-closed for desired already-closed state",
+      "severity": "low",
+      "description": "closeLoop did not distinguish between an invalid id and an already-closed id in the error message. This required a follow-up getLoops call to validate the actual state.",
+      "recommendation": "Return a structured idempotency response for already-closed loops, e.g. status='already_closed', current_state='closed', and existing closure reason."
+    }
+  ],
+  "raw_text": "Key result for Codex: closeLoop returned an error indicating 'id not found or already closed,' but post-validation via getLoops confirmed the desired final state. L-2026-05-08-017 appeared in the closed bucket with status '**closed** \u2014 CRM pipeline state updated by Todd on 2026-05-18.' It did not appear in the overdue bucket. The assistant correctly reported that the close attempt was effectively idempotent/already satisfied and provided the updated loop totals.",
+  "trace_id": "T-2026-05-18-003"
+}

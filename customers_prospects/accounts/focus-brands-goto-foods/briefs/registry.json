@@ -1,0 +1,23 @@
+{
+  "account_id": "acct-focus-brands-goto-foods",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-10T17:08:04Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-10",
+      "path": "customers_prospects/accounts/focus-brands-goto-foods/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-25T16:12:10Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-25",
+      "path": "customers_prospects/accounts/focus-brands-goto-foods/briefs/current/Background_Brief.md",
+      "superseded": false
+    }
+  ]
+}

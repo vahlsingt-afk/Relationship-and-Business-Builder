@@ -1,0 +1,432 @@
+{
+  "competitor_id": "comp-par-technology",
+  "competitor_slug": "par-technology",
+  "display_name": "PAR Technology",
+  "aliases": [
+    "PAR",
+    "ParTech",
+    "Brink POS",
+    "PAR Brink",
+    "PAR Technology (Brink POS)",
+    "PAR Punchh",
+    "Punchh"
+  ],
+  "vendor_entity_id": "vendor-par-technology",
+  "primary_category": "pos",
+  "competes_on": [
+    "back_office",
+    "digital_menu_boards",
+    "loyalty_engagement",
+    "payments",
+    "pos",
+    "restaurant_os_platform"
+  ],
+  "positioning_summary": "PAR has assembled real products (Brink/PAR POS, Data Central, Punchh, digital ordering) but they don't work seamlessly together and lack a bundled pricing story -- \"portfolio, not platform.\" Real tech debt in the POS product, NPS not strong; benefits from POS stickiness (switching cost) rather than satisfaction. Markets itself as \"open\" (integrate anything), which helps land new deals but works against a unified cross-sell narrative. Reports footprint at the product level (60.1K Operator Cloud sites + 121.8K Engagement Cloud sites, ~March 2026), not unique-location level -- makes total footprint look larger than true platform penetration.",
+  "todds_pov": "Todd Vahlsing’s interpretation of Wendy’s selecting TRAY: despite PAR’s incumbent loyalty relationship with Wendy’s, PAR was unable to cross-sell its other products into this decision. This is Todd’s strategic interpretation, not a confirmed statement from Wendy’s or PAR.",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Genius built its own point-of-sale system from the ground up, so all the pieces work together smoothly. PAR put its POS system together from several different companies it bought over the years, so the pieces don't always fit together as well.",
+        "evidence_id": "doc-2026-08-28-par-genius-oracle-competitive-positioning-recovered",
+        "added_at": "2026-08-28T17:44:31Z",
+        "category": "pos"
+      },
+      {
+        "point": "Genius has many more years of experience building back-office reporting tools for franchise businesses. PAR's back-office tool, called Data Central, is newer and less proven.",
+        "evidence_id": "doc-2026-08-28-par-genius-oracle-competitive-positioning-recovered",
+        "added_at": "2026-08-28T17:44:31Z",
+        "category": "back_office"
+      },
+      {
+        "point": "Genius already owns its own payment processing, so it can offer one combined bill for software and payments. PAR does not process payments itself yet, so it has to team up with other companies to offer that.",
+        "evidence_id": "doc-2026-08-28-par-genius-oracle-competitive-positioning-recovered",
+        "added_at": "2026-08-28T17:44:31Z"
+      },
+      {
+        "point": "PAR lost $16.9 million in the second quarter of 2026, using standard accounting rules. The company is not yet profitable.",
+        "evidence_id": "note-0030",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "PAR's AI tool is currently free for the 20,000 restaurant locations using it. PAR does not plan to start charging for more advanced AI features until 2027.",
+        "evidence_id": "note-0031",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "Parent still GAAP loss-making (see PAR in POS file)",
+        "evidence_id": "note-0007",
+        "added_at": "2026-09-26T12:23:32Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "PAR is perceived as more modern/cloud-native in demos; cleaner sales narrative",
+        "evidence_id": "doc-2026-08-28-par-genius-oracle-competitive-positioning-recovered",
+        "added_at": "2026-08-28T17:44:31Z"
+      },
+      {
+        "point": "PAR's \"open\" integration strategy is easier to plug into a brand's existing heterogeneous vendor stack",
+        "evidence_id": "doc-2026-08-28-par-genius-oracle-competitive-positioning-recovered",
+        "added_at": "2026-08-28T17:44:31Z"
+      },
+      {
+        "point": "Burger King exclusive NA POS; rollout \"400+ stores/month,\" expected complete end-2026",
+        "evidence_id": "note-0026",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "Papa Johns (first pizza chain) and Pizza Factory signed",
+        "evidence_id": "note-0027",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "Profitability inflecting: Q2 2026 adj. EBITDA $14.3M vs $5.5M; FY26 guide raised to revenue $516–523M, adj. EBITDA $50–53M",
+        "evidence_id": "note-0028",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "Singh on rivals: legacy vendors \"(NCR Voyix, Oracle, Global Payments) retain market share but lack strategic focus on restaurant tech\"",
+        "evidence_id": "note-0029",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "Marquee enterprise logos (Wendy's, Church's Texas Chicken)",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "Bridg bought for $27.5M in stock (up to $30M) from Cardlytics (which paid $350M in 2021)",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "\"Largest restaurant loyalty customer\" signed months after Bridg closed (unnamed)",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:23:32Z"
+      }
+    ]
+  },
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:46:54Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:54Z",
+  "category_battle_cards": {
+    "pos": {
+      "status": "source_backed",
+      "confidence_pct": 75,
+      "rm_plain_english_posture": "PAR will lead with restaurant specialization, Burger King rollout execution, and reusable enterprise vertical capability from Papa Johns. Counter with Genius's restaurant depth plus integrated payments economics—not a generic claim that Global Payments is simply larger.",
+      "listen_for": [
+        "PAR framing Global Payments, NCR Voyix, and Oracle as legacy competitors whose primary focus is not restaurant technology.",
+        "PAR citing Burger King rollout velocity above 400 stores per month and Papa Johns as proof of enterprise execution and pizza-specific capability."
+      ],
+      "discovery_questions": [],
+      "when_to_bring_todd_in": "Bring Todd in when PAR uses Burger King rollout scale, Papa Johns pizza capability, or the 'restaurant specialist versus payments company' wedge.",
+      "red_flags": [],
+      "evidence_ids": [
+        "note-0013",
+        "note-0011",
+        "note-0012"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T13:39:26Z"
+    },
+    "payments": {
+      "status": "source_backed",
+      "confidence_pct": 75,
+      "rm_plain_english_posture": "PAR is using Ordering and other software wins to acquire payments volume; Genius can invert that motion by using existing payments scale and economics to make the integrated technology suite more compelling.",
+      "listen_for": [
+        "PAR attaching payments to every Ordering win and emphasizing card-not-present economics."
+      ],
+      "discovery_questions": [],
+      "when_to_bring_todd_in": "Bring Todd in when PAR bundles payments with Ordering or frames Global Payments ownership as a lack of restaurant focus.",
+      "red_flags": [],
+      "evidence_ids": [
+        "note-0014"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T13:39:28Z"
+    },
+    "online_ordering": {
+      "status": "source_backed",
+      "confidence_pct": 75,
+      "rm_plain_english_posture": "Treat PAR Ordering as a real acquisition wedge: PAR reports roughly 50% win rates, five to six logo wins per quarter, frequent legacy-provider displacement, and payments attached to every deal.",
+      "listen_for": [
+        "PAR reporting roughly 50% Ordering win rates, five to six logo wins per quarter, and about half of wins displacing a large legacy provider."
+      ],
+      "discovery_questions": [],
+      "when_to_bring_todd_in": "Bring Todd in when a customer is considering replacement of a legacy ordering provider or PAR bundles ordering with payments.",
+      "red_flags": [],
+      "evidence_ids": [
+        "note-0014"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T13:39:36Z"
+    },
+    "back_office_operations": {
+      "status": "source_backed",
+      "confidence_pct": 75,
+      "rm_plain_english_posture": "PAR intends to use completed POS estates as a back-office cross-sell base, with Burger King the clearest disclosed example. Genius should defend RTI-derived operational depth and quantify restaurant-level economics.",
+      "listen_for": [
+        "PAR using the Burger King POS estate as the next back-office cross-sell opportunity after rollout completion."
+      ],
+      "discovery_questions": [],
+      "when_to_bring_todd_in": "Bring Todd in when PAR tries to expand from an incumbent POS position into back office or when Burger King is used as suite proof.",
+      "red_flags": [],
+      "evidence_ids": [
+        "note-0012"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T13:39:40Z"
+    },
+    "loyalty": {
+      "status": "source_backed",
+      "confidence_pct": 70,
+      "rm_plain_english_posture": "Bridg/Guest360 may extend Punchh from known loyalty members toward the broader identifiable guest population and potentially increase account ARR. Keep identity-resolution reliability and unresolved Punchh churn in discovery.",
+      "listen_for": [],
+      "discovery_questions": [
+        "What independently measured lift, identity-resolution accuracy, and incremental ARR has Bridg/Guest360 produced within existing Punchh customers?"
+      ],
+      "when_to_bring_todd_in": "Bring Todd in when PAR positions Bridg/Guest360 as a decisive identity layer or when Punchh retention and cross-sell claims need scrutiny.",
+      "red_flags": [
+        "Do not interpret the absence of discussion about Punchh churn in this appearance as evidence that churn has been resolved."
+      ],
+      "evidence_ids": [
+        "note-0016"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T13:39:47Z"
+    },
+    "bi_analytics": {
+      "status": "source_backed",
+      "confidence_pct": 70,
+      "rm_plain_english_posture": "PAR Intelligence is moving from free conversational access toward predictive advice and paid automated action in 2027, with an ambition to become the primary interface across PAR applications. Separate activated-site distribution from demonstrated operational value.",
+      "listen_for": [],
+      "discovery_questions": [
+        "Of the approximately 20,000 PAR Intelligence Assist activations, what recurring operational value is measured today, distinct from distribution or enabled-site count?"
+      ],
+      "when_to_bring_todd_in": "Bring Todd in when PAR cites 20,000 activated sites, a 50,000-site target, or automated actions as evidence of proven customer value.",
+      "red_flags": [],
+      "evidence_ids": [
+        "note-0015"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T13:39:49Z"
+    },
+    "platform": {
+      "status": "source_backed",
+      "confidence_pct": 75,
+      "rm_plain_english_posture": "PAR is pursuing platform consolidation through multi-product adoption and integration. Its advantage grows when the suite is accepted; its vulnerability appears when any component is not good enough and customers feel compelled to leave the suite.",
+      "listen_for": [],
+      "discovery_questions": [],
+      "when_to_bring_todd_in": "Bring Todd in on multi-product PAR pursuits, platform consolidation decisions, or when a weak suite component creates an opening for Genius.",
+      "red_flags": [
+        "PAR increasingly depends on multi-product adoption; the supplied update reports 100% of new Q2 deals included multiple products versus roughly 70–80% previously."
+      ],
+      "evidence_ids": [
+        "note-0019"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T13:39:52Z"
+    }
+  },
+  "latest_cos_commentary": {
+    "headline": "Direct enterprise POS, back-office, loyalty and emerging AI platform threat.",
+    "genius_exposure": "Direct enterprise POS, back-office, loyalty and emerging AI platform threat.",
+    "competitive_timing": "$338.0M ARR and 174.3K active sites at June 30, 2026; PAR targets 50,000 PAR Intelligence sites by year-end. Both sites and ARR are total platform metrics.",
+    "sales_response": "Map named PAR incumbencies and implementation stages; compare Genius economics and implementation support at each account.",
+    "risk_and_uncertainty": "Platform active sites should not be interpreted as unique restaurant brands or as a single-product deployed footprint.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 2
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 2,
+    "pack_claim_count": 22,
+    "pack_claims_with_url": 20,
+    "pack_claims_inherited_url": 3,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 2,
+      "legacy_claims_need_date_and_current_status_check": 22,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  },
+  "products": [
+    {
+      "value": "PAR POS (POS)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "PAR Ordering (Digital Ordering)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Punchh / PAR Engagement (Loyalty/Guest Engagement)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Guest360 (Guest Data/CRM)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "PAR OPS (Restaurant Operations)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Independent commentary included restaurant-manager users describing PAR OPS as easy to navigate and responsive to issues.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "independently_verified",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "User experience may vary materially by role, device, configuration, and deployment."
+    }
+  ],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "vendor_claims": [
+    {
+      "value": "Modular enterprise restaurant technology stack.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "PAR offers a modular suite spanning transaction, ordering, engagement/loyalty, guest data, and restaurant operations.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Portfolio breadth does not establish uniform product performance."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "PAR OPS showed a significant mobile-user-experience signal with approximately 1.9/5 across 296 Apple ratings during the research cycle.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "marketplace_reported",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Applies specifically to PAR OPS mobile experience and must not be generalized to PAR POS or the entire PAR platform."
+    }
+  ],
+  "weaknesses": [],
+  "key_customers": [],
+  "recent_news": [],
+  "product_lineage": [],
+  "synthesis": {
+    "bottom_line": "PAR Technology poses a significant competitive threat with a strong presence in major restaurant chains and a growing ARR of $338M. The team should closely monitor PAR's developments, particularly their exclusive agreements and product integrations, while leveraging Genius's advantages in back-office tools and payment processing to differentiate our offerings.",
+    "themes": [
+      "PAR's extensive deployment in major chains like Burger King and Papa Johns highlights their market penetration and potential to capture more market share.",
+      "Recent financial improvements and a focus on multi-product adoption suggest PAR is gaining momentum, making them a formidable competitor in the restaurant technology space.",
+      "Genius's advantages in integrated payment processing and proven back-office tools provide a clear differentiation point against PAR's newer and less established offerings.",
+      "PAR's strategy of leveraging AI and cloud-native solutions may appeal to modern restaurant operators, necessitating Genius to enhance its technological narrative.",
+      "The concentration of PAR's business in a few large accounts poses a risk, but also an opportunity for Genius to target smaller chains that may prefer a more integrated and proven solution."
+    ],
+    "generated_at": "2026-10-01T00:08:26Z"
+  }
+}

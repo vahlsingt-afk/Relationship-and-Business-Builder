@@ -1,0 +1,53 @@
+{
+  "title": "Daily brief labels improved but mixed grounding and stale defects",
+  "captured_at": "2026-05-19T12:20:00-05:00",
+  "trace_type": "daily_brief_canonicality_regression",
+  "source": "ChatGPT Custom GPT / operator pasted output",
+  "operator": "Todd Vahlsing",
+  "summary": "Daily brief output improved by adding visible status/confidence labels and relationship/opportunity follow-ups. It still mixed manual context, inferred market commentary, and purported system-detected industry signals without enough source grounding. It also repeated a previously fixed projection-sync defect as a current architectural concern.",
+  "observed_issue": "Useful but not fully canonical: label vocabulary drifted from RB enums, market/news sections took too much space, stale-source-limited claims lacked refresh commands, and fixed defects were presented as current state.",
+  "steps": [
+    {
+      "step": 1,
+      "user_prompt": "Daily Brief — May 19, 2026",
+      "assistant_response": "The brief led with Ryan Hildebrand, Olivia Nielsen, Ish Singh, and Hari/McDonald's; added Global Payments/Genius AI platform commentary; included restaurant-tech market conditions; summarized RB 9.0 development state; and closed with topic/status/confidence labels.",
+      "intended_operation": "Render canonical RB CoS daily brief",
+      "endpoint": "unknown from pasted output",
+      "response_status": "unknown",
+      "response_summary": "Output included relationship follow-ups, Global Payments/Genius market signal, restaurant-tech market conditions, RB development state, and a confidence-label table."
+    }
+  ],
+  "defects": [
+    {
+      "id": "DB-LABEL-VOCAB-DRIFT-001",
+      "title": "Daily brief used non-canonical label vocabulary",
+      "severity": "medium",
+      "recommendation": "Require exact grounding enum values: system_detected, inferred, manual_user_provided, stale_source_limited."
+    },
+    {
+      "id": "DB-SOURCE-GROUNDING-MARKET-001",
+      "title": "Market/news claims lacked source grounding and action boundaries",
+      "severity": "medium",
+      "recommendation": "Industry or market items in a daily brief must include source/date/freshness, relationship impact, and an explicit action or suppression decision."
+    },
+    {
+      "id": "DB-STALE-REFRESH-COMMAND-001",
+      "title": "Stale-source-limited item lacked refresh command",
+      "severity": "medium",
+      "recommendation": "Every stale-source-limited claim should carry a next operational command or verification action before being used for strategy."
+    },
+    {
+      "id": "DB-FIXED-DEFECT-RECURRENCE-001",
+      "title": "Previously repaired projection-sync defect was described as current state",
+      "severity": "high",
+      "recommendation": "Do not present historical defects as current state unless a current validation call confirms the defect is still present."
+    },
+    {
+      "id": "DB-WHAT-TO-IGNORE-MISSING-002",
+      "title": "Daily brief still lacked explicit what-to-ignore section",
+      "severity": "medium",
+      "recommendation": "Keep what_to_ignore as a required daily brief section before optional industry commentary."
+    }
+  ],
+  "trace_id": "T-2026-05-19-008"
+}

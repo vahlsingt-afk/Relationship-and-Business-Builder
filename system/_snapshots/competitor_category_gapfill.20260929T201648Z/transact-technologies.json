@@ -1,0 +1,58 @@
+{
+  "competitor_id": "comp-transact-technologies",
+  "competitor_slug": "transact-technologies",
+  "display_name": "TransAct Technologies",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "TransAct's FY2025 10-K names its direct competitors for the BOHA! foodservice/food-safety platform as Crunchtime Information Systems (including its Zenput and Squadle brands), Digi International, Avery Dennison, Ecolab, ITD Food Safety, Daymark Safety Systems, Integrated Control Corp, and Toast, Inc.",
+        "evidence_id": "note-0002",
+        "added_at": "2026-09-29T15:44:15Z"
+      }
+    ],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:37Z",
+  "latest_cos_commentary": {
+    "headline": "TransAct Technologies (Nasdaq: TACT) is a public company whose BOHA! platform targets back-of-house food-safety, labeling, and kitchen compliance for restaurants and foodservice operators, alongside a legacy casino/gaming printing business.",
+    "genius_exposure": "Overlaps with Genius's back_office and kitchen_drive_thru lines specifically around food-safety compliance and kitchen printing/labeling, not core POS or payments.",
+    "competitive_timing": "FY2025 10-K filed March 12, 2026 names Toast, Crunchtime/Zenput/Squadle, and several food-safety specialists as its direct BOHA! competitors — useful to know which battles TransAct is actually fighting.",
+    "sales_response": "Recognize that TransAct's BOHA! is a niche back-of-house/food-safety tool, not a full POS or payments competitor; relevant mainly where a prospect already runs BOHA! for kitchen compliance.",
+    "risk_and_uncertainty": "No named restaurant customers or segment-level revenue for BOHA! were disclosed in the section of the 10-K reviewed.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 104
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 104,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 1,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Named Customers",
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "Total FY2025 revenue and BOHA! segment revenue breakdown (not disclosed in the 10-K section reviewed)",
+        "Named restaurant chain customers"
+      ]
+    }
+  }
+}

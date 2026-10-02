@@ -1,0 +1,54 @@
+{
+  "competitor_id": "comp-elo",
+  "competitor_slug": "elo",
+  "display_name": "Elo",
+  "aliases": [
+    "Elo Touch Solutions"
+  ],
+  "vendor_entity_id": "vendor-elo",
+  "primary_category": "pos_hardware",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:47:00Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:00Z",
+  "latest_cos_commentary": {
+    "headline": "Elo Touch Solutions is now part of Zebra Technologies and continues to sell OS-agnostic POS touchscreen hardware to restaurant software partners including Toast.",
+    "genius_exposure": "Direct pos_hardware competitor/potential supplier overlap: Elo hardware can run under third-party restaurant POS software, competing with Genius's own connected hardware line for the physical terminal layer.",
+    "competitive_timing": "Elo's integration into Zebra Technologies and its NRF 2026 product refresh (self-checkout, payment mounts, backpack PCs) signal continued investment in retail/restaurant hardware under new ownership.",
+    "sales_response": "If a prospect already runs Elo hardware under a competing POS, note that hardware and software are decoupled for Elo — a Genius switch does not necessarily require a hardware rip-and-replace, which can lower switching-cost objections.",
+    "risk_and_uncertainty": "Acquisition by Zebra Technologies was identified from a single vendor headline; deal terms, closing date, and post-acquisition financial health were not independently verified in this pass.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 30
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 30,
+    "pack_claim_count": 4,
+    "pack_claims_with_url": 4,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Pricing signals",
+        "Financial / Market Health"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "pricing",
+        "financial health under new ownership"
+      ]
+    }
+  }
+}

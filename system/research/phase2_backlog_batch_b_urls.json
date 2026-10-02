@@ -1,0 +1,560 @@
+[
+  {
+    "brand": "Buffalo Wild Wings",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/blog/buffalo-wild-wings-customer-loyalty-program-3-key-takeaways-2"
+  },
+  {
+    "brand": "First Watch",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/first-watch"
+  },
+  {
+    "brand": "Freddy's Frozen Custard & Steakburgers",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/freddys-frozen-custard-and-steakburgers"
+  },
+  {
+    "brand": "P.F. Chang's",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/p-f-changs"
+  },
+  {
+    "brand": "P.F. Chang's",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/p-f-changs-order"
+  },
+  {
+    "brand": "Cold Stone Creamery",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/cold-stone-creamery"
+  },
+  {
+    "brand": "Paris Baguette",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/paris-baguette"
+  },
+  {
+    "brand": "Black Bear Diner",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/black-bear-diner"
+  },
+  {
+    "brand": "Din Tai Fung",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/din-tai-fung-borderless-olo-pay"
+  },
+  {
+    "brand": "California Pizza Kitchen",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/california-fish-grill"
+  },
+  {
+    "brand": "California Pizza Kitchen",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/partner-case-studies/california-fish-grill-curbit"
+  },
+  {
+    "brand": "Blaze Pizza",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/blog/why-blaze-pizza-selected-thanx"
+  },
+  {
+    "brand": "Pizza Ranch",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/partners/find-a-partner/sl-franchise-group"
+  },
+  {
+    "brand": "Pizza Ranch",
+    "vendor_archive": "qu",
+    "vendor_entity_id": "vendor-qu",
+    "source_url": "https://www.qubeyond.com/resource-center/pokeworks-partners-with-qu-to-modernize-pos-accelerate-franchise-growth"
+  },
+  {
+    "brand": "True Food Kitchen",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/true-food-kitchen"
+  },
+  {
+    "brand": "Mendocino Farms",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/mendocino-farms"
+  },
+  {
+    "brand": "Another Broken Egg Cafe",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/another-broken-egg-cafe"
+  },
+  {
+    "brand": "Pei Wei",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/pei-wei"
+  },
+  {
+    "brand": "Sonny's BBQ",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/case-studies/sonnys-bbq"
+  },
+  {
+    "brand": "Legal Sea Foods",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/resources/case-studies/legal-sea-foods-60-increase-new-loyalty-members"
+  },
+  {
+    "brand": "WaBa Grill",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/waba-grill"
+  },
+  {
+    "brand": "Nekter Juice Bar",
+    "vendor_archive": "qu",
+    "vendor_entity_id": "vendor-qu",
+    "source_url": "https://www.qubeyond.com/resource-center/nekter-juice-bar-selects-qu-to-streamline-ordering-fuel-sustainable-nationwide-growth"
+  },
+  {
+    "brand": "O'Charley's",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/ocharleys"
+  },
+  {
+    "brand": "California Fish Grill",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/california-fish-grill"
+  },
+  {
+    "brand": "California Fish Grill",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/partner-case-studies/california-fish-grill-curbit"
+  },
+  {
+    "brand": "Primanti Bros.",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/resources/case-studies/primanti-bros-drives-double-digit-lift-in-visits-and-spend-with-ai/"
+  },
+  {
+    "brand": "Honeygrow",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/honeygrow"
+  },
+  {
+    "brand": "Huey Magoo's",
+    "vendor_archive": "qu",
+    "vendor_entity_id": "vendor-qu",
+    "source_url": "https://www.qubeyond.com/resource-center/huey-magoos-selects-qu-to-achieve-aggressive-growth-plans-with-unified-commerce-ordering"
+  },
+  {
+    "brand": "Ted's Montana Grill",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/teds-montana-grill"
+  },
+  {
+    "brand": "Mo'Bettahs",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/case-studies/mobettahs"
+  },
+  {
+    "brand": "Nando's",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/nandos"
+  },
+  {
+    "brand": "Chicken Express",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/family-express"
+  },
+  {
+    "brand": "Lucille's Smokehouse Bar-B-Que",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/lucilles-smokehouse-bar-b-que"
+  },
+  {
+    "brand": "Yoshinoya",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/yoshinoya"
+  },
+  {
+    "brand": "Freebirds World Burrito",
+    "vendor_archive": "qu",
+    "vendor_entity_id": "vendor-qu",
+    "source_url": "https://www.qubeyond.com/resource-center/customer-testimonial---freebirds-world-burrito"
+  },
+  {
+    "brand": "Freebirds World Burrito",
+    "vendor_archive": "qu",
+    "vendor_entity_id": "vendor-qu",
+    "source_url": "https://www.qubeyond.com/case-studies/freebirds-world-burrito"
+  },
+  {
+    "brand": "Roy Rogers Restaurants",
+    "vendor_archive": "qu",
+    "vendor_entity_id": "vendor-qu",
+    "source_url": "https://www.qubeyond.com/resource-center/roy-rogers-restaurants-selects-qus-unified-commerce-platform-to-power-growth"
+  },
+  {
+    "brand": "Bahama Buck's",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/bahama-bucks"
+  },
+  {
+    "brand": "Urbane Cafe",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/case-studies/urbane-cafe"
+  },
+  {
+    "brand": "Pokeworks",
+    "vendor_archive": "qu",
+    "vendor_entity_id": "vendor-qu",
+    "source_url": "https://www.qubeyond.com/resource-center/pokeworks-partners-with-qu-to-modernize-pos-accelerate-franchise-growth"
+  },
+  {
+    "brand": "Hot Head Burritos",
+    "vendor_archive": "qu",
+    "vendor_entity_id": "vendor-qu",
+    "source_url": "https://www.qubeyond.com/case-studies/hot-head-burritos"
+  },
+  {
+    "brand": "Salt & Straw",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/case-studies/salt-and-straw"
+  },
+  {
+    "brand": "Robeks",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/robeks"
+  },
+  {
+    "brand": "Tavern In The Square",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/resources/case-studies/tavern-in-the-square-winners-circle"
+  },
+  {
+    "brand": "Original ChopShop",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/original-chopshop"
+  },
+  {
+    "brand": "Original ChopShop",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/resources/case-studies/original-chopshop-loyalty-centers-around-convenience-powered-by-paytronix/"
+  },
+  {
+    "brand": "World of Beer Bar & Kitchen",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/blog/world-of-beers-alegorithm-knows-what-customers-want-to-drink"
+  },
+  {
+    "brand": "Wild Wing Cafe",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/blog/buffalo-wild-wings-customer-loyalty-program-3-key-takeaways-2"
+  },
+  {
+    "brand": "Stand Restaurants, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/blog/new-dashboards-to-understand-customer-analytics-improve-your-loyalty-program"
+  },
+  {
+    "brand": "Stand Restaurants, The",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/blog/4-ways-use-data-understand-customers"
+  },
+  {
+    "brand": "Stand Restaurants, The",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/blog/customer-loyalty-stands-today"
+  },
+  {
+    "brand": "Stand Restaurants, The",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/blog/how-great-customer-loyalty-programs-stand-out-from-the-rest"
+  },
+  {
+    "brand": "Stand Restaurants, The",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/help-center/understanding-customer-lifecycle-marketing-a-complete-guide"
+  },
+  {
+    "brand": "Showmars",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/showmars"
+  },
+  {
+    "brand": "Honest Restaurant",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/case-studies/honest-marys"
+  },
+  {
+    "brand": "Oakberry",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/case-studies/oakberry"
+  },
+  {
+    "brand": "Ward's Restaurant",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/blog/customer-rewards-program-actually-work"
+  },
+  {
+    "brand": "Ward's Restaurant",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/blog/why-chipotles-rewards-program-chiptopia-wont-fix-their-customer-loyalty-problem"
+  },
+  {
+    "brand": "Ward's Restaurant",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/help-center/how-to-configure-customer-rewards-and-offers-in-thanx"
+  },
+  {
+    "brand": "Dewey's Pizza",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/blog/deweys-pizza-increased-revenue-engaging-customers"
+  },
+  {
+    "brand": "Calif Chicken Cafe",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/california-fish-grill"
+  },
+  {
+    "brand": "Calif Chicken Cafe",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/partner-case-studies/california-fish-grill-curbit"
+  },
+  {
+    "brand": "Taco Stand, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/blog/new-dashboards-to-understand-customer-analytics-improve-your-loyalty-program"
+  },
+  {
+    "brand": "Taco Stand, The",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/blog/4-ways-use-data-understand-customers"
+  },
+  {
+    "brand": "Taco Stand, The",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/blog/customer-loyalty-stands-today"
+  },
+  {
+    "brand": "Taco Stand, The",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/blog/how-great-customer-loyalty-programs-stand-out-from-the-rest"
+  },
+  {
+    "brand": "Taco Stand, The",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/help-center/understanding-customer-lifecycle-marketing-a-complete-guide"
+  },
+  {
+    "brand": "Viva Chicken",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/viva-chicken"
+  },
+  {
+    "brand": "Pincho",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/case-studies/savory-funds-pincho-burgers-and-kebabs"
+  },
+  {
+    "brand": "Toastique",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/resources/case-studies/toastique-launches-full-paytronix-platform/"
+  },
+  {
+    "brand": "Laughing Planet",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/laughing-planet"
+  },
+  {
+    "brand": "Sweetfin",
+    "vendor_archive": "thanx",
+    "vendor_entity_id": "vendor-thanx",
+    "source_url": "https://www.thanx.com/food-fighters-podcast/covid-19-special-episode-interview-with-sweetfin-partner-co-founder-seth-cohen"
+  },
+  {
+    "brand": "Daily Grill",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/resources/case-studies/twice-daily-online-ordering-twice-as-nice"
+  },
+  {
+    "brand": "Daily Grill",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/resources/webinars/twice-daily-how-to-boost-customer-engagement-w-loyalty-apps/"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "olo",
+    "vendor_entity_id": "vendor-olo",
+    "source_url": "https://www.olo.com/case-studies/family-express"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/2019/jamba-juice-partners-with-paytronix"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/2022/illegal-pete-s-embraces-loyal-customers-with-paytronix-powered-program"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/2023/jinya-ramen-bar-levels-up-its-loyalty-program-and-app-for-the-ultimate-customer-experience"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/2021/uno-pizzeria-grill-launches-on-paytronix-s-all-in-one-customer-engagement-platform"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/2019/paytronix-and-zenreach-partner-to-help-anthony-s-coal-fired-pizza-fully-engage-with-more-of-its-customers"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/2019/paytronix-acquires-open-dining-to-expand-its-end-to-end-customer-experience-solution"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/2020/paytronix-order-delivery-integrates-with-oracle-micros-simphony-pos-for-rapid-deployment-of-off-premise-dining"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/2022/paytronix-and-yumpingo-partner-to-give-brands-deeper-insights-about-their-digital-users"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/2019/paytronix-order-delivery-introduces-feedbacksm-to-help-identify-and-retain-unhappy-customers"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/walk-ons-sports-bistreaux-selects-paytronix-to-drive-loyalty-program"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/amigos/kings-classic-announces-45th-anniversary-campaign-partners-with-paytronix-for-app-loyalty"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/2021/paytronix-integration-brings-enterprise-customer-experience-solution-to-revel-systems-cloud-based-point-of-sal"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/dineengine-and-paytronix-strengthen-partnership-to-elevate-restaurant-loyalty-programs-content"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/2023/paytronix-and-mparticle-partnership"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/paytronix-and-qu-partner-to-deliver-smarter-more-personalized-guest-experiences"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/paytronix-partners-with-auphan-software-to-expand-canadian-footprint-drive-interoperability-for-smb-operators"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/paytronix-and-deliverect-partner-to-enable-seamless-operations-across-online-orders-for-restaurants"
+  },
+  {
+    "brand": "Pizza Press, The",
+    "vendor_archive": "paytronix",
+    "vendor_entity_id": "vendor-paytronix",
+    "source_url": "https://www.paytronix.com/company/news-press/press-releases/quality-oil-company-taps-paytronix-as-technology-partner-for-loyalty-program-personalized-messaging"
+  }
+]

@@ -1,0 +1,156 @@
+{
+  "title": "Multi-calendar discovery and meeting-prep RI quality defect",
+  "trace_id": "T-2026-05-21-002",
+  "trace_type": "field_defect",
+  "source": "ChatGPT / live RB meeting-prep session summary",
+  "operator": "Todd",
+  "captured_at": "2026-05-21T14:15:00-05:00",
+  "severity": "HIGH",
+  "category": "Connector discovery / onboarding readiness / meeting prep quality",
+  "summary": "Todd asked RB to prep for afternoon meetings. The assistant initially failed to discover the correct calendar/account context, assumed no meetings existed from an empty lookup, required manual account specification, and then produced useful but not canonical Chief-of-Staff meeting prep.",
+  "observed_issue": "RB behaved like a helpful strategist with partial calendar access, not like a relationship operating system with source inventory, connector confidence, and meeting-prep orchestration.",
+  "grades": {
+    "multi_calendar_setup": "C",
+    "meeting_prep": "B-"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label": "User requested afternoon meeting prep",
+      "user_prompt": "lets prep for our meetings this afternoon.",
+      "expected_behavior": "Check connected calendars, recognize multi-account ambiguity if the default calendar is empty, enumerate accessible calendars, search likely business calendars, and present source confidence before producing prep.",
+      "observed_behavior": "Initial calendar lookup returned empty. The assistant treated that as no meetings rather than a source-discovery failure or account-selection ambiguity.",
+      "observed_issue": "Empty default-calendar result was overtrusted."
+    },
+    {
+      "step": 2,
+      "label": "User had to specify business account",
+      "user_action": "Todd had to specify todd@bridgepointops.com and troubleshoot connector/calendar visibility.",
+      "expected_behavior": "No meetings found on the default calendar. Additional Google accounts may exist but are not currently enumerated. Attempting accessible calendar discovery...",
+      "observed_issue": "Calendar source inventory and fallback search behavior were missing from the conversational path."
+    },
+    {
+      "step": 3,
+      "label": "Meeting prep generated",
+      "observed_strengths": [
+        "Strong operator-first positioning.",
+        "Good adoption, rollout, franchisee reality, and anti-hype framing.",
+        "Useful conversational coaching.",
+        "Correct risk recognition around unpaid consulting drift, pick-your-brain traps, intro harvesting, and free GTM strategy extraction."
+      ],
+      "observed_gaps": [
+        "Did not search email history.",
+        "Did not inspect LinkedIn interactions.",
+        "Did not review prior messages or calendar history.",
+        "Did not examine shared contacts or referral patterns.",
+        "Did not assess reciprocity, trust trajectory, relationship stage, or strategic value.",
+        "Did not present why-this-meeting-matters ranking.",
+        "Did not define desired outcomes, success criteria, next-step options, or disqualification triggers.",
+        "Did not judge whether the relationship should be active pursuit, nurture, monitor, low-priority, or avoid."
+      ],
+      "observed_issue": "Prep was good advisory prose, not evidence-backed RI-driven CoS prep."
+    }
+  ],
+  "current_architecture_notes": {
+    "multi_account_manifest": "system/inbox/accounts.yaml is documented as the multi-account manifest.",
+    "calendar_aggregation": "rb_core.load_calendar() aggregates calendar.<account_id>.json files across enabled accounts.",
+    "refresh_wrapper": "refresh_sources.py --calendar can normalize per-account raw calendar files and prints missing-input instructions.",
+    "daily_brief_support": "Daily brief has a Meeting Prep & Deliverables section.",
+    "remaining_gap": "RB lacks a conversational source-readiness layer that can enumerate connected accounts/calendars, score confidence, detect missing business calendars, and tell the user whether prep is grounded or under-instrumented before generating advice."
+  },
+  "expected_source_readiness_behavior": [
+    "Enumerate accessible calendars and Gmail identities.",
+    "Identify default, personal, business, and stale/missing feeds.",
+    "Search all likely business calendars before declaring no meetings.",
+    "Report source confidence and missing connectors.",
+    "Ask to connect additional calendars only after automatic discovery fails.",
+    "Maintain a startup/system-readiness score that includes calendar/Gmail visibility."
+  ],
+  "expected_canonical_meeting_prep": {
+    "source_proof": [
+      "Calendar account and event source.",
+      "Email evidence searched and freshness state.",
+      "LinkedIn/social evidence searched and freshness state.",
+      "Prior interaction timeline.",
+      "Shared contacts / referral path.",
+      "Active thread and loop linkage."
+    ],
+    "why_this_meeting_matters": [
+      "Relative priority.",
+      "Strategic upside.",
+      "Risk.",
+      "Time investment justification.",
+      "Probability of concrete opportunity.",
+      "Recommended posture."
+    ],
+    "ri_assessment": [
+      "Relationship stage.",
+      "Trust trajectory.",
+      "Reciprocity.",
+      "Network overlap.",
+      "Strategic ranking.",
+      "Evidence-backed intent inference."
+    ],
+    "outcome_strategy": [
+      "Desired concrete next step.",
+      "Success criteria.",
+      "Conversion target.",
+      "Escalation path.",
+      "Post-meeting actions.",
+      "Disqualification triggers."
+    ],
+    "time_allocation_judgment": [
+      "Active pursuit / nurture / monitor / low-priority / avoid.",
+      "Why that classification is justified."
+    ]
+  },
+  "defects": [
+    {
+      "id": "CONNECTOR-DISCOVERY-001",
+      "title": "Empty default calendar result overtrusted",
+      "severity": "high",
+      "description": "RB treated an empty calendar lookup as no meetings instead of detecting account ambiguity or source-inventory uncertainty.",
+      "recommendation": "Calendar-aware prompts must run a source-discovery/readiness check before concluding no events exist."
+    },
+    {
+      "id": "MULTI-CALENDAR-ONBOARDING-001",
+      "title": "Multi-account setup guidance missing",
+      "severity": "high",
+      "description": "The user had to discover and name the business calendar manually. RB should guide users through connecting multiple Gmail/calendar accounts and validating visibility.",
+      "recommendation": "Add multi-account onboarding checklist, connector heartbeat validation, and source-readiness scoring."
+    },
+    {
+      "id": "MEETING-PREP-RI-001",
+      "title": "Meeting prep lacked real relationship intelligence",
+      "severity": "high",
+      "description": "The prep inferred from titles and general context but did not prove it searched email, LinkedIn, prior interactions, shared contacts, active threads, loop state, or source freshness.",
+      "recommendation": "Meeting prep must include source proof and label under-instrumented areas explicitly."
+    },
+    {
+      "id": "MEETING-PREP-PRIORITIZATION-001",
+      "title": "No why-this-matters ranking",
+      "severity": "medium-high",
+      "description": "The prep did not explicitly rank strategic upside, risk, time investment, or likelihood of opportunity.",
+      "recommendation": "Add a why_this_meeting_matters section with priority, upside, risk, and recommended posture."
+    },
+    {
+      "id": "MEETING-PREP-OUTCOME-001",
+      "title": "Missing outcome strategy",
+      "severity": "medium-high",
+      "description": "The prep focused on conversation flow, but not desired next step, success criteria, conversion target, escalation path, post-meeting actions, or disqualification triggers.",
+      "recommendation": "Canonical meeting prep should end with outcome strategy and post-meeting orchestration."
+    }
+  ],
+  "canonical_assessment": {
+    "multi_calendar_setup": "C",
+    "meeting_prep": "B-",
+    "conversational_guidance": "PASS",
+    "connector_discovery": "FAIL",
+    "onboarding_guidance": "FAIL",
+    "evidence_backed_ri": "FAIL",
+    "prioritization": "PARTIAL_FAIL",
+    "outcome_orchestration": "PARTIAL_FAIL",
+    "canonical_cos_quality": "PARTIAL_FAIL"
+  },
+  "raw_text": "Test Assessment — Multi-Calendar Access + Meeting Prep Quality. Multi-calendar setup was eventually functional but not executive-grade. Meeting prep was strategically intelligent but lacked actual RI, evidence grounding, prioritization, actionable CoS judgment, and relationship-state awareness. Current RB can reason, coach, and infer, but canonical RB requires evidence-backed relationship intelligence, persistence, prioritization, orchestration, strategic judgment, and explicit why-it-matters guidance."
+}

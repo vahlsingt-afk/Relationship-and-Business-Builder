@@ -1,0 +1,205 @@
+{
+  "competitor_id": "comp-oracle-food-beverage-simphony-micros",
+  "competitor_slug": "oracle-food-beverage-simphony-micros",
+  "display_name": "Oracle Food & Beverage (Simphony / MICROS)",
+  "aliases": [],
+  "vendor_entity_id": "vendor-oracle-food-beverage-simphony-micros",
+  "primary_category": "pos",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Parent focus on AI infrastructure; ongoing company-wide layoffs (≈21,000 roles cut in past year; restructuring budget raised to ~$2.8B). F&B-specific impact not found",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "Viewed by PAR CEO as lacking restaurant focus",
+        "evidence_id": "note-0008",
+        "added_at": "2026-09-26T12:23:31Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Deep hospitality/venue install base; strong in stadiums (direct overlap with Genius S&E)",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "GenAI Smart Assistant in 100+ languages within 12 months",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:23:31Z"
+      }
+    ]
+  },
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:46:55Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:55Z",
+  "latest_cos_commentary": {
+    "headline": "Simphony adds staff-facing AI and deep venue capabilities to its enterprise POS position.",
+    "genius_exposure": "Simphony adds staff-facing AI and deep venue capabilities to its enterprise POS position.",
+    "competitive_timing": "Oracle introduced Simphony Cloud Smart Assistant and venue suites/mobile ordering in March 2026. Latest check: Oracle says The Chopped Leaf uses Simphony POS, Workstation 6 and KDS across locations.",
+    "sales_response": "In stadium and enterprise deals, ask which Oracle components are live and measure staff time saved, uptime and total cost.",
+    "risk_and_uncertainty": "Announcement does not quantify adoption or establish Food & Beverage unit financials. Customer scope is company-described; verify current franchise participation and payments separately.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 4
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 4,
+    "pack_claim_count": 15,
+    "pack_claims_with_url": 12,
+    "pack_claims_inherited_url": 2,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 3,
+      "legacy_claims_need_date_and_current_status_check": 15,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  },
+  "vendor_claims": [
+    {
+      "value": "Oracle markets Simphony as a cloud restaurant POS with more than 200 integrations, offline mode, 24/7 support and scalability across chains and large venues.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.oracle.com/food-beverage/restaurant-pos-systems/simphony-pos/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Oracle",
+      "source_type": "vendor_product_page",
+      "published_at": "",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Availability, reliability and support claims were not independently proven by the vendor page."
+    },
+    {
+      "value": "Oracle states that the Simphony/MICROS estate serves cloud and on-premise POS customers across more than 180 countries.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.oracle.com/food-beverage/micros/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Oracle",
+      "source_type": "vendor_product_brand_page",
+      "published_at": "",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Restaurant-only active deployment count is not provided."
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Capterra reviewers report strong Simphony configurability, chain suitability, API/integration breadth and useful integrations such as Opera.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.capterra.com/p/202814/Oracle-MICROS-Simphony/reviews/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Capterra",
+      "source_type": "verified_review_platform",
+      "published_at": "2026-09-28",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Small self-selected review sample; some reviews were vendor-referred and reviews span multiple product releases."
+    }
+  ],
+  "weaknesses": [
+    {
+      "value": "Multiple Capterra reviewers report long or difficult Simphony implementations, complex back-office configuration and training requirements.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.capterra.com/p/202814/Oracle-MICROS-Simphony/reviews/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Capterra",
+      "source_type": "verified_review_platform",
+      "published_at": "2026-09-28",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Review experiences span 2020-2026 and may involve different releases, integrators and configurations."
+    },
+    {
+      "value": "Capterra reviewers report inconsistent or slow Oracle/Simphony support experiences, including unresolved implementation tickets and difficult escalation.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.capterra.com/p/202814/Oracle-MICROS-Simphony/reviews/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Capterra",
+      "source_type": "verified_review_platform",
+      "published_at": "2026-09-28",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Conflicts with Oracle's 24/7-support marketing but does not prove that support is universally poor."
+    },
+    {
+      "value": "The Capterra corpus contains operator reports of lag, configuration defects, lost-check or command/printing problems and other reliability concerns.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.capterra.com/p/202814/Oracle-MICROS-Simphony/reviews/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Capterra",
+      "source_type": "verified_review_platform",
+      "published_at": "2026-09-28",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Reports are not independently diagnosed and configuration/environment may contribute."
+    },
+    {
+      "value": "Several Capterra reviewers characterize Simphony or its implementation as expensive and report that configuration changes can require training, professional help or additional purchases.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.capterra.com/p/202814/Oracle-MICROS-Simphony/reviews/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Capterra",
+      "source_type": "verified_review_platform",
+      "published_at": "2026-09-28",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "No normalized TCO comparison was available."
+    }
+  ]
+}

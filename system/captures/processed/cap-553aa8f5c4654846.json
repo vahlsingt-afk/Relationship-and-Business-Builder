@@ -1,0 +1,62 @@
+{
+  "file_id": "cap-553aa8f5c4654846",
+  "queued_at": "2026-09-21T09:23:08+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-20_2205_candidate-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-20_2205_candidate-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260920-2205-candidate-validation`\n- Research system: `Codex web research`\n- Started at: `2026-09-20 22:05 CDT`\n- Completed at: `2026-09-20 22:07 CDT`\n- Research scope: Four unresolved candidate URLs for Subway and Domino's\n- Queue item or vendor: Restaurant365 and Crunchtime candidate-page validation\n- Methodology: Direct retrieval and page-level validation of vendor-hosted source pages\n\n## Executive result\n\n- Pages reviewed: 4 candidate URLs (3 unique resources because one Restaurant365 URL redirects to the other)\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 1 low-confidence indication\n- Conflicts found: 0\n- Material takeaway: A Restaurant365 marketing article uses present-tense language indicating that unspecified Subway franchisees use R365 Employee Training, but it names no operator, location count, case study, or implementation. Preserve this as a 35% franchisee-scoped indication, not a confirmed Subway enterprise relationship. The two Crunchtime/Domino's candidates do not support a deployment claim: one is now a 404 and the other is a content-free registration thank-you page.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: Subway\n- Vendor: Restaurant365\n- Product or category: R365 Employee Training, including mobile training, standardized learning paths, AI translation, progress reporting, and food-safety certification access\n- Relationship indication: `unknown`\n- Deployment scope: `franchisee`\n- Evidence type: `other`\n- Confidence: `35%`\n- Confidence rationale: Restaurant365's own page says in present tense that Subway franchisees use R365 Employee Training and describes product-specific workflows. However, the page is promotional copy with a demo call-to-action, not a case study; it names no franchisee, executive, location count, contract, rollout, or independent source. The language may describe a subset of franchisees or a product marketed to them rather than a verified deployment.\n- Source title: How Subway Franchisees are Building Stronger Teams with R365\n- Source URL: https://www.restaurant365.com/blog/how-subway-franchisees-are-building-stronger-teams-with-r365/\n- Publisher or source owner: Restaurant365\n- Published date, if known: Not shown in the retrieved page\n- Accessed date: `2026-09-20`\n- Exact supporting excerpt or faithful factual note: Restaurant365 says Subway franchisees are using its Employee Training tools to reduce turnover and standardize training, then describes mobile training, customizable paths, AI-powered translation, employee-progress reporting, and Always Food Safe certification access.\n- Product-specific evidence: R365 Employee Training; mobile delivery; standardized and customizable training; AI-powered translation; accountability and progress reporting; industry course library; food-safety certifications.\n- Conflicting or limiting evidence: No named Subway franchisee or confirmed rollout is supplied. The page ends by inviting readers to schedule a demo, so it may blend asserted use with prospect-oriented marketing. The archived first URL redirects to this same page and is not independent corroboration.\n- Recommended follow-up: Find a named Subway franchisee case study, testimonial, implementation record, or operator statement before raising confidence or treating Restaurant365 as a Subway-wide standard.\n\n## Negative findings\n\n- Candidate or claim: The two archived Restaurant365 Subway URLs are independent evidence sources.\n- Pages checked: https://www.restaurant365.com/blog/restaurant-software-for-subway-franchisees/ and https://www.restaurant365.com/blog/how-subway-franchisees-are-building-stronger-teams-with-r365/\n- Result: The first redirects to the second. They represent one source, not corroboration.\n\n- Candidate or claim: Domino's or its largest franchisee uses Crunchtime based on the archived operational-consistency blog URL.\n- Pages checked: https://www.crunchtime.com/blog/3-ways-dominos-largest-franchise-promotes-operational-consistency\n- Result: The archived URL returns 404. No page content was available to validate product, franchisee identity, scope, or current state.\n\n- Candidate or claim: Crunchtime's Domino's registration thank-you page establishes a customer relationship.\n- Pages checked: https://www.crunchtime.com/thank-you-dominos\n- Result: The live page contains generic Crunchtime navigation and registration-confirmation framing but no Domino's, franchisee, product, deployment, or testimonial content in the retrieved body. The title alone is insufficient evidence.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://www.restaurant365.com/blog/restaurant-software-for-subway-franchisees/ | Redirected marketing URL | 2026-09-20 | Observation 1 | Redirects to the stronger-teams URL; duplicate source, not corroboration. |\n| https://www.restaurant365.com/blog/how-subway-franchisees-are-building-stronger-teams-with-r365/ | Product/customer marketing page | 2026-09-20 | Observation 1 | Product-specific, present-tense use language, but no named operator or rollout; retained at 35% confidence. |\n| https://www.crunchtime.com/blog/3-ways-dominos-largest-franchise-promotes-operational-consistency | Archived blog candidate | 2026-09-20 | No | Returns 404; no evidence could be validated. |\n| https://www.crunchtime.com/thank-you-dominos | Registration thank-you page | 2026-09-20 | No | No substantive Domino's or deployment content in the live body. |\n\n## Research notes and inferences\n\n- Inference: Restaurant365 is actively targeting Subway franchisees and may have some franchisee adoption, but the candidate page alone cannot distinguish actual deployments from generalized segment marketing.\n- Inference: The Crunchtime URLs may once have supported a Domino's-franchisee webinar or story, but the current pages do not preserve enough evidence to record even a low-confidence product mapping.\n- No finding in this packet should be written directly to canonical account records without the normal RB review step.",
+  "word_count": 771,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-21T09:23:33+00:00",
+  "processing_result": {
+    "triage_stream_count": 4,
+    "noise_only": false,
+    "persisted_count": 4,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-017",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 3 trigger(s): named. Possible named subjects: No, Subway, Find, Recommended, Conflicting, Observation."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-018",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'franchisee'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-019",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-020",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Domino's, Subway, Restaurant365, Crunchtime. Macro/industry signal detected: 9 keyword hit(s) across categorie(s): consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: customer, deployment, enterprise, franchise, industry,"
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "Subway",
+        "Restaurant365",
+        "Domino's",
+        "Crunchtime"
+      ],
+      "topics": [
+        "Candidate validation for Subway and Domino's",
+        "Restaurant365 Employee Training",
+        "Crunchtime evidence review"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Find a named Subway franchisee case study, testimonial, implementation record, or operator statement before raising confidence or treating Restaurant365 as a Subway-wide standard."
+      ],
+      "why_it_matters": "This research provides insights into potential vendor relationships and training tools used by franchisees, which could impact operational strategies."
+    }
+  }
+}

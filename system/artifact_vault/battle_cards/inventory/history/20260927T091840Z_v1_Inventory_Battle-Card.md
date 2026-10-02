@@ -1,0 +1,47 @@
+# Inventory — Battle Card
+
+Genius: 0 brands (0% of known) out of 30/1663 brands tracked with a known vendor in this category.
+
+## Competitors
+
+### Restaurant365
+
+Genius: 0 brands (0% of known) vs. Restaurant365: 11 brands (36.7% of known) -- delta +36.7 pts
+
+*No category-specific battle card content on file yet.*
+
+### Nory
+
+Genius: 0 brands (0% of known) vs. Nory: 5 brands (16.7% of known) -- delta +16.7 pts
+
+**Positioning:** Positions as a "Restaurant Operating System": AI-driven forecasting-to-scheduling, workforce management (HR, time & attendance, compliance), inventory/purchasing, and Google review aggregation/response, under one narrative. AI/forecasting-first, not POS-first.
+
+**Nory advantages:**
+- Leads with AI-forecasting explainability that Toast and Restaurant365 don't emphasize
+
+*No category-specific battle card content on file yet.*
+
+### Apicbase
+
+Genius: 0 brands (0% of known) vs. Apicbase: 3 brands (10.0% of known) -- delta +10.0 pts
+
+*No category-specific battle card content on file yet.*
+
+*No competitor_intelligence profile on file for this vendor yet.*
+
+### Crunchtime
+
+Genius: 0 brands (0% of known) vs. Crunchtime: 2 brands (6.7% of known) -- delta +6.7 pts
+
+*No category-specific battle card content on file yet.*
+
+### Fourth
+
+Genius: 0 brands (0% of known) vs. Fourth: 2 brands (6.7% of known) -- delta +6.7 pts
+
+*No category-specific battle card content on file yet.*
+
+*No competitor_intelligence profile on file for this vendor yet.*
+
+---
+*Sourced from ecosystem_intelligence.json + competitor_intelligence — not re-researched from scratch.*

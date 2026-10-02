@@ -1,0 +1,199 @@
+{
+  "brand_id": "brand-krispy-kreme",
+  "brand_name": "Krispy Kreme",
+  "identity": {
+    "parent_ownership": {
+      "value": "Krispy Kreme, Inc.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "hq_city_state": {
+      "value": "Charlotte, North Carolina, USA",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "founded_year": {
+      "value": "1937",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "market_identity": {
+      "value": "Doughnut and coffee QSR / omnichannel sweet treats",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "ownership_type": {
+      "value": "Public — NASDAQ: DNUT",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "operating_structure": {
+      "value": "361 units in canonical pack: 307 company-owned / 54 franchisee-owned.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    }
+  },
+  "synopsis": {
+    "value": "Krispy Kreme is a doughnut and coffee qsr / omnichannel sweet treats brand. It sits within Krispy Kreme, Inc., so parent-level enterprise architecture, procurement and technology relationships are material to account strategy. The canonical estate has a substantial company-operated base, giving corporate direct operating economics while franchise compatibility still matters. For RBB, prioritize the operating workflows, payments/digital experience, labor impact, reliability and measurable restaurant-level ROI appropriate to the concept.",
+    "status": "reported",
+    "evidence_ids": [
+      "top500-profile-gapfill::2026-09-29-merged-batches01-14"
+    ],
+    "confidence": "high",
+    "as_of": "2026-09-29",
+    "scope": "brand",
+    "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": 361.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-10-01",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchised_units": {
+      "value": 54.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-10-01",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "company_owned_units": {
+      "value": 307.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-10-01",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Krispy Kreme, Inc. (DNUT) ↓3.4% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-26",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/DNUT"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Krispy Kreme, Inc. (DNUT) ↑3.6% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-02",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/DNUT"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Krispy Kreme, Inc. (DNUT) ↓4.0% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-03",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/DNUT"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Krispy Kreme, Inc. (DNUT) ↓3.0% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-09",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/DNUT"
+    },
+    {
+      "signal_type": "other",
+      "value": "[🔻 52W LOW] Krispy Kreme, Inc. (DNUT) near 52-week low — distress or M&A signal",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-24",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/DNUT"
+    }
+  ],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-25T21:08:01Z",
+  "updated_at": "2026-10-01T10:36:02Z",
+  "trajectory": {
+    "badge": "Flat",
+    "metric_used": "unit_delta_pct",
+    "value_pct": -0.5509641873278237,
+    "as_of_year": "2024",
+    "underlying": {
+      "system_sales_usd": 747900000.0,
+      "unit_count": 361.0,
+      "auv_usd": 2065000.0,
+      "sales_delta_pct": 7.37975592246949,
+      "units_delta_pct": -0.5509641873278237
+    },
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

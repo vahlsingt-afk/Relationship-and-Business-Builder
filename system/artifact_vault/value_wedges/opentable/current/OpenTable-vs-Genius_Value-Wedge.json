@@ -1,0 +1,15 @@
+{
+  "competitor_slug": "opentable",
+  "vendor_display_name": "OpenTable",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "OpenTable faces growing competition from Resy and Tock, which merged (both under American Express ownership) to form a reservations marketplace of approximately 25,000 restaurants."
+    }
+  ]
+}

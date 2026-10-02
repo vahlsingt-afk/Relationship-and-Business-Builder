@@ -1,0 +1,50 @@
+{
+  "competitor_id": "comp-square",
+  "competitor_slug": "square",
+  "display_name": "Square",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:10Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:36Z",
+  "latest_cos_commentary": {
+    "headline": "Square (Block, Inc.) is a large, publicly traded POS/payments platform whose food-and-beverage segment GPV grew 21% year-over-year in Q1 2026, its strongest growth since 2023, as it pushes upmarket into larger multi-location merchants.",
+    "genius_exposure": "Direct competitor across POS and payments; Square's own investor commentary explicitly names Toast as a restaurant POS/payments competitor, indicating Square is positioning itself in the same competitive set that includes Genius.",
+    "competitive_timing": "Food-and-beverage GPV growth reaccelerated to its strongest pace since 2023, and Square is actively expanding into larger multi-location restaurant/hospitality accounts rather than staying purely in the small independent-restaurant segment.",
+    "sales_response": "Expect Square to increasingly appear in larger multi-location restaurant RFPs, not just small independent accounts; be prepared to differentiate Genius on enterprise support, integrated payments depth, and multi-location management rather than assuming Square is only a small-merchant tool.",
+    "risk_and_uncertainty": "Public GPV/growth figures are segment-wide (food & beverage), not restaurant-only or Genius-comparable in scope; avoid treating them as a like-for-like market-share comparison.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 91
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 91,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "restaurant-specific (vs. broader food & beverage) customer count",
+        "current named enterprise restaurant chain customers",
+        "pricing model changes in 2026"
+      ]
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "competitor_id": "comp-spoton",
+  "competitor_slug": "spoton",
+  "display_name": "SpotOn",
+  "aliases": [],
+  "vendor_entity_id": "vendor-spoton",
+  "primary_category": "pos",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Winning Toast switchers on price/service: \"It saves me about 40% compared to what I had with Toast\" (Brian Seo, GM/Partner, Ruby Chow's)",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:47:19Z"
+      },
+      {
+        "point": "Appetize gives stadium/venue reach, overlapping Genius sports & entertainment",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:19Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-10-02T09:46:57Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:57Z",
+  "latest_cos_commentary": {
+    "headline": "POS and payments competitor is tying operator profit recommendations to its dashboard.",
+    "genius_exposure": "POS and payments competitor is tying operator profit recommendations to its dashboard.",
+    "competitive_timing": "SpotOn opened beta access to Profit AI in June 2026 and reported Q2 product and customer momentum in July.",
+    "sales_response": "Ask beta customers for realized labor, food cost and guest outcomes before treating AI claims as a buying trigger.",
+    "risk_and_uncertainty": "Beta release does not establish measured enterprise-wide ROI.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 40
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 40,
+    "pack_claim_count": 14,
+    "pack_claims_with_url": 10,
+    "pack_claims_inherited_url": 6,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 4,
+      "legacy_claims_need_date_and_current_status_check": 14,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

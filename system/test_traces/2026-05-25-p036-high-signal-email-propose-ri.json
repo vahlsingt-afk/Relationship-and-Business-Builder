@@ -1,0 +1,63 @@
+{
+  "title": "P-036: High-signal email should propose RI (not silently skip)",
+  "trace_type": "ri_assessment_doctrine",
+  "source": "relationship_signals_unit_test",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-25",
+  "sprint": "RB 9.9",
+  "protocol": "P-036",
+  "scenario_id": "p036-case-1",
+  "summary": "An inbound email from a known RC (Bob Gibson / Toast) replies to an active thread. relationship_signals.py should classify this as inbound_warmth or active_thread_movement with strategic_relevance=high, ri_assessment.status=proposed, and display_recommendation=show. passive_ri_ingest should pick it up and write a proposed event. The daily brief should surface this with RI language.",
+  "expected_ri_assessment": {
+    "status": "proposed",
+    "source": "relationship_signals",
+    "source_freshness": "fresh",
+    "confidence_gte": 0.60,
+    "display_recommendation": "show",
+    "proposed_mutation_command": "touch"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label": "Email overlay processes inbound message",
+      "description": "email_overlay.py finds an inbound email from bob.gibson@toasttab.com with subject 'Following up on our conversation' timestamped within the last 24 hours. The sender matches baseline contact bob-gibson-toast (RC). Active thread T-2026-05-toast-bob-gibson is open.",
+      "input": {
+        "source": "email",
+        "sender": "bob.gibson@toasttab.com",
+        "subject": "Following up on our conversation",
+        "event_at": "2026-05-25T08:15:00Z",
+        "active_thread_match": "T-2026-05-toast-bob-gibson"
+      },
+      "expected_signal_type": "inbound_warmth",
+      "expected_strategic_relevance": "high",
+      "expected_ri_assessment_status": "proposed"
+    },
+    {
+      "step": 2,
+      "label": "passive_ri_ingest processes the candidate",
+      "description": "passive_ri_ingest.py collects the signal, passes all gates (strength >= 0.40, relevance=high, source=fresh, entity matched), writes a proposed RI event to the event store.",
+      "expected_outcome": "events_written count >= 1; ri_assessment.status=proposed; proposed_mutation.command=touch"
+    },
+    {
+      "step": 3,
+      "label": "Daily brief surfaces RI language",
+      "description": "daily_brief.py renders a relationship signal section referencing Bob Gibson / Toast with a recommended action. Proof row shows ri_assessed_proposed:1.",
+      "expected_display": "show",
+      "expected_proof_action": "ri_assessed_proposed:1"
+    }
+  ],
+  "defects": [],
+  "acceptance_criteria": [
+    "signal from bob.gibson@toasttab.com classified as inbound_warmth or active_thread_movement",
+    "ri_assessment.status = proposed",
+    "ri_assessment.display_recommendation = show",
+    "ri_assessment.proposed_mutation.command = touch",
+    "passive_ri_ingest events_written >= 1",
+    "daily brief surfaces relationship signal with RI language"
+  ],
+  "anti_patterns": [
+    "signal silently dropped without ri_assessment block",
+    "signal classified as irrelevant despite high-relevance match",
+    "display_recommendation = suppress for high-relevance inbound from RC"
+  ]
+}

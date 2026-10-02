@@ -1,0 +1,283 @@
+{
+  "brand_id": "brand-shake-shack",
+  "brand_name": "Shake Shack",
+  "identity": {
+    "parent_ownership": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "hq_city_state": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "founded_year": {
+      "value": "2004",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "market_identity": {
+      "value": "Limited-service / quick-service restaurant brand",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "ownership_type": {
+      "value": "Public",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "operating_structure": {
+      "value": "Brand operates through a franchise-led or mixed restaurant system; source-specific scope should be preserved.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    }
+  },
+  "synopsis": {
+    "value": "Shake Shack is a limited-service restaurant brand. the reviewed evidence indicates a franchise-led or mixed operating model. For RBB, ownership and operator structure should be kept separate from any technology deployment claims, and only explicitly evidenced technology relationships are included here.",
+    "status": "reported",
+    "evidence_ids": [
+      "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+    ],
+    "confidence": "medium",
+    "as_of": "2026-09-29",
+    "scope": "brand",
+    "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": 373.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchised_units": {
+      "value": 44.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "company_owned_units": {
+      "value": 329.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [
+    {
+      "signal_type": "other",
+      "value": "[📊 VOLUME SPIKE] Shake Shack Inc. (SHAK) 1.8x normal volume — elevated activity",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-04",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/SHAK"
+    },
+    {
+      "signal_type": "other",
+      "value": "8-K  - Current report",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-05",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1620533/000162053326000033/0001620533-26-000033-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "10-Q  - Quarterly report [Sections 13 or 15(d)]",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-05",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/0001620533-26-000034-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Shake Shack Inc. (SHAK) ↑12.2% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-05",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/SHAK"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📊 VOLUME SPIKE] Shake Shack Inc. (SHAK) 4.7x normal volume — elevated activity",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-05",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/SHAK"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Shake Shack Inc. (SHAK) ↓5.5% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-06",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/SHAK"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Shake Shack Inc. (SHAK) ↓4.3% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-18",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/SHAK"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Shake Shack Inc. (SHAK) ↑3.2% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-19",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/SHAK"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Shake Shack Inc. (SHAK) ↓3.3% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-27",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/SHAK"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Shake Shack Inc. (SHAK) ↓6.5% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-09",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/SHAK"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Shake Shack Inc. (SHAK) ↓8.3% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-15",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/SHAK"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Shake Shack Inc. (SHAK) ↑3.8% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-21",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/SHAK"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Shake Shack Inc. (SHAK) ↑3.5% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-28",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/SHAK"
+    }
+  ],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-25T21:08:00Z",
+  "updated_at": "2026-09-29T15:48:18Z",
+  "trajectory": {
+    "badge": "Growing",
+    "metric_used": "unit_delta_pct",
+    "value_pct": 11.676646706586826,
+    "as_of_year": "2024",
+    "underlying": {
+      "system_sales_usd": 1303961000.0,
+      "unit_count": 373.0,
+      "auv_usd": 3870000.0,
+      "sales_delta_pct": 15.474589074395666,
+      "units_delta_pct": 11.676646706586826
+    },
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

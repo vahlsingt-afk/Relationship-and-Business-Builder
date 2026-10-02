@@ -1,0 +1,122 @@
+{
+  "vendor_slug": "worldpay",
+  "conflicts": [
+    {
+      "account": "PAPA JOHN'S USA, INC.",
+      "issue": "Stale Worldpay opportunity",
+      "incoming_legacy_view": "Worldpay: evaluating gateway/POS",
+      "newer_evidence": "PAR selected Jan. 12, 2026; rollout through 2027",
+      "evidence_type": "Verified public fact",
+      "resolution_action": "Supersede open POS opportunity; monitor deployment and adjacency",
+      "status": "RESOLVED"
+    },
+    {
+      "account": "Focus Brands (GoTo Foods)",
+      "issue": "Scope and deployment health",
+      "incoming_legacy_view": "Worldpay: moving all to Qu",
+      "newer_evidence": "Qu confirms seven-brand POS selection; >2,000 installs; user reports rollout delay",
+      "evidence_type": "Verified + user intelligence",
+      "resolution_action": "Validate rollout pace and sources of delay without overstating failure",
+      "status": "OPEN"
+    },
+    {
+      "account": "WENDY'S INTERNATIONAL INC",
+      "issue": "Ownership boundary",
+      "incoming_legacy_view": "Worldpay: NCR Aloha; user reported active decision",
+      "newer_evidence": "Not an opportunity owned by Todd",
+      "evidence_type": "User correction",
+      "resolution_action": "Retain for intelligence only; no Todd pursuit action",
+      "status": "EXCLUDED"
+    },
+    {
+      "account": "DEL TACO LLC",
+      "issue": "Duplicate/unowned leads",
+      "incoming_legacy_view": "Worldpay: NCR/Olo stack",
+      "newer_evidence": "User: leads exist across Global Payments",
+      "evidence_type": "User intelligence",
+      "resolution_action": "Inventory and merge leads; assign owner and next action",
+      "status": "URGENT"
+    },
+    {
+      "account": "Dutch Bros",
+      "issue": "Ownership boundary",
+      "incoming_legacy_view": "Worldpay: Xenial POS; user: existing Genius customer",
+      "newer_evidence": "Managed by a Global Payments account manager; not Todd-owned",
+      "evidence_type": "User correction + public context",
+      "resolution_action": "Retain for intelligence only; account manager owns activity",
+      "status": "EXCLUDED"
+    },
+    {
+      "account": "FREDDY'S FROZEN CUSTARD LLC",
+      "issue": "Channel posture and buying event",
+      "incoming_legacy_view": "P2 adjacency/international opportunity",
+      "newer_evidence": "RDS-protected account; new CIO reportedly reinforcing PAR; no direct outreach",
+      "evidence_type": "High RDS field intelligence",
+      "resolution_action": "Downgrade to watchlist; prove the smaller RDS pilot first",
+      "status": "REFRAMED"
+    },
+    {
+      "account": "GRAETERS",
+      "issue": "Product edition",
+      "incoming_legacy_view": "Worldpay: Brink",
+      "newer_evidence": "User: PAR, but not Enterprise",
+      "evidence_type": "User intelligence",
+      "resolution_action": "Confirm SKU, reseller and enterprise migration fit",
+      "status": "OPEN"
+    },
+    {
+      "account": "FIVE GUYS",
+      "issue": "Buying-event certainty and timing",
+      "incoming_legacy_view": "Spring 2027 RFP assumed; MJ departure reported",
+      "newer_evidence": "Capability evaluation plausible; no formal RFP found; MJ remains active",
+      "evidence_type": "Field intelligence + independent check",
+      "resolution_action": "Confirm evaluation type, expiration/notice dates, sponsor, scope and decision criteria",
+      "status": "URGENT"
+    },
+    {
+      "account": "SUBWAY",
+      "issue": "Genius product scope",
+      "incoming_legacy_view": "Prior record alternated between partial Genius POS and DMB",
+      "newer_evidence": "Ryan reports proprietary POS plus global Genius KDS deployment; exact sites/status remain unverified",
+      "evidence_type": "Internal leadership intelligence",
+      "resolution_action": "Confirm product owner, KDS sites, deployment status, commitments and sponsor",
+      "status": "URGENT"
+    },
+    {
+      "account": "CHOICE HOTELS",
+      "issue": "RFP status aging",
+      "incoming_legacy_view": "Active RFP reported in July",
+      "newer_evidence": "No August stage/deadline refresh found",
+      "evidence_type": "RM intelligence aging",
+      "resolution_action": "Confirm current stage, dates, sponsor and retained estate",
+      "status": "URGENT"
+    },
+    {
+      "account": "PAPA JOHN'S USA, INC.",
+      "issue": "Linux technical dependency",
+      "incoming_legacy_view": "PAR rollout tracked; no technical dependency recorded",
+      "newer_evidence": "RDS claims Linux build is required; public sources do not confirm",
+      "evidence_type": "Confidential field intelligence",
+      "resolution_action": "Validate with technical/product owners; do not persist as fact",
+      "status": "OPEN"
+    },
+    {
+      "account": "POLLO CAMPERO",
+      "issue": "Decision openness and procurement scope",
+      "incoming_legacy_view": "Not present in prior portfolio",
+      "newer_evidence": "Potential RFI and DMB issue; Oracle migration may already be advanced",
+      "evidence_type": "Internal account brief",
+      "resolution_action": "Obtain NDA/RFI and apply bid/no-bid gates",
+      "status": "URGENT"
+    },
+    {
+      "account": "RDS FIVE-UNIT REBRAND PILOT",
+      "issue": "Customer identity and authority",
+      "incoming_legacy_view": "Not present in prior portfolio",
+      "newer_evidence": "Clean-slate rebrand offered as pilot; entity, concept and authority unconfirmed",
+      "evidence_type": "High channel field intelligence",
+      "resolution_action": "Document entity, authority, dates, budget, scope and protection terms",
+      "status": "URGENT"
+    }
+  ]
+}

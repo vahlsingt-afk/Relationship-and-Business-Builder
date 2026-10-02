@@ -1,0 +1,126 @@
+user_name: Todd
+created: "2026-06-28"
+
+strava:
+  enabled: true
+  client_id: ""
+  client_secret: ""
+  refresh_token: ""
+
+domains:
+
+  - id: spiritual
+    label: "Spiritual"
+    goals:
+      - id: morning_prayer
+        label: "Morning Prayer"
+        brief_icon: "🙏"
+        data_source: manual
+        target: 7
+        target_unit: "days/week"
+        alert_if_missed_days: 2
+        log_keywords:
+          - "prayed"
+          - "praying"
+          - "morning prayer"
+          - "pray together"
+          - "prayed together"
+
+      - id: devotions
+        label: "Devotions"
+        brief_icon: "📖"
+        data_source: manual
+        target: 5
+        target_unit: "days/week"
+        alert_if_missed_days: 3
+        log_keywords:
+          - "devotions"
+          - "devotional"
+          - "read the bible"
+          - "bible reading"
+          - "read scripture"
+          - "scripture reading"
+
+  - id: health
+    label: "Health & Fitness"
+    goals:
+      - id: exercise
+        label: "Exercise"
+        brief_icon: "🏃"
+        data_source: strava
+        target: 4
+        target_unit: "days/week"
+        strava_activity_types:
+          - Run
+          - Walk
+          - Ride
+          - Workout
+          - WeightTraining
+          - Hike
+          - Swim
+        alert_if_missed_days: 3
+
+  - id: family
+    label: "Family"
+    goals:
+      - id: mary_connection
+        label: "Quality time with Mary"
+        brief_icon: "❤️"
+        data_source: manual
+        target: 7
+        target_unit: "days/week"
+        alert_if_missed_days: 2
+        log_keywords:
+          - "with mary"
+          - "mary and i"
+          - "me and mary"
+          - "mary and me"
+          - "time with mary"
+
+      - id: date_night
+        label: "Date Night"
+        brief_icon: "🕯️"
+        data_source: calendar
+        target: 1
+        target_unit: "times/week"
+        calendar_keywords:
+          - "date night"
+          - "dinner with mary"
+          - "mary dinner"
+        # Calendar is the primary source, but a conversational report ("we had
+        # a date night") is still real evidence the calendar may have missed —
+        # unlike exercise (Strava/GPS-verified), there's no risk of gaming a
+        # date night, so a direct report should count too.
+        log_keywords:
+          - "date night"
+          - "went on a date"
+          - "had a date"
+        alert_if_gap_days: 10
+
+  - id: church
+    label: "Church"
+    goals:
+      - id: sunday_service
+        label: "Sunday Service"
+        brief_icon: "⛪"
+        data_source: manual
+        target: 4
+        target_unit: "times/month"
+        alert_if_missed_days: 8
+        log_keywords:
+          - "church"
+          - "sunday service"
+          - "worship service"
+          - "went to church"
+
+author_projects:
+  - id: book_1
+    title: "Book 1"
+    current_state: "in progress"
+    last_session: null
+
+personal_projects:
+  - id: cabin
+    name: "Cabin Projects"
+    status: "ongoing"
+    last_updated: null

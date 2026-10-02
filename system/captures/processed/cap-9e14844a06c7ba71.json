@@ -1,0 +1,72 @@
+{
+  "file_id": "cap-9e14844a06c7ba71",
+  "queued_at": "2026-09-21T09:23:08+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-20_0706_candidate-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-20_0706_candidate-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260920-0706-candidate-validation`\n- Research system: `Codex web research`\n- Started at: `2026-09-20 07:06 CDT`\n- Completed at: `2026-09-20 07:07 CDT`\n- Research scope: Validate four unresolved candidate pages for McDonald's and Taco Bell.\n- Queue item or vendor: Coates Group, PAR OPS, and Restaurant365 candidate evidence.\n- Methodology: Direct-page candidate validation using vendor-owned case studies; claims remain review-first and scoped to the geography or franchise operator named by the source.\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 4\n- Conflicts found: 0\n- Material takeaway: All four candidates support real relationships, but only at the stated scope. Coates supports McDonald's Australia and New Zealand deployments. PAR OPS and Restaurant365 support named franchise operators; neither is evidence of an enterprise-wide Taco Bell, KFC, or A&W standard.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: McDonald's\n- Vendor: Coates Group\n- Product or category: Outdoor and indoor digital menu boards, order-confirmation screens, self-service kiosks, and supporting software/integration\n- Relationship indication: customer\n- Deployment scope: regional\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: Vendor-owned case study names the customer, products, geography, deployment counts, POS integration, and measured result. The page does not show a publication date.\n- Source title: Digital Signage Improves Order Accuracy By 15% for McDonald's ANZ\n- Source URL: https://coatesgroup.com/case-studies/mcdonalds-anz-digital-signage-for-order-accuracy\n- Publisher or source owner: Coates Group\n- Published date, if known: Not shown on page\n- Accessed date: 2026-09-20\n- Exact supporting excerpt or faithful factual note: Coates reports outdoor menu boards and confirmation screens at more than 800 locations, plus indoor menu boards and kiosks at more than 1,000 McDonald's ANZ storefronts.\n- Product-specific evidence: Coates says it integrated the technology with McDonald's existing POS and reports a 15% improvement in order accuracy.\n- Conflicting or limiting evidence: Vendor-authored; geographic scope is Australia and New Zealand and must not be generalized globally. The page does not establish current rollout status outside the described deployment.\n- Recommended follow-up: Seek a McDonald's ANZ or independent source confirming the deployment and timeframe.\n\n### Observation 2\n\n- Brand: McDonald's\n- Vendor: Coates Group\n- Product or category: Traditional building, pylon, and drive-through signage\n- Relationship indication: customer\n- Deployment scope: regional\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: Vendor-owned case study describes a long-running named relationship, product categories, geography, and deployment counts, and explicitly says delivery continues.\n- Source title: McDonald's ANZ and Coates Group Celebrate 50 Years of Partnership\n- Source URL: https://coatesgroup.com/case-studies/mcdonalds-anz-and-coates-50-years-of-signage-solutions-partnership\n- Publisher or source owner: Coates Group\n- Published date, if known: Not shown on page\n- Accessed date: 2026-09-20\n- Exact supporting excerpt or faithful factual note: Coates describes more than 50 years supplying McDonald's ANZ and reports next-generation building signage at 250+ restaurants, pylon signs at 300+, and drive-through signage at 500+ locations.\n- Product-specific evidence: The page distinguishes traditional signage packages from Coates' digital signage products and states that traditional-signage delivery continues.\n- Conflicting or limiting evidence: Vendor-authored and limited to Australia and New Zealand; it should not be represented as a global McDonald's technology standard.\n- Recommended follow-up: Identify a dated McDonald's ANZ procurement, design-standard, or supplier-recognition source.\n\n### Observation 3\n\n- Brand: Taco Bell\n- Vendor: PAR Technology / PAR OPS (Delaget lineage)\n- Product or category: Operational analytics and reporting dashboard; DailyPay is a separate co-deployed earned-wage-access product\n- Relationship indication: customer\n- Deployment scope: franchisee\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: PAR's case study names MAS Restaurant Group, its Taco Bell franchise scope, the number of stores, products used, and operational outcomes.\n- Source title: MAS Restaurant Group partners with PAR OPS and DailyPay to improve retention\n- Source URL: https://partech.com/resource/mas-taco-bell-case-study-delaget-and-dailypay/\n- Publisher or source owner: PAR Technology\n- Published date, if known: Not shown on page\n- Accessed date: 2026-09-20\n- Exact supporting excerpt or faithful factual note: PAR identifies MAS as a 111-location Taco Bell franchisee in two states and says PAR OPS unified reporting across 75 existing and 36 acquired stores.\n- Product-specific evidence: PAR OPS aggregates speed-of-service, sales, back-of-house, and POS data in one dashboard; the page also identifies its Coach software and DailyPay as distinct products.\n- Conflicting or limiting evidence: This is a franchisee deployment and is not evidence that Taco Bell corporate standardized PAR OPS or DailyPay enterprise-wide.\n- Recommended follow-up: Look for MAS or Yum! Brands confirmation and a dated source establishing deployment timing.\n\n### Observation 4\n\n- Brand: Taco Bell; KFC; A&W\n- Vendor: Restaurant365\n- Product or category: Accounting and inventory platform with POS, vendor, and bank integrations\n- Relationship indication: customer\n- Deployment scope: franchisee\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: Restaurant365's case study names BLCO Enterprises, the three franchised brands, the location count, the products used, implementation detail, and reported results.\n- Source title: Smooth Roll Out of R365 at BLCO's 29 KFC, Taco Bell and A&W Locations Kicks Off Efficiency Gains\n- Source URL: https://www.restaurant365.com/case-studies/smooth-roll-out-of-restaurant365-at-blcos-29-kfc-taco-bell-and-aw-locations-kicks-off-efficiency-gains/\n- Publisher or source owner: Restaurant365\n- Published date, if known: Not shown on page\n- Accessed date: 2026-09-20\n- Exact supporting excerpt or faithful factual note: Restaurant365 says BLCO operates KFC, Taco Bell, and A&W franchises and had 29 active locations on R365 after an initial four-restaurant implementation.\n- Product-specific evidence: The page labels Accounting and Inventory as products used and describes integrations with POS systems, food-and-beverage vendors, and banks.\n- Conflicting or limiting evidence: The page does not allocate the 29 locations by brand. This is BLCO franchisee evidence, not a corporate standard for any of the three brands.\n- Recommended follow-up: Confirm BLCO's current brand/location mix and seek corporate or additional franchisee corroboration.\n\n## Negative findings\n\n- Candidate or claim: Enterprise-wide or global deployment inference from the four pages.\n- Pages checked: All four source pages in the ledger.\n- Result: None of the pages supports an enterprise-wide global standard. Each source is limited to McDonald's ANZ or a named franchise operator.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://coatesgroup.com/case-studies/mcdonalds-anz-digital-signage-for-order-accuracy | Case study | 2026-09-20 | Observation 1 | Product, geography, deployment counts, integration, and outcome stated; no page date shown. |\n| https://coatesgroup.com/case-studies/mcdonalds-anz-and-coates-50-years-of-signage-solutions-partnership | Case study | 2026-09-20 | Observation 2 | Long-running ANZ relationship and product-specific counts; no page date shown. |\n| https://partech.com/resource/mas-taco-bell-case-study-delaget-and-dailypay/ | Case study | 2026-09-20 | Observation 3 | Strong franchisee-level evidence; no Taco Bell enterprise claim. |\n| https://www.restaurant365.com/case-studies/smooth-roll-out-of-restaurant365-at-blcos-29-kfc-taco-bell-and-aw-locations-kicks-off-efficiency-gains/ | Case study | 2026-09-20 | Observation 4 | Strong BLCO-level evidence; locations are not split by brand. |\n\n## Research notes and inferences\n\n- Inference: Coates appears to be a significant McDonald's ANZ signage and digital-experience supplier, but the pages alone do not establish the full current product footprint or any global mandate.\n- Inference: PAR OPS and Restaurant365 have credible traction among major-brand franchisees. Franchisee adoption is marketplace evidence, not proof of franchisor selection.\n- Review instruction: Preserve the exact geography/operator scope and the absence of visible publication dates during morning-cycle triage.",
+  "word_count": 1190,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-21T09:23:23+00:00",
+  "processing_result": {
+    "triage_stream_count": 5,
+    "noise_only": false,
+    "persisted_count": 5,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-001",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 4 trigger(s): named. Possible named subjects: Executive, Pages, Each, New Zealand, Candidate, Accessed."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-002",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'mcdonalds'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-003",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:par_technology' (matched term: 'par technology'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-004",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-005",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: McDonald's, Taco Bell, KFC, PAR Technology, Restaurant365, Coates Group. Macro/industry signal detected: 13 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: customer, de"
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "McDonald's",
+        "Taco Bell",
+        "Coates Group",
+        "PAR Technology",
+        "Restaurant365"
+      ],
+      "topics": [
+        "candidate validation",
+        "vendor relationships",
+        "case studies",
+        "franchisee evidence"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Seek a McDonald's ANZ or independent source confirming the deployment and timeframe.",
+        "Identify a dated McDonald's ANZ procurement, design-standard, or supplier-recognition source.",
+        "Look for MAS or Yum! Brands confirmation and a dated source establishing deployment timing.",
+        "Confirm BLCO's current brand/location mix and seek corporate or additional franchisee corroboration."
+      ],
+      "why_it_matters": "The findings provide insights into vendor relationships and franchisee evidence that could impact strategic decisions."
+    }
+  }
+}

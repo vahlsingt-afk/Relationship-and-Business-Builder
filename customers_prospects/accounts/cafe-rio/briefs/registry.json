@@ -1,0 +1,59 @@
+{
+  "account_id": "acct-cafe-rio",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-08-27T17:07:26Z",
+      "generated_for": "Zakary Bertram",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-27",
+      "path": "system/account_research/accounts/cafe-rio/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-08-27T17:08:13Z",
+      "generated_for": "Zakary Bertram",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-27",
+      "path": "system/account_research/accounts/cafe-rio/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-08-27T17:09:31Z",
+      "generated_for": "Zakary Bertram",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-27",
+      "path": "system/account_research/accounts/cafe-rio/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-08-27T17:11:11Z",
+      "generated_for": "Zakary Bertram",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-27",
+      "path": "system/account_research/accounts/cafe-rio/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 5,
+      "generated_at": "2026-08-27T17:17:06Z",
+      "generated_for": "Zakary Bertram",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-27",
+      "path": "system/account_research/accounts/cafe-rio/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 6,
+      "generated_at": "2026-09-25T16:12:09Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-25",
+      "path": "customers_prospects/accounts/cafe-rio/briefs/current/Background_Brief.md",
+      "superseded": false
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "competitor_id": "comp-nory",
+  "competitor_slug": "nory",
+  "display_name": "Nory",
+  "aliases": [],
+  "vendor_entity_id": "vendor-nory",
+  "primary_category": "inventory",
+  "competes_on": [
+    "back_office",
+    "restaurant_os_platform"
+  ],
+  "positioning_summary": "Positions as a \"Restaurant Operating System\": AI-driven forecasting-to-scheduling, workforce management (HR, time & attendance, compliance), inventory/purchasing, and Google review aggregation/response, under one narrative. AI/forecasting-first, not POS-first.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Leads with AI-forecasting explainability that Toast and Restaurant365 don't emphasize",
+        "evidence_id": "doc-bridgepoint-ops-recovered-relationships-and-deals",
+        "added_at": "2026-08-28T17:44:56Z"
+      },
+      {
+        "point": "Nory reports that restaurants using its platform have achieved up to a 20% reduction in operating costs and net profit increases exceeding 50%, and that it helps operators save over 100 hours of admin per restaurant per month by automating back-office tasks.",
+        "evidence_id": "note-0011",
+        "added_at": "2026-09-29T15:44:12Z"
+      }
+    ]
+  },
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:46:55Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:55Z",
+  "vendor_claims": [
+    {
+      "value": "AI-centered restaurant operating system rather than a core POS platform.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Nory presents a unified AI-driven operations proposition spanning forecasting, workforce, inventory/ordering, payroll, and business intelligence for multi-unit restaurants.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Product existence and positioning are better supported than claimed ROI or performance."
+    }
+  ],
+  "products": [
+    {
+      "value": "Nory Forecasting (AI Forecasting)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Nory Workforce (Workforce Management)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Nory Inventory/Ordering (Inventory/Ordering)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Nory Payroll (Payroll)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Nory BI/Operations Intelligence (Analytics/AI Operations)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Performance and ROI evidence identified in the bounded research cycle was predominantly vendor-hosted.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true,
+      "limitations_or_conflicts": "Does not demonstrate poor performance; it limits independent verification."
+    }
+  ],
+  "latest_cos_commentary": {
+    "headline": "Nory is a fast-growing, well-funded (~$63M total raised, $37M Series B led by Kinnevik in Sept 2025) UK-based AI-native restaurant back-office platform expanding into the US, with named customers including Black Sheep Coffee, Jamie Oliver Group, and Dave's Hot Chicken.",
+    "genius_exposure": "Competes with Genius's back_office and broader restaurant_os_platform ambitions (inventory, workforce, payroll, finance, BI); currently UK/Ireland-concentrated but actively expanding into the US market where it would compete more directly with Genius's core territory.",
+    "competitive_timing": "Large recent raise (Sept 2025) and stated US expansion make Nory a rising back-office competitor to watch, particularly as it moves from UK/Ireland dominance toward the US restaurant market.",
+    "sales_response": "If Nory appears in a competitive US deal, note its UK/Ireland-heavy customer base and recent (still-early) US expansion — probe for how established its US support, integrations, and reference customers actually are.",
+    "risk_and_uncertainty": "Cost-reduction and profit-increase statistics (20% opex reduction, 50%+ profit increase) are aggregate company-reported figures from investor/press materials, not independently verified per-account case studies; US market penetration is still early-stage.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 66
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 66,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Positioning",
+        "Pricing signals",
+        "Recent News / Product Updates",
+        "Snapshot",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current pricing",
+        "US-specific named customer scope and traction",
+        "detailed financial health beyond funding round"
+      ]
+    }
+  }
+}

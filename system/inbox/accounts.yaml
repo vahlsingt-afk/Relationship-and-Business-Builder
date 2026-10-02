@@ -1,0 +1,171 @@
+# Accounts manifest — calendar and email identities that feed the daily brief.
+#
+# Each account here can have a calendar and/or an email feed. The fetcher
+# writes to `system/inbox/calendar.<id>.json` and/or `system/inbox/email.<id>.json`;
+# the overlays aggregate across all enabled accounts and dedup by event/thread id.
+#
+# The set of `email` values across all accounts is treated as the
+# operator's "self" set — used to skip self-attendee matching, identify
+# sent threads, etc.
+#
+# Field meanings:
+#   id           — kebab-case identifier. Used as the per-file suffix.
+#   label        — human-readable description shown in the brief and reports.
+#   email        — the address this identity sends/receives from.
+#   role         — work | personal | board | side-project | other. Informational.
+#   feeds        — which streams this account contributes: [calendar, email].
+#   enabled      — false to suspend without deleting the entry.
+#   mcp_status   — informational: where the Cowork connector currently points.
+#   notes        — free-text context for future operators (or future-you).
+#
+# Operational rules:
+#   * Most users have more than one active Google identity. Each enabled row
+#     can contribute both calendar and email; the overlay aggregates and tags
+#     every event / thread with its `account_id`.
+#   * The PRIMARY identity is the user's personal/default operating identity.
+#     For Todd that is `personal` (vahlsingt@gmail.com), while BridgePoint is
+#     an active work identity. Both should normally carry [calendar, email].
+#   * When a connector points at a different account than this manifest
+#     claims, fetches will land in the wrong file. The fetcher validates
+#     against this manifest and warns on mismatch.
+
+version: 2
+last_updated: 2026-05-16
+
+accounts:
+
+  # ---------------------------------------------------------------------------
+  # PRIMARY — Todd's real-life calendar + inbox.
+  # ---------------------------------------------------------------------------
+  - id: personal
+    label: "Primary — vahlsingt@gmail.com"
+    email: vahlsingt@gmail.com
+    role: personal
+    feeds: [calendar, email]
+    enabled: true
+    mcp_status: |
+      Calendar connector currently points to this account. Confirmed
+      2026-09-08: the Gmail connector ALSO now points here (search_threads
+      returned vahlsingt@gmail.com threads, not todd@bridgepointops.com --
+      the prior note below claiming it pointed at bridgepoint was stale and
+      caused a live capture to be filed under the wrong account until
+      caught). Re-verify both connectors before trusting this note blindly;
+      Cowork connector targets can be repointed outside this repo's
+      control. Durable refresh should use:
+        python3 system/scripts/fetch_google.py both --account personal --mailbox both --days 14
+      with token:
+        ~/.config/rb/google_token.personal.json
+    notes: |
+      Real-life identity. Meetings get booked here, recruiter mail lands here,
+      personal contacts live here. This is the canonical calendar+inbox the
+      relationship system should be reading from.
+    # RB-DEFECT-2026-07-09b: Global Payments' Outlook/Exchange tenant is not
+    # Google Workspace, so the direct-OAuth path drafted for the
+    # `global-payments` account below (see its notes) doesn't apply. Todd
+    # published his GP Outlook calendar (Outlook web -> Settings -> Calendar
+    # -> Shared calendars -> Publish a calendar) and subscribed to the
+    # resulting ICS feed from this Google account as a secondary calendar
+    # (id e1r7qgiar4b01jmt490dsfqpn0o62c01@import.calendar.google.com).
+    # It stopped delivering real events back on 2026-07-29 (0 GP-tagged
+    # events), and manual export + outlook_manual_ingest.py became the real
+    # path for GP calendar/email (see the `global-payments` account's own
+    # mcp_status notes below).
+    #
+    # RB-2026-09-09: confirmed live that the subscription itself is now gone
+    # -- Google Calendar returns HTTP 404 Not Found for that calendar id,
+    # not just an empty event list. fetch_calendar() had no per-secondary-
+    # calendar error handling, so that single 404 raised uncaught and killed
+    # _fetch_for_account() entirely -- taking the primary calendar AND email
+    # fetch down with it (calendar fetch runs, and is written, before email
+    # in that function). That's what actually blocked today's Daily Brief /
+    # Intelligence Brief: email:personal and calendar:personal both went
+    # stale (last real refresh 2026-09-08), brief_acceptance_gate's
+    # freshness check failed on them, and the pipeline sent a failure alert
+    # instead of the brief. Removed the dead entry since the ICS feed is
+    # confirmed gone and superseded by manual export; fetch_calendar() also
+    # now isolates per-secondary-calendar failures (see its code) so a
+    # future stale entry degrades to a warning instead of taking the whole
+    # account down again.
+
+  # ---------------------------------------------------------------------------
+  # SECONDARY — BridgePoint Ops business domain. Optional.
+  # ---------------------------------------------------------------------------
+  - id: bridgepoint
+    label: "BridgePoint Ops — todd@bridgepointops.com"
+    email: todd@bridgepointops.com
+    role: work
+    feeds: [calendar, email]
+    enabled: true
+    mcp_status: |
+      RB-2026-09-08: no working Gmail or Calendar MCP connector currently
+      reaches this account -- confirmed live that the Gmail connector
+      previously believed to point here actually points at
+      vahlsingt@gmail.com (personal) instead, and there is no second
+      Google Calendar/Gmail connector available. calendar:bridgepoint and
+      email:bridgepoint have no automated capture path as of this date.
+      Durable refresh (once a connector or OAuth token exists) should use:
+        python3 system/scripts/fetch_google.py both --account bridgepoint --mailbox both --days 14
+      with token:
+        ~/.config/rb/google_token.bridgepoint.json
+    notes: |
+      BridgePoint Ops domain. If you stop using BridgePoint as a business
+      identity, set enabled: false rather than deleting — closed accounts are
+      part of the ledger.
+
+  # ---------------------------------------------------------------------------
+  # WORK — Global Payments (started 2026-07-06/07). Fed via manual export
+  # ingestion, not a live fetcher — see notes below.
+  # ---------------------------------------------------------------------------
+  - id: global-payments
+    label: "Global Payments — tv74852@globalpayments.com"
+    email: tv74852@globalpayments.com
+    role: work
+    feeds: [calendar, email]
+    enabled: true
+    provider: microsoft365
+    automated_fetch: false
+    ingestion_mode: manual_export
+    mcp_status: |
+      Confirmed 2026-07-09: this IS a Microsoft 365/Exchange account, not
+      Google Workspace — fetch_google.py cannot authenticate against it and
+      no direct Microsoft Graph connector was built (no Outlook/Microsoft
+      365 connector available in the Claude MCP registry as of 2026-07-09;
+      a custom Graph API OAuth fetcher would need its own Azure AD app
+      registration, which a locked-down corporate tenant may not allow to
+      consent at all — not attempted without Todd driving the interactive
+      consent himself).
+      The ICS-subscription workaround noted below (secondary_calendars on
+      `personal`) stopped delivering real events (confirmed 2026-07-29:
+      calendar.personal.json had 0 GP-tagged events) — Todd re-tried
+      publishing the GP calendar and it didn't work, likely blocked by GP's
+      Exchange tenant policy.
+      Also tried 2026-07-29: an Outlook auto-forward Inbox Rule (GP inbox ->
+      vahlsingt@gmail.com) -- created on the GP side, did not deliver.
+      Consistent with the ICS-publish failure above; both point at GP's
+      Exchange/M365 tenant having DLP or conditional-access policy blocking
+      external data egress by design, not a one-off feature gap. Don't
+      re-attempt either without a policy change on GP's end.
+      RESOLUTION (2026-07-29): New Outlook for Mac has no working AppleScript
+      bridge (every account/event/message query returns empty even though
+      the app itself responds) and no local readable mail/calendar store
+      (checked ~/Library/Containers/com.microsoft.Outlook/Data — caches and
+      telemetry only). Manual export is now the path: Todd drags calendar
+      events and emails out of Outlook to the Finder (.ics / .eml files)
+      into `system/inbox/outlook_exports/`, and
+      `system/scripts/outlook_manual_ingest.py` parses + merges them into
+      `calendar.global-payments.json` / `email.global-payments.json`
+      (run via `--ingest-new --confirm`; wired into the morning pipeline's
+      scan phase as a best-effort step). This account entry is enabled with
+      both feeds again because those files are now genuinely populated by
+      that ingester, not by a live fetch.
+    notes: |
+      Direct integration is unavailable by GP policy. This is an acknowledged
+      coverage limitation, not an automated-fetch failure. Originally expected
+      to carry most weekday meetings + internal GP
+      email. The Google-Calendar ICS-subscription workaround for calendar
+      broke; email had no automated path at all. Both are now covered by
+      manual drag-export + outlook_manual_ingest.py (see mcp_status above)
+      until either a Graph API connector becomes viable or GP re-enables
+      calendar publishing. The personal account remains home for
+      outside-the-job relationships; BridgePoint remains the
+      advisory/consulting business identity.

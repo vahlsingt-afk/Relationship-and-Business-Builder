@@ -1,0 +1,15 @@
+{
+  "competitor_slug": "omilia",
+  "vendor_display_name": "Omilia",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "One restaurant customer; integrated with Yum's proprietary Byte platform, so portability to other POS is unproven"
+    }
+  ]
+}

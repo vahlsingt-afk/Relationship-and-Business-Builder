@@ -1,0 +1,315 @@
+{
+  "phase2_file": "system/research/phase2_backlog_batch_b_evidence_draft_2026-08-04.json",
+  "category": "Backlog Validation (Olo/Paytronix/Thanx/Qu)",
+  "rows_processed": 46,
+  "rows_skipped": 0,
+  "dry_run": false,
+  "added": 46,
+  "updated": 0,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 45,
+    "enrich_existing_relationship": 0,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 1,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 0,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Olo",
+        "customer": "First Watch",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-first-watch-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Freddy's Frozen Custard & Steakburgers",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-freddy-s-frozen-custard-steakburgers-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "P.F. Chang's",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-p-f-chang-s-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Cold Stone Creamery",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-cold-stone-creamery-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Paris Baguette",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-paris-baguette-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Black Bear Diner",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-black-bear-diner-online-ordering-pilot-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Din Tai Fung",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-din-tai-fung-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "California Fish Grill",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-california-fish-grill-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "True Food Kitchen",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-true-food-kitchen-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Mendocino Farms",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-mendocino-farms-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Another Broken Egg Cafe",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-another-broken-egg-cafe-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Pei Wei Asian Kitchen",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-pei-wei-asian-kitchen-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "WaBa Grill",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-waba-grill-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "O'Charley's",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-o-charley-s-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Honeygrow",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-honeygrow-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Ted's Montana Grill",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-ted-s-montana-grill-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Nando's",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-nando-s-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Lucille's Smokehouse Bar-B-Que",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-lucille-s-smokehouse-bar-b-que-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Yoshinoya",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-yoshinoya-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Bahama Buck's",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-bahama-buck-s-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Robeks",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-robeks-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Original ChopShop",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-original-chopshop-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Showmars",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-showmars-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Viva Chicken",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-viva-chicken-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Laughing Planet",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-laughing-planet-online-ordering-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Blaze Pizza",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-blaze-pizza-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Sonny's BBQ",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-sonny-s-bbq-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Mo'Bettahs",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-mo-bettahs-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Urbane Cafe",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-urbane-cafe-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Salt & Straw",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-salt-straw-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Honest Mary's",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-honest-mary-s-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Oakberry",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-oakberry-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Dewey's Pizza",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-dewey-s-pizza-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Pincho",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-pincho-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Legal Sea Foods",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-legal-sea-foods-loyalty-unknown-vendor-paytronix"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Primanti Bros.",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-primanti-bros-loyalty-unknown-vendor-paytronix"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Tavern In The Square",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-tavern-in-the-square-loyalty-unknown-vendor-paytronix"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Original ChopShop",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-original-chopshop-loyalty-unknown-vendor-paytronix"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Toastique",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-toastique-loyalty-unknown-vendor-paytronix"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Pokeworks",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-pokeworks-pos-system-of-record-pos-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Nekter Juice Bar",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-nekter-juice-bar-pos-system-of-record-pos-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Huey Magoo's",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-huey-magoo-s-pos-system-of-record-pos-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Freebirds World Burrito",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-freebirds-world-burrito-pos-system-of-record-pos-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Roy Rogers Restaurants",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-roy-rogers-restaurants-pos-system-of-record-pos-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Hot Head Burritos",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-hot-head-burritos-pos-system-of-record-pos-vendor-qu"
+      }
+    ],
+    "enrich_existing_relationship": [],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [
+      {
+        "vendor": "Paytronix",
+        "customer": "World of Beer Bar & Kitchen",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-world-of-beer-bar-kitchen-loyalty-unknown-vendor-paytronix"
+      }
+    ],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

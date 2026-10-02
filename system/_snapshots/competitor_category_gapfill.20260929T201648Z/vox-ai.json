@@ -1,0 +1,53 @@
+{
+  "competitor_id": "comp-vox-ai",
+  "competitor_slug": "vox-ai",
+  "display_name": "Vox AI",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:38Z",
+  "latest_cos_commentary": {
+    "headline": "Vox AI is an Amsterdam-founded, venture-backed autonomous voice-AI vendor targeting QSR drive-thru and mobile ordering, positioned as a no-hardware-change POS integration layer.",
+    "genius_exposure": "Competes with Genius's kitchen_drive_thru line by offering autonomous voice ordering that sits on top of a restaurant's existing POS rather than replacing it, positioning itself as an add-on rather than a full POS replacement.",
+    "competitive_timing": "Freshly capitalized (seed round closed August 2025) and actively expanding into the US market with a new San Francisco office, suggesting an active US sales push in the near term.",
+    "sales_response": "If a prospect mentions evaluating voice-AI drive-thru add-ons, confirm whether Vox AI is one of the vendors under review and note it claims POS-agnostic integration without new hardware; ask for named reference accounts since none are public.",
+    "risk_and_uncertainty": "No named restaurant customers are publicly confirmed; ROI and accuracy claims are vendor-reported. Company scale (headcount, total deployed locations) is not disclosed.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 116
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 116,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 1,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Named Customers",
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "named restaurant chain customers or pilots (only described as 'major global chains,' unnamed)",
+        "pricing / contract model",
+        "US headquarters / entity structure detail"
+      ]
+    }
+  }
+}

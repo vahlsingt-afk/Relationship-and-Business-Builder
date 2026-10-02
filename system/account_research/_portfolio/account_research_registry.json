@@ -1,0 +1,114 @@
+{
+  "registry": [
+    {
+      "account_id": "acct-cafe-rio",
+      "aliases": [
+        "Cafe Rio",
+        "Café Rio",
+        "Cafe Rio Mexican Grill"
+      ],
+      "opportunity_ids": [],
+      "owner": "Todd Vahlsing",
+      "workbook_path": null,
+      "template_version": "0.1-account-background-brief-seed",
+      "last_evidence_date": "2026-08-27",
+      "last_review_date": "2026-08-27",
+      "activation_authorized_by": "Todd Vahlsing",
+      "activation_date": "2026-08-27",
+      "activation_note": "Seeded as the canonical Account Background Brief test case from the real brief Todd prepared for Zakary Bertram, 2026-08-27.",
+      "status": "research_stage",
+      "portfolio_dashboard_state": "Research and qualification -- not yet a confirmed active opportunity",
+      "dashboard_state_reason": "No confirmed sponsor, current stack, internal owner, or buying event per the canonical brief.",
+      "latest_background_brief_date": "2026-08-27"
+    },
+    {
+      "account_id": "acct-mcdonalds",
+      "aliases": [
+        "McDonald's",
+        "McDonald's Corporation",
+        "McDonald's USA",
+        "mcdonalds"
+      ],
+      "owner": "",
+      "status": "pre_engagement",
+      "last_review_date": "2026-08-27",
+      "latest_background_brief_date": "2026-08-27"
+    },
+    {
+      "account_id": "acct-worldpay",
+      "aliases": [
+        "worldpay"
+      ],
+      "owner": "",
+      "status": "pre_engagement",
+      "last_review_date": "2026-08-28",
+      "latest_background_brief_date": "2026-08-28"
+    },
+    {
+      "account_id": "acct-churchs-texas-chicken",
+      "aliases": [
+        "churchs-chicken",
+        "Church's Texas Chicken"
+      ],
+      "owner": "",
+      "status": "pre_engagement",
+      "last_review_date": "2026-08-29",
+      "latest_background_brief_date": "2026-09-08"
+    },
+    {
+      "account_id": "acct-pollo-campero",
+      "aliases": [
+        "pollo-campero",
+        "Pollo Campero"
+      ],
+      "owner": "",
+      "status": "pre_engagement",
+      "last_review_date": "2026-09-02",
+      "latest_background_brief_date": "2026-09-08"
+    },
+    {
+      "account_id": "acct-del-taco",
+      "aliases": [
+        "del-taco",
+        "Del Taco"
+      ],
+      "owner": "",
+      "status": "pre_engagement",
+      "last_review_date": "2026-09-04",
+      "latest_background_brief_date": "2026-09-08"
+    },
+    {
+      "account_id": "acct-red-robin",
+      "aliases": [
+        "red-robin",
+        "Red Robin"
+      ],
+      "owner": "",
+      "status": "pre_engagement",
+      "last_review_date": "2026-09-04",
+      "latest_background_brief_date": "2026-09-04"
+    },
+    {
+      "account_id": "acct-little-caesars",
+      "aliases": [
+        "little-caesars",
+        "Little Caesars"
+      ],
+      "owner": "",
+      "status": "pre_engagement",
+      "last_review_date": "2026-09-04",
+      "latest_background_brief_date": "2026-09-04"
+    },
+    {
+      "account_id": "acct-five-guys",
+      "aliases": [
+        "five-guys",
+        "Five Guys"
+      ],
+      "owner": "",
+      "status": "pre_engagement",
+      "last_review_date": "2026-09-04",
+      "latest_background_brief_date": "2026-09-04"
+    }
+  ]
+}

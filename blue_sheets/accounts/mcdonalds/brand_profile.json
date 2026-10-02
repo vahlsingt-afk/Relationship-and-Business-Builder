@@ -1,0 +1,115 @@
+{
+  "identity_ownership_footprint": [
+    {
+      "category": "us_platform",
+      "value": "U.S. system operates around a deeply embedded McDonald's-controlled restaurant platform (NEWPOS) and surrounding StoreTech ecosystem; McDonald's sold NEWPOS software to Capgemini, which remains deeply embedded.",
+      "strategic_implication": "Core POS displacement is extremely unlikely without a major system mandate; any Genius motion must avoid sounding like platform replacement.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-08-03",
+      "evidence_ids": [
+        "ev-mcdonalds-0003"
+      ]
+    },
+    {
+      "category": "domestic_hardware_sourcing",
+      "value": "PAR and NCR are the meaningful domestic hardware/POS infrastructure sources; field intelligence indicates dissatisfaction is strongest around NCR.",
+      "strategic_implication": "Hardware dissatisfaction may create an entry point even when software-platform replacement does not.",
+      "status": "reported",
+      "confidence": "medium",
+      "as_of": "2026-08-03",
+      "evidence_ids": [
+        "ev-mcdonalds-0003"
+      ]
+    },
+    {
+      "category": "global_roadmap",
+      "value": "McDonald's global teams increasingly drive technology roadmap, architecture, data, and platform direction; this doesn't always translate cleanly to U.S. owner/operator reality.",
+      "strategic_implication": "A global approval story alone will not move the U.S. system.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-08-03",
+      "evidence_ids": [
+        "ev-mcdonalds-0003"
+      ]
+    },
+    {
+      "category": "cloud_edge_investment",
+      "value": "McDonald's publicly announced Google Cloud restaurant connectivity and Edge, a Google-developed restaurant computing platform live in hundreds of U.S. restaurants and expanding globally.",
+      "strategic_implication": "The Edge investment makes NEWPOS/platform displacement even less likely; DMB/hardware opportunities must prove Edge compatibility.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-08-04",
+      "evidence_ids": [
+        "ev-mcdonalds-0003"
+      ]
+    },
+    {
+      "category": "next_strategy",
+      "value": "McDonald's > NEXT was introduced at WWC as the next era of growth and productivity, with an ambition to be the customer's first choice every time and improve unit economics.",
+      "strategic_implication": "NEXT favors wedges that reduce field friction and improve reliability, not broad re-platforming.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-08-04",
+      "evidence_ids": [
+        "ev-mcdonalds-0003"
+      ]
+    },
+    {
+      "category": "us_execution_pressure",
+      "value": "Q2 2026: U.S. comparable sales slowed to roughly 0.8% while global comparable sales rose roughly 1.3%; management framed the U.S. miss as an execution problem, not a strategy problem.",
+      "strategic_implication": "The Genius pitch should speak to execution reliability, supplier optionality, and field simplicity -- not challenge McDonald's strategy.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-08-04",
+      "evidence_ids": [
+        "ev-mcdonalds-0004"
+      ]
+    },
+    {
+      "category": "us_leadership",
+      "value": "Skye Anderson appointed president of McDonald's USA (previously U.S. COO), replacing Joe Erlinger.",
+      "strategic_implication": "The U.S. decision map is changing; update the stakeholder map around U.S. operations and field reliability.",
+      "status": "reported",
+      "confidence": "high",
+      "as_of": "2026-08-04",
+      "evidence_ids": [
+        "ev-mcdonalds-0004"
+      ]
+    },
+    {
+      "category": "franchisee_cash_flow",
+      "value": "NOA survey of 100+ operators (of ~2,000+ U.S. franchisees): 95% reported declining Q1 profitability; ~90% reported significantly negative cash flow vs. prior year; ~80% said cash flow is insufficient for required reinvestment obligations.",
+      "strategic_implication": "Any technology wedge must compete on capital efficiency and lifecycle cost, not capability alone. Treat as franchisee-association-reported figures about a subset of the system, not McDonald's-corporate-confirmed.",
+      "status": "reported",
+      "confidence": "medium",
+      "as_of": "2026-08-24",
+      "evidence_ids": [
+        "ev-mcdonalds-0006"
+      ]
+    },
+    {
+      "category": "remodel_cycle",
+      "value": "A new ~10-year remodel cycle is expected to begin 2027-2028; surveyed franchisees estimated per-store remodel cost of $400,000-$700,000 (a franchisee estimate, not a McDonald's-published number).",
+      "strategic_implication": "The remodel cycle is the buying event; franchisee cash-flow pressure changes the buying criteria toward capital efficiency.",
+      "status": "reported",
+      "confidence": "medium",
+      "as_of": "2026-08-24",
+      "evidence_ids": [
+        "ev-mcdonalds-0006"
+      ]
+    },
+    {
+      "category": "failed_discount_program",
+      "value": "McDonald's \"$3 and Under\" menu plus Extra Value Meal discounts: three-quarters of franchisees said they were directly pressured into it; estimated $310 million in lost sales last quarter from discounts that didn't generate offsetting traffic.",
+      "strategic_implication": "Franchisee/operator validation matters more than ever -- McDonald's won't want another top-down rollout operators view as noise.",
+      "status": "reported",
+      "confidence": "medium",
+      "as_of": "2026-08-24",
+      "evidence_ids": [
+        "ev-mcdonalds-0006"
+      ]
+    }
+  ],
+  "account_id": "acct-mcdonalds"
+}

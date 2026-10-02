@@ -1,0 +1,41 @@
+{
+  "account_id": "acct-slim-chickens",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-11T16:39:41Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-11",
+      "path": "customers_prospects/accounts/slim-chickens/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-25T16:12:10Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-25",
+      "path": "customers_prospects/accounts/slim-chickens/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-29T09:19:05Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-29",
+      "path": "customers_prospects/accounts/slim-chickens/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-10-01T10:43:09Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-10-01",
+      "path": "customers_prospects/accounts/slim-chickens/briefs/current/Background_Brief.md",
+      "superseded": false
+    }
+  ]
+}

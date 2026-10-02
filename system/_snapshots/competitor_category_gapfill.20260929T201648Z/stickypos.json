@@ -1,0 +1,50 @@
+{
+  "competitor_id": "comp-stickypos",
+  "competitor_slug": "stickypos",
+  "display_name": "StickyPOS",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:06Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:36Z",
+  "latest_cos_commentary": {
+    "headline": "StickyPOS is a labeling-supplies manufacturer (self-cleaning, linerless thermal labels for drive-thru/to-go bag tagging), not a competing POS or loyalty software platform despite its name.",
+    "genius_exposure": "No meaningful overlap with Genius's POS, payments, back_office, kitchen_drive_thru, loyalty_engagement, or digital_menu_boards software lines; it is a physical consumables/label supplier that integrates with existing POS printer hardware.",
+    "competitive_timing": "No recent funding, ownership, or leadership news identified in this research pass.",
+    "sales_response": "Not a competitor in any Genius product category; if it surfaces in discovery, it should be treated as a labeling/consumables supplier, not a technology rival.",
+    "risk_and_uncertainty": "This entity's tracked relevance as a Genius 'competitor' should be re-examined given it operates in a fundamentally different category (physical labels, not software/payments).",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 93
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 93,
+    "pack_claim_count": 1,
+    "pack_claims_with_url": 1,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 1,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "confirm whether this vendor belongs in a competitor taxonomy at all, given its labeling/consumables category",
+        "leadership",
+        "named restaurant customers"
+      ]
+    }
+  }
+}

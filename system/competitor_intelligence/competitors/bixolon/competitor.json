@@ -1,0 +1,251 @@
+{
+  "competitor_id": "comp-bixolon",
+  "competitor_slug": "bixolon",
+  "display_name": "BIXOLON",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "BIXOLON currently markets restaurant-facing capabilities across printing receipt media, pos hardware.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:46:58Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:58Z",
+  "latest_cos_commentary": {
+    "headline": "Adjacent restaurant-tech vendor; no supported direct Genius overlap.",
+    "genius_exposure": [],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Monitor for account influence or expansion into Genius categories; verify before treating as a direct competitor.",
+    "risk_and_uncertainty": "Long-tail evidence quality varies; unresolved vendors were left unclassified rather than guessed.",
+    "priority": "P3",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://www.bixolon.com/solution_view.php?idx=40",
+        "title": "BIXOLON restaurant technology evidence",
+        "publisher": "BIXOLON",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 11,
+    "pack_claim_count": 1,
+    "pack_claims_with_url": 1,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "financial health"
+      ]
+    }
+  },
+  "canonical_company_name": "BIXOLON",
+  "website": "https://www.bixolon.com/solution_view.php?idx=40",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://www.bixolon.com/solution_view.php?idx=40",
+        "title": "BIXOLON restaurant technology evidence",
+        "publisher": "BIXOLON",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "adjacent_ecosystem_vendor",
+  "restaurant_tech_categories": [
+    {
+      "category": "printing_receipt_media",
+      "basis": "Current restaurant-specific evidence supports printing receipt media for BIXOLON.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.bixolon.com/solution_view.php?idx=40",
+          "title": "BIXOLON restaurant technology evidence",
+          "publisher": "BIXOLON",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "pos_hardware",
+      "basis": "Current restaurant-specific evidence supports pos hardware for BIXOLON.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.bixolon.com/solution_view.php?idx=40",
+          "title": "BIXOLON restaurant technology evidence",
+          "publisher": "BIXOLON",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "Restaurant POS printers (printing_receipt_media, pos_hardware)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.bixolon.com/solution_view.php?idx=40",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Kitchen/order label printers (printing_receipt_media, pos_hardware)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.bixolon.com/solution_view.php?idx=40",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Current restaurant-specific product/use-case evidence exists in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.bixolon.com/solution_view.php?idx=40",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "BIXOLON has a documented hospitality integration with LabelFood and SOLETI Group in which SmartFood LITE uses the XQ-840, SLP-DX220BG, and SPP-L3000iWK for commercial-kitchen labelling, traceability, and food-safety workflows in Spain.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://bixoloneu.com/case-study/progressive-spanish-software-house-develops-and-successfully-integrates-cutting-edge-identification-and-labelling-solution-into-the-hospitality-market/?lang=de",
+      "finding_type": "independently_verified",
+      "source_owner": "BIXOLON Europe",
+      "source_type": "case study",
+      "deployment_scope": "regional",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "BIXOLON-hosted case study; downstream hospitality groups, location count, timing, and current deployment status are not disclosed."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated evidence is not independent proof of ROI, reliability, implementation quality, or systemwide adoption. Independent validation remains incomplete in this bounded gap-fill pass.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.bixolon.com/solution_view.php?idx=40",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [],
+  "product_lineage": [
+    {
+      "value": "BIXOLON's restaurant-facing hardware line includes compact thermal receipt and kitchen-ticket printers such as the SRP-Q300/SRP-Q300II, high-volume POS printers, linerless label printers, mobile printers, and kiosk printer mechanisms.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://bixoloneu.com/product-type/drukarka-paragonow-dla-restauracji/?lang=pl",
+      "finding_type": "vendor_stated",
+      "source_owner": "BIXOLON Europe",
+      "source_type": "product page",
+      "deployment_scope": "unknown",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "The page does not establish current regional SKU availability, installed base, named POS certification, or transaction-processing functionality."
+    }
+  ],
+  "negative_findings": [],
+  "conflicts_notes": [],
+  "category_assessment_status": "researched",
+  "category_assessment_packet_id": "rbb-competitor-category-gapfill-20260929-batches02-04",
+  "category_assessed_at": "2026-09-29",
+  "vendor_claims": [
+    {
+      "value": "BIXOLON currently positions its hospitality portfolio across front-of-house POS and receipt printing, kitchen order management, mobile/table-side printing, self-service kiosks, delivery labels, and food-safety labelling.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://bixoloneu.com/product-type/hospitality/",
+      "finding_type": "vendor_stated",
+      "source_owner": "BIXOLON Europe",
+      "source_type": "product category page",
+      "deployment_scope": "unknown",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Product positioning does not establish customer adoption, named POS certification, or payment-processing capability."
+    },
+    {
+      "value": "BIXOLON maps the SRP-S200/S300 to delivery labels, the SRP-R200plusIII to table-side workflows, the XQ-840 to restaurant coordination, and the SLP-DX220 to ingredient and allergen labelling.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://bixoloneu.com/printing-tomorrows-experience-efficiency-hospitality-through-cutting-edge-technology/",
+      "finding_type": "vendor_stated",
+      "source_owner": "BIXOLON Europe",
+      "source_type": "product-specific vendor article",
+      "published_at": "2024",
+      "deployment_scope": "unknown",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "No named restaurant customer is identified and generalized efficiency or sales figures are not measurements from a disclosed BIXOLON deployment."
+    }
+  ]
+}

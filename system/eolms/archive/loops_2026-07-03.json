@@ -1,0 +1,1976 @@
+[
+  {
+    "id": "EL-2026-07-02-001",
+    "title": "Global Payments \u2014 Develop 90-Day Success Plan",
+    "category": "action",
+    "status": "deferred",
+    "priority": "high",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Draft 90-day success plan for the VP Sales role at Global Payments",
+    "waiting_on": null,
+    "activation_date": "2026-07-11",
+    "activation_condition": "End of first week after learning the organization",
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:23:33",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      }
+    ],
+    "tags": [
+      "global-payments"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-002",
+    "title": "Global Payments \u2014 Receive Enterprise Account Portfolio",
+    "category": "waiting",
+    "status": "waiting",
+    "priority": "high",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Confirm portfolio scope once assigned",
+    "waiting_on": "Account assignments from Global Payments leadership",
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:23:42",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      },
+      {
+        "ts": "2026-07-02T08:25:07",
+        "event": "status_change",
+        "from": "waiting",
+        "to": "completed",
+        "note": "Simulated: dependency clears for tick test"
+      },
+      {
+        "ts": "2026-07-02T08:25:20",
+        "event": "status_change",
+        "from": "completed",
+        "to": "waiting",
+        "note": "Reverted test transition \u2014 portfolio not actually received yet; this was a tick logic verification, not a real event"
+      }
+    ],
+    "tags": [
+      "global-payments"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-003",
+    "title": "Global Payments \u2014 Enterprise Capture Strategy",
+    "category": "project",
+    "status": "blocked",
+    "priority": "high",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Present strategic account capture plan to Ryan",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [
+      "EL-2026-07-02-002"
+    ],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:23:50",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02 \u2014 blocked until account portfolio is received"
+      }
+    ],
+    "tags": [
+      "global-payments"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-004",
+    "title": "RB \u2014 Intelligence Platform",
+    "category": "strategic_initiative",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Continue development: Intelligence Brief, Daily Brief, Executive Dashboard, Personal Intelligence, Knowledge Graph, Mutation Engine, Proof Statistics, Freshness Engine",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:03",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      }
+    ],
+    "tags": [
+      "relationship-bridge"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-005",
+    "title": "RB \u2014 Capture Platform",
+    "category": "strategic_initiative",
+    "status": "active",
+    "priority": "high",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Begin testing with live meetings next week \u2014 JPR, Fathom, Apple Watch capture, cloud intelligence ingestion, meeting intelligence processing",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:04",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      }
+    ],
+    "tags": [
+      "relationship-bridge"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-006",
+    "title": "RB \u2014 Executive Chief of Staff",
+    "category": "strategic_initiative",
+    "status": "active",
+    "priority": "high",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Continue building Executive Operating System: Open Loop Register, Relationship Intelligence, Executive Task Intelligence, CoS workflows",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:04",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      }
+    ],
+    "tags": [
+      "relationship-bridge"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-007",
+    "title": "RB \u2014 Claude Development",
+    "category": "strategic_initiative",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Remaining defect resolution, architecture improvements, intelligence quality improvements, automation enhancements",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:04",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      }
+    ],
+    "tags": [
+      "relationship-bridge"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-008",
+    "title": "BridgePoint Ops \u2014 Transition to personal brand / publishing / side business",
+    "category": "project",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Website transition, LinkedIn transition, brand messaging",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:04",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      }
+    ],
+    "tags": [
+      "bridgepoint-ops"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-009",
+    "title": "Publishing \u2014 Perfect Life Is a Perfect Lie",
+    "category": "project",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Rewrite, editing, publication strategy, launch planning",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:04",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      }
+    ],
+    "tags": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-010",
+    "title": "Executive Thought Leadership",
+    "category": "strategic_initiative",
+    "status": "deferred",
+    "priority": "low",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": null,
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": "Resume publishing after becoming established at Global Payments",
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:04",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      }
+    ],
+    "tags": [
+      "thought-leadership"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-011",
+    "title": "Executive Relationship Capital",
+    "category": "relationship",
+    "status": "deferred",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": null,
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": "Resume after onboarding \u2014 focus: internal GP relationships, enterprise customers, restaurant tech leaders, McDonald's ecosystem",
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:04",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      }
+    ],
+    "tags": [
+      "relationship-capital"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-012",
+    "title": "Home Projects \u2014 Bathroom Remodel",
+    "category": "project",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Purchase tub, surround, toilet, vanity; then demo and remodel",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:04",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      }
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-013",
+    "title": "Home Projects \u2014 Blink Cameras RMA",
+    "category": "action",
+    "status": "active",
+    "priority": "low",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Follow up on RMA replacement cameras",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:04",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      }
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-014",
+    "title": "Passive Career Intelligence",
+    "category": "opportunity",
+    "status": "monitor",
+    "priority": "monitor",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Remain open to exceptional executive opportunities; no active job search",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:04",
+        "event": "created",
+        "note": "Seeded from Executive Open Loop Register review, 2026-07-02"
+      }
+    ],
+    "tags": [
+      "career"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-015",
+    "title": "Global Payments onboarding secured",
+    "category": "opportunity",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": null,
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "medium",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:14",
+        "event": "created",
+        "note": "Closed per Executive Open Loop Register, 2026-07-02. Original close date not recorded \u2014 backfilled at review time."
+      }
+    ],
+    "tags": [
+      "career",
+      "global-payments"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-016",
+    "title": "Active job search",
+    "category": "opportunity",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": null,
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "medium",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:14",
+        "event": "created",
+        "note": "Closed per Executive Open Loop Register, 2026-07-02 \u2014 superseded by Global Payments offer. Original close date not recorded \u2014 backfilled at review time."
+      }
+    ],
+    "tags": [
+      "career"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-017",
+    "title": "Well pump repair",
+    "category": "project",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": null,
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "medium",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:14",
+        "event": "created",
+        "note": "Closed per Executive Open Loop Register, 2026-07-02. Original close date not recorded \u2014 backfilled at review time."
+      }
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-018",
+    "title": "Water filtration system installation",
+    "category": "project",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": null,
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "medium",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:14",
+        "event": "created",
+        "note": "Closed per Executive Open Loop Register, 2026-07-02. Original close date not recorded \u2014 backfilled at review time."
+      }
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-019",
+    "title": "Weekly prayer and Bible reading rhythm with Mary",
+    "category": "action",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": null,
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:open_loop_register_2026-07-02",
+    "confidence": "medium",
+    "history": [
+      {
+        "ts": "2026-07-02T08:24:14",
+        "event": "created",
+        "note": "Closed per Executive Open Loop Register, 2026-07-02 \u2014 established as a standing habit. Original close date not recorded \u2014 backfilled at review time."
+      }
+    ],
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "EL-2026-05-08-001",
+    "title": "Reach out \u2014 dormant_valuable RC, 5+ years since last contact (2021-01-25); per Todd: \"remind me to follow up with her\"",
+    "category": "action",
+    "status": "dormant",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-05-08",
+    "next_action": "Reach out \u2014 dormant_valuable RC, 5+ years since last contact (2021-01-25); per Todd: \"remind me to follow up with her\"",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-08",
+    "cadence_days": null,
+    "related_people": [
+      "Bridgett Hendrickson"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-001"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-001",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-001: Reach out \u2014 dormant_valuable RC, 5+ years since last contact (2021-01-25); per Todd: \"remind me to follow up with her\""
+      },
+      {
+        "ts": "2026-07-02T08:24:52",
+        "event": "auto_transition",
+        "from": "active",
+        "to": "dormant",
+        "note": "no activity in 55d (threshold 30d)"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-010",
+    "title": "Discuss consultant referral network concept when timing is right",
+    "category": "action",
+    "status": "dormant",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-05-08",
+    "next_action": "Discuss consultant referral network concept when timing is right. Separate from Franchisee Bridge and Tech Reset.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-30",
+    "cadence_days": null,
+    "related_people": [
+      "Jim Taylor (BenchmarkSixty)"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-008"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-008",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-008: Discuss consultant referral network concept when timing is right. Separate from Franchisee Bridge and Tech Reset."
+      },
+      {
+        "ts": "2026-07-02T08:24:52",
+        "event": "auto_transition",
+        "from": "active",
+        "to": "dormant",
+        "note": "no activity in 55d (threshold 30d)"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-013",
+    "title": "McDonald's-adjacent vendor role search",
+    "category": "action",
+    "status": "dormant",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-05-08",
+    "next_action": "McDonald's-adjacent vendor role search. PAR excluded.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-30",
+    "cadence_days": null,
+    "related_people": [
+      "Dave Miller (Franke), Bob Gibson, H&K Dallas/Franke ecosystem"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-011"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-011",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-011: McDonald's-adjacent vendor role search. PAR excluded."
+      },
+      {
+        "ts": "2026-07-02T08:24:52",
+        "event": "auto_transition",
+        "from": "active",
+        "to": "dormant",
+        "note": "no activity in 55d (threshold 30d)"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-07-02-020",
+    "title": "Test widget validation loop",
+    "category": "action",
+    "status": "completed",
+    "priority": "low",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Validation test loop \u2014 safe to auto-close.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [
+      "TestWidgetCo"
+    ],
+    "related_loop_ids": [],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:validation_test_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T11:59:00",
+        "event": "created",
+        "note": "Created for live GPT auto-closure validation (RB-DEFECT-060 sprint). Delete after test."
+      },
+      {
+        "ts": "2026-07-02T11:59:41",
+        "event": "field_update",
+        "note": "Shortened next_action; the original verbose description was diluting the match score (see RB-DEFECT-060 scorer notes)."
+      },
+      {
+        "ts": "2026-07-02T15:08:48",
+        "event": "intelligence_signal",
+        "from": "active",
+        "to": "completed",
+        "note": "Auto-transition from narrated evidence: \"TestWidgetCo confirmed the validation widget is fixed.\""
+      }
+    ],
+    "tags": [
+      "validation-test"
+    ]
+  },
+  {
+    "id": "EL-2026-07-02-021",
+    "title": "EOLMS: add pending_verification status for defect-style closures",
+    "category": "research",
+    "status": "identified",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-07-02",
+    "updated_at": "2026-07-02",
+    "last_activity": "2026-07-02",
+    "next_action": "Design: add 'pending_verification' to ELOOP_STATUSES, between active/waiting/blocked and completed. match_and_transition's 'complete' intent targets pending_verification (not completed) for loops flagged as needing independent verification, rather than assuming from category. Surfaces distinctly in eolms status / Executive Status ('Fixed, awaiting verification: N'). Does NOT auto-advance via tick \u2014 only a human/GPT-confirmed transition moves pending_verification -> completed (or back to active if verification fails). Originated from Todd's Fixed->Verified->Closed checklist applied to RB-DEFECT-060.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": null,
+    "cadence_days": null,
+    "related_people": [],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "EL-2026-07-02-007"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "manual:rb-defect-060-followup_2026-07-02",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T14:44:04",
+        "event": "created",
+        "note": "Tracked follow-up from applying Todd's Fixed->Verified->Closed defect checklist to RB-DEFECT-060 \u2014 see that defect record's Verification Checklist section."
+      }
+    ],
+    "tags": [
+      "eolms",
+      "claude-development"
+    ]
+  },
+  {
+    "id": "EL-2026-05-26-001",
+    "title": "Move Genius / Global Payments role conversation forward; capture post-screen state and unblock downstream decision flow.",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-26",
+    "updated_at": "2026-06-30",
+    "last_activity": "2026-06-30",
+    "next_action": "Move Genius / Global Payments role conversation forward; capture post-screen state and unblock downstream decision flow. [Re-dated 2026-06-04 from 2026-06-30: Ryan Hildebrand outreach sent 2026-06-01. Re-engaging via senior GP contact while Mike Schwartz path continues.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-18",
+    "cadence_days": null,
+    "related_people": [
+      "Mike Schwartz"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-26-001"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-26-001",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-26-001: Move Genius / Global Payments role conversation forward; capture post-screen state and unblock downstream decision flow. [Re-dated 2026-06-04 from 2026-06-30: Ryan Hildebrand outreach sent 2026-06-01. Re-engaging via senior GP contact while Mike Schwartz path continues.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-002",
+    "title": "**Introduce** Noelle and Cristina \u2014 both hospitality consultants in the `hospitality-from-success-champions` orbit; first concrete intro the",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "**Introduce** Noelle and Cristina \u2014 both hospitality consultants in the `hospitality-from-success-champions` orbit; first concrete intro the system has surfaced [Re-dated 2026-06-04 from 2026-06-01: Intro still pending. Noelle active in email (Hospitality Table). Reach out to mak",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-11",
+    "cadence_days": null,
+    "related_people": [
+      "Noelle Labrie \u2192 Cristina Gia Luciano"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-002"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-002",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-002: **Introduce** Noelle and Cristina \u2014 both hospitality consultants in the `hospitality-from-success-champions` orbit; first concrete intro the system has surfaced [Re-dated 2026-06-04 from 2026-06-01: Intro still pending. Noelle active in email (Hospitality Table). Reach out to make intro.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-003",
+    "title": "Define BridgePoint Ops engagement model with LongFi: retainer scope, intro/referral economics, boundaries, client ownership, execution respo",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Define BridgePoint Ops engagement model with LongFi: retainer scope, intro/referral economics, boundaries, client ownership, execution responsibilities. Jose is open to retainer/upfront \u2014 not pure intro economics. [Re-dated 2026-06-04 from 2026-05-30: Deferred from May 30. Define",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-18",
+    "cadence_days": null,
+    "related_people": [
+      "Jose Torres (LongFi)"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-003"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-003",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-003: Define BridgePoint Ops engagement model with LongFi: retainer scope, intro/referral economics, boundaries, client ownership, execution responsibilities. Jose is open to retainer/upfront \u2014 not pure intro economics. [Re-dated 2026-06-04 from 2026-05-30: Deferred from May 30. Define LongFi/BridgePoint retainer scope and economics.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-007",
+    "title": "Stay close to enterprise role openings at Toast (upmarket push)",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Stay close to enterprise role openings at Toast (upmarket push). Evaluate fit against your \"payments-tied ecosystems create resistance\" thesis before applying. [Re-dated 2026-06-04 from 2026-06-01: Monitoring Toast enterprise push. Check in monthly.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-25",
+    "cadence_days": null,
+    "related_people": [
+      "Bob Gibson (Toast)"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-005"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-005",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-005: Stay close to enterprise role openings at Toast (upmarket push). Evaluate fit against your \"payments-tied ecosystems create resistance\" thesis before applying. [Re-dated 2026-06-04 from 2026-06-01: Monitoring Toast enterprise push. Check in monthly.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-008",
+    "title": "Continue Qu enterprise restaurant-tech conversation",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Continue Qu enterprise restaurant-tech conversation. Map to your restaurant-tech market thesis. Niko introduced; Jenny had previously introduced. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22 batch. Re-engage John Morrison on Qu enterprise conversation.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-18",
+    "cadence_days": null,
+    "related_people": [
+      "John Morrison (Qu)"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-006"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-006",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-006: Continue Qu enterprise restaurant-tech conversation. Map to your restaurant-tech market thesis. Niko introduced; Jenny had previously introduced. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22 batch. Re-engage John Morrison on Qu enterprise conversation.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-009",
+    "title": "Daily watch-list",
+    "category": "waiting",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Daily watch-list. Track Genius/Xenial rebrand and Global Payments parent role. May 6 call status unknown \u2014 confirm what happened. [Re-dated 2026-06-04 from 2026-05-15: Outreach sent to Ryan Hildebrand 2026-06-01 re: Global Payments restaurant opportunity. Awaiting response.]",
+    "waiting_on": "Daily watch-list. Track Genius/Xenial rebrand and Global Payments parent role. May 6 call status unknown \u2014 confirm what happened. [Re-dated 2026-06-04 from 2026-05-15: Outreach sent to Ryan Hildebrand",
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-18",
+    "cadence_days": null,
+    "related_people": [
+      "Mike Schwartz (Global Payments / Genius-Xenial)"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-007"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-007",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-007: Daily watch-list. Track Genius/Xenial rebrand and Global Payments parent role. May 6 call status unknown \u2014 confirm what happened. [Re-dated 2026-06-04 from 2026-05-15: Outreach sent to Ryan Hildebrand 2026-06-01 re: Global Payments restaurant opportunity. Awaiting response.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-011",
+    "title": "Follow up on promised brokered VC/M&A intro to Lexi (or alternate VC/M&A contact).",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Follow up on promised brokered VC/M&A intro to Lexi (or alternate VC/M&A contact). [Re-dated 2026-06-04 from 2026-05-31: Deferred from May 31. Follow up on Lexi VC/M&A intro promise.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-11",
+    "cadence_days": null,
+    "related_people": [
+      "Michael Mitchell (SimplyGoldCo) \u2192 Lexi"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-009"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-009",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-009: Follow up on promised brokered VC/M&A intro to Lexi (or alternate VC/M&A contact). [Re-dated 2026-06-04 from 2026-05-31: Deferred from May 31. Follow up on Lexi VC/M&A intro promise.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-012",
+    "title": "Reconnect to explore collaboration",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Reconnect to explore collaboration. Calendly was sent April 29. Operational + financial overlap. [Re-dated 2026-06-04 from 2026-05-31: Calendly sent April 29. Deferred from May 31. Re-engage if no scheduling response.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-18",
+    "cadence_days": null,
+    "related_people": [
+      "Guy Salisch"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-010"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-010",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-010: Reconnect to explore collaboration. Calendly was sent April 29. Operational + financial overlap. [Re-dated 2026-06-04 from 2026-05-31: Calendly sent April 29. Deferred from May 31. Re-engage if no scheduling response.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-014",
+    "title": "Send outline of what BridgePoint Ops can do for him.",
+    "category": "project",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Send outline of what BridgePoint Ops can do for him. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22. Draft BridgePoint Ops outline for MAPS.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-11",
+    "cadence_days": null,
+    "related_people": [
+      "Ed Gartner (MAPS)"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-012"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-012",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-012: Send outline of what BridgePoint Ops can do for him. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22. Draft BridgePoint Ops outline for MAPS.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-015",
+    "title": "Send commercials.",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Send commercials. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-11",
+    "cadence_days": null,
+    "related_people": [
+      "Voosh"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-013"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-013",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-013: Send commercials. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-016",
+    "title": "Send consulting proposal.",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Send consulting proposal. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-11",
+    "cadence_days": null,
+    "related_people": [
+      "Veegroup"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-014"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-014",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-014: Send consulting proposal. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-017",
+    "title": "Send business plan.",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Send business plan. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-11",
+    "cadence_days": null,
+    "related_people": [
+      "Molly"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-015"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-015",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-015: Send business plan. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-018",
+    "title": "Follow up on referral agreement.",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Follow up on referral agreement. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22. Follow up on referral agreement status.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-11",
+    "cadence_days": null,
+    "related_people": [
+      "Background-check referral contact"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-016"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-016",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-016: Follow up on referral agreement. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22. Follow up on referral agreement status.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-020",
+    "title": "Outcomes check on intros he's making and resume he reviewed/sent.",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Outcomes check on intros he's making and resume he reviewed/sent. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22. Check outcomes on intros Jeff made and resume he reviewed.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-11",
+    "cadence_days": null,
+    "related_people": [
+      "Jeff Wayman"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-018"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-018",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-018: Outcomes check on intros he's making and resume he reviewed/sent. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22. Check outcomes on intros Jeff made and resume he reviewed.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-12-002",
+    "title": "General check-in",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-12",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "General check-in. (Earlier framing as \"T-ROC move\" was wrong \u2014 per Todd 2026-05-12, T-ROC is a rebrand of Mobile Insight, same employer; no move occurred.) Last touch 2026-05-01. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22. Kevin Froese moved from Mobile Insight to",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-18",
+    "cadence_days": null,
+    "related_people": [
+      "Kevin Froese"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-12-002"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-12-002",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-12-002: General check-in. (Earlier framing as \"T-ROC move\" was wrong \u2014 per Todd 2026-05-12, T-ROC is a rebrand of Mobile Insight, same employer; no move occurred.) Last touch 2026-05-01. [Re-dated 2026-06-04 from 2026-05-22: Deferred from May 22. Kevin Froese moved from Mobile Insight to T-ROC (rebrand). General check-in.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-12-005",
+    "title": "Intro sent same day",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-12",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Intro sent same day. Partner-side: benefits (Thomas/USI) \u2194 payroll/HR (Page/Commonwealth) buyer adjacency. Watch for response/landing; capture outcome IB when surfaced. [Re-dated 2026-06-04 from 2026-05-26: Intro sent same day. Monitor for mutual response and next connection.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-18",
+    "cadence_days": null,
+    "related_people": [
+      "Page Driscoll \u2192 Thomas Bennett"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-12-005"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-12-005",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-12-005: Intro sent same day. Partner-side: benefits (Thomas/USI) \u2194 payroll/HR (Page/Commonwealth) buyer adjacency. Watch for response/landing; capture outcome IB when surfaced. [Re-dated 2026-06-04 from 2026-05-26: Intro sent same day. Monitor for mutual response and next connection.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-18-001",
+    "title": "Schedule deeper-dive with Ish via Calendly; prepare concise background plus Maho opportunities/challenges framing around buyer segmentation,",
+    "category": "project",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-18",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Schedule deeper-dive with Ish via Calendly; prepare concise background plus Maho opportunities/challenges framing around buyer segmentation, operator adoption, and GTM positioning. [Re-dated 2026-06-04 from 2026-05-22: Engagement proposal email sent 2026-06-01. Awaiting Ish respo",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-11",
+    "cadence_days": null,
+    "related_people": [
+      "Ish Singh / Maho"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-18-001"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-18-001",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-18-001: Schedule deeper-dive with Ish via Calendly; prepare concise background plus Maho opportunities/challenges framing around buyer segmentation, operator adoption, and GTM positioning. [Re-dated 2026-06-04 from 2026-05-22: Engagement proposal email sent 2026-06-01. Awaiting Ish response.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-26-002",
+    "title": "Prepare concrete restaurant operator workflow scenario and schedule Matrix Software Solutions follow-up conversation.",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-26",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Prepare concrete restaurant operator workflow scenario and schedule Matrix Software Solutions follow-up conversation. [Re-dated 2026-06-04 from 2026-05-27: Active. Scenario draft prepared 2026-06-04 (see loop context). Schedule Matrix follow-up call.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-11",
+    "cadence_days": null,
+    "related_people": [
+      "Patrick Nelson"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-26-002"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-26-002",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-26-002: Prepare concrete restaurant operator workflow scenario and schedule Matrix Software Solutions follow-up conversation. [Re-dated 2026-06-04 from 2026-05-27: Active. Scenario draft prepared 2026-06-04 (see loop context). Schedule Matrix follow-up call.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-26-004",
+    "title": "Send owed follow-up text and close daily-cadence reminder.",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-26",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Send owed follow-up text and close daily-cadence reminder. [Re-dated 2026-06-04 from 2026-05-27: Text still owed. Execute today.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-04",
+    "cadence_days": null,
+    "related_people": [
+      "Dave Richards"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-26-004"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-26-004",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-26-004: Send owed follow-up text and close daily-cadence reminder. [Re-dated 2026-06-04 from 2026-05-27: Text still owed. Execute today.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-26-005",
+    "title": "Re-engage next week regarding McDonald's-focused GTM leadership opportunity with Harri; maintain warm relationship posture and check for pro",
+    "category": "action",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-26",
+    "updated_at": "2026-06-04",
+    "last_activity": "2026-06-04",
+    "next_action": "Re-engage next week regarding McDonald's-focused GTM leadership opportunity with Harri; maintain warm relationship posture and check for process movement if still quiet. [Re-dated 2026-06-04 from 2026-06-02: Resume sent 2026-05-15. Re-engage Triton on McDonald's GTM opportunity.]",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-11",
+    "cadence_days": null,
+    "related_people": [
+      "Simin Gorgulu / Triton Exec"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-26-005"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-26-005",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-26-005: Re-engage next week regarding McDonald's-focused GTM leadership opportunity with Harri; maintain warm relationship posture and check for process movement if still quiet. [Re-dated 2026-06-04 from 2026-06-02: Resume sent 2026-05-15. Re-engage Triton on McDonald's GTM opportunity.]"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-26-003",
+    "title": "Schedule and prepare for Maho strategic deep dive while inbound interest is warm.",
+    "category": "project",
+    "status": "active",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-26",
+    "updated_at": "2026-05-26",
+    "last_activity": "2026-05-26",
+    "next_action": "Schedule and prepare for Maho strategic deep dive while inbound interest is warm.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-06-15",
+    "cadence_days": null,
+    "related_people": [
+      "Ish Singh"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-26-003"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-26-003",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-26-003: Schedule and prepare for Maho strategic deep dive while inbound interest is warm."
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-19-001",
+    "title": "Monitor Coates Group / Director, McDonald's Global Account role response aging",
+    "category": "action",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-19",
+    "updated_at": "2026-05-19",
+    "last_activity": "2026-05-19",
+    "next_action": "Monitor Coates Group / Director, McDonald's Global Account role response aging. No chase for 5-7 business days after Todd's reply; follow up only if silence persists.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-05-26",
+    "cadence_days": null,
+    "related_people": [
+      "Becky Cattie"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-19-001"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-19-001",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-19-001: Monitor Coates Group / Director, McDonald's Global Account role response aging. No chase for 5-7 business days after Todd's reply; follow up only if silence persists."
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-12-001",
+    "title": "Owed text",
+    "category": "action",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-12",
+    "updated_at": "2026-05-12",
+    "last_activity": "2026-05-12",
+    "next_action": "Owed text. Per Todd 2026-05-12: \"I owe a text.\" Daily-cadence inner; closes itself once sent.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-05-15",
+    "cadence_days": null,
+    "related_people": [
+      "Dave Richards"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-12-001"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-12-001",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-12-001: Owed text. Per Todd 2026-05-12: \"I owe a text.\" Daily-cadence inner; closes itself once sent."
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-12-003",
+    "title": "Post phone-screen capture: outcome, recruiter or hiring-manager name, next step, time horizon",
+    "category": "action",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-12",
+    "updated_at": "2026-05-12",
+    "last_activity": "2026-05-12",
+    "next_action": "Post phone-screen capture: outcome, recruiter or hiring-manager name, next step, time horizon. Open Mike Schwartz's baseline entry as LKI; stub a card. Decide whether to apply best-of-breed-vs-payments thesis lens explicitly.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-05-13",
+    "cadence_days": null,
+    "related_people": [
+      "Mike Schwartz / Genius (Global Payments)"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-12-003"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-12-003",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-12-003: Post phone-screen capture: outcome, recruiter or hiring-manager name, next step, time horizon. Open Mike Schwartz's baseline entry as LKI; stub a card. Decide whether to apply best-of-breed-vs-payments thesis lens explicitly."
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-12-004",
+    "title": "Capture chat log; generate per-attendee IBs and cross-pair intro candidates per Tenet 12a.",
+    "category": "action",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-12",
+    "updated_at": "2026-05-12",
+    "last_activity": "2026-05-12",
+    "next_action": "Capture chat log; generate per-attendee IBs and cross-pair intro candidates per Tenet 12a.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-05-13",
+    "cadence_days": null,
+    "related_people": [
+      "Hospitality Table chapter (8 attendees)"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-12-004"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-12-004",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-12-004: Capture chat log; generate per-attendee IBs and cross-pair intro candidates per Tenet 12a."
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-004",
+    "title": "Send concise reply about multi-location restaurant standardization beyond POS/menu",
+    "category": "action",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-05-08",
+    "last_activity": "2026-05-08",
+    "next_action": "Send concise reply about multi-location restaurant standardization beyond POS/menu. Keep door open for deeper collaboration.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-05-15",
+    "cadence_days": null,
+    "related_people": [
+      "Patrick Nelson (Matrix Software Solutions)"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-004"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-004",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-004: Send concise reply about multi-location restaurant standardization beyond POS/menu. Keep door open for deeper collaboration."
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-005",
+    "title": "Schedule follow-up call next week (May 12-16 window)",
+    "category": "action",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-05-08",
+    "last_activity": "2026-05-08",
+    "next_action": "Schedule follow-up call next week (May 12-16 window). Per call action item.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-05-16",
+    "cadence_days": null,
+    "related_people": [
+      "Patrick Nelson"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-019"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-019",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-019: Schedule follow-up call next week (May 12-16 window). Per call action item."
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-006",
+    "title": "Prep an example scenario for the follow-up: a real restaurant operator pain point with named workflow steps Patrick's platform could demonst",
+    "category": "action",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-05-08",
+    "last_activity": "2026-05-08",
+    "next_action": "Prep an example scenario for the follow-up: a real restaurant operator pain point with named workflow steps Patrick's platform could demonstrate fit (or lack of fit) against. Patrick is engineering-trained \u2014 wants concrete, not hypothetical.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-05-15",
+    "cadence_days": null,
+    "related_people": [
+      "Patrick Nelson"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-020"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-020",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-020: Prep an example scenario for the follow-up: a real restaurant operator pain point with named workflow steps Patrick's platform could demonstrate fit (or lack of fit) against. Patrick is engineering-trained \u2014 wants concrete, not hypothetical."
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "EL-2026-05-08-019",
+    "title": "Internal: update CRM with current pipeline state.",
+    "category": "action",
+    "status": "completed",
+    "priority": "medium",
+    "strategic_value": null,
+    "owner": "Todd Vahlsing",
+    "created_at": "2026-05-08",
+    "updated_at": "2026-05-08",
+    "last_activity": "2026-05-08",
+    "next_action": "Internal: update CRM with current pipeline state.",
+    "waiting_on": null,
+    "activation_date": null,
+    "activation_condition": null,
+    "due_date": "2026-05-15",
+    "cadence_days": null,
+    "related_people": [
+      "CRM update"
+    ],
+    "related_orgs": [],
+    "related_loop_ids": [
+      "L-2026-05-08-017"
+    ],
+    "blocked_by": [],
+    "related_documents": [],
+    "source_ref": "loop_ledger:L-2026-05-08-017",
+    "confidence": "high",
+    "history": [
+      {
+        "ts": "2026-07-02T08:22:55",
+        "event": "migrated",
+        "note": "Migrated from L-2026-05-08-017: Internal: update CRM with current pipeline state."
+      }
+    ],
+    "tags": []
+  }
+]

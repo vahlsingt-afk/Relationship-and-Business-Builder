@@ -1,0 +1,22 @@
+{
+  "subject_id": "subject-subway",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-15T15:59:35Z",
+      "generated_for": "Internal Global Payments/Genius and Worldpay account team",
+      "purpose": "Top-of-funnel account plan and qualification",
+      "path": "system/artifact_vault/account_plans/subway/current/Subway_Account-Plan.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-15T16:07:45Z",
+      "generated_for": "Internal Global Payments/Genius and Worldpay account team",
+      "purpose": "Top-of-funnel account plan and qualification",
+      "path": "system/artifact_vault/account_plans/subway/current/Subway_Account-Plan.md",
+      "superseded": false
+    }
+  ],
+  "data_owner_id": "todd"
+}

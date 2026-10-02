@@ -1,0 +1,461 @@
+{
+  "packet_id": "rbb-competitor-platform-baseline-20260929",
+  "artifact_type": "rbb_marketplace_intelligence_import",
+  "title": "RBB Competitor Platform Strengths and Weaknesses Baseline",
+  "generated_date": "2026-09-29",
+  "research_access_date": "2026-09-28",
+  "timezone": "America/Chicago",
+  "scope": "Restaurant-facing platform/product-family competitive intelligence",
+  "import_notes": {
+    "purpose": "Import the current combined competitive baseline into RBB.",
+    "record_handling": "Preserve confidence, evidence type, conflicts, and research gaps. Do not treat vendor marketing claims as independently verified performance.",
+    "status": "platform architecture plus initial marketplace baseline",
+    "next_research_priority": "Independent operator/customer evidence on implementation, support, integration, reliability, economics, and usability."
+  },
+  "targets": [
+    "competitor:global-payments",
+    "competitor:par-technology",
+    "competitor:toast",
+    "competitor:nory",
+    "competitor:qu"
+  ],
+  "research_summary": {
+    "pages_reviewed": 26,
+    "candidate_pages_validated": 23,
+    "conflicts_found": 3,
+    "overall_finding": "Product architecture intelligence is stronger than independent marketplace-performance intelligence. PAR OPS has the clearest independent user-experience signal; Genius, Toast, Nory, and Qu require deeper operator-level validation."
+  },
+  "competitors": [
+    {
+      "key": "competitor:global-payments",
+      "vendor": "Global Payments",
+      "platform_family": "Genius",
+      "positioning": "Broad restaurant commerce platform spanning SMB through enterprise.",
+      "verified_product_families": [
+        {
+          "name": "Genius POS",
+          "category": "POS"
+        },
+        {
+          "name": "Genius Enterprise POS",
+          "category": "Enterprise POS"
+        },
+        {
+          "name": "Genius Payments",
+          "category": "Payments"
+        },
+        {
+          "name": "Genius Back Office",
+          "category": "Back Office"
+        },
+        {
+          "name": "Genius Kitchen Management",
+          "category": "Kitchen/KDS"
+        },
+        {
+          "name": "Genius Kiosk",
+          "category": "Self-Service"
+        },
+        {
+          "name": "Genius Digital Menu Boards",
+          "category": "Digital Menu Boards"
+        },
+        {
+          "name": "Genius Drive-Thru",
+          "category": "Drive-Thru Technology"
+        },
+        {
+          "name": "Genius Hardware/Handhelds",
+          "category": "Restaurant Hardware"
+        }
+      ],
+      "strengths": [
+        {
+          "observation": "Global Payments currently presents Genius as a broad restaurant platform encompassing enterprise POS, back office, kitchen management, kiosk, drive-thru, and digital menu technology.",
+          "evidence_type": "vendor-stated claim",
+          "confidence": 95,
+          "limitations": "Confirms product portfolio and positioning, not marketplace performance."
+        },
+        {
+          "observation": "Enterprise material documents an A&W Canada deployment across more than 1,032 restaurants and describes multi-OS/hardware flexibility.",
+          "evidence_type": "vendor/customer deployment evidence",
+          "confidence": 85,
+          "limitations": "Vendor-published evidence should be supplemented with independent operator validation."
+        },
+        {
+          "observation": "Genius represents consolidation of restaurant-facing Global Payments capabilities into a broader platform family rather than a single POS product.",
+          "evidence_type": "research inference supported by vendor portfolio evidence",
+          "confidence": 90,
+          "limitations": "Exact SKU, legacy-product, and commercial packaging boundaries require continuing verification."
+        }
+      ],
+      "weaknesses_and_risks": [
+        {
+          "observation": "Independent marketplace evidence on implementation, support, reliability, integration quality, and enterprise migration experience remains comparatively thin.",
+          "evidence_type": "negative finding/research gap",
+          "confidence": 90,
+          "limitations": "Absence of validated evidence is not evidence of poor performance."
+        },
+        {
+          "observation": "Legacy Xenial-to-Genius product lineage and SKU mapping remain important diligence areas.",
+          "evidence_type": "portfolio/rebrand conflict",
+          "confidence": 80,
+          "limitations": "Do not infer that all historical Xenial limitations apply to current Genius products."
+        },
+        {
+          "observation": "A low-confidence customer anecdote associated with a Xenial-related transition described delayed rewards.",
+          "evidence_type": "customer anecdote",
+          "confidence": 30,
+          "limitations": "Signal only; insufficient to establish a recurring Genius platform weakness."
+        }
+      ],
+      "rbb_normalization": {
+        "Xenial POS": "Genius POS",
+        "RTI / RTI Back Office": "Genius Back Office",
+        "SICOM digital menu board / DMB": "Genius DMB",
+        "Como loyalty": "Genius Loyalty",
+        "SICOM hardware": "Genius Hardware"
+      },
+      "research_gaps": [
+        "Enterprise implementation accounts",
+        "Xenial-to-Genius migration experience",
+        "Support quality",
+        "Real-world reliability",
+        "Deployment complexity",
+        "Integration performance",
+        "Commercial/pricing structure"
+      ],
+      "sources": [
+        "https://www.globalpayments.com/genius",
+        "https://www.globalpayments.com/point-of-sale/enterprise/enterprise-pos",
+        "https://investors.globalpayments.com/news-events/press-releases/detail/473/global-payments-launches-new-genius-pos-platform"
+      ]
+    },
+    {
+      "key": "competitor:par-technology",
+      "vendor": "PAR Technology",
+      "positioning": "Modular enterprise restaurant technology stack.",
+      "verified_product_families": [
+        {
+          "name": "PAR POS",
+          "category": "POS"
+        },
+        {
+          "name": "PAR Ordering",
+          "category": "Digital Ordering"
+        },
+        {
+          "name": "Punchh / PAR Engagement",
+          "category": "Loyalty/Guest Engagement"
+        },
+        {
+          "name": "Guest360",
+          "category": "Guest Data/CRM"
+        },
+        {
+          "name": "PAR OPS",
+          "category": "Restaurant Operations"
+        }
+      ],
+      "strengths": [
+        {
+          "observation": "PAR offers a modular suite spanning transaction, ordering, engagement/loyalty, guest data, and restaurant operations.",
+          "evidence_type": "vendor portfolio evidence",
+          "confidence": 95,
+          "limitations": "Portfolio breadth does not establish uniform product performance."
+        },
+        {
+          "observation": "Independent commentary included restaurant-manager users describing PAR OPS as easy to navigate and responsive to issues.",
+          "evidence_type": "independent user commentary",
+          "confidence": 60,
+          "limitations": "User experience may vary materially by role, device, configuration, and deployment."
+        }
+      ],
+      "weaknesses_and_risks": [
+        {
+          "observation": "PAR OPS showed a significant mobile-user-experience signal with approximately 1.9/5 across 296 Apple ratings during the research cycle.",
+          "evidence_type": "independent app marketplace ratings",
+          "confidence": 85,
+          "limitations": "Applies specifically to PAR OPS mobile experience and must not be generalized to PAR POS or the entire PAR platform."
+        }
+      ],
+      "conflicts": [
+        {
+          "observation": "Poor aggregate PAR OPS mobile ratings coexist with positive manager commentary about navigation and responsiveness.",
+          "confidence": 80,
+          "interpretation": "Experience may vary by role, device, deployment, version, or workflow; additional segmentation is required."
+        }
+      ],
+      "research_gaps": [
+        "Independent PAR POS implementation evidence",
+        "PAR Ordering operator evidence",
+        "Punchh/Engagement implementation and support evidence",
+        "Enterprise integration complexity",
+        "Pricing and total-cost evidence"
+      ]
+    },
+    {
+      "key": "competitor:toast",
+      "vendor": "Toast",
+      "positioning": "Broad integrated restaurant technology and commerce ecosystem.",
+      "verified_product_families": [
+        {
+          "name": "Toast POS",
+          "category": "POS"
+        },
+        {
+          "name": "Toast Payments",
+          "category": "Payments"
+        },
+        {
+          "name": "Toast Online Ordering",
+          "category": "Digital Ordering"
+        },
+        {
+          "name": "Toast Marketing/CRM",
+          "category": "Marketing/CRM"
+        },
+        {
+          "name": "Toast Loyalty",
+          "category": "Loyalty"
+        },
+        {
+          "name": "Toast Hardware/KDS",
+          "category": "Hardware/Kitchen"
+        },
+        {
+          "name": "xtraCHEF",
+          "category": "Back Office/Invoice/Cost Management"
+        },
+        {
+          "name": "Toast Payroll/Workforce",
+          "category": "Workforce/Payroll"
+        },
+        {
+          "name": "Toast IQ",
+          "category": "AI/Intelligence"
+        }
+      ],
+      "strengths": [
+        {
+          "observation": "Toast has one of the broadest integrated restaurant ecosystems in the competitive set.",
+          "evidence_type": "verified portfolio observation",
+          "confidence": 95,
+          "limitations": "Breadth alone does not establish superiority of individual modules."
+        }
+      ],
+      "weaknesses_and_risks": [
+        {
+          "observation": "The platform architecture creates meaningful ecosystem coupling, including payments and approved-hardware dependencies.",
+          "evidence_type": "platform architecture observation",
+          "confidence": 75,
+          "limitations": "Business impact varies by operator requirements and contract."
+        },
+        {
+          "observation": "The bounded research cycle did not validate enough independent review evidence to establish recurring platform-wide shortcomings with high confidence.",
+          "evidence_type": "negative finding/research gap",
+          "confidence": 90,
+          "limitations": "Must not be interpreted as evidence that shortcomings do not exist."
+        }
+      ],
+      "research_gaps": [
+        "Enterprise implementation experience",
+        "Support quality",
+        "Payments economics",
+        "Hardware dependency impact",
+        "Multi-unit operator experience",
+        "Integration limitations"
+      ]
+    },
+    {
+      "key": "competitor:nory",
+      "vendor": "Nory",
+      "positioning": "AI-centered restaurant operating system rather than a core POS platform.",
+      "verified_product_families": [
+        {
+          "name": "Nory Forecasting",
+          "category": "AI Forecasting"
+        },
+        {
+          "name": "Nory Workforce",
+          "category": "Workforce Management"
+        },
+        {
+          "name": "Nory Inventory/Ordering",
+          "category": "Inventory/Ordering"
+        },
+        {
+          "name": "Nory Payroll",
+          "category": "Payroll"
+        },
+        {
+          "name": "Nory BI/Operations Intelligence",
+          "category": "Analytics/AI Operations"
+        }
+      ],
+      "strengths": [
+        {
+          "observation": "Nory presents a unified AI-driven operations proposition spanning forecasting, workforce, inventory/ordering, payroll, and business intelligence for multi-unit restaurants.",
+          "evidence_type": "vendor-stated claim",
+          "confidence": 90,
+          "limitations": "Product existence and positioning are better supported than claimed ROI or performance."
+        }
+      ],
+      "weaknesses_and_risks": [
+        {
+          "observation": "Performance and ROI evidence identified in the bounded research cycle was predominantly vendor-hosted.",
+          "evidence_type": "negative finding/evidence-quality gap",
+          "confidence": 90,
+          "limitations": "Does not demonstrate poor performance; it limits independent verification."
+        }
+      ],
+      "research_gaps": [
+        "Independent forecasting-accuracy validation",
+        "Independent labor-savings validation",
+        "Inventory-performance evidence",
+        "Implementation duration and complexity",
+        "Integration performance",
+        "Operator support experience"
+      ]
+    },
+    {
+      "key": "competitor:qu",
+      "vendor": "Qu",
+      "positioning": "Enterprise unified-commerce platform focused on QSR and fast-casual restaurants.",
+      "verified_product_families": [
+        {
+          "name": "Qu POS",
+          "category": "POS"
+        },
+        {
+          "name": "Qu Kiosk",
+          "category": "Self-Service"
+        },
+        {
+          "name": "Qu Drive-Thru",
+          "category": "Drive-Thru"
+        },
+        {
+          "name": "Qu Online Ordering",
+          "category": "Digital Ordering"
+        },
+        {
+          "name": "Qu Third-Party Ordering",
+          "category": "Order Aggregation/Integration"
+        },
+        {
+          "name": "Qu Menu Management",
+          "category": "Centralized Menu Management"
+        },
+        {
+          "name": "Qu Data/Commerce Platform",
+          "category": "Unified Commerce/Data"
+        }
+      ],
+      "strengths": [
+        {
+          "observation": "Qu's architecture is centered on unified enterprise commerce across POS, kiosk, drive-thru, online and third-party ordering with centralized menus and data.",
+          "evidence_type": "vendor platform evidence",
+          "confidence": 95,
+          "limitations": "Architecture does not independently validate implementation or operational performance."
+        },
+        {
+          "observation": "Qu markets a 99.997% uptime figure.",
+          "evidence_type": "vendor-stated reliability claim",
+          "confidence": 95,
+          "limitations": "Claim requires contractual SLA definition, measurement period, exclusions, and denominator before being treated as independently validated reliability."
+        }
+      ],
+      "weaknesses_and_risks": [
+        {
+          "observation": "Qu's own status history documents backend, reporting, integration, and POS-adjacent incidents.",
+          "evidence_type": "vendor operational/status evidence",
+          "confidence": 90,
+          "limitations": "Recorded incidents do not by themselves disprove the stated uptime percentage."
+        }
+      ],
+      "conflicts": [
+        {
+          "observation": "The 99.997% uptime marketing claim coexists with documented service incidents.",
+          "confidence": 90,
+          "interpretation": "No direct contradiction can be established without the contractual SLA definition, exclusions, and measurement methodology."
+        }
+      ],
+      "research_gaps": [
+        "Contractual uptime/SLA terms",
+        "Enterprise implementation experience",
+        "Integration reliability",
+        "Support quality",
+        "Deployment timelines",
+        "Pricing/commercial structure"
+      ]
+    }
+  ],
+  "cross_competitor_findings": {
+    "platform_architecture": {
+      "Global Payments / Genius": "Broadening unified restaurant platform with enterprise and operational technology depth.",
+      "PAR Technology": "Modular enterprise restaurant suite spanning POS through engagement and operations.",
+      "Toast": "Highly integrated end-to-end restaurant ecosystem.",
+      "Nory": "AI operations layer focused on restaurant management rather than core POS.",
+      "Qu": "Enterprise QSR/fast-casual unified-commerce architecture."
+    },
+    "evidence_quality": "Independent operator-performance evidence remains the largest intelligence gap across the set.",
+    "priority_next_pass": [
+      "Implementation experience",
+      "Support quality",
+      "Integration performance",
+      "Reliability and outages",
+      "Pricing and total cost",
+      "Usability by role",
+      "Migration experience",
+      "Verified operator ROI"
+    ]
+  },
+  "conflicts": [
+    {
+      "vendor": "Qu",
+      "topic": "Reliability",
+      "summary": "99.997% vendor uptime claim versus documented service incidents.",
+      "status": "unresolved pending SLA validation"
+    },
+    {
+      "vendor": "PAR Technology",
+      "topic": "PAR OPS usability",
+      "summary": "Poor aggregate mobile ratings versus positive manager commentary.",
+      "status": "requires segmentation by role/device/version/deployment"
+    },
+    {
+      "vendor": "Global Payments",
+      "topic": "Xenial-to-Genius transition",
+      "summary": "Vendor consolidation narrative versus low-confidence customer transition-friction anecdote.",
+      "status": "low-confidence signal requiring independent validation"
+    }
+  ],
+  "recommended_research_queue": [
+    {
+      "key": "competitor:global-payments",
+      "priority": "high",
+      "focus": "Enterprise deployments, Xenial migrations, support, reliability, deployment complexity and integrations."
+    },
+    {
+      "key": "competitor:par-technology",
+      "priority": "high",
+      "focus": "Independent evidence for PAR POS, Ordering and Punchh/Engagement separate from PAR OPS."
+    },
+    {
+      "key": "competitor:toast",
+      "priority": "high",
+      "focus": "Enterprise implementation, support, payments economics, hardware dependency and multi-unit experience."
+    },
+    {
+      "key": "competitor:nory",
+      "priority": "high",
+      "focus": "Independent forecasting, labor, inventory ROI and implementation validation."
+    },
+    {
+      "key": "competitor:qu",
+      "priority": "high",
+      "focus": "Enterprise implementation, integrations, support and contractual SLA performance."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "account_id": "acct-del-taco",
+  "sources": [
+    {
+      "source_id": "ev-del-taco-0003",
+      "type": "internal_reference",
+      "description": "Nick Hulayew internal Del Taco and Yadav account-history call",
+      "durable_source_id": "capture:cap-b9c5e7e821af3bb7",
+      "event_date": "2026-09-08",
+      "confidence": "medium"
+    }
+  ],
+  "note": "Internal call intelligence is source-labeled and reported claims remain subject to direct validation."
+}

@@ -1,0 +1,303 @@
+version: 1
+last_updated: '2026-09-18'
+threads:
+- id: T-2026-05-genius-global-payments
+  title: Genius / Global Payments role conversation
+  opened: 2026-05-06
+  target_close: 2026-06-30
+  status: closed
+  close_date: '2026-06-21'
+  close_reason: accepted — CEO declaration 2026-06-21. Offer accepted. Pre-employment paperwork
+    and drug screening complete. Background check and onboarding in progress.
+  type: job_opportunity
+  people:
+  - mike-schwartz
+  - ryan-hildebrand
+  companies:
+  - Global Payments Inc.
+  - Genius
+  - Xenial
+  context: 'Phone screen 2026-05-12 13:00 CT with Genius (Xenial rebrand under
+
+    Global Payments parent). Mike Schwartz is the senior contact driving
+
+    the conversation.
+
+    '
+  current_state: 'ACCEPTED (2026-06-21): CEO declaration — offer accepted. Pre-employment
+    paperwork completed. Drug screening completed. Background check in progress. Onboarding
+    phase active.
+
+    '
+  boost_for_brief: high
+  boost_score: 1.8
+- id: T-2026-05-patrick-nelson
+  title: Patrick Nelson / Matrix Software Solutions follow-up
+  opened: 2026-05-07
+  target_close: 2026-05-22
+  status: closed
+  type: partnership
+  people: []
+  companies:
+  - Matrix Software Solutions
+  context: 'Patrick is engineering-trained and asked for concrete over hypothetical
+
+    on the May 7 discovery call. The follow-up window closes Saturday 5/16
+
+    for scheduling and Friday 5/15 for the concrete example prep.
+
+    '
+  current_state: 'Two open loops: L-2026-05-08-019 (schedule, target 2026-05-16) and
+
+    L-2026-05-08-020 (prep concrete example, target 2026-05-15). Highest
+
+    single-stakes thread on the board this week.
+
+    '
+  boost_for_brief: high
+  boost_score: 1.3
+  closed_date: '2026-07-03'
+  close_reason: Closed 2026-07-03 — Todd told the Custom GPT to close the Patrick Nelson loop
+    on 2026-07-02, which claimed success but never actually persisted anything. Closing here
+    too since this thread was a third, independent system tracking the same relationship (also
+    closed in loop_ledger.md and EOLMS).
+- id: T-2026-05-bridgepoint-ops-engagement
+  title: BridgePoint Ops engagement model with LongFi
+  opened: 2026-05-08
+  target_close: 2026-05-30
+  status: closed
+  closed_date: '2026-07-21'
+  close_reason: Closed by Todd on 2026-07-21; Jose Torres/LongFi consulting engagement is
+    no longer being pursued. Suppress from active-thread, posting-opportunity, and daily-priority
+    surfaces unless Todd reopens it.
+  type: business_engagement
+  people:
+  - jose-torres
+  companies:
+  - LongFi Solutions
+  - BridgePoint Ops
+  context: 'Define the engagement-model contract: retainer scope, intro/referral
+
+    economics, boundaries, client ownership, execution responsibilities.
+
+    Jose is open to retainer/upfront — not pure intro economics.
+
+    '
+  current_state: 'Loop L-2026-05-08-003 open; targeted close 2026-05-30. No interim activity
+
+    logged in the last week. Worth a check-in nudge.
+
+    '
+  boost_for_brief: medium
+  boost_score: 1.2
+- id: T-2026-05-bob-gibson-toast-watch
+  title: Bob Gibson / Toast — enterprise role watch
+  opened: 2026-05-08
+  target_close: 2026-08-01
+  status: closed
+  closed_date: '2026-08-31'
+  close_reason: Closed per Todd on 2026-08-31; Bob Gibson / Toast is no longer an active loop.
+    Suppress from active-thread, posting-opportunity, and daily-priority surfaces unless Todd
+    reopens it.
+  type: role_search
+  people: []
+  companies:
+  - Toast
+  context: 'Stay close to enterprise role openings at Toast (upmarket push). Bob
+
+    Gibson is the named promotion candidate to fill the inner-tier anchor
+
+    gap for the restaurant_enterprise_vendor cluster (27 LKIs, no anchor).
+
+    Evaluate against the "payments-tied ecosystems create resistance"
+
+    thesis before applying.
+
+    '
+  current_state: 'Loop L-2026-05-08-005 open; no movement since opening. Toast remains
+
+    the top unanchored cluster per network_gap.py.
+
+    '
+  boost_for_brief: medium
+  boost_score: 1.2
+- id: T-2026-05-hospitality-table-activation
+  title: Hospitality Table chapter activation
+  opened: 2026-05-07
+  status: closed
+  type: chapter_activation
+  people:
+  - noelle-labrie
+  - chason-forehand
+  - cristina-gia-luciano
+  - daran-adair
+  companies: []
+  context: 'Hospitality Table is a defined chapter of SCN with a chapter president
+
+    (Noelle Labrie). The chapter is the highest-leverage warm-intro path
+
+    into hospitality operators and restaurant-tech buyers. May 12 chapter
+
+    meeting refreshed multiple inner-tier last_touch dates.
+
+    '
+  current_state: 'Three inner RCs at 3d last_touch (Chason, Daran, Noelle). Cristina did
+
+    not attend; Noelle→Cristina intro (L-2026-05-08-002) is the live way
+
+    to refresh her. Active warming cluster.
+
+    '
+  boost_for_brief: medium
+  boost_score: 1.15
+  closed_date: '2026-06-01'
+  close_reason: resigned — Todd resigned from Hospitality Table 2026-05-26. Chapter suppressed.
+    No further meetings, intros, or recommendations from this chapter.
+- id: T-2026-05-otp3-cohort-cadence
+  title: OTP3 cohort daily cadence
+  opened: 2026-05-08
+  status: open
+  type: chapter_activation
+  people:
+  - bruce-sellnow
+  - dave-richards
+  - john-adams
+  companies: []
+  context: 'OTP3 leadership cohort formalized as a Circle 2026-05-08. Daily-cadence
+
+    text contact pattern. McDonald''s-franchise-side / OTP Level 3 leaders
+
+    from the PAR alumni era.
+
+    '
+  current_state: 'All three at 8d last_touch — well inside threshold; the cohort is
+
+    operating as designed. Dave Richards has an owed-text loop
+
+    (L-2026-05-12-001, due 2026-05-15).
+
+    '
+  boost_for_brief: low
+  boost_score: 1.1
+- id: T-2026-05-maho-deep-dive
+  title: Ish Singh / Maho strategic deep dive
+  opened: 2026-05-18
+  target_close: 2026-06-15
+  status: closed
+  type: business_engagement
+  people:
+  - ish-singh
+  - spencer-amadon
+  companies:
+  - Maho.ai
+  - Kind Base
+  - BridgePoint Ops
+  context: 'Ish replied to Todd''s post-walkthrough follow-up and accepted Todd''s
+
+    framing that Maho''s broad platform strength creates buyer-segment
+
+    positioning complexity. This is a live business-engagement/advisory/GTM
+
+    opportunity around operator adoption, positioning simplification, and
+
+    real-world sales-cycle fit.
+
+    '
+  current_state: '2026-05-18 inbound email from Ish invited a deeper dive on Todd''s
+
+    background, thoughts on Maho, opportunities, and challenges. Schedule via
+
+    Ish''s Calendly while warm.
+
+    '
+  boost_for_brief: high
+  boost_score: 1.3
+  closed_date: '2026-07-23'
+  close_reason: Closed by Todd on 2026-07-23; Ish Singh / Maho loop is no longer active and
+    should stop surfacing as a daily priority.
+- id: T-2026-05-coates-group-director-mcdonald-s-global-account-role
+  title: Coates Group / Director, McDonald's Global Account role
+  opened: '2026-05-19'
+  status: closed
+  type: job_opportunity
+  people:
+  - becky-cattie
+  companies:
+  - Coates Group
+  - McDonald's
+  context: 'Manual recruiting RI captured 2026-05-19: Becky Cattie re-engaged on Director,
+    McDonald''s Global Account role.'
+  current_state: 'Opportunity state: active internal evaluation. Evidence: recruiter shared
+    Todd''s info and prior notes with the team; posture is light-touch, await next inbound
+    movement.'
+  boost_for_brief: high
+  boost_score: 1.3
+  target_close: '2026-07-03'
+  closed_date: '2026-06-01'
+  close_reason: rejected — opportunity closed 2026-06-01. Recruiter Becky Cattie. No further
+    pursuit.
+- id: T-2026-05-foods-connected-commercial-director
+  title: Foods Connected Commercial Director opportunity
+  opened: '2026-05-26'
+  status: closed
+  close_date: '2026-06-21'
+  close_reason: declined — CEO declaration 2026-06-21. Candidate declined the opportunity.
+    Sarah McAngus informed. Loop closed.
+  type: opportunity
+  people:
+  - sarah-mcangus
+  - duncan
+  companies:
+  - Foods Connected
+  context: Warm introduction via Jeff. Strong recruiter engagement cadence, immediate scheduling,
+    CV review completed, and recruiter indicated specific alignment between Todd's background
+    and client needs.
+  current_state: 'DECLINED (2026-06-21): CEO declaration — candidate declined. Sarah McAngus
+    notified. No further pursuit.'
+  boost_for_brief: none
+  boost_score: 0
+  target_close: '2026-06-21'
+- id: T-2026-06-perfect-hire-advisory
+  title: Perfect Hire — Strategic Advisor / Equity Opportunity
+  opened: '2026-06-12'
+  status: closed
+  type: business_engagement
+  people:
+  - matt
+  companies:
+  - Perfect Hire
+  context: Founder (Matt, theperfecthire.co) opened an advisory conversation on 2026-06-12,
+    discussing equity participation and asking where Todd could see this going. Originated
+    from a thread_promotion_auto-created contact (RB-DEFECT-038).
+  current_state: New opportunity, pre-confirmation. Awaiting follow-up scheduling to scope
+    advisory role and equity terms. No commitments made yet.
+  boost_for_brief: medium
+  boost_score: 1.2
+  closed_date: '2026-07-27'
+  close_reason: Closed by Todd on 2026-07-27; Perfect Hire advisory/equity conversation is
+    no longer active and should stop surfacing as a warm-path opportunity or risk item.
+- id: T-2026-09-formerly-par-technology-par-technology-doordash-m-a-monitoring
+  title: Formerly PAR Technology / PAR Technology / DoorDash M&A monitoring
+  opened: '2026-09-18'
+  status: closed
+  type: relationship_opportunity
+  people:
+  - sal-nazir
+  companies:
+  - Formerly PAR Technology
+  context: 'Manual RI captured 2026-09-18: Sal Nazir created a opportunity_identified signal.'
+  current_state: 'Opportunity state: warm recruiting re-engagement; await next recruiter movement.'
+  boost_for_brief: medium
+  boost_score: 1.2
+  target_close: '2026-11-02'
+  closed_date: '2026-09-18'
+  close_reason: 'Marked erroneous, RB-DEFECT-2026-09-18: fabricated by manual_relationship_intake.py''s
+    pre-fix opportunity-state logic, which unconditionally invented a ''warm recruiting re-engagement''
+    opportunity thread from a single bare operator_domain_overlap signal (no ask/commitment/next-step
+    in the source call). Confirmed generated solely by this misclassification via the interaction
+    brief (system/briefs/2026-09-18-sal-nazir-manual-ri.md), whose stage/next_expected_action
+    text matches this thread''s current_state verbatim, and the audit log timing (manualRelationshipIntake
+    apply call at 2026-09-18T16:30:46Z, immediately preceding this thread''s creation). No
+    legitimate opportunity exists for Sal Nazir at this time -- the real content was a relationship
+    touch plus an M&A intelligence observation, already correctly captured via ingestExecutiveDeclaration
+    (exec-action-2026-09-18-0040).'

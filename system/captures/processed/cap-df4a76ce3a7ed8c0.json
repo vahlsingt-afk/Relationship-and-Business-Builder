@@ -1,0 +1,34 @@
+{
+  "file_id": "cap-df4a76ce3a7ed8c0",
+  "queued_at": "2026-07-28T16:30:19+00:00",
+  "source_id": "just_press_record",
+  "source_label": "Just Press Record",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-27/12-55-52.m4a",
+  "capture_type": "meeting",
+  "title_hint": "Just Press Record \u2014 2026-07-27 12-55-52",
+  "transcription_method": "whisper_local",
+  "transcript": "This will be a meeting with Jessica who was also on the world pay team. I believe Jessica was on the meeting last week Tuesday. She'd be interesting chat for not real long, I would imagine. Oh, and it's actually not to 130 so I've got some time.",
+  "word_count": 48,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-07-28T16:31:17+00:00",
+  "processing_result": {
+    "triage_stream_count": 2,
+    "noise_only": false,
+    "persisted_count": 2,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-07-28T16:30:19+00:00-001",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 1 trigger(s): meeting with. Possible named subjects: Jessica, Jessica, Tuesday, Oh."
+      },
+      {
+        "item_id": "INT-2026-07-28T16:30:19+00:00-002",
+        "intelligence_type": "strategic_memory",
+        "extracted_summary": "Strategic memory / thesis signal detected: 1 trigger(s): i believe."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": null
+  }
+}

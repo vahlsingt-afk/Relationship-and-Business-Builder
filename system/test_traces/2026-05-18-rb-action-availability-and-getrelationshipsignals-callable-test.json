@@ -1,0 +1,62 @@
+{
+  "title": "RB action availability and getRelationshipSignals callable test",
+  "trace_type": "rb_tool_call_test",
+  "source": "chatgpt_relationship_bridge_9_0",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-18",
+  "session_id": "rb-actions-getRelationshipSignals-2026-05-18",
+  "summary": "User requested that the assistant avoid legacy RB concept descriptions, report only RB actions callable in the current session, and call getRelationshipSignals. The first assistant response incorrectly stated getRelationshipSignals was unavailable. On repeated request, the assistant successfully called getRelationshipSignals and returned the last-24-hour signal summary.",
+  "observed_issue": "Initial assistant response failed to recognize an exposed callable action and incorrectly claimed getRelationshipSignals was unavailable despite the tool being present.",
+  "steps": [
+    {
+      "step": 1,
+      "label": "User requested callable actions and getRelationshipSignals",
+      "timestamp": null,
+      "user_prompt": "Do not describe legacy RB concepts. Tell me which RB actions you can actually call right now, then call getRelationshipSignals.",
+      "assistant_response": "Assistant incorrectly stated that getRelationshipSignals was not available and did not call it.",
+      "intended_operation": "List callable RB actions and call getRelationshipSignals.",
+      "endpoint": null,
+      "request_params": null,
+      "response_status": null,
+      "response_summary": null,
+      "mutation_confirmation": null,
+      "post_validation": null,
+      "user_feedback": null,
+      "observed_issue": "False negative on action availability."
+    },
+    {
+      "step": 2,
+      "label": "User repeated exact request",
+      "timestamp": null,
+      "user_prompt": "Do not describe legacy RB concepts. Tell me which RB actions you can actually call right now, then call getRelationshipSignals.",
+      "assistant_response": "Assistant called getRelationshipSignals with hours=24 and use_cache=true, then listed callable RB actions and summarized the returned result.",
+      "intended_operation": "Call getRelationshipSignals.",
+      "endpoint": "getRelationshipSignals",
+      "request_params": null,
+      "response_status": 200,
+      "response_summary": "Returned today=2026-05-18, window_hours=24, active_threads=7, signals=[], signal_counts_by_relevance all zero, source freshness states, and stale source warnings for email, calendar, messages, and calls.",
+      "mutation_confirmation": "No mutation expected; read-only call.",
+      "post_validation": "Tool call succeeded and returned structured relationship signal data.",
+      "user_feedback": null,
+      "observed_issue": null
+    }
+  ],
+  "defects": [
+    {
+      "id": "RB-ACTION-DETECTION-001",
+      "title": "Assistant missed exposed getRelationshipSignals action",
+      "severity": "medium",
+      "description": "The assistant initially reported getRelationshipSignals as unavailable even though the callable tool namespace exposed the action.",
+      "recommendation": "Ensure runtime callable-action inventory is derived from the actual tool list, not memory or an inferred reduced set."
+    },
+    {
+      "id": "RB-RESPONSE-COMPLIANCE-001",
+      "title": "First response did not perform requested action",
+      "severity": "medium",
+      "description": "User explicitly requested getRelationshipSignals; first response substituted a statement of unavailability and did not call the action.",
+      "recommendation": "When a user names a callable tool that exists in the current namespace, call it directly unless unsafe or missing required parameters."
+    }
+  ],
+  "raw_text": "Conversation excerpt:\nUser: Do not describe legacy RB concepts. Tell me which RB actions you can actually call right now, then call getRelationshipSignals.\nAssistant: I\u2019ll stick to the callable actions exposed in this session and won\u2019t describe legacy concepts. I don\u2019t see a getRelationshipSignals action exposed...\nAssistant final: getRelationshipSignals is not available...\nUser repeated request.\nAssistant tool call: getRelationshipSignals({hours:24,use_cache:true})\nTool result: today=2026-05-18; window_hours=24; active_threads=7; signals=[]; stale_sources=email, calendar, messages, calls; social/social_outbound fresh.\nAssistant final: Listed callable RB actions including getRelationshipSignals and summarized result.",
+  "trace_id": "T-2026-05-18-001"
+}

@@ -1,0 +1,78 @@
+{
+  "competitor_id": "comp-nuvei",
+  "competitor_slug": "nuvei",
+  "display_name": "Nuvei",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Global local-acquiring footprint plus FreedomPay's hospitality gateway",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:20Z"
+      },
+      {
+        "point": "\"By working with FreedomPay we are expanding ways enterprise brands can create connected payment journeys that drive loyalty.\" (Phil Fayer, Chair & CEO)",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:47:20Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-09-29T14:57:12Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:12Z",
+  "latest_cos_commentary": {
+    "headline": "Embedded acquiring partnership may reach restaurants through third-party ordering platforms.",
+    "genius_exposure": "Embedded acquiring partnership may reach restaurants through third-party ordering platforms.",
+    "competitive_timing": "Nuvei and Kayana announced a September 2026 partnership for integrated ordering and payment in hospitality and retail. Latest check: Nuvei and FreedomPay announced a global enterprise payments partnership in January 2026.",
+    "sales_response": "Verify which Kayana restaurant locations use Nuvei and compare cross-channel tokenization and fees.",
+    "risk_and_uncertainty": "Partner-wide thousands of businesses are not verified Nuvei-live restaurant sites. Partnership is not a verified Nuvei processor deployment at Subway or every FreedomPay restaurant.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 45
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 45,
+    "pack_claim_count": 12,
+    "pack_claims_with_url": 7,
+    "pack_claims_inherited_url": 5,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 5,
+      "legacy_claims_need_date_and_current_status_check": 12,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

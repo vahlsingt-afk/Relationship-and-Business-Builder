@@ -1,0 +1,44 @@
+{
+  "competitor_id": "comp-nova",
+  "competitor_slug": "nova",
+  "display_name": "Nova",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [
+    "back_office",
+    "kitchen_drive_thru",
+    "loyalty_engagement",
+    "payments",
+    "pos",
+    "restaurant_os_platform"
+  ],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "vendor_claims": [],
+  "product_lineage": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:47:05Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:05Z"
+}

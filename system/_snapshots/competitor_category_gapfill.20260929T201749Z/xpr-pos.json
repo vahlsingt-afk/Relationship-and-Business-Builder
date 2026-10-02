@@ -1,0 +1,207 @@
+{
+  "competitor_id": "comp-xpr-pos",
+  "competitor_slug": "xpr-pos",
+  "display_name": "XPR POS",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "XPR POS is supported in this pass as a restaurant-technology vendor in: kiosks, online ordering, menu management.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T20:16:48Z",
+  "latest_cos_commentary": {
+    "headline": "Adjacent restaurant-tech vendor; no supported direct Genius overlap.",
+    "genius_exposure": [],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Monitor for expansion into Genius categories and verify account-level influence before treating as a direct competitor.",
+    "risk_and_uncertainty": "Evidence quality varies materially across this long-tail batch; unresolved names remain deliberately unclassified rather than guessed.",
+    "priority": "P3",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://www.xprpos.com/",
+        "title": "XPR POS restaurant technology portfolio",
+        "publisher": "XPR POS",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 110,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "Independent confirmation of the claimed Genius POS (Heartland) integration",
+        "Leadership/ownership",
+        "Funding history"
+      ]
+    }
+  },
+  "canonical_company_name": "XPR POS",
+  "website": "https://www.xprpos.com/",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://www.xprpos.com/",
+        "title": "XPR POS restaurant technology portfolio",
+        "publisher": "XPR POS",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "adjacent_ecosystem_vendor",
+  "restaurant_tech_categories": [
+    {
+      "category": "kiosks",
+      "basis": "Current evidence supports kiosks as a restaurant-facing category for XPR POS.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.xprpos.com/",
+          "title": "XPR POS restaurant technology portfolio",
+          "publisher": "XPR POS",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "online_ordering",
+      "basis": "Current evidence supports online ordering as a restaurant-facing category for XPR POS.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.xprpos.com/",
+          "title": "XPR POS restaurant technology portfolio",
+          "publisher": "XPR POS",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "menu_management",
+      "basis": "Current evidence supports menu management as a restaurant-facing category for XPR POS.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.xprpos.com/",
+          "title": "XPR POS restaurant technology portfolio",
+          "publisher": "XPR POS",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "XPR Self-Service Kiosks (kiosks, online_ordering, menu_management)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.xprpos.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "XPR Mobile & QR Ordering (kiosks, online_ordering, menu_management)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.xprpos.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "XPR Linebusting (kiosks, online_ordering, menu_management)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.xprpos.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Vendor has current restaurant-specific product evidence in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.xprpos.com/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated product evidence does not by itself establish ROI, reliability, implementation quality, or systemwide customer adoption; independent validation remains a research gap.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.xprpos.com/",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [],
+  "product_lineage": []
+}

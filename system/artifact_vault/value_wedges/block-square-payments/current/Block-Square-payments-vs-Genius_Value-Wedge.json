@@ -1,0 +1,18 @@
+{
+  "competitor_slug": "block-square-payments",
+  "vendor_display_name": "Block / Square (payments)",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Q2 2026 gross payment volume \"disappoints\" per headline"
+    },
+    {
+      "point": "~4,000 layoffs (about half of staff) on Feb 26, 2026"
+    }
+  ]
+}

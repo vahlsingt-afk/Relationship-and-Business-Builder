@@ -1,0 +1,36 @@
+{
+  "template_version": "0.3",
+  "qualification_scorecard": {
+    "criteria": [
+      {"id": "budget", "label": "Sufficient budget exists", "weight": 20, "formula": "IF(answer=\"Y\", weight, 0)"},
+      {"id": "access", "label": "We have the access we need", "weight": 20, "formula": "IF(answer=\"Y\", weight, 0)"},
+      {"id": "buying_process", "label": "Customer buying process is understood", "weight": 20, "formula": "IF(answer=\"Y\", weight, 0)"},
+      {"id": "ebi", "label": "Supportive Economic Buying Influence", "weight": 20, "formula": "IF(answer=\"Y\", weight, 0)"},
+      {"id": "coach", "label": "At least one Coach", "weight": 20, "formula": "IF(answer=\"Y\", weight, 0)"}
+    ],
+    "answer_vocabulary": ["Y", "N", "U"],
+    "answer_meaning": {"Y": "Fully supported by evidence meeting the criterion statement's qualification standard", "N": "Evidence contradicts or fails the standard", "U": "Unknown - insufficient evidence either way"},
+    "total_formula": "SUM(criteria.points)",
+    "max_score": 100,
+    "guidance": "The five criteria are qualification tests, not optimism scores. Use Y only when the complete statement in Criteria Statements is supported by direct evidence. See Method & Governance tab."
+  },
+  "buying_influence_vocabulary": {
+    "role_etuc": {
+      "codes": ["E", "T", "U", "C"],
+      "meaning": {"E": "Economic Buying Influence", "T": "Technical Buying Influence", "U": "User Buying Influence", "C": "Coach"},
+      "unverified_suffix": "A trailing '?' (e.g. 'E?') marks a hypothesized role pending confirmation - never render as confirmed in the Blue Sheet tab."
+    },
+    "influence": {"codes": ["High", "Medium/High", "Medium", "Low", "Unknown"]},
+    "mode": {
+      "codes": ["Growth", "Trouble", "Even Keel", "Overconfident", "Unknown"],
+      "abbreviations": {"G": "Growth", "T": "Trouble", "EK": "Even Keel", "OC": "Overconfident"}
+    },
+    "rating_scale": {"min": -5, "max": 5, "meaning": "Owner's assessed support level for this Single Sales Objective; negative is opposed, positive is supportive. Always a hypothesis/analyst-judgment field per Section 8 governance unless the customer has explicitly stated their position."},
+    "coach_qualification_test": [
+      "We have credibility with the person.",
+      "The person has credibility with the Buying Influences for this Single Sales Objective.",
+      "The person wants our solution above all others and will advocate for it."
+    ],
+    "governance": "Economic Buying Influence, Coach, personal win, mode, competitive preference, and rating are approval-required fields per Section 8 of the Blue Sheet Automation Spec. Automation may only change the 'current_read', 'access', and factual role/title/location cells outright; the rest must be written as a proposed change."
+  }
+}

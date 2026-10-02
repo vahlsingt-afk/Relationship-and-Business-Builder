@@ -1,0 +1,41 @@
+{
+  "trace_id": "T-2026-05-21-004",
+  "title": "Foods Connected / Sarah McAngus opportunity mutation-layer defect",
+  "captured_at": "2026-05-21T18:30:00-05:00",
+  "source": "Codex / operator-provided RB 9.0 test case",
+  "operator": "Todd",
+  "trace_type": "field_defect",
+  "severity": "HIGH",
+  "category": "Relationship Intelligence Persistence / Opportunity Creation / Artifact Mutation / Tool Availability",
+  "summary": "RB recognized Sarah McAngus / Foods Connected opportunity intelligence conversationally but did not prove contact, company, opportunity, relationship-edge, loop, or Who Matters Now mutations.",
+  "defects": [
+    {
+      "id": "OPPORTUNITY-MUTATION-001",
+      "title": "Opportunity RI had no canonical mutation surface",
+      "severity": "high",
+      "recommendation": "Add a review-first opportunity intake action that returns a visible mutation summary and applies only after explicit confirmation."
+    },
+    {
+      "id": "TOOL-AVAILABILITY-001",
+      "title": "RB-native mutations were not callable in the user-facing context",
+      "severity": "high",
+      "recommendation": "Expose a consolidated processOpportunityIntake operation that routes to canonical projections and reports persistence status."
+    },
+    {
+      "id": "TRUST-SURFACE-001",
+      "title": "Smart analysis without proof of persistence",
+      "severity": "high",
+      "recommendation": "Canonical responses must include detected signals, artifact mutations, and persistence status."
+    }
+  ],
+  "expected_mutations": [
+    "create_or_update_contact:sarah-mcangus",
+    "touch_contact:jeff-staley",
+    "create_company:foods-connected",
+    "create_opportunity:foods-connected-commercial-director",
+    "create_relationship_edge:jeff-staley-to-sarah-mcangus",
+    "create_loop:await-jd-and-company-website",
+    "create_loop:tailor-and-send-resume",
+    "update_who_matters_now:active_thread_boost"
+  ]
+}

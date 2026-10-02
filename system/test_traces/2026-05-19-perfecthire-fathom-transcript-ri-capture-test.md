@@ -1,0 +1,133 @@
+# RB Test Trace — PerfectHire Fathom transcript RI capture test
+
+**Trace ID:** T-2026-05-19-005  
+**Captured at:** 2026-05-19T08:05:00-05:00  
+**Source:** ChatGPT / Fathom transcript paste  
+**Operator:** Todd  
+**Trace type:** field_defect  
+
+## Summary
+
+Todd provided a Fathom link and then pasted a full Fathom transcript for Todd <> PerfectHire - QSR Platform Review - May 19. The assistant produced useful manual relationship analysis, but no RB action was called and no RI persistence, loop creation, card update, thread update, or trace occurred during the original interaction.
+
+## Observed issue
+
+Pasted meeting transcripts can receive useful analysis without becoming durable RB relationship intelligence.
+
+## Steps
+
+### 1. Fathom link supplied
+
+**User prompt**
+
+```text
+https://fathom.video/share/94njMJ56SsKKmCMXjwS33zbuXdWxeJw6
+```
+
+**Tool / API call**
+
+- intended_operation: `transcript_ingestion`
+- response_summary:
+```text
+No RB endpoint called; link-only Fathom content was inaccessible.
+```
+
+**Assistant response**
+
+```text
+Assistant said it could not directly access or play the Fathom link and requested transcript, AI summary, action items, export, upload, or screenshots.
+```
+
+**Observed issue:** RB needs an upload/export/watch-folder path for Fathom content when the share link is not directly accessible.
+
+
+### 2. Transcript pasted
+
+**User prompt**
+
+```text
+Full Fathom transcript pasted for Todd <> PerfectHire - QSR Platform Review - May 19 with Olivia Nielsen and Max Holmes from PerfectHire.
+```
+
+**Tool / API call**
+
+- intended_operation: `capture_ri_from_transcript`
+- response_summary:
+```text
+Useful manual analysis; no getRelationshipSignals, captureRI, addContact, openThread, addLoop, saveTestTrace, or equivalent persistence action was called.
+```
+
+**Assistant response**
+
+```text
+Assistant summarized the call as a strong strategic advisory call and manually extracted RI for Olivia Nielsen, Max Holmes, Matt Chalzi, and PerfectHire.
+```
+
+**Observed issue:** The response did not distinguish analysis_only from persisted RI.
+
+
+### 3. Expected RI to capture
+
+**Tool / API call**
+
+- intended_operation: `proposed_mutations`
+- response_summary:
+```text
+Should have proposed review-first writes: create/update contacts, open/update PerfectHire active thread, create loop for Matt Chalzi intro, create loop for follow-up email or next-step preparation.
+```
+
+**Assistant response**
+
+```text
+Olivia Nielsen / PerfectHire: high-signal warm strategic relationship; likely CEO intro to Matt Chalzi. Max Holmes / CTO: medium-high new product/technical relationship. Matt Chalzi / CEO: pending intro. PerfectHire: advisory or consulting opportunity around QSR scheduling, hiring, retention, call-off reduction, POS integration, manager prompts, employee loyalty, ROI proof, ICP, and restaurant GTM.
+```
+
+
+## Defects
+
+### TRANSCRIPT-INGESTION-001 — Pasted Fathom transcript analyzed but not ingested
+
+**Severity:** high
+
+The transcript contained obvious relationship intelligence but remained analysis-only. RB did not create a normalized conversation artifact, RI event, interaction brief, or proposed mutation set.
+
+**Recommendation:** Implement a pasted-transcript ingestion path that emits normalized artifact metadata, relationship signals, proposed mutations, and persistence status.
+
+
+### RI-PERSISTENCE-001 — No relationship-card, active-thread, or loop persistence occurred
+
+**Severity:** high
+
+No contact/card updates were confirmed for Olivia Nielsen, Max Holmes, Matt Chalzi, or PerfectHire. No loop was created for the CEO intro or follow-up.
+
+**Recommendation:** Use review-first proposed writes for transcript-derived RI and require explicit confirmation before canonical mutation.
+
+
+### PERSISTENCE-STATUS-001 — Assistant did not state whether RI was persisted
+
+**Severity:** medium-high
+
+The analysis implied RB had understood the relationship significance, but did not say whether the intelligence was saved, proposed, or analysis-only.
+
+**Recommendation:** Every RI-bearing artifact response must include Persistence status: not_persisted, proposed_write_pending_confirmation, or persisted.
+
+
+### FATHOM-LINK-ACCESS-001 — Fathom link alone is not a reliable ingestion source
+
+**Severity:** medium
+
+The assistant could not access the Fathom recording/transcript from the shared link alone.
+
+**Recommendation:** Prefer watched Fathom export folders, uploaded transcript files, pasted transcript text, or authenticated connector/export paths.
+
+
+## Raw verbatim paste
+
+This block is the operator-provided verbatim text. RB has not interpreted or summarized it; it is preserved here for replay.
+
+```text
+User-provided Codex summary of the PerfectHire Fathom Transcript / RI Capture Test. Raw transcript content was not included in this trace to avoid committing full meeting transcript text.
+```
+
+---
+*Generated by `system/scripts/test_trace.py`. Secrets redacted before persistence.*

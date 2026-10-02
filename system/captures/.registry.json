@@ -1,0 +1,1140 @@
+{
+  "processed_ids": {
+    "cap-5cb02578df5a9344": {
+      "queued_at": "2026-07-01T12:22:37+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-01/05-58-34.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-5cb02578df5a9344.json",
+      "status": "processed",
+      "processed_at": "2026-07-01T14:06:15+00:00"
+    },
+    "cap-3d71f6fa8d9dad67": {
+      "queued_at": "2026-07-01T12:22:37+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-01/06-00-33.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-3d71f6fa8d9dad67.json",
+      "status": "processed",
+      "processed_at": "2026-07-01T14:06:11+00:00"
+    },
+    "cap-3268cc70c60b3579": {
+      "queued_at": "2026-07-02T09:03:09+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-01/18-23-31.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-3268cc70c60b3579.json",
+      "status": "processed",
+      "processed_at": "2026-07-06T16:28:50+00:00"
+    },
+    "cap-cc0d698bd72d6964": {
+      "queued_at": "2026-07-02T09:03:09+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-01/17-54-59.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-cc0d698bd72d6964.json",
+      "status": "processed",
+      "processed_at": "2026-07-06T16:28:50+00:00"
+    },
+    "cap-77af8fc3c98d832a": {
+      "queued_at": "2026-07-03T09:03:25+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-02/08-33-02.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-77af8fc3c98d832a.json",
+      "status": "processed",
+      "processed_at": "2026-07-06T16:28:50+00:00"
+    },
+    "cap-6a6e73ef9ad0727d": {
+      "queued_at": "2026-07-07T09:03:19+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-06/14-02-57.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-6a6e73ef9ad0727d.json",
+      "status": "processed",
+      "processed_at": "2026-07-07T10:15:39+00:00"
+    },
+    "cap-4c6643e0ea56a81d": {
+      "queued_at": "2026-07-09T09:03:59+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-08/13-57-39.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-4c6643e0ea56a81d.json",
+      "status": "processed",
+      "processed_at": "2026-07-09T13:05:40+00:00"
+    },
+    "cap-d63eb08870988dff": {
+      "queued_at": "2026-07-09T09:03:59+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-08/12-58-32.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-d63eb08870988dff.json",
+      "status": "processed",
+      "processed_at": "2026-07-09T13:05:40+00:00"
+    },
+    "cap-8f9c81d46541d859": {
+      "queued_at": "2026-07-10T09:04:38+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-09/13-00-10.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-8f9c81d46541d859.json",
+      "status": "processed",
+      "processed_at": "2026-07-10T09:25:08+00:00"
+    },
+    "cap-a39cc92839ee4d3f": {
+      "queued_at": "2026-07-10T09:04:38+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-09/12-29-39.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-a39cc92839ee4d3f.json",
+      "status": "processed",
+      "processed_at": "2026-07-10T09:25:08+00:00"
+    },
+    "cap-d1f46f0fe1d95d01": {
+      "queued_at": "2026-07-10T09:04:38+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-09/12-00-31.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-d1f46f0fe1d95d01.json",
+      "status": "processed",
+      "processed_at": "2026-07-10T09:25:08+00:00"
+    },
+    "cap-64dbbdfe55051fa5": {
+      "queued_at": "2026-07-10T09:04:38+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-09/10-01-43.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-64dbbdfe55051fa5.json",
+      "status": "processed",
+      "processed_at": "2026-07-10T09:25:08+00:00"
+    },
+    "cap-7fec91c0dadf6d31": {
+      "queued_at": "2026-07-10T09:04:38+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-09/09-05-18.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-7fec91c0dadf6d31.json",
+      "status": "processed",
+      "processed_at": "2026-07-10T09:25:08+00:00"
+    },
+    "cap-4ad930b9ea5d830e": {
+      "queued_at": "2026-07-10T09:04:38+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-08/14-27-40.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-4ad930b9ea5d830e.json",
+      "status": "processed",
+      "processed_at": "2026-07-10T09:25:08+00:00"
+    },
+    "cap-047c94d5f60ba732": {
+      "queued_at": "2026-07-11T09:04:51+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-10/12-32-44.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-047c94d5f60ba732.json",
+      "status": "processed",
+      "processed_at": "2026-07-11T09:07:08+00:00"
+    },
+    "cap-31b4d9bcefee984b": {
+      "queued_at": "2026-07-11T09:04:51+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-10/09-27-55.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-31b4d9bcefee984b.json",
+      "status": "processed",
+      "processed_at": "2026-07-11T09:07:08+00:00"
+    },
+    "cap-780d1a173f89db94": {
+      "queued_at": "2026-07-11T09:04:51+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-10/08-59-14.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-780d1a173f89db94.json",
+      "status": "processed",
+      "processed_at": "2026-07-11T09:07:08+00:00"
+    },
+    "cap-8a8cc6aca43c351d": {
+      "queued_at": "2026-07-14T09:03:32+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-07/11-53-16.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-8a8cc6aca43c351d.json",
+      "status": "processed",
+      "processed_at": "2026-07-14T09:06:06+00:00"
+    },
+    "cap-2ec00d8cd6e84e3e": {
+      "queued_at": "2026-07-14T09:03:32+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-06/09-42-00.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-2ec00d8cd6e84e3e.json",
+      "status": "processed",
+      "processed_at": "2026-07-14T09:06:06+00:00"
+    },
+    "cap-b9b0cc52e4bf0b14": {
+      "queued_at": "2026-07-14T09:03:32+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-06/09-31-42.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-b9b0cc52e4bf0b14.json",
+      "status": "processed",
+      "processed_at": "2026-07-14T09:06:06+00:00"
+    },
+    "cap-6f71891fb925b5e5": {
+      "queued_at": "2026-07-14T09:03:32+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-13/13-00-01.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-6f71891fb925b5e5.json",
+      "status": "processed",
+      "processed_at": "2026-07-14T09:06:06+00:00"
+    },
+    "cap-e387f5c47178d708": {
+      "queued_at": "2026-07-14T09:03:32+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-13/11-07-32.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-e387f5c47178d708.json",
+      "status": "processed",
+      "processed_at": "2026-07-14T09:06:06+00:00"
+    },
+    "cap-8177189243c90dd2": {
+      "queued_at": "2026-07-14T09:03:32+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-13/10-03-12.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-8177189243c90dd2.json",
+      "status": "processed",
+      "processed_at": "2026-07-14T09:06:06+00:00"
+    },
+    "cap-f525a6aa8c5f1e75": {
+      "queued_at": "2026-07-15T12:12:36+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-14/10-04-19.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-f525a6aa8c5f1e75.json",
+      "status": "processed",
+      "processed_at": "2026-07-15T13:19:07+00:00"
+    },
+    "cap-e4ca5995e21bf71d": {
+      "queued_at": "2026-07-16T09:04:26+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-15/09-00-50.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-e4ca5995e21bf71d.json",
+      "status": "processed",
+      "processed_at": "2026-07-16T09:06:09+00:00"
+    },
+    "cap-baa244fa3841d8aa": {
+      "queued_at": "2026-07-20T19:35:27+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-20/13-55-33.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-baa244fa3841d8aa.json",
+      "status": "processed",
+      "processed_at": "2026-07-20T19:39:50+00:00"
+    },
+    "cap-1b045e525a873f12": {
+      "queued_at": "2026-07-20T19:35:27+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-20/12-56-56.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-1b045e525a873f12.json",
+      "status": "processed",
+      "processed_at": "2026-07-20T19:39:46+00:00"
+    },
+    "cap-191d1ba59361a353": {
+      "queued_at": "2026-07-20T19:35:27+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-20/10-56-57.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-191d1ba59361a353.json",
+      "status": "processed",
+      "processed_at": "2026-07-20T19:39:44+00:00"
+    },
+    "cap-3e392bcde149e4a9": {
+      "queued_at": "2026-07-22T09:06:52+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-21/09-56-00.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-3e392bcde149e4a9.json",
+      "status": "processed",
+      "processed_at": "2026-07-22T09:08:04+00:00"
+    },
+    "cap-29d94d84f6cda5c6": {
+      "queued_at": "2026-07-23T09:05:17+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-22/13-03-49.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-29d94d84f6cda5c6.json",
+      "status": "processed",
+      "processed_at": "2026-07-23T09:06:17+00:00"
+    },
+    "cap-e6e16242730470c7": {
+      "queued_at": "2026-07-24T09:05:05+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-23/14-56-07.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-e6e16242730470c7.json",
+      "status": "processed",
+      "processed_at": "2026-07-24T09:10:33+00:00"
+    },
+    "cap-ca1da04d58e6c383": {
+      "queued_at": "2026-07-24T09:05:05+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-23/13-27-27.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-ca1da04d58e6c383.json",
+      "status": "processed",
+      "processed_at": "2026-07-24T09:10:30+00:00"
+    },
+    "cap-d65bbd1a46a91032": {
+      "queued_at": "2026-07-24T09:05:05+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-23/12-03-06.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-d65bbd1a46a91032.json",
+      "status": "processed",
+      "processed_at": "2026-07-24T09:10:26+00:00"
+    },
+    "cap-fb8500de9ca5bf02": {
+      "queued_at": "2026-07-24T09:05:05+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-23/10-32-19.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-fb8500de9ca5bf02.json",
+      "status": "processed",
+      "processed_at": "2026-07-24T09:10:22+00:00"
+    },
+    "cap-03809f54c3affddc": {
+      "queued_at": "2026-07-24T20:32:56+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-24/13-27-28.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-03809f54c3affddc.json",
+      "status": "processed",
+      "processed_at": "2026-07-24T20:38:41+00:00"
+    },
+    "cap-45883b8b3093c7ae": {
+      "queued_at": "2026-07-24T20:32:56+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-24/11-59-25.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-45883b8b3093c7ae.json",
+      "status": "processed",
+      "processed_at": "2026-07-24T20:38:41+00:00"
+    },
+    "cap-fc7daabdba50bd5f": {
+      "queued_at": "2026-07-24T20:32:56+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-24/11-59-24.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-fc7daabdba50bd5f.json",
+      "status": "processed",
+      "processed_at": "2026-07-24T20:38:41+00:00"
+    },
+    "cap-eb53b353c4f05c63": {
+      "queued_at": "2026-07-24T20:32:56+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-24/10-59-48.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-eb53b353c4f05c63.json",
+      "status": "processed",
+      "processed_at": "2026-07-24T20:38:41+00:00"
+    },
+    "cap-6f4f42fe6ecfda7a": {
+      "queued_at": "2026-07-24T20:32:56+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-24/09-59-18.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-6f4f42fe6ecfda7a.json",
+      "status": "processed",
+      "processed_at": "2026-07-24T20:38:41+00:00"
+    },
+    "cap-d2ff95da1935e685": {
+      "queued_at": "2026-07-24T20:32:56+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-24/09-23-58.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-d2ff95da1935e685.json",
+      "status": "processed",
+      "processed_at": "2026-07-24T20:38:41+00:00"
+    },
+    "cap-ed80a5059752ec49": {
+      "queued_at": "2026-07-24T20:32:56+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-23/15-27-36.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-ed80a5059752ec49.json",
+      "status": "processed",
+      "processed_at": "2026-07-24T20:38:41+00:00"
+    },
+    "cap-00768d845b93874a": {
+      "queued_at": "2026-07-27T16:12:31+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-27/11-02-31.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-00768d845b93874a.json",
+      "status": "processed",
+      "processed_at": "2026-07-28T16:31:17+00:00"
+    },
+    "cap-851e84837d0a9799": {
+      "queued_at": "2026-07-27T16:12:31+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-27/09-58-42.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-851e84837d0a9799.json",
+      "status": "processed",
+      "processed_at": "2026-07-28T16:31:17+00:00"
+    },
+    "cap-cbad18f03c8d30b5": {
+      "queued_at": "2026-07-28T16:30:19+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-27/13-55-59.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-cbad18f03c8d30b5.json",
+      "status": "processed",
+      "processed_at": "2026-07-28T16:31:17+00:00"
+    },
+    "cap-12751aa548c1ff85": {
+      "queued_at": "2026-07-28T16:30:19+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-27/13-28-15.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-12751aa548c1ff85.json",
+      "status": "processed",
+      "processed_at": "2026-07-28T16:31:17+00:00"
+    },
+    "cap-df4a76ce3a7ed8c0": {
+      "queued_at": "2026-07-28T16:30:19+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-27/12-55-52.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-df4a76ce3a7ed8c0.json",
+      "status": "processed",
+      "processed_at": "2026-07-28T16:31:17+00:00"
+    },
+    "cap-329cc50ba257021b": {
+      "queued_at": "2026-07-31T14:44:58+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-31/09-29-03.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-329cc50ba257021b.json",
+      "status": "processed",
+      "processed_at": "2026-07-31T14:45:09+00:00"
+    },
+    "cap-be2f92be8e238e98": {
+      "queued_at": "2026-08-01T11:20:18+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-31/10-09-18.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-be2f92be8e238e98.json",
+      "status": "pending"
+    },
+    "cap-af2aa59bbfd479fe": {
+      "queued_at": "2026-08-01T11:20:18+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-30/10-02-28.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-af2aa59bbfd479fe.json",
+      "status": "processed",
+      "processed_at": "2026-08-01T12:31:55+00:00"
+    },
+    "cap-3654fabbc0e36a68": {
+      "queued_at": "2026-08-03T15:04:06+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-03/08-59-42.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-3654fabbc0e36a68.json",
+      "status": "processed",
+      "processed_at": "2026-08-03T15:06:03+00:00"
+    },
+    "cap-f3616ef9dbf88a18": {
+      "queued_at": "2026-08-07T10:35:42+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-06/14-01-23.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-f3616ef9dbf88a18.json",
+      "status": "processed",
+      "processed_at": "2026-08-07T12:05:57+00:00"
+    },
+    "cap-bb2947f72bcaef07": {
+      "queued_at": "2026-08-07T10:35:42+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-06/12-04-09.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-bb2947f72bcaef07.json",
+      "status": "processed",
+      "processed_at": "2026-08-07T12:05:47+00:00"
+    },
+    "cap-85c22da1dafa1d68": {
+      "queued_at": "2026-08-07T10:35:42+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-06/11-02-15.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-85c22da1dafa1d68.json",
+      "status": "processed",
+      "processed_at": "2026-08-07T12:05:43+00:00"
+    },
+    "cap-e7cb41f5c0e16b49": {
+      "queued_at": "2026-08-07T10:35:42+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-06/10-01-21.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-e7cb41f5c0e16b49.json",
+      "status": "processed",
+      "processed_at": "2026-08-07T12:05:39+00:00"
+    },
+    "cap-3f92ce857c89f451": {
+      "queued_at": "2026-08-08T11:32:33+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-07/10-02-28.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-3f92ce857c89f451.json",
+      "status": "processed",
+      "processed_at": "2026-08-08T11:33:01+00:00"
+    },
+    "cap-555de91f1e4c266a": {
+      "queued_at": "2026-08-11T16:44:00+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-11/10-39-49.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-555de91f1e4c266a.json",
+      "status": "processed",
+      "processed_at": "2026-08-11T16:45:57+00:00"
+    },
+    "cap-3af7f6f352840078": {
+      "queued_at": "2026-08-11T18:40:06+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-11/12-58-09.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-3af7f6f352840078.json",
+      "status": "processed",
+      "processed_at": "2026-08-11T18:41:30+00:00"
+    },
+    "cap-d86111f6d7e21c91": {
+      "queued_at": "2026-08-12T18:18:44+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-12/12-23-21.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship Builder/system/captures/pending/cap-d86111f6d7e21c91.json",
+      "status": "processed",
+      "processed_at": "2026-08-13T09:23:18+00:00"
+    },
+    "cap-584c7abb48b38d66": {
+      "queued_at": "2026-08-14T16:33:38+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-14/09-03-04.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-584c7abb48b38d66.json",
+      "status": "processed",
+      "processed_at": "2026-08-14T16:34:29+00:00"
+    },
+    "cap-b00bf22786d4babf": {
+      "queued_at": "2026-08-19T09:08:09+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-17/12-02-20.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-b00bf22786d4babf.json",
+      "status": "processed",
+      "processed_at": "2026-08-19T09:33:59+00:00"
+    },
+    "cap-7d6dc793af6caf02": {
+      "queued_at": "2026-08-20T09:14:11+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-19/14-47-45.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-7d6dc793af6caf02.json",
+      "status": "processed",
+      "processed_at": "2026-08-20T09:14:43+00:00"
+    },
+    "cap-eb36603a89fb976b": {
+      "queued_at": "2026-08-25T09:24:07+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-24/12-58-23.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-eb36603a89fb976b.json",
+      "status": "processed",
+      "processed_at": "2026-08-25T09:24:45+00:00"
+    },
+    "cap-a4f988feebfd7480": {
+      "queued_at": "2026-08-26T09:22:42+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-22/14-05-08.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-a4f988feebfd7480.json",
+      "status": "processed",
+      "processed_at": "2026-08-26T09:25:05+00:00"
+    },
+    "cap-4ade3aa5bdb41e53": {
+      "queued_at": "2026-08-27T09:25:14+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-26/13-12-14.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-4ade3aa5bdb41e53.json",
+      "status": "processed",
+      "processed_at": "2026-08-27T09:27:09+00:00"
+    },
+    "cap-14fab0923860d787": {
+      "queued_at": "2026-08-27T20:20:40+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-27/14-18-05.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-14fab0923860d787.json",
+      "status": "processed",
+      "processed_at": "2026-08-27T20:26:42+00:00"
+    },
+    "cap-09da8db9506825fd": {
+      "queued_at": "2026-08-27T20:20:40+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-27/09-29-39.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-09da8db9506825fd.json",
+      "status": "processed",
+      "processed_at": "2026-08-27T20:26:42+00:00"
+    },
+    "cap-a7a4517bf80eca1d": {
+      "queued_at": "2026-08-27T20:20:40+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-27/08-01-49.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-a7a4517bf80eca1d.json",
+      "status": "processed",
+      "processed_at": "2026-08-27T20:26:42+00:00"
+    },
+    "cap-5ec8ca68523180a6": {
+      "queued_at": "2026-08-28T21:58:02+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-14/12-36-07.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-5ec8ca68523180a6.json",
+      "status": "processed",
+      "processed_at": "2026-08-28T22:02:24+00:00"
+    },
+    "cap-4965ea6e01541a75": {
+      "queued_at": "2026-08-28T21:58:02+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-13/13-57-10.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-4965ea6e01541a75.json",
+      "status": "processed",
+      "processed_at": "2026-08-28T22:02:24+00:00"
+    },
+    "cap-6f450716bbf1fec2": {
+      "queued_at": "2026-08-28T21:58:02+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-08-13/13-57-08.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-6f450716bbf1fec2.json",
+      "status": "processed",
+      "processed_at": "2026-08-28T22:02:24+00:00"
+    },
+    "cap-b348755526eab81a": {
+      "queued_at": "2026-08-28T21:58:02+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-28/15-25-57.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-b348755526eab81a.json",
+      "status": "processed",
+      "processed_at": "2026-08-28T22:02:24+00:00"
+    },
+    "cap-baa586553f935d56": {
+      "queued_at": "2026-08-28T21:58:02+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-28/13-55-07.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-baa586553f935d56.json",
+      "status": "processed",
+      "processed_at": "2026-08-28T22:02:24+00:00"
+    },
+    "cap-47b55117b2f10e2e": {
+      "queued_at": "2026-09-01T17:38:20+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-01/11-56-40.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-47b55117b2f10e2e.json",
+      "status": "processed",
+      "processed_at": "2026-09-01T17:40:59+00:00"
+    },
+    "cap-474a20539fbfbd1d": {
+      "queued_at": "2026-09-01T17:38:20+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-01/11-07-46.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-474a20539fbfbd1d.json",
+      "status": "processed",
+      "processed_at": "2026-09-01T17:40:59+00:00"
+    },
+    "cap-0c85d34f7c4c8622": {
+      "queued_at": "2026-09-01T17:38:20+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-01/10-03-35.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-0c85d34f7c4c8622.json",
+      "status": "processed",
+      "processed_at": "2026-09-01T17:40:59+00:00"
+    },
+    "cap-7fb274920354dfb5": {
+      "queued_at": "2026-09-02T16:12:34+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-02/10-02-00.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-7fb274920354dfb5.json",
+      "status": "processed",
+      "processed_at": "2026-09-02T16:17:51+00:00"
+    },
+    "cap-e6119710a899bcd3": {
+      "queued_at": "2026-09-04T09:17:03+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-03/12-08-20.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-e6119710a899bcd3.json",
+      "status": "processed",
+      "processed_at": "2026-09-04T09:17:52+00:00"
+    },
+    "cap-9ac988ff207b0dc3": {
+      "queued_at": "2026-09-04T13:29:25+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-04/08-01-59.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-9ac988ff207b0dc3.json",
+      "status": "processed",
+      "processed_at": "2026-09-04T13:32:24+00:00"
+    },
+    "cap-7b75cc49ed552063": {
+      "queued_at": "2026-09-04T15:21:04+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-04/09-59-04.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-7b75cc49ed552063.json",
+      "status": "processed",
+      "processed_at": "2026-09-04T15:22:26+00:00"
+    },
+    "cap-ee5035a66da4dd0d": {
+      "queued_at": "2026-09-08T15:56:12+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-08/09-57-47.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-ee5035a66da4dd0d.json",
+      "status": "processed",
+      "processed_at": "2026-09-08T15:57:41+00:00"
+    },
+    "cap-3640b0bade26ad38": {
+      "queued_at": "2026-09-08T18:19:19+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-08/12-57-34.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-3640b0bade26ad38.json",
+      "status": "processed",
+      "processed_at": "2026-09-09T09:15:49+00:00"
+    },
+    "cap-b9c5e7e821af3bb7": {
+      "queued_at": "2026-09-08T20:36:26+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-08/15-13-45.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-b9c5e7e821af3bb7.json",
+      "status": "processed",
+      "processed_at": "2026-09-08T20:38:28+00:00"
+    },
+    "cap-7d531c60d9507a63": {
+      "queued_at": "2026-09-10T09:15:15+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-09/08-58-29.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-7d531c60d9507a63.json",
+      "status": "processed",
+      "processed_at": "2026-09-10T09:17:35+00:00"
+    },
+    "cap-67ff1b95a4499b6a": {
+      "queued_at": "2026-09-11T09:16:21+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-10/09-34-57.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-67ff1b95a4499b6a.json",
+      "status": "processed",
+      "processed_at": "2026-09-11T09:17:17+00:00"
+    },
+    "cap-9e43be2cdc38dccc": {
+      "queued_at": "2026-09-12T22:03:36+00:00",
+      "source_id": "pasted_content",
+      "source_file": "pasted_content:0feaa78920a1150c",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-9e43be2cdc38dccc.json",
+      "status": "processed",
+      "processed_at": "2026-09-13T09:14:21+00:00"
+    },
+    "cap-241006b2b20cc11b": {
+      "queued_at": "2026-09-14T21:00:39+00:00",
+      "source_id": "pasted_content",
+      "source_file": "pasted_content:e65e91ba54583e0b",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-241006b2b20cc11b.json",
+      "status": "processed",
+      "processed_at": "2026-09-15T02:32:08+00:00"
+    },
+    "cap-5f172f9191476fa2": {
+      "queued_at": "2026-09-15T15:50:26+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-15/10-00-47.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-5f172f9191476fa2.json",
+      "status": "processed",
+      "processed_at": "2026-09-15T15:55:54+00:00"
+    },
+    "cap-d2ca61582b161a01": {
+      "queued_at": "2026-09-15T15:50:26+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-15/09-06-03.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-d2ca61582b161a01.json",
+      "status": "processed",
+      "processed_at": "2026-09-16T09:19:25+00:00"
+    },
+    "cap-a767cb2ade43ab63": {
+      "queued_at": "2026-09-15T15:50:26+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-15/07-39-01.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-a767cb2ade43ab63.json",
+      "status": "processed",
+      "processed_at": "2026-09-15T15:55:22+00:00"
+    },
+    "cap-ff73a8e131c2b0ee": {
+      "queued_at": "2026-09-16T09:18:47+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-15/12-00-50.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-ff73a8e131c2b0ee.json",
+      "status": "processed",
+      "processed_at": "2026-09-16T09:19:24+00:00"
+    },
+    "cap-98f37f1ecc847ca0": {
+      "queued_at": "2026-09-17T09:19:02+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-16/12-24-54.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-98f37f1ecc847ca0.json",
+      "status": "processed",
+      "processed_at": "2026-09-17T09:22:16+00:00"
+    },
+    "cap-cc700ecc017788ee": {
+      "queued_at": "2026-09-17T09:19:02+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-16/12-03-08.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-cc700ecc017788ee.json",
+      "status": "processed",
+      "processed_at": "2026-09-17T09:22:14+00:00"
+    },
+    "cap-c043f226543dd7a4": {
+      "queued_at": "2026-09-17T09:19:02+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-16/11-30-48.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-c043f226543dd7a4.json",
+      "status": "processed",
+      "processed_at": "2026-09-17T09:22:12+00:00"
+    },
+    "cap-b518ed70f9890769": {
+      "queued_at": "2026-09-17T09:19:02+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-16/11-01-26.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-b518ed70f9890769.json",
+      "status": "processed",
+      "processed_at": "2026-09-17T09:22:09+00:00"
+    },
+    "cap-722436fcee0a206a": {
+      "queued_at": "2026-09-17T09:19:02+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-16/08-31-36.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-722436fcee0a206a.json",
+      "status": "processed",
+      "processed_at": "2026-09-17T09:22:07+00:00"
+    },
+    "cap-c0c7292d93bd6aaa": {
+      "queued_at": "2026-09-18T09:22:39+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-17/10-33-53.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-c0c7292d93bd6aaa.json",
+      "status": "processed",
+      "processed_at": "2026-09-18T09:24:06+00:00"
+    },
+    "cap-9646b6639666f94a": {
+      "queued_at": "2026-09-19T11:23:20+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-18_wendys_meritage_bankruptcy_screenshot.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-9646b6639666f94a.json",
+      "status": "processed",
+      "processed_at": "2026-09-19T11:23:27+00:00"
+    },
+    "cap-373100e257f3d0c8": {
+      "queued_at": "2026-09-20T09:18:51+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-18/13-58-40.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-373100e257f3d0c8.json",
+      "status": "processed",
+      "processed_at": "2026-09-20T09:37:37+00:00"
+    },
+    "cap-4faf7088d19110a9": {
+      "queued_at": "2026-09-20T09:18:51+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-18/08-33-54.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-4faf7088d19110a9.json",
+      "status": "processed",
+      "processed_at": "2026-09-20T09:37:35+00:00"
+    },
+    "cap-6553f5926aae94d7": {
+      "queued_at": "2026-09-20T09:18:51+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-17/11-32-42.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-6553f5926aae94d7.json",
+      "status": "processed",
+      "processed_at": "2026-09-20T09:37:31+00:00"
+    },
+    "cap-553aa8f5c4654846": {
+      "queued_at": "2026-09-21T09:23:08+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-20_2205_candidate-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-553aa8f5c4654846.json",
+      "status": "processed",
+      "processed_at": "2026-09-21T09:23:33+00:00"
+    },
+    "cap-4300bb10252dd1a5": {
+      "queued_at": "2026-09-21T09:23:08+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-20_1906_candidate-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-4300bb10252dd1a5.json",
+      "status": "processed",
+      "processed_at": "2026-09-21T09:23:31+00:00"
+    },
+    "cap-462940e5bf2f6a2f": {
+      "queued_at": "2026-09-21T09:23:08+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-20_1607_candidate-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-462940e5bf2f6a2f.json",
+      "status": "processed",
+      "processed_at": "2026-09-21T09:23:28+00:00"
+    },
+    "cap-4f215ddbb9687a2e": {
+      "queued_at": "2026-09-21T09:23:08+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-20_1307_candidate-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-4f215ddbb9687a2e.json",
+      "status": "processed",
+      "processed_at": "2026-09-21T09:23:26+00:00"
+    },
+    "cap-9e14844a06c7ba71": {
+      "queued_at": "2026-09-21T09:23:08+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-20_0706_candidate-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-9e14844a06c7ba71.json",
+      "status": "processed",
+      "processed_at": "2026-09-21T09:23:23+00:00"
+    },
+    "cap-1f261e33a74819e0": {
+      "queued_at": "2026-09-21T13:43:49+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-21_0707_7shifts-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-1f261e33a74819e0.json",
+      "status": "processed",
+      "processed_at": "2026-09-21T13:43:56+00:00"
+    },
+    "cap-ce0ea8218fe50a66": {
+      "queued_at": "2026-09-22T09:19:03+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-21/15-00-27.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-ce0ea8218fe50a66.json",
+      "status": "processed",
+      "processed_at": "2026-09-22T09:23:26+00:00"
+    },
+    "cap-c44c1ccb3b24a660": {
+      "queued_at": "2026-09-22T09:19:03+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-21/12-37-45.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-c44c1ccb3b24a660.json",
+      "status": "processed",
+      "processed_at": "2026-09-22T09:23:23+00:00"
+    },
+    "cap-afbdef63114da444": {
+      "queued_at": "2026-09-22T09:19:03+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-21_2206_candidate-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-afbdef63114da444.json",
+      "status": "processed",
+      "processed_at": "2026-09-22T09:23:20+00:00"
+    },
+    "cap-1341dc897daeff4d": {
+      "queued_at": "2026-09-22T09:19:03+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-21_1906_candidate-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-1341dc897daeff4d.json",
+      "status": "processed",
+      "processed_at": "2026-09-22T09:23:18+00:00"
+    },
+    "cap-8e95fafb02b859fd": {
+      "queued_at": "2026-09-22T09:19:03+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-21_1606_candidate-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-8e95fafb02b859fd.json",
+      "status": "processed",
+      "processed_at": "2026-09-22T09:23:15+00:00"
+    },
+    "cap-974f554065874264": {
+      "queued_at": "2026-09-22T09:19:03+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-21_1305_mcdonalds-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-974f554065874264.json",
+      "status": "processed",
+      "processed_at": "2026-09-22T09:23:12+00:00"
+    },
+    "cap-fe053a529920d140": {
+      "queued_at": "2026-09-22T09:19:03+00:00",
+      "source_id": "icloud_screenshots",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/com~apple~CloudDocs/RB Captures/2026-09-21_opsavor_linkedin_post.png",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-fe053a529920d140.json",
+      "status": "processed",
+      "processed_at": "2026-09-22T09:23:10+00:00"
+    },
+    "cap-e0bd9d6acff9200a": {
+      "queued_at": "2026-09-23T09:19:03+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-22_2207_bite-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-e0bd9d6acff9200a.json",
+      "status": "processed",
+      "processed_at": "2026-09-23T09:19:32+00:00"
+    },
+    "cap-024a27a7118164b3": {
+      "queued_at": "2026-09-23T09:19:03+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-22_1906_altametrics-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-024a27a7118164b3.json",
+      "status": "processed",
+      "processed_at": "2026-09-23T09:19:29+00:00"
+    },
+    "cap-783325596fed16b5": {
+      "queued_at": "2026-09-23T09:19:03+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-22_1605_agilysys-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-783325596fed16b5.json",
+      "status": "processed",
+      "processed_at": "2026-09-23T09:19:26+00:00"
+    },
+    "cap-c3be95f117f024e4": {
+      "queued_at": "2026-09-23T09:19:03+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-22_1306_adyen-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-c3be95f117f024e4.json",
+      "status": "processed",
+      "processed_at": "2026-09-23T09:19:23+00:00"
+    },
+    "cap-ebb7daf0b96dc485": {
+      "queued_at": "2026-09-23T09:19:03+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-22_1005_candidate-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-ebb7daf0b96dc485.json",
+      "status": "processed",
+      "processed_at": "2026-09-23T09:19:20+00:00"
+    },
+    "cap-1000289c3af03488": {
+      "queued_at": "2026-09-23T09:19:03+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-22_0707_candidate-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-1000289c3af03488.json",
+      "status": "processed",
+      "processed_at": "2026-09-23T09:19:17+00:00"
+    },
+    "cap-7bc100032b266d5e": {
+      "queued_at": "2026-09-26T09:19:44+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-25/14-59-14.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-7bc100032b266d5e.json",
+      "status": "processed",
+      "processed_at": "2026-09-26T09:20:11+00:00"
+    },
+    "cap-eed0177ecf9a4bf8": {
+      "queued_at": "2026-09-27T09:17:45+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-26_2207_3-owl-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-eed0177ecf9a4bf8.json",
+      "status": "processed",
+      "processed_at": "2026-09-27T09:18:12+00:00"
+    },
+    "cap-27f477f9f1e3b121": {
+      "queued_at": "2026-09-27T09:17:45+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-26_1906_5-5-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-27f477f9f1e3b121.json",
+      "status": "processed",
+      "processed_at": "2026-09-27T09:18:10+00:00"
+    },
+    "cap-27bd426158c9fd34": {
+      "queued_at": "2026-09-27T09:17:45+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-26_1607_apex-order-pickup-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-27bd426158c9fd34.json",
+      "status": "processed",
+      "processed_at": "2026-09-27T09:18:07+00:00"
+    },
+    "cap-226620e39a0e148d": {
+      "queued_at": "2026-09-27T09:17:45+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-26_1305_acrelec-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-226620e39a0e148d.json",
+      "status": "processed",
+      "processed_at": "2026-09-27T09:18:04+00:00"
+    },
+    "cap-9ccd79e7b494ec46": {
+      "queued_at": "2026-09-28T09:23:51+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-27_0708_858-partners-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-9ccd79e7b494ec46.json",
+      "status": "processed",
+      "processed_at": "2026-09-28T09:24:06+00:00"
+    },
+    "cap-5d2d93924b9727ff": {
+      "queued_at": "2026-09-28T12:12:07+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-28_0706_ai2cs-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-5d2d93924b9727ff.json",
+      "status": "processed",
+      "processed_at": "2026-09-28T12:12:15+00:00"
+    },
+    "cap-90fd6bf57fe396b4": {
+      "queued_at": "2026-09-29T09:18:15+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-28_1323_competitor-platforms_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-90fd6bf57fe396b4.json",
+      "status": "processed",
+      "processed_at": "2026-09-29T09:18:34+00:00"
+    },
+    "cap-6fc93ccdefa28b21": {
+      "queued_at": "2026-09-30T09:19:34+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-29/08-57-36.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-6fc93ccdefa28b21.json",
+      "status": "processed",
+      "processed_at": "2026-09-30T09:20:51+00:00"
+    },
+    "cap-45c05d6ade8e0003": {
+      "queued_at": "2026-09-30T09:19:34+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-29_1924_competitor-platforms_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-45c05d6ade8e0003.json",
+      "status": "processed",
+      "processed_at": "2026-09-30T09:20:50+00:00"
+    },
+    "cap-7e127364a5ff670a": {
+      "queued_at": "2026-09-30T09:19:34+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-29_2206_axial-shift-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-7e127364a5ff670a.json",
+      "status": "processed",
+      "processed_at": "2026-09-30T09:20:47+00:00"
+    },
+    "cap-714dbc3d5c7fb0ab": {
+      "queued_at": "2026-09-30T09:19:34+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-29_1906_all-gravy-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-714dbc3d5c7fb0ab.json",
+      "status": "processed",
+      "processed_at": "2026-09-30T09:20:44+00:00"
+    },
+    "cap-55b3bfd40677318e": {
+      "queued_at": "2026-09-30T09:19:34+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-29_1623_competitor-platforms_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-55b3bfd40677318e.json",
+      "status": "processed",
+      "processed_at": "2026-09-30T09:20:41+00:00"
+    },
+    "cap-e95f97c14d58812d": {
+      "queued_at": "2026-09-30T09:19:34+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-29_1605_alchemer-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-e95f97c14d58812d.json",
+      "status": "processed",
+      "processed_at": "2026-09-30T09:20:39+00:00"
+    },
+    "cap-cece22fb0194ca66": {
+      "queued_at": "2026-09-30T09:19:34+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-29_1041_competitor-platforms_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-cece22fb0194ca66.json",
+      "status": "processed",
+      "processed_at": "2026-09-30T09:20:36+00:00"
+    },
+    "cap-bb069fd251eea855": {
+      "queued_at": "2026-09-30T09:19:34+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-29_1007_adyen-talon-one-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-bb069fd251eea855.json",
+      "status": "processed",
+      "processed_at": "2026-09-30T09:20:33+00:00"
+    },
+    "cap-3d8ba3934cb02fa2": {
+      "queued_at": "2026-09-30T12:21:56+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-30_0708_bixolon-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-3d8ba3934cb02fa2.json",
+      "status": "processed",
+      "processed_at": "2026-09-30T12:22:04+00:00"
+    },
+    "cap-a6560192230ed798": {
+      "queued_at": "2026-10-01T10:42:27+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-30_0722_competitor-platforms_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-a6560192230ed798.json",
+      "status": "processed",
+      "processed_at": "2026-10-01T10:42:35+00:00"
+    },
+    "cap-9234f20ca49ef605": {
+      "queued_at": "2026-10-01T10:42:27+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-30_1008_berry-ai-validation_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-9234f20ca49ef605.json",
+      "status": "processed",
+      "processed_at": "2026-10-01T10:42:35+00:00"
+    },
+    "cap-5ca4326000c75eb1": {
+      "queued_at": "2026-10-01T10:42:27+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-30_worldpay_supplemental_account_depth_audit.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-5ca4326000c75eb1.json",
+      "status": "processed",
+      "processed_at": "2026-10-01T10:42:35+00:00"
+    },
+    "cap-615febf1e73c7e1c": {
+      "queued_at": "2026-10-02T09:19:56+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-30/11-37-41.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-615febf1e73c7e1c.json",
+      "status": "processed",
+      "processed_at": "2026-10-02T09:46:09+00:00"
+    },
+    "cap-d60895f06239e5b2": {
+      "queued_at": "2026-10-02T09:19:56+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-29/13-29-45.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-d60895f06239e5b2.json",
+      "status": "processed",
+      "processed_at": "2026-10-02T09:46:05+00:00"
+    },
+    "cap-51d98f84faafb44a": {
+      "queued_at": "2026-10-02T09:19:56+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-10-02_0441_iconex_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-51d98f84faafb44a.json",
+      "status": "processed",
+      "processed_at": "2026-10-02T09:46:00+00:00"
+    }
+  },
+  "last_scan": "2026-10-02T09:19:56+00:00"
+}

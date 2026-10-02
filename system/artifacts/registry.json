@@ -1,0 +1,309 @@
+{
+  "contract": "rb_intelligence_artifact_registry_v1",
+  "description": "General-purpose intelligence artifact registry. Covers micro graphs, account dossiers, competitive intelligence artifacts, and vendor topology datasets. Each artifact is queryable via the RB API without re-uploading the source data.",
+  "version": 1,
+  "updated_at": "2026-09-07",
+  "artifacts": [
+    {
+      "artifact_id": "micro_graph:mcdonalds_us_ops",
+      "artifact_type": "micro_graph",
+      "name": "McDonald's U.S. Operations",
+      "entity": "McDonald's",
+      "entity_aliases": [
+        "McDonalds",
+        "MCD",
+        "McDonald's Corporation",
+        "NSN",
+        "StoreTech",
+        "mcdonald",
+        "nsn",
+        "storetech",
+        "store tech",
+        "field office",
+        "coop",
+        "co-op",
+        "rfm",
+        "otm",
+        "stim",
+        "fbp",
+        "otp",
+        "site id",
+        "store code"
+      ],
+      "status": "active",
+      "confidence": "high",
+      "freshness_date": "2026-08-07",
+      "queryable_via": "getMicroGraphSummary",
+      "graph_slug": "mcdonalds_us_ops",
+      "graph_path": "system/graphs/micro/mcdonalds_us_ops",
+      "index_path": "system/graphs/micro/mcdonalds_us_ops/index.json",
+      "source_lineage": [
+        {
+          "source_type": "xlsx_workbook",
+          "source_name": "NSN Lookup 2026-05 MAY.xlsx",
+          "ingested_at": "2026-05-27",
+          "ingestion_script": "micro_graph_mcdonalds.py",
+          "node_count": 19694,
+          "edge_count": 127385
+        },
+        {
+          "source_type": "xlsx_workbook",
+          "source_name": "NSN Lookup 2026-08 AUG.xlsx",
+          "ingested_at": "2026-08-07",
+          "ingestion_script": "micro_graph_mcdonalds.py",
+          "node_count": 19777,
+          "edge_count": 127832
+        }
+      ],
+      "node_count": 19777,
+      "edge_count": 127832,
+      "operator_entity_count": 1338,
+      "store_count": 14061,
+      "enrichment_count": 2,
+      "last_enriched": "2026-08-07",
+      "scope_domains": [
+        "US operations",
+        "franchise structure",
+        "store technology",
+        "field support",
+        "co-op structure",
+        "operator entities"
+      ],
+      "triage_trigger_terms": [
+        "mcdonald",
+        "mcd",
+        "nsn",
+        "golden arches",
+        "franchisee",
+        "storetech",
+        "store tech",
+        "field office",
+        "coop",
+        "co-op"
+      ],
+      "question_domains": [
+        "franchisee_count",
+        "store_count",
+        "operator_structure",
+        "field_office_mapping",
+        "market_mapping",
+        "deployment_topology"
+      ],
+      "notes": [
+        "Full graph.json is 86MB \u2014 dormant by default.",
+        "Use getMicroGraphSummary for topology questions; do not load graph.json directly.",
+        "Enrich via POST /artifacts/micro_graph:mcdonalds_us_ops/enrich with new NSN workbook.",
+        "RB-2026-09-07: registry data corrected to match the real 2026-08-07 rebuild (source_lineage's prior entry was never updated for it -- see roadmap/memory for the pipeline root cause)."
+      ]
+    },
+    {
+      "artifact_id": "micro_graph:par_technology",
+      "artifact_type": "micro_graph",
+      "name": "PAR Technology",
+      "entity": "PAR Technology",
+      "entity_aliases": [
+        "par technology",
+        "par tech",
+        "par corp",
+        "par inc",
+        "PAR"
+      ],
+      "status": "stub",
+      "confidence": "low",
+      "freshness_date": null,
+      "queryable_via": null,
+      "graph_slug": null,
+      "graph_path": null,
+      "index_path": null,
+      "source_lineage": [],
+      "node_count": 0,
+      "edge_count": 0,
+      "enrichment_count": 0,
+      "last_enriched": null,
+      "scope_domains": [
+        "POS deployments",
+        "customer list",
+        "competitive positioning",
+        "restaurant tech stack",
+        "enterprise customer intelligence"
+      ],
+      "triage_trigger_terms": [
+        "par technology",
+        "par tech",
+        "par corp",
+        "brink pos"
+      ],
+      "notes": [
+        "Stub entry \u2014 artifact not yet built.",
+        "Build via micro_graph_builder.py when PAR competitive analysis or customer list is available.",
+        "Priority: high \u2014 Todd's target employer and key competitive intelligence domain."
+      ]
+    },
+    {
+      "artifact_id": "micro_graph:toast_pos",
+      "artifact_type": "micro_graph",
+      "name": "Toast POS",
+      "entity": "Toast",
+      "entity_aliases": [
+        "toast",
+        "toast pos",
+        "toasttab",
+        "TOST"
+      ],
+      "status": "stub",
+      "confidence": "low",
+      "freshness_date": null,
+      "queryable_via": null,
+      "graph_slug": null,
+      "graph_path": null,
+      "index_path": null,
+      "source_lineage": [],
+      "node_count": 0,
+      "edge_count": 0,
+      "enrichment_count": 0,
+      "last_enriched": null,
+      "scope_domains": [
+        "POS customer footprint",
+        "restaurant segments served",
+        "competitive positioning vs PAR/NCR",
+        "product suite"
+      ],
+      "triage_trigger_terms": [
+        "toast",
+        "toasttab",
+        "tost"
+      ],
+      "notes": [
+        "Stub entry \u2014 artifact not yet built.",
+        "Active thread: Bob Gibson / Toast relationship. Build from earnings transcripts + customer announcements."
+      ]
+    },
+    {
+      "artifact_id": "account_dossier:global_payments",
+      "artifact_type": "account_dossier",
+      "name": "Global Payments / Genius-Xenial",
+      "entity": "Global Payments",
+      "entity_aliases": [
+        "Global Payments",
+        "GPN",
+        "Genius",
+        "Xenial",
+        "global payments",
+        "genius xenial",
+        "heartland",
+        "openedge",
+        "cayan"
+      ],
+      "status": "building",
+      "confidence": "medium",
+      "freshness_date": "2026-06-04",
+      "queryable_via": "getArtifact",
+      "graph_slug": null,
+      "graph_path": null,
+      "index_path": null,
+      "source_lineage": [
+        {
+          "source_type": "active_thread",
+          "source_name": "RB loop ledger \u2014 L-2026-05-08-007, L-2026-05-26-001",
+          "ingested_at": "2026-06-04",
+          "notes": "Mike Schwartz (LKI, Global Payments) \u2014 Genius/Xenial rebrand watchlist. Role exploration ongoing."
+        },
+        {
+          "source_type": "baseline_contacts",
+          "source_name": "baseline_index.json",
+          "ingested_at": "2026-06-04",
+          "notes": "Contacts: Mike Schwartz (LKI), Ryan Hildebrand (VC, Senior Director), Tom Cheek (LMI, Restaurant Sales Executive)."
+        }
+      ],
+      "node_count": 0,
+      "edge_count": 0,
+      "enrichment_count": 1,
+      "last_enriched": "2026-06-04",
+      "scope_domains": [
+        "restaurant technology sales",
+        "POS / payment processing",
+        "role opportunity intelligence",
+        "relationship context"
+      ],
+      "triage_trigger_terms": [
+        "global payments",
+        "genius",
+        "xenial",
+        "gpn",
+        "heartland payments"
+      ],
+      "notes": [
+        "Account dossier \u2014 Global Payments Inc. restaurant technology division.",
+        "Genius brand = rebrand of Xenial (POS/payment processing for restaurants).",
+        "Active role opportunity: Mike Schwartz (LKI) is internal contact. Loops open for Genius/Xenial role intelligence.",
+        "Ryan Hildebrand (VC, Senior Director Account Executives) \u2014 prior SMS contact (DEFECT-003). Global Payments HQ relationship.",
+        "Tom Cheek (LMI, Restaurant Sales Executive) \u2014 LMI contact, restaurant segment.",
+        "Promote to active when first structured dossier JSON is ingested via POST /artifacts/account_dossier:global_payments/enrich."
+      ],
+      "data_path": "system/artifacts/data/global_payments.json"
+    },
+    {
+      "artifact_id": "account_dossier:foods_connected",
+      "artifact_type": "account_dossier",
+      "name": "Foods Connected \u2014 Commercial Director NA Opportunity",
+      "entity": "Foods Connected",
+      "entity_aliases": [
+        "Foods Connected",
+        "foodsconnected",
+        "foods connected",
+        "FC"
+      ],
+      "status": "building",
+      "confidence": "medium",
+      "freshness_date": "2026-06-04",
+      "queryable_via": "getArtifact",
+      "graph_slug": null,
+      "graph_path": null,
+      "index_path": null,
+      "source_lineage": [
+        {
+          "source_type": "active_thread",
+          "source_name": "T-2026-05-foods-connected-commercial-director",
+          "ingested_at": "2026-06-04",
+          "notes": "Commercial Director NA opportunity. Warm intro via Jeff. Sarah McAngus (Silver Stone Search) recruiting."
+        },
+        {
+          "source_type": "email",
+          "source_name": "inbox email threads",
+          "ingested_at": "2026-06-04",
+          "notes": "Interview scheduled via Teams. Contact: mairi.patton@foodsconnected.com. Thank-you sent post-call."
+        }
+      ],
+      "node_count": 0,
+      "edge_count": 0,
+      "enrichment_count": 1,
+      "last_enriched": "2026-06-04",
+      "scope_domains": [
+        "restaurant software",
+        "procurement / supply chain tech",
+        "opportunity intelligence",
+        "interview context"
+      ],
+      "triage_trigger_terms": [
+        "foods connected",
+        "foodsconnected",
+        "mairi patton",
+        "sarah mcangus"
+      ],
+      "notes": [
+        "Account dossier \u2014 Foods Connected, restaurant procurement / supply chain SaaS.",
+        "Active opportunity: Commercial Director NA role. Status: waiting on Duncan review.",
+        "Recruiter: Sarah McAngus, Silver Stone Search & Selection (sarah.mcangus@ssssltd.com).",
+        "Internal contact: Mairi Patton (mairi.patton@foodsconnected.com) \u2014 interview coordinator.",
+        "Thread target close: 2026-07-15.",
+        "Promote to active when structured company/product dossier is ingested."
+      ],
+      "data_path": "system/artifacts/data/foods_connected.json"
+    }
+  ],
+  "stub_count": 2,
+  "active_count": 1,
+  "enrichment_endpoint": "/artifacts/{artifact_id}/enrich",
+  "build_endpoint": "/artifacts",
+  "list_endpoint": "/artifacts"
+}

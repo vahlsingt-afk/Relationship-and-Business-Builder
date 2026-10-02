@@ -1,0 +1,77 @@
+{
+  "subject_id": "subject-bi_analytics",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-11T13:40:27Z",
+      "generated_for": "Worldpay / Genius relationship managers",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/bi_analytics/current/BI-Analytics_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-11T13:42:52Z",
+      "generated_for": "Worldpay / Genius relationship managers",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/bi_analytics/current/BI-Analytics_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-25T16:12:19Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/bi_analytics/current/BI-Analytics_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-09-27T09:18:39Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/bi_analytics/current/BI-Analytics_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 5,
+      "generated_at": "2026-09-28T09:24:41Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/bi_analytics/current/BI-Analytics_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 6,
+      "generated_at": "2026-09-29T09:19:13Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/bi_analytics/current/BI-Analytics_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 7,
+      "generated_at": "2026-09-29T14:57:14Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/bi_analytics/current/BI-Analytics_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 8,
+      "generated_at": "2026-10-01T10:43:20Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/bi_analytics/current/BI-Analytics_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 9,
+      "generated_at": "2026-10-02T09:47:05Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/bi_analytics/current/BI-Analytics_Battle-Card.md",
+      "superseded": false
+    }
+  ]
+}

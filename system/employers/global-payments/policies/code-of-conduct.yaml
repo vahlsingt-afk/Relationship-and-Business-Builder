@@ -1,0 +1,87 @@
+# Code of Conduct and Ethics — Global Payments
+# Extracted from: "Global Payments_Code of Conduct and Ethics - English 030525.pdf"
+# Sections: Conflicts of Interest, Gifts and Entertainment, Outside Employment and
+# Activities, Corporate Opportunities, Protection of Company Assets, Confidentiality,
+# Artificial Intelligence, Fair Dealing, Insider Trading (Securities Laws), Antitrust,
+# Anti-Corruption/Bribery, Reporting (EthicsPoint).
+
+policy_id: code-of-conduct
+title: "Global Payments Code of Conduct and Ethics"
+source_document: "Global Payments_Code of Conduct and Ethics - English 030525.pdf"
+version: "030525"
+effective_date: "2025-03-05"
+superseded_by: null
+extracted_by: assisted   # LLM-drafted from real source text on 2026-07-06/07 — needs Todd's line-by-line review before being treated as fully verified
+last_reviewed: "2026-07-07"
+
+permissions:
+  - "Ordinary, occasional gifts (business meals/events, holiday gifts, routine event tickets) are permissible if customary in scale/expense/frequency, in an appropriate setting, in furtherance of a business relationship, and not intended to improperly influence a decision."
+  - "Investments in publicly-traded competitors/customers/suppliers are allowed without approval if the position is under 1% of outstanding securities and not based on inside information."
+  - "Personal use of company equipment is not itself prohibited, but is discouraged and subject to monitoring."
+
+restrictions:
+  - id: conflict-of-interest-disclosure
+    text: "A conflict of interest (personal/family financial relationship with a vendor, customer, competitor, or business opportunity learned through the role) is not itself a violation, but failing to disclose it is. Must be disclosed to supervisor, compliance officer, or General Counsel."
+  - id: no-cash-gifts
+    text: "Cash, gift certificates, cash equivalents, interest-free loans, travel/accommodations tied to entertainment, or internship/job opportunities as gifts are prohibited regardless of amount."
+  - id: no-loans-or-guarantees
+    text: "Loans or personal guarantees by Global Payments to employees/officers/directors or their family members are expressly prohibited."
+  - id: no-unapproved-investment-in-competitor-customer-supplier
+    text: "May not make/maintain an investment in a competitor, customer, or supplier without prior written approval of the General Counsel, unless publicly traded and under 1% of outstanding securities with no inside-information influence."
+  - id: outside-employment-disclosure
+    text: "Must disclose to the General Counsel or CEO any relationship (ownership, employment, consulting, lender) that the employee or a family member has with a customer, competitor, or supplier. Without written General Counsel approval, may not consult for, be employed by, or serve as director/representative of a customer, competitor, or supplier, or accept money/benefits from a third party for advice/services connected to Global Payments business."
+  - id: no-corporate-opportunity-diversion
+    text: "May not use Company assets/property/information for personal gain, take for themselves (or friends/family) an opportunity discovered through Company assets/position, or bring a business opportunity to a Global Payments competitor, customer, or supplier — without prior written CEO approval."
+  - id: no-insider-trading
+    text: "May not buy, sell, recommend, or trade Global Payments securities (personally or for someone else) while in possession of material non-public information, unless pre-approved by the General Counsel. May not communicate/disclose such information to others who may trade."
+  - id: no-competitor-pricing-discussion
+    text: "May not communicate with a competitor about price or pricing-related terms, divide/allocate markets or customers, agree to boycott another business, or put inappropriate conditions on purchases/sales (antitrust)."
+  - id: no-bribery-corruption
+    text: "No business deal justifies bribery or corruption; must comply with anti-bribery/anti-corruption laws of all operating jurisdictions (Anti-Corruption Policy)."
+  - id: gifts-to-government-officials-require-preapproval
+    text: "Entertaining or giving any item of value to a government official requires confirming requirements under the Anti-Corruption Policy, which may require pre-approval from a supervisor, compliance officer, or General Counsel."
+  - id: ai-use-on-confidential-information-restricted
+    text: "The use of AI for processing or analyzing confidential information is strictly prohibited without explicit authorization from the Legal Department and approval from the AI Governance body. Unauthorized use is a Code violation."
+  - id: no-fair-dealing-violation
+    text: "May not take unfair advantage of anyone (customers, suppliers, partners, competitors, employees) through manipulation, concealment, abuse of confidential/privileged information, or misrepresentation of material facts."
+  - id: confidential-information-protection
+    text: "Confidential information (non-public; useful to competitors/customers/suppliers if disclosed; potentially harmful to Global Payments if disclosed; acquired from customers/suppliers/transaction parties) must not be used other than as required for job duties, and survives employment — may not be disclosed even after leaving the company."
+  - id: no-third-party-personal-info-misuse
+    text: "Personal Information (name, address, DOB, personal email, SSN/national ID) may only be handled with a legitimate business purpose and in compliance with the Internal Privacy Policy."
+
+required_processes:
+  - trigger: "any actual, potential, or apparent conflict of interest"
+    process: "Discuss with supervisor, compliance officer, or General Counsel and seek approval. Supervisor/compliance officer may not approve without first getting written General Counsel approval."
+  - trigger: "gift or entertainment offered/received, including from a vendor or business partner"
+    process: "Evaluate against: is it customary in scale/expense/frequency, appropriate setting, furtherance of business relationship, and not intended to influence a decision. If any factor fails, contact manager or Legal Department before accepting."
+  - trigger: "suspected misconduct, illegal activity, fraud, or Code violation (including by a third party or supervisor)"
+    process: "Report via EthicsPoint (1-866-384-4277 or www.ethicspoint.com), General Counsel (404.926.9735), or Human Resources (404.926.9822). Reporting is mandatory — failure to report known wrongdoing may itself result in disciplinary action."
+  - trigger: "possible possession of material non-public information about Global Payments"
+    process: "Do not trade Global Payments securities or disclose the information; consult the Insider Trading Policy and regional compliance officer."
+  - trigger: "use of AI tools on confidential or proprietary Global Payments information"
+    process: "Requires explicit authorization from the Legal Department AND approval from the AI Governance body before use — not a supervisor-level approval."
+
+escalation_rules:
+  - condition: "investment in a competitor, customer, or supplier (non-publicly-traded, or >1% of outstanding securities if publicly traded)"
+    action: "General Counsel written approval required (Chairperson of the Board + Governance and Nominating Committee if the employee is a director)."
+  - condition: "outside employment/consulting/directorship with a customer, competitor, or supplier"
+    action: "General Counsel written approval required."
+  - condition: "personal use of a corporate opportunity, or referring a business opportunity to a competitor/customer/supplier"
+    action: "CEO written approval required."
+  - condition: "AI processing/analysis of confidential information"
+    action: "Legal Department authorization AND AI Governance body approval both required."
+
+notes: |
+  Reporting channel: EthicsPoint (1-866-384-4277, www.ethicspoint.com) — anonymous
+  where legally permitted. Retaliation against good-faith reporters is itself a Code
+  violation.
+
+  OPEN FLAG for RB (2026-07-07): the ai-use-on-confidential-information-restricted
+  restriction directly implicates RB itself, since Todd routes work-related content
+  (customer names, deal context, internal strategy) through Claude/ChatGPT as part of
+  using this system. This has NOT been resolved with Legal/AI Governance and should not
+  be assumed pre-cleared. See profile.yaml's notes field. Recommend Todd confirm with
+  Global Payments Legal/Compliance what RB usage is permitted before feeding
+  Global-Payments-confidential specifics (named customers, deal terms, pricing,
+  unreleased roadmap) into RB — general professional-context and public-information use
+  is a different risk profile than confidential-information analysis.

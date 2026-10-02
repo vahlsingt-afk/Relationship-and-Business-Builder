@@ -1,0 +1,1835 @@
+{
+  "campaign_id": "genius-user-conference-2026",
+  "generated_at": "2026-10-02T10:13:27+00:00",
+  "companies": [
+    {
+      "company": "Church's Texas Chicken",
+      "contact_count": 1,
+      "top_tier": "tier_0_worldpay_conversion",
+      "top_tier_label": "Tier 0 \u2014 Worldpay Customer, Ready to Convert",
+      "best_contact_id": "jeff-caplan",
+      "best_contact_name": "Jeff Caplin",
+      "best_contact_score": 64,
+      "status_summary": {
+        "invited": 1
+      },
+      "contact_ids": [
+        "jeff-caplan"
+      ]
+    },
+    {
+      "company": "Del Taco",
+      "contact_count": 1,
+      "top_tier": "tier_1_must_invite",
+      "top_tier_label": "Tier 1 \u2014 Must Invite",
+      "best_contact_id": "david-ocallaghan",
+      "best_contact_name": "David OCallaghan",
+      "best_contact_score": 54,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "david-ocallaghan"
+      ]
+    },
+    {
+      "company": "Five Guys Enterprises",
+      "contact_count": 2,
+      "top_tier": "tier_0_worldpay_conversion",
+      "top_tier_label": "Tier 0 \u2014 Worldpay Customer, Ready to Convert",
+      "best_contact_id": "mj-worsham",
+      "best_contact_name": "MJ Worsham",
+      "best_contact_score": 52,
+      "status_summary": {
+        "invited": 2
+      },
+      "contact_ids": [
+        "mj-worsham",
+        "zerrick-pearson"
+      ]
+    },
+    {
+      "company": "Taco John's International, Inc.",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "tom-perella",
+      "best_contact_name": "Tom Perella",
+      "best_contact_score": 47,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "tom-perella"
+      ]
+    },
+    {
+      "company": "Groucho's Deli",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "deric-rosenbaum",
+      "best_contact_name": "\ud83e\udd6a Deric Rosenbaum",
+      "best_contact_score": 47,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "deric-rosenbaum"
+      ]
+    },
+    {
+      "company": "Wingstop Restaurants Inc.",
+      "contact_count": 3,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "lucie-tuan",
+      "best_contact_name": "Lucie Tuan",
+      "best_contact_score": 46,
+      "status_summary": {
+        "not_yet_invited": 3
+      },
+      "contact_ids": [
+        "lucie-tuan",
+        "mike-moreland",
+        "michael-c-jackson"
+      ]
+    },
+    {
+      "company": "Thrive Restaurant Group",
+      "contact_count": 2,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "patrick-bobrukiewicz",
+      "best_contact_name": "\ud83d\udc27Patrick Bobrukiewicz",
+      "best_contact_score": 45,
+      "status_summary": {
+        "not_yet_invited": 2
+      },
+      "contact_ids": [
+        "patrick-bobrukiewicz",
+        "patrick-bobrukiewicz-2"
+      ]
+    },
+    {
+      "company": "Brasa Peruvian Kitchen (Official)",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "michel-falcon",
+      "best_contact_name": "Michel Falcon",
+      "best_contact_score": 44,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "michel-falcon"
+      ]
+    },
+    {
+      "company": "unPLUG Dining",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "t-oliver-lee",
+      "best_contact_name": "T. Oliver Lee",
+      "best_contact_score": 44,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "t-oliver-lee"
+      ]
+    },
+    {
+      "company": "Tempo Hospitality Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "bruce-nelson",
+      "best_contact_name": "Bruce Nelson",
+      "best_contact_score": 42,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "bruce-nelson"
+      ]
+    },
+    {
+      "company": "Smokey Mo's BBQ",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "jon-manes",
+      "best_contact_name": "Jon Manes",
+      "best_contact_score": 42,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "jon-manes"
+      ]
+    },
+    {
+      "company": "KTM Restaurant Group & Butter Hospitality-Restaurant Coaching",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "kevin-morrison",
+      "best_contact_name": "Kevin Morrison",
+      "best_contact_score": 42,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "kevin-morrison"
+      ]
+    },
+    {
+      "company": "Restaurant Tech Partners",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "chris-munz",
+      "best_contact_name": "\ud83c\udf32Chris Munz\ud83c\udf32",
+      "best_contact_score": 42,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "chris-munz"
+      ]
+    },
+    {
+      "company": "TLO Restaurant Consulting",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "kathleen-omara",
+      "best_contact_name": "Kathleen O\u2019Mara",
+      "best_contact_score": 41,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "kathleen-omara"
+      ]
+    },
+    {
+      "company": "The Double Platinum Hospitality Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "mark-moeller",
+      "best_contact_name": "Mark Moeller",
+      "best_contact_score": 41,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "mark-moeller"
+      ]
+    },
+    {
+      "company": "Scooter's Coffee",
+      "contact_count": 6,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "tyler-marpes",
+      "best_contact_name": "Tyler Marpes",
+      "best_contact_score": 41,
+      "status_summary": {
+        "not_yet_invited": 6
+      },
+      "contact_ids": [
+        "tyler-marpes",
+        "kelsey-regier",
+        "nick-jarecke",
+        "greg-hand",
+        "kelsey-regier-mba",
+        "andrew-oconnor"
+      ]
+    },
+    {
+      "company": "The Coffee Party",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "zohaib-aziz",
+      "best_contact_name": "Zohaib Aziz",
+      "best_contact_score": 41,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "zohaib-aziz"
+      ]
+    },
+    {
+      "company": "Pizza Hut",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "matt-goss",
+      "best_contact_name": "Matt Goss",
+      "best_contact_score": 40,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "matt-goss"
+      ]
+    },
+    {
+      "company": "Big Boy Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "frank-alessandrini",
+      "best_contact_name": "Frank Alessandrini",
+      "best_contact_score": 39,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "frank-alessandrini"
+      ]
+    },
+    {
+      "company": "Miguel's Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "javier-vasquez",
+      "best_contact_name": "Javier Vasquez",
+      "best_contact_score": 39,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "javier-vasquez"
+      ]
+    },
+    {
+      "company": "Twin Peaks Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "lexi-burns",
+      "best_contact_name": "Lexi Burns",
+      "best_contact_score": 39,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "lexi-burns"
+      ]
+    },
+    {
+      "company": "Jack's Family Restaurants, LP",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "matt-dendy",
+      "best_contact_name": "Matt Dendy",
+      "best_contact_score": 39,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "matt-dendy"
+      ]
+    },
+    {
+      "company": "Dovetail Partners/Roost & Rise/Hat Creek Burger Company",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "matt-maercker",
+      "best_contact_name": "Matt Maercker",
+      "best_contact_score": 39,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "matt-maercker"
+      ]
+    },
+    {
+      "company": "Berg Hospitality Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "michael-hassel",
+      "best_contact_name": "Michael Hassel",
+      "best_contact_score": 39,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "michael-hassel"
+      ]
+    },
+    {
+      "company": "Levy Restaurants",
+      "contact_count": 3,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "robert-wood",
+      "best_contact_name": "Robert Wood",
+      "best_contact_score": 39,
+      "status_summary": {
+        "not_yet_invited": 3
+      },
+      "contact_ids": [
+        "robert-wood",
+        "aaron-rheinecker",
+        "carter-witt"
+      ]
+    },
+    {
+      "company": "CTI Restaurants Inc",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "ryan-wilber",
+      "best_contact_name": "Ryan Wilber",
+      "best_contact_score": 39,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "ryan-wilber"
+      ]
+    },
+    {
+      "company": "A&W Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "todd-stewart",
+      "best_contact_name": "Todd Stewart",
+      "best_contact_score": 39,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "todd-stewart"
+      ]
+    },
+    {
+      "company": "Cafe Rio Fresh Modern Mexican",
+      "contact_count": 2,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "adam-klaers",
+      "best_contact_name": "Adam Klaers",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 2
+      },
+      "contact_ids": [
+        "adam-klaers",
+        "kalie-godwin"
+      ]
+    },
+    {
+      "company": "Toppers Pizza, LLC",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "adam-oldenburg",
+      "best_contact_name": "Adam Oldenburg",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "adam-oldenburg"
+      ]
+    },
+    {
+      "company": "Superior Restaurant Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "alan-gardner",
+      "best_contact_name": "Alan Gardner",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "alan-gardner"
+      ]
+    },
+    {
+      "company": "Meritage Hospitality Group",
+      "contact_count": 3,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "alex-rusticus",
+      "best_contact_name": "Alex Rusticus",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 3
+      },
+      "contact_ids": [
+        "alex-rusticus",
+        "tracey-smith",
+        "mike-thorp"
+      ]
+    },
+    {
+      "company": "Taco Culture",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "alonso-castaneda",
+      "best_contact_name": "Alonso Casta\u00f1eda",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "alonso-castaneda"
+      ]
+    },
+    {
+      "company": "Virentes Hospitality Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "andrew-povec",
+      "best_contact_name": "Andrew Povec",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "andrew-povec"
+      ]
+    },
+    {
+      "company": "Raising Cane's Chicken Fingers",
+      "contact_count": 2,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "ben-latour",
+      "best_contact_name": "Ben LaTour",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 2
+      },
+      "contact_ids": [
+        "ben-latour",
+        "kelby-leuthold"
+      ]
+    },
+    {
+      "company": "JAI Restaurant Group",
+      "contact_count": 2,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "ben-mansoor",
+      "best_contact_name": "Ben Mansoor",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 2
+      },
+      "contact_ids": [
+        "ben-mansoor",
+        "jhonny-mercado"
+      ]
+    },
+    {
+      "company": "Krystal Restaurants LLC",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "beverly-davis",
+      "best_contact_name": "Beverly Davis",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "beverly-davis"
+      ]
+    },
+    {
+      "company": "Via 313 Pizza",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "brandon-hunt",
+      "best_contact_name": "Brandon Hunt",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "brandon-hunt"
+      ]
+    },
+    {
+      "company": "Bojangles' Restaurants, Inc.",
+      "contact_count": 3,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "brooks-speirs-cfe",
+      "best_contact_name": "Brooks Speirs, CFE",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 3
+      },
+      "contact_ids": [
+        "brooks-speirs-cfe",
+        "marshall-scarborough",
+        "carson-dickens"
+      ]
+    },
+    {
+      "company": "Bluegrass Restaurant Holdings",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "calvin-freeman",
+      "best_contact_name": "Calvin Freeman",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "calvin-freeman"
+      ]
+    },
+    {
+      "company": "Riko's Pizza",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "carl-bachmann",
+      "best_contact_name": "Carl Bachmann",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "carl-bachmann"
+      ]
+    },
+    {
+      "company": "HAPPY BURGER",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "chris-kalisperas",
+      "best_contact_name": "Chris Kalisperas",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "chris-kalisperas"
+      ]
+    },
+    {
+      "company": "Big Time Restaurant Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "christie-bellino",
+      "best_contact_name": "Christie Bellino",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "christie-bellino"
+      ]
+    },
+    {
+      "company": "Bob Evans Restaurants, LLC",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "george-thenamkodath",
+      "best_contact_name": "George Thenamkodath",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "george-thenamkodath"
+      ]
+    },
+    {
+      "company": "Tatte Bakery & Cafe",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "jeff-wood",
+      "best_contact_name": "Jeff Wood",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "jeff-wood"
+      ]
+    },
+    {
+      "company": "Flynn Restaurant Group",
+      "contact_count": 2,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "jeremy-biser",
+      "best_contact_name": "Jeremy Biser",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 2
+      },
+      "contact_ids": [
+        "jeremy-biser",
+        "tim-mei"
+      ]
+    },
+    {
+      "company": "California Pizza Kitchen",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "jon-silvertooth",
+      "best_contact_name": "Jon Silvertooth",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "jon-silvertooth"
+      ]
+    },
+    {
+      "company": "Papa Farm Pizza",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "julie-dessauer",
+      "best_contact_name": "Julie Dessauer",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "julie-dessauer"
+      ]
+    },
+    {
+      "company": "Blaze Pizza, LLC",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "kevin-moran",
+      "best_contact_name": "Kevin Moran",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "kevin-moran"
+      ]
+    },
+    {
+      "company": "Restaurant Caddies",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "kim-decarolis",
+      "best_contact_name": "Kim DeCarolis",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "kim-decarolis"
+      ]
+    },
+    {
+      "company": "California Fish Grill",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "mark-johnson",
+      "best_contact_name": "Mark Johnson",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "mark-johnson"
+      ]
+    },
+    {
+      "company": "Delight Restaurant Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "mary-mount",
+      "best_contact_name": "Mary Mount",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "mary-mount"
+      ]
+    },
+    {
+      "company": "Southern California Restaurant Design Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "michael-benson",
+      "best_contact_name": "Michael Benson",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "michael-benson"
+      ]
+    },
+    {
+      "company": "Marco's Pizza (Marco's Franchising, LLC)",
+      "contact_count": 2,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "milton-molina-mba",
+      "best_contact_name": "Milton Molina, MBA",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 2
+      },
+      "contact_ids": [
+        "milton-molina-mba",
+        "emily-croll-townley"
+      ]
+    },
+    {
+      "company": "Hangout Hospitality Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "omer-ramot",
+      "best_contact_name": "Omer Ramot",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "omer-ramot"
+      ]
+    },
+    {
+      "company": "Mission BBQ",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "paul-sattler",
+      "best_contact_name": "Paul Sattler",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "paul-sattler"
+      ]
+    },
+    {
+      "company": "Pepper Lunch Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "paul-t-tran",
+      "best_contact_name": "Paul T Tran",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "paul-t-tran"
+      ]
+    },
+    {
+      "company": "Off The Hook Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "paxton-moreaux",
+      "best_contact_name": "Paxton Moreaux",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "paxton-moreaux"
+      ]
+    },
+    {
+      "company": "Patrick, Inc. d/b/a Culver's Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "rick-miller",
+      "best_contact_name": "Rick Miller",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "rick-miller"
+      ]
+    },
+    {
+      "company": "We Sell Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "robin-gagnon-mba-cfe-cbi",
+      "best_contact_name": "Robin Gagnon, MBA, CFE, CBI",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "robin-gagnon-mba-cfe-cbi"
+      ]
+    },
+    {
+      "company": "Dividend Restaurant Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "ryan-johnson",
+      "best_contact_name": "Ryan Johnson",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "ryan-johnson"
+      ]
+    },
+    {
+      "company": "TEAM Schostak Family Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "ryan-jones",
+      "best_contact_name": "Ryan Jones",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "ryan-jones"
+      ]
+    },
+    {
+      "company": "Donatos Pizza",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "scott-stalnaker",
+      "best_contact_name": "Scott Stalnaker",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "scott-stalnaker"
+      ]
+    },
+    {
+      "company": "Cali BBQ Media",
+      "contact_count": 2,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "shawn-walchef",
+      "best_contact_name": "Shawn Walchef",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 2
+      },
+      "contact_ids": [
+        "shawn-walchef",
+        "ryan-skrzypczynski"
+      ]
+    },
+    {
+      "company": "Bad Chicken",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "tim-woehr",
+      "best_contact_name": "Tim Woehr",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "tim-woehr"
+      ]
+    },
+    {
+      "company": "On The Fly Restaurant Consulting",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "zach-fetter",
+      "best_contact_name": "Zach Fetter",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "zach-fetter"
+      ]
+    },
+    {
+      "company": "Hoogland Restaurant Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "zachary-mclaughlin",
+      "best_contact_name": "Zachary McLaughlin",
+      "best_contact_score": 37,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "zachary-mclaughlin"
+      ]
+    },
+    {
+      "company": "Rank Quality Restaurants III dba Mcdonalds",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "mike-boots",
+      "best_contact_name": "Mike Boots",
+      "best_contact_score": 36,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "mike-boots"
+      ]
+    },
+    {
+      "company": "Italian Village Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "charlie-o-connell",
+      "best_contact_name": "Charlie O'Connell",
+      "best_contact_score": 34,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "charlie-o-connell"
+      ]
+    },
+    {
+      "company": "Vibe Restaurants",
+      "contact_count": 2,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "erick-coreas",
+      "best_contact_name": "Erick Coreas",
+      "best_contact_score": 34,
+      "status_summary": {
+        "not_yet_invited": 2
+      },
+      "contact_ids": [
+        "erick-coreas",
+        "jean-saintvil"
+      ]
+    },
+    {
+      "company": "Cook Out Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "jared-raveling",
+      "best_contact_name": "Jared Raveling",
+      "best_contact_score": 34,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "jared-raveling"
+      ]
+    },
+    {
+      "company": "A&W Restaurants, Inc.",
+      "contact_count": 2,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "jordan-allen",
+      "best_contact_name": "Jordan Allen",
+      "best_contact_score": 34,
+      "status_summary": {
+        "not_yet_invited": 2
+      },
+      "contact_ids": [
+        "jordan-allen",
+        "dave-crowley-cfe"
+      ]
+    },
+    {
+      "company": "Cultivated Restaurant Coaching",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "bruce-nollert",
+      "best_contact_name": "Bruce Nollert",
+      "best_contact_score": 33,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "bruce-nollert"
+      ]
+    },
+    {
+      "company": "Selio for Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "cristian-kokonas",
+      "best_contact_name": "Cristian Kokonas",
+      "best_contact_score": 33,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "cristian-kokonas"
+      ]
+    },
+    {
+      "company": "The Word Kitchen",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "eric-farrell",
+      "best_contact_name": "Eric Farrell \ud83d\udd2a\ud83d\udd8b",
+      "best_contact_score": 33,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "eric-farrell"
+      ]
+    },
+    {
+      "company": "Popeyes Louisiana Kitchen",
+      "contact_count": 3,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "jack-mccluskey",
+      "best_contact_name": "Jack McCluskey",
+      "best_contact_score": 33,
+      "status_summary": {
+        "not_yet_invited": 3
+      },
+      "contact_ids": [
+        "jack-mccluskey",
+        "md-rahman",
+        "peter-genna"
+      ]
+    },
+    {
+      "company": "Swensons Drive-In Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "ron-dinella",
+      "best_contact_name": "Ron DiNella",
+      "best_contact_score": 33,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "ron-dinella"
+      ]
+    },
+    {
+      "company": "Klarity Restaurant Advisors.",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "brian-burchill",
+      "best_contact_name": "Brian Burchill",
+      "best_contact_score": 33,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "brian-burchill"
+      ]
+    },
+    {
+      "company": "QSR Research Hub",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "justin-sellers",
+      "best_contact_name": "Justin Sellers",
+      "best_contact_score": 33,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "justin-sellers"
+      ]
+    },
+    {
+      "company": "Buster's Pizza & Donair",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "jayeshkumar-jk-nair",
+      "best_contact_name": "Jayeshkumar (JK) Nair",
+      "best_contact_score": 33,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "jayeshkumar-jk-nair"
+      ]
+    },
+    {
+      "company": "PJW Restaurant Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "amanda-lober",
+      "best_contact_name": "Amanda Lober",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "amanda-lober"
+      ]
+    },
+    {
+      "company": "Ted's Montana Grill",
+      "contact_count": 3,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "chad-coghlan",
+      "best_contact_name": "Chad Coghlan",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 3
+      },
+      "contact_ids": [
+        "chad-coghlan",
+        "eddie-hensley",
+        "kristie-mansur"
+      ]
+    },
+    {
+      "company": "District Taco",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "jose-alberto-hernandez",
+      "best_contact_name": "Jose Alberto Hernandez",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "jose-alberto-hernandez"
+      ]
+    },
+    {
+      "company": "Corner Table Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "josh-bidwell",
+      "best_contact_name": "Josh Bidwell",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "josh-bidwell"
+      ]
+    },
+    {
+      "company": "Darden Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "lisa-mcdowell",
+      "best_contact_name": "Lisa McDowell",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "lisa-mcdowell"
+      ]
+    },
+    {
+      "company": "COWBOY CHICKEN",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "michael-lenzi",
+      "best_contact_name": "Michael Lenzi",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "michael-lenzi"
+      ]
+    },
+    {
+      "company": "Chartwells Higher Education Dining Services",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "natasha-mtshali",
+      "best_contact_name": "Natasha Mtshali",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "natasha-mtshali"
+      ]
+    },
+    {
+      "company": "Scooter's Coffee - High Porch Coffee",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "rob-bowers",
+      "best_contact_name": "Rob Bowers",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "rob-bowers"
+      ]
+    },
+    {
+      "company": "Uncle Julio's Restaurant Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "shenika-harris",
+      "best_contact_name": "Shenika Harris",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "shenika-harris"
+      ]
+    },
+    {
+      "company": "Southern Rock Restaurants | McAlister's Deli",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "stacey-williams",
+      "best_contact_name": "Stacey Williams",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "stacey-williams"
+      ]
+    },
+    {
+      "company": "Cheddar's Scratch Kitchen",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "steve-anthony",
+      "best_contact_name": "Steve Anthony",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "steve-anthony"
+      ]
+    },
+    {
+      "company": "WKS Restaurant Group",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "tom-jenkins-cfe",
+      "best_contact_name": "Tom Jenkins, CFE",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "tom-jenkins-cfe"
+      ]
+    },
+    {
+      "company": "Dutch Bros Coffee",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "tyler-schrameck",
+      "best_contact_name": "Tyler Schrameck",
+      "best_contact_score": 32,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "tyler-schrameck"
+      ]
+    },
+    {
+      "company": "NextGen QSR",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "andrew-mask",
+      "best_contact_name": "Andrew Mask",
+      "best_contact_score": 31,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "andrew-mask"
+      ]
+    },
+    {
+      "company": "TRIS | The Restaurant Intelligence Solution",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "sabra-mauldin",
+      "best_contact_name": "Sabra Mauldin",
+      "best_contact_score": 29,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "sabra-mauldin"
+      ]
+    },
+    {
+      "company": "Hawaiian Bros Island Grill",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "scott-ford",
+      "best_contact_name": "Scott Ford",
+      "best_contact_score": 29,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "scott-ford"
+      ]
+    },
+    {
+      "company": "Upward Projects Restaurant Group | Postino WineCafe | Joyride Taco House | Windsor | Federal Pizza",
+      "contact_count": 2,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "jeffrey-boland-sr",
+      "best_contact_name": "Jeffrey Boland Sr.",
+      "best_contact_score": 28,
+      "status_summary": {
+        "not_yet_invited": 2
+      },
+      "contact_ids": [
+        "jeffrey-boland-sr",
+        "rebecca-hanson"
+      ]
+    },
+    {
+      "company": "JJC Family Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "sean-cisco",
+      "best_contact_name": "Sean Cisco",
+      "best_contact_score": 28,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "sean-cisco"
+      ]
+    },
+    {
+      "company": "McDonald's Restaurants, Greg & Cory Hall Oragnization",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "steve-wenzl",
+      "best_contact_name": "Steve Wenzl",
+      "best_contact_score": 28,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "steve-wenzl"
+      ]
+    },
+    {
+      "company": "Bonefish Grill",
+      "contact_count": 1,
+      "top_tier": "tier_2_should_invite",
+      "top_tier_label": "Tier 2 \u2014 Should Invite",
+      "best_contact_id": "mark-graff",
+      "best_contact_name": "Mark Graff",
+      "best_contact_score": 27,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "mark-graff"
+      ]
+    },
+    {
+      "company": "Chuy's Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "corbin-gass",
+      "best_contact_name": "Corbin Gass",
+      "best_contact_score": 24,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "corbin-gass"
+      ]
+    },
+    {
+      "company": "CCL Hospitality Group",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "jake-rossman",
+      "best_contact_name": "Jake Rossman",
+      "best_contact_score": 24,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "jake-rossman"
+      ]
+    },
+    {
+      "company": "Palermo's Pizza",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "brian-brindza",
+      "best_contact_name": "Brian Brindza \ud83c\udf55",
+      "best_contact_score": 22,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "brian-brindza"
+      ]
+    },
+    {
+      "company": "Bad Ass Coffee of Hawaii",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "chuck-shuptrine",
+      "best_contact_name": "Chuck Shuptrine",
+      "best_contact_score": 22,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "chuck-shuptrine"
+      ]
+    },
+    {
+      "company": "Franke Foodservice Systems",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "greg-sullivan",
+      "best_contact_name": "Greg Sullivan",
+      "best_contact_score": 22,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "greg-sullivan"
+      ]
+    },
+    {
+      "company": "Baldinger Bakery",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "gregg-murphy",
+      "best_contact_name": "Gregg Murphy",
+      "best_contact_score": 22,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "gregg-murphy"
+      ]
+    },
+    {
+      "company": "Lou Malnati's Pizzeria",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "jacob-pierce",
+      "best_contact_name": "Jacob Pierce",
+      "best_contact_score": 22,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "jacob-pierce"
+      ]
+    },
+    {
+      "company": "V Pizza",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "james-wallace",
+      "best_contact_name": "James Wallace",
+      "best_contact_score": 22,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "james-wallace"
+      ]
+    },
+    {
+      "company": "Cooper's Hawk Winery and Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "jay-hornacek",
+      "best_contact_name": "Jay Hornacek",
+      "best_contact_score": 22,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "jay-hornacek"
+      ]
+    },
+    {
+      "company": "CKE Restaurants, Inc.",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "marco-schlueter",
+      "best_contact_name": "Marco Schlueter",
+      "best_contact_score": 22,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "marco-schlueter"
+      ]
+    },
+    {
+      "company": "Little Caesars Pizza",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "martin-guzman",
+      "best_contact_name": "Martin Guzman",
+      "best_contact_score": 22,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "martin-guzman"
+      ]
+    },
+    {
+      "company": "Taco Bell",
+      "contact_count": 2,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "missy-schaaphok",
+      "best_contact_name": "Missy Schaaphok",
+      "best_contact_score": 22,
+      "status_summary": {
+        "not_yet_invited": 2
+      },
+      "contact_ids": [
+        "missy-schaaphok",
+        "robert-guerrero"
+      ]
+    },
+    {
+      "company": "Caribou Coffee",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "andrew-kraus",
+      "best_contact_name": "Andrew Kraus",
+      "best_contact_score": 18,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "andrew-kraus"
+      ]
+    },
+    {
+      "company": "True Food Kitchen",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "brittany-maroney",
+      "best_contact_name": "Brittany Maroney",
+      "best_contact_score": 18,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "brittany-maroney"
+      ]
+    },
+    {
+      "company": "Good Times Restaurants Inc.",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "brock-davis",
+      "best_contact_name": "Brock Davis",
+      "best_contact_score": 18,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "brock-davis"
+      ]
+    },
+    {
+      "company": "Tenzo - Restaurant PerformanceOps",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "elizabeth-wickham",
+      "best_contact_name": "Elizabeth Wickham",
+      "best_contact_score": 18,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "elizabeth-wickham"
+      ]
+    },
+    {
+      "company": "Peet's Coffee",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "michael-darby",
+      "best_contact_name": "Michael Darby",
+      "best_contact_score": 18,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "michael-darby"
+      ]
+    },
+    {
+      "company": "First Watch Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "nicole-range-mba",
+      "best_contact_name": "Nicole Range, MBA",
+      "best_contact_score": 18,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "nicole-range-mba"
+      ]
+    },
+    {
+      "company": "Olga's Kitchen",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "rick-loftus",
+      "best_contact_name": "Rick Loftus",
+      "best_contact_score": 18,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "rick-loftus"
+      ]
+    },
+    {
+      "company": "Informa Connect Foodservice",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "jodie-cohen",
+      "best_contact_name": "Jodie Cohen",
+      "best_contact_score": 18,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "jodie-cohen"
+      ]
+    },
+    {
+      "company": "Chick-fil-A Restaurants",
+      "contact_count": 1,
+      "top_tier": "tier_3_consider",
+      "top_tier_label": "Tier 3 \u2014 Consider",
+      "best_contact_id": "kathryn-simon",
+      "best_contact_name": "Kathryn Simon",
+      "best_contact_score": 18,
+      "status_summary": {
+        "not_yet_invited": 1
+      },
+      "contact_ids": [
+        "kathryn-simon"
+      ]
+    }
+  ]
+}

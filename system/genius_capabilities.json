@@ -1,0 +1,129 @@
+{
+  "capabilities": {
+    "pos": [
+      {
+        "point": "\"One powerful, cloud-based platform\" unifying POS, kiosk, KDS, inventory, labor, payments for QSR, food-service management, and sports & entertainment venues; consolidation lets GPN \"extend our commerce technology to a broader set of customers \u2026 even if they do not have the scale of a typical enterprise customer\" (Terry Roberts)",
+        "why_it_matters": "Source: https://geniusforenterprise.com/home",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      },
+      {
+        "point": "Momentum metrics: Genius bookings +25% sequentially in Q1 and again in Q2 2026, \"nearly doubled year-over-year\" (Q1); new Genius locations +50% YoY (Q2); new-customer yields +75% YoY",
+        "why_it_matters": "Source: https://geniusforenterprise.com/home",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      },
+      {
+        "point": "Bundle breadth \u2014 CKE deal spans POS, kitchen, loyalty, reporting, drive-thru, menu boards, kiosks, payments, back office: \"We wanted a partner that could offer more capabilities as part of a single, integrated solution.\" (Ryan Mollenkopf, VP IT, CKE)",
+        "why_it_matters": "Source: https://investors.globalpayments.com/news-events/press-releases/detail/508/global-payments-announces-exclusive-agreement-with-cke",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      }
+    ],
+    "back_office": [
+      {
+        "point": "Enterprise labor scheduling (incl. Fair Workweek compliance US/CA), inventory \"down to the ounce,\" KPI dashboards, Mobile Manager app; POS/hardware-agnostic; Sysco and US Foods supplier integrations; Data Stream add-on for BI export",
+        "why_it_matters": "Source: https://www.globalpayments.com/point-of-sale/enterprise/back-office",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      },
+      {
+        "point": "POS-agnostic claim widens addressable market beyond Genius POS",
+        "why_it_matters": "Source: https://www.globalpayments.com/point-of-sale/enterprise/back-office",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      },
+      {
+        "point": "Included in CKE bundle",
+        "why_it_matters": "Source: https://investors.globalpayments.com/news-events/press-releases/detail/508/global-payments-announces-exclusive-agreement-with-cke",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      }
+    ],
+    "payments": [
+      {
+        "point": "Enterprise omnichannel acquirer; restaurants page claims work with \"7 of the world's largest Quick Service Restaurants\" and integrations with hundreds of hospitality POS/PMS (partners: Agilysys, NCR Aloha, Oracle, Olo, Qikserve, FreedomPay)",
+        "why_it_matters": "Source: https://www.worldpay.com/en/industries/restaurants",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      },
+      {
+        "point": "Brings enterprise restaurant relationships: \"Strong, early interest in Genius from Worldpay's enterprise restaurant clients \u2026 cross-sell opportunities we simply could not have accessed previously\" (Bready)",
+        "why_it_matters": "Source: https://www.fool.com/earnings/call-transcripts/2026/05/06/global-payments-gpn-q1-2026-earnings-transcript/",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      },
+      {
+        "point": "Worldpay lacked a unified POS; Genius fills \"longstanding product gap\"",
+        "why_it_matters": "Source: https://www.paymentsdive.com/news/global-payments-touts-genius-gains/819560/",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      }
+    ],
+    "loyalty_engagement": [
+      {
+        "point": "Genius's loyalty and marketing tools are built right into the same system as everything else -- not a separate product you have to buy or manage on your own.",
+        "why_it_matters": "Source: https://investors.globalpayments.com/news-events/press-releases/detail/473/global-payments-launches-new-genius-pos-platform",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      },
+      {
+        "point": "Loyalty is included together with point-of-sale and payments in one deal, not sold separately. For example, a 2,400-restaurant deal with CKE Restaurants (parent company of Carl's Jr. and Hardee's) included loyalty as part of the same package -- this is a different customer's deal, shown here only as an example of how Genius bundles loyalty with its other tools.",
+        "why_it_matters": "Source: https://investors.globalpayments.com/news-events/press-releases/detail/508/global-payments-announces-exclusive-agreement-with-cke",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      }
+    ],
+    "kitchen_drive_thru": [
+      {
+        "point": "AI camera vehicle detection (car type/colour), unlimited-lane support, order-to-vehicle sync across linebusters/menu boards/handhelds, lane-level dashboards, headsets + cameras + cloud software stack",
+        "why_it_matters": "Source: https://www.globalpayments.com/en-gb/point-of-sale/enterprise/drive-thru",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      },
+      {
+        "point": "Integrated with POS/KDS/menu boards; in scope for CKE",
+        "why_it_matters": "Source: https://investors.globalpayments.com/news-events/press-releases/detail/508/global-payments-announces-exclusive-agreement-with-cke",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      },
+      {
+        "point": "Cortopassi: \"very broad success \u2026 drive-through and quick service restaurants\"",
+        "why_it_matters": "Source: https://www.fool.com/earnings/call-transcripts/2026/05/06/global-payments-gpn-q1-2026-earnings-transcript/",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      }
+    ],
+    "digital_menu_boards": [
+      {
+        "point": "No-code drag-and-drop updates, daypart scheduling, POS price sync, indoor HD + outdoor UHD LED + drive-thru boards with voice and camera integration; claims guests \"spend up to 20% more when influenced by dynamic menus\"",
+        "why_it_matters": "Source: https://www.globalpayments.com/point-of-sale/enterprise/digital-menu-board",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      },
+      {
+        "point": "Native POS price sync (vs. standalone signage vendors)",
+        "why_it_matters": "Source: https://www.globalpayments.com/point-of-sale/enterprise/digital-menu-board",
+        "evidence_id": null,
+        "added_at": "2026-09-26T12:23:30Z",
+        "added_by": "system:genius_competitive_research_2026-09"
+      }
+    ]
+  },
+  "updated_at": "2026-09-26T12:23:30Z"
+}

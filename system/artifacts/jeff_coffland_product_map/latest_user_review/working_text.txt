@@ -1,0 +1,71 @@
+P	Normal	PRODUCT PORTFOLIO MAP
+P	Normal	Genius restaurant
+technology
+P	Normal	McDonald’s routing reference
+P	Heading 2	How to read this map
+P	List Bullet	Each entry identifies the current product, its former Xenial/SICOM/RTI heritage, supported capabilities and relevance to McDonald’s.
+P	List Bullet	Customer examples show demonstrated fit; they do not imply McDonald’s approval or a production entitlement.
+P	Normal	PRODUCT MAP 1 OF 4
+P	Heading 1	Core commerce and self-service
+P	Normal	Genius Enterprise POS
+P	Normal	Genius Kiosk
+P	Normal	PRODUCT MAP 2 OF 4
+P	Heading 1	Kitchen, back office and payments
+P	Normal	Genius Kitchen
+P	Normal	Genius Back Office
+P	Normal	Integrated payments and gateway
+P	Normal	PRODUCT MAP 3 OF 4
+P	Heading 1	Digital experience and drive-thru
+P	Normal	Genius Digital Displays
+P	Normal	Genius Drive Thru
+P	Normal	PRODUCT MAP 4 OF 4 — HARDWARE REFERENCE
+P	Heading 1	Genius hardware
+P	Normal	A modular in-store hardware family
+TABLE 0
+ | One connected restaurant technology portfolio / Genius brings enterprise commerce, self-service, kitchen, digital experience, drive-thru, payments and purpose-built hardware together within a flexible platform.
+TABLE 1
+Prepared for | Jeff Coffland — McDonald’s capability overview
+As of | August 12, 2026
+Portfolio | Genius restaurant technology
+Company | Global Payments
+TABLE 2
+Heritage | Xenial enterprise POS and Xenial Ordering, now part of the Genius Cloud portfolio.
+Capabilities | API first, Cloud enterprise POS with centralized management, real-time synchronization, device and operating-system flexibility, rapid terminal failover and offline operation for up to 30 days. Works with existing hardware or Genius Hardware solutions. Supports Windows, Android, IOS and Unix operating systems. Supports multi-lingual and international locations.
+McDonald’s relevance | Relevant as an integration and restaurant-commerce platform reference. 
+Selected experience | CosMc’s selected Genius Cloud POS as part of its integrated restaurant technology platform. Additional enterprise experience includes A&W Canada across 1,032 restaurants and 7 Brew across more than 530 locations.
+TABLE 3
+Heritage | Former public label: Xenial Kiosk hardware and software / Xenial Ordering Kiosk.
+Capabilities | Self-service ordering with indoor/outdoor and multiple mounting options, favorites and repeat orders, multilingual and accessibility features, dynamic splash screens and pickup workflows.
+McDonald’s relevance | Relevant where McDonald’s wants modular self-service or integration options, subject to global store standards and accessibility requirements.
+Selected experience | More than 20 years of kiosk development and 15,000+ self-service solutions installed worldwide.
+TABLE 4
+Heritage | Xenial Kitchen Management (XKM), Kitchen Management and Order Management System (OMS), now within the Genius portfolio.
+Capabilities | Kitchen displays route items to configured production stations, support destination-specific views such as drive-thru, and can provide order-ready status. Touchscree and bump-bar interaction plus configurable ticket views.
+McDonald’s relevance | Relevant to end-to-end order flow, throughput and integration conversations—not as an assumed replacement for McDonald’s kitchen production systems.
+Selected experience | 
+TABLE 5
+Heritage | RTI, RTI Financial Accounting, Back Office and enterprise reporting.
+Capabilities | Back-office and enterprise reporting capabilities spanning restaurant operations, inventory, labor, financial information and enterprise-level visibility.
+McDonald’s relevance | Connects restaurant activity with operational and enterprise reporting for more consistent decision-making across the system.
+Selected experience | 
+TABLE 6
+Heritage | Merchantware and Cayan heritage, now represented through Global Payments Integrated and Portico capabilities. Worldpay acquisition in 2026 adds more strength to the ecosystem.
+Capabilities | One semi-integrated/API layer for counter, drive-thru, kiosk and digital commerce: EMV/contactless and wallets, card-present and online acceptance, P2PE/tokenization, hosted payment components, remote terminal management and device-based store-and-forward.
+McDonald’s relevance | Broad processing capabilities throughout the largest payment processing system in the world, both in store and above store.
+Selected experience | CosMc’s used Global Payments for payment processing; FreedomPay supplied the gateway for its unattended-payment requirement.
+TABLE 7
+Heritage | SICOM DMB was first developed in 2009. After Global Payments acquired SICOM in 2018, the next-generation Genius DMB was developed as a complete replacement—not an extension of the former SICOM software.
+Capabilities | Centralized content management, scheduled dayparts, local and corporate control, indoor/outdoor menus and order-confirmation boards. LG system-on-chip displays can retain scheduled content during an internet outage. Available with or without a media player.
+McDonald’s relevance | Global product with an enterprise level feature set.
+Selected experience | CosMc’s selected Genius indoor and drive-thru digital menu boards as part of its integrated restaurant technology platform. At Yoshinoya, 106 locations deployed digital menu boards, including 34 drive-thrus paired with a timer.
+TABLE 8
+Heritage | SICOM Timer (1989) → rewrite (2001) → new monitor/UI solution (2014) → Drive-Thru Director with continued Genius enhancements. Vision, developed around 2022, is the 100% Genius next-generation timer.
+Capabilities | Lane events from detectors, cameras and intelligent order-confirmation units; real-time vehicle visualization; single/dual-lane workflows; gamification; reporting/API. Zone configuration for stack size, pickup parking and pull-forward tracking across the customer journey. 
+McDonald’s relevance | Supports speed-of-service visibility and a more complete view of the drive-thru journey, including queue, pull-forward and pickup activity.
+Selected experience | CosMc’s selected Genius drive-thru timer technology as part of its integrated platform. At Yoshinoya, 34 drive-thru locations paired digital menu boards with a timer and reported a 35% improvement in service time.
+TABLE 9
+Heritage | Heritage: Xenial and SICOM POS hardware, portable tablets and rugged terminals. Configuration and naming may vary by Genius edition and geography. | Heritage: Xenial and SICOM POS hardware, portable tablets and rugged terminals. Configuration and naming may vary by Genius edition and geography. | Heritage: Xenial and SICOM POS hardware, portable tablets and rugged terminals. Configuration and naming may vary by Genius edition and geography. | Heritage: Xenial and SICOM POS hardware, portable tablets and rugged terminals. Configuration and naming may vary by Genius edition and geography.
+Capabilities | Global Payments designs and owns the core Genius hardware specification, with Flytech as manufacturing partner. The portfolio supports modular countertop, handheld, kiosk and tethered configurations. Payment terminals and the iMin-based Genius All In One are separate device families. | Global Payments designs and owns the core Genius hardware specification, with Flytech as manufacturing partner. The portfolio supports modular countertop, handheld, kiosk and tethered configurations. Payment terminals and the iMin-based Genius All In One are separate device families. | Global Payments designs and owns the core Genius hardware specification, with Flytech as manufacturing partner. The portfolio supports modular countertop, handheld, kiosk and tethered configurations. Payment terminals and the iMin-based Genius All In One are separate device families. | Global Payments designs and owns the core Genius hardware specification, with Flytech as manufacturing partner. The portfolio supports modular countertop, handheld, kiosk and tethered configurations. Payment terminals and the iMin-based Genius All In One are separate device families.
+McDonald’s relevance | Hardware designed for the rugged QSR industry that has a history of performance. | Hardware designed for the rugged QSR industry that has a history of performance. | Hardware designed for the rugged QSR industry that has a history of performance. | Hardware designed for the rugged QSR industry that has a history of performance.
+Selected experience | CosMc’s selected Genius hardware across its cloud POS and indoor/outdoor self-service environment. The broader portfolio provides one hardware identity across restaurant workflows. | CosMc’s selected Genius hardware across its cloud POS and indoor/outdoor self-service environment. The broader portfolio provides one hardware identity across restaurant workflows. | CosMc’s selected Genius hardware across its cloud POS and indoor/outdoor self-service environment. The broader portfolio provides one hardware identity across restaurant workflows. | CosMc’s selected Genius hardware across its cloud POS and indoor/outdoor self-service environment. The broader portfolio provides one hardware identity across restaurant workflows.
+Modular countertop /  / Merchant and customer-facing displays with countertop, low-profile and wall configurations. | Modular countertop /  / Merchant and customer-facing displays with countertop, low-profile and wall configurations. | Enterprise handheld /  / Portable enterprise POS for line-busting and mobile service, shown with integrated payment. | Portrait kiosk /  / Portrait self-service ordering and payment configuration. | Kiosk portfolio /  / Multiple kiosk and tethered configurations within the Genius hardware family. | Kiosk portfolio /  / Multiple kiosk and tethered configurations within the Genius hardware family.

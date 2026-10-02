@@ -1,0 +1,49 @@
+{
+  "competitor_id": "comp-5-5",
+  "competitor_slug": "5-5",
+  "display_name": "5&5",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:29Z",
+  "latest_cos_commentary": {
+    "headline": "5&5 is a managed-services/IT integrator for restaurant POS and digital platforms, not a POS or payments provider itself.",
+    "genius_exposure": "Sits adjacent to pos/back_office by providing outsourced support and platform management across third-party POS/loyalty systems; can influence which POS/payments vendor a multi-unit brand keeps or migrates to.",
+    "competitive_timing": "Recent Inc. 5000 recognition (101% 3-year growth) signals momentum in the managed-services segment.",
+    "sales_response": "Where 5&5 is the incumbent support vendor for a prospect, expect them to be a trusted advisor in platform decisions — engage as a channel/influence point, not a displacement target.",
+    "risk_and_uncertainty": "Customer and scale figures are vendor-sourced; no independent trade-press verification found.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 2
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 2,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 1,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "financial health beyond Inc. 5000 mention"
+      ]
+    }
+  }
+}

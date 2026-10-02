@@ -1,0 +1,23 @@
+{
+  "account_id": "acct-cafe-rio",
+  "contradictions": [
+    {
+      "contradiction_id": "ct-cafe-rio-0001",
+      "field": "brand_profile.sales_figures",
+      "claim_a": {
+        "value": "Technomic-derived 2024 system sales approximately $382.4 million.",
+        "evidence_ids": ["ev-cafe-rio-0004"],
+        "confidence": "medium"
+      },
+      "claim_b": {
+        "value": "A recent industry report cited $343.7 million for 2025.",
+        "evidence_ids": ["ev-cafe-rio-0005"],
+        "confidence": "medium"
+      },
+      "reconciliation_status": "unresolved",
+      "note": "The difference may reflect declining sales, revised unit counts, or different reporting methodologies. Do not use either figure externally until reconciled.",
+      "opened_at": "2026-08-27",
+      "scope": "account"
+    }
+  ]
+}

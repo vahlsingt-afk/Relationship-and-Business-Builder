@@ -1,0 +1,182 @@
+{
+  "competitor_id": "comp-restroworks",
+  "competitor_slug": "restroworks",
+  "display_name": "Restroworks",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [
+    "pos",
+    "restaurant_os_platform"
+  ],
+  "positioning_summary": "Restroworks is supported in this pass as a restaurant-technology vendor in: pos, menu management, restaurant os platform.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T20:16:48Z",
+  "latest_cos_commentary": {
+    "headline": "Direct Genius portfolio overlap identified.",
+    "genius_exposure": [
+      "pos",
+      "restaurant_os_platform"
+    ],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Validate account-level incumbent and deployment scope before positioning against Genius.",
+    "risk_and_uncertainty": "Evidence quality varies materially across this long-tail batch; unresolved names remain deliberately unclassified rather than guessed.",
+    "priority": "P2",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://www.restroworks.com/restaurant-pos-system/",
+        "title": "Restroworks restaurant technology portfolio",
+        "publisher": "Restroworks",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 77,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership beyond founders",
+        "pricing model",
+        "financial health/funding status"
+      ]
+    }
+  },
+  "canonical_company_name": "Restroworks",
+  "website": "https://www.restroworks.com/restaurant-pos-system/",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://www.restroworks.com/restaurant-pos-system/",
+        "title": "Restroworks restaurant technology portfolio",
+        "publisher": "Restroworks",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "product_line_competitor",
+  "restaurant_tech_categories": [
+    {
+      "category": "pos",
+      "basis": "Current evidence supports pos as a restaurant-facing category for Restroworks.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.restroworks.com/restaurant-pos-system/",
+          "title": "Restroworks restaurant technology portfolio",
+          "publisher": "Restroworks",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "menu_management",
+      "basis": "Current evidence supports menu management as a restaurant-facing category for Restroworks.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.restroworks.com/restaurant-pos-system/",
+          "title": "Restroworks restaurant technology portfolio",
+          "publisher": "Restroworks",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "restaurant_os_platform",
+      "basis": "Current evidence supports restaurant os platform as a restaurant-facing category for Restroworks.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.restroworks.com/restaurant-pos-system/",
+          "title": "Restroworks restaurant technology portfolio",
+          "publisher": "Restroworks",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "Restroworks Restaurant POS (pos, menu_management, restaurant_os_platform)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.restroworks.com/restaurant-pos-system/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Vendor has current restaurant-specific product evidence in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.restroworks.com/restaurant-pos-system/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated product evidence does not by itself establish ROI, reliability, implementation quality, or systemwide customer adoption; independent validation remains a research gap.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.restroworks.com/restaurant-pos-system/",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [],
+  "product_lineage": []
+}

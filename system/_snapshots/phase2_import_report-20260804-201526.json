@@ -1,0 +1,140 @@
+{
+  "phase2_file": "system/research/phase2_labor_workforce_evidence_draft_2026-08-03.json",
+  "category": "Labor/Workforce",
+  "rows_processed": 17,
+  "rows_skipped": 0,
+  "dry_run": false,
+  "added": 17,
+  "updated": 0,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 17,
+    "enrich_existing_relationship": 0,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 0,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 0,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "7shifts",
+        "customer": "Pizza Ranch",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-pizza-ranch-labor-workforce-franchisee-deployment-vendor-7shifts"
+      },
+      {
+        "vendor": "7shifts",
+        "customer": "National Coney Island",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-national-coney-island-labor-workforce-unknown-vendor-7shifts"
+      },
+      {
+        "vendor": "7shifts",
+        "customer": "The Human Bean",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-human-bean-the-labor-workforce-unknown-vendor-7shifts"
+      },
+      {
+        "vendor": "7shifts",
+        "customer": "Clean Juice",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-clean-juice-labor-workforce-unknown-vendor-7shifts"
+      },
+      {
+        "vendor": "7shifts",
+        "customer": "Black Rock Coffee Bar",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-black-rock-coffee-bar-labor-workforce-franchisee-deployment-vendor-7shifts"
+      },
+      {
+        "vendor": "7shifts",
+        "customer": "Jamba",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-jamba-labor-workforce-franchisee-deployment-vendor-7shifts"
+      },
+      {
+        "vendor": "7shifts",
+        "customer": "Smoothie King",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-smoothie-king-labor-workforce-franchisee-deployment-vendor-7shifts"
+      },
+      {
+        "vendor": "7shifts",
+        "customer": "Steak 'n Shake",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-steak-n-shake-labor-workforce-franchisee-deployment-vendor-7shifts"
+      },
+      {
+        "vendor": "Push Operations",
+        "customer": "Crumbl",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-crumbl-labor-workforce-unknown-vendor-push-operations"
+      },
+      {
+        "vendor": "Push Operations",
+        "customer": "Earls Kitchen + Bar",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-earls-kitchen-bar-labor-workforce-unknown-vendor-push-operations"
+      },
+      {
+        "vendor": "Push Operations",
+        "customer": "Booster Juice",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-booster-juice-labor-workforce-franchisee-deployment-vendor-push-operations"
+      },
+      {
+        "vendor": "Push Operations",
+        "customer": "Freshii",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-freshii-labor-workforce-franchisee-deployment-vendor-push-operations"
+      },
+      {
+        "vendor": "Push Operations",
+        "customer": "Village Ice Cream",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-village-ice-cream-labor-workforce-unknown-vendor-push-operations"
+      },
+      {
+        "vendor": "Deputy",
+        "customer": "Juice Press",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-juice-press-labor-workforce-unknown-vendor-deputy"
+      },
+      {
+        "vendor": "Deputy",
+        "customer": "Crust Pizza",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-crust-pizza-co-labor-workforce-franchisee-deployment-vendor-deputy"
+      },
+      {
+        "vendor": "Deputy",
+        "customer": "Instamaki",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-instamaki-labor-workforce-unknown-vendor-deputy"
+      },
+      {
+        "vendor": "Homebase",
+        "customer": "Luxe Bites",
+        "tech_category": "Labor/Workforce",
+        "relationship_id": "rel-brand-luxe-bites-labor-workforce-unknown-vendor-homebase"
+      }
+    ],
+    "enrich_existing_relationship": [],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

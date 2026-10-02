@@ -1,0 +1,21 @@
+{
+  "schema": "rb.hunter_source_registry.v1",
+  "updated_at": "2026-10-02T00:00:00Z",
+  "scoring_version": 1,
+  "sources": {
+    "sec.gov": {"name": "U.S. SEC", "source_class": "government_or_regulator", "authority_score": 100, "topics": ["public-company filings", "ownership", "financials", "risk factors"], "preferred_for": ["identity", "ownership", "financial_operating_health"], "notes": "Primary filing source."},
+    "ftc.gov": {"name": "U.S. FTC", "source_class": "government_or_regulator", "authority_score": 98, "topics": ["franchise regulation", "enforcement", "competition"], "preferred_for": ["franchise_governance", "legal_regulatory"], "notes": "Primary government source."},
+    "restaurantbusinessonline.com": {"name": "Restaurant Business", "source_class": "trade_press", "authority_score": 86, "topics": ["restaurant strategy", "financial health", "technology", "leadership"], "preferred_for": ["strategy", "financial_operating_health", "news_signals"], "notes": "Restaurant trade publication."},
+    "qsrmagazine.com": {"name": "QSR Magazine", "source_class": "trade_press", "authority_score": 83, "topics": ["QSR brands", "technology", "growth", "leadership"], "preferred_for": ["footprint", "technology_stack", "news_signals"], "notes": "Restaurant trade publication."},
+    "nrn.com": {"name": "Nation's Restaurant News", "source_class": "trade_press", "authority_score": 86, "topics": ["restaurant operations", "strategy", "technology", "leadership"], "preferred_for": ["strategy", "leadership", "news_signals"], "notes": "Restaurant trade publication."},
+    "hospitalitytech.com": {"name": "Hospitality Technology", "source_class": "trade_press", "authority_score": 82, "topics": ["restaurant technology", "deployments", "case studies"], "preferred_for": ["technology_stack", "deployment_scope", "technology_lifecycle"], "notes": "Technology-focused trade publication."},
+    "pymnts.com": {"name": "PYMNTS", "source_class": "trade_press", "authority_score": 74, "topics": ["payments", "commerce", "restaurant technology"], "preferred_for": ["payments", "news_signals"], "notes": "Useful secondary source; verify material deployment claims."},
+    "franchisewatchdesk.com": {"name": "Franchise Watch Desk", "source_class": "public_review_or_directory", "authority_score": 58, "topics": ["FDD discovery", "franchise economics"], "preferred_for": ["franchise_disclosure_discovery"], "notes": "Discovery source; verify against the underlying FDD."},
+    "fddexchange.com": {"name": "FDD Exchange", "source_class": "public_review_or_directory", "authority_score": 60, "topics": ["FDD discovery", "franchise documents"], "preferred_for": ["franchise_disclosure_discovery"], "notes": "Document locator; rate underlying filing separately when available."},
+    "frandeals.com": {"name": "FranDeals", "source_class": "public_review_or_directory", "authority_score": 52, "topics": ["franchise economics", "FDD-derived summaries"], "preferred_for": ["franchise_disclosure_discovery"], "notes": "Secondary FDD-derived source; verify critical details."},
+    "francloud.com": {"name": "FranCloud", "source_class": "public_review_or_directory", "authority_score": 55, "topics": ["franchise documents", "technology requirements"], "preferred_for": ["franchise_disclosure_discovery"], "notes": "Secondary source; seek underlying filing."},
+    "linkedin.com": {"name": "LinkedIn public pages", "source_class": "social_or_event", "authority_score": 45, "topics": ["leadership", "employment", "company announcements"], "preferred_for": ["leadership_discovery", "job_change_discovery"], "notes": "Public discovery source; corroborate material claims."},
+    "reddit.com": {"name": "Reddit", "source_class": "public_review_or_directory", "authority_score": 30, "topics": ["user experience", "implementation complaints", "discovery"], "preferred_for": ["weakness_discovery", "implementation_signal_discovery"], "notes": "Anecdotal discovery only unless independently corroborated."},
+    "apps.apple.com": {"name": "Apple App Store", "source_class": "public_review_or_directory", "authority_score": 55, "topics": ["mobile apps", "release history", "consumer reviews"], "preferred_for": ["mobile_app_currentness", "product_change_discovery"], "notes": "Strong for release existence and dates; reviews are anecdotal."}
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "subject_id": "subject-worldpay--brand-pollo-campero",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-28T14:22:43Z",
+      "generated_for": "todd",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/worldpay--brand-pollo-campero/current/Worldpay-vs-Genius-Pollo-Campero_Value-Wedge.json",
+      "superseded": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "subject_id": "subject-mcdonalds",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-09T13:07:41Z",
+      "generated_for": "Internal account team",
+      "purpose": "Top-of-funnel account plan and qualification",
+      "path": "system/artifact_vault/account_plans/mcdonalds/current/McDonalds_Account-Plan.md",
+      "superseded": false
+    }
+  ],
+  "data_owner_id": "todd"
+}

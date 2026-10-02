@@ -1,0 +1,102 @@
+{
+  "file_id": "cap-7e127364a5ff670a",
+  "queued_at": "2026-09-30T09:19:34+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-29_2206_axial-shift-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-29_2206_axial-shift-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260929-2206-axial-shift-validation`\n- Research system: `Codex web research`\n- Started at: `2026-09-29 22:06 CDT`\n- Completed at: `2026-09-29 22:08 CDT`\n- Research scope: Validate three named first-party Axial Shift restaurant case studies and one first-party product/integration page for customer scope, product scope, outcomes, and limitations.\n- Queue item or vendor: `competitor:axial-shift`\n- Methodology: First-party customer-page and integration-page validation with vendor-claim labeling, product-scope boundaries, and current-deployment uncertainty preserved.\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 3\n- Company/competitor profile observations added or revised: 1\n- Conflicts found: 3\n- Material takeaway: Axial Shift publishes named deployment evidence for California Pizza Kitchen, Mendocino Farms, and Talk of the Town Restaurant Group across labor forecasting and scheduling, real-time sales and labor visibility, role-based dashboards, reporting, employee engagement, and performance competitions. Its current integration page lists Toast, Revel, Lightspeed, NCR Aloha, and Oracle Simphony, but these are platform-level integration claims rather than proof that every named customer uses every connector.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: California Pizza Kitchen\n- Vendor: Axial Shift\n- Product or category: AI-based labor forecasting and scheduling, real-time sales and labor data, reporting consolidation, messaging, forms, and gamified sales challenges\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: Axial Shift's named case study quotes multiple CPK executives and managers, identifies concrete workflows, and reports company-wide operational goals; it is still vendor-authored and undated.\n- Source title: How California Pizza Kitchen Improved Forecasting with Its Innovative Partnership with Axial Shift\n- Source URL: https://axialshift.com/case-study/california-pizza-kitchen-axial-shift-case-study/\n- Publisher or source owner: Axial Shift\n- Published date, if known: Undated\n- Accessed date: 2026-09-29\n- Exact supporting excerpt or faithful factual note: The page says CPK used Axial Shift to reduce actual-versus-forecast labor variance by more than half, consolidate employee hours, sales, scheduling, forms, and reporting, replace manual manager texting with real-time visibility, and run employee sales challenges.\n- Product-specific evidence: AI-based forecasting, scheduling, reporting, forms, real-time sales and labor visibility, messaging, and competitions are explicit.\n- Conflicting or limiting evidence: The 144-location figure describes CPK's global estate and is not an independently verified Axial Shift deployment count. The page provides no implementation date, connected POS or labor-system names, methodology, or independent audit of outcomes.\n- Recommended follow-up: Confirm current covered locations, source systems, and forecast-measurement method in a CPK-controlled or independent source.\n\n### Observation 2\n\n- Brand: Mendocino Farms\n- Vendor: Axial Shift\n- Product or category: Role-based dashboards, visual scheduling, reporting, real-time sales and labor visibility, forms, messaging, and system integration\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: The named case study quotes Mendocino Farms' CTO and describes concrete integration and management workflows, though it remains vendor-authored.\n- Source title: How Mendocino Farms Increased Their Operational Efficiency and Kept More Revenue with Axial Shift\n- Source URL: https://axialshift.com/case-study/how-mendocino-farms-increased-their-operational-efficiency-and-kept-more-revenue-with-axial-shift/\n- Publisher or source owner: Axial Shift\n- Published date, if known: Undated\n- Accessed date: 2026-09-29\n- Exact supporting excerpt or faithful factual note: Mendocino Farms used Axial Shift to bridge separate labor and POS data, give managers real-time staffing visibility, support manager notes and communication, scheduling and shift swaps, and mobile forms. The page reports 76% of team members used the platform an average of 18 times per week.\n- Product-specific evidence: Role-Based Dashboards, Visual Scheduler, Reporting Suite, integration framework, forms, messaging, and real-time labor and sales visibility are explicit.\n- Conflicting or limiting evidence: The 75-location, 3,000-employee, usage, and efficiency figures are vendor-published. The page does not name the two source systems, specify the deployment date, distinguish licensed from active locations, or independently substantiate retained revenue.\n- Recommended follow-up: Confirm current estate coverage, source systems, active-user denominator, and measured financial impact.\n\n### Observation 3\n\n- Brand: Talk of the Town Restaurant Group, including Charley's Steak House, FishBones, Vito's Chop House, and Texas Cattle Company\n- Vendor: Axial Shift\n- Product or category: POS-connected real-time performance dashboards, sales competitions, staff coaching, and training\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 90%\n- Confidence rationale: The named operator and brands, executive quotes, and specific workflows support a strong relationship indication; all causal and financial outcomes are vendor-published and lack disclosed baselines.\n- Source title: How Talk of the Town Increased Wine Sales $399,000\n- Source URL: https://axialshift.com/case-study/how-talk-of-the-town-increased-wine-sales-399k/\n- Publisher or source owner: Axial Shift\n- Published date, if known: Undated\n- Accessed date: 2026-09-29\n- Exact supporting excerpt or faithful factual note: The page reports that Talk of the Town connected Axial Shift to POS data for real-time staff performance tracking, competitions, and coaching. It attributes a 7% Charley's wine-sales increase, nearly $400,000 in revenue, a 5% Texas Cattle Company year-over-year wine-sales increase, and 3-4% lower food costs to the program.\n- Product-specific evidence: POS-connected real-time dashboards, sales competitions, employee performance tracking, training, and coaching are explicit.\n- Conflicting or limiting evidence: The case study does not name the POS, implementation date, exact licensed locations, control period, or calculation method. The claimed 115x ROI and causal outcomes are vendor-authored and should not be treated as independently verified.\n- Recommended follow-up: Validate covered brands and locations, POS connector, measurement window, baseline, and cost/ROI calculation with operator-controlled evidence.\n\n### Observation 4\n\n- Brand: Axial Shift platform\n- Vendor: Axial Shift\n- Product or category: POS integrations and restaurant operations applications\n- Relationship indication: integration\n- Deployment scope: unknown\n- Evidence type: integration page\n- Confidence: 95%\n- Confidence rationale: Axial Shift's current integration page explicitly lists named POS connectors and native application categories.\n- Source title: Integrations - Axial Shift\n- Source URL: https://axialshift.com/integrations/\n- Publisher or source owner: Axial Shift\n- Published date, if known: Undated\n- Accessed date: 2026-09-29\n- Exact supporting excerpt or faithful factual note: The page lists Toast, Revel, Lightspeed, NCR Aloha, and Oracle Simphony as POS integrations, and lists role-based dashboards, reporting, Daily Guide, competitions and KPIs, messaging, scheduling, time and attendance, tip pooling, forms, AI forecasting, Zapier, QuickBooks, and API access.\n- Product-specific evidence: Named POS integrations and the platform's current first-party app catalog are explicit.\n- Conflicting or limiting evidence: The page proves advertised connector availability, not certification, customer-level adoption, version coverage, implementation depth, data latency, or support status for a particular restaurant.\n- Recommended follow-up: Validate connector certification, data objects, refresh frequency, and customer-specific use where account relevance emerges.\n\n## Company / competitor profile observations\n\n### Company profile observation 1\n\n- Target: `competitor:axial-shift`\n- Field: product_lineage\n- Value or observation: Axial Shift currently presents itself as a restaurant operations layer with native forecasting, scheduling, dashboards, reporting, messaging, forms, competitions, time and attendance, tip pooling, and integrations to Toast, Revel, Lightspeed, NCR Aloha, and Oracle Simphony.\n- Confidence: 95%\n- Confidence rationale: The current vendor integration page explicitly lists the apps and POS connectors.\n- Source title: Integrations - Axial Shift\n- Source URL: https://axialshift.com/integrations/\n- Publisher or source owner: Axial Shift\n- Published date, if known: Undated\n- Accessed date: 2026-09-29\n- Exact supporting excerpt or faithful factual note: The page enumerates five POS integrations and a suite of restaurant operations apps, plus API access and a developer platform.\n- Conflicting or limiting evidence: This is a vendor-stated product catalog. It does not establish usage volume, connector certification, or adoption by every customer.\n\n## Negative findings\n\n- Candidate or claim: CPK's 144 locations and Mendocino Farms' 75 locations are verified Axial Shift deployment counts.\n- Pages checked: The CPK and Mendocino Farms case studies.\n- Result: Those numbers describe the brands' estate scale. Neither page explicitly states that every location is licensed, live, or currently active on every described module.\n\n- Candidate or claim: Axial Shift is the point-of-sale system used by the named restaurant customers.\n- Pages checked: Three case studies and the integration page.\n- Result: Axial Shift is described as an operations, workforce, analytics, scheduling, and engagement layer that connects with POS and labor data. The reviewed pages do not establish it as the customers' transaction-system POS.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://axialshift.com/case-study/california-pizza-kitchen-axial-shift-case-study/ | Case study | 2026-09-29 | 1 | Named customer and workflows; vendor-authored, undated, and no independently audited outcomes. |\n| https://axialshift.com/case-study/how-mendocino-farms-increased-their-operational-efficiency-and-kept-more-revenue-with-axial-shift/ | Case study | 2026-09-29 | 2 | Named customer and modules; usage and impact figures are vendor-published. |\n| https://axialshift.com/case-study/how-talk-of-the-town-increased-wine-sales-399k/ | Case study | 2026-09-29 | 3 | Named operator and brands; financial and causal claims lack independent validation. |\n| https://axialshift.com/integrations/ | Integration page | 2026-09-29 | 4, profile 1 | Current connector and app catalog; availability does not prove customer-level use. |\n\n## Research notes and inferences\n\n- Inference: Axial Shift overlaps Genius most directly in back-office operations, labor/workforce, analytics, operational execution, and integration-led restaurant management rather than core payment acceptance or POS transaction processing.\n- Inference: The customer stories provide strong evidence of named relationships and workflows, but the outcome claims require independent validation before they should support ROI comparisons.\n- Review instruction: Preserve restaurant-estate figures as brand scale unless a source explicitly identifies licensed or live Axial Shift locations; preserve the POS names as advertised integrations rather than customer-specific deployments.",
+  "word_count": 1555,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-30T09:20:47+00:00",
+  "processing_result": {
+    "triage_stream_count": 8,
+    "noise_only": false,
+    "persisted_count": 8,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-30T09:19:34+00:00-028",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 13 trigger(s): named. Possible named subjects: Named, Validate, Axial Shift, Pages, Case, Material."
+      },
+      {
+        "item_id": "INT-2026-09-30T09:19:34+00:00-029",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:toast_pos' (matched term: 'toast'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-30T09:19:34+00:00-030",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'account_dossier:global_payments' (matched term: 'genius'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-30T09:19:34+00:00-031",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Lightspeed' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-30T09:19:34+00:00-032",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-30T09:19:34+00:00-033",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Ncr Voyix' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-30T09:19:34+00:00-034",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Revel Systems' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-30T09:19:34+00:00-035",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Mendocino Farms, Toast, Genius, Revel. Macro/industry signal detected: 16 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: back office, competitor, customer, deployment,"
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "Axial Shift",
+        "California Pizza Kitchen",
+        "Mendocino Farms",
+        "Talk of the Town Restaurant Group",
+        "Charley's Steak House",
+        "FishBones",
+        "Vito's Chop House",
+        "Texas Cattle Company",
+        "Toast",
+        "Revel"
+      ],
+      "topics": [
+        "Axial Shift case studies",
+        "restaurant operations",
+        "labor forecasting and scheduling",
+        "POS integrations"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Confirm current covered locations, source systems, and forecast-measurement method in a CPK-controlled or independent source.",
+        "Confirm current estate coverage, source systems, active-user denominator, and measured financial impact.",
+        "Validate covered brands and locations, POS connector, measurement window, baseline, and cost/ROI calculation with operator-controlled evidence.",
+        "Validate connector certification, data objects, refresh frequency, and customer-specific use where account relevance emerges."
+      ],
+      "why_it_matters": "The findings provide insights into Axial Shift's customer relationships and operational impact, which are crucial for competitive analysis."
+    },
+    "structured_import_reconciled": true,
+    "structured_import_packet_id": "dr-20260929-2206-axial-shift-validation",
+    "structured_import_applied": 4,
+    "structured_import_deduped": 0,
+    "structured_import_queued": 0,
+    "structured_import_rejected": 0,
+    "canonical_targets_changed": [
+      "competitor:axial-shift"
+    ],
+    "canonical_mutation_statement": "4 structured finding(s) applied to canonical record(s) for: competitor:axial-shift."
+  }
+}

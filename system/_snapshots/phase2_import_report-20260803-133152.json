@@ -1,0 +1,233 @@
+{
+  "phase2_file": "system/research/phase2_pos_evidence_draft_2026-08-03.json",
+  "category": "POS Platforms",
+  "rows_processed": 32,
+  "rows_skipped": 1,
+  "dry_run": false,
+  "added": 25,
+  "updated": 5,
+  "conflicts_detected": 2,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 25,
+    "enrich_existing_relationship": 2,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 3,
+    "supersedes_existing_relationship": 0,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 2,
+    "pilot_not_promoted": 0,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Toast",
+        "customer": "Applebee's (Dine Brands Global)",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-applebee-s-dine-brands-global-pos-system-of-record-pos-vendor-toast"
+      },
+      {
+        "vendor": "Toast",
+        "customer": "Hungry Howie's",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-hungry-howie-s-pizza-pos-system-of-record-pos-vendor-toast"
+      },
+      {
+        "vendor": "Toast",
+        "customer": "everbowl",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-everbowl-pos-system-of-record-pos-vendor-toast"
+      },
+      {
+        "vendor": "Toast",
+        "customer": "Craveworthy Brands",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-craveworthy-brands-pos-system-of-record-pos-vendor-toast"
+      },
+      {
+        "vendor": "NCR Voyix",
+        "customer": "Pizza Ranch",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-pizza-ranch-pos-system-of-record-pos-vendor-ncr-voyix"
+      },
+      {
+        "vendor": "NCR Voyix",
+        "customer": "Pei Wei Asian Kitchen",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-pei-wei-asian-kitchen-pos-system-of-record-pos-vendor-ncr-voyix"
+      },
+      {
+        "vendor": "NCR Voyix",
+        "customer": "JINYA Ramen Bar",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-jinya-ramen-bar-pos-system-of-record-pos-vendor-ncr-voyix"
+      },
+      {
+        "vendor": "NCR Voyix",
+        "customer": "Salad and Go",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-salad-and-go-pos-service-maintenance-provider-vendor-ncr-voyix"
+      },
+      {
+        "vendor": "Oracle Food & Beverage (Simphony / MICROS)",
+        "customer": "Big Boy Restaurant Group",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-big-boy-restaurant-group-pos-system-of-record-pos-vendor-oracle-food-beverage-simphony-micros"
+      },
+      {
+        "vendor": "Oracle Food & Beverage (Simphony / MICROS)",
+        "customer": "BurgerFi",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-burgerfi-pos-system-of-record-pos-vendor-oracle-food-beverage-simphony-micros"
+      },
+      {
+        "vendor": "PAR Technology (Brink POS)",
+        "customer": "Burger King",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-burger-king-pos-system-of-record-pos-vendor-par-technology-brink-pos"
+      },
+      {
+        "vendor": "PAR Technology (Brink POS)",
+        "customer": "Papa Johns",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-papa-johns-pos-system-of-record-pos-vendor-par-technology-brink-pos"
+      },
+      {
+        "vendor": "PAR Technology (Brink POS)",
+        "customer": "Big Chicken",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-big-chicken-pos-system-of-record-pos-vendor-par-technology-brink-pos"
+      },
+      {
+        "vendor": "PAR Technology (Brink POS)",
+        "customer": "Daily Grill",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-daily-grill-pos-system-of-record-pos-vendor-par-technology-brink-pos"
+      },
+      {
+        "vendor": "PAR Technology (Brink POS)",
+        "customer": "Roberto's Taco Shop",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-roberto-s-taco-shop-pos-system-of-record-pos-vendor-par-technology-brink-pos"
+      },
+      {
+        "vendor": "PAR Technology (Brink POS)",
+        "customer": "Miami Grill",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-miami-grill-pos-system-of-record-pos-vendor-par-technology-brink-pos"
+      },
+      {
+        "vendor": "Square for Restaurants (Block, Inc.)",
+        "customer": "Steak Escape",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-steak-escape-sandwich-grill-pos-system-of-record-pos-vendor-square-for-restaurants-block-inc"
+      },
+      {
+        "vendor": "Square for Restaurants (Block, Inc.)",
+        "customer": "The Pancake Parlour",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-the-pancake-parlour-pos-system-of-record-pos-vendor-square-for-restaurants-block-inc"
+      },
+      {
+        "vendor": "Lightspeed Commerce (Lightspeed Restaurant / Upserve)",
+        "customer": "Five Guys (Koeppel Companies franchisee)",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-five-guys-koeppel-companies-franchisee-pos-franchisee-deployment-vendor-lightspeed-commerce-lightspeed-restaurant-upserve"
+      },
+      {
+        "vendor": "Revel Systems",
+        "customer": "Lazeez Shawarma",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-lazeez-shawarma-pos-system-of-record-pos-vendor-revel-systems"
+      },
+      {
+        "vendor": "Squirrel Systems",
+        "customer": "Cactus Club Cafe",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-cactus-club-cafe-pos-system-of-record-pos-vendor-squirrel-systems"
+      },
+      {
+        "vendor": "Squirrel Systems",
+        "customer": "SIR Corp (Service Inspired Restaurants)",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-sir-corp-service-inspired-restaurants-pos-system-of-record-pos-vendor-squirrel-systems"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Jack in the Box",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-jack-in-the-box-pos-system-of-record-pos-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Golden Corral",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-golden-corral-pos-system-of-record-pos-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Shake Shack",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-shake-shack-pos-system-of-record-pos-vendor-qu"
+      }
+    ],
+    "enrich_existing_relationship": [
+      {
+        "vendor": "Toast",
+        "customer": "Via 313",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-via-313-pos-system-of-record-pos-reference-only-vendor-toast"
+      },
+      {
+        "vendor": "Toast",
+        "customer": "Maman",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-maman-pos-system-of-record-pos-reference-only-vendor-toast"
+      }
+    ],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [
+      {
+        "vendor": "Qu",
+        "customer": "Dave's Hot Chicken",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-dave-s-hot-chicken-pos-system-of-record-pos-logo-or-customer-page-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Taco John's",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-taco-john-s-pos-system-of-record-pos-reference-only-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Blaze Pizza",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-blaze-pizza-pos-system-of-record-pos-logo-or-customer-page-vendor-qu"
+      }
+    ],
+    "supersedes_existing_relationship": [],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [
+      {
+        "vendor": "Focus POS",
+        "customer": "Fish District",
+        "tech_category": "POS",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Harbortouch (Shift4)",
+        "customer": "Waitr restaurant network",
+        "tech_category": "POS",
+        "relationship_id": null
+      }
+    ],
+    "pilot_not_promoted": [],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "competitor_id": "comp-ecolab",
+  "competitor_slug": "ecolab",
+  "display_name": "Ecolab",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:32Z",
+  "latest_cos_commentary": {
+    "headline": "Ecolab supplies food-safety and sanitation programs to restaurants; it is an operations/compliance vendor, not a technology platform competitor.",
+    "genius_exposure": "No direct overlap with any Genius product line; at most tangential to back_office compliance workflows if a restaurant tracks sanitation audits alongside operations software.",
+    "competitive_timing": "No 2026-specific news or product change was found in this research pass.",
+    "sales_response": "Not a competitive-displacement conversation; Ecolab and Genius serve different budget lines (chemicals/services vs. POS/payments software).",
+    "risk_and_uncertainty": "This pass found only general marketing content, no leadership, financials, named customers, or dated news for Ecolab's restaurant business; treat as a low-priority, non-competing tracked entity pending further evidence.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 29
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 29,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Named Customers",
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "named restaurant customer scope",
+        "current product/pricing",
+        "financial health",
+        "operator ROI evidence"
+      ]
+    }
+  }
+}

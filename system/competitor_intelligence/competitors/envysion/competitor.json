@@ -1,0 +1,176 @@
+{
+  "competitor_id": "comp-envysion",
+  "competitor_slug": "envysion",
+  "display_name": "Envysion",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "Envysion currently markets restaurant-facing capabilities across security video, bi analytics.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Envysion combines intelligent video with expert human audits as a loss-prevention service, aimed at reducing employee theft, cash shrinkage, and POS fraud at the store level.",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-29T15:44:09Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:46:58Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:58Z",
+  "latest_cos_commentary": {
+    "headline": "Adjacent restaurant-tech vendor; no supported direct Genius overlap.",
+    "genius_exposure": [],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Monitor for account influence or expansion into Genius categories; verify before treating as a direct competitor.",
+    "risk_and_uncertainty": "Long-tail evidence quality varies; unresolved vendors were left unclassified rather than guessed.",
+    "priority": "P3",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://envysion.com/audit-programs/loss-prevention-audits/",
+        "title": "Envysion restaurant technology evidence",
+        "publisher": "Envysion",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 32,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership under Motorola Solutions",
+        "pricing",
+        "named restaurant customer scope"
+      ]
+    }
+  },
+  "canonical_company_name": "Envysion",
+  "website": "https://envysion.com/audit-programs/loss-prevention-audits/",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://envysion.com/audit-programs/loss-prevention-audits/",
+        "title": "Envysion restaurant technology evidence",
+        "publisher": "Envysion",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "adjacent_ecosystem_vendor",
+  "restaurant_tech_categories": [
+    {
+      "category": "security_video",
+      "basis": "Current restaurant-specific evidence supports security video for Envysion.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://envysion.com/audit-programs/loss-prevention-audits/",
+          "title": "Envysion restaurant technology evidence",
+          "publisher": "Envysion",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "bi_analytics",
+      "basis": "Current restaurant-specific evidence supports bi analytics for Envysion.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://envysion.com/audit-programs/loss-prevention-audits/",
+          "title": "Envysion restaurant technology evidence",
+          "publisher": "Envysion",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "Envysion video-integrated loss prevention (security_video, bi_analytics)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://envysion.com/audit-programs/loss-prevention-audits/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Current restaurant-specific product/use-case evidence exists in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://envysion.com/audit-programs/loss-prevention-audits/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated evidence is not independent proof of ROI, reliability, implementation quality, or systemwide adoption. Independent validation remains incomplete in this bounded gap-fill pass.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://envysion.com/audit-programs/loss-prevention-audits/",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [],
+  "product_lineage": [],
+  "negative_findings": [],
+  "conflicts_notes": [],
+  "category_assessment_status": "researched",
+  "category_assessment_packet_id": "rbb-competitor-category-gapfill-20260929-batches02-04",
+  "category_assessed_at": "2026-09-29"
+}

@@ -1,0 +1,394 @@
+{
+  "competitor_id": "comp-perfect-company",
+  "competitor_slug": "perfect-company",
+  "display_name": "Perfect Company",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [
+    "back_office",
+    "kitchen_drive_thru"
+  ],
+  "positioning_summary": "Perfect Company is supported in this pass as a restaurant-technology vendor in: kds kitchen ops, ops execution, back office operations.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:46:57Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:57Z",
+  "latest_cos_commentary": {
+    "headline": "Direct Genius portfolio overlap identified.",
+    "genius_exposure": [
+      "kitchen_drive_thru",
+      "back_office"
+    ],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Validate account-level incumbent and deployment scope before positioning against Genius.",
+    "risk_and_uncertainty": "Evidence quality varies materially across this long-tail batch; unresolved names remain deliberately unclassified rather than guessed.",
+    "priority": "P2",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://www.perfect.tech/",
+        "title": "Automated Restaurant Operations Software",
+        "publisher": "Perfect Company",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      },
+      {
+        "url": "https://www.perfect.tech/news",
+        "title": "Perfect Company News",
+        "publisher": "Perfect Company",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "other"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 71,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Pricing signals",
+        "Recent News / Product Updates",
+        "Snapshot",
+        "Strengths",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership beyond CEO reference in case study",
+        "current pricing",
+        "independently confirmed financial health"
+      ]
+    }
+  },
+  "canonical_company_name": "Perfect Company",
+  "website": "https://www.perfect.tech/",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://www.perfect.tech/",
+        "title": "Automated Restaurant Operations Software",
+        "publisher": "Perfect Company",
+        "published_at": null,
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "product_line_competitor",
+  "restaurant_tech_categories": [
+    {
+      "category": "kds_kitchen_ops",
+      "basis": "Current evidence supports kds kitchen ops as a restaurant-facing category for Perfect Company.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.perfect.tech/",
+          "title": "Automated Restaurant Operations Software",
+          "publisher": "Perfect Company",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        },
+        {
+          "url": "https://www.perfect.tech/news",
+          "title": "Perfect Company News",
+          "publisher": "Perfect Company",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "other"
+        }
+      ]
+    },
+    {
+      "category": "ops_execution",
+      "basis": "Current evidence supports ops execution as a restaurant-facing category for Perfect Company.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.perfect.tech/",
+          "title": "Automated Restaurant Operations Software",
+          "publisher": "Perfect Company",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        },
+        {
+          "url": "https://www.perfect.tech/news",
+          "title": "Perfect Company News",
+          "publisher": "Perfect Company",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "other"
+        }
+      ]
+    },
+    {
+      "category": "back_office_operations",
+      "basis": "Current evidence supports back office operations as a restaurant-facing category for Perfect Company.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://www.perfect.tech/",
+          "title": "Automated Restaurant Operations Software",
+          "publisher": "Perfect Company",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        },
+        {
+          "url": "https://www.perfect.tech/news",
+          "title": "Perfect Company News",
+          "publisher": "Perfect Company",
+          "published_at": null,
+          "accessed_at": "2026-09-29",
+          "source_type": "other"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "KitchenPro Suite (kds_kitchen_ops, ops_execution, back_office_operations)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.perfect.tech/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Wingstop Smart Kitchen (kds_kitchen_ops, ops_execution, back_office_operations)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.perfect.tech/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Vendor has current restaurant-specific product evidence in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.perfect.tech/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated product evidence does not by itself establish ROI, reliability, implementation quality, or systemwide customer adoption; independent validation remains a research gap.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.perfect.tech/",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    },
+    {
+      "value": "Current KitchenPro performance and Wingstop-scale claims remain weakly triangulated externally in the successfully opened public evidence set.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.perfect.tech/",
+      "finding_type": "inference",
+      "source_owner": "Perfect Company and bounded-search observation",
+      "source_type": "negative finding / analyst inference",
+      "deployment_scope": "unknown",
+      "is_vendor_claim": false,
+      "is_inference": true,
+      "limitations_or_conflicts": "The absence of independently accessible evidence cannot be converted into a performance criticism."
+    }
+  ],
+  "key_customers": [
+    {
+      "value": "Wingstop",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.perfect.tech/",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": false
+    },
+    {
+      "value": "Perfect Company states that KitchenPro is live in all Wingstop kitchens and was customized for Wingstop.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.perfect.tech/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Perfect Company",
+      "source_type": "vendor customer/deployment claim",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "No successfully opened independent current Wingstop source confirmed fleet scope or outcomes in this bounded run."
+    }
+  ],
+  "recent_news": [
+    {
+      "value": "Perfect Company announced its customized KitchenPro deployment as Wingstop Smart Kitchen across 2,500+ Wingstop restaurants.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-05-06",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://www.perfect.tech/news",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": false
+    }
+  ],
+  "product_lineage": [
+    {
+      "value": "In 2016 Perfect Company introduced Perfect Kitchen PRO as a consumer smart-scale and interactive-recipe product alongside Perfect Drink, Perfect Bake and Perfect Blend apps or products.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.prnewswire.com/news-releases/perfect-company-introduces-perfect-kitchen-pro-exclusively-at-sur-la-table-300313857.html",
+      "finding_type": "vendor_stated",
+      "source_owner": "Perfect Company via PR Newswire",
+      "source_type": "historical press release",
+      "published_at": "2016-08-16",
+      "deployment_scope": "historical",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Historical consumer product; not evidence of present restaurant-platform performance."
+    },
+    {
+      "value": "The common Perfect Company identity and similar Perfect Kitchen PRO/KitchenPro naming show continuity of company and naming, but the opened sources do not prove that the current enterprise software is a direct technical descendant of the 2016 consumer product.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.prnewswire.com/news-releases/perfect-company-introduces-perfect-kitchen-pro-exclusively-at-sur-la-table-300313857.html",
+      "finding_type": "inference",
+      "source_owner": "Perfect Company via PR Newswire",
+      "source_type": "analyst product-lineage inference",
+      "published_at": "2016-08-16",
+      "deployment_scope": "historical",
+      "is_vendor_claim": false,
+      "is_inference": true,
+      "limitations_or_conflicts": "Do not merge the consumer and enterprise products into one technical lineage without additional evidence."
+    }
+  ],
+  "negative_findings": [],
+  "conflicts_notes": [],
+  "category_assessment_status": "researched",
+  "category_assessment_packet_id": "rbb-competitor-category-gapfill-20260929-batches02-04",
+  "category_assessed_at": "2026-09-29",
+  "vendor_claims": [
+    {
+      "value": "Perfect Company positions KitchenPro as a kitchen-management, KDS and workflow platform using visual instructions and real-time notifications to standardize kitchen execution.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.perfect.tech/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Perfect Company",
+      "source_type": "vendor platform website",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "No independent current deployment-performance account was successfully opened."
+    },
+    {
+      "value": "Perfect Company presents KitchenPro station workflows for GRILL, FRY, MAKE, PACK, DRINK and DRIVE-THRU.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.perfect.tech/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Perfect Company",
+      "source_type": "vendor product website",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "These may be configured workflow modules rather than separately licensed products."
+    },
+    {
+      "value": "Perfect Company claims KitchenPro can reduce training from weeks to hours, reduce waste and overportioning, improve productivity and order accuracy, and produce positive waste ROI within one to two months.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.perfect.tech/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Perfect Company",
+      "source_type": "vendor marketing website",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "No independently audited methodology, baseline or comparator was obtained."
+    }
+  ]
+}

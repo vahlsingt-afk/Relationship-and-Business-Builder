@@ -1,0 +1,531 @@
+[
+  {
+    "company": "Taco Bell",
+    "contact_count": 2,
+    "gap_types": [
+      "no_executive_relationship",
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Missy Schaaphok",
+    "door_opener_score": 22,
+    "recommended_introducer": "Jacob Slater",
+    "introducer_reason": "LMI (DRR 30.0); works at Taco Bell; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Scooter's Coffee",
+    "contact_count": 6,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Tyler Marpes",
+    "door_opener_score": 41,
+    "recommended_introducer": "Kelsey Regier",
+    "introducer_reason": "LMI (DRR 37.5); works at Scooter's Coffee; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Wingstop Restaurants Inc.",
+    "contact_count": 3,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Lucie Tuan",
+    "door_opener_score": 46,
+    "recommended_introducer": "Lucie Tuan",
+    "introducer_reason": "LMI (DRR 59.4); works at Wingstop Restaurants Inc.; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Levy Restaurants",
+    "contact_count": 3,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Robert Wood",
+    "door_opener_score": 39,
+    "recommended_introducer": "Carter Witt",
+    "introducer_reason": "LMI (DRR 30.3); works at Levy Restaurants.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Meritage Hospitality Group",
+    "contact_count": 3,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Alex Rusticus",
+    "door_opener_score": 37,
+    "recommended_introducer": "Alex Rusticus",
+    "introducer_reason": "LMI (DRR 30.0); works at Meritage Hospitality Group; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Bojangles' Restaurants, Inc.",
+    "contact_count": 3,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Brooks Speirs, CFE",
+    "door_opener_score": 37,
+    "recommended_introducer": "Corey Callaway",
+    "introducer_reason": "LMI (DRR 30.1); works at Bojangles' Restaurants, Inc.; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Popeyes Louisiana Kitchen",
+    "contact_count": 3,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Jack McCluskey",
+    "door_opener_score": 33,
+    "recommended_introducer": "Md Rahman",
+    "introducer_reason": "LMI (DRR 30.0); works at Popeyes Louisiana Kitchen; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Ted's Montana Grill",
+    "contact_count": 3,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Chad Coghlan",
+    "door_opener_score": 32,
+    "recommended_introducer": "Chad Coghlan",
+    "introducer_reason": "LMI (DRR 30.0); works at Ted's Montana Grill; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Thrive Restaurant Group",
+    "contact_count": 2,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "\ud83d\udc27Patrick Bobrukiewicz",
+    "door_opener_score": 45,
+    "recommended_introducer": "\ud83d\udc27Patrick Bobrukiewicz",
+    "introducer_reason": "LKI (DRR 44.8); works at Thrive Restaurant Group; domain expertise: domain match: hospitality_foodservice, recruiting_hr.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Cafe Rio Fresh Modern Mexican",
+    "contact_count": 2,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Adam Klaers",
+    "door_opener_score": 37,
+    "recommended_introducer": "Adam Klaers",
+    "introducer_reason": "LMI (DRR 30.0); works at Cafe Rio Fresh Modern Mexican.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Raising Cane's Chicken Fingers",
+    "contact_count": 2,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Ben LaTour",
+    "door_opener_score": 37,
+    "recommended_introducer": "Dustin Turner",
+    "introducer_reason": "LMI (DRR 30.3); works at Raising Cane's Chicken Fingers; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "JAI Restaurant Group",
+    "contact_count": 2,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Ben Mansoor",
+    "door_opener_score": 37,
+    "recommended_introducer": "Ben Mansoor",
+    "introducer_reason": "LMI (DRR 30.0); works at JAI Restaurant Group.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Flynn Restaurant Group",
+    "contact_count": 2,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Jeremy Biser",
+    "door_opener_score": 37,
+    "recommended_introducer": "Jeremy Biser",
+    "introducer_reason": "LMI (DRR 30.0); works at Flynn Restaurant Group.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Marco's Pizza (Marco's Franchising, LLC)",
+    "contact_count": 2,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Milton Molina, MBA",
+    "door_opener_score": 37,
+    "recommended_introducer": "Emily Croll Townley",
+    "introducer_reason": "LMI (DRR 30.0); works at Marco's Pizza (Marco's Franchising, LLC); domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Cali BBQ Media",
+    "contact_count": 2,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Shawn Walchef",
+    "door_opener_score": 37,
+    "recommended_introducer": "Dean LaBay \ud83e\udd54",
+    "introducer_reason": "LMI (DRR 30.2); works at Cali BBQ Media.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Vibe Restaurants",
+    "contact_count": 2,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Erick Coreas",
+    "door_opener_score": 34,
+    "recommended_introducer": "Erick Coreas",
+    "introducer_reason": "LMI (DRR 30.1); works at Vibe Restaurants.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "A&W Restaurants, Inc.",
+    "contact_count": 2,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Jordan Allen",
+    "door_opener_score": 34,
+    "recommended_introducer": "Dave Crowley  CFE",
+    "introducer_reason": "LMI (DRR 30.6); works at A&W Restaurants, Inc..",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Upward Projects Restaurant Group | Postino WineCafe | Joyride Taco House | Windsor | Federal Pizza",
+    "contact_count": 2,
+    "gap_types": [
+      "registration_missing_despite_relationships"
+    ],
+    "door_opener": "Jeffrey Boland Sr.",
+    "door_opener_score": 28,
+    "recommended_introducer": "Rebecca Hanson",
+    "introducer_reason": "LMI (DRR 30.0); works at Upward Projects Restaurant Group | Postino WineCafe | Joyride Taco House | Windsor | Federal Pizza; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "A&W Restaurants",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Todd Stewart",
+    "door_opener_score": 39,
+    "recommended_introducer": "Todd Stewart",
+    "introducer_reason": "LKI (DRR 54.4); works at A&W Restaurants.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Dutch Bros Coffee",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Tyler Schrameck",
+    "door_opener_score": 32,
+    "recommended_introducer": "Tyler Schrameck",
+    "introducer_reason": "LKI (DRR 50.9); works at Dutch Bros Coffee; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "TRIS | The Restaurant Intelligence Solution",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Sabra Mauldin",
+    "door_opener_score": 29,
+    "recommended_introducer": "Sabra Mauldin",
+    "introducer_reason": "LMI (DRR 41.9); works at TRIS | The Restaurant Intelligence Solution.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Hawaiian Bros Island Grill",
+    "contact_count": 1,
+    "gap_types": [
+      "existing_contacts_inactive"
+    ],
+    "door_opener": "Scott Ford",
+    "door_opener_score": 29,
+    "recommended_introducer": "Amy Spytko",
+    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "moderate"
+  },
+  {
+    "company": "JJC Family Restaurants",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Sean Cisco",
+    "door_opener_score": 28,
+    "recommended_introducer": "Sean Cisco",
+    "introducer_reason": "LKI (DRR 43.8); works at JJC Family Restaurants.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Bonefish Grill",
+    "contact_count": 1,
+    "gap_types": [
+      "existing_contacts_inactive"
+    ],
+    "door_opener": "Mark Graff",
+    "door_opener_score": 27,
+    "recommended_introducer": "Amy Spytko",
+    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "moderate"
+  },
+  {
+    "company": "Chuy's Restaurants",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Corbin Gass",
+    "door_opener_score": 24,
+    "recommended_introducer": "Corbin Gass",
+    "introducer_reason": "LMI (DRR 30.1); works at Chuy's Restaurants; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "CCL Hospitality Group",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Jake Rossman",
+    "door_opener_score": 24,
+    "recommended_introducer": "Jake Rossman",
+    "introducer_reason": "LMI (DRR 30.1); works at CCL Hospitality Group; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Palermo's Pizza",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Brian Brindza \ud83c\udf55",
+    "door_opener_score": 22,
+    "recommended_introducer": "Brian Brindza \ud83c\udf55",
+    "introducer_reason": "LMI (DRR 30.0); works at Palermo's Pizza; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Bad Ass Coffee of Hawaii",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Chuck Shuptrine",
+    "door_opener_score": 22,
+    "recommended_introducer": "Chuck Shuptrine",
+    "introducer_reason": "LMI (DRR 30.0); works at Bad Ass Coffee of Hawaii; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Franke Foodservice Systems",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Greg Sullivan",
+    "door_opener_score": 22,
+    "recommended_introducer": "Greg Sullivan",
+    "introducer_reason": "LMI (DRR 30.0); works at Franke Foodservice Systems; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Baldinger Bakery",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Gregg Murphy",
+    "door_opener_score": 22,
+    "recommended_introducer": "Gregg Murphy",
+    "introducer_reason": "LMI (DRR 30.0); works at Baldinger Bakery.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Lou Malnati's Pizzeria",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Jacob Pierce",
+    "door_opener_score": 22,
+    "recommended_introducer": "Jacob Pierce",
+    "introducer_reason": "LMI (DRR 30.0); works at Lou Malnati's Pizzeria; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "V Pizza",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "James Wallace",
+    "door_opener_score": 22,
+    "recommended_introducer": "James Wallace",
+    "introducer_reason": "LMI (DRR 30.0); works at V Pizza; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Cooper's Hawk Winery and Restaurants",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Jay Hornacek",
+    "door_opener_score": 22,
+    "recommended_introducer": "Jay Hornacek",
+    "introducer_reason": "LMI (DRR 30.0); works at Cooper's Hawk Winery and Restaurants; domain expertise: domain match: hospitality_foodservice, mcdonald_ecosystem.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "CKE Restaurants, Inc.",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Marco Schlueter",
+    "door_opener_score": 22,
+    "recommended_introducer": "Marco Schlueter",
+    "introducer_reason": "LMI (DRR 30.0); works at CKE Restaurants, Inc..",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Little Caesars Pizza",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Martin Guzman",
+    "door_opener_score": 22,
+    "recommended_introducer": "Martin Guzman",
+    "introducer_reason": "LMI (DRR 30.0); works at Little Caesars Pizza; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Caribou Coffee",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Andrew Kraus",
+    "door_opener_score": 18,
+    "recommended_introducer": "Amy Spytko",
+    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "moderate"
+  },
+  {
+    "company": "True Food Kitchen",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Brittany Maroney",
+    "door_opener_score": 18,
+    "recommended_introducer": "Amy Spytko",
+    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "moderate"
+  },
+  {
+    "company": "Good Times Restaurants Inc.",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Brock Davis",
+    "door_opener_score": 18,
+    "recommended_introducer": "Amy Spytko",
+    "introducer_reason": "inner-tier RC (DRR 96.3).",
+    "estimated_effort": "moderate"
+  },
+  {
+    "company": "Tenzo - Restaurant PerformanceOps",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Elizabeth Wickham",
+    "door_opener_score": 18,
+    "recommended_introducer": "Sam Benson",
+    "introducer_reason": "LMI (DRR 35.8); works at Tenzo - Restaurant PerformanceOps; domain expertise: domain match: restaurant_tech.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "Peet's Coffee",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Michael Darby",
+    "door_opener_score": 18,
+    "recommended_introducer": "Jake Bellerjeau",
+    "introducer_reason": "LMI (DRR 30.0); works at Peet's Coffee; domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "low"
+  },
+  {
+    "company": "First Watch Restaurants",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Nicole Range, MBA",
+    "door_opener_score": 18,
+    "recommended_introducer": "Amy Spytko",
+    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "moderate"
+  },
+  {
+    "company": "Olga's Kitchen",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Rick Loftus",
+    "door_opener_score": 18,
+    "recommended_introducer": "Amy Spytko",
+    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "moderate"
+  },
+  {
+    "company": "Informa Connect Foodservice",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Jodie Cohen",
+    "door_opener_score": 18,
+    "recommended_introducer": "Amy Spytko",
+    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "moderate"
+  },
+  {
+    "company": "Chick-fil-A Restaurants",
+    "contact_count": 1,
+    "gap_types": [
+      "no_executive_relationship"
+    ],
+    "door_opener": "Kathryn Simon",
+    "door_opener_score": 18,
+    "recommended_introducer": "Amy Spytko",
+    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "estimated_effort": "moderate"
+  }
+]

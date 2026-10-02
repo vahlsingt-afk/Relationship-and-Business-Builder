@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>RBB Team Portal — Admin</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --bg-elevated: #f7f7f8;
+    --border: #e5e5e6;
+    --text: #1e1f22;
+    --text-muted: #6b6f76;
+    --accent: #5b7fff;
+    --accent-text: #ffffff;
+    --danger-bg: #fdecec;
+    --danger-border: #f3b8b8;
+    --danger-text: #b23a3a;
+    --code-bg: #f2f2f3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #212123; --bg-elevated: #2a2b2e; --border: #333437; --text: #ececec;
+      --text-muted: #a6a9b0; --accent: #6e8fff; --accent-text: #ffffff;
+      --danger-bg: #3a2222; --danger-border: #6b2c2c; --danger-text: #ffb4b4; --code-bg: #1a1b1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
+  header { padding: 14px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+  header h1 { font-size: 16px; margin: 0; }
+  #whoami { font-size: 12px; color: var(--text-muted); }
+  main { max-width: 960px; margin: 0 auto; padding: 20px; }
+  .hidden { display: none !important; }
+  input, select, textarea, button { font-family: inherit; font-size: 14px; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; }
+  button { cursor: pointer; background: var(--accent); color: var(--accent-text); border: none; }
+  button.secondary { background: var(--bg-elevated); color: var(--text); }
+  button.danger { background: var(--danger-bg); color: var(--danger-text); border: 1px solid var(--danger-border); }
+  button:disabled { opacity: 0.5; cursor: default; }
+  button + button { margin-left: 6px; }
+  .row { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; }
+  .table-scroll { width: 100%; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 16px; }
+  .table-scroll table { min-width: 720px; }
+  th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { color: var(--text-muted); font-weight: 600; }
+  .tabs { display: flex; gap: 4px; margin-bottom: 12px; }
+  .tabs button { background: var(--bg-elevated); color: var(--text); }
+  .tabs button.active { background: var(--accent); color: var(--accent-text); }
+  .card { border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 16px; background: var(--bg-elevated); }
+  .card h2 { margin-top: 0; font-size: 15px; }
+  .error { background: var(--danger-bg); border: 1px solid var(--danger-border); color: var(--danger-text); border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; font-size: 13px; }
+  .muted { color: var(--text-muted); font-size: 13px; }
+  .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .badge-active { background: #dff3e3; color: #1e7a3a; }
+  .badge-suspended { background: var(--danger-bg); color: var(--danger-text); }
+  .badge-revoked { background: var(--bg-elevated); color: var(--text-muted); border: 1px solid var(--border); }
+  @media (prefers-color-scheme: dark) { .badge-active { background: #1e3a26; color: #7fd99a; } }
+  form.entry-form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  form.entry-form label { font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 3px; }
+  form.entry-form .full { grid-column: 1 / -1; }
+  .token-reveal { background: var(--code-bg); border-radius: 8px; padding: 12px; font-family: monospace; font-size: 13px; word-break: break-all; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>RBB Team Portal — Admin</h1>
+  <div id="whoami"></div>
+</header>
+
+<main>
+  <div id="token-screen">
+    <div class="card">
+      <h2>Enter your token</h2>
+      <p class="muted">Owner access only.</p>
+      <div class="row">
+        <input type="text" id="token-input" placeholder="Paste your token">
+        <button id="token-submit">Continue</button>
+      </div>
+      <div id="token-error" class="error hidden"></div>
+    </div>
+  </div>
+
+  <div id="app-screen" class="hidden">
+    <div id="global-error" class="error hidden"></div>
+
+    <div class="tabs">
+      <button id="tab-members" class="active">Members</button>
+      <button id="tab-usage">Usage</button>
+    </div>
+
+    <div id="members-view">
+      <div class="card">
+        <h2>Add a member</h2>
+        <form class="entry-form" id="add-form">
+          <div><label>id (slug)</label><input type="text" id="add-id" placeholder="e.g. jsmith" required></div>
+          <div><label>Name</label><input type="text" id="add-name" required></div>
+          <div><label>Email</label><input type="email" id="add-email" required></div>
+          <div><label>Role</label><input type="text" id="add-role" value="team_member"></div>
+          <div class="full"><label><input type="checkbox" id="add-is-owner" style="width:auto;"> Owner access (rarely needed — only for Todd's own additional entries)</label></div>
+          <div class="full"><button type="submit">Add member</button> <span id="add-status" class="muted"></span></div>
+        </form>
+        <div id="add-token-reveal" class="hidden">
+          <p class="muted" style="margin-top:12px;">Token (shown once, not stored anywhere in plaintext — give it to them directly):</p>
+          <div class="token-reveal" id="add-token-value"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Members</h2>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Name</th><th>id</th><th>Email</th><th>Status</th><th>Plan</th><th>Requests</th><th>Last seen</th><th></th></tr></thead>
+            <tbody id="members-body"></tbody>
+          </table>
+        </div>
+        <p class="muted">Lost an individual's token? Use "Rotate key" on their row above. To rotate everyone's token at once (e.g. after a suspected leak, or routine hygiene) — every current token stops working immediately and you'll need to redistribute a new one to each person.</p>
+        <button class="danger" id="rotate-all-btn">Rotate ALL keys</button>
+        <div id="rotate-all-reveal" class="hidden">
+          <p class="muted" style="margin-top:12px;">New tokens (shown once each, not stored anywhere in plaintext — give each one to its owner directly):</p>
+          <div id="rotate-all-tokens"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="usage-view" class="hidden">
+      <div class="card">
+        <h2>Usage by member</h2>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Member</th><th>Requests</th><th>Last seen</th><th>Top routes used</th></tr></thead>
+            <tbody id="usage-body"></tbody>
+          </table>
+        </div>
+        <p class="muted">"Unauthenticated — page loads" is just the public page being opened in a browser (the token only attaches to actual API calls, so this is expected traffic, not a security signal). "Unauthenticated — rejected API calls" is the one worth watching: a real API call that failed to authenticate.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+const state = { token: localStorage.getItem('rbb_team_token') || '' };
+
+function api(path, opts) {
+  opts = opts || {};
+  opts.headers = Object.assign({ 'Authorization': 'Bearer ' + state.token }, opts.headers || {});
+  if (opts.body && typeof opts.body !== 'string') {
+    opts.headers['Content-Type'] = 'application/json';
+    opts.body = JSON.stringify(opts.body);
+  }
+  return fetch(path, opts).then(async (r) => {
+    if (r.status === 401 || r.status === 403) {
+      localStorage.removeItem('rbb_team_token');
+      state.token = '';
+      showTokenScreen(r.status === 403 ? 'Owner access required.' : 'Your token is invalid, revoked, or suspended.');
+      throw new Error('unauthorized');
+    }
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(data.detail || ('HTTP ' + r.status));
+    return data;
+  });
+}
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+
+function showTokenScreen(err) {
+  document.getElementById('token-screen').classList.remove('hidden');
+  document.getElementById('app-screen').classList.add('hidden');
+  const e = document.getElementById('token-error');
+  if (err) { e.textContent = err; e.classList.remove('hidden'); } else { e.classList.add('hidden'); }
+}
+
+function showAppScreen() {
+  document.getElementById('token-screen').classList.add('hidden');
+  document.getElementById('app-screen').classList.remove('hidden');
+}
+
+document.getElementById('token-submit').addEventListener('click', () => {
+  const val = document.getElementById('token-input').value.trim();
+  if (!val) return;
+  localStorage.setItem('rbb_team_token', val);
+  state.token = val;
+  init();
+});
+
+function setError(msg) {
+  const e = document.getElementById('global-error');
+  if (msg) { e.textContent = msg; e.classList.remove('hidden'); } else { e.classList.add('hidden'); }
+}
+
+function statusBadge(m) {
+  if (m.revoked_at) return '<span class="badge badge-revoked">revoked</span>';
+  if (m.suspended_at) return '<span class="badge badge-suspended">suspended</span>';
+  return '<span class="badge badge-active">active</span>';
+}
+
+function memberRowHtml(m) {
+  const isRevoked = !!m.revoked_at;
+  const isSuspended = !!m.suspended_at;
+  return `<tr>
+    <td>${esc(m.name)}${m.is_owner ? ' <span class="muted">(owner)</span>' : ''}</td>
+    <td>${esc(m.id)}</td>
+    <td>${esc(m.email || '')}</td>
+    <td>${statusBadge(m)}</td>
+    <td>${esc(m.plan || '')}</td>
+    <td>${m.request_count ?? 0}</td>
+    <td>${esc(m.last_seen || 'never')}</td>
+    <td>
+      ${isRevoked ? '' : (isSuspended
+        ? `<button class="secondary" data-action="unsuspend" data-id="${esc(m.id)}">Unsuspend</button>`
+        : `<button class="secondary" data-action="suspend" data-id="${esc(m.id)}">Suspend</button>`)}
+      ${isRevoked ? '' : `<button class="danger" data-action="revoke" data-id="${esc(m.id)}">Revoke</button>
+      <button class="secondary" data-action="rotate" data-id="${esc(m.id)}">Rotate key</button>`}
+    </td>
+  </tr>`;
+}
+
+function loadMembers() {
+  const body = document.getElementById('members-body');
+  api('/api/admin/members').then((data) => {
+    setError(null);
+    body.innerHTML = (data.members || []).map(memberRowHtml).join('') || '<tr><td colspan="8" class="muted">No members yet.</td></tr>';
+    body.querySelectorAll('button[data-action]').forEach((btn) => {
+      btn.addEventListener('click', () => handleMemberAction(btn.dataset.action, btn.dataset.id));
+    });
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+function handleMemberAction(action, id) {
+  if (action === 'revoke' && !confirm(`Revoke '${id}'? This cannot be undone -- they would need a brand new key.`)) return;
+  if (action === 'rotate' && !confirm(`Rotate the key for '${id}'? Their current key stops working immediately.`)) return;
+  api(`/api/admin/members/${encodeURIComponent(id)}/${action}`, { method: 'POST' }).then((res) => {
+    if (res.token) {
+      alert(`New token for '${id}' (shown once):\n\n${res.token}\n\nGive this to them directly.`);
+    }
+    loadMembers();
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+document.getElementById('rotate-all-btn').addEventListener('click', () => {
+  if (!confirm('Rotate every member’s key at once? Every current token, including your own, stops working immediately. You will need to redistribute a new token to each person, yourself included.')) return;
+  const reveal = document.getElementById('rotate-all-reveal');
+  const list = document.getElementById('rotate-all-tokens');
+  reveal.classList.add('hidden');
+  api('/api/admin/members/rotate-all', { method: 'POST' }).then((res) => {
+    const tokens = res.tokens || {};
+    list.innerHTML = Object.entries(tokens).map(([id, token]) =>
+      `<p class="muted" style="margin:10px 0 2px;">${esc(id)}</p><div class="token-reveal">${esc(token)}</div>`
+    ).join('') || '<p class="muted">No active members to rotate.</p>';
+    reveal.classList.remove('hidden');
+    // Your own key (whichever member id you're logged in as) just
+    // stopped working too -- state.token still holds the now-dead old
+    // value, so every subsequent api() call would 401 and bounce to the
+    // token screen. Swap in the fresh one for your own id automatically
+    // so this session keeps working without forcing a re-login.
+    if (state.memberId && tokens[state.memberId]) {
+      state.token = tokens[state.memberId];
+      localStorage.setItem('rbb_team_token', state.token);
+    }
+    loadMembers();
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+});
+
+document.getElementById('add-form').addEventListener('submit', (ev) => {
+  ev.preventDefault();
+  const status = document.getElementById('add-status');
+  const reveal = document.getElementById('add-token-reveal');
+  reveal.classList.add('hidden');
+  const body = {
+    id: document.getElementById('add-id').value.trim(),
+    name: document.getElementById('add-name').value.trim(),
+    email: document.getElementById('add-email').value.trim(),
+    role: document.getElementById('add-role').value.trim() || 'team_member',
+    is_owner: document.getElementById('add-is-owner').checked,
+  };
+  status.textContent = 'Adding...';
+  api('/api/admin/members', { method: 'POST', body }).then((res) => {
+    status.textContent = 'Added.';
+    document.getElementById('add-token-value').textContent = res.token;
+    reveal.classList.remove('hidden');
+    ev.target.reset();
+    loadMembers();
+  }).catch((e) => { if (e.message !== 'unauthorized') status.textContent = 'Error: ' + e.message; });
+});
+
+// "unknown:page_load" / "unknown:rejected_api_attempt" (2026-09-30) --
+// synthetic keys team_portal_usage_log.summarize_by_member() uses to
+// split what used to be one flat "unknown" bucket. Real member ids pass
+// through unchanged.
+const USAGE_KEY_LABELS = {
+  'unknown:page_load': 'Unauthenticated — page loads',
+  'unknown:rejected_api_attempt': 'Unauthenticated — rejected API calls',
+};
+
+function loadUsage() {
+  const body = document.getElementById('usage-body');
+  api('/api/admin/usage').then((data) => {
+    const routesByMember = data.routes_by_member || {};
+    const rows = Object.entries(data.summary || {}).sort((a, b) => b[1].request_count - a[1].request_count);
+    body.innerHTML = rows.map(([id, s]) => {
+      const routes = routesByMember[id] || [];
+      const routesText = routes.length
+        ? routes.map((r) => `${esc(r.route_template)} (${r.count})`).join(', ')
+        : (id.startsWith('unknown:') ? '' : '<span class="muted">no /api/ calls yet</span>');
+      return `<tr>
+        <td>${esc(USAGE_KEY_LABELS[id] || id)}</td><td>${s.request_count}</td><td>${esc(s.last_seen || 'never')}</td>
+        <td>${routesText}</td>
+      </tr>`;
+    }).join('') || '<tr><td colspan="4" class="muted">No usage recorded yet.</td></tr>';
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+document.getElementById('tab-members').addEventListener('click', () => {
+  document.getElementById('tab-members').classList.add('active');
+  document.getElementById('tab-usage').classList.remove('active');
+  document.getElementById('members-view').classList.remove('hidden');
+  document.getElementById('usage-view').classList.add('hidden');
+});
+document.getElementById('tab-usage').addEventListener('click', () => {
+  document.getElementById('tab-usage').classList.add('active');
+  document.getElementById('tab-members').classList.remove('active');
+  document.getElementById('usage-view').classList.remove('hidden');
+  document.getElementById('members-view').classList.add('hidden');
+  loadUsage();
+});
+
+function init() {
+  if (!state.token) { showTokenScreen(); return; }
+  showAppScreen();
+  api('/api/me').then((member) => {
+    if (!member.is_owner) { showTokenScreen('Owner access required.'); return; }
+    state.memberId = member.id;
+    document.getElementById('whoami').textContent = member.name + ' (owner)';
+    loadMembers();
+  }).catch(() => {});
+}
+init();
+</script>
+</body>
+</html>

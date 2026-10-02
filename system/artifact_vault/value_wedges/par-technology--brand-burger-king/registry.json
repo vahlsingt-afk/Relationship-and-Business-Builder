@@ -1,0 +1,13 @@
+{
+  "subject_id": "subject-par-technology--brand-burger-king",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-28T14:23:30Z",
+      "generated_for": "todd",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/par-technology--brand-burger-king/current/PAR-Technology-vs-Genius-Burger-King_Value-Wedge.json",
+      "superseded": false
+    }
+  ]
+}

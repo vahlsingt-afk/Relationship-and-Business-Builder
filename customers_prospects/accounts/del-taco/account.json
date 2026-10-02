@@ -1,0 +1,160 @@
+{
+  "account_id": "acct-del-taco",
+  "account_slug": "del-taco",
+  "display_name": "Del Taco",
+  "aliases": [
+    "Yadav Enterprises"
+  ],
+  "portfolio_status": "active",
+  "owners": [
+    {
+      "name": "Maggie Lenhart",
+      "role": "Worldpay relationship owner"
+    },
+    {
+      "name": "Todd Vahlsing",
+      "role": "Genius expansion owner"
+    }
+  ],
+  "executive_summary": "Del Taco is a Yadav Enterprises-owned, predominantly franchised Mexican QSR executing an 18-month post-acquisition turnaround called Project Sunrise. At fiscal year-end September 28, 2025, the inherited estate comprised 576 restaurants—132 company-operated and 444 franchised—with $918.8 million in systemwide sales. The operating baseline was pressured: system same-store sales declined 3.7%, company-store transactions declined 6.9%, and restaurant-level margin was 11.1%.\n\nYadav's leadership reset and Project Sunrise create an active transformation agenda centered on unit-level execution, cost optimization, consistent food quality, value, guest trust, and modernization of systems and processes. Nick Hulayew reported on September 8 that Del Taco is reviewing the full technology stack, including payments, digital menu boards, POS hardware, and POS software. This expands the potential motion beyond a DMB-only wedge, although scope, timing, budget, and decision authority still require direct confirmation.\n\nWorldpay's contract extension was signed September 3, 2026 after an approximately nine-month process. Maggie Lenhart owns the Worldpay relationship, Todd Vahlsing owns the Genius expansion motion, and Nick has a separate relationship path through Daniel Mears, a reported Del Taco IT director whom Nick invited to Genius World. Nick agreed to reconnect with Daniel and introduce Todd. Dean, reported by Nick as Yadav's CTO and a Genius advisory-board member, is described as a strong Genius champion, but his actual decision authority requires validation.\n\nThe recommended posture is relationship-led and discovery-first. Coordinate Maggie's Worldpay access with Nick's Daniel Mears relationship, qualify the comprehensive review, and position hardware reuse as a capital-efficient differentiator. Treat the reported Anil Yadav–Qu investment relationship as an unconfirmed competitive risk, not an established fact.",
+  "current_business_situation": "Del Taco entered Yadav Enterprises ownership on December 22, 2025 following a sale by Jack in the Box valued at approximately $119 million after customary adjustments. The inherited operating base comprised 576 restaurants at fiscal year-end 2025, with 444 franchised and 132 company-operated locations. Fiscal 2025 systemwide sales were $918.8 million, while system same-store sales declined 3.7%, company-store transactions declined 6.9%, and restaurant-level margin was 11.1%. Fourteen restaurants opened while 32 closed.\n\nManagement is executing Project Sunrise, an 18-month turnaround centered on restoring core food quality and consistency, simplifying operations, strengthening value, rebuilding guest trust, accelerating executable menu innovation, expanding catering, and improving loyalty.\n\nNick Hulayew reported on September 8 that Del Taco is conducting a comprehensive review spanning payments, digital menu boards, POS hardware, and POS software. Nick previously invited Daniel Mears to Genius World and met him there; he agreed to reconnect with Daniel and introduce Todd. The exact review stage, governance, budget, requirements, and timetable remain unconfirmed.\n\nInternal account history captured September 8 indicates that Del Taco previously evaluated Genius for digital menu boards while under Jack in the Box ownership. The latest historical concept was a stopgap configuration retaining static boards with an approximately 32-inch screen in the center. Technical discussions occurred, but the desired system-on-chip approach did not align cleanly with the Genius solution at that time and the initiative went quiet around the divestiture. This is historical context, not evidence that the same requirement remains active.\n\nThe signed Worldpay extension removes the renewal-period coordination constraint and creates a cleaner window for joint discovery. Together, Maggie's Worldpay relationship and Nick's access to Daniel create two coordinated routes into the account, but neither substitutes for direct qualification with current Yadav and Del Taco decision-makers.",
+  "leadership": {
+    "confirmed": [
+      {
+        "name": "Anil Yadav",
+        "title": "Chief Executive Officer, Yadav Enterprises",
+        "relevance": "Senior owner-executive publicly accountable for Del Taco's turnaround and scalability."
+      },
+      {
+        "name": "Ulyses Camacho",
+        "title": "Chief Transformation Officer, Del Taco / Yadav Enterprises",
+        "relevance": "Leads unit execution, cost optimization, systems modernization, and scalable growth."
+      },
+      {
+        "name": "Noah Chillingworth",
+        "title": "Chief Marketing Officer, Del Taco",
+        "relevance": "Owns brand strategy, menu and promotional marketing, digital and loyalty platforms, and guest insight."
+      },
+      {
+        "name": "Ellen Sasada",
+        "title": "Vice President, Supply Chain, Food Safety and Quality Assurance, Del Taco",
+        "relevance": "Relevant to product consistency, vendor performance, operating standards, and supply-chain execution."
+      }
+    ],
+    "reported_unverified": [
+      {
+        "name": "Daniel Mears",
+        "title": "Reported IT director within the Del Taco technology organization",
+        "relevance": "Reported to have attended Genius World. Validate exact title, reporting line, budget authority, and role in the comprehensive technology review."
+      },
+      {
+        "name": "Dean Kimble",
+        "title": "Reported Yadav CTO and Daniel Mears' manager",
+        "relevance": "Reported as a strong Genius advocate and customer advisory-board member. Validate surname spelling, exact title, scope, and decision authority."
+      },
+      {
+        "name": "Dana King",
+        "title": "Former Del Taco technology leader, now reported at Jack in the Box",
+        "relevance": "Reported to have moved to Jack in the Box; confirm current role and residual Del Taco influence."
+      },
+      {
+        "name": "Rob Stevens",
+        "title": "Former Del Taco technology contact; reported Director of Restaurant Technology and Field Service at Jack in the Box",
+        "relevance": "Historical Genius advocate during prior POS and digital-menu-board work. Validate current title and whether he retains any Del Taco influence after the divestiture."
+      }
+    ]
+  },
+  "brand_profile_ref": "brand_profile.json",
+  "opportunities": [],
+  "buying_influences": [
+    {
+      "name": "Daniel Mears",
+      "role": "Reported IT director within Del Taco technology",
+      "status": "direct relationship through Nick Hulayew; access also reported through Maggie; exact authority requires validation"
+    },
+    {
+      "name": "Dean Kimble",
+      "role": "Reported Yadav CTO",
+      "status": "strong Genius champion and advisory-board member; exact title and decision rights require validation"
+    },
+    {
+      "name": "Dan Fideli",
+      "role": "Relationship path",
+      "status": "internal briefing pending"
+    },
+    {
+      "name": "Rob Stevens",
+      "role": "Historical Del Taco technology contact and prior Genius advocate",
+      "status": "now reported at Jack in the Box; residual Del Taco influence requires validation"
+    },
+    {
+      "name": "Nick Hulayew",
+      "role": "Internal relationship path to Daniel Mears and Dean",
+      "status": "agreed to reconnect with Daniel, introduce Todd, and support future calls"
+    }
+  ],
+  "technology_stack": [
+    {
+      "layer": "payments",
+      "vendor": "Worldpay",
+      "status": "contract extension signed",
+      "confidence": "high",
+      "as_of": "2026-09-03"
+    },
+    {
+      "layer": "loyalty / digital ordering",
+      "vendor": "Olo",
+      "status": "reported; modules require validation",
+      "confidence": "medium",
+      "as_of": "2026-09-02"
+    },
+    {
+      "layer": "POS / unified commerce",
+      "vendor": "Qu",
+      "status": "won the prior Jack in the Box RFP; Del Taco adoption was not confirmed and current Yadav intent remains unknown",
+      "confidence": "medium",
+      "as_of": "2026-09-08"
+    },
+    {
+      "layer": "legacy POS / back office",
+      "vendor": "NCR Aloha / MenuLink",
+      "status": "historical; internal account history describes a highly legacy menu structure that was difficult to integrate; current footprint requires validation",
+      "confidence": "medium",
+      "as_of": "2026-09-08"
+    },
+    {
+      "layer": "voice AI",
+      "vendor": "Presto",
+      "status": "historical / discontinued",
+      "confidence": "high",
+      "as_of": "2023-11-01"
+    }
+  ],
+  "commercial_models": [],
+  "strategic_position": {},
+  "qualification": {},
+  "immediate_actions": [
+    "Nick Hulayew to reconnect with Daniel Mears, continue the Genius World conversation, and introduce Todd.",
+    "Maggie to coordinate the Worldpay route to Daniel Mears and align outreach with Nick and Todd.",
+    "Consolidate the relevant Genius World conversation history and participants before customer outreach.",
+    "Use the first discovery conversation to confirm the scope, stage, governance, budget, and timeline of the reported full-stack review across payments, DMB, POS hardware, and POS software.",
+    "Prepare the Pollo Tropical NCR CX-5 retrofit example as proof that Genius can reuse existing hardware and reduce near-term capital requirements.",
+    "Validate Rob Stevens' and Dana King's current roles and determine whether either retains useful influence after the Jack in the Box divestiture.",
+    "Validate the current DMB requirement, whether the former 32-inch stopgap concept remains relevant, the inherited NCR menu architecture, Del Taco's Qu adoption status, and the Nick the Greek Square/Qu configuration.",
+    "Schedule the hardware 201 and P&L walkthrough once the discovery path is confirmed."
+  ],
+  "bottom_line": "Del Taco is now a reported full-stack evaluation rather than only a speculative DMB opening. The signed Worldpay extension, Maggie's trusted access, Nick Hulayew's direct relationship with Daniel Mears, Dean's reported advocacy, Yadav's transformation mandate, and the ability to reuse existing NCR hardware create a credible path. The immediate objective is to convert Nick's promised introduction into a qualified discovery meeting, validate decision authority and budget, and determine whether hardware reuse can overcome the reported Qu relationship and capital constraints. DMB remains a plausible first wedge, but payments, POS hardware, and POS software should now be qualified in parallel.",
+  "latest_review": {
+    "blue_sheet_owner": "Todd Vahlsing",
+    "last_reviewed": null,
+    "review_status": "Shell only - no dedicated source material found; named in loop L-2026-08-10-005 as part of the first Blue Sheet cohort alongside Pollo Campero and Five Guys. Open RBB loop L-2026-07-23-005 (Del Taco / Yadav Enterprises / Maggie) tracks a related follow-up.",
+    "next_formal_review": "On first dedicated brief, meeting, or document"
+  },
+  "template_version": "0.3-seed",
+  "updated_at": "2026-09-11T15:59:57Z",
+  "note": "Intentionally thin: no dedicated account_intelligence brief or deck exists yet (per 2026-08-21 inventory). Populate from meeting captures and shared cross-account documents as real evidence, not by inference.",
+  "engagement_tier": "active_engagement",
+  "account_strategy": "I will pursue Del Taco through one coordinated Worldpay/Genius motion led by Maggie Lenhart's trusted Worldpay relationship and Nick Hulayew's direct path to Daniel Mears; we will not run parallel outreach. The immediate objective is to convert Nick's promised introduction and Maggie's follow-up into a qualified discovery meeting focused on Project Sunrise and the reported comprehensive review of payments, digital menu boards, POS hardware, and POS software. I will lead with business and operating outcomes—execution consistency, faster menu and price changes, reduced capital burden, and practical modernization—not a generic core-POS replacement pitch. I will use the Pollo Tropical NCR CX-5 retrofit as evidence that Genius may reuse existing hardware and reduce near-term capital requirements. DMB is the likely first wedge while I qualify the broader platform opportunity in parallel. Before advancing a commercial position, I need to verify Daniel's and Dean's authority, the review's stage, governance, budget and timetable, the deployed NCR/Qu estate, hardware refresh timing, DMB requirements, menu-data and integration constraints, and the scope of the signed Worldpay extension. I will treat the reported Anil Yadav–Qu investment relationship as unconfirmed competitive intelligence and never present it externally as fact. My next decision gate is whether direct customer discovery confirms a real, funded modernization event with a credible Genius wedge and an accountable buyer; if not, I will narrow, park, or stop the motion.",
+  "account_plan_go_no_go": "go",
+  "account_plan_as_of": "2026-09-11"
+}

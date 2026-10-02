@@ -1,0 +1,51 @@
+# Global Payments Inc. / Genius — Employer Profile
+# Employment Governance Layer (EGL), Phase 1 — see ../../RB_EMPLOYMENT_GOVERNANCE_LAYER.md
+#
+# Hand-encoded from: 2026 Global Payments US Team Member Handbook (Corrected Update),
+# Global Payments Code of Conduct and Ethics (English, 03/05/25), and the
+# Confidentiality, Assignment, and Non-Solicitation Agreement (Rev. 7/2025).
+# Source PDFs kept locally in source_docs/ (git-ignored, not committed — see .gitignore).
+
+employer_id: global-payments
+relationship_type: primary_employer
+company: "Global Payments Inc. / Genius"
+role:
+  title: "Account Executive"
+  responsibilities: "Enterprise restaurant vertical, software-funded payments"
+  products:
+    - "Genius POS"
+  customers:
+    - "enterprise QSR / restaurant operators"
+  industry: "restaurant technology / payments"
+
+start_date: "2026-07-06"
+end_date: null
+status: active
+manager: null
+
+travel_expectations: "Governed by the Corporate Travel Policy and Guidelines (referenced in the Team Member Handbook — source document not yet on file; see policy stub travel-expense-policy.yaml)."
+
+compliance_requirements:
+  - "Annual compliance training (Code of Conduct and Ethics)."
+  - "Anti-money laundering compliance training (mandatory per Code of Conduct)."
+
+security_classification: null
+
+internal_systems:
+  - "EthicsPoint (ethics/compliance hotline: 1-866-384-4277 / www.ethicspoint.com)"
+  - "Workday (e-signature for employment agreements)"
+
+policy_refs:
+  - social-media-policy
+  - code-of-conduct
+  - confidentiality-assignment-non-solicitation
+  - travel-expense-policy   # stub — source policy documents not yet on file, see policy file for detail
+
+notes: |
+  Governance flag (2026-07-06): the Code of Conduct's Artificial Intelligence section
+  (page 21) states "The use of AI for processing or analyzing confidential information
+  is strictly prohibited without explicit authorization from the Legal Department and
+  approval from the AI Governance body." RB itself is an AI system that Todd feeds
+  work-related content into. This has not been resolved and is flagged as an open
+  question in code-of-conduct.yaml's ai_governance_flag field — do not treat RB's own
+  use as pre-cleared.

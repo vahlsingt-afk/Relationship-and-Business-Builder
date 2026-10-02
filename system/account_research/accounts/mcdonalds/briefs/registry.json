@@ -1,0 +1,14 @@
+{
+  "account_id": "acct-mcdonalds",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-08-27T20:27:59Z",
+      "generated_for": "",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-27",
+      "path": "system/account_research/accounts/mcdonalds/briefs/current/Background_Brief.md",
+      "superseded": false
+    }
+  ]
+}

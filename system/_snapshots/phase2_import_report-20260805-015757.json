@@ -1,0 +1,284 @@
+{
+  "phase2_file": "system/research/phase2_backlog_batch_a_evidence_draft_2026-08-04.json",
+  "category": "Backlog Validation (Crunchtime/PAR/R365)",
+  "rows_processed": 41,
+  "rows_skipped": 0,
+  "dry_run": true,
+  "added": 41,
+  "updated": 0,
+  "conflicts_detected": 3,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 41,
+    "enrich_existing_relationship": 0,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 0,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 0,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "PAR Technology",
+        "customer": "Taco Bell",
+        "tech_category": "Back Office/Workforce Management",
+        "relationship_id": "rel-brand-taco-bell-back-office-workforce-management-franchisee-deployment-vendor-par-technology"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Taco Bell",
+        "tech_category": "Back Office/Accounting-Inventory",
+        "relationship_id": "rel-brand-taco-bell-back-office-accounting-inventory-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Panera Bread",
+        "tech_category": "Back Office/Operations Execution",
+        "relationship_id": "rel-brand-panera-bread-back-office-operations-execution-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Jack in the Box",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-jack-in-the-box-inventory-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "Papa Johns",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-papa-johns-pos-system-of-record-pos-vendor-par-technology"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Cracker Barrel",
+        "tech_category": "Back Office/Operations",
+        "relationship_id": "rel-brand-cracker-barrel-back-office-operations-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Five Guys",
+        "tech_category": "Back Office/Accounting",
+        "relationship_id": "rel-brand-five-guys-back-office-accounting-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "Church's Texas Chicken",
+        "tech_category": "Loyalty/CRM",
+        "relationship_id": "rel-brand-church-s-texas-chicken-loyalty-unknown-vendor-par-technology"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Smoothie King",
+        "tech_category": "Back Office/Operations Execution",
+        "relationship_id": "rel-brand-smoothie-king-back-office-operations-execution-pilot-vendor-crunchtime"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Cooper's Hawk Winery & Restaurants",
+        "tech_category": "Back Office/Accounting-Inventory-Workforce",
+        "relationship_id": "rel-brand-cooper-s-hawk-winery-restaurants-back-office-accounting-inventory-workforce-unknown-vendor-restaurant365"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "Jack's Family Restaurants",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-jack-s-family-restaurants-pos-system-of-record-pos-vendor-par-technology"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "MOD Pizza",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-mod-pizza-pos-system-of-record-pos-vendor-par-technology"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "Torchy's Tacos",
+        "tech_category": "Loyalty/CRM",
+        "relationship_id": "rel-brand-torchy-s-tacos-loyalty-unknown-vendor-par-technology"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Black Bear Diner",
+        "tech_category": "Back Office/Inventory-Workforce",
+        "relationship_id": "rel-brand-black-bear-diner-back-office-inventory-workforce-unknown-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Hungry Howie's Pizza",
+        "tech_category": "Back Office/Operations",
+        "relationship_id": "rel-brand-hungry-howie-s-pizza-back-office-operations-unknown-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "California Fish Grill",
+        "tech_category": "Back Office/Accounting-Inventory-Workforce",
+        "relationship_id": "rel-brand-california-fish-grill-back-office-accounting-inventory-workforce-unknown-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Blaze Pizza",
+        "tech_category": "Back Office/Accounting-Inventory-Workforce",
+        "relationship_id": "rel-brand-blaze-pizza-back-office-accounting-inventory-workforce-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "Long John Silver's",
+        "tech_category": "Back Office/Operations Intelligence",
+        "relationship_id": "rel-brand-long-john-silver-s-back-office-operations-intelligence-franchisee-deployment-vendor-par-technology"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Sbarro",
+        "tech_category": "Back Office/Accounting-Inventory-Workforce",
+        "relationship_id": "rel-brand-sbarro-back-office-accounting-inventory-workforce-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Kura Sushi",
+        "tech_category": "Back Office/Operations",
+        "relationship_id": "rel-brand-kura-sushi-back-office-operations-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Village Inn",
+        "tech_category": "Back Office/Accounting-Inventory-Workforce-Payroll/HR",
+        "relationship_id": "rel-brand-village-inn-back-office-accounting-inventory-workforce-payroll-hr-franchisee-deployment-vendor-restaurant365"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "Taco Bueno",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-taco-bueno-pos-system-of-record-pos-vendor-par-technology"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Kona Grill",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-kona-grill-inventory-unknown-vendor-restaurant365"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Gong Cha",
+        "tech_category": "Back Office/Operations Execution",
+        "relationship_id": "rel-brand-gong-cha-back-office-operations-execution-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "Pizza Factory",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-pizza-factory-pos-system-of-record-pos-vendor-par-technology"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Luby's",
+        "tech_category": "Back Office/Accounting-Payroll-HR",
+        "relationship_id": "rel-brand-luby-s-back-office-accounting-payroll-hr-unknown-vendor-restaurant365"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Burgerville",
+        "tech_category": "Back Office/Inventory-Labor",
+        "relationship_id": "rel-brand-burgerville-back-office-inventory-labor-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Snarf's Sandwiches",
+        "tech_category": "Back Office/Accounting-Inventory",
+        "relationship_id": "rel-brand-snarf-s-sandwiches-back-office-accounting-inventory-unknown-vendor-restaurant365"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Le Pain Quotidien",
+        "tech_category": "Back Office/Operations",
+        "relationship_id": "rel-brand-le-pain-quotidien-back-office-operations-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "Mr. Pickle's Sandwich Shop",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-mr-pickle-s-sandwich-shop-pos-system-of-record-pos-vendor-par-technology"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Fuddruckers",
+        "tech_category": "Back Office/Operations",
+        "relationship_id": "rel-brand-fuddruckers-back-office-operations-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "Gold Star Chili",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-gold-star-chili-pos-system-of-record-pos-vendor-par-technology"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Au Bon Pain",
+        "tech_category": "Back Office/Operations",
+        "relationship_id": "rel-brand-au-bon-pain-back-office-operations-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Pressed Juicery",
+        "tech_category": "Back Office/Operations Execution",
+        "relationship_id": "rel-brand-pressed-juicery-back-office-operations-execution-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Boudin Bakery",
+        "tech_category": "Back Office/BI-Team Management",
+        "relationship_id": "rel-brand-boudin-bakery-back-office-bi-team-management-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Matchbox",
+        "tech_category": "Back Office/Accounting-Inventory",
+        "relationship_id": "rel-brand-matchbox-back-office-accounting-inventory-unknown-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Winking Lizard Tavern",
+        "tech_category": "Back Office/Workforce Training",
+        "relationship_id": "rel-brand-winking-lizard-tavern-back-office-workforce-training-unknown-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Luke's Lobster",
+        "tech_category": "Back Office/Accounting-Inventory",
+        "relationship_id": "rel-brand-luke-s-lobster-back-office-accounting-inventory-unknown-vendor-restaurant365"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "Layne's Chicken Fingers",
+        "tech_category": "Loyalty/Ordering",
+        "relationship_id": "rel-brand-layne-s-chicken-fingers-loyalty-ordering-unknown-vendor-par-technology"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "Big Chicken",
+        "tech_category": "POS",
+        "relationship_id": "rel-brand-big-chicken-pos-system-of-record-pos-vendor-par-technology"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Kerbey Lane Cafe",
+        "tech_category": "Back Office/Inventory",
+        "relationship_id": "rel-brand-kerbey-lane-cafe-inventory-unknown-vendor-restaurant365"
+      }
+    ],
+    "enrich_existing_relationship": [],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

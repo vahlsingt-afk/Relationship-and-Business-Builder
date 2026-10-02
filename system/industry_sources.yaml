@@ -1,0 +1,284 @@
+# industry_sources.yaml — RB Industry Intelligence Sources
+# ─────────────────────────────────────────────────────────────────────────────
+# This file configures which external RSS/Atom feeds the RB web scanner fetches
+# each morning. Edit this file to match your industry — no code changes needed.
+#
+# default_domain options
+# ──────────────────────
+#   world_national      — world and national news (always included; centrist mix)
+#   industry_primary    — your core industry coverage (ops, brands, deals, market)
+#   industry_technology — technology within your industry (platforms, vendors, software)
+#   mixed               — classify per article using built-in keyword heuristics
+#
+# confidence options:  high | medium | low
+# max_items:           max headlines to pull per source per cycle (default 20)
+#
+# Notes on world/national sources
+# ────────────────────────────────
+# The three world sources below (Reuters, AP, WSJ) are intentionally balanced:
+#   Reuters — internationally neutral; wire service standard
+#   AP      — US-based; institutional neutrality by editorial charter
+#   WSJ     — center-right; strong business/finance/economic depth
+# If you want additional balance, uncomment NPR Business or Axios below.
+#
+# RSS feed URLs change occasionally. If a source stops returning results,
+# check the publication's website for an updated /feed or /rss.xml path.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# ONBOARDING: If you are not in restaurant technology, clear the sources below
+# and replace with feeds for your industry. See the onboarding template at:
+#   system/onboarding/industry_sources_template.yaml
+# ─────────────────────────────────────────────────────────────────────────────
+
+metadata:
+  industry_name: "Restaurant Technology"
+  primary_label: "Restaurant Industry"
+  technology_label: "Restaurant Technology"
+  world_label: "World & National"
+  version: "2.0"
+
+sources:
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # WORLD & NATIONAL — general news plus business, centrist/balanced reporting
+  # 3-5 sources; aim for ideological balance across the set
+  # ══════════════════════════════════════════════════════════════════════════
+
+  # Reuters and AP RSS feeds are blocked (403/DNS). BBC, NPR, Yahoo Finance confirmed working.
+  # WSJ RSS blocked (403) — replaced with Yahoo Finance and Axios (both open access).
+  #
+  # Prior to 2026-07-06 every source in this section was a *business* feed
+  # (BBC Business, NPR Business, Yahoo Finance, Axios Business), so no amount
+  # of relevance-keyword tuning could surface a genuine politics/war/labor-
+  # market story — those stories were never fetched in the first place. Added
+  # BBC World News and NPR general News as true world/national feeds per
+  # Todd's feedback: "politics, wars, oil prices and consumer spending are
+  # all things that are important."
+  # Last verified: 2026-07-06
+
+  - name: "BBC World News"
+    url: "https://feeds.bbci.co.uk/news/world/rss.xml"
+    default_domain: world_national
+    confidence: high
+    description: "General world news — politics, conflict, diplomacy; not business-filtered"
+    max_items: 8
+
+  - name: "NPR News"
+    url: "https://feeds.npr.org/1001/rss.xml"
+    default_domain: world_national
+    confidence: high
+    description: "US public radio general news — politics, national affairs; not business-filtered"
+    max_items: 8
+
+  - name: "BBC Business"
+    url: "https://feeds.bbci.co.uk/news/business/rss.xml"
+    default_domain: world_national
+    confidence: high
+    description: "International wire standard — BBC, neutral, globally authoritative"
+    max_items: 8
+
+  - name: "NPR Business"
+    url: "https://feeds.npr.org/1006/rss.xml"
+    default_domain: world_national
+    confidence: high
+    description: "US public radio business coverage — institutional neutrality, domestic focus"
+    max_items: 8
+
+  - name: "Yahoo Finance News"
+    url: "https://finance.yahoo.com/news/rssindex"
+    default_domain: world_national
+    confidence: medium
+    description: "Aggregated business and financial news — broad market coverage, center"
+    max_items: 8
+
+  - name: "Axios Business"
+    url: "https://api.axios.com/feed/"
+    default_domain: world_national
+    confidence: medium
+    description: "Concise, centrist business and tech news — macro trends and deals"
+    max_items: 5
+
+  # Previously configured but now blocked (403) or removed (404) — kept as comments
+  # for reference in case URLs recover:
+  # Reuters:  https://feeds.reuters.com/reuters/businessNews  (DNS/blocked)
+  # AP News:  https://rsshub.app/apnews/topics/business       (403)
+  # WSJ:      https://feeds.a.dj.com/rss/RSSBusinessNews.xml  (403)
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # RESTAURANT INDUSTRY — operations, brands, consumer, franchise, market
+  # 5-8 sources covering the full restaurant landscape
+  # ══════════════════════════════════════════════════════════════════════════
+
+  - name: "Restaurant Dive"
+    url: "https://www.restaurantdive.com/feeds/news/"
+    default_domain: mixed
+    confidence: medium
+    description: "Broad coverage — restaurant operations and technology; classified per article"
+    max_items: 15
+
+  - name: "Nation's Restaurant News"
+    url: "https://www.nrn.com/rss.xml"
+    default_domain: industry_primary
+    confidence: medium
+    description: "Premier restaurant trade publication — operators, chains, consumer trends"
+    max_items: 12
+
+  - name: "Restaurant Business Online"
+    url: "https://www.restaurantbusinessonline.com/feed/"
+    default_domain: industry_primary
+    confidence: medium
+    description: "Restaurant industry news — financial performance, brands, menu strategy"
+    max_items: 12
+
+  - name: "RestaurantNews.com"
+    url: "https://www.restaurantnews.com/feed/"
+    default_domain: industry_primary
+    confidence: medium
+    description: "Restaurant industry news and RestaurantData signals — closures, openings, franchise activity, operator pressure"
+    max_items: 12
+
+  # QSR Magazine's /rss.xml 403s (WAF-blocked) -- root cause found 2026-07-17:
+  # the feed moved to /feed (WordPress default). Confirmed working with
+  # same-day articles; re-added below.
+  - name: "QSR Magazine"
+    url: "https://www.qsrmagazine.com/feed"
+    default_domain: industry_primary
+    confidence: medium
+    description: "Quick service restaurant industry"
+    max_items: 12
+
+  - name: "Modern Restaurant Management"
+    url: "https://modernrestaurantmanagement.com/feed/"
+    default_domain: industry_primary
+    confidence: medium
+    description: "Restaurant management and operations — labor, supply chain, profitability"
+    max_items: 10
+
+  - name: "Fast Casual"
+    url: "https://www.fastcasual.com/rss/"
+    default_domain: industry_primary
+    confidence: medium
+    description: "Fast casual segment — brand news, growth, consumer trends"
+    max_items: 10
+
+  # Franchise Times /rss 404s (feed removed). Root cause found 2026-07-17: the
+  # site now serves feeds via a search-based URL its own homepage links to,
+  # but the #topstory-tagged query returns zero items most of the time (a
+  # working, empty feed rather than a permanent 404 — not worth activating
+  # for zero current benefit). Food Business News 403 blocked.
+  # - name: "Franchise Times" (url: https://www.franchisetimes.com/search/?f=rss&t=article&l=50&s=start_time&sd=desc&k[]=%23topstory — works but empty)
+  # - name: "Food Business News" (url: https://www.foodbusinessnews.net/rss/news — 403 blocked)
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # RESTAURANT TECHNOLOGY — POS, payments, kiosk, delivery platforms, software
+  # 3-5 sources focused on tech vendors and deployments
+  # ══════════════════════════════════════════════════════════════════════════
+
+  - name: "Restaurant Technology News"
+    url: "https://restauranttechnologynews.com/feed/"
+    default_domain: industry_technology
+    confidence: medium
+    description: "Restaurant tech — POS, kiosk, ordering, loyalty, kitchen technology"
+    max_items: 15
+
+  - name: "Digital Transactions"
+    url: "https://www.digitaltransactions.net/feed/"
+    default_domain: industry_technology
+    confidence: medium
+    description: "Payments, acquiring, merchant technology, fraud, POS, and card-network developments"
+    max_items: 15
+
+  - name: "Food On Demand"
+    url: "https://foodondemand.com/feed/"
+    default_domain: industry_technology
+    confidence: medium
+    description: "Restaurant delivery, digital ordering, catering, automation, and off-premises technology"
+    max_items: 12
+
+  - name: "QSR Web"
+    url: "https://www.qsrweb.com/rss/"
+    default_domain: mixed
+    confidence: medium
+    description: "QSR operations, kiosks, digital ordering, payments, and restaurant technology"
+    max_items: 12
+
+  - name: "FSR Magazine"
+    url: "https://www.fsrmagazine.com/feed/"
+    default_domain: industry_primary
+    confidence: medium
+    description: "Full-service restaurant operations, growth, consumer trends, and technology"
+    max_items: 10
+
+  # Hospitality Technology 403 blocked; PYMNTS restaurant feed 404 removed.
+  # Replaced with Fast Casual (confirmed working) for restaurant tech/ops coverage.
+  # - name: "Hospitality Technology" (url: https://hospitalitytech.com/rss.xml — 403)
+  # - name: "PYMNTS Restaurant" (url: https://www.pymnts.com/...feed/ — 404)
+
+  # Optional technology sources
+  #
+  # - name: "Retail Dive (Payments & Tech)"
+  #   url: "https://www.retaildive.com/feeds/news/"
+  #   default_domain: industry_technology
+  #   confidence: medium
+  #   description: "Retail and commerce technology with restaurant adjacency"
+  #   max_items: 8
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # SIGNAL FEEDS (RB-9.65) — broad streams, filtered via entity-watchlist
+  # matching in detect_entities(). These are noisy on their own but classify_*
+  # + entity matching surfaces only items mentioning the 100+ watchlist
+  # entities (M&A, exec changes, funding) — used for watchlist_intelligence.
+  # ══════════════════════════════════════════════════════════════════════════
+
+  - name: "SEC EDGAR Recent 8-K Filings"
+    url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=8-K&dateb=&owner=include&count=100&output=atom"
+    default_domain: mixed
+    confidence: high
+    description: "All public-company 8-K filings (material events: M&A, exec changes, earnings) — filtered to watchlist entities by entity matching"
+    max_items: 20
+
+  # Free primary regulatory/security sources. These are classified per item
+  # and still pass RB's entity/relevance gates before reaching the brief.
+  - name: "CFPB Newsroom"
+    url: "https://www.consumerfinance.gov/about-us/newsroom/feed/"
+    default_domain: mixed
+    confidence: high
+    description: "Official consumer-finance rules, enforcement, digital-payments, fee, and data-policy announcements"
+    max_items: 12
+
+  - name: "DOJ Antitrust"
+    url: "https://www.justice.gov/news/rss?field_component=376&require_all=0&search_api_language=en&show_public_archived=0&type%5B0%5D=image_gallery&type%5B1%5D=press_release&type%5B2%5D=speech&type%5B3%5D=youtube_video"
+    default_domain: mixed
+    confidence: high
+    description: "Official Antitrust Division cases, merger actions, speeches, and press releases"
+    max_items: 12
+
+  - name: "CISA Cybersecurity Advisories"
+    url: "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+    default_domain: mixed
+    confidence: high
+    description: "Official vulnerability and cybersecurity advisories relevant to payments and restaurant technology"
+    max_items: 12
+
+  - name: "Federal Reserve Press Releases"
+    url: "https://www.federalreserve.gov/feeds/press_all.xml"
+    default_domain: mixed
+    confidence: high
+    description: "Official Federal Reserve payments, banking, enforcement, and monetary-policy announcements"
+    max_items: 10
+
+  - name: "PCI Security Standards Council"
+    url: "https://blog.pcisecuritystandards.org/rss.xml"
+    default_domain: industry_technology
+    confidence: high
+    description: "Official payment-card security standards, guidance, and compliance updates"
+    max_items: 10
+
+  # GlobeNewswire "News about Technology" feed tested 2026-06-09 — parses
+  # cleanly but is dominated by non-US/non-English fintech press releases with
+  # near-zero watchlist-entity overlap. Not added — low signal-to-noise.
+  #
+  # PR Newswire category-specific RSS endpoints (public-company, M&A, tech)
+  # all resolve to the same generic "latest news" feed (verified 2026-06-09,
+  # dominated by law-firm investor-alert spam) — not added. Business Wire
+  # industry RSS returns 403 (blocked). Revisit if PRN fixes category feeds.

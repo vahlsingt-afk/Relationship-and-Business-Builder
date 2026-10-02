@@ -1,0 +1,50 @@
+{
+  "account_id": "acct-little-caesars",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-04T16:18:40Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-04",
+      "path": "system/account_research/accounts/little-caesars/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-04T16:20:55Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-04",
+      "path": "system/account_research/accounts/little-caesars/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-25T16:12:10Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-25",
+      "path": "customers_prospects/accounts/little-caesars/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-09-29T09:19:04Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-29",
+      "path": "customers_prospects/accounts/little-caesars/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 5,
+      "generated_at": "2026-10-01T10:43:09Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-10-01",
+      "path": "customers_prospects/accounts/little-caesars/briefs/current/Background_Brief.md",
+      "superseded": false
+    }
+  ]
+}

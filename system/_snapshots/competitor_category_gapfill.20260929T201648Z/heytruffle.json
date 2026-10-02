@@ -1,0 +1,53 @@
+{
+  "competitor_id": "comp-heytruffle",
+  "competitor_slug": "heytruffle",
+  "display_name": "heytruffle",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:38Z",
+  "latest_cos_commentary": {
+    "headline": "heytruffle (formerly RestoHost) is a newly rebranded, Preface Ventures-backed managed AI phone-concierge service for multi-location restaurant groups, handling reservations, orders, and catering inquiries by phone.",
+    "genius_exposure": "Adjacent to Genius's loyalty_engagement line as a guest-communications/engagement point solution rather than a POS or payments competitor; it does not process payments or run a POS.",
+    "competitive_timing": "Just rebranded and raised new funding (July 2026), signaling an active nationwide expansion push under the new heytruffle name and managed-service positioning.",
+    "sales_response": "Relevant mainly as a point-solution a restaurant group might already use for phone/reservation handling alongside its POS and payments stack; not a substitute for core POS/payments infrastructure.",
+    "risk_and_uncertainty": "Funding amount is undisclosed; only one named customer reference (Rreal Tacos) is publicly available, so broader market traction is unverified.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 119
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 119,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Pricing signals",
+        "Financial / Market Health (amount undisclosed)"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "funding amount (not disclosed in press materials)",
+        "pricing / contract model",
+        "total customer count beyond the single named reference"
+      ]
+    }
+  }
+}

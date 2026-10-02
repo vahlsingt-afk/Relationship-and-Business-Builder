@@ -1,0 +1,331 @@
+## RBB POV — Restaurant Technology Economics, Lifecycle Value & AI
+
+### Core thesis
+
+Restaurant technology should ultimately be judged by **restaurant-level economic and operational outcomes**, not by feature count, vendor ARR, deployments, press-release wins, or theoretical ROI.
+
+Over the last 20–30 years, restaurants have accumulated substantially more technology. The hypothesis RBB should test is:
+
+> **Restaurants are spending more than ever on technology, but restaurant-level profitability has not necessarily improved commensurately.**
+
+This is a hypothesis to test, not a predetermined conclusion. Technology is only one variable among labor, food, occupancy, regulation, delivery commissions, discounting, franchise economics and changing consumer behavior.
+
+The research question is therefore not simply whether technology produces benefits. It is whether the **cumulative economic value created by the technology stack exceeds its cumulative cost**.
+
+### 1. Measure technology against restaurant economics
+
+Nominal technology dollars aren't enough. RBB should measure:
+
+**Annual technology spend / AUV**
+
+and, more importantly:
+
+**Annual technology spend / restaurant-level EBITDA or cash flow**
+
+The EBITDA measure may reveal the real economic severity. A technology stack consuming 1.5% of sales may sound insignificant, but if the restaurant produces a 12% EBITDA margin, that technology expense represents **12.5% of EBITDA**.
+
+Where possible, RBB should track:
+
+**Technology burden = fixed SaaS + required third-party software + network/security + support + HaaS + hardware amortization + digital transaction fees + integrations + other required technology**
+
+Payments processing should initially remain a separate bucket so software economics aren't distorted, while payment-related technology fees should still be identifiable.
+
+### 2. Headline technology fees materially understate the stack
+
+FDD research is already demonstrating that the line called **“Technology Fee” is often not the restaurant's technology cost**.
+
+Required expenses can be scattered across:
+
+- POS subscriptions and support
+- back office
+- loyalty
+- online ordering
+- mobile applications
+- KDS/DMB
+- network/connectivity
+- cybersecurity
+- cellular backup
+- hardware/HaaS
+- hosted services
+- gift-card systems
+- transaction charges
+- delivery integrations
+- software maintenance
+- upgrades and refreshes
+- payments technology
+
+Therefore, **an incomplete stack must never be classified as inexpensive simply because its headline technology fee is low.**
+
+### 3. Technology shifted from CapEx to permanent OpEx
+
+Legacy restaurant technology was predominantly:
+
+**Large upfront hardware/software purchase → long useful life → relatively modest maintenance → eventual replacement**
+
+Modern technology increasingly looks like:
+
+**Lower initial hardware cost → perpetual SaaS + support + HaaS + integrations + network + security + transaction fees + additional modules**
+
+The restaurant never really finishes paying for the system.
+
+Historical analysis should therefore measure:
+
+**Initial CapEx + recurring OpEx + refresh costs = 5/7/10-year TCO**
+
+and compare equivalent technology capabilities across generations.
+
+### 4. Technology-cost inflation includes fee proliferation
+
+Simply comparing the historical and current line called “Technology Fee” will miss much of the story.
+
+A POS subscription might remain relatively stable while restaurants add required expenditures for loyalty, digital ordering, security, networking, analytics, KDS, delivery integration and other services.
+
+RBB should therefore measure both:
+
+**Technology cost inflation**
+
+and
+
+**Required technology line-item proliferation**
+
+A useful historical question is:
+
+> How many recurring technology products/services did the restaurant have to pay for in 2005, 2015 and 2026?
+
+### 5. Technology must be evaluated as a portfolio
+
+Individual vendors frequently justify their product using standalone ROI.
+
+That can be misleading at the restaurant level.
+
+A restaurant may simultaneously have POS, BOH, payments, loyalty, online ordering, mobile, KDS, DMB, workforce, analytics, delivery integrations, security and increasingly AI.
+
+Each vendor may independently claim labor savings, incremental revenue or improved productivity.
+
+The operator's relevant question is:
+
+> **Has the combined technology portfolio generated economic returns greater than the combined technology portfolio's cost?**
+
+This becomes particularly important as AI creates another potential layer of recurring technology expense.
+
+### 6. AI should have to clear a higher economic bar
+
+“AI saves labor” isn't enough.
+
+For an incremental AI product, RBB should ask:
+
+**What existing expense does this replace?**
+
+If it doesn't replace an existing expense:
+
+**What measurable incremental revenue, labor productivity, margin improvement or other economic value does it produce?**
+
+And then:
+
+**Does that benefit materially exceed the AI's fully loaded recurring cost?**
+
+An AI product adding 30 basis points of technology expense needs to produce more than 30 basis points of sustainable economic value.
+
+Otherwise, restaurants have simply added another subscription.
+
+### 7. Productivity gains need to be located
+
+Restaurants now have substantially more automation, data and software than they had decades ago.
+
+If restaurant-level profitability hasn't improved proportionately, RBB should investigate **where the expected productivity gains went**.
+
+Possibilities include:
+
+**cost inflation absorbed them; labor was redeployed rather than eliminated; benefits accrued to guests; benefits accrued to franchisors/vendors rather than restaurant operators; new technology created additional operating complexity; restaurants reinvested savings into additional capabilities; or the predicted productivity gains were overstated.**
+
+This should be researched rather than assumed.
+
+### 8. Human outcomes belong in the ROI equation
+
+Economic ROI isn't the only measure.
+
+Technology should ideally do at least one of three things:
+
+**make/save the restaurant measurable money; make managers/employees' jobs measurably better; or make the guest experience measurably better.**
+
+Automation can improve theoretical productivity while making a restaurant manager's working life worse.
+
+Administrative work can provide managers time away from physically demanding floor responsibilities. Automating those tasks and sending the manager back onto the floor for another two hours may improve labor utilization without improving the manager's quality of life.
+
+Adoption, trust, change-management burden and employee experience therefore belong alongside financial ROI.
+
+### 9. Enterprise technology replacement is usually evolutionary
+
+Large enterprise restaurant brands generally **do not replace their entire technology stack simultaneously**, even when buying from a platform provider.
+
+They migrate in phases:
+
+**POS → payments → BOH → digital → loyalty → additional modules**
+
+Growing/emerging brands may behave differently because they can adopt an integrated stack before substantial legacy infrastructure exists.
+
+Lifecycle research therefore needs to capture **category-by-category migration**, not simply say that a brand “selected Vendor X.”
+
+### 10. Award does not equal deployment
+
+RBB must permanently distinguish:
+
+**authority → approved vendor → mandated vendor → incumbent → award → pilot → rollout → confirmed deployment → penetration → expansion → replacement**
+
+A press release announcing a 4,000-store win does not mean 4,000 restaurants are running the product.
+
+Likewise, corporate approval doesn't establish franchisee adoption.
+
+Penetration data is therefore essential.
+
+### 11. Franchise governance materially changes technology economics
+
+FDD research should distinguish:
+
+**mandated, approved option, recommended, optional, prohibited and unknown.**
+
+A brand may mandate POS while allowing multiple BOH systems. Loyalty and online ordering may be centralized while payments permits alternatives.
+
+The system must also distinguish company, franchise, licensed and partnership locations.
+
+Technology penetration should never be inferred solely from an FDD mandate.
+
+### 12. Franchisee voice is first-class evidence
+
+Corporate and vendor announcements don't tell the entire story.
+
+RBB should actively research:
+
+**franchisee advisory councils, technology committees, large multi-unit franchisees, franchisee publications, litigation, conference panels, podcasts and interviews.**
+
+Particularly valuable signals include:
+
+- implementation difficulty
+- outages
+- poor support
+- forced upgrades
+- unexpected cost
+- integration problems
+- franchisee resistance
+- delayed adoption
+- workarounds
+- abandoned pilots
+- satisfaction with former/current systems
+- technology they were happy to replace
+- technology they resisted initially but ultimately valued
+
+Formal mandate and **field-adoption pressure** should be separate fields.
+
+### 13. Non-switches are valuable
+
+The lifecycle dataset cannot only record successful vendor replacements.
+
+It needs:
+
+**renewals, abandoned pilots, failed deployments, canceled RFPs, corporate approvals that produced little penetration, short-lived systems, reversions to previous vendors and cases where leadership changed but technology didn't.**
+
+These prevent survivorship bias.
+
+### 14. Restaurant TCO and vendor LTV are opposite sides of the relationship
+
+The restaurant evaluates:
+
+**Technology Lifetime Cost / TCO**
+
+The technology provider evaluates:
+
+**Customer Lifetime Value / LTV**
+
+The lifecycle should therefore extend beyond:
+
+**win → deployment**
+
+to:
+
+**win → deployment → adoption → expansion → renewal → contraction → churn → replacement/win-back**
+
+This allows RBB eventually to distinguish vendors that grow primarily through new-logo acquisition from vendors that retain and expand existing customers.
+
+### 15. Wallet share matters
+
+Platform providers increasingly seek more of the restaurant's technology wallet.
+
+The healthy progression is:
+
+**deliver value → earn trust → earn the right to sell additional products**
+
+The unhealthy progression is:
+
+**gain control of a critical system → exploit switching costs → attach products and fees → increase wallet share without proportional customer value**
+
+RBB should eventually calculate:
+
+**Vendor wallet share = annual dollars captured by vendor / restaurant AUV**
+
+and:
+
+**Technology wallet concentration = largest vendor spend / total restaurant technology spend**
+
+Where evidence permits, this should include payments economics.
+
+### 16. Global Payments/Genius makes LTV particularly important
+
+Payments fundamentally changes customer lifetime economics.
+
+For Global Payments/Genius:
+
+**Customer LTV = software + payments + hardware + services + expansion − acquisition − implementation − ongoing support − churn risk**
+
+Payments may represent substantially more lifetime economic value than software.
+
+Therefore, the Worldpay/Genius opportunity shouldn't only be framed as:
+
+**“Which Worldpay customers can buy Genius?”**
+
+It should also ask:
+
+> **Where can Genius technology increase the retention probability, processing volume, wallet penetration and lifetime value of the existing payments relationship?**
+
+Likewise, poor technology or poor support can jeopardize more than software ARR. Losing the technology relationship can eventually place the **payments relationship** at risk.
+
+That means spending additional resources to retain a strategically important technology customer may be economically rational when the full payments LTV is considered.
+
+### 17. Customer success should be measured economically
+
+A retained customer isn't merely a customer that didn't churn.
+
+It is an economic asset whose **remaining lifetime value was preserved**.
+
+Likewise, cross-selling isn't inherently successful because wallet share increased. The customer should also be receiving sufficient incremental value to make the expanded relationship durable.
+
+A useful conceptual comparison is:
+
+**Customer Lifetime Value Extracted**
+
+versus
+
+**Customer Lifetime Value Delivered**
+
+Perfect measurement may be impossible, but RBB can approximate both.
+
+### 18. The long-term RBB research model
+
+Ultimately, RBB should be able to connect:
+
+**Technology stack → technology TCO → AUV → EBITDA/cash flow → labor → transactions → employee experience → guest experience → lifecycle outcomes**
+
+and on the vendor side:
+
+**customer acquisition → deployment → penetration → retention → expansion → wallet share → LTV → churn**
+
+This creates a much more useful restaurant-technology intelligence system than simply maintaining a database of who uses which vendor.
+
+### The overarching question
+
+The research should ultimately help answer:
+
+> **Restaurants have added extraordinary amounts of technology over the last 20 years. Has that cumulative investment made the restaurant materially more profitable, productive, easier to operate, better for employees, or better for guests—and has the value created justified the lifetime cost?**
+
+AI is simply the newest—and potentially largest—test of that question.
+
+This is the POV I would preserve in RBB as the governing framework for the technology lifecycle, unit-economics, AI and vendor-LTV research going forward.

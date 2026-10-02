@@ -1,0 +1,300 @@
+{
+  "_schema_version": "1.0",
+  "interactions": [
+    {
+      "id": "ri-20260925T191302-de2836",
+      "contact_id": "weston-huggins",
+      "entity": {
+        "name": "Weston Huggins",
+        "org": "CEC Entertainment",
+        "role": null
+      },
+      "interaction_date": "2026-09-25",
+      "source_type": "meeting_note",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor — no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [
+        "FSTEC_2026",
+        "restaurant_tech",
+        "conference_contact"
+      ],
+      "who_matters_now_score": 3,
+      "action_ask_detected": false,
+      "entity_resolution_note": null,
+      "source_text_snippet": "Todd Vahlsing met Weston Huggins of CEC Entertainment in person at FSTEC 2026, held September 23-25, 2026. The source is a photograph of the attendee's conference badge in the uploaded FSTech.pdf. No job title, email address, discussion details, commitment, or follow-up request is established by the",
+      "created_at": "2026-09-25T19:13:02.914832+00:00",
+      "claim_status": "confirmed",
+      "persistence_status": "RB recorded",
+      "confirmed_at": "2026-09-25T19:13:14.100360+00:00",
+      "baseline_contact_status": "created"
+    },
+    {
+      "id": "ri-20260925T191332-e60db3",
+      "contact_id": "jason-ross",
+      "entity": {
+        "name": "Jason Ross",
+        "org": "H-E-B",
+        "role": null
+      },
+      "interaction_date": "2026-09-25",
+      "source_type": "meeting_note",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor — no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [
+        "FSTEC_2026",
+        "restaurant_tech",
+        "conference_contact"
+      ],
+      "who_matters_now_score": 3,
+      "action_ask_detected": false,
+      "entity_resolution_note": null,
+      "source_text_snippet": "Todd Vahlsing met Jason Ross of H-E-B in person at FSTEC 2026, held September 23-25, 2026. The source is a photograph of the attendee's conference badge in the uploaded FSTech.pdf. No job title, email address, discussion details, commitment, or follow-up request is established by the badge photo.",
+      "created_at": "2026-09-25T19:13:32.023843+00:00",
+      "claim_status": "confirmed",
+      "persistence_status": "RB recorded",
+      "confirmed_at": "2026-09-25T19:13:32.372671+00:00",
+      "baseline_contact_status": "created"
+    },
+    {
+      "id": "ri-20260925T191334-4b3fc7",
+      "contact_id": "jose-merino",
+      "entity": {
+        "name": "Jose Merino",
+        "org": "Pollo Campero USA",
+        "role": null
+      },
+      "interaction_date": "2026-09-25",
+      "source_type": "meeting_note",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor — no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [
+        "FSTEC_2026",
+        "restaurant_tech",
+        "conference_contact"
+      ],
+      "who_matters_now_score": 3,
+      "action_ask_detected": false,
+      "entity_resolution_note": null,
+      "source_text_snippet": "Todd Vahlsing met Jose Merino of Pollo Campero USA in person at FSTEC 2026, held September 23-25, 2026. The source is a photograph of the attendee's conference badge in the uploaded FSTech.pdf. No job title, email address, discussion details, commitment, or follow-up request is established by the ba",
+      "created_at": "2026-09-25T19:13:34.468851+00:00",
+      "claim_status": "confirmed",
+      "persistence_status": "RB recorded",
+      "confirmed_at": "2026-09-25T19:13:34.823199+00:00",
+      "baseline_contact_status": "created"
+    },
+    {
+      "id": "ri-20260925T191336-a19032",
+      "contact_id": "roberto-morado-jr",
+      "entity": {
+        "name": "Roberto Morado Jr",
+        "org": "Pollo Campero",
+        "role": null
+      },
+      "interaction_date": "2026-09-25",
+      "source_type": "meeting_note",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor — no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [
+        "FSTEC_2026",
+        "restaurant_tech",
+        "conference_contact"
+      ],
+      "who_matters_now_score": 3,
+      "action_ask_detected": false,
+      "entity_resolution_note": null,
+      "source_text_snippet": "Todd Vahlsing met Roberto Morado Jr of Pollo Campero in person at FSTEC 2026, held September 23-25, 2026. The source is a photograph of the attendee's conference badge in the uploaded FSTech.pdf. No job title, email address, discussion details, commitment, or follow-up request is established by the ",
+      "created_at": "2026-09-25T19:13:36.933406+00:00",
+      "claim_status": "confirmed",
+      "persistence_status": "RB recorded",
+      "confirmed_at": "2026-09-25T19:13:37.300700+00:00",
+      "baseline_contact_status": "created"
+    },
+    {
+      "id": "ri-20260925T191339-43964f",
+      "contact_id": "lucie-tuan",
+      "entity": {
+        "name": "Lucie Tuan",
+        "org": "Wingstop Inc",
+        "role": null
+      },
+      "interaction_date": "2026-09-25",
+      "source_type": "meeting_note",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor — no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [
+        "FSTEC_2026",
+        "restaurant_tech",
+        "conference_contact"
+      ],
+      "who_matters_now_score": 3,
+      "action_ask_detected": false,
+      "entity_resolution_note": null,
+      "source_text_snippet": "Todd Vahlsing met Lucie Tuan of Wingstop Inc in person at FSTEC 2026, held September 23-25, 2026. The source is a photograph of the attendee's conference badge in the uploaded FSTech.pdf. No job title, email address, discussion details, commitment, or follow-up request is established by the badge ph",
+      "created_at": "2026-09-25T19:13:39.343269+00:00",
+      "claim_status": "confirmed",
+      "persistence_status": "RB recorded",
+      "confirmed_at": "2026-09-25T19:13:43.063530+00:00"
+    },
+    {
+      "id": "ri-20260925T191343-12eb19",
+      "contact_id": "rich-mcdonald",
+      "entity": {
+        "name": "Rich McDonald",
+        "org": "Glory Global",
+        "role": null
+      },
+      "interaction_date": "2026-09-25",
+      "source_type": "meeting_note",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor — no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [
+        "FSTEC_2026",
+        "restaurant_tech",
+        "conference_contact"
+      ],
+      "who_matters_now_score": 3,
+      "action_ask_detected": false,
+      "entity_resolution_note": null,
+      "source_text_snippet": "Todd Vahlsing met Rich McDonald of Glory Global in person at FSTEC 2026, held September 23-25, 2026. The source is a photograph of the attendee's conference badge in the uploaded FSTech.pdf. No job title, email address, discussion details, commitment, or follow-up request is established by the badge",
+      "created_at": "2026-09-25T19:13:43.523358+00:00",
+      "claim_status": "confirmed",
+      "persistence_status": "RB recorded",
+      "confirmed_at": "2026-09-25T19:13:43.892424+00:00",
+      "baseline_contact_status": "created"
+    },
+    {
+      "id": "ri-20260925T191345-55e69f",
+      "contact_id": "todd-stewart",
+      "entity": {
+        "name": "Todd Stewart",
+        "org": "A&W Restaurants",
+        "role": null
+      },
+      "interaction_date": "2026-09-25",
+      "source_type": "meeting_note",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor — no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [
+        "FSTEC_2026",
+        "restaurant_tech",
+        "conference_contact"
+      ],
+      "who_matters_now_score": 3,
+      "action_ask_detected": false,
+      "entity_resolution_note": null,
+      "source_text_snippet": "Todd Vahlsing met Todd Stewart of A&W Restaurants in person at FSTEC 2026, held September 23-25, 2026. The source is a photograph of the attendee's conference badge in the uploaded FSTech.pdf. No job title, email address, discussion details, commitment, or follow-up request is established by the bad",
+      "created_at": "2026-09-25T19:13:45.994011+00:00",
+      "claim_status": "confirmed",
+      "persistence_status": "RB recorded",
+      "confirmed_at": "2026-09-25T19:13:46.372176+00:00",
+      "baseline_contact_status": "created"
+    },
+    {
+      "id": "ri-20260925T191348-962587",
+      "contact_id": "daniel-leghpage",
+      "entity": {
+        "name": "Daniel Legh-Page",
+        "org": "Torchy's Tacos",
+        "role": null
+      },
+      "interaction_date": "2026-09-25",
+      "source_type": "meeting_note",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor — no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [
+        "FSTEC_2026",
+        "restaurant_tech",
+        "conference_contact"
+      ],
+      "who_matters_now_score": 3,
+      "action_ask_detected": false,
+      "entity_resolution_note": null,
+      "source_text_snippet": "Todd Vahlsing met Daniel Legh-Page of Torchy's Tacos in person at FSTEC 2026, held September 23-25, 2026. The source is a photograph of the attendee's conference badge in the uploaded FSTech.pdf. No job title, email address, discussion details, commitment, or follow-up request is established by the ",
+      "created_at": "2026-09-25T19:13:48.496650+00:00",
+      "claim_status": "confirmed",
+      "persistence_status": "RB recorded",
+      "confirmed_at": "2026-09-25T19:13:48.873870+00:00",
+      "baseline_contact_status": "created"
+    },
+    {
+      "id": "ri-20260925T191350-13902e",
+      "contact_id": "carrick-mollenkamp",
+      "entity": {
+        "name": "Carrick Mollenkamp",
+        "org": "Freestone Grove Partners",
+        "role": null
+      },
+      "interaction_date": "2026-09-25",
+      "source_type": "meeting_note",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor — no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [
+        "FSTEC_2026",
+        "restaurant_tech",
+        "conference_contact"
+      ],
+      "who_matters_now_score": 3,
+      "action_ask_detected": false,
+      "entity_resolution_note": null,
+      "source_text_snippet": "Todd Vahlsing met Carrick Mollenkamp of Freestone Grove Partners in person at FSTEC 2026, held September 23-25, 2026. The source is a photograph of the attendee's conference badge in the uploaded FSTech.pdf. No job title, email address, discussion details, commitment, or follow-up request is establi",
+      "created_at": "2026-09-25T19:13:50.966963+00:00",
+      "claim_status": "confirmed",
+      "persistence_status": "RB recorded",
+      "confirmed_at": "2026-09-25T19:13:51.352590+00:00",
+      "baseline_contact_status": "created"
+    },
+    {
+      "id": "exec-action-2026-09-28-0009",
+      "contact_id": null,
+      "entity": {
+        "name": "self",
+        "org": null,
+        "role": null
+      },
+      "interaction_date": "2026-09-28",
+      "source_type": "executive_declaration",
+      "signal_type": "action_completed",
+      "declaration_text": "I sent Josh Wesolowski the McDonald’s follow-up email requesting time on his calendar within the next couple of weeks.",
+      "trust_delta": 0,
+      "executive_weight": 2,
+      "source_text_snippet": "I sent Josh Wesolowski the McDonald’s follow-up email requesting time on his calendar within the next couple of weeks."
+    }
+  ],
+  "_last_updated": "2026-09-28T00:00:00.000000+00:00"
+}

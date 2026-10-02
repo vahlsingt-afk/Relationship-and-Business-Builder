@@ -1,0 +1,26 @@
+[
+  {
+    "id": "pre-20260704T142144-9163fb",
+    "date": "2026-07-02",
+    "person": "Mary",
+    "event_type": "spiritual_activity",
+    "source_text_snippet": "Mary and I prayed and read the bible together, and we had a date night, and I supported her at her retirement party.",
+    "created_at": "2026-07-04T14:21:44.489208+00:00"
+  },
+  {
+    "id": "pre-20260704T142144-7da07d",
+    "date": "2026-07-02",
+    "person": "Mary",
+    "event_type": "date_night",
+    "source_text_snippet": "Mary and I prayed and read the bible together, and we had a date night, and I supported her at her retirement party.",
+    "created_at": "2026-07-04T14:21:44.489208+00:00"
+  },
+  {
+    "id": "pre-20260704T142144-205ec9",
+    "date": "2026-07-02",
+    "person": "Mary",
+    "event_type": "milestone_support",
+    "source_text_snippet": "Mary and I prayed and read the bible together, and we had a date night, and I supported her at her retirement party.",
+    "created_at": "2026-07-04T14:21:44.489208+00:00"
+  }
+]

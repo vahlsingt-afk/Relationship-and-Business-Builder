@@ -1,0 +1,73 @@
+{
+  "competitor_id": "comp-craftable",
+  "competitor_slug": "craftable",
+  "display_name": "Craftable",
+  "aliases": [],
+  "vendor_entity_id": "vendor-craftable",
+  "primary_category": "inventory",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Upscale/hospitality logos: Tao Group Hospitality, Major Food Group, Kimpton",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:35Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-10-02T09:47:03Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:03Z",
+  "latest_cos_commentary": {
+    "headline": "Unified procure-to-pay and inventory position overlaps Genius Back Office.",
+    "genius_exposure": "Unified procure-to-pay and inventory position overlaps Genius Back Office.",
+    "competitive_timing": "Craftable described its AI-powered procurement, invoices, inventory, accounting and payments suite for multi-unit hospitality in June 2026.",
+    "sales_response": "Compare automated invoice accuracy, recipe costing and accounting close time in named multi-unit accounts.",
+    "risk_and_uncertainty": "Showcase announcement does not establish customer rollout or realized savings.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 33
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 33,
+    "pack_claim_count": 11,
+    "pack_claims_with_url": 7,
+    "pack_claims_inherited_url": 3,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 4,
+      "legacy_claims_need_date_and_current_status_check": 11,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

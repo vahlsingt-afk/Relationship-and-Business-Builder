@@ -1,0 +1,51 @@
+{
+  "competitor_id": "comp-trison",
+  "competitor_slug": "trison",
+  "display_name": "TRISON",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:37Z",
+  "latest_cos_commentary": {
+    "headline": "TRISON is a large, established (30+ years) Spain-based global audiovisual integration and digital signage company with a food & beverage client reference (Marugame Udon) among a primarily retail-focused customer base.",
+    "genius_exposure": "Overlaps with Genius's digital_menu_boards product line on digital signage/content delivery for restaurant and retail environments, rather than POS or payments.",
+    "competitive_timing": "No recent funding, ownership, or restaurant-specific news identified in this research pass.",
+    "sales_response": "Relevant primarily in digital-signage/menu-board discussions rather than POS or payments; TRISON's customer base skews retail rather than restaurant-specific based on sourced material.",
+    "risk_and_uncertainty": "Only one clear restaurant/food-service named customer (Marugame Udon) was identified; avoid characterizing TRISON as a restaurant-industry-focused vendor without further evidence.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 97
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 97,
+    "pack_claim_count": 1,
+    "pack_claims_with_url": 1,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 1,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "leadership/CEO",
+        "financial health",
+        "additional named restaurant customers",
+        "digital menu board-specific product details"
+      ]
+    }
+  }
+}

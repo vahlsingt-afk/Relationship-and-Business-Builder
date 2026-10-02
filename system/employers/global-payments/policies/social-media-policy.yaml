@@ -1,0 +1,68 @@
+# Social Media / Public Statements Policy — Global Payments
+# Extracted from: "2026 Global Payments US Team Member Handbook_Corrected_Update.pdf"
+# Section: "Social media activities" (pp. 56-58) + "Public statements and responses
+# to inquiries regarding Global Payments" (p. 59).
+
+policy_id: social-media-policy
+title: "Global Payments Social Media Guidelines + Public Statements Policy"
+source_document: "2026 Global Payments US Team Member Handbook_Corrected_Update.pdf"
+version: "2026 (Corrected Update)"
+effective_date: null   # not stated in document; handbook is dated 2026 in title only
+superseded_by: null
+extracted_by: assisted   # LLM-drafted from real source text on 2026-07-06/07 — needs Todd's line-by-line review before being treated as fully verified
+last_reviewed: "2026-07-07"
+
+permissions:
+  - "Personal social media use, including personal LinkedIn, is permitted — 'we encourage you to participate in social media from your personal account.'"
+  - "Sharing already-published, official Global Payments social media posts via the platform 'share' feature is permitted, once the official post is live."
+  - "Mentioning that you work at Global Payments is fine (\"Mentioning you work at Global Payments is perfectly okay\")."
+  - "Participating in industry/professional groups (payments industry, area of work) as a subject-matter expert is permitted, provided no proprietary information is shared and no on-behalf-of statements are made."
+  - "Personal blogs on topics unrelated to Global Payments or its clients are permitted."
+
+restrictions:
+  - id: no-speaking-on-behalf-of-company
+    text: "Only approved social media spokespeople may speak or comment 'on behalf of' Global Payments. Team members are not authorized to speak on behalf of Global Payments on social media."
+  - id: no-commenting-on-incidents
+    text: "Team members are not authorized to comment on any incident that impacts Global Payments, our merchants, issuers, partners or cardholders."
+  - id: no-responding-to-comments-about-company
+    text: "Do not respond to comments/criticism about Global Payments on social media unless you are an approved spokesperson — forward to SocialMedia@globalpay.com instead."
+  - id: no-copying-corporate-social-content
+    text: "May not copy or download content, images, or graphics from corporate social media channels and post them on personal channels (share feature only)."
+  - id: no-sharing-intranet-content
+    text: "Company intranet content (announcements, quotes, posts, screenshots) may not be shared on social media without approval from the Internal Communications team."
+  - id: no-sharing-sales-collateral
+    text: "Sales collateral (presentations, infographics, product videos, web banners/display ads) may not be shared on social media without Corporate Communications and Marketing approval."
+  - id: no-personal-blog-about-company
+    text: "May not initiate or maintain a personal blog, social network discussion group, or internet site that discusses or relates to Global Payments business."
+  - id: no-logo-in-personal-profiles
+    text: "Global Payments logo or brand assets may not be used in personal social media profiles."
+  - id: no-client-prospect-discussion
+    text: "May not comment on or discuss client or prospect-related information, including documents, presentations, photos, data, partnerships, contracts, recommendations, or predictions."
+  - id: no-product-information-discussion
+    text: "May not comment on or discuss product information, including sales collateral, release dates, or enhancements."
+  - id: no-legal-financial-discussion
+    text: "May not comment on or discuss legal matters, GPN stock price, financial topics, or predictions of future performance."
+  - id: no-work-email-for-personal-accounts
+    text: "Global Payments email address/password may not be used as login credentials for personal social media accounts."
+  - id: public-statements-require-review
+    text: "Speeches, presentations, papers, articles, press releases, or public statements referencing Global Payments require prior review/approval from Corporate Communications and Community Affairs (plus Corporate Legal), even if not explicitly labeled as company-authorized."
+
+required_processes:
+  - trigger: "public speaking engagement, published article, or paper referencing Global Payments"
+    process: "Approval from Corporate Communications and Community Affairs required prior to submission; review by Corporate Legal team; plan for 10-15 business days review."
+  - trigger: "press/media/analyst/investor inquiry"
+    process: "Do not respond directly. Refer journalist/blogger/analyst/investor inquiries to the appropriate Global Payments spokesperson. Financial inquiries route to investor.relations@globalpay.com or 1.770.829.8478."
+  - trigger: "business partner/vendor requests permission to reference Global Payments in their materials"
+    process: "Must provide proposed content and receive approval from Corporate Communications and Community Affairs before proceeding."
+  - trigger: "new social media account/page using the Global Payments brand"
+    process: "Must be set up and monitored by Corporate Communications and Marketing — no unofficial regional/topic pages."
+
+escalation_rules: []   # no dollar-amount or numeric threshold triggers found in this document; all triggers above are categorical
+
+disclosure_required: true
+notes: |
+  Required disclaimer if speaking "about" (not "on behalf of") Global Payments in any
+  public/online context: "I am an employee of Global Payments. The posts (or views) on
+  this site are my own and do not reflect the positions, strategies or opinions of
+  Global Payments Inc." This applies to LinkedIn, articles, blogs, forums, and any
+  other online interaction referencing the company.

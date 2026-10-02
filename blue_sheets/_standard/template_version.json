@@ -1,0 +1,21 @@
+{
+  "current_version": "0.3",
+  "status": "draft - Phase 0 iteration",
+  "declared_v1_0": false,
+  "v1_0_checklist": [
+    {"item": "Stable IDs for accounts, opportunities, people, actions, and evidence", "status": "done_at_dossier_layer", "note": "IDs exist in account.json/evidence.jsonl/actions.json; not yet written into the workbook cells themselves."},
+    {"item": "Opportunity/workstream scope on every buying influence", "status": "partial", "note": "account.json buying_influences carry per-field scope; the workbook's Blue Sheet tab does not yet show a scope column."},
+    {"item": "Confirmed vs. hypothesis state on role, mode, preference, win, rating", "status": "done_at_dossier_layer", "note": "Field-object status is enforced in account.json; workbook cells do not yet visually distinguish hypothesis vs confirmed."},
+    {"item": "Visible contradiction count and stale-evidence warning", "status": "not_started", "note": "Tracked in contradictions.json/brand_profile.json freshness block; not rendered into the workbook."},
+    {"item": "Last-reviewed and next-review fields", "status": "done", "note": "Present on the Method & Governance tab and in account.json:latest_review."},
+    {"item": "Generated Change Log tab", "status": "not_started", "note": "logs/change_log.jsonl exists at the dossier layer; no workbook tab yet."},
+    {"item": "Rename account-specific tab to reusable Commercial Model", "status": "done", "note": "Confirmed reference file already uses 'Commercial Model', not 'Payments & Pricing'."},
+    {"item": "Define protected cells/formulas and editable cells", "status": "done_at_schema_layer", "note": "See standard_blue_sheet_schema.json per-tab editable_cells notes."},
+    {"item": "Standard validation vocabulary and scoring rubric", "status": "done", "note": "See scoring_rules.json and field_dictionary.md."},
+    {"item": "Template version and migration routine for existing accounts", "status": "not_started", "note": "This file exists; the migration routine (re-applying a new template version without erasing account data) is not yet built."},
+    {"item": "One-page print vs. screen-first decision", "status": "not_started", "note": "Open design decision for Todd per spec Section 20; Presentation View 1/2 tabs suggest screen-first was already the working assumption, but this has not been explicitly confirmed."}
+  ],
+  "history": [
+    {"version": "0.3", "date": "2026-08-21", "change": "Initial schema/field-dictionary/scoring-rules seed derived from the confirmed Pollo Campero reference workbook. 11-tab structure documented; folder contract and Pollo Campero dossier migrated."}
+  ]
+}

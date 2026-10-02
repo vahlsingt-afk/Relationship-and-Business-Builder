@@ -1,0 +1,480 @@
+{
+  "workbook": "outputs/019fb7fc-6359-7272-a00b-0a57f9dd8a55/Restaurant_Tech_Full_1500_With_Canonical_Stack_2026-07-31.xlsx",
+  "sheet": "Vendor Customer Lists",
+  "rows_processed": 73,
+  "dry_run": true,
+  "added": 6,
+  "updated": 59,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 6,
+    "enrich_existing_relationship": 13,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 2,
+    "lifecycle_update": 41,
+    "supersedes_existing_relationship": 3,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 8,
+    "pilot_not_promoted": 0,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Crunchtime",
+        "customer": "54th Street Restaurant & Drafthouse",
+        "tech_category": "Ops Execution",
+        "relationship_id": "rel-brand-54th-street-restaurant-drafthouse-ops-execution-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Chipotle Mexican Grill",
+        "tech_category": "Ops Execution",
+        "relationship_id": "rel-brand-chipotle-mexican-grill-ops-execution-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "Hi Auto",
+        "customer": "Checkers",
+        "tech_category": "Drive-Thru Voice AI",
+        "relationship_id": "rel-brand-checkers-rally-s-drive-thru-ai-pilot-vendor-hi-auto"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Nekter Juice Bar",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-nekter-juice-bar-loyalty-unknown-vendor-olo"
+      },
+      {
+        "vendor": "Oracle",
+        "customer": "Chipotle Mexican Grill",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-chipotle-mexican-grill-pos-system-of-record-pos-vendor-oracle"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "GoTo Foods",
+        "tech_category": "AI & Intelligence",
+        "relationship_id": "rel-brand-goto-foods-ai-intelligence-franchisee-deployment-vendor-qu"
+      }
+    ],
+    "enrich_existing_relationship": [
+      {
+        "vendor": "HP",
+        "customer": "McDonald's",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-mcdonald-s-pos-approved-hardware-vendor-international-approved-hardware-vendor-hp"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Thompson Restaurants",
+        "tech_category": "Loyalty / Marketing",
+        "relationship_id": "rel-brand-thompson-restaurants-loyalty-unknown-reference-only-vendor-olo"
+      },
+      {
+        "vendor": "PAR Punchh",
+        "customer": "El Pollo Loco",
+        "tech_category": "Loyalty / Marketing",
+        "relationship_id": "rel-brand-el-pollo-loco-loyalty-unknown-reference-only-vendor-par-punchh"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "Burger King",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-burger-king-pos-system-of-record-pos-vendor-par-technology"
+      },
+      {
+        "vendor": "PAR Technology",
+        "customer": "McDonald's",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-mcdonald-s-pos-approved-hardware-vendor-domestic-approved-hardware-vendor-par-technology"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Lion's Choice",
+        "tech_category": "Online Ordering / Loyalty",
+        "relationship_id": "rel-brand-lion-s-choice-loyalty-online-ordering-unknown-reference-only-vendor-paytronix"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Dave's Hot Chicken",
+        "tech_category": "KDS",
+        "relationship_id": "rel-brand-dave-s-hot-chicken-kds-unknown-reference-only-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Dave's Hot Chicken",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-dave-s-hot-chicken-pos-system-of-record-pos-logo-or-customer-page-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Dave's Hot Chicken",
+        "tech_category": "Unified Commerce / Guest Experience",
+        "relationship_id": "rel-brand-dave-s-hot-chicken-unified-commerce-guest-experience-unknown-reference-only-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Taco John's",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-taco-john-s-pos-system-of-record-pos-reference-only-vendor-qu"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Bavarian Bierhaus",
+        "tech_category": "Task Management / Ops",
+        "relationship_id": "rel-brand-bavarian-bierhaus-ops-execution-unknown-reference-only-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "BRG Hospitality",
+        "tech_category": "Back Office / Accounting",
+        "relationship_id": "rel-brand-brg-hospitality-back-office-accounting-unknown-reference-only-vendor-restaurant365"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Flower Child",
+        "tech_category": "Loyalty / Digital Ordering",
+        "relationship_id": "rel-brand-flower-child-loyalty-digital-ordering-unknown-reference-only-vendor-thanx"
+      }
+    ],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [
+      {
+        "vendor": "Domino's internal",
+        "customer": "Domino's",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-domino-s-pos-system-of-record-pos-vendor-domino-s-internal"
+      },
+      {
+        "vendor": "NewPOS",
+        "customer": "McDonald's",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-mcdonald-s-pos-system-of-record-pos-vendor-newpos"
+      }
+    ],
+    "lifecycle_update": [
+      {
+        "vendor": "Chick-fil-A internal",
+        "customer": "Chick-fil-A",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-chick-fil-a-pos-system-of-record-pos-vendor-chick-fil-a-internal"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "54th Street Restaurant & Drafthouse",
+        "tech_category": "Ops Execution / Kitchen",
+        "relationship_id": "rel-brand-54th-street-restaurant-drafthouse-ops-execution-unknown-vendor-crunchtime"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Cotton Patch Cafe",
+        "tech_category": "Training / LMS",
+        "relationship_id": "rel-brand-cotton-patch-cafe-training-lms-unknown-logo-or-customer-page-vendor-crunchtime"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Five Guys",
+        "tech_category": "Back Office / Inventory",
+        "relationship_id": "rel-brand-five-guys-inventory-unknown-reference-only-vendor-crunchtime"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Five Guys",
+        "tech_category": "Labor Management",
+        "relationship_id": "rel-brand-five-guys-labor-scheduling-unknown-reference-only-vendor-crunchtime"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Golden Corral",
+        "tech_category": "Training / LMS",
+        "relationship_id": "rel-brand-golden-corral-training-lms-unknown-logo-or-customer-page-vendor-crunchtime"
+      },
+      {
+        "vendor": "Crunchtime",
+        "customer": "Jersey Mike's",
+        "tech_category": "BI / Analytics",
+        "relationship_id": "rel-brand-jersey-mike-s-bi-analytics-unknown-logo-or-customer-page-vendor-crunchtime"
+      },
+      {
+        "vendor": "custom_internal_pos",
+        "customer": "Dutch Bros Coffee",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-dutch-bros-coffee-pos-system-of-record-pos-domestic-drive-thru-vendor-custom-internal-pos"
+      },
+      {
+        "vendor": "custom_internal_pos",
+        "customer": "Panda Express",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-panda-express-pos-system-of-record-pos-domestic-dine-in-drive-thru-vendor-custom-internal-pos"
+      },
+      {
+        "vendor": "MAPS",
+        "customer": "McDonald's",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-mcdonald-s-pos-hardware-reseller-service-provider-domestic-reseller-service-reseller-installation-service-vendor-maps"
+      },
+      {
+        "vendor": "NCR",
+        "customer": "Burger King",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-burger-king-pos-legacy-incumbent-vendor-ncr"
+      },
+      {
+        "vendor": "NCR",
+        "customer": "McDonald's",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-mcdonald-s-pos-approved-hardware-vendor-domestic-approved-hardware-vendor-ncr"
+      },
+      {
+        "vendor": "NCR",
+        "customer": "Taco Bell",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-taco-bell-pos-system-of-record-pos-vendor-ncr"
+      },
+      {
+        "vendor": "NCR",
+        "customer": "Wendy's",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-wendy-s-pos-legacy-incumbent-vendor-ncr"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Five Guys",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-five-guys-online-ordering-unknown-reference-only-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Thompson Restaurants",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-thompson-restaurants-loyalty-unknown-reference-only-vendor-olo"
+      },
+      {
+        "vendor": "Olo",
+        "customer": "Waffle House",
+        "tech_category": "Online Ordering",
+        "relationship_id": "rel-brand-waffle-house-online-ordering-unknown-reference-only-vendor-olo"
+      },
+      {
+        "vendor": "Oracle",
+        "customer": "Jack in the Box",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-jack-in-the-box-pos-system-of-record-pos-domestic-dine-in-drive-thru-vendor-oracle"
+      },
+      {
+        "vendor": "Oracle",
+        "customer": "Shake Shack",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-shake-shack-pos-system-of-record-pos-domestic-dine-in-counter-vendor-oracle"
+      },
+      {
+        "vendor": "Oracle",
+        "customer": "Starbucks",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-starbucks-pos-system-of-record-pos-vendor-oracle"
+      },
+      {
+        "vendor": "Oracle",
+        "customer": "Subway",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-subway-pos-system-of-record-pos-vendor-oracle"
+      },
+      {
+        "vendor": "Panera_internal_digital",
+        "customer": "Panera Bread",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-panera-bread-pos-system-of-record-pos-domestic-dine-in-digital-vendor-panera-internal-digital"
+      },
+      {
+        "vendor": "PAR Punchh",
+        "customer": "El Pollo Loco",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-el-pollo-loco-loyalty-unknown-reference-only-vendor-par-punchh"
+      },
+      {
+        "vendor": "PAR Punchh",
+        "customer": "Genghis Grill",
+        "tech_category": "Loyalty / Mobile",
+        "relationship_id": "rel-brand-genghis-grill-loyalty-mobile-unknown-reference-only-vendor-par-punchh"
+      },
+      {
+        "vendor": "PAR Punchh",
+        "customer": "Mooyah",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-mooyah-loyalty-unknown-reference-only-vendor-par-punchh"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Lion's Choice",
+        "tech_category": "Loyalty / Online Ordering",
+        "relationship_id": "rel-brand-lion-s-choice-loyalty-online-ordering-unknown-reference-only-vendor-paytronix"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Blaze Pizza",
+        "tech_category": "Kiosks / Digital Menus",
+        "relationship_id": "rel-brand-blaze-pizza-kiosks-digital-menus-unknown-logo-or-customer-page-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Blaze Pizza",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-blaze-pizza-pos-system-of-record-pos-logo-or-customer-page-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Golden Chick",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-golden-chick-pos-system-of-record-pos-logo-or-customer-page-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "GoTo Foods",
+        "tech_category": "KDS",
+        "relationship_id": "rel-brand-goto-foods-kds-unknown-reference-only-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "GoTo Foods",
+        "tech_category": "Menu Management",
+        "relationship_id": "rel-brand-goto-foods-menu-management-unknown-reference-only-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "GoTo Foods",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-goto-foods-pos-system-of-record-pos-logo-or-customer-page-vendor-qu"
+      },
+      {
+        "vendor": "Qu",
+        "customer": "Playa Bowls",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-playa-bowls-pos-system-of-record-pos-logo-or-customer-page-vendor-qu"
+      },
+      {
+        "vendor": "Radiant Systems",
+        "customer": "Dunkin'",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-dunkin-pos-legacy-incumbent-vendor-radiant-systems"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Bavarian Bierhaus",
+        "tech_category": "Ops Execution",
+        "relationship_id": "rel-brand-bavarian-bierhaus-ops-execution-unknown-reference-only-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Felipe's Mexican Taqueria",
+        "tech_category": "Back Office / Accounting",
+        "relationship_id": "rel-brand-felipe-s-mexican-taqueria-back-office-accounting-unknown-reference-only-vendor-restaurant365"
+      },
+      {
+        "vendor": "Restaurant365",
+        "customer": "Taco John's",
+        "tech_category": "Back Office / Accounting",
+        "relationship_id": "rel-brand-taco-john-s-back-office-accounting-unknown-reference-only-vendor-restaurant365"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Pokeworks",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-pokeworks-loyalty-unknown-logo-or-customer-page-vendor-thanx"
+      },
+      {
+        "vendor": "Toast",
+        "customer": "Maman",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-maman-pos-system-of-record-pos-reference-only-vendor-toast"
+      },
+      {
+        "vendor": "Toast",
+        "customer": "Via 313",
+        "tech_category": "KDS",
+        "relationship_id": "rel-brand-via-313-kds-unknown-reference-only-vendor-toast"
+      },
+      {
+        "vendor": "Toast",
+        "customer": "Via 313",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-via-313-pos-system-of-record-pos-reference-only-vendor-toast"
+      }
+    ],
+    "supersedes_existing_relationship": [
+      {
+        "vendor": "Crunchtime",
+        "customer": "City Barbeque",
+        "tech_category": "Back Office / Inventory",
+        "relationship_id": "rel-brand-city-barbeque-inventory-unknown-reference-only-vendor-crunchtime"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Smashburger",
+        "tech_category": "Loyalty / Online Ordering",
+        "relationship_id": "rel-brand-smashburger-loyalty-online-ordering-unknown-reference-only-vendor-paytronix"
+      },
+      {
+        "vendor": "Presto",
+        "customer": "Checkers",
+        "tech_category": "Drive-Thru Voice AI",
+        "relationship_id": "rel-brand-checkers-rally-s-drive-thru-ai-unknown-vendor-presto"
+      }
+    ],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [
+      {
+        "vendor": "Acrelec",
+        "customer": "McDonald's",
+        "tech_category": "Drive-Thru Timers",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Coates",
+        "customer": "McDonald's",
+        "tech_category": "Digital Menu Boards",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Fiserv",
+        "customer": "McDonald's",
+        "tech_category": "Payments",
+        "relationship_id": null
+      },
+      {
+        "vendor": "McDonald's (Proprietary)",
+        "customer": "McDonald's",
+        "tech_category": "POS Software",
+        "relationship_id": null
+      },
+      {
+        "vendor": "NCR",
+        "customer": "McDonald's",
+        "tech_category": "POS Hardware",
+        "relationship_id": null
+      },
+      {
+        "vendor": "PAR",
+        "customer": "McDonald's",
+        "tech_category": "Drive-Thru Timers",
+        "relationship_id": null
+      },
+      {
+        "vendor": "PAR",
+        "customer": "McDonald's",
+        "tech_category": "POS Hardware",
+        "relationship_id": null
+      },
+      {
+        "vendor": "QSRSoft",
+        "customer": "McDonald's",
+        "tech_category": "Back Office",
+        "relationship_id": null
+      }
+    ],
+    "pilot_not_promoted": [],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

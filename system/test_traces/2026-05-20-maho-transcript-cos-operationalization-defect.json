@@ -1,0 +1,100 @@
+{
+  "title": "Maho transcript CoS operationalization defect",
+  "trace_id": "T-2026-05-20-001",
+  "trace_type": "field_defect",
+  "source": "ChatGPT / transcript analysis summary",
+  "operator": "Todd",
+  "captured_at": "2026-05-20T12:00:00-05:00",
+  "summary": "Todd tested RB behavior after analyzing two Maho strategic calls: April 22 introductory/background discussion and April 29 product walkthrough/strategic discussion. The assistant gave high-quality advisory synthesis and Tuesday meeting prep, but did not render canonical RB operational output: no persistence proof, no relationship mutation confirmation, no loop creation confirmation, no daily brief injection confirmation, and no traceable CoS action report.",
+  "observed_issue": "Good advice was produced without proving RB captured, persisted, scheduled, or operationalized the relationship intelligence.",
+  "steps": [
+    {
+      "step": 1,
+      "label": "April 22 introductory/background call analyzed",
+      "user_prompt": "Analyze April 22 Maho call covering Todd's restaurant operations and enterprise tech background, McDonald's deployments, PAR leadership, franchise/franchisor adoption complexity, enterprise customization, AI coding impact on POS, industry consolidation, custom platform opportunities, education-led GTM, and Maho positioning.",
+      "assistant_response": "Assistant synthesized the call and recognized strong strategic validation, philosophical alignment, requested guidance around market approach, and rapid movement into strategic advisory territory.",
+      "intended_operation": "capture_ri_from_transcript",
+      "endpoint": null,
+      "response_status": null,
+      "response_summary": "Useful advisory analysis; no confirmed RB persistence, relationship mutation, active-thread update, or loop creation was shown.",
+      "observed_issue": "The call was early-stage strategic evaluation, not casual networking, but RB did not render an operational capture report."
+    },
+    {
+      "step": 2,
+      "label": "April 29 product walkthrough/strategic call analyzed",
+      "user_prompt": "Analyze April 29 Maho product walkthrough covering franchise architecture, inventory/recipe management, loyalty, KDS/POS synchronization, enterprise scalability, onboarding/service model, customization strategy, GTM packaging risk, and operator adoption concerns.",
+      "assistant_response": "Assistant correctly identified substantial strategic feedback, including flexibility vs clarity, onboarding/service monetization, enterprise positioning, education-driven GTM, and Ish's explicit request: 'We should have one call just focused on you.'",
+      "intended_operation": "capture_ri_from_transcript",
+      "endpoint": null,
+      "response_status": null,
+      "response_summary": "Useful strategic interpretation; no confirmed RI event, opportunity-stage update, relationship-risk tracking, or future meeting prep loop was shown.",
+      "observed_issue": "The assistant recognized the signal but did not prove operational continuity."
+    },
+    {
+      "step": 3,
+      "label": "Tuesday meeting prep generated",
+      "user_prompt": "Prepare for Tuesday Maho strategy/background discussion after Todd responded to Ish by email and the meeting was booked.",
+      "assistant_response": "Assistant prepared strong Tuesday framing: do not restart background, position Todd as operator-fluent enterprise strategist/adoption and GTM translator/franchise complexity expert, watch for advisory/partnership/executive interest, and protect against free consulting drift.",
+      "intended_operation": "prepare_meeting_and_persist_next_actions",
+      "endpoint": null,
+      "response_status": null,
+      "response_summary": "Advisory quality was high, but no Tuesday prep loop creation, daily brief injection, or persistence status was confirmed.",
+      "observed_issue": "RB behaved like a smart advisor instead of an auditable Chief-of-Staff operating system."
+    },
+    {
+      "step": 4,
+      "label": "Expected canonical RB output",
+      "assistant_response": "Expected canonical output should have said: 'Relationship intelligence detected — RB recorded the following...' and then rendered entity updates, relationship state, opportunity stage, signal strength, risk, recommended posture, next actions, persistence state, loop state, daily brief injection, and traceability.",
+      "intended_operation": "canonical_operational_output",
+      "endpoint": null,
+      "response_status": null,
+      "response_summary": "Expected writes or proposed writes: update Ish Singh / Maho relationship state to active strategic opportunity, track advisory/consulting risk, create high-priority Tuesday prep loop, inject Tuesday Maho meeting prep into daily brief, and record persistence status.",
+      "observed_issue": "RB must separate advice from system action; vague language like 'should be marked', 'would likely', and 'could be' is not acceptable without persistence status."
+    }
+  ],
+  "defects": [
+    {
+      "id": "COS-OPERATIONALIZATION-001",
+      "title": "High-quality advice did not become RB system action",
+      "severity": "critical",
+      "description": "The assistant synthesized the Maho calls well but did not prove that RB persisted relationship intelligence, updated opportunity state, created loops, or injected future prep into the daily brief.",
+      "recommendation": "Every RI-bearing transcript or strategic call analysis must end with an explicit RB operational report: analysis_only, proposed_write_pending_confirmation, or persisted."
+    },
+    {
+      "id": "PERSISTENCE-PROOF-001",
+      "title": "No persistence status or mutation proof rendered",
+      "severity": "critical",
+      "description": "The response did not state whether Ish/Maho relationship intelligence was recorded, proposed, skipped, or blocked.",
+      "recommendation": "Mandate 'Relationship intelligence detected — RB recorded/proposed/skipped the following' with persistence status, affected entities, source refs, and post-validation state."
+    },
+    {
+      "id": "LOOP-CREATION-001",
+      "title": "Future meeting prep loop not confirmed",
+      "severity": "high",
+      "description": "The booked Tuesday Maho meeting should have created or confirmed an open high-priority prep loop with dependencies around positioning narrative, opportunity qualification, and free-consulting boundary.",
+      "recommendation": "Transcript/meeting analysis should propose or create a dated prep loop for future commitments and meetings."
+    },
+    {
+      "id": "DAILY-BRIEF-INJECTION-001",
+      "title": "Tuesday daily brief injection was not confirmed",
+      "severity": "high",
+      "description": "The Maho meeting should have been queued for Tuesday's daily brief with relationship status, objective, expected takeaways, risks, desired posture, and commercial implications.",
+      "recommendation": "Add a daily brief injection/agenda-prep queue for future meetings and high-priority loops."
+    },
+    {
+      "id": "OPPORTUNITY-STATE-001",
+      "title": "Opportunity state and risk tracking missing",
+      "severity": "high",
+      "description": "The Maho thread had clear opportunity state: active strategic opportunity, advisory interest increasing, and unpaid consulting drift risk.",
+      "recommendation": "Active threads need opportunity stage, temperature, risk, commercial posture, next action, waiting-on, and evidence fields."
+    },
+    {
+      "id": "CANONICAL-LANGUAGE-001",
+      "title": "Non-committal system-action language erodes trust",
+      "severity": "medium-high",
+      "description": "Language like 'should be marked', 'would likely', and 'could be' blurs advice and action. The user needs proof of what RB actually did.",
+      "recommendation": "Use canonical wording: 'Relationship intelligence detected — RB recorded/proposed/skipped the following...' and separate advice from system action."
+    }
+  ],
+  "raw_text": "User-provided RB 9.0 / CoS Canonical Behavior Test Summary — Maho Relationship Intelligence & Tuesday Prep Injection. Raw call transcripts were not included in this trace; this trace preserves the operator-provided test summary and architectural findings."
+}

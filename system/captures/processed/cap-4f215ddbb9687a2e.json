@@ -1,0 +1,58 @@
+{
+  "file_id": "cap-4f215ddbb9687a2e",
+  "queued_at": "2026-09-21T09:23:08+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-20_1307_candidate-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-20_1307_candidate-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260920-1307-candidate-validation`\n- Research system: `Codex web research`\n- Started at: `2026-09-20 13:07 CDT`\n- Completed at: `2026-09-20 13:09 CDT`\n- Research scope: Validate four unresolved candidate pages for Starbucks and Chick-fil-A.\n- Queue item or vendor: Thanx and Paytronix mention-candidate pages.\n- Methodology: Direct-page candidate validation using vendor-owned blog pages. A page was treated as relationship evidence only if its article body asserted that the named brand used the vendor or its product.\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 0\n- Conflicts found: 0\n- Material takeaway: All four candidates are editorial analyses of another company's loyalty program. None says Starbucks uses Thanx or Chick-fil-A uses Paytronix, so these pages must not create customer, deployment, integration, or partner relationships.\n\n## Negative findings\n\n- Candidate or claim: Starbucks uses Thanx for loyalty, CRM, ordering, or marketing automation.\n- Pages checked: `https://www.thanx.com/blog/starbucks-loyalty-program` and `https://www.thanx.com/blog/starbucks-name-brand-loyalty-program-finest`.\n- Result: Both Thanx-authored articles analyze Starbucks' own loyalty strategy and invite other operators to learn from it. Neither article body identifies Starbucks as a Thanx customer, client, deployment, integration, or partner. The current pages carry `datePublished` metadata of 2025-11-27, which may reflect site migration or republishing and does not change the negative relationship finding.\n\n- Candidate or claim: Chick-fil-A uses Paytronix for loyalty or digital ordering.\n- Pages checked: `https://www.paytronix.com/blog/how-chick-fil-a-rewards-its-best-guests-without-sacrificing-profit` and `https://www.paytronix.com/blog/why-chick-fil-a-has-the-edge-in-the-great-chicken-sandwich-battle-of-2019`.\n- Result: The 2017 and 2019 Paytronix blog posts describe Chick-fil-A's loyalty approach as an industry example. Neither article body says Chick-fil-A uses Paytronix, is a Paytronix customer, or has a Paytronix-powered product. Generic Paytronix platform navigation and company copy surrounding the articles are not customer evidence.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://www.thanx.com/blog/starbucks-loyalty-program | Vendor blog | 2026-09-20 | None | Editorial analysis of Starbucks' shift from visit-based to spend-based rewards; no Thanx relationship assertion. |\n| https://www.thanx.com/blog/starbucks-name-brand-loyalty-program-finest | Vendor blog | 2026-09-20 | None | Marketing lessons drawn from Starbucks' loyalty program; no Thanx customer, deployment, integration, or partner claim. |\n| https://www.paytronix.com/blog/how-chick-fil-a-rewards-its-best-guests-without-sacrificing-profit | Vendor blog | 2026-09-20 | None | Dated 2017-04-11; describes Chick-fil-A One and invitation-only status as examples, not as Paytronix products. |\n| https://www.paytronix.com/blog/why-chick-fil-a-has-the-edge-in-the-great-chicken-sandwich-battle-of-2019 | Vendor blog | 2026-09-20 | None | Dated 2019-08-28; discusses loyalty strategy during the chicken-sandwich competition, without a Paytronix relationship claim. |\n\n## Research notes and inferences\n\n- Inference: Vendor-authored educational content about a famous restaurant brand can generate high-recall candidate matches but should remain unproductive unless the article explicitly asserts use, deployment, partnership, or integration.\n- Review instruction: Preserve these four URLs as validated negative findings so they are not promoted later from brand-name mentions alone.",
+  "word_count": 458,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-21T09:23:26+00:00",
+  "processing_result": {
+    "triage_stream_count": 3,
+    "noise_only": false,
+    "persisted_count": 3,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-006",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 2 trigger(s): named, promoted. Possible named subjects: Executive, Pages, Preserve, Candidate, Review, Brand."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-007",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-21T09:23:08+00:00-008",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Starbucks, Chick-fil-A, Paytronix, Thanx. Macro/industry signal detected: 13 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: automation, crm, customer, deployment, indu"
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "Starbucks",
+        "Chick-fil-A",
+        "Thanx",
+        "Paytronix"
+      ],
+      "topics": [
+        "candidate validation",
+        "loyalty programs",
+        "vendor relationships",
+        "negative findings"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Preserve four URLs as validated negative findings."
+      ],
+      "why_it_matters": "The validation of candidate pages impacts potential partnerships and marketing strategies."
+    }
+  }
+}

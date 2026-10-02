@@ -1,0 +1,14 @@
+{"kind":"deck","id":"pr/zyhvxi","name":"Deck"}
+{"kind":"layout","layoutId":"5e5fd137-459e-42be-9d20-965fd094c82e","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"bee48f8f-1cab-43fa-9ec6-c269df068a93","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/dm3n39","slide":1,"title":"globalpayments","textShapes":3}
+{"kind":"shape","id":"sh/36p43ilg","slide":1,"name":"global-payments-blue-panel-rounded-end","bbox":[280,84,382,554]}
+{"kind":"shape","id":"sh/25g3udkv","slide":1,"name":"global-payments-blue-panel-base","bbox":[14,84,410,554]}
+{"kind":"shape","id":"sh/dwrm9s3i","slide":1,"name":"global-payments-mark","bbox":[70,137,34,34]}
+{"kind":"shape","id":"sh/cvil0n2x","slide":1,"name":"global-payments-mark-dot","bbox":[82,146,10,10]}
+{"kind":"textbox","id":"sh/bu947ils","slide":1,"name":"global-payments-wordmark","text":"globalpayments","textPreview":"globalpayments","textChars":14,"textLines":1,"bbox":[103,134,270,42]}
+{"kind":"textbox","id":"sh/q9g3ydk7","slide":1,"name":"welcome-title","text":"Welcome","textPreview":"Welcome","textChars":7,"textLines":1,"bbox":[72,286,500,106]}
+{"kind":"textbox","id":"sh/l0rmds3u","slide":1,"name":"customer-subtitle","text":"Genius for Pollo Campero","textPreview":"Genius for Pollo Campero","textChars":24,"textLines":1,"bbox":[86,392,410,46]}
+{"kind":"image","id":"im/p87apori","slide":1,"name":"","alt":"Pollo Campero website food spread with fried chicken, sandwich, sides, tortillas, and empanadas","bbox":[14,38,1252,644]}
+{"kind":"image","id":"im/t0nqh4ba","slide":1,"name":"","alt":"Official Pollo Campero logo","bbox":[79,468,245,84]}
+{"kind":"notes","id":"nt/dm3n39","slide":1,"text":"[Sources]\n- Background image: user-provided screenshot captured from the Pollo Campero website.\n- Pollo Campero logo: user-provided official logo image.\n- Visual reference: user-provided Title Slide.pdf.\n- Pollo Campero brand context: https://us.campero.com/our-story\n[/Sources]"}

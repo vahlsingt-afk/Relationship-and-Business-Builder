@@ -1,0 +1,57 @@
+{
+  "file_id": "cap-373100e257f3d0c8",
+  "queued_at": "2026-09-20T09:18:51+00:00",
+  "source_id": "just_press_record",
+  "source_label": "Just Press Record",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-09-18/13-58-40.m4a",
+  "capture_type": "meeting",
+  "title_hint": "Just Press Record \u2014 2026-09-18 13-58-40",
+  "transcription_method": "whisper_local",
+  "transcript": "Just remember why we're there. I just want to take a stack to remember what we had happened last year, which is genius was announced to our customers, you know, officially at FS Tech. And FS Tech has turned into a much better show than Murr Tech. So like we're starting to see a lot of great, great energy. I think the show in general was well received last year. So kudos and you should have high expectations for this event. The teams put a lot into, you know, getting it's prepared for this. I think we're in a really good spot, booth wise. We're right beside Q. We're going to make sure that we're blinding them with our digital menu boards. And so that's good. Last year, it's not going to be the same this year, but I still am going to say it last year we're in this corner. And it was really great because there were these little tables and chairs. So if you wanted to go and sit with a customer and talk or whatever and people are eating, it just worked out great. What ended up happening is we had a lot of people hanging out over there. And I think that's a kin to me being on my cell phone and standing in the booth. It makes me look like I'm not interested in being there. So let's make sure that people are not doing stuff like that. I had been asked to do a show schedule. I'm not doing that. Like I want everybody to be in the booth just in general. And so I'm trusting everybody to just talk to each other to make sure that they're going to say, hey, she got to go to the bathroom. Or I've been on my feet before hours. Or I'm going to whatever. Or I'm going to go meet with a customer for coffee. Like all those things are great. But let's just make sure that we keep a high number of people that are there that are greeting customers that are helping with the sales engineers into demos and engaging the customers. Last thing I'll say is like, you can feel the eyes on you. You're talking to somebody and there's somebody staring a hole in you because they're there to see you. And so try to be mindful of that because that's a real challenge. I want to double down on what Kelly was saying, like lead tracking. Super important to our business. Global payments is willing to invest. And they will as soon as the meeting is over, say, well, what do we get for it? So we got to show the leads. Anybody who comes to our booth is a lead. Even if it's an existing customer, that's a lead because they may be talking about a current project like seven brew was doing with us at genius world for tablets, or they may be talking about a new project that we could close. And marketing attribution is very important to our business because we get to say, look what marketing did for us. And let's keep spending on the marketing side of things. That's all still very new to us because we have never really had a big marketing spend. So we're really feeling good about how much attention we're getting now. We just need to help our teammates there and show that going to FS Tech was a good thing. If we stop going to shows, people will start questioning like why are you in your own genius? Are they out of business? You know, there's all those stupid questions that we've heard for years and years when people stop doing certain things. So in order to go to shows, we got to get the budget to do it. And that's always a fun exercise. Last thing. Remember why you're there. Don't be silly. You're not on vacations. You're there to work. And that means go have a good time. Show your customers a good time. But don't go on. Get out of control. I have watched people go to events and get shammered and get fired. And that's not this group. I know that. And yet it's always my public services outsmart to remind people to do your best. Be a club soda line person when you need to or have two drinks and keep it between the ditches. So I know I trust all you all. But like I said, I want to say that because I care very much about our group. Remember that we are there to represent ourselves. We're there to represent our company and we're there to represent our customers. And so it shines poorly on you if you are out of control. So it'll do that. You may have any questions for me. The last thing about like rotations that you know, making sure people are there, I know Schwartz is going to be doing that kick off entropy. So if you want to go to that, let's just make sure there's people in the booth. So just talk amongst yourselves about that. I didn't want to be a micro manager at R&D who's going to be where. But just make sure we have good coverage at all times. And I hope you have a great show. And next week is a very challenging week with all. I think there's five different things happening next week. So be safe, safe travels and have a great show. Awesome. Thank you. See ya. I can give it one more minute. I saw that we've already hit record last week. So I think you're one step ahead of last time.",
+  "word_count": 956,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-20T09:37:37+00:00",
+  "processing_result": {
+    "triage_stream_count": 3,
+    "noise_only": false,
+    "persisted_count": 3,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-20T09:18:51+00:00-015",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'account_dossier:global_payments' (matched term: 'global payments'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-20T09:18:51+00:00-016",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Genius, Global Payments. Macro/industry signal detected: 4 keyword hit(s) across categorie(s): consumer_behavior, vendor_tech. Key terms: customer, digital menu, payment, spending."
+      },
+      {
+        "item_id": "INT-2026-09-20T09:18:51+00:00-017",
+        "intelligence_type": "strategic_memory",
+        "extracted_summary": "Strategic memory / thesis signal detected: 5 trigger(s): i think."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [
+        "Kelly",
+        "Schwartz"
+      ],
+      "companies_mentioned": [
+        "Global Payments Inc.",
+        "RevGenius"
+      ],
+      "topics": [
+        "FS Tech event preparation",
+        "Lead tracking importance",
+        "Marketing attribution",
+        "Event conduct expectations"
+      ],
+      "decisions": [],
+      "action_items": [],
+      "why_it_matters": "The discussion focuses on the preparation and expectations for the FS Tech event, emphasizing lead tracking and marketing efforts, which are crucial for business growth."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "competitor_slug": "rise-vision",
+  "vendor_display_name": "Rise Vision",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "No QSR/drive-thru focus; no POS price sync evidence"
+    }
+  ]
+}

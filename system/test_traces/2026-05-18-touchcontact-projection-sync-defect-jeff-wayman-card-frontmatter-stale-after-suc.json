@@ -1,0 +1,78 @@
+{
+  "title": "touchContact projection sync defect: Jeff Wayman card frontmatter stale after successful update",
+  "trace_type": "projection_sync_defect_test",
+  "source": "chatgpt_relationship_bridge_9_0",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-18",
+  "session_id": "rb-touchcontact-jeff-wayman-projection-sync-2026-05-18",
+  "summary": "User requested updating Jeff Wayman's last_touch to 2026-05-12 based on recent text/call interaction evidence. touchContact succeeded and DRR scoring reflected fresh recency consistent with the 2026-05-12 touch, but getCard still returned RC card frontmatter with last_touch: 2025-12-29. This indicates a materialized card projection/cache sync defect between the mutable baseline/scoring layer and the rendered RC card file/frontmatter.",
+  "observed_issue": null,
+  "steps": [
+    {
+      "step": 1,
+      "label": "User requested Jeff Wayman last_touch update",
+      "timestamp": null,
+      "user_prompt": "Update Jeff Wayman\u2019s last touch to 2026-05-12 based on recent text/call interaction evidence. After updating, show his DRR score or card/loop context and confirm the stale last-touch issue is resolved.",
+      "assistant_response": "Assistant called touchContact for contact id jeff-wayman with date 2026-05-12 and source noting recent text/call evidence: 25 messages, 5 calls, last interaction 2026-05-12.",
+      "intended_operation": "Update jeff-wayman last_touch to 2026-05-12.",
+      "endpoint": "touchContact",
+      "request_params": null,
+      "response_status": 200,
+      "response_summary": "touchContact returned {ok: true, id: 'jeff-wayman'}.",
+      "mutation_confirmation": "Mutation succeeded at the contact/index layer.",
+      "post_validation": null,
+      "user_feedback": null,
+      "observed_issue": null
+    },
+    {
+      "step": 2,
+      "label": "Card validation exposed stale frontmatter",
+      "timestamp": null,
+      "user_prompt": null,
+      "assistant_response": "Assistant called getCard for jeff-wayman. Card content still showed frontmatter last_touch: 2025-12-29 despite successful touchContact mutation.",
+      "intended_operation": "Validate rendered RC card reflects updated last_touch.",
+      "endpoint": "getCard",
+      "request_params": null,
+      "response_status": 200,
+      "response_summary": "Returned Jeff Wayman card with state ACTIVE, tier inner, trust_state stable, momentum positive, but frontmatter still contained last_touch: 2025-12-29.",
+      "mutation_confirmation": null,
+      "post_validation": "Rendered/materialized RC card did not reflect updated touch date.",
+      "user_feedback": null,
+      "observed_issue": null
+    },
+    {
+      "step": 3,
+      "label": "DRR validation reflected fresh recency",
+      "timestamp": null,
+      "user_prompt": null,
+      "assistant_response": "Assistant called getDrrScore for jeff-wayman. DRR score was 92.0 with recency component 0.984, consistent with a fresh last_touch of 2026-05-12 rather than the stale 2025-12-29 card value.",
+      "intended_operation": "Validate scoring/index layer after touchContact mutation.",
+      "endpoint": "getDrrScore",
+      "request_params": null,
+      "response_status": 200,
+      "response_summary": "Returned id jeff-wayman, signal_class RC, rc_tier inner, score 92.0, recency component 0.984.",
+      "mutation_confirmation": null,
+      "post_validation": "Scoring layer appears to reflect the updated 2026-05-12 touch date.",
+      "user_feedback": null,
+      "observed_issue": null
+    }
+  ],
+  "defects": [
+    {
+      "id": "TOUCHCONTACT-PROJECTION-SYNC-001",
+      "title": "touchContact update not propagated to materialized RC card frontmatter",
+      "severity": "medium",
+      "description": "After touchContact succeeded for jeff-wayman with date 2026-05-12, getDrrScore reflected fresh recency, but getCard still returned frontmatter last_touch: 2025-12-29. This indicates the baseline/index update and DRR scoring are updated, while the materialized RC card/frontmatter projection remains stale.",
+      "recommendation": "Ensure touchContact either updates the materialized RC card frontmatter synchronously, invalidates and rebuilds the card projection/cache, or returns a warning that card projection is stale until a refresh job runs."
+    },
+    {
+      "id": "TOUCHCONTACT-VALIDATION-CONFLICT-001",
+      "title": "Validation surfaces conflicting last_touch states across RB endpoints",
+      "severity": "medium",
+      "description": "Different endpoints presented conflicting last_touch evidence after the update: touchContact confirmed success and DRR recency reflected fresh touch, while getCard displayed the old date. This can mislead the assistant/user when confirming whether the stale last-touch issue is resolved.",
+      "recommendation": "Add a canonical last_touch field to getCard response outside markdown content, or expose projection freshness metadata so clients can distinguish canonical state from rendered card cache."
+    }
+  ],
+  "raw_text": "Key result for Codex: touchContact succeeded for jeff-wayman with date 2026-05-12. getDrrScore returned score 92.0 and recency component 0.984, supporting that the scoring/index layer incorporated the fresh touch date. However, getCard returned Jeff Wayman's RC card content with YAML/frontmatter line 'last_touch: 2025-12-29'. This is a materialized card projection sync defect: the canonical/index layer and DRR updated, but the card frontmatter remained stale.",
+  "trace_id": "T-2026-05-18-004"
+}

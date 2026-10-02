@@ -1,0 +1,15 @@
+{
+  "competitor_slug": "elavon-u-s-bank",
+  "vendor_display_name": "Elavon (U.S. Bank)",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Facing \"competitive pressures from fintechs and legacy processors\""
+    }
+  ]
+}

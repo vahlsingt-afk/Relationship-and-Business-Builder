@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-18T00:03:26Z",
+  "account_id": "global-payments",
+  "source": "outlook_computer_use",
+  "window_days": 7,
+  "inbox": [],
+  "sent": [],
+  "calendar": [
+    {
+      "title": "Subway RFP - Kiosk/KDS Pricing Breakout",
+      "date": "2026-09-17",
+      "start": "2026-09-17T08:30",
+      "end": "2026-09-17T09:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Thursday)",
+      "date": "2026-09-17",
+      "start": "2026-09-17T09:30",
+      "end": "2026-09-17T10:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "New Lead Capture Process",
+      "date": "2026-09-17",
+      "start": "2026-09-17T10:30",
+      "end": "2026-09-17T11:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - DMB Pricing Breakout",
+      "date": "2026-09-17",
+      "start": "2026-09-17T11:00",
+      "end": "2026-09-17T11:30",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - Installation & Managed Services Pricing Breakout",
+      "date": "2026-09-17",
+      "start": "2026-09-17T11:30",
+      "end": "2026-09-17T12:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - Status Call",
+      "date": "2026-09-17",
+      "start": "2026-09-17T12:00",
+      "end": "2026-09-17T12:30",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Pricing and P&L Template",
+      "date": "2026-09-17",
+      "start": "2026-09-17T15:00",
+      "end": "2026-09-17T15:30",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - Kiosk/KDS Pricing Breakout",
+      "date": "2026-09-18",
+      "start": "2026-09-18T08:30",
+      "end": "2026-09-18T09:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "WorldPay Backbook Campaign Discussion",
+      "date": "2026-09-18",
+      "start": "2026-09-18T09:00",
+      "end": "2026-09-18T10:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - DMB Pricing Breakout",
+      "date": "2026-09-18",
+      "start": "2026-09-18T11:00",
+      "end": "2026-09-18T11:30",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - Installation & Managed Services Pricing Breakout",
+      "date": "2026-09-18",
+      "start": "2026-09-18T11:30",
+      "end": "2026-09-18T12:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - Status Call",
+      "date": "2026-09-18",
+      "start": "2026-09-18T12:00",
+      "end": "2026-09-18T12:30",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "FSTEC Know Before You Go",
+      "date": "2026-09-18",
+      "start": "2026-09-18T13:30",
+      "end": "2026-09-18T14:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "SAVE THE DATE:  US Direct All Hands",
+      "date": "2026-09-18",
+      "start": "2026-09-18T14:00",
+      "end": "2026-09-18T15:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway: Esper/Genius Coordination",
+      "date": "2026-09-18",
+      "start": "2026-09-18T15:00",
+      "end": "2026-09-18T15:30",
+      "location": "https://us-1506.join.gong.io/global-payments-us/todd.vahlsing/8626166741815850907"
+    },
+    {
+      "title": "Subway Pricing",
+      "date": "2026-09-18",
+      "start": "2026-09-18T15:30",
+      "end": "2026-09-18T16:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Monday)",
+      "date": "2026-09-21",
+      "start": "2026-09-21T11:00",
+      "end": "2026-09-21T11:30",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Sales Team Subway Pricing",
+      "date": "2026-09-21",
+      "start": "2026-09-21T12:30",
+      "end": "2026-09-21T14:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Global Payments Follow-Up Meeting",
+      "date": "2026-09-22",
+      "start": "2026-09-22T14:00",
+      "end": "2026-09-22T15:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Flight to Dallas",
+      "date": "2026-09-23",
+      "start": "2026-09-23T07:00",
+      "end": "2026-09-23T10:00",
+      "location": null
+    },
+    {
+      "title": "Subway RFP - DMB Pricing Breakout",
+      "date": "2026-09-23",
+      "start": "2026-09-23T11:00",
+      "end": "2026-09-23T11:30",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - Installation & Managed Services Pricing Breakout",
+      "date": "2026-09-23",
+      "start": "2026-09-23T11:30",
+      "end": "2026-09-23T12:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Thursday)",
+      "date": "2026-09-24",
+      "start": "2026-09-24T09:30",
+      "end": "2026-09-24T10:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - DMB Pricing Breakout",
+      "date": "2026-09-24",
+      "start": "2026-09-24T11:00",
+      "end": "2026-09-24T11:30",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - Installation & Managed Services Pricing Breakout",
+      "date": "2026-09-24",
+      "start": "2026-09-24T11:30",
+      "end": "2026-09-24T12:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "FS/TEC",
+      "date": "2026-09-23",
+      "start": "2026-09-23",
+      "end": "2026-09-25",
+      "location": null
+    }
+  ]
+}

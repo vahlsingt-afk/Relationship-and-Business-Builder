@@ -1,0 +1,30 @@
+Email subject: Re: Subject: Pollo Campero menu board inventory — reuse and replacement review
+From: Mary Santiago <MS51280@globalpayments.com>
+To: Todd Vahlsing; Scott Welvaert; Ryan Hildebrand
+Cc: Keith Shaibley; Arjun Wadwalkar; Neal Starkey
+Date: Today at 10:44 AM
+Attachments shown: STOCK Menu Board... (99.7 KB); Pollo_Campero_Digit... (71.2 KB)
+
+Hi Todd,
+
+First, thank you for the thorough analysis and for taking the time to consolidate the inventory in this format. The report is very well organized, and you're asking exactly the right questions. It will make the technical evaluation much more efficient.
+
+I'll review the inventory and provide guidance on:
+1. Which display models can be retained with a media player swap.
+2. Which models may be capable of running the solution directly on their existing SoC.
+3. Which models should be considered for replacement based on age, performance, compatibility, supportability, and long-term viability.
+
+Given the size of the inventory and the evaluation required, I'll need approximately 2-3 business days to complete a thorough review and provide recommendations.
+
+As part of this review, I'm also working through a broader BYOD (Bring Your Own Device) strategy that we're aligning across Product and Technology leadership. We're seeing an increasing number of customers looking to leverage existing hardware investments, so opportunities like this are becoming more common and are helping shape both our immediate recommendations and our longer-term support strategy.
+
+I'm also looping in several of my technology peers, as I expect BYOD and embedded webOS supportability to be a key topic of discussion over the next several days and weeks. I want to ensure we're evaluating this opportunity from both a product and technology perspective and providing the best long-term recommendation for the customer.
+
+Based on an initial review, many of these LG webOS models are capable of running our application today. However, as we evaluate supportability over the life of a contract, we also need to consider platform age, firmware support, security requirements, future development effort, and ongoing maintenance costs. For models that are approaching the edge of our support window, I want to ensure we're transparent with the customer and potentially incorporate a phased refresh strategy into the proposal. This gives us flexibility to support their current investment while establishing a clear path forward for long-term success.
+
+One additional item that would be helpful as I evaluate this opportunity: do you know what pricing assumptions you're currently using for SaaS and Connected Care/MDM if this ultimately becomes a SaaS-only opportunity? Understanding the potential software and management services revenue will help us assess both this opportunity and future BYOD opportunities, while ensuring we're balancing customer flexibility with long-term supportability and business value.
+
+Thanks again for putting this together. The level of detail you've provided will be extremely valuable as we complete the assessment.
+
+Thank you,
+Mary

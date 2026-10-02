@@ -1,0 +1,40 @@
+{
+  "competitor_id": "comp-doordash-dashos",
+  "competitor_slug": "doordash-dashos",
+  "display_name": "DoorDash / DashOS",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [
+    "loyalty_engagement",
+    "restaurant_os_platform"
+  ],
+  "positioning_summary": "",
+  "todds_pov": "Strategic threat to Genius: unlike Toast/PAR’s stack-consolidation model, DoorDash can become the customer operating system above someone else’s restaurant operating system, potentially reducing the strategic value of POS-native loyalty/CRM. Genius should emphasize openness so customers can connect DashOS/SevenRooms, Olo, Punchh, Como or other engagement layers without operational friction. Watch whether DashOS actually replaces vendors and reduces total cost/complexity, plus the commercial terms governing restaurant customer-data access, portability and use.",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "vendor_claims": [],
+  "product_lineage": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:47:05Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:05Z"
+}

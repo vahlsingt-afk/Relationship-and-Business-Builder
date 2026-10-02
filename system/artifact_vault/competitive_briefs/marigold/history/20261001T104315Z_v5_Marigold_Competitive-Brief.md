@@ -1,0 +1,9 @@
+# Marigold — Competitive Brief
+
+## Where we're competing against them right now
+*No current tech-stack relationship on file for this vendor.*
+
+## What's new (last 60 days)
+- (2026-09-29) Zeta Global announced on September 30, 2025 a definitive agreement to acquire Marigold's enterprise software business — including Marigold Loyalty, Cheetah Digital, Selligent, Sailthru, Liveclicker, and Grow — for total consideration of up to $325 million ($100M cash + $100M Zeta stock at closing, plus a seller note of up to $125M payable within three months); the deal closed November 24, 2025. Marigold's SMB products (Campaign Monitor, Emma, Vuture) were NOT included and remain separate. (Scope note: This acquisition covers Marigold's enterprise business only; its SMB brands were carved out and are not part of Zeta Global.) — *https://www.zetaglobal.com/news/zeta-global-to-acquire-marigolds-enterprise-business/*
+- (2026-09-29) Marigold Loyalty was used by KFC (KFC Rewards) and White Castle (Crave Continuum) to build personalized loyalty programs, and drove $2.9M in attributed revenue plus a 29.4% lift in average order value for Bloomin' Brands' Outback Steakhouse via a targeted punch-card campaign. (Scope note: Bloomin'/Outback figures are from a single vendor-published campaign case study, not company-wide performance; KFC/White Castle references confirm product usage but not deal size or exclusivity.) — *https://meetmarigold.com/resources/case-studies/bloomin-brands-targeted-punch-card-campaigns*
+- (2026-09-29) Post-acquisition, Marigold's enterprise business (now under Zeta Global) serves more than 100 global enterprise brands including 20 of the top 100 advertisers and 40+ Fortune 500 companies, with over 90% subscription-based revenue and sub-30% cost of revenue in FY2025. — *https://www.zetaglobal.com/news/zeta-global-to-acquire-marigolds-enterprise-business/*

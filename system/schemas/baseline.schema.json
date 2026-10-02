@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://relationship-builder.local/schemas/baseline.schema.json",
+  "title": "RB Baseline Index",
+  "description": "Validation schema for system/baseline_index.json. The canonical contact graph.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": true,
+    "required": [
+      "id",
+      "name",
+      "signal_class",
+      "sources"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+        "description": "Stable lowercase-hyphenated identifier. Person IDs use firstname-lastname; disambiguate with suffix when needed."
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "current_company": {
+        "type": ["string", "null"]
+      },
+      "current_role": {
+        "type": ["string", "null"]
+      },
+      "employment_status": {
+        "type": ["string", "null"],
+        "enum": ["stated_current_role", "no_stated_current_role", "current_role_date_unavailable", "unknown", null],
+        "description": "LinkedIn ended-role cleanup (2026-08-06) — date-aware resolution of whether current_company/current_role is still active. See employment_state.py."
+      },
+      "employment_status_source": {
+        "type": ["string", "null"],
+        "enum": ["linkedin_profile_capture", "linkedin_connections_export", "operator_confirmed", null],
+        "description": "Which adapter last resolved employment_status. Determines outranking: operator_confirmed and any dated source outrank an undated linkedin_connections_export row."
+      },
+      "employment_status_observed_at": {
+        "type": ["string", "null"],
+        "description": "ISO timestamp of the capture that last set employment_status."
+      },
+      "employment_end_date": {
+        "type": ["string", "null"],
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+        "description": "Normalized end date of the last dated role, when employment_status is no_stated_current_role and a date was parseable. Day is always 01 (LinkedIn only supplies month/year)."
+      },
+      "employment_date_confidence": {
+        "type": ["string", "null"],
+        "enum": ["dated", "undated", "operator_confirmed", null],
+        "description": "Whether employment_status was resolved from an explicit dated range. 'undated' sources (e.g. Connections.csv, which carries no employment dates) must never overwrite a 'dated' or 'operator_confirmed' no_stated_current_role state."
+      },
+      "last_known_company": {
+        "type": ["string", "null"],
+        "description": "Preserved employer when employment_status is no_stated_current_role."
+      },
+      "last_known_role": {
+        "type": ["string", "null"],
+        "description": "Preserved title when employment_status is no_stated_current_role."
+      },
+      "last_known_role_dates": {
+        "type": ["string", "null"],
+        "description": "Raw date-range string of the last known role, e.g. 'Jun 2021 - Mar 2025'."
+      },
+      "location": {
+        "type": ["string", "null"]
+      },
+      "linkedin_url": {
+        "type": ["string", "null"]
+      },
+      "linkedin_connected_on": {
+        "type": ["string", "null"],
+        "description": "Raw LinkedIn-export date string, e.g. '29 Apr 2025'."
+      },
+      "email": {
+        "type": ["string", "null"]
+      },
+      "phone": {
+        "type": ["string", "null"]
+      },
+      "sources": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Where this entry came from. Examples: linkedin_export_2026-05-10, google_takeout_2025-12-26, hospitality_table_chat_2026-05-12, salvage_2026-05-08."
+      },
+      "signal_class": {
+        "type": "string",
+        "enum": ["VC", "NPR", "LMI", "LKI", "RC"]
+      },
+      "rc_state": {
+        "type": ["string", "null"],
+        "enum": ["ACTIVE", "PARKED", "CLOSED", null]
+      },
+      "rc_tier": {
+        "type": ["string", "null"],
+        "enum": ["inner", "broader", "dormant_valuable", null]
+      },
+      "last_touch": {
+        "type": ["string", "null"],
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+        "description": "ISO date YYYY-MM-DD or null."
+      },
+      "circles": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "notes": {
+        "type": "string"
+      },
+      "company_history": {
+        "type": "array",
+        "description": "RB 9.87 (RB-DEFECT-041 Enhancement #4) — prior current_company values, recorded when linkedin_ingest.py detects a company change. Most recent change last.",
+        "items": {
+          "type": "object",
+          "required": ["company", "changed_on"],
+          "properties": {
+            "company": { "type": ["string", "null"] },
+            "changed_on": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            }
+          }
+        }
+      },
+      "title_history": {
+        "type": "array",
+        "description": "RB 9.87 (RB-DEFECT-041 Enhancement #4) — prior current_role values, recorded when linkedin_ingest.py detects a role change. Most recent change last.",
+        "items": {
+          "type": "object",
+          "required": ["role", "changed_on"],
+          "properties": {
+            "role": { "type": ["string", "null"] },
+            "changed_on": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            }
+          }
+        }
+      }
+    },
+    "allOf": [
+      {
+        "if": { "properties": { "signal_class": { "const": "RC" } } },
+        "then": {
+          "required": ["rc_state", "rc_tier"],
+          "properties": {
+            "rc_state": { "type": "string" },
+            "rc_tier": { "type": "string" }
+          }
+        }
+      },
+      {
+        "if": { "properties": { "signal_class": { "not": { "const": "RC" } } } },
+        "then": {
+          "properties": {
+            "rc_state": { "type": "null" },
+            "rc_tier": { "type": "null" }
+          }
+        }
+      }
+    ]
+  }
+}

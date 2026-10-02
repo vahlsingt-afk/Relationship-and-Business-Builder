@@ -1,0 +1,33 @@
+{
+  "competitor_slug": "transact-technologies",
+  "vendor_display_name": "TransAct Technologies",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [
+    "back_office"
+  ],
+  "circle1_genius_strengths": [
+    {
+      "category": "Back Office",
+      "point": "Enterprise labor scheduling (incl. Fair Workweek compliance US/CA), inventory \"down to the ounce,\" KPI dashboards, Mobile Manager app; POS/hardware-agnostic; Sysco and US Foods supplier integrations; Data Stream add-on for BI export",
+      "why_it_matters": "Source: https://www.globalpayments.com/point-of-sale/enterprise/back-office"
+    },
+    {
+      "category": "Back Office",
+      "point": "POS-agnostic claim widens addressable market beyond Genius POS",
+      "why_it_matters": "Source: https://www.globalpayments.com/point-of-sale/enterprise/back-office"
+    },
+    {
+      "category": "Back Office",
+      "point": "Included in CKE bundle",
+      "why_it_matters": "Source: https://investors.globalpayments.com/news-events/press-releases/detail/508/global-payments-announces-exclusive-agreement-with-cke"
+    }
+  ],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "TransAct's FY2025 10-K names its direct competitors for the BOHA! foodservice/food-safety platform as Crunchtime Information Systems (including its Zenput and Squadle brands), Digi International, Avery Dennison, Ecolab, ITD Food Safety, Daymark Safety Systems, Integrated Control Corp, and Toast, Inc."
+    }
+  ]
+}

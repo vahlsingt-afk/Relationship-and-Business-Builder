@@ -1,0 +1,18 @@
+{
+  "competitor_slug": "soundhound-ai",
+  "vendor_display_name": "SoundHound AI",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Deep losses: Q2 2026 GAAP net loss $(42.8)M; adj. EBITDA $(9.6)M"
+    },
+    {
+      "point": "Growth heavily acquisition-driven; subscription revenue \"mainly driven by revenue from acquisitions in the Americas\"; stock ~−35% YTD (Sep 2026), market cap ~$2.7B"
+    }
+  ]
+}

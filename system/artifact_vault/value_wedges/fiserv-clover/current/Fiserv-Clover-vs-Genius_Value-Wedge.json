@@ -1,0 +1,24 @@
+{
+  "competitor_slug": "fiserv-clover",
+  "vendor_display_name": "Fiserv (Clover)",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Clover revenue only +2% reported in Q2 2026 (+13% adjusted)"
+    },
+    {
+      "point": "FY2026 organic revenue guide cut to −1% to flat; adj. EPS $7.20–7.40"
+    },
+    {
+      "point": "Oct 29, 2025: stock fell 44% (worst day ever) after guidance cut; ~65% decline in 2025"
+    },
+    {
+      "point": "Portfolio review; divested student-loan servicing, managed ATM, India SMB/fuel"
+    }
+  ]
+}

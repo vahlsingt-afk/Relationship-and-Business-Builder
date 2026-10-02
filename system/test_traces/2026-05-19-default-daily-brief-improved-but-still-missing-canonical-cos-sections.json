@@ -1,0 +1,51 @@
+{
+  "title": "Default daily brief improved but still missing canonical CoS sections",
+  "trace_type": "daily_brief_default_behavior_regression",
+  "source": "chatgpt_relationship_bridge_9_0",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-19",
+  "session_id": "rb-default-daily-brief-second-test-2026-05-19",
+  "summary": "User ran another default daily briefing test. The response improved by leading with Relationship / Strategic Priorities and putting Restaurant Tech / Industry Signals after that. However, it still failed the full canonical RB CoS contract: no visible grounding labels, no stale-source warnings, no loops/overdue obligations, no what-to-ignore section, no explicit last-24h relationship-signal structure, and industry context remained too long relative to the relationship/action layer.",
+  "observed_issue": "Default daily brief improved but remains a strategic advisory/news synthesis rather than the canonical RB operating brief.",
+  "steps": [
+    {
+      "step": 1,
+      "label": "User requested daily briefing after prompt/schema update",
+      "timestamp": "2026-05-19",
+      "user_prompt": "Daily briefing / show me the daily briefing",
+      "assistant_response": "Generated Daily Briefing \u2014 May 19, 2026 with Relationship / Strategic Priorities for Maho/Ish Singh and RB 9.0 development direction, followed by Restaurant Tech / Industry Signals for NCR Voyix, Global Payments/Genius, PAR, AI discovery, macro market read, and recommended actions.",
+      "intended_operation": "Render canonical RB CoS daily brief by default.",
+      "endpoint": "getDailyBrief",
+      "response_status": 200,
+      "response_summary": "Response appears relevant and more relationship-led than prior version, but did not visibly use the required CoS structure or grounding labels.",
+      "mutation_confirmation": "No mutation expected; read-only daily brief test.",
+      "post_validation": "User supplied the full output for Codex assessment.",
+      "observed_issue": "Brief was improved but still missing canonical RB sections."
+    }
+  ],
+  "defects": [
+    {
+      "id": "DB-CANONICAL-DEFAULT-002",
+      "title": "Default daily brief improved but still omits canonical sections",
+      "severity": "high",
+      "description": "The response now starts with relationship/strategic priorities and includes relevant industry context, but it omits required canonical sections: grounding labels, stale-source warnings, loops/obligations, what-to-ignore, reconciliation prompts, and explicit last-24h signal state.",
+      "recommendation": "Make the canonical daily brief structure API-rendered or enforce a stricter Custom GPT response template. The GPT should not be allowed to substitute a freeform strategic advisory essay for the operating brief."
+    },
+    {
+      "id": "DB-INDUSTRY-WEIGHT-001",
+      "title": "Industry section still overweight relative to relationship/action layer",
+      "severity": "medium",
+      "description": "Industry context was relevant but too long compared with the relationship/action operating layer. NCR, Global Payments, PAR, AI discovery, and macro market read dominated much of the output.",
+      "recommendation": "Constrain industry context to a short relevance-filtered section with each item tied to active threads, specific relationships, job/consulting opportunities, or a clear action/monitor decision."
+    },
+    {
+      "id": "DB-GROUNDING-DEFAULT-002",
+      "title": "Grounding labels still absent in default daily brief",
+      "severity": "medium",
+      "description": "Despite the prompt and API updates, the default response did not visibly label items as system_detected, inferred, manual_user_provided, or stale_source_limited.",
+      "recommendation": "Move grounding labels into the API-rendered daily brief text or make them required fields in the response contract used by the GPT."
+    }
+  ],
+  "raw_text": "Second default daily brief test showed progress: relationship/strategic priorities came first, with Maho/Ish Singh and RB 9.0 development direction. Industry context was relevant to restaurant tech and Todd's positioning, but remained too long and lacked explicit mapping to active threads/actions on each item. Missing: grounding labels, stale-source warnings, loops, what-to-ignore, reconciliation prompts, and explicit last-24h relationship-signal state.",
+  "trace_id": "T-2026-05-19-002"
+}

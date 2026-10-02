@@ -1,0 +1,69 @@
+{
+  "title": "P-036: LinkedIn engagement from unknown person — propose promotion only if recurring/high-signal",
+  "trace_type": "ri_assessment_doctrine",
+  "source": "linkedin_own_engagement_test",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-25",
+  "sprint": "RB 9.9",
+  "protocol": "P-036",
+  "scenario_id": "p036-case-4",
+  "summary": "A person not in baseline likes Todd's LinkedIn post once. RB should not propose a VC/NPR/LMI promotion for a single like from an unknown person. If the same person engages repeatedly across multiple posts or also comments with context, RB may propose a blocked-pending-context or low-signal promotion candidate. Single low-context engagement from unknown = ri_assessment.status=blocked or irrelevant.",
+  "expected_ri_assessment_single_like": {
+    "status": "blocked",
+    "reason_contains": "not in baseline; single engagement insufficient for promotion",
+    "display_recommendation": "suppress_unless_asked"
+  },
+  "expected_ri_assessment_recurring": {
+    "status": "proposed",
+    "proposed_mutation_command": "contact-add",
+    "display_recommendation": "show"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label": "Single like from unknown person",
+      "description": "social.engagement.json: Jane Smith (no linkedin_url match, no name match in baseline) liked Todd's post from 2026-05-24. No prior engagement history. RB should assess but block promotion.",
+      "input": {
+        "source": "linkedin_own_engagement",
+        "engager_name": "Jane Smith",
+        "engager_linkedin_url": null,
+        "engagement_type": "like",
+        "engagement_count_total": 1,
+        "baseline_match": null
+      },
+      "expected_ri_assessment_status": "blocked",
+      "expected_reason": "single engagement; entity not in baseline; insufficient signal for promotion"
+    },
+    {
+      "step": 2,
+      "label": "Recurring engagement from same unknown (3 posts, comment with context)",
+      "description": "Same person (now matched by name heuristic) has liked 3 posts over 2 weeks and commented 'Great insight — I'm building something similar at [Company]'. This is now a high-signal pattern. RB may propose promotion to LMI with a contact-add candidate.",
+      "input": {
+        "engagement_count_total": 3,
+        "has_comment_with_context": true,
+        "comment_snippet": "Great insight — I'm building something similar at [Company]"
+      },
+      "expected_ri_assessment_status": "proposed",
+      "expected_proposed_mutation_command": "contact-add"
+    },
+    {
+      "step": 3,
+      "label": "Brief does not surface unknown single-like as relationship signal",
+      "description": "In the single-like case, the daily brief does not mention Jane Smith. If queried ('who engaged with my post?'), RB may list the engager but does NOT say 'I propose adding Jane Smith to your network' for a single like.",
+      "expected_display_single": "suppress_unless_asked",
+      "expected_display_recurring": "show"
+    }
+  ],
+  "defects": [],
+  "acceptance_criteria": [
+    "single like from unknown = ri_assessment.status=blocked or irrelevant; not proposed",
+    "display_recommendation = suppress_unless_asked for single-like unknown",
+    "recurring + comment context may yield ri_assessment.status=proposed for contact-add",
+    "RB does not claim to have added or tracked an unknown from a single like"
+  ],
+  "anti_patterns": [
+    "proposing contact-add for every LinkedIn like from an unknown",
+    "saying 'I've tracked Jane Smith' after a single like",
+    "no differentiation between single-engagement and recurring high-signal"
+  ]
+}

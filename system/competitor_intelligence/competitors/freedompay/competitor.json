@@ -1,0 +1,150 @@
+{
+  "competitor_id": "comp-freedompay",
+  "competitor_slug": "freedompay",
+  "display_name": "FreedomPay",
+  "aliases": [],
+  "vendor_entity_id": "vendor-freedompay",
+  "primary_category": "payments",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Dependent on acquirer partners (incl. Worldpay, Elavon) — both partner and competitor to Worldpay",
+        "evidence_id": "note-0007",
+        "added_at": "2026-09-26T12:23:32Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Subway strategic payments collaboration (Feb 2025)",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "Olo partnership for enterprise in-store payments (Feb 2025)",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "Deep hospitality ISV integrations: Agilysys (Apr 2026), Shiji (Jun 2026), Ordr (sports, May 2026)",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:23:32Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:46:56Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:56Z",
+  "latest_cos_commentary": {
+    "headline": "Payment orchestration can sit alongside other processors, including an existing Worldpay relationship.",
+    "genius_exposure": "Payment orchestration can sit alongside other processors, including an existing Worldpay relationship.",
+    "competitive_timing": "FreedomPay and Subway announced a global payment-orchestration partnership in February 2025. Latest check: FreedomPay and Agilysys expanded a hospitality commerce partnership covering lodging and food and beverage.",
+    "sales_response": "For Subway, distinguish gateway/orchestrator, acquirer, tender, region and franchisee scope before proposing displacement.",
+    "risk_and_uncertainty": "Source is more than 18 months old; current live footprint and processor routing require fresh account confirmation. Partner integration does not prove a new named restaurant deployment.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 9
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 9,
+    "pack_claim_count": 13,
+    "pack_claims_with_url": 11,
+    "pack_claims_inherited_url": 1,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 2,
+      "legacy_claims_need_date_and_current_status_check": 13,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  },
+  "vendor_claims": [
+    {
+      "value": "FreedomPay markets a customizable payment-commerce platform that connects to more than 1,500 third-party solutions through a single platform integration.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://corporate.freedompay.com/",
+      "finding_type": "vendor_stated",
+      "source_owner": "FreedomPay",
+      "source_type": "vendor_platform_page",
+      "published_at": "",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Integration count, depth and operational simplicity are vendor claims."
+    },
+    {
+      "value": "FreedomPay positions its payment gateway for restaurant use from family businesses through high-volume quick-service chains and across multiple payment channels.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://corporate.freedompay.com/resources/blogs/seamless-payment-solutions-for-restaurants",
+      "finding_type": "vendor_stated",
+      "source_owner": "FreedomPay",
+      "source_type": "vendor_restaurant_product_page",
+      "published_at": "",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Named brands and outcome claims on the vendor page are not independent proof."
+    }
+  ],
+  "strengths": [
+    {
+      "value": "HotelTechReport independently describes FreedomPay as supporting multiple acquirers, fraud providers, POS/third-party integrations and security technologies including P2PE, EMV, tokenization and contactless payments.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://hoteltechreport.com/operations/payments-processors/freedompay",
+      "finding_type": "independently_verified",
+      "source_owner": "HotelTechReport",
+      "source_type": "independent_hospitality_technology_profile",
+      "published_at": "",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Product-profile copy may incorporate vendor-supplied information; this corroborates architecture, not reliability or support performance."
+    },
+    {
+      "value": "OpenTable independently documents FreedomPay as a gateway usable with OpenTable for Restaurants payment features including prepaid experiences, deposits and payment links.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://support.opentable.com/s/article/Manage-FreedomPay-and-OpenTable",
+      "finding_type": "independently_verified",
+      "source_owner": "OpenTable",
+      "source_type": "independent_partner_documentation",
+      "published_at": "",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Confirms interoperability only; does not establish implementation quality or uptime."
+    }
+  ]
+}

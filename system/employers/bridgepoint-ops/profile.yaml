@@ -1,0 +1,36 @@
+# BridgePoint Ops — Employer/Engagement Profile
+# Employment Governance Layer (EGL), Phase 1 — see ../../RB_EMPLOYMENT_GOVERNANCE_LAYER.md
+#
+# No policy documents have been provided for this engagement. Per
+# personal_operating_system.yaml (2026-06-19 note): "BridgePoint Ops: winding down —
+# no new engagements, existing advisory relationships managed to close or natural
+# conclusion." Kept as a second active profile per Todd's Phase 1 scoping decision
+# (2026-07-06), but with no encoded policies — the compliance engine will report
+# "no policies on file" for this employer rather than fabricate restrictions.
+
+employer_id: bridgepoint-ops
+relationship_type: advisory_engagement
+company: "BridgePoint Ops"
+role:
+  title: null
+  responsibilities: "Advisory — winding down; existing relationships managed to close, no new engagements."
+  products: []
+  customers: []
+  industry: null
+
+start_date: null
+end_date: null
+status: active   # winding down, but not yet formally closed — see notes
+manager: null
+
+travel_expectations: null
+compliance_requirements: []
+security_classification: null
+internal_systems: []
+policy_refs: []   # no policy documents on file for this engagement
+
+notes: |
+  If BridgePoint Ops has its own confidentiality/advisory agreement or client contracts
+  with compliance-relevant terms, provide them and they'll be encoded the same way as
+  the Global Payments policies. Until then, the compliance engine treats content
+  touching BridgePoint as unevaluated (no policy coverage), not automatically clear.

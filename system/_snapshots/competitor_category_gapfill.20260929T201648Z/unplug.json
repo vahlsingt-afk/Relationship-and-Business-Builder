@@ -1,0 +1,53 @@
+{
+  "competitor_id": "comp-unplug",
+  "competitor_slug": "unplug",
+  "display_name": "unPLUG",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:09Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:38Z",
+  "latest_cos_commentary": {
+    "headline": "unPLUG is a small, venture-backed first-party ordering and guest CRM/loyalty platform serving named fast-casual and coffee brands, recently expanding into an AI-driven customer-activation partnership with a large multi-brand QSR franchisee (TFI/Tıkla Gelsin).",
+    "genius_exposure": "Competes with Genius's loyalty_engagement and digital-ordering-adjacent capabilities by unifying branded web/app ordering, POS integration, guest data capture, and lifecycle marketing into one guest-facing layer.",
+    "competitive_timing": "Small funding base (reported ~$1.2M total) relative to its named client roster; the TFI/Tıkla Gelsin data-science partnership signals an effort to demonstrate enterprise-scale capability beyond its current customer size.",
+    "sales_response": "If a prospect already uses a first-party ordering/CRM point solution alongside their POS, confirm whether it's unPLUG; its named customer list skews toward regional fast-casual and coffee/juice concepts rather than large national chains.",
+    "risk_and_uncertainty": "Performance metrics (e.g., '+68% first-party sales,' '+57% guest LTV') are vendor-reported without third-party audit. Funding and valuation figures come only from aggregator trackers, not a primary source.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 120
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 120,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Pricing signals",
+        "C-Suite & Leadership"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "confirm total funding raised via a primary press release (currently sourced from aggregators)",
+        "leadership/founder names",
+        "pricing model detail beyond 'outcome-aligned pricing' messaging"
+      ]
+    }
+  }
+}

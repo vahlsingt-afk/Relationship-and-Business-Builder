@@ -1,0 +1,378 @@
+{
+  "account_id": "acct-subway",
+  "account_slug": "subway",
+  "display_name": "Subway",
+  "aliases": [
+    "Subway NA"
+  ],
+  "engagement_tier": "active_engagement",
+  "portfolio_status": {
+    "value": "active competitive RFP",
+    "status": "confirmed",
+    "confidence": "high",
+    "as_of": "2026-09-15",
+    "scope": "account",
+    "evidence_ids": [
+      "ev-subway-0001",
+      "ev-subway-0002",
+      "ev-subway-0003",
+      "ev-subway-0004"
+    ],
+    "last_reviewed_by": "human:Todd Vahlsing"
+  },
+  "owners": [
+    {
+      "name": "Nicholas Hulayew",
+      "role": "RFP bid lead (draft Enclosure 5); account owner to confirm"
+    },
+    {
+      "name": "Stacey (surname unverified)",
+      "role": "Worldpay Subway relationship manager; internal JPR call"
+    }
+  ],
+  "executive_summary": "",
+  "current_business_situation": "",
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "technology_stack": [
+    {
+      "layer": "POS",
+      "vendor": "SubwayPOS",
+      "current_state": "RFP baseline requires SPOS 8.4.428.50 or higher.",
+      "status": "Confirmed RFP baseline",
+      "confidence": "high",
+      "as_of": "2026-09-15"
+    },
+    {
+      "layer": "Payment Manager",
+      "vendor": "Subway Payment Manager",
+      "current_state": "RFP baseline requires SPM v9.12.6 or higher.",
+      "status": "Confirmed RFP baseline",
+      "confidence": "high",
+      "as_of": "2026-09-15"
+    },
+    {
+      "layer": "In-store payments",
+      "vendor": "FreedomPay / Ingenico Lane/3600",
+      "current_state": "RFP baseline specifies FreedomPay v5.3.8.13 or higher and Lane/3600 pairing.",
+      "status": "Confirmed RFP baseline",
+      "confidence": "high",
+      "as_of": "2026-09-15"
+    },
+    {
+      "layer": "MDM / remote support",
+      "vendor": "Canopy / Splashtop",
+      "current_state": "RFP requires Canopy enrollment and Splashtop via Canopy.",
+      "status": "Confirmed RFP baseline",
+      "confidence": "high",
+      "as_of": "2026-09-15"
+    },
+    {
+      "layer": "KDS",
+      "vendor": "Genius",
+      "current_state": "Draft response states Subway maintains SPOS-to-Genius KDS API integration; deployed count not independently verified.",
+      "status": "Reported internal relationship",
+      "confidence": "medium",
+      "as_of": "2026-09-15"
+    }
+  ],
+  "commercial_models": [
+    {
+      "item": "RFP planning ceiling",
+      "value": 5000,
+      "unit": "U.S. restaurants, maximum planned scope",
+      "status": "customer-stated planning parameter",
+      "confidence": "high",
+      "as_of": "2026-09-15"
+    },
+    {
+      "item": "Kiosk pricing assumption",
+      "value": 3,
+      "unit": "kiosks per restaurant",
+      "status": "customer-stated planning assumption, not guaranteed",
+      "confidence": "high",
+      "as_of": "2026-09-15"
+    },
+    {
+      "item": "2025 U.S. average unit sales estimate",
+      "value": 490000,
+      "unit": "USD per restaurant",
+      "status": "industry estimate",
+      "confidence": "medium",
+      "as_of": "2026-09-15"
+    }
+  ],
+  "buying_influences": [
+    {
+      "name": "Brian Bancroft",
+      "title": "Subway Procurement / primary RFP contact",
+      "role_etuc": {
+        "value": "Decision role beyond procurement contact unverified",
+        "status": "unknown",
+        "confidence": "low",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "influence": "Unknown",
+      "mode": {
+        "value": "Unknown",
+        "status": "unknown",
+        "confidence": "low",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "source": "Rules of Engagement, Section 3",
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "confidence": "low",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "business_result": "Unknown",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "confidence": "low",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "rating": {
+        "value": "Unknown",
+        "status": "unknown",
+        "confidence": "low",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "current_read": "Formal RFP contact; decision authority and evaluation weight unverified.",
+      "access": "Formal RFP channel only",
+      "next_step": "Confirm evaluation role through permitted procurement Q&A.",
+      "owner": "Bid lead Nicholas Hulayew"
+    },
+    {
+      "name": "Amanda Havens",
+      "title": "Subway technical and Q&A contact",
+      "role_etuc": {
+        "value": "Technical evaluation role inferred from event contact designation; actual buying influence unverified",
+        "status": "hypothesis",
+        "confidence": "low",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "influence": "Unknown",
+      "mode": {
+        "value": "Unknown",
+        "status": "unknown",
+        "confidence": "low",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "source": "Rules of Engagement, Section 3",
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "confidence": "low",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "business_result": "Unknown",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "confidence": "low",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "rating": {
+        "value": "Unknown",
+        "status": "unknown",
+        "confidence": "low",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "current_read": "Formal RFP contact; decision authority and evaluation weight unverified.",
+      "access": "Formal RFP channel only",
+      "next_step": "Confirm evaluation role through permitted procurement Q&A.",
+      "owner": "Bid lead Nicholas Hulayew"
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "opp-subway-na-connected-restaurant-rfp",
+      "name": "North America Connected Restaurant Technology Program",
+      "workstreams": [
+        "kiosk",
+        "kds",
+        "installation_managed_services",
+        "digital_menu_boards"
+      ],
+      "stage": "Active RFP; response due 2026-09-22",
+      "single_sales_objective": {
+        "value": "Win applicable kiosk/KDS, installation and managed services, and/or DMB scope through a compliant and economically credible response.",
+        "status": "hypothesis",
+        "confidence": "medium",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "customer_stated_objective": {
+        "value": "Select preferred vendor(s) meeting or exceeding the requirements for the scope(s) bid; support planned deployment across up to 5,000 U.S. restaurants.",
+        "status": "confirmed",
+        "confidence": "high",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "commercial_hypothesis": {
+        "value": "Store-level pricing, rollout capacity, and integration proof will be pivotal; all response pricing grids are incomplete.",
+        "status": "hypothesis",
+        "confidence": "medium",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "procurement": {
+        "current_stage": "RFP / competitive procurement",
+        "response_deadline": "2026-09-22",
+        "question_deadline": "2026-09-15 16:00 ET",
+        "primary_procurement_contact": "Brian Bancroft",
+        "technical_qa_contact": "Amanda Havens",
+        "additional_procurement_contact": "Suyog Sutar",
+        "required_deliverables": [
+          "Applicable completed native Excel enclosures",
+          "Completed Rules of Engagement bid roster and sign-off",
+          "Requested attachments and transition plan"
+        ]
+      }
+    }
+  ],
+  "qualification": {
+    "criteria": [
+      {
+        "criterion": "Budget and payer identified",
+        "answer": "U",
+        "current_read": "RFP pricing requested; franchisee versus corporate funding unverified.",
+        "next_step": "Confirm payer and approved commercial ceiling through formal RFP process.",
+        "status": "unknown"
+      },
+      {
+        "criterion": "Technical fit demonstrated",
+        "answer": "U",
+        "current_read": "KDS-to-SPOS integration is stated; kiosk-to-SPOS integration not yet built in draft response.",
+        "next_step": "Validate kiosk, payment, MDM, Fresh Connect, ADA and network fit.",
+        "status": "unknown"
+      },
+      {
+        "criterion": "Rollout capacity demonstrated",
+        "answer": "U",
+        "current_read": "RFP cites up to 5,000 stores; 2026 phasing conflicts and installation capacity response is blank.",
+        "next_step": "Build quantified capacity and vendor/partner plan.",
+        "status": "unknown"
+      }
+    ]
+  },
+  "strategic_position": {
+    "euphoria_panic": {
+      "current_state": {
+        "value": "Concern",
+        "status": "hypothesis",
+        "confidence": "medium",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "reason": {
+        "value": "Active buying event but draft responses and pricing are incomplete, and account teams have not aligned.",
+        "status": "hypothesis",
+        "confidence": "medium",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      }
+    },
+    "competition": {
+      "value": "Current competitive field unverified; historical PAR and NCR reports do not establish RFP bidders.",
+      "status": "unknown",
+      "confidence": "low",
+      "as_of": "2026-09-15",
+      "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+    },
+    "position": {
+      "place_in_funnel": "Competitive RFP",
+      "customer_priority": "Program scope and evaluation weighting unknown",
+      "critical_test": "Compliant, priced and deployable response across selected scopes",
+      "position_vs_competition": {
+        "value": "Current bidder field and relative position unknown",
+        "status": "unknown",
+        "confidence": "low",
+        "as_of": "2026-09-15",
+        "scope": "opportunity:opp-subway-na-connected-restaurant-rfp"
+      },
+      "immediate_move": "Complete response and align Worldpay relationship intelligence internally."
+    },
+    "strengths": [
+      {
+        "value": "Existing stated SPOS-to-Genius KDS API integration in draft response",
+        "possible_action": "Validate and document",
+        "best_action_plan": "Include sourced proof in applicable response",
+        "owner": "Bid team",
+        "target": "Before 2026-09-22"
+      },
+      {
+        "value": "Global Payments/Genius product and service breadth, subject to requirement validation",
+        "possible_action": "Validate and document",
+        "best_action_plan": "Include sourced proof in applicable response",
+        "owner": "Bid team",
+        "target": "Before 2026-09-22"
+      }
+    ],
+    "red_flags": [
+      {
+        "value": "All three pricing grids incomplete",
+        "possible_action": "Resolve or disclose",
+        "best_action_plan": "Assign owner and close before bid submission",
+        "owner": "Bid team",
+        "target": "Before 2026-09-22"
+      },
+      {
+        "value": "Kiosk-to-SPOS integration not currently available per draft response",
+        "possible_action": "Resolve or disclose",
+        "best_action_plan": "Assign owner and close before bid submission",
+        "owner": "Bid team",
+        "target": "Before 2026-09-22"
+      },
+      {
+        "value": "Worldpay relationship not yet integrated into bid posture",
+        "possible_action": "Resolve or disclose",
+        "best_action_plan": "Assign owner and close before bid submission",
+        "owner": "Bid team",
+        "target": "Before 2026-09-22"
+      },
+      {
+        "value": "2026 rollout planning discrepancy: 25 versus 200 stores",
+        "possible_action": "Resolve or disclose",
+        "best_action_plan": "Assign owner and close before bid submission",
+        "owner": "Bid team",
+        "target": "Before 2026-09-22"
+      },
+      {
+        "value": "Subway event-contact restrictions create disqualification risk",
+        "possible_action": "Resolve or disclose",
+        "best_action_plan": "Assign owner and close before bid submission",
+        "owner": "Bid team",
+        "target": "Before 2026-09-22"
+      }
+    ]
+  },
+  "bottom_line": "Subway is an active, high-scale RFP with a price-sensitive franchisee base. The current response requires urgent pricing, integration, capacity, bid-team, and Worldpay alignment work before September 22.",
+  "latest_review": {
+    "blue_sheet_owner": "Bid lead Nicholas Hulayew; final account ownership to confirm",
+    "core_contributors": "Genius RFP team and Worldpay relationship manager Stacey; named roles pending alignment",
+    "last_reviewed": "2026-09-15",
+    "review_status": "RFP active / response build at risk",
+    "next_formal_review": "Before internal September 18 draft target and September 22 submission",
+    "current_critical_test": "Can the team deliver compliant, priced kiosk/KDS, installation, and DMB responses that integrate with Subway’s existing stack and can be deployed affordably at scale?"
+  },
+  "template_version": "blue-sheet-v1",
+  "updated_at": "2026-09-15T16:22:47Z",
+  "account_strategy": "Coordinate Nick’s Genius bid team with Worldpay’s Subway relationship manager Stacey as one internal team. The September 15 first JPR call says the RFP excludes POS, Nick is on daily RFP calls, and price plus the current-versus-next-generation kiosk decision are central. Bid only kiosk/KDS, installation/managed services, and/or DMB scopes that can be fully answered and priced by September 22, with an internal draft target of September 18. Lead with integration to SubwayPOS, Subway Payment Manager, FreedomPay, Canopy MDM and Fresh Connect, realistic rollout capacity, and franchisee-level total cost. Reconcile the first call’s reports of unanswered outreach to a new Subway technology leader, a departed Subway contact, possible NCR activity, and a later PAR loss before using them in competitive or access strategy. Keep all event-related customer contact within Subway’s Rules of Engagement. Treat the 25-versus-200-store 2026 phasing conflict, missing kiosk integration, blank pricing, and incomplete bid roster as submission gates.",
+  "account_plan_go_no_go": "pending",
+  "account_plan_as_of": "2026-09-15"
+}

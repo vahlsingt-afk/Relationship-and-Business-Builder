@@ -1,0 +1,63 @@
+{
+  "competitor_id": "comp-conversenow",
+  "competitor_slug": "conversenow",
+  "display_name": "ConverseNow",
+  "aliases": [],
+  "vendor_entity_id": "vendor-conversenow",
+  "primary_category": "drive_thru_ai",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Acquired Valyant AI (drive-thru voice; customers Carl's Jr., Hardee's; approved vendor for Checkers & Rally's)",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:33Z"
+      },
+      {
+        "point": "Deliverect partnership (Apr 16, 2026) routes voice orders into 95k-location order hub",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:23:33Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:47:00Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:00Z",
+  "latest_cos_commentary": {
+    "headline": "Voice platform may compete at the order-entry edge across several restaurant channels.",
+    "genius_exposure": "Voice platform may compete at the order-entry edge across several restaurant channels.",
+    "competitive_timing": "ConverseNow currently describes restaurant voice ordering across drive-thru, phone and other channels.",
+    "sales_response": "Request a named, current chain reference and compare order accuracy and human takeover rates.",
+    "risk_and_uncertainty": "Undated product page provides capability only; no current deployment count verified.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 17
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 17,
+    "pack_claim_count": 13,
+    "pack_claims_with_url": 9,
+    "pack_claims_inherited_url": 2,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 4,
+      "legacy_claims_need_date_and_current_status_check": 13,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

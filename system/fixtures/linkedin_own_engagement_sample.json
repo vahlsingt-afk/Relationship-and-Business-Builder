@@ -1,0 +1,96 @@
+{
+  "_comment": "Sample fixture for linkedin_own_engagement.py. Mirrors the raw LinkedIn REST API posts endpoint response shape with embedded _reactions/_comments/_metadata for smoke/dev use. No real PII.",
+  "posts": [
+    {
+      "id": "urn:li:ugcPost:7200000000001",
+      "commentary": "Multi-unit operators: the gap between POS and ops platforms is widening. Saw three franchisees this month all running separate stacks for labor, inventory, and front-of-house. The vendor consolidation thesis is real.",
+      "publishedAt": 1747180800000,
+      "lifecycleState": "PUBLISHED",
+      "visibility": "PUBLIC",
+      "_metadata": {
+        "socialDetail": {
+          "totalSocialActivityCounts": {
+            "numLikes": 47,
+            "numComments": 12,
+            "numShares": 3
+          }
+        }
+      },
+      "_reactions": [
+        {
+          "actor": "urn:li:person:chason-forehand-id",
+          "type": "LIKE",
+          "createdAt": 1747267200000
+        },
+        {
+          "actor": "urn:li:person:bruce-sellnow-id",
+          "type": "LIKE",
+          "createdAt": 1747270800000
+        }
+      ],
+      "_comments": [
+        {
+          "commenter": "urn:li:person:bruce-sellnow-id",
+          "message": {
+            "text": "Spot on. Saw the same pattern at the McD franchisee meeting last week."
+          },
+          "createdAt": 1747267200000
+        },
+        {
+          "commenter": "urn:li:person:unknown-restaurant-ops",
+          "message": {
+            "text": "Which consolidation plays are you watching most closely?"
+          },
+          "createdAt": 1747280000000
+        }
+      ]
+    },
+    {
+      "id": "urn:li:ugcPost:7200000000002",
+      "commentary": "OTP3 leadership cohort — the value of weekly text rhythm. Twenty years on, still the most valuable channel I have.",
+      "publishedAt": 1746576000000,
+      "lifecycleState": "PUBLISHED",
+      "visibility": "PUBLIC",
+      "_metadata": {
+        "socialDetail": {
+          "totalSocialActivityCounts": {
+            "numLikes": 89,
+            "numComments": 24,
+            "numShares": 6
+          }
+        }
+      },
+      "_reactions": [
+        {
+          "actor": "urn:li:person:dave-richards-id",
+          "type": "LIKE",
+          "createdAt": 1746662400000
+        },
+        {
+          "actor": "urn:li:person:john-adams-id",
+          "type": "LIKE",
+          "createdAt": 1746666000000
+        }
+      ],
+      "_comments": [
+        {
+          "commenter": "urn:li:person:dave-richards-id",
+          "message": {
+            "text": "Twenty-plus and counting. The cadence is the relationship."
+          },
+          "createdAt": 1746662400000
+        }
+      ]
+    },
+    {
+      "id": "urn:li:ugcPost:7200000000003",
+      "commentary": "Asked an operator today what keeps them up at night. Answer: labor. Not cost — availability. The platforms that solve scheduling flexibility for shift workers win the decade.",
+      "publishedAt": 1745366400000,
+      "lifecycleState": "PUBLISHED",
+      "visibility": "PUBLIC",
+      "_metadata": {},
+      "_reactions": [],
+      "_comments": []
+    }
+  ]
+}

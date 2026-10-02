@@ -1,0 +1,21 @@
+{
+  "subject_id": "subject-pos--vendor-par-technology",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-28T13:53:42Z",
+      "generated_for": "todd",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/pos--vendor-par-technology/current/POS_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-10-02T00:52:50Z",
+      "generated_for": "todd",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/pos--vendor-par-technology/current/POS_Battle-Card.md",
+      "superseded": false
+    }
+  ]
+}

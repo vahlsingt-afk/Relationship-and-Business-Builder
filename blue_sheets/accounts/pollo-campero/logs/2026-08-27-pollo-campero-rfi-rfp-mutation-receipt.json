@@ -1,0 +1,24 @@
+{
+  "event_id": "mutation-pollo-campero-rfi-rfp-2026-08-27",
+  "account_id": "acct-pollo-campero",
+  "opportunity_id": "opp-pollo-campero-dmb-payments",
+  "mutation_date": "2026-08-27",
+  "status": "prepared_for_drive_write",
+  "records_updated": [
+    "account.json",
+    "brand_profile.json",
+    "actions.json",
+    "evidence.jsonl",
+    "source_index.json"
+  ],
+  "records_unchanged": [
+    "contradictions.json"
+  ],
+  "sources_persisted": [
+    "drive:180_wXodEG8RrSm3jk5EqfGcgqDAk1YtH",
+    "drive:16vFQLGQQOJijZybkbbwQPRr0S1Zpji6d",
+    "drive:1rkSONTHZp2DCre3YBiNOnl60mXdt_GLt",
+    "drive:1zSl2b1qWzzDwWPhAyggjr8mkKjMt8KGD"
+  ],
+  "summary": "Advanced the DMB opportunity to formal RFP, recorded the 2026-09-04 deadline, added Katherine, persisted source lineage, captured RFI commitments and RFP deltas, and added response actions."
+}

@@ -1,0 +1,58 @@
+{
+  "competitor_id": "comp-fresh-kds",
+  "competitor_slug": "fresh-kds",
+  "display_name": "Fresh KDS",
+  "aliases": [],
+  "vendor_entity_id": "vendor-fresh-kds",
+  "primary_category": "kds_kitchen_ops",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Integrates with Square, Clover, SpotOn, TouchBistro, Lightspeed K-Series and Oracle, plus Olo, DoorDash and Uber Eats",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:21Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:46:59Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:59Z",
+  "latest_cos_commentary": {
+    "headline": "Accessible KDS may defend smaller kitchens and grow into multi-unit workflow discussions.",
+    "genius_exposure": "Accessible KDS may defend smaller kitchens and grow into multi-unit workflow discussions.",
+    "competitive_timing": "Fresh KDS markets a tablet-based kitchen display system for iPad and Android restaurant workflows.",
+    "sales_response": "Test order routing, expo workflow and cross-store reporting against Genius Kitchen at a real operating site.",
+    "risk_and_uncertainty": "Undated product page does not verify enterprise deployment scale.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 55
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 55,
+    "pack_claim_count": 10,
+    "pack_claims_with_url": 5,
+    "pack_claims_inherited_url": 4,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 5,
+      "legacy_claims_need_date_and_current_status_check": 10,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

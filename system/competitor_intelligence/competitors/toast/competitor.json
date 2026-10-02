@@ -1,0 +1,354 @@
+{
+  "competitor_id": "comp-toast",
+  "competitor_slug": "toast",
+  "display_name": "Toast",
+  "aliases": [
+    "Toast Loyalty",
+    "Toast xtraCHEF",
+    "Delphi Display Systems (Toast)"
+  ],
+  "vendor_entity_id": "vendor-toast",
+  "primary_category": "pos",
+  "competes_on": [
+    "back_office",
+    "digital_menu_boards",
+    "loyalty_engagement",
+    "payments",
+    "pos",
+    "restaurant_os_platform"
+  ],
+  "positioning_summary": "Clearest share gainer in restaurant POS/platforms: ~164,000 total locations at YE2025, +30,000 net in 2025 (~8,000 in Q4), landing enterprise deals with Applebee's (~1,500 US locations), Firehouse Subs, Papa Murphy's. POS-first, expanding into payroll/scheduling/review management -- reports clean unified location counts rather than per-product metrics.",
+  "todds_pov": "Toast owns the momentum in the market narrative right now, taking share across independents, regional groups, and increasingly enterprise.",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Broader enterprise operations depth (drive-thru, kitchen orchestration, franchise back office, stadium/venue) than Toast's POS-first stack",
+        "evidence_id": "doc-2026-08-28-par-genius-oracle-competitive-positioning-recovered",
+        "added_at": "2026-08-28T17:44:56Z"
+      },
+      {
+        "point": "Hardware memory cost pressure: \"P&L impact in '27 to be greater than '26\" (Elena Gomez, CFO)",
+        "evidence_id": "note-0011",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "Enterprise/QSR drive-thru is new territory: first drive-thru product announced 2025 — direct threat to Genius drive-thru but unproven at scale",
+        "evidence_id": "note-0012",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "Trails Clover in ex-top-250 US share (17% vs 20%)",
+        "evidence_id": "note-0013",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "Toast's own research finds 48% of diners prioritize being remembered over points (22%) — i.e., points-based loyalty is losing appeal",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:47:20Z"
+      },
+      {
+        "point": "Product page does not state support for non-Toast POS, which limits it in multi-POS enterprise systems",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:22Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Strongest momentum and clean, unified location-count reporting vs. Genius's more nuanced installation story",
+        "evidence_id": "doc-2026-08-28-par-genius-oracle-competitive-positioning-recovered",
+        "added_at": "2026-08-28T17:44:56Z"
+      },
+      {
+        "point": "Record 9,500 net location adds in Q2 2026",
+        "evidence_id": "note-0007",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "Profitable scale: Q2 2026 adj. EBITDA $221M; GAAP operating income $152M; FY26 guide raised (recurring gross profit $2.325–2.355B; adj. EBITDA $805–825M)",
+        "evidence_id": "note-0008",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "Enterprise momentum: Applebee's (~1,500 US units, Apr 2025), Firehouse Subs, Papa Murphy's (2025), Perkins/Huddle House",
+        "evidence_id": "note-0009",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "Baird projects Toast from 134k (end 2024) to 244k locations by end 2028",
+        "evidence_id": "note-0010",
+        "added_at": "2026-09-26T12:23:30Z"
+      },
+      {
+        "point": "Pilot: restaurants with Marketing Success Managers averaged +8% sales vs. similar Toast restaurants",
+        "evidence_id": "note-0002",
+        "added_at": "2026-09-26T12:47:20Z"
+      },
+      {
+        "point": "Toast's data: loyalty members return ~2x the rate of new guests; 86% of email orders come from returning guests",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:47:20Z"
+      },
+      {
+        "point": "IQ Grow \"on track to become the fastest product to reach $10 million in ARR\" (Aman Narang, CEO)",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:20Z"
+      },
+      {
+        "point": "Case study: Underbelly Hospitality cut costs ~3%, \"saving them over $330,000 on the year\"",
+        "evidence_id": "note-0002",
+        "added_at": "2026-09-26T12:47:22Z"
+      },
+      {
+        "point": "Bundled with the fastest-growing restaurant POS (Toast, ~180k locations) — the closest analog to Genius's POS+DMB bundle",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:23:34Z"
+      }
+    ]
+  },
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:46:54Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:54Z",
+  "latest_cos_commentary": {
+    "headline": "Large integrated POS, payments and AI competitor with rising enterprise investment.",
+    "genius_exposure": "Large integrated POS, payments and AI competitor with rising enterprise investment.",
+    "competitive_timing": "~180,000 locations at June 2026, 9,500 net adds in Q2, and $221M adjusted EBITDA. ToastIQ Grow was described as approaching $10M ARR, not as a completed milestone. Latest check: Toast says Alicart Group deployed its platform across Carmine’s, Virgil’s Real BBQ and Mermaid Oyster Bar in major markets.",
+    "sales_response": "For enterprise bids, benchmark proven multi-unit deployment, payments economics and operator workflow against Toast by segment.",
+    "risk_and_uncertainty": "Do not infer ToastIQ Grow ARR already reached $10M or that all 180,000 locations are enterprise restaurants. Named portfolio deployment; source does not supply a location-by-location installation audit.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 1
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 1,
+    "pack_claim_count": 20,
+    "pack_claims_with_url": 19,
+    "pack_claims_inherited_url": 4,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 1,
+      "legacy_claims_need_date_and_current_status_check": 20,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  },
+  "vendor_claims": [
+    {
+      "value": "Broad integrated restaurant technology and commerce ecosystem.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Toast has one of the broadest integrated restaurant ecosystems in the competitive set.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Breadth alone does not establish superiority of individual modules."
+    }
+  ],
+  "products": [
+    {
+      "value": "Toast POS (POS)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Toast Payments (Payments)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Toast Online Ordering (Digital Ordering)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Toast Marketing/CRM (Marketing/CRM)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Toast Loyalty (Loyalty)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Toast Hardware/KDS (Hardware/Kitchen)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "xtraCHEF (Back Office/Invoice/Cost Management)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Toast Payroll/Workforce (Workforce/Payroll)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Toast IQ (AI/Intelligence)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "The platform architecture creates meaningful ecosystem coupling, including payments and approved-hardware dependencies.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true,
+      "limitations_or_conflicts": "Business impact varies by operator requirements and contract."
+    },
+    {
+      "value": "The bounded research cycle did not validate enough independent review evidence to establish recurring platform-wide shortcomings with high confidence.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-28",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "rbb-packet:rbb-competitor-platform-baseline-20260929",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true,
+      "limitations_or_conflicts": "Must not be interpreted as evidence that shortcomings do not exist."
+    },
+    {
+      "value": "Vendor-originated evidence does not prove performance, ROI, reliability, implementation quality, or systemwide deployment; independent validation remains incomplete.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "rbb-packet:rbb-competitor-category-gapfill-20260929-batches02-04",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "strengths": [],
+  "weaknesses": [],
+  "key_customers": [],
+  "recent_news": [],
+  "product_lineage": []
+}

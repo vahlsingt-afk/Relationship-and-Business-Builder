@@ -1,0 +1,129 @@
+{
+  "phase2_file": "system/research/phase2_payments_evidence_draft_2026-08-03.json",
+  "category": "Payments",
+  "rows_processed": 15,
+  "rows_skipped": 0,
+  "dry_run": true,
+  "added": 14,
+  "updated": 0,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 14,
+    "enrich_existing_relationship": 0,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 0,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 1,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Global Payments",
+        "customer": "CKE Restaurants Holdings (Hardee's and Carl's Jr.)",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-cke-restaurants-holdings-hardee-s-and-carl-s-jr-payments-acquirer-or-payments-vendor-global-payments"
+      },
+      {
+        "vendor": "Global Payments",
+        "customer": "Subway",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-subway-payments-acquirer-or-payments-vendor-global-payments"
+      },
+      {
+        "vendor": "Global Payments",
+        "customer": "KFC (Yum! Brands, Asia Pacific)",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-kfc-yum-brands-asia-pacific-payments-acquirer-or-payments-vendor-global-payments"
+      },
+      {
+        "vendor": "Global Payments",
+        "customer": "Pizza Hut (Yum! Brands, Asia Pacific)",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-pizza-hut-yum-brands-asia-pacific-payments-unknown-vendor-global-payments"
+      },
+      {
+        "vendor": "Global Payments",
+        "customer": "Bojangles",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-bojangles-payments-unknown-vendor-global-payments"
+      },
+      {
+        "vendor": "Adyen",
+        "customer": "Subway",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-subway-payments-acquirer-or-payments-vendor-adyen"
+      },
+      {
+        "vendor": "Adyen",
+        "customer": "Five Guys and Blaze Pizza (Cypress Five Star franchisee, Canada)",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-five-guys-and-blaze-pizza-cypress-five-star-franchisee-canada-payments-franchisee-deployment-vendor-adyen"
+      },
+      {
+        "vendor": "Adyen",
+        "customer": "Guzman y Gomez",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-guzman-y-gomez-payments-regional-deployment-vendor-adyen"
+      },
+      {
+        "vendor": "Shift4 Payments",
+        "customer": "Live! Hospitality & Entertainment",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-live-hospitality-entertainment-payments-acquirer-or-payments-vendor-shift4-payments"
+      },
+      {
+        "vendor": "FreedomPay",
+        "customer": "Taco John's",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-taco-john-s-payments-acquirer-or-payments-vendor-freedompay"
+      },
+      {
+        "vendor": "FreedomPay",
+        "customer": "Shake Shack",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-shake-shack-payments-acquirer-or-payments-vendor-freedompay"
+      },
+      {
+        "vendor": "CardFree",
+        "customer": "Dunkin'",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-dunkin-payments-acquirer-or-payments-vendor-cardfree"
+      },
+      {
+        "vendor": "CardFree",
+        "customer": "Lazy Dog Restaurants",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-lazy-dog-restaurants-payments-acquirer-or-payments-vendor-cardfree"
+      },
+      {
+        "vendor": "Worldpay",
+        "customer": "Boparan Restaurant Group",
+        "tech_category": "Payments",
+        "relationship_id": "rel-brand-boparan-restaurant-group-payments-acquirer-or-payments-vendor-worldpay"
+      }
+    ],
+    "enrich_existing_relationship": [],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [
+      {
+        "vendor": "Fiserv",
+        "customer": "Manhatta (Union Square Hospitality Group)",
+        "tech_category": "Payments",
+        "relationship_id": null
+      }
+    ],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

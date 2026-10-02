@@ -1,0 +1,371 @@
+{
+  "brand_id": "brand-wendy-s",
+  "brand_name": "Wendy's",
+  "identity": {
+    "parent_ownership": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "hq_city_state": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "founded_year": {
+      "value": "1969",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "market_identity": {
+      "value": "Limited-service / quick-service restaurant brand",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "ownership_type": {
+      "value": "Private",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "operating_structure": {
+      "value": "Brand operates through a franchise-led or mixed restaurant system; source-specific scope should be preserved.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    }
+  },
+  "synopsis": {
+    "value": "Wendy's is a limited-service restaurant brand. the reviewed evidence indicates a franchise-led or mixed operating model. For RBB, ownership and operator structure should be kept separate from any technology deployment claims, and only explicitly evidenced technology relationships are included here.",
+    "status": "reported",
+    "evidence_ids": [
+      "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+    ],
+    "confidence": "medium",
+    "as_of": "2026-09-29",
+    "scope": "brand",
+    "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": 5933.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchised_units": {
+      "value": 5552.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "company_owned_units": {
+      "value": 381.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [
+    {
+      "signal_type": "other",
+      "value": "8-K  - Current report",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-07-28",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/30697/000119312526321244/0001193125-26-321244-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↑3.9% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-05",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↓7.5% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-06",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "financial_health",
+      "value": "8-K  - Current report",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-07",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/30697/000119312526339132/0001193125-26-339132-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "10-Q  - Quarterly report [Sections 13 or 15(d)]",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-07",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/30697/000003069726000116/0000030697-26-000116-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↑4.1% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-07",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📊 VOLUME SPIKE] Wendy's Co (WEN) 2.5x normal volume — elevated activity",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-07",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↓5.1% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-10",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↑3.4% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-11",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↑14.7% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-12",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📊 VOLUME SPIKE] Wendy's Co (WEN) 5.6x normal volume — elevated activity",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-12",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↑5.8% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-19",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↑3.2% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-25",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↓13.5% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-27",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📊 VOLUME SPIKE] Wendy's Co (WEN) 2.4x normal volume — elevated activity",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-27",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↑6.1% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-31",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↓4.4% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-03",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↓5.2% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-08",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↓5.8% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-16",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↓3.6% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-18",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Wendy's Co (WEN) ↓3.3% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-24",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/WEN"
+    }
+  ],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-25T21:08:00Z",
+  "updated_at": "2026-09-29T15:48:18Z",
+  "trajectory": {
+    "badge": "Flat",
+    "metric_used": "unit_delta_pct",
+    "value_pct": -1.6086235489220564,
+    "as_of_year": "2024",
+    "underlying": {
+      "system_sales_usd": 12553800000.0,
+      "unit_count": 5933.0,
+      "auv_usd": 2098000.0,
+      "sales_delta_pct": 2.1855388146809602,
+      "units_delta_pct": -1.6086235489220564
+    },
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

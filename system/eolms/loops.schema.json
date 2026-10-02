@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://relationship-bridge.internal/schemas/eolms/loops.schema.json",
+  "title": "ELoop",
+  "description": "Executive Open Loop Management System loop record. See system/design/EOLMS_SPEC.md.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id", "title", "category", "status", "priority", "owner",
+      "created_at", "updated_at", "last_activity", "confidence", "history"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "id": { "type": "string", "pattern": "^EL-\\d{4}-\\d{2}-\\d{2}-\\d{3}$" },
+      "title": { "type": "string", "minLength": 1 },
+      "category": {
+        "type": "string",
+        "enum": ["strategic_initiative", "project", "action", "decision", "waiting", "relationship", "opportunity", "research"]
+      },
+      "status": {
+        "type": "string",
+        "enum": ["identified", "qualified", "active", "waiting", "deferred", "blocked", "dormant", "monitor", "pending_verification", "completed", "archived"]
+      },
+      "priority": { "type": "string", "enum": ["critical", "high", "medium", "low", "monitor"] },
+      "strategic_value": { "type": ["string", "null"] },
+      "owner": { "type": "string" },
+      "created_at": { "type": "string", "format": "date" },
+      "updated_at": { "type": "string", "format": "date" },
+      "last_activity": { "type": "string", "format": "date" },
+      "next_action": { "type": ["string", "null"] },
+      "waiting_on": { "type": ["string", "null"] },
+      "activation_date": { "type": ["string", "null"], "format": "date" },
+      "activation_condition": { "type": ["string", "null"] },
+      "due_date": { "type": ["string", "null"], "format": "date" },
+      "cadence_days": { "type": ["integer", "null"], "minimum": 1 },
+      "related_people": { "type": "array", "items": { "type": "string" } },
+      "related_orgs": { "type": "array", "items": { "type": "string" } },
+      "related_loop_ids": { "type": "array", "items": { "type": "string" } },
+      "blocked_by": { "type": "array", "items": { "type": "string" } },
+      "related_documents": { "type": "array", "items": { "type": "string" } },
+      "source_ref": { "type": ["string", "null"] },
+      "confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+      "history": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["ts", "event"],
+          "properties": {
+            "ts": { "type": "string" },
+            "event": {
+              "type": "string",
+              "enum": ["created", "status_change", "field_update", "note", "intelligence_signal", "auto_transition", "migrated"]
+            },
+            "from": { "type": "string" },
+            "to": { "type": "string" },
+            "note": { "type": "string" }
+          }
+        }
+      },
+      "tags": { "type": "array", "items": { "type": "string" } },
+      "requires_verification": {
+        "type": "boolean",
+        "description": "If true, a 'complete' intent match transitions this loop to pending_verification instead of completed. See EOLMS_SPEC.md / RB-DEFECT-060 follow-up."
+      }
+    }
+  }
+}

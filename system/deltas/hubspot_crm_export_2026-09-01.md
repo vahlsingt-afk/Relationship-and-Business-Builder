@@ -1,0 +1,252 @@
+# HubSpot CRM Export Ingest — 2026-09-01
+
+**Source tag:** `hubspot_crm_export_2026-09-01`
+
+## Mutation Report
+
+- Knowledge Sources Updated: 1
+- People Imported: 338
+- Existing People Updated: 337
+- New People Created: 0
+- Duplicate Candidates: 0
+- Companies Added: 0
+- Relationship Links Created: not computed
+- Knowledge Mutations Applied: 337
+- Confidence: 70.0%
+
+- Relationship Links Created not computed — a HubSpot contacts CSV carries no Industry/Event/Opportunity/Meeting data to link (RB-DEFECT-064 Stage 5, still open).
+
+## Intelligence Generated
+
+**Dormant relationships resurfaced (223):**
+
+- Zafar — no last_touch on file
+- Adam Kelemen — no last_touch on file
+- Gus Stathes — no last_touch on file
+- Dave — no last_touch on file
+- Mw — no last_touch on file
+- Unknown HubSpot Contact — no last_touch on file
+- Stefan — no last_touch on file
+- Marshaedmands — no last_touch on file
+- Dgoldstein — no last_touch on file
+- Tammy — no last_touch on file
+- Sam Kaufman — no last_touch on file
+- Hugo — no last_touch on file
+- Clark Matthews — no last_touch on file
+- Jgunn Cia — no last_touch on file
+- Thejasongunn — no last_touch on file
+- Janice Wetter — no last_touch on file
+- Drewholst — no last_touch on file
+- Chiefitguru — no last_touch on file
+- Unknown HubSpot Contact — no last_touch on file
+- Gennadiy Goldenshteyn — no last_touch on file
+- Preston — no last_touch on file
+- Rbsuzu — no last_touch on file
+- Jedkleckner — no last_touch on file
+- Josh Glantz — no last_touch on file
+- Unknown HubSpot Contact — no last_touch on file
+- Unknown HubSpot Contact — no last_touch on file
+- Pmolinari — no last_touch on file
+- Kevinnemeth — no last_touch on file
+- Kayla — no last_touch on file
+- Nmrobillard — no last_touch on file
+- Steven Senzer — no last_touch on file
+- Mvorsanger — no last_touch on file
+- Joann — no last_touch on file
+- Justin — no last_touch on file
+- Ssidwell — no last_touch on file
+- Brian — no last_touch on file
+- Chad — no last_touch on file
+- Peter Gosdanian — no last_touch on file
+- Cmunz — no last_touch on file
+- Gregory Zamfotis — no last_touch on file
+- Jradow — no last_touch on file
+- Mpodorsky — no last_touch on file
+- Unknown HubSpot Contact — no last_touch on file
+- Fabio — no last_touch on file
+- Mq — no last_touch on file
+- Unknown HubSpot Contact — no last_touch on file
+- Unknown HubSpot Contact — no last_touch on file
+- Elizabeth Jenswold — no last_touch on file
+- Ashwin Rajput — no last_touch on file
+- Meghan Winn — no last_touch on file
+- James Maddalena — last touch 599 days ago
+- Guy Salisch — no last_touch on file
+- Paul — no last_touch on file
+- Elise — no last_touch on file
+- Howard Gordon — no last_touch on file
+- Jared MIZRAHI — no last_touch on file
+- Bob Hansen — no last_touch on file
+- Mike Schwartz — no last_touch on file
+- Todd Lawrence — no last_touch on file
+- Christina Kapeli — no last_touch on file
+- spencer — no last_touch on file
+- Eman Abdur-Rahman — no last_touch on file
+- Russell Munday — no last_touch on file
+- Erika — no last_touch on file
+- Thomas Macchia — no last_touch on file
+- David Hudson — no last_touch on file
+- Brittany Tamul — no last_touch on file
+- J. J. Checki III, CFP® — no last_touch on file
+- Matt Lovell — no last_touch on file
+- Thomas Wheat — no last_touch on file
+- Matt@youda.co — no last_touch on file
+- Chris Venus — no last_touch on file
+- Michelle Krogmeier — no last_touch on file
+- Rob Felt — no last_touch on file
+- Winston Jaeb — no last_touch on file
+- Jozef Ogrodny — no last_touch on file
+- Anthony Grant — no last_touch on file
+- Steven Lawrence — no last_touch on file
+- Chris Guido — no last_touch on file
+- Matt Rosenthal Tx — no last_touch on file
+- John Thomas Browning — no last_touch on file
+- Daniel Martinez — no last_touch on file
+- Spencer Amadon / Mark Suleman — no last_touch on file
+- Kevin Quinn - per KJ — no last_touch on file
+- Jillian J Majka — no last_touch on file
+- Justin Maynard — no last_touch on file
+- mollie — no last_touch on file
+- WInston Jaeb — no last_touch on file
+- Brian Hallinan — no last_touch on file
+- Rebecca Salvador — no last_touch on file
+- Matthew Venegas — no last_touch on file
+- Lisa Egbert — last touch 532 days ago
+- Patrick Bobrukiewicz — no last_touch on file
+- Oleg Moskalensky — no last_touch on file
+- Andrew Murphy — no last_touch on file
+- Patrick Bobrukiewicz — no last_touch on file
+- Staci Drilling — no last_touch on file
+- Oliver — no last_touch on file
+- Faizan Khan — no last_touch on file
+- Anonh Khouvongsavanh — no last_touch on file
+- Josh Gardner — last touch 707 days ago
+- Melvin Daniel — no last_touch on file
+- Atul — no last_touch on file
+- Annette Blaylock — no last_touch on file
+- John Crowe — no last_touch on file
+- Pedja Radjenovic — no last_touch on file
+- Cijoy Olickal — last touch 432 days ago
+- Brittany Williams — no last_touch on file
+- Jonathan Presley — no last_touch on file
+- Kenneth Pilcher — no last_touch on file
+- Brandon — no last_touch on file
+- Amy — no last_touch on file
+- Sarah McAloon — no last_touch on file
+- Sheryar — no last_touch on file
+- Garrett — no last_touch on file
+- Hutch — no last_touch on file
+- Ovais — no last_touch on file
+- Chason F — no last_touch on file
+- Eric — no last_touch on file
+- Angie Eckelkamp — no last_touch on file
+- Jameson Chatman — no last_touch on file
+- B Dog — no last_touch on file
+- Robert Calilli — no last_touch on file
+- Tom Bennett — no last_touch on file
+- Gileana Sonfield — no last_touch on file
+- Zana DeVine — no last_touch on file
+- Jim Jackson — last touch 3140 days ago
+- Lisa Scroggins — no last_touch on file
+- adam wyden — no last_touch on file
+- Verlen Larsen — no last_touch on file
+- Jonathan Pritchard — no last_touch on file
+- Ashlyn Freeman — no last_touch on file
+- Tracy Neal — no last_touch on file
+- John C. Metz — no last_touch on file
+- Steve Funk — no last_touch on file
+- Jed Sullivan — no last_touch on file
+- Ke Wegner — no last_touch on file
+- Seyi Oshinowo — no last_touch on file
+- Ian Rehmet — no last_touch on file
+- Jon Evans — no last_touch on file
+- Maarten Potjer — no last_touch on file
+- Zain — no last_touch on file
+- Ryan Hart — no last_touch on file
+- Liz Coster — no last_touch on file
+- Jessica Jennings — no last_touch on file
+- Ira Fils — no last_touch on file
+- Solamon Estin — no last_touch on file
+- Zein Sweis — no last_touch on file
+- Robert Tuttle — no last_touch on file
+- Daniel Smith — last touch 3601 days ago
+- Brandon Carlisle — no last_touch on file
+- Karl Ruter — no last_touch on file
+- Adam Poirier — no last_touch on file
+- Jerry Phillips — no last_touch on file
+- Alain Souligny — no last_touch on file
+- Mark Barakat — no last_touch on file
+- Nate Jones — no last_touch on file
+- Anthony Savini — no last_touch on file
+- Sophia Goldberg — no last_touch on file
+- Katherine Barone — no last_touch on file
+- Ben Johannes — no last_touch on file
+- Stephen Brown — no last_touch on file
+- Brett Bruns — last touch 656 days ago
+- Lee Howley — no last_touch on file
+- Allie Haskell — no last_touch on file
+- Michael Brennan — no last_touch on file
+- Min Choe — no last_touch on file
+- Alex Fedorchuk — no last_touch on file
+- Michael Griffin — no last_touch on file
+- Michael J. Manzo — no last_touch on file
+- Jen Esnough — no last_touch on file
+- Chris Lucas — no last_touch on file
+- Scott O'Neill — no last_touch on file
+- Larry Linen — no last_touch on file
+- Jaime Nino — last touch 720 days ago
+- Ron DiNella — no last_touch on file
+- Shannon Brooks — no last_touch on file
+- Patrick Gallagher — no last_touch on file
+- Vanesa Rodriguez — no last_touch on file
+- Dean L. Schmaus — no last_touch on file
+- Keith Engler — no last_touch on file
+- Ricky Richardson — no last_touch on file
+- Robert Peterson — no last_touch on file
+- Payton Victoria Wormley — no last_touch on file
+- Patrick Gilchrist — no last_touch on file
+- Juliana Pflugfelder — no last_touch on file
+- Ariel Olivo — no last_touch on file
+- Bill Lindsey — no last_touch on file
+- Peter Wiley — no last_touch on file
+- Kevin Truong — no last_touch on file
+- Kevin Clements — no last_touch on file
+- jonathan.sharp@fbrest.com Sharp — no last_touch on file
+- Neal E Sherman — no last_touch on file
+- William Washington — no last_touch on file
+- Patrick Cormany — last touch 712 days ago
+- Mark Wolok — no last_touch on file
+- Jos — no last_touch on file
+- Jason '- CEO @ Popl — no last_touch on file
+- Guy Carney — no last_touch on file
+- Kelsey Regier — last touch 708 days ago
+- Dean T. Haskell — no last_touch on file
+- Kiel Hallerud — no last_touch on file
+- Jarrod Newman — no last_touch on file
+- Popl — no last_touch on file
+- Ja Deri — no last_touch on file
+- Louis Cantu — no last_touch on file
+- Rebecca Durica Rasch — no last_touch on file
+- Mr. Charles T Reiser — no last_touch on file
+- Yamato Miura — no last_touch on file
+- Monty Whitehurst — no last_touch on file
+- Robert Bird — no last_touch on file
+- John Scott — no last_touch on file
+- Mike "sully" Sullivan — no last_touch on file
+- Matt Wampler — no last_touch on file
+- Ashley Dawson — no last_touch on file
+- Sérgio Rodrigues — no last_touch on file
+- Timothy Oliver lee — no last_touch on file
+- Micheal Byrd — no last_touch on file
+- Jeffrey Casanova — no last_touch on file
+- Kimberley Modests — no last_touch on file
+- Emily Hedrick — no last_touch on file
+- Shawna Suckow — no last_touch on file
+- Vinod — last touch 384 days ago
+
+- No warm-intro broker found for any newly created contact's company.
+
+## What the system did NOT do
+
+- Did not overwrite any existing canonical field silently (conflicts logged instead).
+- Did not create Person->Industry/Event/Opportunity/Meeting edges — this CSV has no such data (RB-DEFECT-064 Stage 5, still open).

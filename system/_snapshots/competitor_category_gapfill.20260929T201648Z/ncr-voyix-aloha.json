@@ -1,0 +1,94 @@
+{
+  "competitor_id": "comp-ncr-voyix-aloha",
+  "competitor_slug": "ncr-voyix-aloha",
+  "display_name": "NCR Voyix (Aloha)",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Shrinking reported revenue: Q2 2026 revenue $523M (−21% reported; +1% pro forma); restaurant revenue $158M (−23%); FY26 revenue guide −13% to −18% (−2% to −3% pro forma)",
+        "evidence_id": "note-0007",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "Hardware outsourced to Ennoconn (Foxconn subsidiary) from Jan 2026; hardware revenue reported net from Q2 2026",
+        "evidence_id": "note-0008",
+        "added_at": "2026-09-26T12:23:31Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Huge installed base; restaurant adj. EBITDA margin 36.7% (Q2 2026)",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "Claims to have \"reclaimed the top position in new restaurant deployments\" (Dec 2025)",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:23:31Z"
+      },
+      {
+        "point": "Remaining contract value $286M (+65% YoY)",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:23:31Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-09-29T14:57:10Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:10Z",
+  "latest_cos_commentary": {
+    "headline": "Aloha Next plus Voyix Pay is an enterprise POS-and-payments alternative.",
+    "genius_exposure": "Aloha Next plus Voyix Pay is an enterprise POS-and-payments alternative.",
+    "competitive_timing": "85,000 platform sites and over 8,500 payment sites at June 30, 2026; Pizza Ranch selected Aloha Next and Voyix Pay for more than 200 restaurants. Second check: Pei Wei expanded its NCR Voyix POS agreement in May 2026.",
+    "sales_response": "Track Pizza Ranch implementation and compare operational stability, service model and payments migration terms.",
+    "risk_and_uncertainty": "Pizza Ranch agreement is a selection, not a completed site rollout. Expanded agreement does not quantify live sites or rollout completion.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 3
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 3,
+    "pack_claim_count": 18,
+    "pack_claims_with_url": 18,
+    "pack_claims_inherited_url": 2,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 18,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

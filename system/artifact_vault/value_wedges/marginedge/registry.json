@@ -1,0 +1,21 @@
+{
+  "subject_id": "subject-marginedge",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-27T09:18:47Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/marginedge/current/MarginEdge_Value-Wedge.md",
+      "superseded": false
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-29T09:19:15Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/marginedge/current/MarginEdge-vs-Genius_Value-Wedge.json",
+      "superseded": false
+    }
+  ]
+}

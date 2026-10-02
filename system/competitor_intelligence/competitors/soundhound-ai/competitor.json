@@ -1,0 +1,74 @@
+{
+  "competitor_id": "comp-soundhound-ai",
+  "competitor_slug": "soundhound-ai",
+  "display_name": "SoundHound AI",
+  "aliases": [],
+  "vendor_entity_id": "vendor-soundhound-ai",
+  "primary_category": "drive_thru_ai",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Deep losses: Q2 2026 GAAP net loss $(42.8)M; adj. EBITDA $(9.6)M",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:23:33Z"
+      },
+      {
+        "point": "Growth heavily acquisition-driven; subscription revenue \"mainly driven by revenue from acquisitions in the Americas\"; stock ~−35% YTD (Sep 2026), market cap ~$2.7B",
+        "evidence_id": "note-0007",
+        "added_at": "2026-09-26T12:23:33Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Broadest restaurant logo list: Five Guys, IHOP, Jersey Mike's (expanded), Ruby Tuesday (new), Lazy Dog, Habit Burger, Red Lobster, Torchy's (renewals); a pizza chain live in 75%+ of locations",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:33Z"
+      },
+      {
+        "point": "Bought SYNQ3 (restaurant voice AI, ~$25M, announced Dec 2023) to become \"the largest voice AI provider for restaurants\"",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:23:33Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-10-02T09:46:57Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:57Z",
+  "latest_cos_commentary": {
+    "headline": "Voice ordering distribution through an order-management partner may reach existing enterprise stacks.",
+    "genius_exposure": "Voice ordering distribution through an order-management partner may reach existing enterprise stacks.",
+    "competitive_timing": "SoundHound and Deliverect announced a July 2026 partnership to automate restaurant voice ordering. Latest check: SoundHound says Casey’s deployed phone-ordering agents in more than 2,600 locations and handled over 21M guest interactions. SoundHound reported Q2 2026 revenue of $61.9M, cash of $203M at June 30 and no debt.",
+    "sales_response": "Demand field-level completion, accuracy, labor and exception economics before changing the account’s drive-thru roadmap.",
+    "risk_and_uncertainty": "Partnership is not a verified drive-thru rollout at every Deliverect customer. Casey’s use case is phone ordering for food, not 2,600 voice-enabled drive-thru lanes. Company-wide financial results include non-restaurant segments; operating cash use remains a separate consideration.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 16
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 16,
+    "pack_claim_count": 14,
+    "pack_claims_with_url": 13,
+    "pack_claims_inherited_url": 3,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 1,
+      "legacy_claims_need_date_and_current_status_check": 14,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

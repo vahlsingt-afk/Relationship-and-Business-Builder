@@ -1,0 +1,55 @@
+{
+  "competitor_id": "comp-verifone",
+  "competitor_slug": "verifone",
+  "display_name": "Verifone",
+  "aliases": [
+    "VeriFone Systems",
+    "VeriFone Holdings"
+  ],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:06Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:37Z",
+  "latest_cos_commentary": {
+    "headline": "Verifone is a large, Francisco Partners-owned global payments and POS hardware/software provider (private since 2018) with an explicit hospitality/restaurant vertical and multi-trillion-dollar annual processing volume.",
+    "genius_exposure": "Direct competitor to Genius across pos and payments, given Verifone's payment terminal hardware and hospitality-specific solutions.",
+    "competitive_timing": "No dated 2025-2026 restaurant-specific product news was surfaced in this pass; ownership and leadership facts are the most current confirmed data points.",
+    "sales_response": "Treat Verifone as a scale incumbent on payments hardware/processing; confirm which specific product line (terminal hardware vs. software vs. gateway) a prospect uses before positioning against it.",
+    "risk_and_uncertainty": "Verifone is privately held, so no public financial filings exist to independently verify scale claims; client-roster mentions (McDonald's, Starbucks) are unverified vendor marketing.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 106
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 106,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 1,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Named Customers (verified independently)",
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "Independent confirmation of McDonald's/Starbucks as active restaurant POS clients (currently only from Verifone's own marketing)",
+        "Current financial performance (private company, no public filings)"
+      ]
+    }
+  }
+}

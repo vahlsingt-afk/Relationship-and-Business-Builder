@@ -1,0 +1,29 @@
+{
+  "file_id": "cap-241006b2b20cc11b",
+  "queued_at": "2026-09-14T21:00:39+00:00",
+  "source_id": "pasted_content",
+  "source_label": "Pasted content",
+  "source_file": "pasted_content:e65e91ba54583e0b",
+  "capture_type": "pasted_content",
+  "title_hint": "Maria C. Ocampo Mercado LinkedIn post on AI, human judgment, and work redesign",
+  "transcription_method": "pre_transcribed",
+  "transcript": "Maria C. Ocampo Mercado\nDriving agentic AI transformations and business building at scale\n\nI think we may have spent the last two years asking the wrong AI question. The question has mostly been: What can we automate? The more interesting one is: What becomes more valuable when automation is everywhere?\n\nGartner\u2019s latest Future of Work view is pretty blunt on this. They predict that by 2029, 30% of employees laid off because of AI replacement will need to be rehired, often at a higher cost. They also argue that organizations focusing on AI mainly as a cost-cutting tool risk cutting too deeply, too early.\n\nThat feels important. Because the Hype Cycle graphic tells a slightly awkward story too: a lot of the flashy AI stuff is still sitting around the peak of inflated expectations, while things like judgment, human-agent collaboration, decision intelligence, leadership, adaptability and context are becoming the harder problem.\n\nMy slightly controversial take: AI literacy is going to become table stakes much faster than people think. The differentiator will not be knowing how to use AI. It will be knowing how to redesign work around humans + agents rather than humans or agents and how to reinvest productivity instead of simply converting it into headcount reduction.\n\nGartner (link in comments) says the same thing in more polite language: the opportunity is workforce amplification, not just work automation. And I think this is where a lot of companies are going to get caught. They\u2019ll be very good at deploying tools. Less good at redesigning roles. Even less good at rebuilding the human capabilities those tools make more valuable.\n\nThe irony may be that the more capable AI becomes, the more expensive good human judgment gets. That\u2019s the bit I\u2019d be investing in now. Not because AI is overhyped. Because eventually, it won\u2019t be.\n\nAnd when the technology becomes ordinary, the human around it becomes the differentiator.\n\n#FutureOfWork #AI #HumanJudgment #Leadership #WorkRedesign #AITransformation",
+  "word_count": 323,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-15T02:32:08+00:00",
+  "processing_result": {
+    "triage_stream_count": 1,
+    "noise_only": false,
+    "persisted_count": 1,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-14T21:00:39+00:00-001",
+        "intelligence_type": "strategic_memory",
+        "extracted_summary": "Strategic memory / thesis signal detected: 2 trigger(s): i think."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": null
+  }
+}

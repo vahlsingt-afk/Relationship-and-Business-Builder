@@ -1,0 +1,50 @@
+{
+  "competitor_id": "comp-back-office",
+  "competitor_slug": "back-office",
+  "display_name": "Back Office",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:30Z",
+  "latest_cos_commentary": {
+    "headline": "Back Office is a restaurant accounting, payroll, and food-cost management platform claiming 4,000+ operator customers.",
+    "genius_exposure": "Competes directly on back_office (accounting, payroll, food-cost/inventory) capabilities.",
+    "competitive_timing": "No recent funding, leadership, or 2026 product news found in this pass.",
+    "sales_response": "Where Back Office is the incumbent back-office system, expect the value conversation to center on payroll/tipped-wage compliance and food-cost tracking depth.",
+    "risk_and_uncertainty": "All figures are vendor-sourced; no independent verification of the 4,000+ operator claim or ROI percentages found.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 12
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 12,
+    "pack_claim_count": 1,
+    "pack_claims_with_url": 1,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "named restaurant customer scope",
+        "financial health"
+      ]
+    }
+  }
+}

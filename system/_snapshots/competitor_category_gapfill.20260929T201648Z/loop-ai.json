@@ -1,0 +1,58 @@
+{
+  "competitor_id": "comp-loop-ai",
+  "competitor_slug": "loop-ai",
+  "display_name": "Loop AI",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:09Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:34Z",
+  "latest_cos_commentary": {
+    "headline": "Loop AI is a venture-backed (total raised roughly $20M across rounds) back-office platform that consolidates third-party delivery financials, pricing, and reviews for restaurant operators.",
+    "genius_exposure": "Overlaps with Genius's back_office reporting/reconciliation ambitions specifically in the third-party delivery channel — a narrower, delivery-specific slice of back-office rather than full P&L/inventory management.",
+    "competitive_timing": "Raised a $14M round in early 2026, signaling active growth investment and expansion beyond its original delivery-bookkeeping use case into broader finance/marketing automation.",
+    "sales_response": "Position Loop AI as a delivery-channel-specific back-office point solution; ask prospects whether they need broader back-office coverage (inventory, labor, full P&L) that a point solution like Loop AI does not address.",
+    "risk_and_uncertainty": "No specific named restaurant brand customers were confirmed; be careful not to conflate the unrelated 'LOOP' Southeast Asian POS product (loopin.one) with this back-office Loop AI company — they are different companies.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 56
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 56,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Pricing signals",
+        "Recent News / Product Updates",
+        "Snapshot",
+        "Strengths",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "named restaurant customer scope",
+        "current pricing",
+        "operator ROI evidence"
+      ]
+    }
+  }
+}

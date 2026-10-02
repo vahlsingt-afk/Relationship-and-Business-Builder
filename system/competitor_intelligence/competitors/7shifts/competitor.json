@@ -1,0 +1,69 @@
+{
+  "competitor_id": "comp-7shifts",
+  "competitor_slug": "7shifts",
+  "display_name": "7shifts",
+  "aliases": [],
+  "vendor_entity_id": "vendor-7shifts",
+  "primary_category": "labor_workforce",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Layoffs in late 2023 and early 2024 (including a 19% cut to start 2024)",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:47:22Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Moving upmarket: IHOP, Boston Pizza Franchise Group, Scooter's Coffee, Hattie B's (2026)",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:22Z"
+      },
+      {
+        "point": "Deloitte Technology Fast 500 (#382)",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:47:22Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:46:58Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:58Z",
+  "latest_cos_commentary": {
+    "headline": "Restaurant workforce specialist may defend labor scheduling at franchisee and enterprise levels.",
+    "genius_exposure": "Restaurant workforce specialist may defend labor scheduling at franchisee and enterprise levels.",
+    "competitive_timing": "7shifts reported expanded multi-unit restaurant customers and scheduling/payroll product updates March 2026.",
+    "sales_response": "Validate which named brands are live systemwide versus franchise groups and compare compliance and payroll integration costs.",
+    "risk_and_uncertainty": "Customer list and growth claims are company-reported; deployment scope varies.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 66
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 66,
+    "pack_claim_count": 12,
+    "pack_claims_with_url": 10,
+    "pack_claims_inherited_url": 8,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 2,
+      "legacy_claims_need_date_and_current_status_check": 12,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

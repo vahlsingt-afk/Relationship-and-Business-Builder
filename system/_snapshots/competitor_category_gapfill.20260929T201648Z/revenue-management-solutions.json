@@ -1,0 +1,50 @@
+{
+  "competitor_id": "comp-revenue-management-solutions",
+  "competitor_slug": "revenue-management-solutions",
+  "display_name": "Revenue Management Solutions",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:35Z",
+  "latest_cos_commentary": {
+    "headline": "Revenue Management Solutions is a long-established, patent-holding provider of AI-driven menu pricing and competitor price intelligence software used by 100,000+ restaurant locations worldwide.",
+    "genius_exposure": "Competes with Genius primarily on data/analytics layered on top of POS transaction data (dynamic and competitor-benchmarked pricing) rather than on POS or payments processing itself; likely integrates with, rather than replaces, a restaurant's existing POS.",
+    "competitive_timing": "Has expanded its analytics suite beyond internal pricing optimization into competitor price benchmarking (Competitor Price Intelligence), broadening its data-intelligence footprint in the pricing/analytics category.",
+    "sales_response": "Where RMS is already embedded for pricing analytics, position Genius's POS/payments data as a complementary rather than competing data source, since RMS's tools typically sit on top of POS transaction feeds.",
+    "risk_and_uncertainty": "Named restaurant customers were not disclosed in sourced materials (only aggregate scale claims); do not assume any specific brand relationship without direct confirmation.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 79
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 79,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "named restaurant customers",
+        "headquarters/ownership structure",
+        "pricing model"
+      ]
+    }
+  }
+}

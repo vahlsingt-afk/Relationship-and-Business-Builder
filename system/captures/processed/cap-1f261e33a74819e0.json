@@ -1,0 +1,54 @@
+{
+  "file_id": "cap-1f261e33a74819e0",
+  "queued_at": "2026-09-21T13:43:49+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-21_0707_7shifts-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-21_0707_7shifts-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260921-0707-7shifts-validation`\n- Research system: `ChatGPT Deep Research`\n- Started at: `2026-09-21 07:07 CDT`\n- Completed at: `2026-09-21 07:12 CDT`\n- Research scope: Validate four existing 7shifts restaurant customer-story candidates.\n- Queue item or vendor: `competitor:7shifts`\n- Methodology: Direct vendor-page validation with deployment-scope and recency checks.\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 4\n- Conflicts found: 1\n- Material takeaway: All four live 7shifts pages support named restaurant deployments. Pizza Ranch is explicitly preferred but optional across 150+ locations; National Coney Island says all 16 locations use 7shifts; The Human Bean describes corporate and franchise adoption across 100+ locations; Clean Juice describes 75+ locations but the page's underlying operating context is historical despite a 2024 page date.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: Pizza Ranch\n- Vendor: 7shifts\n- Product or category: Scheduling, team management, forecasting, communications, tasks, and time-clock controls integrated with Revel POS\n- Relationship indication: customer\n- Deployment scope: franchisee\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: The vendor page names corporate and field leaders, says Pizza Ranch selected 7shifts as its preferred operator platform in 2022, and reports adoption at more than 150 of 200+ locations. It also says use is recommended, not mandated.\n- Source title: How Pizza Ranch Improved Employee Turnover Across 150+ Locations\n- Source URL: https://www.7shifts.com/blog/pizza-ranch-case-study/\n- Publisher or source owner: 7shifts\n- Published date, if known: 2024-12-02\n- Accessed date: 2026-09-21\n- Exact supporting excerpt or faithful factual note: The page reports more than 150 locations using 7shifts and states that Pizza Ranch does not mandate the platform.\n- Product-specific evidence: Scheduling, team management, sales forecasting, employee communications, task management, and schedule-linked clock-in controls; Revel supplies sales and labor data.\n- Conflicting or limiting evidence: Vendor-authored; adoption is substantial but not brand-wide or mandatory.\n- Recommended follow-up: Seek a Pizza Ranch or franchisee-controlled source for current 2026 adoption and contract scope.\n\n### Observation 2\n\n- Brand: National Coney Island\n- Vendor: 7shifts\n- Product or category: Scheduling, communications, labor visibility, and Toast integration\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: The case study names the Director of IT, reports 16 locations, and quotes him saying all locations use 7shifts.\n- Source title: How National Coney Island Uses 7shifts to Bring Together 16 Locations\n- Source URL: https://www.7shifts.com/blog/case-study-national-coney-island-16-locations/\n- Publisher or source owner: 7shifts\n- Published date, if known: 2024-12-08\n- Accessed date: 2026-09-21\n- Exact supporting excerpt or faithful factual note: The page says the brand standardized scheduling across 16 stores and that all locations use 7shifts.\n- Product-specific evidence: Scheduling, mobile labor visibility, shift swapping, announcements, staff communication, and Toast integration.\n- Conflicting or limiting evidence: Vendor-authored and may describe a deployment established before the 2024 page date.\n- Recommended follow-up: Confirm current product scope directly with National Coney Island.\n\n### Observation 3\n\n- Brand: The Human Bean\n- Vendor: 7shifts\n- Product or category: Scheduling, labor management, sales forecasting, communication, and Toast integration\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 85%\n- Confidence rationale: The page names corporate and field representatives, describes adoption across corporate-owned and franchised operations, and says new locations also use 7shifts.\n- Source title: Scaling for Success: How The Human Bean Simplified Labor Management Across 100+ Locations\n- Source URL: https://www.7shifts.com/blog/scaling-for-success-how-the-human-bean-simplified-labor-management-across-100-locations/\n- Publisher or source owner: 7shifts\n- Published date, if known: 2024-11-29\n- Accessed date: 2026-09-21\n- Exact supporting excerpt or faithful factual note: The page frames The Human Bean as a 100+ location chain and says 7shifts supports labor-cost visibility and repeatable scheduling as the chain expands.\n- Product-specific evidence: Scheduling templates, labor management, sales forecasting, employee availability and shift coverage, and real-time Toast sales-data integration.\n- Conflicting or limiting evidence: Vendor-authored; body context references 2020 operating results, so the 2024 page date should not be read as proof that every deployment detail was newly measured in 2024.\n- Recommended follow-up: Obtain a current brand-controlled source or 2026 customer reference.\n\n### Observation 4\n\n- Brand: Clean Juice\n- Vendor: 7shifts\n- Product or category: Scheduling, weekly labor budgeting, and Toast integration\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 75%\n- Confidence rationale: The page names a Clean Juice field business consultant and repeatedly describes 7shifts use across 75+ locations and corporate/franchise contexts.\n- Source title: Simple, Labor-Saving Scheduling for 75+ Clean Juice Locations\n- Source URL: https://www.7shifts.com/blog/clean-juice-case-study/\n- Publisher or source owner: 7shifts\n- Published date, if known: 2024-11-29\n- Accessed date: 2026-09-21\n- Exact supporting excerpt or faithful factual note: The page says all 75+ locations were hitting weekly labor targets most of the time and describes corporate support for franchisee scheduling.\n- Product-specific evidence: Scheduling, weekly labor budgeting, labor-percentage targets, and Toast POS integration.\n- Conflicting or limiting evidence: The page is dated 2024 but says the chain had grown to nearly 80 locations in 2019 and refers to locations then in development. Treat the deployment evidence as historical unless independently refreshed.\n- Recommended follow-up: Verify current Clean Juice footprint, ownership changes, and whether 7shifts remains deployed.\n\n## Negative findings\n\n- No candidate page was a dead end. All four supported a named customer relationship, but none is an independent source and two contain material legacy-period context.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://www.7shifts.com/blog/pizza-ranch-case-study/ | case study | 2026-09-21 | 1 | Live; preferred but explicitly non-mandatory across 150+ locations. |\n| https://www.7shifts.com/blog/case-study-national-coney-island-16-locations/ | case study | 2026-09-21 | 2 | Live; all 16 locations stated to use 7shifts. |\n| https://www.7shifts.com/blog/scaling-for-success-how-the-human-bean-simplified-labor-management-across-100-locations/ | case study | 2026-09-21 | 3 | Live; page date is newer than portions of the operating context. |\n| https://www.7shifts.com/blog/clean-juice-case-study/ | case study | 2026-09-21 | 4 | Live; 2019-era footprint makes current-state inference unsafe. |\n\n## Research notes and inferences\n\n- Inference: 7shifts has credible multi-unit and enterprise restaurant references, but vendor case studies alone do not establish current contract status in 2026.\n- Inference: The combination of preferred-franchise-platform evidence and explicit all-location evidence is commercially useful, while the historical context on The Human Bean and Clean Juice should remain visible in any downstream competitor profile.",
+  "word_count": 1068,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-21T13:43:56+00:00",
+  "processing_result": {
+    "triage_stream_count": 6,
+    "noise_only": false,
+    "persisted_count": 6,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-21T13:43:49+00:00-001",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 2 trigger(s): named. Possible named subjects: Pizza Ranch, All, Material, No, Conflicts, Negative."
+      },
+      {
+        "item_id": "INT-2026-09-21T13:43:49+00:00-002",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:toast_pos' (matched term: 'toast'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-21T13:43:49+00:00-003",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'franchisee'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-21T13:43:49+00:00-004",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-21T13:43:49+00:00-005",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Revel Systems' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-21T13:43:49+00:00-006",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Toast, Revel. Macro/industry signal detected: 12 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: competitor, customer, deployment, enterprise, forecast, franchise, inte"
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": null
+  }
+}

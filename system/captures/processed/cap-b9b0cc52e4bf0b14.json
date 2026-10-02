@@ -1,0 +1,22 @@
+{
+  "file_id": "cap-b9b0cc52e4bf0b14",
+  "queued_at": "2026-07-14T09:03:32+00:00",
+  "source_id": "just_press_record",
+  "source_label": "Just Press Record",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-06/09-31-42.m4a",
+  "capture_type": "meeting",
+  "title_hint": "Just Press Record \u2014 2026-07-06 09-31-42",
+  "transcription_method": "whisper_local",
+  "transcript": "Good 4th of July weekend. I did. Yeah, it was nice. The weather got a little bad Saturday night here. So if some of the firework shows were cut short, the best weather. Other than that, it was good. How was yours? Oh, it was great. We had great weather. It's a little shorter than what it liked, but that's OK. And we avoided fireworks because I have a very firework sensitive dog. So we were able to keep her under control, which was nice. That is not bad. That's good. You guys get lots of good food, who are pushing time with family friends. Oh, yeah. We actually had a retirement party for a couple of the dentists that Mary works with on Friday night up in Manitouac, or not Manitouac, Manitouish waters. And that was very nice, a nice time to get there. And then we drove back home to Eden. And spent the day catching up on yard work and stuff and just enjoying the time with it and spent some time with our granddaughter and her mom, too. So that was fun. Oh. Just lost you.",
+  "word_count": 190,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-07-14T09:06:06+00:00",
+  "processing_result": {
+    "triage_stream_count": 0,
+    "noise_only": true,
+    "persisted_count": 0,
+    "persisted_items": [],
+    "exec_mutations": 0
+  }
+}

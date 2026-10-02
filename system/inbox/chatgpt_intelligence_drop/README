@@ -1,0 +1,46 @@
+ChatGPT Intelligence Drop
+=========================
+
+Place real source material here when it should be processed on the next daily
+RBB sweep rather than immediately.
+
+Accepted formats: `.txt` and `.md`.
+
+Deep-research cycles should write one evidence packet per run, named:
+
+    YYYY-MM-DD_HHMM_vendor-or-scope_deep-research.md
+
+Use `system/templates/deep_research_intelligence_drop.md` as the packet
+contract. A packet may contain several observations, but every observation
+must preserve its own URL, access date, evidence type, scope, confidence, and
+conflicts. Never collapse a logo wall, case study, partner page, or inference
+into a confirmed deployment.
+
+Rules:
+
+- Preserve the source text; do not save model-generated guesses as intelligence.
+- Include a descriptive filename and the source URL/date inside the file when known.
+- Local ChatGPT/Codex clients with workspace access may write here.
+- The hosted Custom GPT cannot write local files; it must call
+  `queueCaptureText` with `capture_type="deep_research"` (2026-09-19 --
+  the endpoint used to hardcode `capture_type="pasted_content"`
+  unconditionally, which would have mislabeled a real evidence packet;
+  omitting the override no longer reproduces this folder's labeling).
+- Every packet written directly to this folder must also carry a JSON
+  sidecar with the same basename (`..._deep-research.json` next to the
+  `..._deep-research.md`), per `system/templates/deep_research_intelligence_drop.md`.
+  The sidecar is what feeds the research-quality feedback ledger in
+  `system/scripts/deep_research_coverage.py` -- it records which targets the
+  packet covered and which source pages were actually productive, so a
+  domain that keeps producing nothing stops being re-researched. A packet
+  relayed via `queueCaptureText` has no sidecar (there is nowhere local to
+  put one) and is simply not scored by the feedback ledger yet.
+
+The morning pipeline scans this folder, queues new files under
+`system/captures/pending/`, and processes the pending capture queue.
+Processed packets appear in the Intelligence Brief under Capture Intelligence
+as `deep_research`, with the ChatGPT Intelligence Drop named as the input --
+a packet relayed via `queueCaptureText` instead reports as `deep_research`
+too (once the override above is passed) but under the source label "Deep
+research (hosted)", not this folder's name, since it never actually landed
+on disk here.

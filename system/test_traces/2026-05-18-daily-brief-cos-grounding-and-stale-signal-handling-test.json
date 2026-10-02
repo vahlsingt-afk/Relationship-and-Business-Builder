@@ -1,0 +1,46 @@
+{
+  "title": "Daily brief CoS grounding and stale-signal handling test",
+  "trace_type": "daily_brief_grounding_review",
+  "source": "chatgpt_relationship_bridge_9_0",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-18",
+  "session_id": "rb-daily-brief-grounding-2026-05-18",
+  "summary": "User requested a CoS-style daily brief prioritizing relationship signals, actions, stale-source warnings, and what to ignore. Assistant called getDailyBrief and generated a synthesized operational brief. This trace evaluates grounding quality, stale-source handling, and potential blending of manual interpretation with explicit system-detected signals.",
+  "observed_issue": null,
+  "steps": [
+    {
+      "step": 1,
+      "label": "User requested CoS-level daily brief",
+      "timestamp": null,
+      "user_prompt": "Show me my daily brief. Make it CoS-level, not a news briefing. Prioritize relationship signals, actions, what to ignore, and stale-source warnings.",
+      "assistant_response": "Assistant generated a structured operational brief emphasizing active threads, stale-source warnings, overdue loops, and relationship momentum.",
+      "intended_operation": "Call getDailyBrief and synthesize an operationally grounded relationship brief.",
+      "endpoint": "getDailyBrief",
+      "request_params": null,
+      "response_status": 200,
+      "response_summary": "Returned extensive structured brief data including relationship_signals, stale source states, overdue loops, active threads, DRR scores, interaction overlays, post recommendations, and quiet-zone contacts.",
+      "mutation_confirmation": "No mutation expected; read-only call.",
+      "post_validation": "Assistant response substantially grounded in returned getDailyBrief payload.",
+      "user_feedback": null,
+      "observed_issue": null
+    }
+  ],
+  "defects": [
+    {
+      "id": "DB-GROUNDING-001",
+      "title": "Possible blending of interpretation with explicit signals",
+      "severity": "low",
+      "description": "Assistant used synthesized language such as 'Current signal environment is quiet, not dead' and 'partially artificial because multiple feeds are stale.' While directionally supported by the stale-source warnings and zero-signal counts, these phrasings were interpretive rather than directly quoted from getDailyBrief.",
+      "recommendation": "Optionally distinguish clearly between explicit system outputs and assistant inference layers in future CoS briefs."
+    },
+    {
+      "id": "DB-CONTEXT-MIXING-001",
+      "title": "Potential manual prioritization overlay",
+      "severity": "low",
+      "description": "Assistant elevated three threads (Global Payments, Patrick Nelson, Ish Singh/Maho) as the primary focus set. This prioritization was grounded in boost_for_brief values and overdue loops, but the exact ranking/order reflected assistant synthesis rather than a literal ranked field in getDailyBrief.",
+      "recommendation": "When presenting ranked priorities, explicitly indicate whether ordering is inferred from boost scores, overdue loops, or assistant synthesis."
+    }
+  ],
+  "raw_text": "Grounding observations:\\n- Assistant correctly surfaced stale-source warnings for email, calendar, messages, and calls.\\n- Assistant correctly highlighted overdue Patrick Nelson loops and the Ish Singh/Maho warm-thread opportunity.\\n- Assistant correctly used 'what to ignore' suppression data from relationship_signals.what_to_ignore.\\n- Assistant correctly identified Hospitality Table and OTP3 as functioning active relationship clusters.\\n- Assistant synthesized operational language from multiple getDailyBrief sections including active_threads, loops, relationship_signals, social_outbound, and quiet_zones.\\n- No evidence of fabricated entities or unsupported relationship claims detected.\\n- Some narrative framing and prioritization ordering were assistant-generated synthesis layers rather than direct field outputs.",
+  "trace_id": "T-2026-05-18-002"
+}

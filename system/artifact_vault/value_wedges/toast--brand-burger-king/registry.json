@@ -1,0 +1,21 @@
+{
+  "subject_id": "subject-toast--brand-burger-king",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-28T14:34:01Z",
+      "generated_for": "todd",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/toast--brand-burger-king/current/Toast-vs-Genius-Burger-King_Value-Wedge.json",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-28T14:34:15Z",
+      "generated_for": "todd",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/toast--brand-burger-king/current/Toast-vs-Genius-Burger-King_Value-Wedge.json",
+      "superseded": false
+    }
+  ]
+}

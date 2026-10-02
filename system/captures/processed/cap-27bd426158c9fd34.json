@@ -1,0 +1,68 @@
+{
+  "file_id": "cap-27bd426158c9fd34",
+  "queued_at": "2026-09-27T09:17:45+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-26_1607_apex-order-pickup-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-26_1607_apex-order-pickup-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260926-1607-apex-order-pickup-validation`\n- Research system: `ChatGPT Deep Research`\n- Started at: `2026-09-26 16:07 CDT`\n- Completed at: `2026-09-26 16:12 CDT`\n- Research scope: Direct-competitor customer and product-page mining\n- Queue item or vendor: `competitor:apex-order-pickup`\n- Methodology: Four first-party Apex Order Pickup customer, case-study, interview, or restaurant pages were opened and assessed. Vendor-authored results remain attributed claims and were not written into canonical records.\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 4\n- Company/competitor profile observations added or revised: 0\n- Conflicts found: 2\n- Material takeaway: Apex has named deployment evidence across a Jersey Mike's campus location, Lehigh University dining, Santikos Entertainment, and OOMI Digital Kitchen. The strongest pages show Grubhub Campus integration, multi-bank campus expansion, and named Flow-Thru and AXCESS locker products, while corporate-system scope and current 2026 estate remain unproven.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: Jersey Mike's at Rider University\n- Vendor: Apex Order Pickup Solutions; Grubhub Campus\n- Product or category: Automated pickup locker windows; mobile ordering integration\n- Relationship indication: customer\n- Deployment scope: location-level\n- Evidence type: testimonial interview\n- Confidence: 85%\n- Confidence rationale: Apex's first-party interview with a Grubhub Campus executive identifies Rider University and the Jersey Mike's location as an Apex example, while keeping the evidence scoped to that campus location.\n- Source title: Grubhub Campus | Building Friendly, Fluid Experiences\n- Source URL: https://apexorderpickup.com/building-friendly-fluid-experiences-on-campus/\n- Publisher or source owner: Apex Order Pickup Solutions\n- Published date, if known: 2023-04-12\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: The interview describes a Rider University Jersey Mike's renovated into a production-kitchen model that presents orders through locker windows, enabling throughput with a different front-of-house labor model.\n- Product-specific evidence: Unattended locker-window pickup linked to campus mobile-ordering workflows; the page also describes Apex as a strategic locker partner to Grubhub Campus.\n- Conflicting or limiting evidence: This is a single campus location and does not establish a Jersey Mike's corporate deployment, a current chainwide relationship, or a named Apex hardware model.\n- Recommended follow-up: Confirm the Rider deployment's current status, specific Apex locker model, and whether any other Jersey Mike's locations use Apex.\n\n### Observation 2\n\n- Brand: Lehigh University Dining / The Grind\n- Vendor: Apex Order Pickup Solutions; Grubhub Campus\n- Product or category: Smart food lockers; QR-code pickup; Grubhub Campus integration\n- Relationship indication: customer\n- Deployment scope: regional\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: Apex's dated first-party case study names Lehigh, a dining executive, the initial site, the Grubhub integration, measured pickup results, and subsequent campus expansion.\n- Source title: 300% Sales Growth and a Whole Lot Less Chaos: How Lehigh University Transformed Pickup at The Grind\n- Source URL: https://apexorderpickup.com/how-lehigh-university-transformed-pickup-at-the-grind/\n- Publisher or source owner: Apex Order Pickup Solutions\n- Published date, if known: 2024-08-21\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: Apex reports an initial locker bank at The Grind integrated with Grubhub Campus, followed by five additional locker banks at the Clayton University Center supporting multiple dining concepts.\n- Product-specific evidence: Smart food lockers, Grubhub Campus ordering, QR-code compartment access, automated pickup notification, and six reported locker banks across the initial and later deployments.\n- Conflicting or limiting evidence: The page reports a 300% sales increase and 98% successful pickup rate but does not isolate locker causality or define the measurement window; the upcoming ghost-kitchen expansion was a plan, not a completed deployment.\n- Recommended follow-up: Verify the reporting period, definition of successful pickup, and current count and placement of live locker banks.\n\n### Observation 3\n\n- Brand: Santikos Entertainment\n- Vendor: Apex Order Pickup Solutions\n- Product or category: Flow-Thru 10,000 locker; AXCESS 2000.H heated pickup station\n- Relationship indication: customer\n- Deployment scope: regional\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: Apex's first-party case-study PDF names Santikos executives, specific locker models, deployment counts, workflow, volume, and labor results.\n- Source title: Movie Theater Eliminates Lines, Saves on Labor with Apex\n- Source URL: https://apexorderpickup.com/wp-content/uploads/2020/06/Apex-Santikos-Case-Study-min.pdf\n- Publisher or source owner: Apex Supply Chain Technologies / Apex Order Pickup Solutions\n- Published date, if known: 2020\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: Santikos selected Flow-Thru 10,000 and AXCESS 2000.H units, first deployed them at two locations, and added two more locations within months; the page reports more than 2,000 orders per week at each location and pickup labor falling from three employees to one.\n- Product-specific evidence: Two-sided self-serve lockers and heated pickup stations, automatic guest notification, unique access code, scan-or-enter pickup, and configuration based on sales-transaction data.\n- Conflicting or limiting evidence: The evidence is historical and covers four of a then-nine-location estate. Expansion beyond those sites and continued 2026 use are not established; performance figures are vendor-authored.\n- Recommended follow-up: Confirm Santikos' current estate, live Apex site count, and whether Flow-Thru and AXCESS models remain in service.\n\n### Observation 4\n\n- Brand: OOMI Digital Kitchen\n- Vendor: Apex Order Pickup Solutions\n- Product or category: Smart food lockers\n- Relationship indication: customer\n- Deployment scope: location-level\n- Evidence type: customer video landing page\n- Confidence: 75%\n- Confidence rationale: Apex's current restaurant page explicitly names OOMI Digital Kitchen as using Apex smart lockers, but provides no location count, product model, deployment date, or named customer testimony in the page text.\n- Source title: Smart Order Pickup for QSRs & Restaurants\n- Source URL: https://apexorderpickup.com/qsrs-and-restaurants/\n- Publisher or source owner: Apex Order Pickup Solutions\n- Published date, if known: unknown\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: The restaurant page says OOMI Digital Kitchen uses Apex smart lockers for fast, frictionless pickup and a simpler employee handoff workflow.\n- Product-specific evidence: Apex smart food lockers for guest order handoff; the page does not identify a specific locker model or integration.\n- Conflicting or limiting evidence: The source is promotional and scope-light. It does not support chainwide deployment, a particular site count, measured outcomes, or attribution of ApexIQ capabilities to OOMI.\n- Recommended follow-up: Open or obtain a transcript of the linked customer video and verify deployment site, locker model, integrations, and current operating status.\n\n## Negative findings\n\n- Candidate or claim: Apex's named customer pages establish current 2026 enterprise-wide deployments.\n- Pages checked: All four pages in the source ledger.\n- Result: Unsupported. Jersey Mike's is a single campus example, OOMI's scope is unspecified, Santikos is historical and partial, and Lehigh is campus-specific.\n- Candidate or claim: Every result metric is attributable solely to Apex lockers.\n- Pages checked: Lehigh and Santikos case studies.\n- Result: Unsupported. The pages report outcomes but do not provide controlled attribution, complete measurement windows, or independent validation.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://apexorderpickup.com/building-friendly-fluid-experiences-on-campus/ | testimonial interview | 2026-09-26 | 1 | Productive; Jersey Mike's evidence is limited to the Rider University location. |\n| https://apexorderpickup.com/how-lehigh-university-transformed-pickup-at-the-grind/ | case study | 2026-09-26 | 2 | Productive; named Grubhub integration and multi-bank campus expansion. |\n| https://apexorderpickup.com/wp-content/uploads/2020/06/Apex-Santikos-Case-Study-min.pdf | case study | 2026-09-26 | 3 | Productive historical deployment with named hardware and four-site scope. |\n| https://apexorderpickup.com/qsrs-and-restaurants/ | customer video landing page | 2026-09-26 | 4 | Productive but scope-light OOMI relationship; no named model or site count. |\n\n## Research notes and inferences\n\n- Inference: Apex's competitive strength is the handoff layer between digital ordering and physical fulfillment, with credible Grubhub Campus integration and workflow redesign evidence rather than a core POS offering.\n- Inference: Apex can serve individual restaurant locations, multi-concept campus environments, and entertainment venues, but the reviewed pages do not establish a current national restaurant-chain estate.",
+  "word_count": 1303,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-27T09:18:07+00:00",
+  "processing_result": {
+    "triage_stream_count": 4,
+    "noise_only": false,
+    "persisted_count": 4,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-004",
+        "intelligence_type": "career_pipeline_update",
+        "extracted_summary": "Career/opportunity pipeline signal detected: 1 trigger(s): interview with. Detected stage: interviewing."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-005",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 8 trigger(s): named. Possible named subjects: Flow, Grubhub, Apex, Productive, Thru, Material."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-006",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-007",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Jersey Mike's. Macro/industry signal detected: 13 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: competitive, competitor, customer, deployment, enterprise, expansion, "
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "Apex Order Pickup Solutions",
+        "Grubhub Campus",
+        "Jersey Mike's",
+        "Lehigh University",
+        "Santikos Entertainment",
+        "OOMI Digital Kitchen"
+      ],
+      "topics": [
+        "Apex Order Pickup deployments",
+        "Grubhub Campus integration",
+        "customer case studies",
+        "pickup locker technology"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Confirm the Rider deployment's current status, specific Apex locker model, and whether any other Jersey Mike's locations use Apex.",
+        "Verify the reporting period, definition of successful pickup, and current count and placement of live locker banks.",
+        "Confirm Santikos' current estate, live Apex site count, and whether Flow-Thru and AXCESS models remain in service.",
+        "Open or obtain a transcript of the linked customer video and verify deployment site, locker model, integrations, and current operating status."
+      ],
+      "why_it_matters": "The insights on Apex's deployments and integrations with major brands could inform strategic decisions regarding partnerships and technology investments."
+    }
+  }
+}

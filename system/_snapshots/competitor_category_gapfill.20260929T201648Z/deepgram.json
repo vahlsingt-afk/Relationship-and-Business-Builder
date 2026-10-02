@@ -1,0 +1,52 @@
+{
+  "competitor_id": "comp-deepgram",
+  "competitor_slug": "deepgram",
+  "display_name": "Deepgram",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:31Z",
+  "latest_cos_commentary": {
+    "headline": "Deepgram acquired drive-thru voice-AI specialist OfOne in January 2026 at a $1.3B valuation, making voice ordering a standalone competitive threat to POS-embedded voice features.",
+    "genius_exposure": "Competes directly with Genius's kitchen_drive_thru line where Deepgram/OfOne voice ordering can be deployed independent of the POS vendor, and can also front digital_menu_boards/kiosk ordering flows.",
+    "competitive_timing": "Deepgram is actively expanding beyond generic speech-to-text into vertical restaurant voice AI post-OfOne acquisition; expect continued drive-thru pilots through 2026.",
+    "sales_response": "If a prospect mentions drive-thru voice AI, ask whether they're evaluating a standalone layer (like Deepgram) versus a POS-native voice feature, and whether containment/accuracy claims have been independently verified at their volume.",
+    "risk_and_uncertainty": "No specific named restaurant customers or pricing are publicly disclosed; containment statistics are vendor-reported and pre-date the OfOne acquisition.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 27
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 27,
+    "pack_claim_count": 4,
+    "pack_claims_with_url": 4,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": true,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "named restaurant customer disclosure",
+        "pricing model",
+        "current leadership beyond founder/CEO"
+      ]
+    }
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "campaign_id": "genius-user-conference-2026",
+  "generated_at": "2026-10-02T10:14:13+00:00",
+  "weeks": [
+    {
+      "week": 1,
+      "focus": "Top-ranked net-new invitations",
+      "actions": [
+        "Send 25 top-ranked invitations (Queue A rank 1-25)"
+      ],
+      "contacts": [
+        "david-ocallaghan",
+        "tom-perella",
+        "deric-rosenbaum",
+        "lucie-tuan",
+        "patrick-bobrukiewicz",
+        "michel-falcon",
+        "t-oliver-lee",
+        "bruce-nelson",
+        "jon-manes",
+        "kevin-morrison",
+        "chris-munz",
+        "kathleen-omara",
+        "mark-moeller",
+        "tyler-marpes",
+        "zohaib-aziz",
+        "kelsey-regier",
+        "matt-goss",
+        "frank-alessandrini",
+        "javier-vasquez",
+        "lexi-burns",
+        "matt-dendy",
+        "matt-maercker",
+        "michael-hassel",
+        "mike-moreland",
+        "robert-wood"
+      ],
+      "messaging_template": "Use each contact's suggested_linkedin_outreach draft \u2014 review before sending, per RB's send_allowed=False invariant.",
+      "follow_up_schedule": "If no response in 5-7 business days, one follow-up. No further follow-up without a new signal."
+    },
+    {
+      "week": 2,
+      "focus": "Remaining enterprise targets + executive introductions + registration monitoring",
+      "actions": [
+        "Send next 50 invitations (Queue A rank 26-75)",
+        "Pursue the top 15 executive introduction(s) via known brokers this week (44 total gap companies have a broker path \u2014 see coverage_gaps.json for the rest)",
+        "Re-run --reconcile-workbook / --reconcile-registrations against any new registration export"
+      ],
+      "contacts": [
+        "ryan-wilber",
+        "todd-stewart",
+        "adam-klaers",
+        "adam-oldenburg",
+        "alan-gardner",
+        "alex-rusticus",
+        "alonso-castaneda",
+        "andrew-povec",
+        "ben-latour",
+        "ben-mansoor",
+        "beverly-davis",
+        "brandon-hunt",
+        "brooks-speirs-cfe",
+        "calvin-freeman",
+        "carl-bachmann",
+        "chris-kalisperas",
+        "christie-bellino",
+        "george-thenamkodath",
+        "jeff-wood",
+        "jeremy-biser",
+        "jhonny-mercado",
+        "jon-silvertooth",
+        "julie-dessauer",
+        "kalie-godwin",
+        "kelby-leuthold",
+        "kevin-moran",
+        "kim-decarolis",
+        "mark-johnson",
+        "marshall-scarborough",
+        "mary-mount",
+        "michael-benson",
+        "milton-molina-mba",
+        "nick-jarecke",
+        "omer-ramot",
+        "paul-sattler",
+        "paul-t-tran",
+        "paxton-moreaux",
+        "rick-miller",
+        "robin-gagnon-mba-cfe-cbi",
+        "ryan-johnson",
+        "ryan-jones",
+        "scott-stalnaker",
+        "shawn-walchef",
+        "tim-mei",
+        "tim-woehr",
+        "tracey-smith",
+        "zach-fetter",
+        "zachary-mclaughlin",
+        "mike-boots",
+        "charlie-o-connell"
+      ],
+      "executive_introductions": [
+        {
+          "company": "Scooter's Coffee",
+          "introducer": "Kelsey Regier",
+          "reason": "LMI (DRR 37.5); works at Scooter's Coffee; domain expertise: domain match: hospitality_foodservice."
+        },
+        {
+          "company": "Wingstop Restaurants Inc.",
+          "introducer": "Lucie Tuan",
+          "reason": "LMI (DRR 59.4); works at Wingstop Restaurants Inc.; domain expertise: domain match: hospitality_foodservice."
+        },
+        {
+          "company": "Levy Restaurants",
+          "introducer": "Carter Witt",
+          "reason": "LMI (DRR 30.3); works at Levy Restaurants."
+        },
+        {
+          "company": "Meritage Hospitality Group",
+          "introducer": "Alex Rusticus",
+          "reason": "LMI (DRR 30.0); works at Meritage Hospitality Group; domain expertise: domain match: hospitality_foodservice."
+        },
+        {
+          "company": "Bojangles' Restaurants, Inc.",
+          "introducer": "Corey Callaway",
+          "reason": "LMI (DRR 30.1); works at Bojangles' Restaurants, Inc.; domain expertise: domain match: hospitality_foodservice."
+        },
+        {
+          "company": "Popeyes Louisiana Kitchen",
+          "introducer": "Md Rahman",
+          "reason": "LMI (DRR 30.0); works at Popeyes Louisiana Kitchen; domain expertise: domain match: hospitality_foodservice."
+        },
+        {
+          "company": "Ted's Montana Grill",
+          "introducer": "Chad Coghlan",
+          "reason": "LMI (DRR 30.0); works at Ted's Montana Grill; domain expertise: domain match: hospitality_foodservice."
+        },
+        {
+          "company": "Taco Bell",
+          "introducer": "Jacob Slater",
+          "reason": "LMI (DRR 30.0); works at Taco Bell; domain expertise: domain match: hospitality_foodservice."
+        },
+        {
+          "company": "Thrive Restaurant Group",
+          "introducer": "\ud83d\udc27Patrick Bobrukiewicz",
+          "reason": "LKI (DRR 44.8); works at Thrive Restaurant Group; domain expertise: domain match: hospitality_foodservice, recruiting_hr."
+        },
+        {
+          "company": "Cafe Rio Fresh Modern Mexican",
+          "introducer": "Adam Klaers",
+          "reason": "LMI (DRR 30.0); works at Cafe Rio Fresh Modern Mexican."
+        },
+        {
+          "company": "Raising Cane's Chicken Fingers",
+          "introducer": "Dustin Turner",
+          "reason": "LMI (DRR 30.3); works at Raising Cane's Chicken Fingers; domain expertise: domain match: hospitality_foodservice."
+        },
+        {
+          "company": "JAI Restaurant Group",
+          "introducer": "Ben Mansoor",
+          "reason": "LMI (DRR 30.0); works at JAI Restaurant Group."
+        },
+        {
+          "company": "Flynn Restaurant Group",
+          "introducer": "Jeremy Biser",
+          "reason": "LMI (DRR 30.0); works at Flynn Restaurant Group."
+        },
+        {
+          "company": "Marco's Pizza (Marco's Franchising, LLC)",
+          "introducer": "Emily Croll Townley",
+          "reason": "LMI (DRR 30.0); works at Marco's Pizza (Marco's Franchising, LLC); domain expertise: domain match: hospitality_foodservice."
+        },
+        {
+          "company": "Cali BBQ Media",
+          "introducer": "Dean LaBay \ud83e\udd54",
+          "reason": "LMI (DRR 30.2); works at Cali BBQ Media."
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "focus": "Regional/growth brands + follow-up campaign + executive escalation",
+      "actions": [
+        "Send remaining 50 invitations (Queue A rank 76-125)",
+        "Follow up with 3 invited-not-registered contact(s) (Queue B)",
+        "Escalate 3 Tier 0 Worldpay customer contact(s) directly"
+      ],
+      "contacts": [
+        "erick-coreas",
+        "jared-raveling",
+        "jordan-allen",
+        "bruce-nollert",
+        "cristian-kokonas",
+        "eric-farrell",
+        "greg-hand",
+        "jack-mccluskey",
+        "jean-saintvil",
+        "ron-dinella",
+        "brian-burchill",
+        "justin-sellers",
+        "jayeshkumar-jk-nair",
+        "patrick-bobrukiewicz-2",
+        "kelsey-regier-mba",
+        "amanda-lober",
+        "chad-coghlan",
+        "eddie-hensley",
+        "jose-alberto-hernandez",
+        "josh-bidwell",
+        "kristie-mansur",
+        "lisa-mcdowell",
+        "md-rahman",
+        "michael-lenzi",
+        "mike-thorp",
+        "natasha-mtshali",
+        "rob-bowers",
+        "shenika-harris",
+        "stacey-williams",
+        "steve-anthony",
+        "tom-jenkins-cfe",
+        "tyler-schrameck",
+        "andrew-mask",
+        "sabra-mauldin",
+        "scott-ford",
+        "jeffrey-boland-sr",
+        "sean-cisco",
+        "steve-wenzl",
+        "michael-c-jackson",
+        "mark-graff",
+        "aaron-rheinecker",
+        "carter-witt",
+        "corbin-gass",
+        "dave-crowley-cfe",
+        "jake-rossman",
+        "brian-brindza",
+        "carson-dickens",
+        "chuck-shuptrine",
+        "emily-croll-townley",
+        "greg-sullivan"
+      ],
+      "follow_up_campaign": [
+        "jeff-caplan",
+        "mj-worsham",
+        "zerrick-pearson"
+      ],
+      "executive_escalation": [
+        "jeff-caplan",
+        "mj-worsham",
+        "zerrick-pearson"
+      ]
+    },
+    {
+      "week": 4,
+      "focus": "Final invitation wave + registration recovery",
+      "actions": [
+        "Send final 21 invitations (remainder of Queue A)",
+        "Registration recovery push for anyone still in Queue B (3 as of this run)"
+      ],
+      "contacts": [
+        "gregg-murphy",
+        "jacob-pierce",
+        "james-wallace",
+        "jay-hornacek",
+        "marco-schlueter",
+        "martin-guzman",
+        "missy-schaaphok",
+        "peter-genna",
+        "rebecca-hanson",
+        "robert-guerrero",
+        "andrew-kraus",
+        "brittany-maroney",
+        "brock-davis",
+        "elizabeth-wickham",
+        "michael-darby",
+        "nicole-range-mba",
+        "rick-loftus",
+        "ryan-skrzypczynski",
+        "jodie-cohen",
+        "kathryn-simon",
+        "andrew-oconnor"
+      ]
+    }
+  ],
+  "tracking": {
+    "invitations_sent": 3,
+    "registrations": 0,
+    "attended": 0,
+    "declined": 0,
+    "acceptances": {
+      "value": null,
+      "not_computed_reason": "RB tracks invited/registered/declined status; a distinct 'accepted the invite but hasn't registered yet' signal isn't captured by any ingested source."
+    },
+    "responses": {
+      "value": null,
+      "not_computed_reason": "Requires reply/interaction tracking cross-referenced per contact \u2014 interaction_capture.py records that an interaction occurred, not its content or direction."
+    },
+    "conversion_rate_by_relationship_strength": {
+      "Light": 0.0,
+      "Moderate": 0.0
+    }
+  }
+}

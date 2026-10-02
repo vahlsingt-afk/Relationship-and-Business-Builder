@@ -1,0 +1,43 @@
+{
+  "account_id": "acct-del-taco",
+  "founded": {
+    "value": "1964"
+  },
+  "headquarters": {
+    "value": "Lake Forest, California"
+  },
+  "segment": {
+    "value": "Mexican quick-service restaurant"
+  },
+  "footprint": {
+    "value": "576 restaurants at FY2025 year-end: 132 company-operated and 444 franchised"
+  },
+  "ownership": {
+    "value": "Yadav Enterprises; acquisition closed December 22, 2025"
+  },
+  "geography": {
+    "value": "United States; current live store count requires reconciliation"
+  },
+  "differentiation": {
+    "value": "Mexican QSR combining drive-thru convenience, value positioning, and a predominantly franchised operating model"
+  },
+  "competitive_set": {
+    "value": "Taco Bell, Taco John's, Qdoba, Chipotle, regional Mexican QSR concepts"
+  },
+  "risks_and_cautions": [
+    "Post-acquisition authority is still being established; Jack in the Box-era contracts and stakeholder assumptions may no longer apply under Yadav.",
+    "Qu announced a broad platform modernization in 2024, but deployment status, store coverage, contractual commitments, and Yadav's intent remain unconfirmed.",
+    "Legacy NCR/Aloha evidence is historical and should not be presented as the complete current estate without store-level validation.",
+    "Presto voice AI is historical/discontinued based on later public disclosure and must not be represented as a current deployment without new evidence.",
+    "Several internally reported stakeholder names, titles, and authority levels remain unverified and require confirmation before external use.",
+    "The Nick the Greek Square relationship and Qu-related pilot are internal reported intelligence; exact modules, commercial ownership, and current pilot status remain unknown."
+  ],
+  "recommended_approach": "Use Maggie Lenhart's trusted Worldpay access to secure a joint discovery meeting with Daniel and reconstruct the relevant Genius World discussions before positioning. Lead with the business outcomes of Project Sunrise—menu accuracy, promotional speed, restaurant consistency, value communication, franchisee economics, reliability, and reduced operating friction. Treat digital menu boards as the likely first wedge; validate current NCR and Qu deployment by store cohort before advancing POS. Use Del Taco as a potential entry into the wider Yadav portfolio only after proving relevance and separately qualifying each brand's technology and buying process.",
+  "immediate_actions": [
+    "Maggie to email Daniel and secure a joint discovery meeting with Todd.",
+    "Consolidate the relevant Genius World conversation history and participants before customer outreach.",
+    "Capture and reconcile Dan Fideli's Del Taco relationship intelligence.",
+    "Validate Dean's title and authority, the DMB initiative, current NCR estate, Del Taco's Qu status, and the Nick the Greek Square/Qu configuration.",
+    "Schedule the hardware 201 and P&L walkthrough once the discovery path is confirmed."
+  ]
+}

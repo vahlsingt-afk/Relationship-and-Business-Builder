@@ -1,0 +1,50 @@
+{
+  "competitor_id": "comp-tray",
+  "competitor_slug": "tray",
+  "display_name": "TRAY",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "In discussing Wendy’s selection of TRAY, Ryan Hildebrand said the Wendy’s team was very complimentary of Genius and its technology, said Genius’s APIs were strongest in the field, and identified kiosk as a Genius gap. Todd noted he did not think TRAY was especially strong in kiosk either.",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:36Z",
+  "latest_cos_commentary": {
+    "headline": "TRAY is a cloud POS platform for enterprise multi-location restaurant brands that completed a roughly two-year, 1,500-restaurant IHOP rollout with 10,000+ tablets, reporting improved check size, tips, and ticket times where tablets are fully enabled.",
+    "genius_exposure": "Direct competitor across POS and kitchen_drive_thru/tableside-ordering hardware/software, with a specific enterprise-chain reference (IHOP) and self-order kiosk offering that also touches digital_menu_boards and loyalty_engagement use cases.",
+    "competitive_timing": "Completed its large-scale IHOP legacy-POS replacement (near-complete as of the April 2024 report), demonstrating capability to execute large, multi-year enterprise rollouts and offering hardware-longevity claims (10+ year terminal life via Android-on-x86) as a switching-cost/TCO argument.",
+    "sales_response": "In accounts running older POS hardware, note that TRAY's pitch includes extending terminal life via its Android-on-x86 approach as a lower-switching-cost argument — be ready to counter on Genius's own hardware refresh/TCO and payments-integration story.",
+    "risk_and_uncertainty": "The IHOP case study's specific ROI figures (tips, ticket time, check size) are attributed to franchisees who have 'fully enabled' tablets, not a guaranteed uniform result across the full 1,500-location rollout.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 96
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 96,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current pricing/fee model",
+        "specific weaknesses/complaints",
+        "customer references beyond IHOP"
+      ]
+    }
+  }
+}

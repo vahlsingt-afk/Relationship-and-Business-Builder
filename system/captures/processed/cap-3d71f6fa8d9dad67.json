@@ -1,0 +1,20 @@
+{
+  "file_id": "cap-3d71f6fa8d9dad67",
+  "queued_at": "2026-07-01T12:22:37+00:00",
+  "source_id": "just_press_record",
+  "source_label": "Just Press Record",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-01/06-00-33.m4a",
+  "capture_type": "meeting",
+  "title_hint": "Just Press Record \u2014 2026-07-01 06-00-33",
+  "transcription_method": "whisper_local",
+  "transcript": "I am now testing RB along with just press record. It is Wednesday, July 1st.",
+  "word_count": 15,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-07-01T14:06:11+00:00",
+  "processing_result": {
+    "triage_stream_count": 0,
+    "triage_type_count": 0,
+    "noise_only": true
+  }
+}

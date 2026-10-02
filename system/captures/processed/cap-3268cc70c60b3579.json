@@ -1,0 +1,19 @@
+{
+  "file_id": "cap-3268cc70c60b3579",
+  "queued_at": "2026-07-02T09:03:09+00:00",
+  "source_id": "just_press_record",
+  "source_label": "Just Press Record",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-01/18-23-31.m4a",
+  "capture_type": "meeting",
+  "title_hint": "Just Press Record \u2014 2026-07-01 18-23-31",
+  "transcription_method": "whisper_local",
+  "transcript": "",
+  "word_count": 0,
+  "transcript_available": false,
+  "status": "processed",
+  "processed_at": "2026-07-06T16:28:50+00:00",
+  "processing_result": {
+    "skipped": true,
+    "reason": "no_transcript_available"
+  }
+}

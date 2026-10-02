@@ -1,0 +1,1451 @@
+{
+  "account_id": "acct-pollo-campero",
+  "account_slug": "pollo-campero",
+  "display_name": "Pollo Campero",
+  "aliases": [
+    "Campero",
+    "Campero USA",
+    "CMI Alimentos",
+    "Pollo Campero USA / Campero, Inc."
+  ],
+  "portfolio_status": "active",
+  "owners": [
+    {
+      "name": "Todd Vahlsing",
+      "role": "account_owner"
+    },
+    {
+      "name": "Amy McKay",
+      "role": "contributor_payments"
+    }
+  ],
+  "brand_profile_ref": "brand_profile.json",
+  "opportunities": [
+    {
+      "opportunity_id": "opp-pollo-campero-dmb-payments",
+      "name": "U.S. DMB Modernization + Payments Participation",
+      "workstreams": [
+        "digital_menu_boards",
+        "payments"
+      ],
+      "stage": "RFP active; revised proposal and completed pricing due 2026-09-04",
+      "single_sales_objective": {
+        "value": "Win the U.S. DMB modernization program; secure a qualified path to payments and adjacent restaurant technology only where customer value and access justify it.",
+        "status": "confirmed",
+        "evidence_ids": [
+          "ev-pollo-campero-0005",
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "customer_stated_objective": {
+        "value": "Consolidate vendors to improve efficiency, economics and service while maintaining strong fraud and chargeback protection across payment channels. Modernize and unify interior and drive-thru digital menu boards; centralize content, pricing, promotions, scheduling and dayparting; integrate Oracle and NCR for near-real-time price/inventory and outdoor order confirmation; reduce IT/Marketing manual burden; improve brand consistency; and support growth, new stores and future dynamic upsell.",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-pollo-campero-0005"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-01",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "commercial_hypothesis": {
+        "value": "$25/screen/month standalone; $12.50 with qualifying payments participation; white glove $25-$50/screen/month pending scope.",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0011"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "procurement": {
+        "previous_stage": "RFI submitted",
+        "current_stage": "RFP / active competitive procurement",
+        "rfi_response_date": "2026-08-21",
+        "rfp_received_date": "2026-08-26",
+        "response_deadline": "2026-09-04",
+        "primary_procurement_contact_id": "person-katherine-celeste-urbina-barillas",
+        "required_deliverables": [
+          "Revised proposal reflecting updated TDR requirements",
+          "Completed SOW and pricing template",
+          "All applicable costs, assumptions, optional services, exclusions and supporting details"
+        ],
+        "evidence_ids": [
+          "ev-pollo-campero-0013",
+          "ev-pollo-campero-0014",
+          "ev-pollo-campero-0015"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-27"
+      },
+      "rfi_commitment_baseline": {
+        "source_evidence_id": "ev-pollo-campero-0016",
+        "status": "submitted baseline; requires internal validation before conversion to priced commitments",
+        "material_claims": [
+          "Native pricing and order-confirmation integrations claimed for Genius POS, PAR Brink and NCR",
+          "Oracle positioned as an API-enabled third-party integration subject to agreements and potential fees",
+          "Near-real-time pricing and item availability supported subject to integration and display processing",
+          "Dynamic upselling supported natively in Genius; third-party transaction-aware behavior depends on POS APIs",
+          "Existing display reuse supported subject to model, age, condition and useful-life assessment",
+          "Controller, controllerless and dual-display media-player options offered",
+          "Installation, testing and go-live support described as included in the proposal",
+          "Example support SLAs supplied",
+          "Three-year warranty stated for quoted hardware"
+        ]
+      },
+      "rfp_requirement_deltas": {
+        "critical": [
+          "Oracle and NCR integration must be validated by exact product/version and interface",
+          "On-screen order confirmation requires lane mapping, data definition and acceptance criteria",
+          "Transaction-aware dynamic upselling requires third-party POS validation or a qualified pilot position",
+          "Vendor-facility storage, chain of custody, inventory reporting and redeployment operating model"
+        ],
+        "high": [
+          "Warehouse Stream inventory inspection and compatibility assessment",
+          "De-installation at closing or refreshed locations",
+          "Managed content workflow, included volumes, turnaround SLAs and fees",
+          "Installation inclusions/exclusions and site-readiness responsibility",
+          "DMB-specific support, field service, replacement protocol and approved SLAs",
+          "Warranty treatment for new versus reused equipment",
+          "Billing frequency, deposits, milestones, invoice timing and pricing validity"
+        ],
+        "optional": [
+          "In-store music",
+          "Guest Wi-Fi"
+        ],
+        "evidence_ids": [
+          "ev-pollo-campero-0014",
+          "ev-pollo-campero-0015",
+          "ev-pollo-campero-0016"
+        ]
+      }
+    }
+  ],
+  "qualification": {
+    "criteria": [
+      {
+        "criterion": "Sufficient budget exists",
+        "answer": "U",
+        "weight": 20,
+        "points": 0,
+        "current_read": "TDR contains no assigned budget.",
+        "next_step": "Confirm budget source and approval path.",
+        "status": "unknown",
+        "evidence_ids": [
+          "ev-pollo-campero-0005"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "criterion": "We have the access we need",
+        "answer": "U",
+        "weight": 20,
+        "points": 0,
+        "current_read": "Direct access to Randy, Diego, Terry and Jorge, a user-confirmed key stakeholder in both payments and the DMB RFI; no verified EBI or coach access.",
+        "next_step": "Use Jorge's cross-workstream position to map decision makers, criteria and authority without assuming he is the EBI or Coach.",
+        "status": "unknown",
+        "evidence_ids": [
+          "ev-pollo-campero-0001",
+          "ev-pollo-campero-0004"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "criterion": "Customer buying process is understood",
+        "answer": "U",
+        "weight": 20,
+        "points": 0,
+        "current_read": "Formal RFP received. Revised proposal and completed SOW/pricing are due 2026-09-04; evaluation scorecard, approvers and veto roles remain unverified.",
+        "next_step": "Submit consolidated clarifications and confirm evaluation criteria, decision calendar, approvers and vetoes.",
+        "status": "unknown",
+        "evidence_ids": [
+          "ev-pollo-campero-0005",
+          "ev-pollo-campero-0013",
+          "ev-pollo-campero-0015"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-27",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "criterion": "Supportive Economic Buying Influence",
+        "answer": "N",
+        "weight": 20,
+        "points": 0,
+        "current_read": "Potential executives identified; EBI unverified.",
+        "next_step": "Validate Luis Javier Rodas / Jose Gregorio Baquero role.",
+        "status": "unknown",
+        "evidence_ids": [
+          "ev-pollo-campero-0009",
+          "ev-pollo-campero-0010"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "criterion": "At least one Coach",
+        "answer": "N",
+        "weight": 20,
+        "points": 0,
+        "current_read": "No customer-side coach verified.",
+        "next_step": "Test Scott O'Neill and procurement contacts for coach behavior.",
+        "status": "unknown",
+        "evidence_ids": [
+          "ev-pollo-campero-0010"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    ],
+    "qualification_score": {
+      "value": 0,
+      "max": 100,
+      "formula": "SUM(criteria.points)"
+    }
+  },
+  "strategic_position": {
+    "euphoria_panic": {
+      "current_state": {
+        "value": "Concern",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "reason": {
+        "value": "Strong technical fit, but no verified customer coach, EBI, budget or decision process.",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "timing": {
+        "value": "Active modernization; infrastructure described as end-of-life.",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-pollo-campero-0005"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    },
+    "competition": {
+      "value": "DMB incumbents include ZoneIn and Stream. Oracle Simphony is the principal broader-platform threat; NCR/Aloha remains in part of the estate. Fiserv is field-reported for in-store processing; Olo/Olo Pay (Stripe) for digital; Valutec for gift. Actual bidder set and preferences remain unknown.",
+      "status": "hypothesis",
+      "evidence_ids": [
+        "ev-pollo-campero-0008",
+        "ev-pollo-campero-0012"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-08-21",
+      "scope": "opportunity:opp-pollo-campero-dmb-payments",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    "position": {
+      "place_in_funnel": "Qualify",
+      "customer_priority": "Active",
+      "critical_test": "Is the decision genuinely open and who controls it?",
+      "position_vs_competition": {
+        "value": "Shared / unknown",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "immediate_move": "Map customer buying influences before claiming pursuit confidence."
+    },
+    "strengths": [
+      {
+        "value": "Customer-defined, end-of-life DMB need across a growing estate.",
+        "possible_action": "Use exact customer language and a requirement/evidence compliance matrix.",
+        "best_action_plan": "Receive/qualify full RFP; verify scoring, dates and decision roles.",
+        "owner": "Todd / response lead",
+        "target": "On receipt",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-pollo-campero-0005"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Genius fits DMB, hardware, integration, rollout and support scope.",
+        "possible_action": "Map every requirement to proven capability, partner, dependency or gap.",
+        "best_action_plan": "Re-engage Scott O'Neill and map the customer buying system.",
+        "owner": "Todd / RM",
+        "target": "First clarification",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Direct customer engagement; Randy committed to share statements, and Jorge independently contacted Tracy after the meeting.",
+        "possible_action": "Convert momentum and Jorge's executive relationship path into verified access, decision insight and scheduled work sessions.",
+        "best_action_plan": "Validate what Jorge communicated to Tracy, then map Olo/Olo Pay, Stripe, Fiserv, Valutec and POS migration state.",
+        "owner": "Todd / Ryan / solution + payments",
+        "target": "Discovery",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-pollo-campero-0003",
+          "ev-pollo-campero-0004"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Payments and broader stack create optional enterprise value.",
+        "possible_action": "Keep payments optional and prove economics/operational benefit.",
+        "best_action_plan": "Approve standalone, participation and white-glove guardrails.",
+        "owner": "Todd / Ryan / Finance",
+        "target": "Commercial review",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0011"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    ],
+    "red_flags": [
+      {
+        "value": "No verified EBI, customer coach, budget, scorecard or decision calendar.",
+        "possible_action": "Use first clarification/discovery cycle to validate buying influences.",
+        "best_action_plan": "Stakeholder map and coach test.",
+        "owner": "Todd / RM",
+        "target": "Open",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0009",
+          "ev-pollo-campero-0010"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Oracle migration may already constrain broader platform scope.",
+        "possible_action": "Separate DMB win from speculative POS displacement; verify contract/deployment status.",
+        "best_action_plan": "Bid/no-bid and wedge decision.",
+        "owner": "Todd / solution lead",
+        "target": "Open",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0008"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Olo/Olo Pay fraud and chargeback value could make digital payments sticky.",
+        "possible_action": "Benchmark authorization, fraud, disputes, token portability and economics before claiming value.",
+        "best_action_plan": "Digital payments diligence.",
+        "owner": "Payments lead",
+        "target": "Open",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-pollo-campero-0009"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Screen/store mix and white-glove workload are not validated.",
+        "possible_action": "Price archetypes and explicit assumptions; reconcile to site inventory.",
+        "best_action_plan": "BOM and service cost validation.",
+        "owner": "Deployment / services",
+        "target": "Open",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0005"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Bank of America sample statements conflict with field report of Fiserv.",
+        "possible_action": "Treat as entity/store/sample ambiguity until estate architecture is confirmed.",
+        "best_action_plan": "Resolve processor/entity footprint.",
+        "owner": "Payments lead",
+        "target": "Open",
+        "status": "contradicted",
+        "evidence_ids": [
+          "ev-pollo-campero-0006",
+          "ev-pollo-campero-0008"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing",
+        "contradiction_id": "ct-pollo-campero-0001"
+      }
+    ]
+  },
+  "buying_influences": [
+    {
+      "person_id": "person-luis-javier-rodas",
+      "name": "Luis Javier Rodas",
+      "title": "Managing Director & COO, Campero USA",
+      "location": "Dallas, TX",
+      "role_etuc": {
+        "value": "E? / U",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0010"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High",
+      "mode": {
+        "value": "Growth / Even Keel",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Deliver U.S. growth without disrupting operations or brand experience.",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Scalable, reliable estate modernization supporting 250-location ambition.",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": -1,
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Public leader; no direct decision evidence.",
+      "access": "Unknown",
+      "next_step": "Confirm current title, authority, success criteria and DMB sponsorship.",
+      "owner": "Todd / RM"
+    },
+    {
+      "person_id": "person-jose-gregorio-baquero",
+      "name": "Jose Gregorio Baquero",
+      "title": "Global CEO, Pollo Campero",
+      "location": "Guatemala",
+      "role_etuc": {
+        "value": "E?",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0009"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High",
+      "mode": {
+        "value": "Growth",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Protect global brand, capital and scalable standards.",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "A governed platform that supports growth across markets.",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": -2,
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Named by CMI as global CEO; role in U.S. DMB not verified.",
+      "access": "None",
+      "next_step": "Determine approval/veto role and whether global standards apply.",
+      "owner": "Todd / executive sponsor"
+    },
+    {
+      "person_id": "person-katherine-urbina-barillas",
+      "name": "Katherine Celeste Urbina Barillas",
+      "title": "Purchasing Specialist, CMI",
+      "location": "unverified",
+      "role_etuc": {
+        "value": "T / E?",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0005"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High",
+      "mode": {
+        "value": "Even Keel",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Run a fair, compliant process with comparable commitments.",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Executable contract, pricing and delivery accountability.",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 0,
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Named RFI recipient and cover-letter contact.",
+      "access": "Direct process path",
+      "next_step": "Confirm ownership of scoring, clarifications, negotiation and recommendation.",
+      "owner": "Todd / response lead"
+    },
+    {
+      "person_id": "person-randy-mulato-cerrate",
+      "name": "Randy Heriberto Mulato Cerrate",
+      "title": "Purchasing Specialist, CMI Alimentos",
+      "location": "unverified",
+      "role_etuc": {
+        "value": "T / C?",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0001",
+          "ev-pollo-campero-0003"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High",
+      "mode": {
+        "value": "Growth / Even Keel",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Run a responsive process, provide clean inputs and assemble a credible proposal.",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Comparable DMB and payments proposals with controlled supplier risk.",
+      "competitive_preference": {
+        "value": "Potentially favorable",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0003"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 2,
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0003",
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Attended Aug. 12 discovery; replied Aug. 21 that the approach works and committed to share statements for next-step review.",
+      "access": "Direct / responsive",
+      "next_step": "Receive statements; confirm authority, evaluation role and whether he will provide internal guidance.",
+      "owner": "Todd / Amy"
+    },
+    {
+      "person_id": "person-diego-haro",
+      "name": "Diego Haro",
+      "title": "Senior Accountant, CMI",
+      "location": "unverified",
+      "role_etuc": {
+        "value": "T / E?",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0001"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "Medium/High",
+      "mode": {
+        "value": "Even Keel",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Economic transparency, reconciliation and controlled risk.",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Defensible business case and accurate payment economics.",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 1,
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0001",
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Named Aug. 12 discovery participant and recipient of the Aug. 20 follow-up.",
+      "access": "Direct",
+      "next_step": "Validate role in statements, processor architecture, budget, analysis and approvals.",
+      "owner": "Payments / finance"
+    },
+    {
+      "person_id": "person-scott-oneill",
+      "name": "Scott O'Neill",
+      "title": "Restaurant Technology Manager, Pollo Campero",
+      "location": "unverified",
+      "role_etuc": {
+        "value": "T / U / C?",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0010"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High",
+      "mode": {
+        "value": "Growth / Even Keel",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Choose reliable restaurant technology and be seen as a credible change leader.",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Low-risk integration, deployment, uptime and support.",
+      "competitive_preference": {
+        "value": "Potentially favorable",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0010"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 2,
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0010",
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Prior positive NomadGo demo and friendly follow-ups; dormant relationship.",
+      "access": "Dormant warm",
+      "next_step": "Re-engage and test for coach criteria: access, credibility and guidance.",
+      "owner": "Todd"
+    },
+    {
+      "person_id": "person-fernando-perez",
+      "name": "Fernando Perez",
+      "title": "Head of Operations (title unverified)",
+      "location": "unverified",
+      "role_etuc": {
+        "value": "U / E?",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0010"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "Medium/High",
+      "mode": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Protect store operations, speed and guest experience.",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Minimal disruption and consistent execution.",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": -1,
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Cold LinkedIn path; conflicting historical titles.",
+      "access": "Weak",
+      "next_step": "Verify title, current remit and operational influence.",
+      "owner": "Todd"
+    },
+    {
+      "person_id": "person-karla-patino",
+      "name": "Karla Patino",
+      "title": "VP, U.S. Marketing & Sales",
+      "location": "Dallas, TX",
+      "role_etuc": {
+        "value": "U",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0009"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High",
+      "mode": {
+        "value": "Growth",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Build the most-loved brand for U.S. Hispanic consumers while reaching new audiences.",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-pollo-campero-0009"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-06-29",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Consistent brand presentation, agile promotions and measurable sales growth.",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": -1,
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Public appointment June 2026; no pursuit access.",
+      "access": "None",
+      "next_step": "Confirm ownership of DMB content, promotions, dayparting and success metrics.",
+      "owner": "Todd / marketing lead"
+    },
+    {
+      "person_id": "person-jorge-de-la-parra",
+      "name": "Jorge de la Parra",
+      "title": "title and location unverified, CMI",
+      "location": "unverified",
+      "role_etuc": {
+        "value": "T / U / C?",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0001",
+          "ev-pollo-campero-0004"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High",
+      "mode": {
+        "value": "Even Keel",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Shape both workstreams, coordinate the right people and maintain momentum.",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "A coherent payments and DMB decision that meets CMI's business, technical and commercial requirements.",
+      "competitive_preference": {
+        "value": "Potentially favorable",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0001",
+          "ev-pollo-campero-0004"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 2,
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0001",
+          "ev-pollo-campero-0004",
+          "ev-pollo-campero-0012"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "User-confirmed key stakeholder in both payments and the DMB RFI; assigned the scheduling path for both follow-on sessions. Jorge knows Ryan's boss, Tracy, and texted Tracy shortly after the Aug. 12 meeting.",
+      "access": "Direct / key cross-workstream stakeholder with an executive relationship path",
+      "next_step": "Confirm title, formal decision role and authority; ask Ryan/Tracy what Jorge communicated and test whether Jorge provides access, internal guidance and advocacy consistent with Coach criteria.",
+      "owner": "Todd / Amy / Ryan",
+      "governance_note": "Not a Coach: responsive/friendly/central-to-scheduling behavior alone does not satisfy the three-part Coach test in Method & Governance. Do not promote to Coach or EBI status without explicit customer confirmation."
+    },
+    {
+      "person_id": "person-terry-fresquez",
+      "name": "Terry Fresquez",
+      "title": "title and location unverified, CMI",
+      "location": "unverified",
+      "role_etuc": {
+        "value": "U? / T?",
+        "status": "unknown",
+        "evidence_ids": [
+          "ev-pollo-campero-0001"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "Unknown",
+      "mode": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown - participated in initial discussion.",
+        "status": "unknown",
+        "evidence_ids": [
+          "ev-pollo-campero-0001"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Potential contribution to payments, technology or operating decision.",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 0,
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-21",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Named Aug. 12 discovery attendee and Aug. 20 follow-up recipient.",
+      "access": "Direct",
+      "next_step": "Confirm title, remit, role, influence, win and decision rights.",
+      "owner": "Todd / Amy"
+    },
+    {
+      "person_id": "person-katherine-celeste-urbina-barillas",
+      "name": "Katherine Celeste Urbina Barillas",
+      "title": "Purchasing Specialist",
+      "location": "CMI / Pollo Campero",
+      "email": "katherine.urbina@somoscmi.com",
+      "role_etuc": {
+        "value": "Procurement contact / U?",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-pollo-campero-0013"
+        ],
+        "confidence": "high",
+        "as_of": "2026-08-27",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High process influence; economic and technical authority unverified",
+      "mode": {
+        "value": "Even Keel",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0013"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Run a complete, comparable and timely procurement process.",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-pollo-campero-0013"
+        ],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Receive a complete revised proposal and priced SOW responsive to the updated requirements.",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 0,
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-08-27",
+        "scope": "opportunity:opp-pollo-campero-dmb-payments",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Primary procurement channel. Transmitted the updated TDR and SOW/pricing template and established the 2026-09-04 deadline.",
+      "access": "Direct email / formal procurement channel",
+      "next_step": "Send one consolidated clarification set and submit the revised proposal and pricing on time.",
+      "owner": "Todd / proposal lead"
+    }
+  ],
+  "technology_stack": [
+    {
+      "layer": "DMB / CMS",
+      "vendor": "ZoneIn and Stream among multiple vendors",
+      "current_state": "Fragmented, manual and end-of-life; RFI seeks a unified platform.",
+      "status": "Active",
+      "confidence": "high",
+      "evidence_ids": [
+        "ev-pollo-campero-0005"
+      ],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "POS software",
+      "vendor": "NCR Aloha + Oracle Simphony",
+      "current_state": "Working view is a mixed estate migrating toward Simphony.",
+      "status": "Verify",
+      "confidence": "medium",
+      "evidence_ids": [
+        "ev-pollo-campero-0008"
+      ],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "POS hardware / workstations",
+      "vendor": "Provider and models not yet confirmed",
+      "current_state": "Hardware estate, ownership, age, peripherals and refresh cycle are unknown.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "Online ordering",
+      "vendor": "Olo",
+      "current_state": "Olo is the current direct-ordering platform.",
+      "status": "Confirmed",
+      "confidence": "high",
+      "evidence_ids": [
+        "ev-pollo-campero-0009"
+      ],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "Above-store digital gateway / payments",
+      "vendor": "Olo Pay using Stripe",
+      "current_state": "Working view; consolidation must preserve strong fraud and chargeback protection.",
+      "status": "Verify",
+      "confidence": "medium",
+      "evidence_ids": [
+        "ev-pollo-campero-0009"
+      ],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "In-store acquiring",
+      "vendor": "Fiserv working view; Bank of America appears in sampled statements",
+      "current_state": "Current architecture may differ by entity, store, channel or provider role.",
+      "status": "Reconcile",
+      "confidence": "medium",
+      "evidence_ids": [
+        "ev-pollo-campero-0006",
+        "ev-pollo-campero-0008"
+      ],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing",
+      "contradiction_id": "ct-pollo-campero-0001"
+    },
+    {
+      "layer": "Payment terminal",
+      "vendor": "Verifone P400 on Simphony side",
+      "current_state": "Terminal environment requires validation.",
+      "status": "Verify",
+      "confidence": "medium",
+      "evidence_ids": [],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "Back office",
+      "vendor": "Provider and modules not yet confirmed",
+      "current_state": "Cash, inventory, labor, reporting and above-store integrations remain unmapped.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "AI / analytics",
+      "vendor": "Provider and active use cases not yet confirmed",
+      "current_state": "No verified enterprise AI provider or production restaurant use case is mapped.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "Gift cards",
+      "vendor": "Valutec",
+      "current_state": "Working incumbent view; current issue and ownership need clarification.",
+      "status": "Verify",
+      "confidence": "medium",
+      "evidence_ids": [
+        "ev-pollo-campero-0002"
+      ],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "Loyalty / app",
+      "vendor": "Campero Rewards; platform provider not confirmed",
+      "current_state": "Tiered program spans in-store, online and app.",
+      "status": "Verify",
+      "confidence": "medium",
+      "evidence_ids": [
+        "ev-pollo-campero-0009"
+      ],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "Content operations",
+      "vendor": "Highly manual current process",
+      "current_state": "Corporate and field workflows create material IT/Marketing burden.",
+      "status": "Active",
+      "confidence": "high",
+      "evidence_ids": [
+        "ev-pollo-campero-0005"
+      ],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "Displays / field service",
+      "vendor": "Samsung/LG indoor; LG outdoor; mixed configurations",
+      "current_state": "Five indoor average; drive-thru configurations vary; full lifecycle support requested.",
+      "status": "Active",
+      "confidence": "high",
+      "evidence_ids": [
+        "ev-pollo-campero-0005"
+      ],
+      "as_of": "2026-08-21",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    }
+  ],
+  "commercial_models": [
+    {
+      "item": "Observed statement volume",
+      "value": 1236000,
+      "unit": "USD approx.",
+      "confidence": "medium",
+      "status": "observed",
+      "evidence_ids": [
+        "ev-pollo-campero-0006"
+      ],
+      "as_of": "2026-06-30"
+    },
+    {
+      "item": "Observed all-in rate",
+      "value": 0.0155,
+      "unit": "rate",
+      "confidence": "medium",
+      "status": "observed",
+      "evidence_ids": [
+        "ev-pollo-campero-0007"
+      ],
+      "as_of": "2026-08-01"
+    },
+    {
+      "item": "Field-reported card volume",
+      "value": 200000000,
+      "unit": "USD+/year",
+      "confidence": "low",
+      "status": "hypothesis",
+      "evidence_ids": [
+        "ev-pollo-campero-0011"
+      ],
+      "as_of": "2026-08-20"
+    },
+    {
+      "item": "Standalone DMB subscription",
+      "value": 25,
+      "unit": "USD/screen/month",
+      "confidence": "low",
+      "status": "hypothesis",
+      "evidence_ids": [
+        "ev-pollo-campero-0011"
+      ],
+      "as_of": "2026-08-21"
+    },
+    {
+      "item": "Payments-participation DMB",
+      "value": 12.5,
+      "unit": "USD/screen/month",
+      "confidence": "low",
+      "status": "hypothesis",
+      "evidence_ids": [
+        "ev-pollo-campero-0011"
+      ],
+      "as_of": "2026-08-21"
+    },
+    {
+      "item": "White-glove service",
+      "value": "25 to 50",
+      "unit": "USD/screen/month",
+      "confidence": "low",
+      "status": "hypothesis",
+      "evidence_ids": [
+        "ev-pollo-campero-0011"
+      ],
+      "as_of": "2026-08-21"
+    },
+    {
+      "item": "Base screen archetype",
+      "value": 9,
+      "unit": "screens/store",
+      "confidence": "medium",
+      "status": "hypothesis",
+      "evidence_ids": [
+        "ev-pollo-campero-0005"
+      ],
+      "as_of": "2026-08-21"
+    },
+    {
+      "item": "Project management fee (POS + DMB)",
+      "value": "Waived at RFP stage; negotiation lever for later",
+      "confidence": "high",
+      "status": "decided",
+      "evidence_ids": [
+        "ev-pollo-campero-0017"
+      ],
+      "as_of": "2026-08-28"
+    },
+    {
+      "item": "Project kickoff fee",
+      "value": "$0 -- included in service",
+      "confidence": "high",
+      "status": "decided",
+      "evidence_ids": [
+        "ev-pollo-campero-0017"
+      ],
+      "as_of": "2026-08-28"
+    },
+    {
+      "item": "Content management fee basis",
+      "value": "Not charged for basic content/assets; priced above that for high-frequency ongoing content changes",
+      "confidence": "medium",
+      "status": "decided",
+      "evidence_ids": [
+        "ev-pollo-campero-0017"
+      ],
+      "as_of": "2026-08-28"
+    },
+    {
+      "item": "Site survey pricing",
+      "value": "Exists on standard price sheet -- exact figure owed by Ryan Hildebrand, not yet provided",
+      "confidence": "low",
+      "status": "pending",
+      "evidence_ids": [
+        "ev-pollo-campero-0017"
+      ],
+      "as_of": "2026-08-28"
+    }
+  ],
+  "latest_review": {
+    "blue_sheet_owner": "Todd Vahlsing",
+    "core_contributors": "Amy McKay; assigned solution, integration, operations, support, finance, legal and executive sponsors",
+    "last_reviewed": "2026-08-27",
+    "review_status": "RFP active / response build and validation in progress",
+    "next_formal_review": "Before pricing certification and before 2026-09-04 submission",
+    "current_critical_test": "Can Global Payments convert the RFI claims into approved, priced commitments for third-party integrations and full asset lifecycle services?"
+  },
+  "template_version": "0.3-seed",
+  "updated_at": "2026-08-27T13:15:00Z",
+  "engagement_tier": "active_engagement"
+}

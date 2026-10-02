@@ -1,0 +1,191 @@
+{
+  "competitor_id": "comp-fiserv",
+  "competitor_slug": "fiserv",
+  "display_name": "Fiserv",
+  "aliases": [
+    "Clover"
+  ],
+  "vendor_entity_id": "vendor-fiserv",
+  "primary_category": "payments",
+  "competes_on": [
+    "payments",
+    "pos",
+    "restaurant_os_platform"
+  ],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {
+    "payments": {
+      "status": "source_backed",
+      "confidence_pct": 70,
+      "rm_plain_english_posture": "Fiserv is attempting to improve service, platform stability, and Clover execution through a unified One Fiserv model. Reliability concerns are a near-term displacement opening; successful execution would strengthen its acquiring-plus-platform story.",
+      "listen_for": [
+        "Fiserv emphasizing customer service, client focus, platform stability, and customer retention under One Fiserv."
+      ],
+      "discovery_questions": [
+        "What service incidents, stability problems, or retention risk has the account experienced, and what evidence shows those issues are improving?"
+      ],
+      "when_to_bring_todd_in": "Bring Todd in when an account reports Fiserv service, stability, or retention issues—or when Fiserv claims those issues have been resolved.",
+      "red_flags": [],
+      "evidence_ids": [
+        "note-0001",
+        "note-0002"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T14:06:23Z"
+    },
+    "pos": {
+      "status": "source_backed",
+      "confidence_pct": 70,
+      "rm_plain_english_posture": "Clover becomes more formidable if Fiserv materially improves stability and integrates it more tightly with acquiring and broader infrastructure. Compete on proven restaurant-grade reliability and operational fit.",
+      "listen_for": [],
+      "discovery_questions": [],
+      "when_to_bring_todd_in": "Bring Todd in when Clover is positioned as an enterprise restaurant platform rather than an SMB POS.",
+      "red_flags": [
+        "Do not treat management's stated priority to improve platform stability as proof that the reliability problem has already been resolved."
+      ],
+      "evidence_ids": [
+        "note-0003",
+        "note-0002"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T14:06:28Z"
+    },
+    "platform": {
+      "status": "source_backed",
+      "confidence_pct": 70,
+      "rm_plain_english_posture": "One Fiserv is a consolidation narrative combining merchant acquiring, Clover, and broader Fiserv infrastructure. Until the turnaround is proven, customer-service and stability friction remain the opening.",
+      "listen_for": [
+        "One Fiserv positioning that combines merchant acquiring, Clover, and broader Fiserv infrastructure into a unified operating model."
+      ],
+      "discovery_questions": [],
+      "when_to_bring_todd_in": "Bring Todd in for Fiserv consolidation pursuits or accounts with credible service and stability dissatisfaction.",
+      "red_flags": [],
+      "evidence_ids": [
+        "note-0003"
+      ],
+      "source_urls": [],
+      "last_validated": "2026-09-11",
+      "updated_at": "2026-09-11T14:06:33Z"
+    }
+  },
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:46:56Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:56Z",
+  "latest_cos_commentary": {
+    "headline": "Fiserv named Takis Georgakopoulos CEO in June 2026, elevating the former Merchant Solutions/Clover leader to the top job as Clover continues expanding into fine dining and full-service restaurant segments.",
+    "genius_exposure": "Direct competitor across pos, payments, and restaurant_os_platform: Clover Reserve (Tabit) targets full-service/fine dining, Clover Hospitality (BentoBox) targets broader hospitality, putting Clover in direct contention with Genius's restaurant POS and payments bundle.",
+    "competitive_timing": "Leadership change (new CEO, June 2026) plus product expansion (Clover Reserve, May 2026) signal Fiserv is actively investing in and elevating its restaurant/merchant business, not deprioritizing it.",
+    "sales_response": "Expect Clover to be positioned increasingly for full-service and fine-dining accounts, not just QSR/counter-service; ask prospects using Clover which module (Reserve/Tabit vs. BentoBox vs. core Clover) they're on, since capability and pricing differ by module.",
+    "risk_and_uncertainty": "Pricing was not confirmed in this pass; named restaurant customers beyond the Tabit/BentoBox partner announcements were not disclosed.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 36
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 36,
+    "pack_claim_count": 4,
+    "pack_claims_with_url": 4,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 4,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "pricing",
+        "named restaurant customer scope beyond partner announcements"
+      ]
+    }
+  },
+  "vendor_claims": [
+    {
+      "value": "Fiserv described BentoBox as a restaurant digital-commerce platform covering websites, online ordering, preorder/catering, gift cards, merchandise, tickets and events management with Clover integration.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://investors.fiserv.com/news-releases/news-release-details/fiserv-completes-acquisition-bentobox",
+      "finding_type": "vendor_stated",
+      "source_owner": "Fiserv",
+      "source_type": "primary_investor_press_release",
+      "published_at": "2021-11-22",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Product inventory reflects the acquisition-period description and may not equal current packaging."
+    }
+  ],
+  "product_lineage": [
+    {
+      "value": "Fiserv's SEC filing states that it acquired BentoBox on November 22, 2021 for $317 million net of acquired cash and that the transaction expanded Clover dining and commerce-management capabilities.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/798354/000079835422000019/fisv-20220930.htm",
+      "finding_type": "independently_verified",
+      "source_owner": "U.S. Securities and Exchange Commission / Fiserv",
+      "source_type": "sec_filing",
+      "published_at": "2022-01-01",
+      "deployment_scope": "historical",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Historical transaction fact; does not establish current product performance."
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Indexed G2 review content for Clover surfaces ease-of-use and payment-processing positives.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.g2.com/products/clover/reviews",
+      "finding_type": "marketplace_reported",
+      "source_owner": "G2",
+      "source_type": "verified_review_platform_search_index",
+      "published_at": "",
+      "deployment_scope": "unknown",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Full review page retrieval failed and a restaurant-only subset could not be inspected."
+    },
+    {
+      "value": "Indexed G2 content for BentoBox surfaces favorable navigation, value and support signals.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.g2.com/products/bentobox/reviews",
+      "finding_type": "marketplace_reported",
+      "source_owner": "G2",
+      "source_type": "verified_review_platform_search_index",
+      "published_at": "",
+      "deployment_scope": "unknown",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Full review page failed to load, preventing complaint-frequency analysis."
+    }
+  ]
+}

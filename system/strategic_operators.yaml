@@ -1,0 +1,234 @@
+version: 1
+last_updated: '2026-08-19'
+contract: rb_strategic_operators_v1
+description: 'Persistent watchlist of strategic operator entities (multi-brand franchise
+
+  operators, PE-backed groups, expansion leaders, high-influence franchisee
+
+  groups, operator holding companies). Each entity carries baseline state,
+
+  movement history, and resolved relationship proximity.
+
+
+  Update via `python3 system/scripts/mutations.py operator-*` per P-009 / P-031.
+
+  Hand-editing is allowed; the schema validator runs on every read.
+
+
+  See system/RB_9_STRATEGIC_OPERATOR_INTELLIGENCE_LAYER.md for the product
+
+  contract this file implements.
+
+  '
+operators:
+- id: flynn-group
+  name: Flynn Group
+  entity_type: multi_brand_operator
+  watchlist_bucket: multi_brand_operator
+  status: active
+  opened: '2026-05-22'
+  last_movement_at: null
+  companies_owned:
+  - Applebee's franchisee (largest U.S. franchisee)
+  - Taco Bell franchisee
+  - Panera Bread franchisee
+  - Arby's franchisee
+  - Wendy's franchisee
+  - Pizza Hut franchisee (UK and Wendy's Australia historical)
+  brands_in_portfolio:
+  - applebees
+  - taco-bell
+  - panera
+  - arbys
+  - wendys
+  - pizza-hut
+  executives: []
+  vendor_relationships: []
+  relationship_proximity: none
+  proximity_evidence: []
+  notes: 'Largest franchisee in the United States across multiple brands. ~2,400
+
+    restaurants under one operating umbrella. Strategic relationship
+
+    target — direct contact path unknown at watchlist open.
+
+    '
+  movements: []
+- id: carrols-restaurant-group
+  name: Carrols Restaurant Group
+  entity_type: pe_backed
+  watchlist_bucket: pe_backed_groups
+  status: active
+  opened: '2026-05-22'
+  last_movement_at: '2024-05-16'
+  companies_owned:
+  - Burger King franchisee (historically largest)
+  - Popeyes franchisee
+  brands_in_portfolio:
+  - burger-king
+  - popeyes
+  executives: []
+  vendor_relationships: []
+  relationship_proximity: none
+  proximity_evidence: []
+  notes: 'Acquired by Restaurant Brands International on 2024-05-16, becoming a
+
+    wholly-owned RBI subsidiary. ~1,000+ Burger King units pre-acquisition
+
+    plus a Popeyes portfolio. Vertical integration play by RBI.
+
+    '
+  movements: []
+- id: sailormen
+  name: Sailormen
+  entity_type: franchisee_group
+  watchlist_bucket: high_influence_franchisee
+  status: active
+  opened: '2026-05-22'
+  last_movement_at: null
+  companies_owned:
+  - Popeyes franchisee (largest single operator)
+  brands_in_portfolio:
+  - popeyes
+  executives: []
+  vendor_relationships: []
+  relationship_proximity: none
+  proximity_evidence: []
+  notes: 'Florida-based, largest Popeyes franchisee. Single-brand operator at
+
+    scale; surface for vendor-decision influence inside the Popeyes
+
+    franchisee community.
+
+    '
+  movements: []
+- id: ghai-management
+  name: Ghai Management
+  entity_type: multi_brand_operator
+  watchlist_bucket: multi_brand_operator
+  status: active
+  opened: '2026-05-22'
+  last_movement_at: null
+  companies_owned:
+  - Taco Bell franchisee (44+ locations)
+  - Burger King franchisee
+  brands_in_portfolio:
+  - taco-bell
+  - burger-king
+  executives: []
+  vendor_relationships: []
+  relationship_proximity: none
+  proximity_evidence: []
+  notes: 'Worked example in system/RB_9_STRATEGIC_OPERATOR_INTELLIGENCE_LAYER.md.
+
+    Multi-brand franchisee at active-acquisition scale; canonical entry
+
+    for testing the operator-record-movement flow.
+
+    '
+  movements: []
+- id: thrive-restaurant-group
+  name: Thrive Restaurant Group
+  entity_type: multi_brand_operator
+  watchlist_bucket: multi_brand_operator
+  status: active
+  opened: '2026-05-22'
+  last_movement_at: null
+  companies_owned:
+  - Applebee's franchisee
+  - Olive Garden franchisee
+  - Carlos O'Kelly's (concept)
+  brands_in_portfolio:
+  - applebees
+  - olive-garden
+  executives: []
+  vendor_relationships: []
+  relationship_proximity: none
+  proximity_evidence: []
+  notes: 'Wichita-based multi-concept operator. Notable for cross-brand
+
+    operational learnings (casual dining + Italian + Mexican).
+
+    '
+  movements: []
+- id: sizzling-platter
+  name: Sizzling Platter
+  entity_type: multi_brand_operator
+  watchlist_bucket: multi_brand_operator
+  status: active
+  opened: '2026-05-22'
+  last_movement_at: null
+  companies_owned:
+  - Little Caesars franchisee (largest)
+  - Wingstop franchisee
+  - Dunkin' franchisee
+  - Jamba franchisee
+  - Sizzler franchisee
+  - Red Robin franchisee
+  brands_in_portfolio:
+  - little-caesars
+  - wingstop
+  - dunkin
+  - jamba
+  - sizzler
+  - red-robin
+  executives: []
+  vendor_relationships: []
+  relationship_proximity: none
+  proximity_evidence: []
+  notes: 'PE-aligned multi-brand operator with 600+ units across 6+ brands. High
+
+    cross-brand operating-model influence; common buyer profile across
+
+    QSR and casual dining technology categories.
+
+    '
+  movements: []
+- id: kbp-foods
+  name: KBP Foods
+  entity_type: multi_brand_operator
+  watchlist_bucket: pe_backed_groups
+  status: active
+  opened: '2026-05-22'
+  last_movement_at: null
+  companies_owned:
+  - KFC franchisee (one of the largest)
+  - Taco Bell franchisee
+  brands_in_portfolio:
+  - kfc
+  - taco-bell
+  executives: []
+  vendor_relationships: []
+  relationship_proximity: none
+  proximity_evidence: []
+  notes: 'Berkshire Partners-backed multi-brand operator. Aggressive growth via
+
+    acquisition; relevant for franchisee-side technology rollout and
+
+    vendor selection signals.
+
+    '
+  movements: []
+- id: muy-companies
+  name: MuY Companies
+  entity_type: multi_brand_operator
+  watchlist_bucket: multi_brand_operator
+  status: active
+  opened: '2026-08-19'
+  last_movement_at: null
+  companies_owned:
+  - Taco Bell franchisee (one of the largest)
+  - KFC franchisee
+  - Pizza Hut franchisee
+  brands_in_portfolio:
+  - taco-bell
+  - kfc
+  - pizza-hut
+  executives: []
+  vendor_relationships: []
+  relationship_proximity: none
+  proximity_evidence: []
+  notes: Large multi-brand Yum Brands franchisee (Taco Bell/KFC/Pizza Hut). Added per restaurant_tech_watchlist.md's
+    own named example list, which cited it as a strategic operator but it had never actually
+    been added to strategic_operators.yaml.
+  movements: []

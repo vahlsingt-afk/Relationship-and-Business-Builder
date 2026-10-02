@@ -1,0 +1,54 @@
+{
+  "competitor_id": "comp-iconex",
+  "competitor_slug": "iconex",
+  "display_name": "Iconex",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:06Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:33Z",
+  "latest_cos_commentary": {
+    "headline": "Iconex (M2S Group) manufactures thermal receipt paper and linerless labels for QSR order identification, claiming adoption by several top hospitality chains without naming them.",
+    "genius_exposure": "Peripheral/consumables overlap only (receipt paper, kitchen labels); not a competitor to any core Genius software or payments line, and typically a complementary supplier regardless of which POS platform a restaurant runs.",
+    "competitive_timing": "No major 2026 leadership or ownership change was found beyond confirmed M2S Group ownership; the company continues its usual trade-show presence (FSTEC 2026).",
+    "sales_response": "Not a competitive-displacement conversation; Iconex is a consumables supplier that can coexist with any POS platform choice.",
+    "risk_and_uncertainty": "Accuracy/cost-reduction statistics and the \"Top 7 hospitality chains\" claim are unverified vendor marketing language with no named customers or independent source.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 44
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 44,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Named Customers",
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership",
+        "named restaurant/chain customer",
+        "pricing"
+      ]
+    }
+  }
+}

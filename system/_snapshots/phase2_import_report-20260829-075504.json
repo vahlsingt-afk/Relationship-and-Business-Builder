@@ -1,0 +1,56 @@
+{
+  "phase2_file": "system/research/phase2_genius_evidence_draft_2026-08-29.json",
+  "category": null,
+  "rows_processed": 3,
+  "rows_skipped": 0,
+  "dry_run": true,
+  "added": 3,
+  "updated": 0,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 3,
+    "enrich_existing_relationship": 0,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 0,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 0,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Genius",
+        "customer": "A&W",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-a-w-all-american-food-pos-system-of-record-pos-vendor-genius"
+      },
+      {
+        "vendor": "Genius",
+        "customer": "Subway",
+        "tech_category": "KDS",
+        "relationship_id": "rel-brand-subway-kds-kitchen-ops-unknown-vendor-genius"
+      },
+      {
+        "vendor": "Genius",
+        "customer": "Bojangles",
+        "tech_category": "POS Software",
+        "relationship_id": "rel-brand-bojangles-pos-system-of-record-pos-vendor-genius"
+      }
+    ],
+    "enrich_existing_relationship": [],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

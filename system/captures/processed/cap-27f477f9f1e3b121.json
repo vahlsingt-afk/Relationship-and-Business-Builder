@@ -1,0 +1,92 @@
+{
+  "file_id": "cap-27f477f9f1e3b121",
+  "queued_at": "2026-09-27T09:17:45+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-26_1906_5-5-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-26_1906_5-5-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260926-1906-5-5-validation`\n- Research system: `ChatGPT Deep Research`\n- Started at: `2026-09-26 19:06 CDT`\n- Completed at: `2026-09-26 19:09 CDT`\n- Research scope: Direct-competitor customer and product-page mining\n- Queue item or vendor: `competitor:5-5`\n- Methodology: Four first-party 5&5 customer success stories were opened and assessed. Vendor-authored outcomes remain attributed claims and were not written into canonical records.\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 4\n- Company/competitor profile observations added or revised: 1\n- Conflicts found: 2\n- Material takeaway: 5&5 has named, product-specific implementation and managed-services evidence across Shipley Do-Nuts, Egg N Bird / FOMO Fries, Slice House, and Walk-On's. The pages show a hands-on role across Olo, Toast, Brink, Paytronix, Restaurant365, ezCater, and third-party delivery platforms, positioning 5&5 as a cross-platform restaurant technology implementation and operations layer rather than a core POS vendor.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: Shipley Do-Nuts\n- Vendor: 5&5\n- Product or category: Olo online ordering; menu management; new-store digital setup; ownership-transfer workflow; web support\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: 5&5's current first-party case study names Shipley, its operating context, Olo, the workflows managed, and the continuing support relationship.\n- Source title: Shipley Do-Nuts | Stronger Systems. Smoother Operations.\n- Source URL: https://5and5.com/success-stories/shipley-do-nuts/\n- Publisher or source owner: 5&5\n- Published date, if known: unknown\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: 5&5 says it manages the full digital opening process for new Shipley shops, including location and ownership data collection, Olo configuration, menu accuracy, testing, and operator readiness; it also manages ownership transfers and ongoing menu and system changes.\n- Product-specific evidence: Olo online ordering, menu configuration, ordering-flow testing, new-shop digital onboarding, ownership-change updates, website/web-sub maintenance, and franchisee communication.\n- Conflicting or limiting evidence: The page is vendor-authored and does not provide an independent customer statement for every claimed workflow, a contract start date, or a precise current location count under management.\n- Recommended follow-up: Confirm current Shipley scope, whether every shop is covered, and the specific ordering technologies referenced as new initiatives.\n\n### Observation 2\n\n- Brand: Egg N Bird / FOMO Fries\n- Vendor: 5&5\n- Product or category: Brink POS; Olo Rails; DoorDash, Uber Eats, and Grubhub activation; virtual-brand implementation\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: 5&5's first-party case study names both brands and provides platform-level implementation detail, workflow, testing, and a stated sub-one-month launch timeline.\n- Source title: FOMO Fries Case Study | Virtual Restaurant Tech Setup\n- Source URL: https://5and5.com/success-stories/fomo-fries/\n- Publisher or source owner: 5&5\n- Published date, if known: unknown\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: 5&5 reports configuring FOMO Fries' menu for POS compatibility, linking items to categories, modifiers, and reporting groups, and using Olo Rails to activate DoorDash, Uber Eats, and Grubhub storefronts with end-to-end order testing.\n- Product-specific evidence: Brink and Olo implementation support, POS menu mapping, Olo Rails marketplace integration, storefront setup, direct order routing, and cross-platform testing.\n- Conflicting or limiting evidence: The page does not identify the number of Egg N Bird kitchens participating, provide independent sales figures, or establish the virtual brand's current 2026 operating footprint.\n- Recommended follow-up: Verify the current number of active FOMO Fries storefronts, whether Brink remains the POS, and which outcomes were measured after launch.\n\n### Observation 3\n\n- Brand: Slice House\n- Vendor: 5&5\n- Product or category: Toast POS management; Paytronix online ordering, loyalty, and gift cards; ezCater; Restaurant365\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: The first-party page names Slice House's CTO, specific platforms and responsibilities, a 25-location impact statement, and an ongoing support relationship.\n- Source title: Slice House Digital Transformation Case Study | 5&5\n- Source URL: https://5and5.com/success-stories/slice-house/\n- Publisher or source owner: 5&5\n- Published date, if known: unknown\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: 5&5 says it audited and standardized Slice House's Toast databases, implemented role-based permissions, led Paytronix online-ordering, loyalty, and gift-card work, coordinated marketplace migration, and supported ezCater and Restaurant365.\n- Product-specific evidence: Toast database cleanup and ongoing management; Paytronix implementation and management; DoorDash, Uber Eats, and Grubhub migration coordination; ezCater and Restaurant365 implementation support.\n- Conflicting or limiting evidence: The page reports growth from five to more than 25 locations and 100-plus development commitments, but these are vendor-published statements and development agreements are not operating units.\n- Recommended follow-up: Confirm current live-location count, platform coverage by location, and whether all planned migrations are complete.\n\n### Observation 4\n\n- Brand: Walk-On's Sports Bistreaux\n- Vendor: 5&5\n- Product or category: Paytronix loyalty; Olo online ordering; implementation project management and testing\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: 5&5's case study names the brand, platforms, implementation activities, six-month timeline, 80-location impact, and a named brand executive testimonial.\n- Source title: Walk-On's Case Study | Sports Bar Technology Solutions\n- Source URL: https://5and5.com/success-stories/walk-ons/\n- Publisher or source owner: 5&5\n- Published date, if known: unknown\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: 5&5 says it led the Paytronix loyalty and Olo ordering implementations through configuration, training, menu and modifier setup, metadata work, QA, troubleshooting, and structured rollout support across an 80-location impact scope over six months.\n- Product-specific evidence: Paytronix automatic-conversion loyalty model and guest FAQ; Olo menu, modifier, and metadata configuration; QA, testing, troubleshooting, training, and rollout project management.\n- Conflicting or limiting evidence: Reported improvements in participation, repeat visits, order completion, and guest satisfaction are not accompanied by numeric baselines, measurement periods, or independent validation.\n- Recommended follow-up: Confirm whether 5&5 remains engaged after handoff, the live location count, and quantified pre/post loyalty and ordering outcomes.\n\n## Company / competitor profile observations\n\n### Competitor profile observation 1\n\n- Target: `competitor:5-5`\n- Field: synopsis\n- Value or observation: 5&5 operates as a restaurant-focused implementation and managed-services layer across brands' existing technology stacks. The reviewed work spans POS cleanup and management, online ordering, loyalty, delivery marketplace activation, new-store setup, franchisee coordination, QA, and ongoing cross-vendor support.\n- Confidence: 90%\n- Confidence rationale: Four separate first-party customer stories consistently describe this cross-platform operating model with named brands and products.\n- Source title: Shipley Do-Nuts; FOMO Fries; Slice House; Walk-On's success stories\n- Source URL: https://5and5.com/success-stories/\n- Publisher or source owner: 5&5\n- Published date, if known: unknown\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: Across the four pages, 5&5 repeatedly describes itself as implementing and operating third-party restaurant platforms on the brand's behalf, including Olo, Toast, Brink, Paytronix, Restaurant365, ezCater, and major delivery marketplaces.\n- Conflicting or limiting evidence: The evidence is vendor-authored and does not establish market share, customer retention, or comparable performance against Genius.\n\n## Negative findings\n\n- Candidate or claim: 5&5 is itself a core POS software vendor.\n- Pages checked: All four pages in the source ledger.\n- Result: Unsupported. The pages instead show implementation, configuration, project management, and ongoing support for third-party platforms such as Toast, Brink, Olo, Paytronix, and Restaurant365.\n- Candidate or claim: Vendor-reported outcome improvements can be treated as independently measured causal results.\n- Pages checked: All four pages in the source ledger.\n- Result: Unsupported. The pages provide qualitative outcomes and some scope/timeline figures, but no controlled attribution or independent measurement methodology.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://5and5.com/success-stories/shipley-do-nuts/ | case study | 2026-09-26 | 1 | Productive; current Olo and digital-operations scope, but exact covered-location count is unstated. |\n| https://5and5.com/success-stories/fomo-fries/ | case study | 2026-09-26 | 2 | Productive; Brink, Olo Rails, and delivery-platform implementation detail. |\n| https://5and5.com/success-stories/slice-house/ | case study | 2026-09-26 | 3 | Productive; Toast, Paytronix, ezCater, and Restaurant365 work across a stated 25-location impact. |\n| https://5and5.com/success-stories/walk-ons/ | case study | 2026-09-26 | 4 | Productive; Paytronix and Olo implementation across a stated 80-location impact and six-month timeline. |\n\n## Research notes and inferences\n\n- Inference: 5&5's competitive threat is services-led control of restaurant technology rollouts and ongoing operations, potentially influencing vendor selection and implementation success even when it does not own the underlying POS or SaaS products.\n- Inference: 5&5 appears strongest where a brand has a fragmented multi-vendor stack or limited internal implementation capacity; the reviewed pages do not establish proprietary platform lock-in.",
+  "word_count": 1448,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-27T09:18:10+00:00",
+  "processing_result": {
+    "triage_stream_count": 8,
+    "noise_only": false,
+    "persisted_count": 8,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-008",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 3 trigger(s): named. Possible named subjects: Material, Source, Conflicts, Case Study, Shipley Do, Nuts."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-009",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:toast_pos' (matched term: 'toast'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-010",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'account_dossier:global_payments' (matched term: 'genius'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-011",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'franchisee'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-012",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Olo' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-013",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-014",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Walk-On's Sports Bistreaux, Shipley Do-Nuts, Toast, Genius, Restaurant365, Olo, Paytronix, DoorDash, Uber Eats. Macro/industry signal detected: 19 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signa"
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-015",
+        "intelligence_type": "strategic_memory",
+        "extracted_summary": "Strategic memory / thesis signal detected: 1 trigger(s): positioning."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "5&5",
+        "Shipley Do-Nuts",
+        "Egg N Bird",
+        "FOMO Fries",
+        "Slice House",
+        "Walk-On's",
+        "Olo",
+        "Toast",
+        "Brink",
+        "Paytronix"
+      ],
+      "topics": [
+        "customer success stories",
+        "restaurant technology implementation",
+        "case studies",
+        "cross-platform operations"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Confirm current Shipley scope, whether every shop is covered, and the specific ordering technologies referenced as new initiatives.",
+        "Verify the current number of active FOMO Fries storefronts, whether Brink remains the POS, and which outcomes were measured after launch.",
+        "Confirm current live-location count, platform coverage by location, and whether all planned migrations are complete.",
+        "Confirm whether 5&5 remains engaged after handoff, the live location count, and quantified pre/post loyalty and ordering outcomes."
+      ],
+      "why_it_matters": "The insights on 5&5's role in restaurant technology implementation could inform strategic decisions on vendor partnerships and operational efficiency."
+    }
+  }
+}

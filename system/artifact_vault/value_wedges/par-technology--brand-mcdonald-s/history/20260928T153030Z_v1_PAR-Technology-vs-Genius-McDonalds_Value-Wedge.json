@@ -1,0 +1,45 @@
+{
+  "competitor_slug": "par-technology",
+  "vendor_display_name": "PAR Technology",
+  "brand_id": "brand-mcdonald-s",
+  "brand_name": "McDonald's",
+  "category": "loyalty_engagement",
+  "competes_on": [
+    "back_office",
+    "digital_ordering",
+    "loyalty_engagement",
+    "payments",
+    "pos",
+    "restaurant_os_platform"
+  ],
+  "circle1_genius_strengths": [
+    {
+      "category": "Loyalty Engagement",
+      "point": "Loyalty/marketing is a native module of Genius (listed components: \"marketing tools,\" \"loyalty programs\") rather than a standalone brand",
+      "why_it_matters": "Source: https://investors.globalpayments.com/news-events/press-releases/detail/473/global-payments-launches-new-genius-pos-platform"
+    },
+    {
+      "category": "Loyalty Engagement",
+      "point": "Bundled with POS/payments; loyalty in scope of CKE 2,400-unit deal",
+      "why_it_matters": "Source: https://investors.globalpayments.com/news-events/press-releases/detail/508/global-payments-announces-exclusive-agreement-with-cke"
+    }
+  ],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Tighter system control via Xenial+RTI+Sycom lineage -- more vertically integrated than PAR's assembled/open approach"
+    },
+    {
+      "point": "RTI heritage gives deeper back-office/franchise-reporting maturity than PAR's Data Central"
+    },
+    {
+      "point": "Payments+platform bundling is structural: Global Payments already has payments, PAR is still assembling this"
+    },
+    {
+      "point": "Still GAAP loss-making: Q2 2026 net loss $16.9M"
+    },
+    {
+      "point": "AI monetization deferred to 2027 (\"Action\" phase); 20k sites on free \"Assist\" tier"
+    }
+  ]
+}

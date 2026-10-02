@@ -1,0 +1,205 @@
+{
+  "title": "Sarah McAngus warm recruiter introduction canonical persistence defect",
+  "trace_id": "T-2026-05-21-001",
+  "trace_type": "field_defect",
+  "source": "ChatGPT / live RB advisory session summary",
+  "operator": "Todd",
+  "captured_at": "2026-05-21T10:45:00-05:00",
+  "severity": "HIGH",
+  "category": "Canonicalization failure / invisible persistence defect",
+  "summary": "Todd tested RB during a real high-value recruiting acceleration event: Jeff Staley, a former PAR direct report and trusted source, introduced or warmed a path to recruiter Sarah McAngus for a Commercial Director role with strong McDonald's and enterprise farming alignment. The assistant gave strong tactical advice and interpreted the momentum correctly, but did not visibly prove canonical relationship intelligence capture, artifact mutation, operational orchestration, or persistence.",
+  "observed_issue": "RB sounded strategically intelligent but did not demonstrate that the relationship event became operational state. The user could not verify whether RB created or updated contacts, opportunity state, referral edges, loops, prep tasks, or Who Matters Now prioritization.",
+  "input_signal": {
+    "referral_source": "Jeff Staley",
+    "recruiter": "Sarah McAngus",
+    "opportunity": "Commercial Director",
+    "domain_alignment": [
+      "McDonald's",
+      "enterprise restaurant tech",
+      "enterprise farming"
+    ],
+    "momentum": "same-day recruiter scheduling, WhatsApp escalation, timezone coordination",
+    "event_date": "2026-05-21"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label": "LinkedIn connection request and warm referral path",
+      "user_prompt": "Sarah McAngus sent a LinkedIn connection request. Jeff Staley told Todd he interviewed with Sarah and recommended Todd for the role.",
+      "assistant_response": "The system recognized warmth and strategic value in prose, but did not surface formal RI detection or proposed canonical writes.",
+      "intended_operation": "manualRelationshipIntake",
+      "endpoint": null,
+      "response_status": null,
+      "response_summary": "Warm referral path Jeff Staley -> Sarah McAngus -> Todd was not explicitly modeled as a relationship edge or trust-transfer event.",
+      "observed_issue": "Relationship signal recognition remained embedded invisibly inside advisory prose."
+    },
+    {
+      "step": 2,
+      "label": "Role and strategic alignment identified",
+      "user_prompt": "The role is Commercial Director, approximately 70% farming, largely McDonald's-focused.",
+      "assistant_response": "The system interpreted fit and positioning well, but did not produce a structured opportunity artifact or McDonald's strategic-domain tag.",
+      "intended_operation": "classify_recruiting_opportunity_state",
+      "endpoint": null,
+      "response_status": null,
+      "response_summary": "McDonald's ecosystem alignment, enterprise farming fit, and opportunity temperature were not rendered as canonical state.",
+      "observed_issue": "Strategic role fit was discussed but not operationalized."
+    },
+    {
+      "step": 3,
+      "label": "Outreach timing advice",
+      "user_prompt": "Should Todd proactively engage Sarah or wait?",
+      "assistant_response": "The assistant correctly advised proactive engagement, but stayed in advisory prose rather than showing detected signals, confidence, and system action.",
+      "intended_operation": "cos_recommendation_with_persistence_surface",
+      "endpoint": null,
+      "response_status": null,
+      "response_summary": "Relationship signal recognition remained invisible and unverified.",
+      "observed_issue": "No canonical success surface was emitted."
+    },
+    {
+      "step": 4,
+      "label": "Recruiter accelerated to same-day scheduling",
+      "user_prompt": "Sarah messaged first before outreach was sent. The conversation escalated to same-day call scheduling, WhatsApp communication, timezone coordination, and active recruiter engagement.",
+      "assistant_response": "The assistant recognized high responsiveness and momentum, but did not confirm contact creation, loop creation, active opportunity state, or interview-prep orchestration.",
+      "intended_operation": "persist_recruiting_momentum_event",
+      "endpoint": null,
+      "response_status": null,
+      "response_summary": "Same-day scheduling and WhatsApp escalation should have been persisted as communication velocity and recruiter responsiveness signals.",
+      "observed_issue": "The system behaved like stateless advisory chat instead of a persistent operational system."
+    }
+  ],
+  "expected_relationship_signals": [
+    "warm_referral_path_established",
+    "recruiter_acceleration_event",
+    "trust_transfer_event",
+    "mcdonalds_ecosystem_alignment",
+    "enterprise_farming_alignment",
+    "engagement_momentum_high",
+    "qualification_friction_low",
+    "recruiter_responsiveness_high"
+  ],
+  "expected_artifact_mutations": [
+    {
+      "operation": "add_or_update_contact",
+      "entity": "Sarah McAngus"
+    },
+    {
+      "operation": "create_relationship_edge",
+      "entity": "Jeff Staley referral -> Sarah McAngus"
+    },
+    {
+      "operation": "create_opportunity",
+      "entity": "Commercial Director"
+    },
+    {
+      "operation": "add_strategic_domain_tag",
+      "entity": "McDonald's / enterprise restaurant tech"
+    },
+    {
+      "operation": "open_active_loop",
+      "entity": "Interview process"
+    },
+    {
+      "operation": "create_prep_tasks",
+      "entity": "Enterprise farming, McDonald's/franchisee navigation, cross-sell/account expansion, first-90-day framing"
+    },
+    {
+      "operation": "store_velocity_signal",
+      "entity": "Same-day scheduling and WhatsApp escalation"
+    },
+    {
+      "operation": "update_priority_state",
+      "entity": "Who Matters Now / active priority state"
+    }
+  ],
+  "expected_cos_orchestration": {
+    "strategic_assessment": [
+      "Strong role alignment with Todd's enterprise farming strengths.",
+      "Existing McDonald's credibility reduces onboarding risk.",
+      "Referral trust materially accelerated engagement velocity."
+    ],
+    "recommended_actions": [
+      "Prepare enterprise farming examples.",
+      "Prepare McDonald's/franchisee navigation stories.",
+      "Prepare cross-sell/account expansion examples.",
+      "Research organizational commercial structure.",
+      "Prepare first-90-day strategic framing."
+    ],
+    "risk_surface": [
+      "Potential overemphasis on hunter-sales profile.",
+      "Need to position operational credibility as commercial advantage.",
+      "Clarify travel and global expectations early."
+    ]
+  },
+  "canonical_expected_output_shape": {
+    "heading": "RELATIONSHIP SIGNAL DETECTED",
+    "classification": "Warm recruiter acceleration",
+    "confidence": "High",
+    "required_sections": [
+      "SIGNALS",
+      "IMPACT",
+      "ARTIFACT MUTATIONS",
+      "STATUS"
+    ],
+    "status_requirement": "Canonical RI persistence must be VERIFIED, proposed_write_pending_confirmation, not_persisted, or blocked with reason."
+  },
+  "current_classifier_probe": {
+    "tool": "system/scripts/manual_relationship_intake.py --json",
+    "result": "partial_pass",
+    "detected_signals": [
+      "advocacy_signal",
+      "opportunity_signal",
+      "warm_recruiting_reengagement",
+      "interview_completed"
+    ],
+    "proposed_mutations": [
+      "addContact",
+      "openThread",
+      "loopAdd",
+      "writeInteractionBrief"
+    ],
+    "writes_pending_confirmation": 4,
+    "remaining_gap": "The advisory session did not visibly call the manual RI intake path or render its canonical persistence surface.",
+    "classifier_bug": "The phrase 'Jeff Staley told me he interviewed with Sarah' was classified as interview_completed even though Jeff, not Todd, had the interview. The parser must distinguish third-party referral evidence from Todd's own interview-stage transition."
+  },
+  "defects": [
+    {
+      "id": "RECRUITER-INTRO-RI-SURFACE-001",
+      "title": "Relationship intelligence remained embedded in prose",
+      "severity": "high",
+      "description": "The assistant recognized warm recruiter momentum but did not render an explicit Relationship signal detected surface with classification, confidence, source evidence, and recommended operation.",
+      "recommendation": "Recruiting-introduction sessions must return structured detected signals whenever a trusted referral, recruiter response, scheduling acceleration, role fit, or strategic-domain alignment appears."
+    },
+    {
+      "id": "RECRUITER-INTRO-PERSISTENCE-001",
+      "title": "Artifact mutation proof missing",
+      "severity": "critical",
+      "description": "No visible evidence showed that Sarah McAngus, Jeff Staley referral context, Commercial Director opportunity state, McDonald's alignment, or active interview loop were created, updated, proposed, or skipped.",
+      "recommendation": "Every RI-bearing recruiting acceleration should emit persistence_status, proposed/applied mutation list, affected entities, and post-validation state."
+    },
+    {
+      "id": "RECRUITER-INTRO-ORCHESTRATION-001",
+      "title": "CoS actions were not operationalized",
+      "severity": "high",
+      "description": "The assistant gave good guidance but did not create or propose preparation tasks, research tasks, scheduling follow-ups, or daily-brief injection.",
+      "recommendation": "Same-day recruiter scheduling should propose interview-prep loops and daily-brief/meeting-prep visibility."
+    },
+    {
+      "id": "OPERATIONAL-TRUST-SURFACE-001",
+      "title": "No canonical success surface",
+      "severity": "high",
+      "description": "The user could not tell whether RB had recorded, ignored, proposed, or blocked state mutation.",
+      "recommendation": "RB responses must separate advice from system action: detected signals, impact, mutations, persistence, and next operations."
+    }
+  ],
+  "canonical_assessment": {
+    "conversational_guidance_quality": "PASS",
+    "human_strategic_coaching": "PASS",
+    "relationship_signal_recognition": "PARTIAL_PASS",
+    "canonical_ri_persistence": "FAIL",
+    "artifact_mutation_visibility": "FAIL",
+    "operational_trust_surface": "FAIL",
+    "cos_orchestration": "FAIL",
+    "canonical_response_compliance": "FAIL"
+  },
+  "raw_text": "RB 9.0 Test Case Study: Warm Recruiter Introduction Without Canonical RI Persistence. Date: 2026-05-21. Scenario Type: Relationship Intelligence Detection / CoS Orchestration / Artifact Mutation Validation. The session showed strong conversational guidance quality but failed canonical RB behaviors around relationship intelligence persistence, artifact mutation, structured signal evaluation, operational orchestration, and trust-verifiable state mutation."
+}

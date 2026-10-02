@@ -1,0 +1,18 @@
+{
+  "competitor_slug": "ncr-voyix-aloha",
+  "vendor_display_name": "NCR Voyix (Aloha)",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Shrinking reported revenue: Q2 2026 revenue $523M (−21% reported; +1% pro forma); restaurant revenue $158M (−23%); FY26 revenue guide −13% to −18% (−2% to −3% pro forma)"
+    },
+    {
+      "point": "Hardware outsourced to Ennoconn (Foxconn subsidiary) from Jan 2026; hardware revenue reported net from Q2 2026"
+    }
+  ]
+}

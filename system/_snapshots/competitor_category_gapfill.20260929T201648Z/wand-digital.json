@@ -1,0 +1,78 @@
+{
+  "competitor_id": "comp-wand-digital",
+  "competitor_slug": "wand-digital",
+  "display_name": "WAND Digital",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Explicitly markets against Genius's predecessor: calls Xenial a \"large-scale enterprise solution\" whose breadth could \"hinder the agility and responsiveness required for smaller organizations\"",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:21Z"
+      },
+      {
+        "point": "Also publishes comparisons vs Delphi (Toast) and The Howard Company",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:47:21Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-09-29T14:57:12Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:12Z",
+  "latest_cos_commentary": {
+    "headline": "Menu-board software, design and hardware can anchor a QSR signage incumbent.",
+    "genius_exposure": "Menu-board software, design and hardware can anchor a QSR signage incumbent.",
+    "competitive_timing": "WAND advertised its Studio cloud signage service for restaurant operators with an April 2026 launch.",
+    "sales_response": "Verify installed screens, POS price sync and support obligations by chain.",
+    "risk_and_uncertainty": "Launch month only; release page does not prove adoption.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 59
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 59,
+    "pack_claim_count": 11,
+    "pack_claims_with_url": 6,
+    "pack_claims_inherited_url": 4,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 5,
+      "legacy_claims_need_date_and_current_status_check": 11,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "competitor_id": "comp-sona",
+  "competitor_slug": "sona",
+  "display_name": "Sona",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:36Z",
+  "latest_cos_commentary": {
+    "headline": "Sona is a well-funded (over $100M total) London-based AI workforce-management platform for hospitality and healthcare, with a named UK restaurant customer (Popeyes UK) and a recent $45M Series B in April 2026.",
+    "genius_exposure": "Competes with Genius's back_office line on labor scheduling/workforce management rather than POS or payments; UK/European-centric customer base to date based on sourced material.",
+    "competitive_timing": "Recently closed a large Series B (April 2026) explicitly to scale its AI workforce platform, indicating active, well-capitalized expansion, primarily reported in UK/European hospitality press so far.",
+    "sales_response": "Where Sona is active in UK/European hospitality accounts, note it as a labor/workforce-scheduling specialist rather than a POS or payments competitor.",
+    "risk_and_uncertainty": "Sourced customer evidence is limited to UK market references (Popeyes UK); no evidence found of US restaurant deployments in this pass.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 88
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 88,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "US/North American customer presence",
+        "pricing model",
+        "current headcount/financial health beyond funding rounds"
+      ]
+    }
+  }
+}

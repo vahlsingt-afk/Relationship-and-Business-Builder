@@ -1,0 +1,18 @@
+{
+  "schema": "rb.hunter_evaluation_corpus.v1",
+  "updated_at": "2026-10-02T00:00:00Z",
+  "cases": [
+    {"case_id": "logo-wall-customer", "expected_guard": "discovery_source_overpromoted"},
+    {"case_id": "announcement-live-deployment", "expected_guard": "announcement_not_deployment"},
+    {"case_id": "integration-means-customer", "expected_guard": "integration_not_customer_proof"},
+    {"case_id": "franchisee-means-enterprise", "expected_guard": "scope_text_conflict"},
+    {"case_id": "stale-means-current", "expected_guard": "stale_claim_marked_current"},
+    {"case_id": "vendor-only-means-verified", "expected_guard": "verified_without_independent_support"},
+    {"case_id": "paid-source-support", "expected_guard": "nonfree_source_supports_finding"},
+    {"case_id": "missing-gap-outcome", "expected_guard": "missing_gap_outcome"},
+    {"case_id": "novelty-without-rationale", "expected_guard": "new_data_without_novelty"},
+    {"case_id": "material-change-unrouted", "expected_guard": "material_change_unrouted"},
+    {"case_id": "change-no-delta", "expected_guard": "change_has_no_delta"},
+    {"case_id": "payload-shape-wrong", "expected_guard": "payload_collection_missing"}
+  ]
+}

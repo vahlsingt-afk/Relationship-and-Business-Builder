@@ -1,0 +1,24 @@
+{
+  "competitor_slug": "trison",
+  "vendor_display_name": "TRISON",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [
+    "digital_menu_boards"
+  ],
+  "circle1_genius_strengths": [
+    {
+      "category": "Digital Menu Boards",
+      "point": "No-code drag-and-drop updates, daypart scheduling, POS price sync, indoor HD + outdoor UHD LED + drive-thru boards with voice and camera integration; claims guests \"spend up to 20% more when influenced by dynamic menus\"",
+      "why_it_matters": "Source: https://www.globalpayments.com/point-of-sale/enterprise/digital-menu-board"
+    },
+    {
+      "category": "Digital Menu Boards",
+      "point": "Native POS price sync (vs. standalone signage vendors)",
+      "why_it_matters": "Source: https://www.globalpayments.com/point-of-sale/enterprise/digital-menu-board"
+    }
+  ],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": []
+}

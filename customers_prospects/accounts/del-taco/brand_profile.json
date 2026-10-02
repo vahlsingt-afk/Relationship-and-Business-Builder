@@ -1,0 +1,42 @@
+{
+  "account_id": "acct-del-taco",
+  "founded": {"value": "1964"},
+  "headquarters": {"value": "Lake Forest, California"},
+  "segment": {"value": "Mexican quick-service restaurant"},
+  "footprint": {"value": "576 restaurants at FY2025 year-end: 132 company-operated and 444 franchised"},
+  "ownership": {"value": "Yadav Enterprises; acquisition closed December 22, 2025"},
+  "geography": {"value": "United States; current live store count requires reconciliation"},
+  "differentiation": {"value": "Mexican QSR combining drive-thru convenience, value positioning, and a predominantly franchised operating model"},
+  "competitive_set": {"value": "Taco Bell, Taco John's, Qdoba, Chipotle, and regional Mexican QSR concepts"},
+  "identity_ownership_footprint": [],
+  "leadership": [],
+  "technology_payment_landscape": {"ref": "See technology_stack in account.json.", "highlights": []},
+  "brand_digital_cx_strategy": [],
+  "account_economics_scale": [],
+  "relationship_history": [],
+  "opportunities": {"active": [], "historical": [], "parked": []},
+  "known_contradictions": [],
+  "open_questions": [],
+  "freshness": {"last_updated": "2026-09-08", "next_scheduled_review": "After first customer discovery meeting"},
+  "risks_and_cautions": [
+    "Post-acquisition authority is still being established; Jack in the Box-era contracts and stakeholder assumptions may no longer apply under Yadav.",
+    "Qu announced a broad platform modernization in 2024, but deployment status, store coverage, contractual commitments, and Yadav's intent remain unconfirmed.",
+    "Legacy NCR/Aloha evidence is historical and should not be presented as the complete current estate without store-level validation.",
+    "Presto voice AI is historical/discontinued and must not be represented as a current deployment without new evidence.",
+    "Several internally reported stakeholder names, titles, and authority levels remain unverified and require confirmation before external use.",
+    "The Nick the Greek Square relationship and Qu-related pilot are internal reported intelligence; exact modules, ownership, and status remain unknown.",
+    "The September 8 account-history call is retrospective and largely reflects the former Jack in the Box ownership period. The prior 32-inch DMB concept, Rob Stevens' influence, NCR menu complexity, and Del Taco's Qu adoption must be revalidated with current Yadav leadership.",
+    "Nick Hulayew reported that Anil Yadav is a silent investor in Qu and believes that relationship influenced the prior Jack in the Box decision. This is unconfirmed competitive intelligence and must not be presented as fact without independent validation."
+  ],
+  "recommended_approach": "Coordinate Nick Hulayew's direct relationship with Daniel Mears and Maggie Lenhart's trusted Worldpay access rather than running parallel outreach. Use Nick's promised introduction to qualify the reported comprehensive review across payments, digital menu boards, POS hardware, and POS software. Lead with Project Sunrise outcomes and a capital-efficient modernization story: validate whether existing NCR hardware can be reused, and use the Pollo Tropical NCR CX-5 retrofit as proof of practical conversion. Keep digital menu boards as a likely first wedge while qualifying the broader platform opportunity in parallel. Treat the reported Anil Yadav–Qu investment relationship as an unconfirmed competitive risk and do not present it externally as fact.",
+  "immediate_actions": [
+    "Nick Hulayew to reconnect with Daniel Mears, continue the Genius World conversation, and introduce Todd.",
+    "Maggie to coordinate the Worldpay route to Daniel Mears and align outreach with Nick and Todd.",
+    "Consolidate the relevant Genius World conversation history and participants before customer outreach.",
+    "Use the first discovery conversation to confirm the scope, stage, governance, budget, and timeline of the reported full-stack review across payments, DMB, POS hardware, and POS software.",
+    "Prepare the Pollo Tropical NCR CX-5 retrofit example as proof that Genius can reuse existing hardware and reduce near-term capital requirements.",
+    "Validate Rob Stevens' and Dana King's current roles and determine whether either retains useful influence after the Jack in the Box divestiture.",
+    "Validate the current DMB requirement, whether the former 32-inch stopgap concept remains relevant, the inherited NCR menu architecture, Del Taco's Qu adoption status, and the Nick the Greek Square/Qu configuration.",
+    "Schedule the hardware 201 and P&L walkthrough once the discovery path is confirmed."
+  ]
+}

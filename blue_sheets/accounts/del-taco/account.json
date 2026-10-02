@@ -1,0 +1,24 @@
+{
+  "account_id": "acct-del-taco",
+  "account_slug": "del-taco",
+  "display_name": "Del Taco",
+  "aliases": ["Yadav Enterprises"],
+  "portfolio_status": "active",
+  "owners": [{"name": "Todd Vahlsing", "role": "account_owner"}],
+  "brand_profile_ref": "brand_profile.json",
+  "opportunities": [],
+  "buying_influences": [],
+  "technology_stack": [],
+  "commercial_models": [],
+  "strategic_position": {},
+  "qualification": {},
+  "latest_review": {
+    "blue_sheet_owner": "Todd Vahlsing",
+    "last_reviewed": null,
+    "review_status": "Shell only - no dedicated source material found; named in loop L-2026-08-10-005 as part of the first Blue Sheet cohort alongside Pollo Campero and Five Guys. Open RBB loop L-2026-07-23-005 (Del Taco / Yadav Enterprises / Maggie) tracks a related follow-up.",
+    "next_formal_review": "On first dedicated brief, meeting, or document"
+  },
+  "template_version": "0.3-seed",
+  "updated_at": "2026-08-21T00:00:00Z",
+  "note": "Intentionally thin: no dedicated account_intelligence brief or deck exists yet (per 2026-08-21 inventory). Populate from meeting captures and shared cross-account documents as real evidence, not by inference."
+}

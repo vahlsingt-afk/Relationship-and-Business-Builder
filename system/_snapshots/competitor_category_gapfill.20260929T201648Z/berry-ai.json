@@ -1,0 +1,49 @@
+{
+  "competitor_id": "comp-berry-ai",
+  "competitor_slug": "berry-ai",
+  "display_name": "Berry AI",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:30Z",
+  "latest_cos_commentary": {
+    "headline": "Berry AI is a vision-AI analytics platform for QSR drive-thru, dining room and kiosk operations, with a brand-wide 1,000+ location deployment at Culver's announced in 2026.",
+    "genius_exposure": "Competes on kitchen_drive_thru operational analytics (speed-of-service, throughput, staffing) as a camera-based layer that can sit alongside or compete with drive-thru intelligence features in Genius's kitchen/drive-thru product line.",
+    "competitive_timing": "The Culver's brand-wide rollout (1,000+ locations) is Berry AI's most significant scale proof point to date as of 2026.",
+    "sales_response": "When a prospect mentions vision-AI or drive-thru analytics, ask whether Berry AI is already piloted — its Culver's win is a credible reference competitors are likely to cite.",
+    "risk_and_uncertainty": "ROI percentage claims (70% comp lift, etc.) are vendor-aggregated across deployments, not single-customer audited results — do not repeat as guaranteed outcomes.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 13
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 13,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 1,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "financial health/funding"
+      ]
+    }
+  }
+}

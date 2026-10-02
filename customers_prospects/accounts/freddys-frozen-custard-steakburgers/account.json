@@ -1,0 +1,35 @@
+{
+  "account_id": "acct-freddys-frozen-custard-steakburgers",
+  "account_slug": "freddys-frozen-custard-steakburgers",
+  "display_name": "Freddy's Frozen Custard & Steakburgers",
+  "aliases": [],
+  "engagement_tier": "pre_engagement",
+  "portfolio_status": {
+    "value": "pre-engagement research — not yet a confirmed active opportunity",
+    "status": "confirmed",
+    "evidence_ids": [],
+    "confidence": "high",
+    "as_of": "2026-09-11",
+    "scope": "account",
+    "last_reviewed_by": "system:customers_prospects_common"
+  },
+  "owners": [],
+  "executive_summary": "",
+  "current_business_situation": "",
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "technology_stack": [],
+  "commercial_models": [],
+  "buying_influences": [],
+  "opportunities": [],
+  "qualification": {
+    "criteria": []
+  },
+  "strategic_position": {},
+  "bottom_line": "",
+  "latest_review": {},
+  "template_version": "customers-prospects-v1",
+  "updated_at": "2026-09-11T16:39:51Z"
+}

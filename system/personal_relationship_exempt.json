@@ -1,0 +1,20 @@
+{
+  "_comment": "Personal vs. business classification for email/calendar intelligence gathering. RB is a business/professional relationship-capital tool -- personal relationships and personal content must never be recorded or reported, only business (and 'business personal', i.e. a business contact who is also a friend) should be. Same principle as sms_trusted_senders.json's exempt_handles, extended to email/calendar with sender AND topic signals. exempt_senders match by name (case-insensitive substring) or email address; a sender here is ALWAYS treated as personal UNLESS the specific item is explicitly flagged otherwise by the user. exempt_topics match by keyword/phrase (case-insensitive substring) anywhere in subject/title/body/description; a match makes that ITEM personal regardless of sender.",
+  "exempt_senders": [
+    {
+      "name": "Tony Fryer",
+      "email": null
+    },
+    {
+      "name": "Nick Neylon",
+      "email": null
+    },
+    {
+      "name": "Polly Watt",
+      "email": null
+    }
+  ],
+  "exempt_topics": [
+    "fantasy football"
+  ]
+}

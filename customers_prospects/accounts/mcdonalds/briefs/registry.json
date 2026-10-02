@@ -1,0 +1,86 @@
+{
+  "account_id": "acct-mcdonalds",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-09T13:07:11Z",
+      "generated_for": "Internal account team",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-09",
+      "path": "customers_prospects/accounts/mcdonalds/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-10T16:03:36Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-10",
+      "path": "customers_prospects/accounts/mcdonalds/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-25T16:12:10Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-25",
+      "path": "customers_prospects/accounts/mcdonalds/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-09-27T10:12:58Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-27",
+      "path": "customers_prospects/accounts/mcdonalds/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 5,
+      "generated_at": "2026-09-27T10:40:47Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-27",
+      "path": "customers_prospects/accounts/mcdonalds/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 6,
+      "generated_at": "2026-09-27T12:43:13Z",
+      "generated_for": "todd",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-27",
+      "path": "customers_prospects/accounts/mcdonalds/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 7,
+      "generated_at": "2026-09-28T09:24:34Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-28",
+      "path": "customers_prospects/accounts/mcdonalds/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 8,
+      "generated_at": "2026-09-30T09:21:12Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-30",
+      "path": "customers_prospects/accounts/mcdonalds/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 9,
+      "generated_at": "2026-10-01T10:43:09Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-10-01",
+      "path": "customers_prospects/accounts/mcdonalds/briefs/current/Background_Brief.md",
+      "superseded": false
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "competitor_slug": "toast-loyalty",
+  "vendor_display_name": "Toast Loyalty",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Toast's own research finds 48% of diners prioritize being remembered over points (22%) — i.e., points-based loyalty is losing appeal"
+    }
+  ]
+}

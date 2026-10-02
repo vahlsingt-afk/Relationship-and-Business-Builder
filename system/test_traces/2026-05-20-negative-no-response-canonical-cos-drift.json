@@ -1,0 +1,66 @@
+{
+  "title": "Negative/no-response relationship update canonical CoS drift",
+  "trace_id": "T-2026-05-20-002",
+  "trace_type": "field_defect",
+  "source": "ChatGPT Custom GPT / operator evaluation",
+  "operator": "Todd",
+  "captured_at": "2026-05-20T13:00:00-05:00",
+  "summary": "Todd evaluated an assistant response to negative/no-response relationship updates: no response from Simin regarding the Harri opportunity, waiting on Jeff Coffland for possible McDonald's-side advocacy, and no response from a Global Payments follow-up email. The assistant produced conversational strategic coaching instead of canonical RB operational state reporting.",
+  "observed_issue": "The response blended observed facts, inference, and speculative coaching language, and did not render signal classification, state transitions, confidence adjustments, opportunity status, waiting windows, or traceable action guidance.",
+  "input_signals": [
+    "No response from Simin regarding Harri opportunity.",
+    "Waiting on Jeff Coffland for possible McDonald's-side advocacy.",
+    "No response from Global Payments follow-up email."
+  ],
+  "non_canonical_behaviors": [
+    "Excessive interpretation and narrative framing around timing, conversion, market positioning, and being treated as a strategic advisor without direct system evidence.",
+    "Coaching/advisory tone drift toward career coach or motivational strategist instead of operational Chief of Staff / relationship intelligence engine.",
+    "Weak source grounding: observed evidence, inferred probability, and speculative interpretation were blended together.",
+    "Missing canonical RB structure: signal classification, relationship state transitions, confidence adjustments, explicit opportunity status, recommended waiting windows, and traceable action guidance."
+  ],
+  "expected_behavior": {
+    "harri": {
+      "state_transition": "active -> pending/no_response",
+      "dependency": "Jeff Coffland identified as secondary/internal advocacy lane",
+      "risk_assessment": "No explicit rejection detected; silence window may be within expected range.",
+      "recommended_action": "No additional follow-up for 3-5 business days.",
+      "confidence_adjustment": "Harri confidence reduced."
+    },
+    "global_payments": {
+      "state": "follow-up sent; awaiting response",
+      "context": "NRA timing may be operational context but is not proof of intent.",
+      "confidence_adjustment": "Unchanged pending response."
+    }
+  },
+  "architectural_lesson": "RB canonical responses must prioritize operational clarity, signal traceability, evidence hierarchy, state mutation discipline, and fact/inference separation. RB should behave as a disciplined relationship operating system, not an executive coaching companion.",
+  "severity": "moderate",
+  "defects": [
+    {
+      "id": "NO-RESPONSE-CANONICAL-001",
+      "title": "No-response updates rendered as coaching instead of operational state",
+      "severity": "moderate",
+      "description": "The assistant treated silence and waiting-state updates as a prompt for strategic advice rather than a relationship state report.",
+      "recommendation": "Introduce mandatory response partitioning: Observed signals, Inferences, Recommended actions, Persistence."
+    },
+    {
+      "id": "EVIDENCE-INFERENCE-BLEND-001",
+      "title": "Evidence and inference were blended",
+      "severity": "moderate",
+      "description": "Facts supplied by Todd were not separated from inferred probability and speculative narrative framing.",
+      "recommendation": "Require explicit observed/inferred labels and confidence on negative/no-response relationship updates."
+    },
+    {
+      "id": "COACHING-TONE-DRIFT-001",
+      "title": "Assistant drifted into executive coaching tone",
+      "severity": "moderate",
+      "description": "The response behaved like a career coach or executive advisor instead of a canonical RB operating layer.",
+      "recommendation": "Reject unsupported motivational framing and identity narratives in canonical RB relationship-state responses."
+    }
+  ],
+  "recommended_enforcement": [
+    "Introduce mandatory response partitioning: OBSERVED SIGNALS, INFERENCES, RECOMMENDED ACTIONS.",
+    "Add admissibility checks against unsupported motivational framing, speculative identity narratives, and blended evidence/coaching language.",
+    "Render negative/no-response updates as operational intelligence briefings, relationship state reports, and executive decision support."
+  ],
+  "raw_text": "Operator-provided RB 9.0 Canonical Response Evaluation summary for negative/no-response relationship updates. No raw assistant response transcript was included."
+}

@@ -1,0 +1,319 @@
+{
+  "account_id": "acct-churchs-texas-chicken",
+  "account_slug": "churchs-texas-chicken",
+  "display_name": "Church's Texas Chicken",
+  "aliases": [
+    "Church's Chicken",
+    "Churchs Chicken",
+    "Texas Chicken"
+  ],
+  "portfolio_status": {
+    "value": "Active relationship-recovery / account-intelligence target; not a confirmed Genius POS pursuit",
+    "status": "confirmed",
+    "evidence_ids": [
+      "ev-churchs-0009",
+      "ev-churchs-0010"
+    ],
+    "confidence": "high",
+    "as_of": "2026-08-31",
+    "scope": "account",
+    "last_reviewed_by": "codex:rb-context"
+  },
+  "owners": [
+    {
+      "name": "Maggie Lenhart",
+      "role": "Worldpay RM / account-intelligence partner",
+      "notes": "Current path into the account. Maggie had a live call with Jeff Caplin on 2026-08-28."
+    },
+    {
+      "name": "Todd Vahlsing",
+      "role": "Global Payments / Genius account strategy",
+      "notes": "Use Jeff Caplin relationship carefully; prior direct outreach received no response until new Maggie-sourced response evidence appeared."
+    }
+  ],
+  "executive_summary": "Church's Texas Chicken is a PE-backed global chicken QSR brand moving from turnaround into renewed growth. The company is owned by High Bluff Capital Partners and FS Investments/Future Standard, has more than 1,400 to 1,500 restaurants globally, and has recently secured growth equity from Golub Capital to accelerate remodels, company-owned restaurant growth, and franchisee support.\n\nFor Genius/Global Payments, the account is not a clean POS-displacement target today. Public evidence and Maggie Lenhart's 2026-08-28 account intelligence both support Qu as the POS platform, with Maggie reporting Church's is finalizing a five-year Qu renewal. The more realistic near-term path is digital menu boards / drive-thru adjacency, payments intelligence, and executive relationship recovery through Jeff Caplin rather than reopening POS unless a real change event appears.\n\nThe strategic point: Church's is modernizing aggressively. It has Qu in the restaurant core, PAR Punchh in loyalty, Worldpay as a payments relationship per internal RM intelligence, and active interest in digital menu boards. The right move is a low-pressure FSTEC conversation that acknowledges Qu, asks where the modernization roadmap still has friction, and explores DMB or hardware-adjacent needs without sounding like a forced platform pitch.",
+  "current_business_situation": "Church's is in a growth-and-modernization phase after several years of turnaround work. Recent reporting says the brand has received new Golub Capital growth equity to accelerate remodels, new company-operated restaurant openings, and other franchisee-growth initiatives. Restaurant Dive reported management claims of 6% same-store sales growth and 7% traffic growth in 2026, while QSR Magazine reported average unit EBITDA up materially since 2022 and the brand's first net domestic unit growth since 2010.\n\nThe operating agenda appears to be: remodel and refresh the domestic estate, support franchisee economics, expand internationally, strengthen digital/loyalty/CRM capability, and keep value positioning central in a competitive chicken category. Kevin Nemeth's 2026 appointment as EVP / Chief Commercial Officer adds a commercial owner for brand, digital, loyalty, CRM, guest engagement, pricing, menu strategy, product innovation, and revenue growth.\n\nTechnology implication: Church's is not a stagnant account. The business is investing in modernization, but the core POS path appears Qu-led. Any Genius motion should therefore focus on gaps around DMB, drive-thru, hardware, payments economics, integrations, operational visibility, or second-source needs rather than pretending Church's is in an open POS RFP.",
+  "leadership": {
+    "confirmed": [
+      {
+        "name": "Roland Gonzalez",
+        "title": "Chief Executive Officer",
+        "evidence_ids": [
+          "ev-churchs-0003",
+          "ev-churchs-0004"
+        ],
+        "last_verified": "2026-08-31"
+      },
+      {
+        "name": "Kevin Nemeth",
+        "title": "EVP, Chief Commercial Officer",
+        "evidence_ids": [
+          "ev-churchs-0002"
+        ],
+        "last_verified": "2026-08-31"
+      },
+      {
+        "name": "Jeff Caplin",
+        "title": "Senior Vice President, Chief Technology Officer",
+        "evidence_ids": [
+          "ev-churchs-0009",
+          "ev-churchs-0011"
+        ],
+        "last_verified": "2026-08-31"
+      },
+      {
+        "name": "Jessica Wu-McConnell",
+        "title": "Vice President of Digital and Loyalty",
+        "evidence_ids": [
+          "ev-churchs-0007"
+        ],
+        "last_verified": "2026-08-31"
+      },
+      {
+        "name": "Tim Waddell",
+        "title": "EVP of International",
+        "evidence_ids": [
+          "ev-churchs-0003"
+        ],
+        "last_verified": "2026-08-31"
+      }
+    ],
+    "reported_unverified": [
+      {
+        "name": "Danton Nolan",
+        "title": "Executive Vice President and Chief Financial Officer",
+        "evidence_ids": [
+          "ev-churchs-0008"
+        ]
+      },
+      {
+        "name": "Bobby Morena",
+        "title": "Chief Development Officer",
+        "evidence_ids": [
+          "ev-churchs-0003"
+        ]
+      }
+    ]
+  },
+  "technology_stack": [
+    {
+      "layer": "POS",
+      "vendor": "Qu",
+      "current_state": "Qu publicly identifies Church's as a case-study customer; Maggie Lenhart reported on 2026-08-28 that Church's is finalizing a five-year Qu renewal.",
+      "status": "Confirmed",
+      "confidence": "high",
+      "evidence_ids": [
+        "ev-churchs-0005",
+        "ev-churchs-0006",
+        "ev-churchs-0009"
+      ],
+      "as_of": "2026-08-31",
+      "scope": "account",
+      "last_reviewed_by": "codex:web+rb"
+    },
+    {
+      "layer": "Back office / BOH",
+      "vendor": "SynergySuite",
+      "current_state": "Named in 2021 Qu/Church's refresh coverage as part of the back-office modernization; current renewal/status needs validation.",
+      "status": "Verify",
+      "confidence": "medium",
+      "evidence_ids": [
+        "ev-churchs-0006"
+      ],
+      "as_of": "2026-08-31",
+      "scope": "account",
+      "last_reviewed_by": "codex:web"
+    },
+    {
+      "layer": "Loyalty",
+      "vendor": "PAR Punchh",
+      "current_state": "PAR announced Church's selected Punchh for Church's Real Rewards and cites 400K+ sign-ups plus ~20% spend lift in case-study marketing.",
+      "status": "Confirmed",
+      "confidence": "high",
+      "evidence_ids": [
+        "ev-churchs-0007"
+      ],
+      "as_of": "2026-08-31",
+      "scope": "account",
+      "last_reviewed_by": "codex:web"
+    },
+    {
+      "layer": "Payments",
+      "vendor": "Worldpay",
+      "current_state": "Confirmed by RB internal Worldpay RM intelligence. Public source still needed for exact in-store/digital acquiring and gateway scope.",
+      "status": "Internal-confirmed / public-source-needed",
+      "confidence": "high",
+      "evidence_ids": [
+        "ev-churchs-0009"
+      ],
+      "as_of": "2026-08-31",
+      "scope": "account",
+      "last_reviewed_by": "codex:rb-context"
+    },
+    {
+      "layer": "Managed video / loss prevention",
+      "vendor": "DTiQ / Envysion",
+      "current_state": "DTiQ announced approved-supplier managed video/loss-prevention agreement; Envysion markets Church's-specific Qu POS integration.",
+      "status": "Confirmed",
+      "confidence": "medium",
+      "evidence_ids": [
+        "ev-churchs-0008",
+        "ev-churchs-0012"
+      ],
+      "as_of": "2026-08-31",
+      "scope": "account",
+      "last_reviewed_by": "codex:web"
+    },
+    {
+      "layer": "Digital menu boards",
+      "vendor": "Unknown",
+      "current_state": "Maggie reported Jeff Caplin has interest in upgrading digital menu boards; incumbent and timing are not yet known.",
+      "status": "Open",
+      "confidence": "medium",
+      "evidence_ids": [
+        "ev-churchs-0009"
+      ],
+      "as_of": "2026-08-31",
+      "scope": "account",
+      "last_reviewed_by": "codex:rb-context"
+    },
+    {
+      "layer": "Drive-thru technology",
+      "vendor": "Unknown",
+      "current_state": "Qu case study references improved drive-thru performance; current timer, DMB, order-confirmation, and hardware estate need validation.",
+      "status": "Open",
+      "confidence": "low",
+      "evidence_ids": [
+        "ev-churchs-0005"
+      ],
+      "as_of": "2026-08-31",
+      "scope": "account",
+      "last_reviewed_by": "codex:web"
+    },
+    {
+      "layer": "Online ordering / delivery integration",
+      "vendor": "Qu-enabled ecosystem; exact vendor map unknown",
+      "current_state": "2021 Qu coverage described unified on/off-premise orders, single menu management, third-party order APIs, and virtual-brand ordering. Current app, direct ordering, marketplace, and aggregator stack need validation.",
+      "status": "Verify",
+      "confidence": "medium",
+      "evidence_ids": [
+        "ev-churchs-0005",
+        "ev-churchs-0006"
+      ],
+      "as_of": "2026-08-31",
+      "scope": "account",
+      "last_reviewed_by": "codex:web"
+    },
+    {
+      "layer": "Hardware / installation / support",
+      "vendor": "HonorBuilt historical; current hardware provider unknown",
+      "current_state": "HonorBuilt was named in 2021 refresh coverage for hardware installation/support; current POS hardware estate and refresh timing need validation.",
+      "status": "Verify",
+      "confidence": "medium",
+      "evidence_ids": [
+        "ev-churchs-0006"
+      ],
+      "as_of": "2026-08-31",
+      "scope": "account",
+      "last_reviewed_by": "codex:web"
+    }
+  ],
+  "commercial_models": [],
+  "buying_influences": [
+    {
+      "name": "Jeff Caplin",
+      "role": "SVP / CTO",
+      "influence": "Primary technology executive / likely DMB and restaurant-technology sponsor",
+      "relationship_status": "Todd LinkedIn connection; Maggie reports new response evidence and possible FSTEC stop-by",
+      "evidence_ids": [
+        "ev-churchs-0009",
+        "ev-churchs-0011"
+      ]
+    },
+    {
+      "name": "Maggie Lenhart",
+      "role": "Worldpay RM",
+      "influence": "Best current warm intelligence path",
+      "relationship_status": "Key Worldpay account-hunting partner",
+      "evidence_ids": [
+        "ev-churchs-0009",
+        "ev-churchs-0010"
+      ]
+    },
+    {
+      "name": "Kevin Nemeth",
+      "role": "EVP / Chief Commercial Officer",
+      "influence": "Digital, loyalty, CRM, pricing, brand, revenue-growth owner",
+      "relationship_status": "No direct relationship on file",
+      "evidence_ids": [
+        "ev-churchs-0002"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "name": "Digital menu board / drive-thru visual-estate upgrade",
+      "stage": "hypothesis with internal account signal",
+      "why_it_matters": "Jeff Caplin reportedly expressed DMB upgrade interest; Qu POS renewal makes DMB the cleaner near-term Genius wedge than POS displacement.",
+      "evidence_ids": [
+        "ev-churchs-0009"
+      ]
+    },
+    {
+      "name": "Hardware / implementation adjacency",
+      "stage": "discovery",
+      "why_it_matters": "Church's has modernization momentum and historical hardware-refresh pain. If DMB or POS hardware refresh is active, Genius/Global can explore where hardware, payments, and support reduce operational friction.",
+      "evidence_ids": [
+        "ev-churchs-0005",
+        "ev-churchs-0006",
+        "ev-churchs-0009"
+      ]
+    },
+    {
+      "name": "Payments intelligence / relationship defense",
+      "stage": "discovery",
+      "why_it_matters": "Worldpay is reported as the payments relationship. Qu renewal, loyalty/digital growth, and online/marketplace ordering raise the need to understand in-store vs digital acquiring, gateway, routing, and economics.",
+      "evidence_ids": [
+        "ev-churchs-0009"
+      ]
+    }
+  ],
+  "qualification": {
+    "criteria": [
+      {
+        "question": "Is the Qu renewal signed, pending signature, or still negotiable?",
+        "status": "open"
+      },
+      {
+        "question": "Who owns the DMB initiative and what specific problem is driving it?",
+        "status": "open"
+      },
+      {
+        "question": "What is the DMB incumbent, hardware estate, content-management model, and refresh deadline?",
+        "status": "open"
+      },
+      {
+        "question": "What is Worldpay's exact payment scope: card-present, card-not-present, gateway, tokenization, and routing?",
+        "status": "open"
+      },
+      {
+        "question": "Will Jeff Caplin meet Todd at FSTEC, and who else should be in that conversation?",
+        "status": "open"
+      }
+    ]
+  },
+  "strategic_position": {
+    "recommended_motion": "Low-pressure FSTEC relationship recovery and DMB/discovery conversation through Maggie, not a forced POS challenge.",
+    "do_not_do": "Do not lead with loyalty, generic POS displacement, or broad 'Genius platform' claims before validating current pain."
+  },
+  "bottom_line": "Church's is strategically interesting because modernization momentum is real and Jeff Caplin is now response-active through Maggie. But the account should be handled with discipline: acknowledge Qu, confirm the five-year renewal status, and use DMB / drive-thru / hardware / payments architecture as the realistic discovery lanes. The next concrete objective is not a proposal; it is a qualified FSTEC conversation with Jeff that identifies whether Church's has a funded DMB or restaurant-technology gap Genius can credibly solve.",
+  "latest_review": {
+    "reviewed_at": "2026-08-31",
+    "reviewed_by": "codex",
+    "notes": "Rebuilt after source-backed web refresh plus RB internal Church's/Jeff Caplin intelligence."
+  },
+  "template_version": "account-research-v1",
+  "updated_at": "2026-08-31T00:00:00Z",
+  "blue_sheet_slug": null,
+  "engagement_tier": "pre_engagement"
+}

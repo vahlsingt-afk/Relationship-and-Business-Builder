@@ -1,0 +1,10 @@
+{
+  "accounts": [
+    {"account_id": "acct-pollo-campero", "account_slug": "pollo-campero", "portfolio_status": "active", "dossier_status": "populated", "rbb_loop_id": "L-2026-08-10-005"},
+    {"account_id": "acct-five-guys", "account_slug": "five-guys", "portfolio_status": "active", "dossier_status": "shell_only", "rbb_loop_id": "L-2026-08-10-005"},
+    {"account_id": "acct-del-taco", "account_slug": "del-taco", "portfolio_status": "active", "dossier_status": "shell_only", "rbb_loop_id": "L-2026-08-10-005"}
+  ],
+  "candidates_not_yet_activated": [
+    {"account_id": "acct-little-caesars", "account_slug": "little-caesars", "reason_not_activated": "Spec scope (Section 2) explicitly holds Little Caesars until customer feedback supports activation, even though it already has a brief, three decks, five meeting captures, and an open RBB loop (L-2026-08-10-003) that would otherwise satisfy the Section 16 active-account policy.", "next_step": "Create the account folder and dossier only after Todd confirms customer-feedback-based activation."}
+  ]
+}

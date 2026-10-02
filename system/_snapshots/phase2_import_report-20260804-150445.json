@@ -1,0 +1,86 @@
+{
+  "phase2_file": "system/research/phase2_digital_menu_boards_evidence_draft_2026-08-03.json",
+  "category": "Digital Menu Boards",
+  "rows_processed": 8,
+  "rows_skipped": 0,
+  "dry_run": true,
+  "added": 8,
+  "updated": 0,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 8,
+    "enrich_existing_relationship": 0,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 0,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 0,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Mood Media",
+        "customer": "Fryday",
+        "tech_category": "Digital Menu Boards",
+        "relationship_id": "rel-brand-fryday-digital-menu-boards-approved-hardware-vendor-vendor-mood-media"
+      },
+      {
+        "vendor": "Mood Media",
+        "customer": "McDonald's",
+        "tech_category": "Digital Menu Boards",
+        "relationship_id": "rel-brand-mcdonald-s-digital-menu-boards-franchisee-deployment-vendor-mood-media"
+      },
+      {
+        "vendor": "Mood Media",
+        "customer": "Wagamama",
+        "tech_category": "Digital Menu Boards",
+        "relationship_id": "rel-brand-wagamama-digital-menu-boards-approved-hardware-vendor-vendor-mood-media"
+      },
+      {
+        "vendor": "Mood Media",
+        "customer": "Louisiana Famous Fried Chicken",
+        "tech_category": "Digital Menu Boards",
+        "relationship_id": "rel-brand-louisiana-famous-fried-chicken-digital-menu-boards-approved-hardware-vendor-vendor-mood-media"
+      },
+      {
+        "vendor": "Mood Media",
+        "customer": "Dominic's Casual Italian",
+        "tech_category": "Digital Menu Boards",
+        "relationship_id": "rel-brand-dominic-s-casual-italian-digital-menu-boards-approved-hardware-vendor-vendor-mood-media"
+      },
+      {
+        "vendor": "Mood Media",
+        "customer": "Stash's Pizza",
+        "tech_category": "Digital Menu Boards",
+        "relationship_id": "rel-brand-stash-s-pizza-digital-menu-boards-approved-hardware-vendor-vendor-mood-media"
+      },
+      {
+        "vendor": "Rise Vision",
+        "customer": "Famous Famiglia",
+        "tech_category": "Digital Menu Boards",
+        "relationship_id": "rel-brand-famous-famiglia-digital-menu-boards-approved-hardware-vendor-vendor-rise-vision"
+      },
+      {
+        "vendor": "Rise Vision",
+        "customer": "Kamado Grille",
+        "tech_category": "Digital Menu Boards",
+        "relationship_id": "rel-brand-kamado-grille-digital-menu-boards-approved-hardware-vendor-vendor-rise-vision"
+      }
+    ],
+    "enrich_existing_relationship": [],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

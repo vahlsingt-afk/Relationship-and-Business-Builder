@@ -1,0 +1,13 @@
+{
+  "subject_id": "subject-subway",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-21T17:10:02Z",
+      "generated_for": "Todd Vahlsing and the Subway RFP bid team",
+      "purpose": "RFP response tracking",
+      "path": "system/artifact_vault/rfp_response_plans/subway/current/Subway_RFP-Response-Plan.md",
+      "superseded": false
+    }
+  ]
+}

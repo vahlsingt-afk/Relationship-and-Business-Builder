@@ -1,0 +1,15 @@
+{
+  "competitor_slug": "preferred-patron",
+  "vendor_display_name": "Preferred Patron",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Integrations listed are Square, Lightspeed X-Series and QuickBooks — no enterprise restaurant POS — so there is little overlap with Genius's enterprise base"
+    }
+  ]
+}

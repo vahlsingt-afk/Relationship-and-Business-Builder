@@ -1,0 +1,112 @@
+{
+  "schema": "rb_domain_pack_v1",
+  "domain": "restaurants",
+  "display_name": "Restaurants",
+  "description": "Restaurant/operator vocabulary layered on the universal ecosystem intelligence graph. This file defines vertical-specific fields and interpretation cues; the core graph remains industry-agnostic.",
+  "entity_subtypes": [
+    "restaurant_brand",
+    "restaurant_operator",
+    "franchisee_group",
+    "holding_company",
+    "restaurant_technology_vendor",
+    "restaurant_technology_product"
+  ],
+  "relationship_types": [
+    "uses_vendor_for_category",
+    "deploys_product",
+    "owns_brand",
+    "operates_units_for_brand",
+    "franchises_from",
+    "integrates_with",
+    "replaces",
+    "evaluates",
+    "influences"
+  ],
+  "deployment_categories": [
+    "pos",
+    "payments",
+    "back_office",
+    "inventory",
+    "labor_scheduling",
+    "loyalty",
+    "online_ordering",
+    "mobile_app",
+    "digital_menu_boards",
+    "kds",
+    "drive_thru_systems",
+    "voice_ai",
+    "delivery_middleware",
+    "bi_analytics",
+    "camera_systems",
+    "computer_vision",
+    "loss_prevention",
+    "iot",
+    "networking_wifi",
+    "hardware",
+    "erp",
+    "catering",
+    "training",
+    "ai_assistant_layer"
+  ],
+  "baseline_metrics": [
+    "rank",
+    "system_sales",
+    "unit_count",
+    "auv",
+    "segment",
+    "sales_delta",
+    "unit_delta",
+    "auv_delta"
+  ],
+  "interpretation_cues": [
+    "franchise_model",
+    "operational_peak_load_reliability",
+    "franchisee_sentiment",
+    "integration_fatigue",
+    "rollout_compliance",
+    "change_management_burden",
+    "unit_economics",
+    "drive_thru_throughput",
+    "labor_productivity",
+    "first_party_digital_mix"
+  ],
+  "vendor_risk_colors": [
+    "green",
+    "yellow",
+    "red",
+    "unknown"
+  ],
+  "deployment_stages": [
+    "unknown",
+    "rumored",
+    "evaluating",
+    "pilot",
+    "active_rollout",
+    "partial_deployment",
+    "full_deployment",
+    "legacy_incumbent",
+    "replacing",
+    "sunset"
+  ],
+  "vendor_verification_rules": [
+    {
+      "category": "pos",
+      "rule": "Distinguish system-of-record POS software, approved hardware vendor, payment device/acquiring relationship, franchisee-level deployment, pilot, and global approved vendor list. Do not infer POS ownership from a logo, reseller page, hardware approval list, or one region's deployment."
+    },
+    {
+      "category": "all",
+      "rule": "Uploaded spreadsheet vendor columns are provisional evidence. Promote to substantiated only after corroborating with primary operator/vendor statements, implementation case studies with scope, procurement or franchisee evidence, credible trade reporting, job postings, technical integration evidence, or multiple independent sources."
+    },
+    {
+      "category": "all",
+      "rule": "When sources conflict, preserve the conflict instead of collapsing to one vendor. Track which vendor owns which role, region, franchisee subset, product layer, or deployment stage."
+    }
+  ],
+  "example_cautions": [
+    {
+      "brand": "McDonald's",
+      "category": "pos",
+      "caution": "NCR may appear as an approved global hardware/POS vendor signal, but McDonald's has owned NewPOS as its POS system. RB should separate approved hardware/vendor-list evidence from system-of-record POS evidence."
+    }
+  ]
+}

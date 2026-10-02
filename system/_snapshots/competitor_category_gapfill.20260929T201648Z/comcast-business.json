@@ -1,0 +1,48 @@
+{
+  "competitor_id": "comp-comcast-business",
+  "competitor_slug": "comcast-business",
+  "display_name": "Comcast Business",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:31Z",
+  "latest_cos_commentary": {
+    "headline": "Comcast Business is a major connectivity/SD-WAN provider marketing managed-network solutions specifically to multi-location restaurant and bar operators, ranked #1 in the US for managed SD-WAN.",
+    "genius_exposure": "No direct pos/payments overlap — Comcast Business is network infrastructure (connectivity/SD-WAN) that POS and payments systems run on top of; relevant as an infrastructure layer, not a software competitor.",
+    "competitive_timing": "Continues to hold top rankings in managed SD-WAN as of 2024-2025 third-party assessments.",
+    "sales_response": "Not a POS/payments competitor; may be relevant as an infrastructure partner or dependency in a prospect's tech stack (e.g., network reliability affecting POS/payments uptime).",
+    "risk_and_uncertainty": "Rankings and figures come from Comcast's own marketing citing third-party research firms; the original ISG/Vertical Systems Group reports were not independently reviewed.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 22
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 22,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "confirm relevance to Genius competitive tracking given no direct pos/payments overlap"
+      ]
+    }
+  }
+}

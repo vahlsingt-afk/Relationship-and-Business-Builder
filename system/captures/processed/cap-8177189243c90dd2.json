@@ -1,0 +1,22 @@
+{
+  "file_id": "cap-8177189243c90dd2",
+  "queued_at": "2026-07-14T09:03:32+00:00",
+  "source_id": "just_press_record",
+  "source_label": "Just Press Record",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-13/10-03-12.m4a",
+  "capture_type": "meeting",
+  "title_hint": "Just Press Record \u2014 2026-07-13 10-03-12",
+  "transcription_method": "whisper_local",
+  "transcript": "They didn't, etc. Looking forward to the session. And I will put in a plug for Elliot. I always do this in a barricade. Elliot, who is a metalist in the US, in the Olympics in 1984. Has always been switch. Thank you, Elliot. What do you think you're going to bring to that?",
+  "word_count": 54,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-07-14T09:06:06+00:00",
+  "processing_result": {
+    "triage_stream_count": 0,
+    "noise_only": true,
+    "persisted_count": 0,
+    "persisted_items": [],
+    "exec_mutations": 0
+  }
+}

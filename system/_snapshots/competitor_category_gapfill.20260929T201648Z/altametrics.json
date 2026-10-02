@@ -1,0 +1,49 @@
+{
+  "competitor_id": "comp-altametrics",
+  "competitor_slug": "altametrics",
+  "display_name": "Altametrics",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:09Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:30Z",
+  "latest_cos_commentary": {
+    "headline": "Altametrics is an enterprise restaurant back-office suite (scheduling, inventory, loss prevention) citing Five Guys and Jack in the Box as customers.",
+    "genius_exposure": "Competes on back_office and labor/workforce scheduling capabilities that overlap with back-office modules in Genius's product suite.",
+    "competitive_timing": "No recent (2026) funding, leadership, or product-launch news was found in this pass — appears to be a stable, lower-visibility competitor.",
+    "sales_response": "Where Altametrics is the incumbent back-office/scheduling system, expect displacement conversations to center on integration depth with POS rather than price.",
+    "risk_and_uncertainty": "Named-customer claims come only from the vendor's own site; current leadership and financial health could not be verified in this pass.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 7
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 7,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "financial health"
+      ]
+    }
+  }
+}

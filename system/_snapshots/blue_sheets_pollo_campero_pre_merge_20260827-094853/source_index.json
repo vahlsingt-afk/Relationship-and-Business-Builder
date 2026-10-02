@@ -1,0 +1,16 @@
+{
+  "account_id": "acct-pollo-campero",
+  "sources": [
+    {"source_id": "src-pollo-campero-0001", "durable_source_id": "system/captures/processed/cap-d86111f6d7e21c91.json", "type": "meeting_notes", "description": "Aug 12, 2026 discovery call capture (Just Press Record transcript).", "linked_evidence_ids": ["ev-pollo-campero-0001"]},
+    {"source_id": "src-pollo-campero-0002", "durable_source_id": "sources/2026-08-21_Pollo_Campero_Blue_Sheet_as_provided.xlsx", "type": "seller_authored_analysis", "description": "Full Pollo Campero Blue Sheet as provided by Todd on 2026-08-21; local copy preserved unedited in this folder's sources/.", "linked_evidence_ids": ["ev-pollo-campero-0011", "ev-pollo-campero-0012"]},
+    {"source_id": "src-pollo-campero-0003", "durable_source_id": "unresolved:todd-followup-2026-08-20", "type": "email_outbound", "description": "Todd's Aug 20 follow-up email (NDA / Valutec asks) - durable Gmail message ID not yet captured.", "linked_evidence_ids": ["ev-pollo-campero-0002"]},
+    {"source_id": "src-pollo-campero-0004", "durable_source_id": "unresolved:randy-reply-2026-08-21", "type": "email_inbound", "description": "Randy's Aug 21 reply confirming approach and statement commitment - durable Gmail message ID not yet captured.", "linked_evidence_ids": ["ev-pollo-campero-0003"]},
+    {"source_id": "src-pollo-campero-0005", "durable_source_id": "unresolved:pollo-campero-dmb-rfi", "type": "rfi_document", "description": "DMB modernization RFI document - durable Drive/file location not yet captured.", "linked_evidence_ids": ["ev-pollo-campero-0005"]},
+    {"source_id": "src-pollo-campero-0006", "durable_source_id": "unresolved:statement-sample-r016-r138-r173", "type": "merchant_statement_sample", "description": "Nine store-month statement sample - durable file location not yet captured.", "linked_evidence_ids": ["ev-pollo-campero-0006", "ev-pollo-campero-0007"]},
+    {"source_id": "src-pollo-campero-0007", "durable_source_id": "unresolved:cmi-public-releases-2026", "type": "public_corporate_release", "description": "CMI/Pollo Campero public releases (store count, leadership, growth goals) - specific URLs not yet captured.", "linked_evidence_ids": ["ev-pollo-campero-0009"]},
+    {"source_id": "src-pollo-campero-0008", "durable_source_id": "unresolved:linkedin-research-2026-08", "type": "public_profile_research", "description": "LinkedIn profile research for Rodas, Perez, O'Neill - specific profile URLs not yet captured.", "linked_evidence_ids": ["ev-pollo-campero-0010"]},
+    {"source_id": "src-pollo-campero-0009", "durable_source_id": "system/account_intelligence/2026-08-10-pollo-campero-comprehensive-account-brief.md", "type": "account_brief", "description": "Prior comprehensive account brief; background context, not yet re-cited line-by-line into evidence.jsonl.", "linked_evidence_ids": []},
+    {"source_id": "src-pollo-campero-0010", "durable_source_id": "system/account_intelligence/2026-07-27-campero-genius-lead.md", "type": "account_brief", "description": "Original Genius lead brief; background context, not yet re-cited line-by-line into evidence.jsonl.", "linked_evidence_ids": []}
+  ],
+  "note": "durable_source_id values prefixed 'unresolved:' are placeholders pending real Gmail/Drive/CRM identifiers - do not treat as resolved durable links; see gap report."
+}

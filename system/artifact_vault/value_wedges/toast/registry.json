@@ -1,0 +1,37 @@
+{
+  "subject_id": "subject-toast",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-26T09:20:54Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/toast/current/Toast_Value-Wedge.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-27T09:18:41Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/toast/current/Toast_Value-Wedge.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-29T09:19:15Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/toast/current/Toast-vs-Genius_Value-Wedge.json",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-10-01T10:43:22Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/toast/current/Toast-vs-Genius_Value-Wedge.json",
+      "superseded": false
+    }
+  ]
+}

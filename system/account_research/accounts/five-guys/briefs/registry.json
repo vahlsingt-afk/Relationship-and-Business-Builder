@@ -1,0 +1,32 @@
+{
+  "account_id": "acct-five-guys",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-04T17:08:32Z",
+      "generated_for": "",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-04",
+      "path": "system/account_research/accounts/five-guys/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-04T17:10:56Z",
+      "generated_for": "",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-04",
+      "path": "system/account_research/accounts/five-guys/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-04T17:15:33Z",
+      "generated_for": "",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-09-04",
+      "path": "system/account_research/accounts/five-guys/briefs/current/Background_Brief.md",
+      "superseded": false
+    }
+  ]
+}

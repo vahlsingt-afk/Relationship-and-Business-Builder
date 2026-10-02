@@ -1,0 +1,13 @@
+{
+  "subject_id": "subject-doordash-dashos",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-10-01T10:43:22Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/doordash-dashos/current/DoorDash-DashOS-vs-Genius_Value-Wedge.json",
+      "superseded": false
+    }
+  ]
+}

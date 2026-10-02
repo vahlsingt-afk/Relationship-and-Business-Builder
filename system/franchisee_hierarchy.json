@@ -1,0 +1,4095 @@
+{
+  "contract": "rb_franchisee_hierarchy_v1",
+  "description": "Searchable operator -> brand -> reported unit-count hierarchy.",
+  "source": {
+    "title": "2026 Restaurant 200",
+    "publisher": "Franchise Times",
+    "publication_date": "2026-08",
+    "source_file": "2026-Restaurant-200-WEB.pdf",
+    "methodology_note": "Ranked by revenue from franchised restaurants; nonrespondent revenue may be estimated."
+  },
+  "generated_at": "2026-09-30T15:13:56.225966+00:00",
+  "operator_count": 200,
+  "reported_total_units": 33635,
+  "extracted_unit_total": 33529,
+  "unit_total_variance": 106,
+  "reconciliation_note": "The publication reports 33,635 locations in its summary. The 200 printed operator rows sum to the extracted total; the difference is retained explicitly rather than allocated to any operator without evidence.",
+  "operators": [
+    {
+      "rank": 1,
+      "rank_revenue_estimated": false,
+      "name": "Flynn Group",
+      "location": "San Francisco, CA",
+      "revenue_usd": 4938000000,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 1321
+        },
+        {
+          "brand": "Applebee’s",
+          "unit_count": 460
+        },
+        {
+          "brand": "Arby’s",
+          "unit_count": 358
+        },
+        {
+          "brand": "Wendy’s",
+          "unit_count": 340
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 307
+        },
+        {
+          "brand": "Panera Bread",
+          "unit_count": 150
+        }
+      ],
+      "total_units": 2936,
+      "brand_count": 6,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 2,
+      "rank_revenue_estimated": false,
+      "name": "Sun Holdings",
+      "location": "Dallas, TX",
+      "revenue_usd": 2100000000,
+      "brands": [
+        {
+          "brand": "Arby’s",
+          "unit_count": 220
+        },
+        {
+          "brand": "Papa Johns",
+          "unit_count": 218
+        },
+        {
+          "brand": "Burger King",
+          "unit_count": 138
+        },
+        {
+          "brand": "Applebee’s",
+          "unit_count": 129
+        },
+        {
+          "brand": "Popeyes",
+          "unit_count": 120
+        },
+        {
+          "brand": "McAlister’s Deli",
+          "unit_count": 73
+        },
+        {
+          "brand": "IHOP",
+          "unit_count": 34
+        }
+      ],
+      "total_units": 932,
+      "brand_count": 7,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 3,
+      "rank_revenue_estimated": true,
+      "name": "Dhanani Group",
+      "location": "Sugar Land, TX",
+      "revenue_usd": 1850000000,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 497
+        },
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 387
+        },
+        {
+          "brand": "Popeyes",
+          "unit_count": 363
+        },
+        {
+          "brand": "Dunkin’",
+          "unit_count": 178
+        },
+        {
+          "brand": "La Madeleine",
+          "unit_count": 39
+        }
+      ],
+      "total_units": 1464,
+      "brand_count": 5,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 4,
+      "rank_revenue_estimated": false,
+      "name": "KBP Brands",
+      "location": "Leawood, KS",
+      "revenue_usd": 1670000000,
+      "brands": [
+        {
+          "brand": "KFC",
+          "unit_count": 673
+        },
+        {
+          "brand": "Sonic",
+          "unit_count": 160
+        },
+        {
+          "brand": "Arby’s",
+          "unit_count": 110
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 47
+        },
+        {
+          "brand": "YUM! Multi",
+          "unit_count": 99
+        }
+      ],
+      "total_units": 1089,
+      "brand_count": 5,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 5,
+      "rank_revenue_estimated": false,
+      "name": "Sizzling Platter",
+      "location": "Murray, UT",
+      "revenue_usd": 1198000000,
+      "brands": [
+        {
+          "brand": "Little Caesars",
+          "unit_count": 479
+        },
+        {
+          "brand": "Wingstop",
+          "unit_count": 210
+        },
+        {
+          "brand": "Jamba",
+          "unit_count": 86
+        },
+        {
+          "brand": "Jersey Mike’s",
+          "unit_count": 47
+        },
+        {
+          "brand": "Dunkin’",
+          "unit_count": 35
+        },
+        {
+          "brand": "Sizzler",
+          "unit_count": 7
+        },
+        {
+          "brand": "Red Robin",
+          "unit_count": 4
+        }
+      ],
+      "total_units": 868,
+      "brand_count": 7,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 6,
+      "rank_revenue_estimated": false,
+      "name": "Anchor Point Management Group",
+      "location": "Irving, TX",
+      "revenue_usd": 1024000000,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 310
+        },
+        {
+          "brand": "Buffalo Wild Wings",
+          "unit_count": 62
+        },
+        {
+          "brand": "7 Brew",
+          "unit_count": 37
+        }
+      ],
+      "total_units": 409,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 7,
+      "rank_revenue_estimated": false,
+      "name": "HAZA Group",
+      "location": "Sugar Land, TX",
+      "revenue_usd": 1001000000,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 428
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 155
+        }
+      ],
+      "total_units": 583,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 8,
+      "rank_revenue_estimated": false,
+      "name": "Tacala",
+      "location": "Birmingham, AL",
+      "revenue_usd": 861000000,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 386
+        },
+        {
+          "brand": "7 Brew",
+          "unit_count": 38
+        }
+      ],
+      "total_units": 424,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 9,
+      "rank_revenue_estimated": false,
+      "name": "Diversified Restaurant Group",
+      "location": "Las Vegas, NV",
+      "revenue_usd": 840000000,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 342
+        },
+        {
+          "brand": "Arby’s",
+          "unit_count": 27
+        }
+      ],
+      "total_units": 369,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 10,
+      "rank_revenue_estimated": false,
+      "name": "MIC Glen",
+      "location": "Fayetteville, AR",
+      "revenue_usd": 826000000,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 356
+        },
+        {
+          "brand": "7 Brew",
+          "unit_count": 65
+        },
+        {
+          "brand": "Whataburger",
+          "unit_count": 18
+        }
+      ],
+      "total_units": 439,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 11,
+      "rank_revenue_estimated": false,
+      "name": "WKS Restaurant Group",
+      "location": "Cypress, CA",
+      "revenue_usd": 751000000,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 134
+        },
+        {
+          "brand": "Denny’s",
+          "unit_count": 107
+        },
+        {
+          "brand": "El Pollo Loco",
+          "unit_count": 79
+        },
+        {
+          "brand": "Krispy Kreme",
+          "unit_count": 50
+        }
+      ],
+      "total_units": 370,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 12,
+      "rank_revenue_estimated": false,
+      "name": "Ampler Group",
+      "location": "Pittsburg, KS",
+      "revenue_usd": 708000000,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 191
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 114
+        },
+        {
+          "brand": "Church’s Chicken",
+          "unit_count": 86
+        },
+        {
+          "brand": "Little Caesars",
+          "unit_count": 82
+        }
+      ],
+      "total_units": 473,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 13,
+      "rank_revenue_estimated": false,
+      "name": "Border Foods",
+      "location": "New Hope, MN",
+      "revenue_usd": 663000000,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 254
+        }
+      ],
+      "total_units": 254,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 14,
+      "rank_revenue_estimated": false,
+      "name": "Meritage Hospitality",
+      "location": "Grand Rapids, MI",
+      "revenue_usd": 617000000,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 365
+        }
+      ],
+      "total_units": 365,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 15,
+      "rank_revenue_estimated": false,
+      "name": "Desert De Oro Foods",
+      "location": "Kingman, AZ",
+      "revenue_usd": 611000000,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 234
+        },
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 87
+        },
+        {
+          "brand": "KFC",
+          "unit_count": 28
+        }
+      ],
+      "total_units": 349,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 16,
+      "rank_revenue_estimated": true,
+      "name": "GPS Hospitality",
+      "location": "Atlanta, GA",
+      "revenue_usd": 610000000,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 369
+        },
+        {
+          "brand": "Popeyes",
+          "unit_count": 16
+        }
+      ],
+      "total_units": 385,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 17,
+      "rank_revenue_estimated": false,
+      "name": "Yadav Enterprises",
+      "location": "Fremont, CA",
+      "revenue_usd": 606000000,
+      "brands": [
+        {
+          "brand": "Jack in the Box",
+          "unit_count": 241
+        },
+        {
+          "brand": "Denny’s",
+          "unit_count": 68
+        },
+        {
+          "brand": "TGI Fridays",
+          "unit_count": 28
+        }
+      ],
+      "total_units": 337,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 18,
+      "rank_revenue_estimated": false,
+      "name": "Covelli Enterprises",
+      "location": "Warren, OH",
+      "revenue_usd": 605000000,
+      "brands": [
+        {
+          "brand": "Panera Bread",
+          "unit_count": 262
+        },
+        {
+          "brand": "Dairy Queen",
+          "unit_count": 6
+        },
+        {
+          "brand": "O’Charley’s",
+          "unit_count": 3
+        },
+        {
+          "brand": "Caribou",
+          "unit_count": 3
+        }
+      ],
+      "total_units": 274,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 19,
+      "rank_revenue_estimated": true,
+      "name": "Charter Foods",
+      "location": "Morristown, TN",
+      "revenue_usd": 600000000,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 357
+        },
+        {
+          "brand": "YUM! Multi",
+          "unit_count": 36
+        },
+        {
+          "brand": "Long John Silver’s",
+          "unit_count": 31
+        },
+        {
+          "brand": "KFC",
+          "unit_count": 6
+        },
+        {
+          "brand": "Pizza Hut Express",
+          "unit_count": 6
+        }
+      ],
+      "total_units": 436,
+      "brand_count": 5,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 20,
+      "rank_revenue_estimated": false,
+      "name": "Doherty Enterprises",
+      "location": "Allendale, NJ",
+      "revenue_usd": 595000000,
+      "brands": [
+        {
+          "brand": "Applebee’s",
+          "unit_count": 79
+        },
+        {
+          "brand": "Panera Bread",
+          "unit_count": 52
+        },
+        {
+          "brand": "Wendy’s",
+          "unit_count": 20
+        },
+        {
+          "brand": "Chevy’s",
+          "unit_count": 2
+        },
+        {
+          "brand": "Jinya",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 155,
+      "brand_count": 5,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 21,
+      "rank_revenue_estimated": false,
+      "name": "FMI Group",
+      "location": "Woodstock, New Brunswick, Canada",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "KFC",
+          "unit_count": 231
+        },
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 132
+        },
+        {
+          "brand": "Burger King",
+          "unit_count": 25
+        },
+        {
+          "brand": "Panera Bread",
+          "unit_count": 11
+        }
+      ],
+      "total_units": 399,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 22,
+      "rank_revenue_estimated": false,
+      "name": "VantEdge Partners",
+      "location": "Overland Park, KS",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 205
+        },
+        {
+          "brand": "Dunkin’",
+          "unit_count": 99
+        },
+        {
+          "brand": "Nothing Bundt Cakes",
+          "unit_count": 10
+        }
+      ],
+      "total_units": 314,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 23,
+      "rank_revenue_estimated": false,
+      "name": "CMG Companies",
+      "location": "Plano, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Sonic",
+          "unit_count": 191
+        },
+        {
+          "brand": "KFC",
+          "unit_count": 130
+        },
+        {
+          "brand": "Little Caesars",
+          "unit_count": 61
+        },
+        {
+          "brand": "YUM! Multi",
+          "unit_count": 33
+        }
+      ],
+      "total_units": 415,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 24,
+      "rank_revenue_estimated": false,
+      "name": "Northwest Restaurants",
+      "location": "Woodinville, WA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 166
+        },
+        {
+          "brand": "KFC",
+          "unit_count": 35
+        },
+        {
+          "brand": "YUM! Multi",
+          "unit_count": 14
+        }
+      ],
+      "total_units": 215,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 25,
+      "rank_revenue_estimated": false,
+      "name": "Manna",
+      "location": "Prospect, KY",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 160
+        },
+        {
+          "brand": "Fazoli’s",
+          "unit_count": 60
+        },
+        {
+          "brand": "Golden Corral",
+          "unit_count": 10
+        }
+      ],
+      "total_units": 230,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 26,
+      "rank_revenue_estimated": true,
+      "name": "Beshay Enterprises",
+      "location": "Murrieta, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jack in the Box",
+          "unit_count": 233
+        },
+        {
+          "brand": "Denny’s",
+          "unit_count": 23
+        },
+        {
+          "brand": "Del Taco",
+          "unit_count": 18
+        },
+        {
+          "brand": "Popeyes",
+          "unit_count": 17
+        }
+      ],
+      "total_units": 291,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 27,
+      "rank_revenue_estimated": false,
+      "name": "Delight Restaurant Group",
+      "location": "Greenwich, CT",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 202
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 29
+        },
+        {
+          "brand": "7 Brew",
+          "unit_count": 1
+        }
+      ],
+      "total_units": 232,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 28,
+      "rank_revenue_estimated": false,
+      "name": "Cotti Foods",
+      "location": "Rancho Santa Margarita, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 125
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 106
+        },
+        {
+          "brand": "Pieology",
+          "unit_count": 5
+        }
+      ],
+      "total_units": 236,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 29,
+      "rank_revenue_estimated": false,
+      "name": "D.L. Rogers Corp.",
+      "location": "Grapevine, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Sonic",
+          "unit_count": 264
+        }
+      ],
+      "total_units": 264,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 30,
+      "rank_revenue_estimated": false,
+      "name": "FSI",
+      "location": "Portage, WI",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Culver’s",
+          "unit_count": 120
+        }
+      ],
+      "total_units": 120,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 31,
+      "rank_revenue_estimated": true,
+      "name": "Hamra Enterprises",
+      "location": "Springfield, MO",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 102
+        },
+        {
+          "brand": "Panera Bread",
+          "unit_count": 89
+        },
+        {
+          "brand": "Noodles & Co.",
+          "unit_count": 6
+        }
+      ],
+      "total_units": 197,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 32,
+      "rank_revenue_estimated": true,
+      "name": "Alvarado Restaurant Nation",
+      "location": "Greenwood Village, CO",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 216
+        },
+        {
+          "brand": "KFC",
+          "unit_count": 8
+        },
+        {
+          "brand": "YUM! Multi",
+          "unit_count": 4
+        }
+      ],
+      "total_units": 228,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 33,
+      "rank_revenue_estimated": false,
+      "name": "Boddie-Noell Enterprises",
+      "location": "Rocky Mount, NC",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Hardee’s",
+          "unit_count": 319
+        }
+      ],
+      "total_units": 319,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 34,
+      "rank_revenue_estimated": false,
+      "name": "AES Restaurant Group",
+      "location": "Zionsville, IN",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Arby’s",
+          "unit_count": 344
+        }
+      ],
+      "total_units": 344,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 35,
+      "rank_revenue_estimated": false,
+      "name": "Ghai Management Services",
+      "location": "Livermore, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 140
+        },
+        {
+          "brand": "Popeyes",
+          "unit_count": 43
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 39
+        }
+      ],
+      "total_units": 222,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 36,
+      "rank_revenue_estimated": true,
+      "name": "Warner Foods Group",
+      "location": "Encino, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jack in the Box",
+          "unit_count": 142
+        },
+        {
+          "brand": "Del Taco",
+          "unit_count": 54
+        },
+        {
+          "brand": "Noodles & Co.",
+          "unit_count": 7
+        },
+        {
+          "brand": "Black Bear Diner",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 205,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 37,
+      "rank_revenue_estimated": false,
+      "name": "Team Lyders",
+      "location": "Brighton, MI",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 234
+        },
+        {
+          "brand": "KFC",
+          "unit_count": 1
+        }
+      ],
+      "total_units": 235,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 38,
+      "rank_revenue_estimated": true,
+      "name": "Manna Development Group",
+      "location": "Encinitas, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Panera Bread",
+          "unit_count": 160
+        }
+      ],
+      "total_units": 160,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 39,
+      "rank_revenue_estimated": false,
+      "name": "Carlisle Corp.",
+      "location": "Memphis, TN",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 231
+        }
+      ],
+      "total_units": 231,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 40,
+      "rank_revenue_estimated": true,
+      "name": "Tasty Restaurant Group",
+      "location": "Plano, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 177
+        },
+        {
+          "brand": "KFC",
+          "unit_count": 128
+        },
+        {
+          "brand": "Burger King",
+          "unit_count": 56
+        },
+        {
+          "brand": "Dunkin’",
+          "unit_count": 32
+        }
+      ],
+      "total_units": 393,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 41,
+      "rank_revenue_estimated": false,
+      "name": "Redberry Restaurants",
+      "location": "Mississauga, ON",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 172
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 35
+        },
+        {
+          "brand": "Jersey Mike’s",
+          "unit_count": 21
+        }
+      ],
+      "total_units": 228,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 42,
+      "rank_revenue_estimated": true,
+      "name": "GSR Group",
+      "location": "Stafford, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wingstop",
+          "unit_count": 241
+        }
+      ],
+      "total_units": 241,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 43,
+      "rank_revenue_estimated": false,
+      "name": "Fresh Dining Concepts",
+      "location": "Coral Gables, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Auntie Anne’s",
+          "unit_count": 198
+        },
+        {
+          "brand": "Jamba",
+          "unit_count": 92
+        },
+        {
+          "brand": "Cinnabon",
+          "unit_count": 47
+        },
+        {
+          "brand": "Nothing Bundt Cakes",
+          "unit_count": 35
+        }
+      ],
+      "total_units": 372,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 44,
+      "rank_revenue_estimated": false,
+      "name": "Far West Services",
+      "location": "Costa Mesa, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wingstop",
+          "unit_count": 175
+        }
+      ],
+      "total_units": 175,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 45,
+      "rank_revenue_estimated": false,
+      "name": "B & G Food Enterprises",
+      "location": "Morgan City, LA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 228
+        }
+      ],
+      "total_units": 228,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 46,
+      "rank_revenue_estimated": false,
+      "name": "Thrive Restaurant Group",
+      "location": "Wichita, KS",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Applebee’s",
+          "unit_count": 136
+        },
+        {
+          "brand": "Qdoba",
+          "unit_count": 13
+        }
+      ],
+      "total_units": 149,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 47,
+      "rank_revenue_estimated": false,
+      "name": "Southern Rock Restaurants",
+      "location": "Franklin, TN",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "McAlister’s Deli",
+          "unit_count": 167
+        }
+      ],
+      "total_units": 167,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 48,
+      "rank_revenue_estimated": false,
+      "name": "Fourteen Foods",
+      "location": "Franklin, TN",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Dairy Queen",
+          "unit_count": 253
+        }
+      ],
+      "total_units": 253,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 49,
+      "rank_revenue_estimated": false,
+      "name": "Eyas Capital",
+      "location": "Marina Del Ray, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Bojangles",
+          "unit_count": 125
+        },
+        {
+          "brand": "Subway",
+          "unit_count": 69
+        },
+        {
+          "brand": "Burger King",
+          "unit_count": 55
+        }
+      ],
+      "total_units": 249,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 50,
+      "rank_revenue_estimated": true,
+      "name": "Wendy’s of Colorado Springs",
+      "location": "Colorado Springs, CO",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 188
+        }
+      ],
+      "total_units": 188,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 51,
+      "rank_revenue_estimated": false,
+      "name": "Guernsey Holdings",
+      "location": "Westlake Village, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Sonic",
+          "unit_count": 133
+        },
+        {
+          "brand": "Zaxby’s",
+          "unit_count": 43
+        }
+      ],
+      "total_units": 176,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 52,
+      "rank_revenue_estimated": false,
+      "name": "Ambrosia QSR",
+      "location": "Vancouver, WA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 135
+        },
+        {
+          "brand": "Arby’s",
+          "unit_count": 45
+        },
+        {
+          "brand": "Popeyes",
+          "unit_count": 25
+        }
+      ],
+      "total_units": 205,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 53,
+      "rank_revenue_estimated": false,
+      "name": "Chunara Group of Companies",
+      "location": "Duluth, GA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Dunkin’",
+          "unit_count": 62
+        },
+        {
+          "brand": "Checkers",
+          "unit_count": 32
+        },
+        {
+          "brand": "Nothing Bundt Cakes",
+          "unit_count": 30
+        },
+        {
+          "brand": "Blaze Pizza",
+          "unit_count": 10
+        }
+      ],
+      "total_units": 134,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 54,
+      "rank_revenue_estimated": false,
+      "name": "Southpaw",
+      "location": "Woodbridge, CT",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 138
+        },
+        {
+          "brand": "Dunkin’",
+          "unit_count": 45
+        }
+      ],
+      "total_units": 183,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 55,
+      "rank_revenue_estimated": false,
+      "name": "Wendy’s of Bowling Green",
+      "location": "Bowling Green, KY",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 155
+        }
+      ],
+      "total_units": 155,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 56,
+      "rank_revenue_estimated": false,
+      "name": "Out West Restaurant Group",
+      "location": "San Diego, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Outback Steakhouse",
+          "unit_count": 74
+        }
+      ],
+      "total_units": 74,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 57,
+      "rank_revenue_estimated": true,
+      "name": "Quality Restaurant Group",
+      "location": "Greensboro, NC",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 147
+        },
+        {
+          "brand": "Sonic",
+          "unit_count": 72
+        },
+        {
+          "brand": "Moe’s SW Grill",
+          "unit_count": 55
+        },
+        {
+          "brand": "Arby’s",
+          "unit_count": 26
+        }
+      ],
+      "total_units": 300,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 58,
+      "rank_revenue_estimated": false,
+      "name": "BAJCO Group",
+      "location": "Boardman, OH",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Papa Johns",
+          "unit_count": 283
+        }
+      ],
+      "total_units": 283,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 59,
+      "rank_revenue_estimated": false,
+      "name": "Retzer Organization",
+      "location": "Greenville, MS",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "McDonald’s",
+          "unit_count": 83
+        }
+      ],
+      "total_units": 83,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 60,
+      "rank_revenue_estimated": true,
+      "name": "Merritt Restaurant Group",
+      "location": "Las Cruces, NM",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Sonic",
+          "unit_count": 179
+        },
+        {
+          "brand": "BWW GO",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 181,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 61,
+      "rank_revenue_estimated": false,
+      "name": "Brew Crew",
+      "location": "Vestal, NY",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "7 Brew",
+          "unit_count": 130
+        }
+      ],
+      "total_units": 130,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 62,
+      "rank_revenue_estimated": false,
+      "name": "Cave Enterprises",
+      "location": "Chicago, IL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 183
+        },
+        {
+          "brand": "BWW Go",
+          "unit_count": 4
+        }
+      ],
+      "total_units": 187,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 63,
+      "rank_revenue_estimated": true,
+      "name": "OM Group",
+      "location": "Utica, MI",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wingstop",
+          "unit_count": 117
+        },
+        {
+          "brand": "Dunkin’",
+          "unit_count": 67
+        },
+        {
+          "brand": "Smoothie King",
+          "unit_count": 31
+        },
+        {
+          "brand": "Dunkin/Baskin",
+          "unit_count": 24
+        }
+      ],
+      "total_units": 239,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 64,
+      "rank_revenue_estimated": false,
+      "name": "Stine Enterprises",
+      "location": "Phoenix, AZ",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jack in the Box",
+          "unit_count": 79
+        },
+        {
+          "brand": "Hawaiian Bros",
+          "unit_count": 28
+        },
+        {
+          "brand": "Denny’s",
+          "unit_count": 13
+        }
+      ],
+      "total_units": 120,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 65,
+      "rank_revenue_estimated": false,
+      "name": "Vibe Restaurants",
+      "location": "Dallas, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wingstop",
+          "unit_count": 89
+        },
+        {
+          "brand": "Little Caesars",
+          "unit_count": 72
+        },
+        {
+          "brand": "Whataburger",
+          "unit_count": 9
+        }
+      ],
+      "total_units": 170,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 66,
+      "rank_revenue_estimated": false,
+      "name": "Southern Multifoods",
+      "location": "Jacksonville, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 121
+        },
+        {
+          "brand": "YUM! Multi",
+          "unit_count": 1
+        }
+      ],
+      "total_units": 122,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 67,
+      "rank_revenue_estimated": false,
+      "name": "AFC Brands",
+      "location": "Atlanta, GA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 85
+        },
+        {
+          "brand": "Applebee’s",
+          "unit_count": 32
+        }
+      ],
+      "total_units": 117,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 68,
+      "rank_revenue_estimated": false,
+      "name": "Emerge!",
+      "location": "Houston, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 68
+        },
+        {
+          "brand": "Sonic",
+          "unit_count": 49
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 31
+        },
+        {
+          "brand": "KFC",
+          "unit_count": 15
+        }
+      ],
+      "total_units": 163,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 69,
+      "rank_revenue_estimated": false,
+      "name": "Fugate Enterprises",
+      "location": "Wichita, KS",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 121
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 78
+        }
+      ],
+      "total_units": 199,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 70,
+      "rank_revenue_estimated": true,
+      "name": "Summerwood Corp.",
+      "location": "Conshohocken, PA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 162
+        },
+        {
+          "brand": "KFC",
+          "unit_count": 3
+        },
+        {
+          "brand": "YUM! Multi",
+          "unit_count": 5
+        }
+      ],
+      "total_units": 170,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 71,
+      "rank_revenue_estimated": true,
+      "name": "North Fork Restaurant Group",
+      "location": "Springfield, MO",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Qdoba",
+          "unit_count": 108
+        },
+        {
+          "brand": "Sonic",
+          "unit_count": 43
+        }
+      ],
+      "total_units": 151,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 72,
+      "rank_revenue_estimated": false,
+      "name": "ARS Brands",
+      "location": "Dallas, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wingstop",
+          "unit_count": 106
+        },
+        {
+          "brand": "Dunkin’",
+          "unit_count": 20
+        }
+      ],
+      "total_units": 126,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 73,
+      "rank_revenue_estimated": false,
+      "name": "JAI Restaurant Group",
+      "location": "Fort Lauderdale, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 85
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 20
+        }
+      ],
+      "total_units": 105,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 74,
+      "rank_revenue_estimated": true,
+      "name": "Grube",
+      "location": "Defiance, OH",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Buffalo Wild Wings",
+          "unit_count": 78
+        },
+        {
+          "brand": "Marco’s Pizza",
+          "unit_count": 14
+        },
+        {
+          "brand": "BWW Go",
+          "unit_count": 4
+        }
+      ],
+      "total_units": 96,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 75,
+      "rank_revenue_estimated": true,
+      "name": "PJ United",
+      "location": "Birmingham, AL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Papa Johns",
+          "unit_count": 197
+        }
+      ],
+      "total_units": 197,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 76,
+      "rank_revenue_estimated": false,
+      "name": "Lemek",
+      "location": "Elkridge, MD",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Panera Bread",
+          "unit_count": 61
+        }
+      ],
+      "total_units": 61,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 77,
+      "rank_revenue_estimated": false,
+      "name": "MRCO",
+      "location": "Brentwood, TN",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 90
+        }
+      ],
+      "total_units": 90,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 78,
+      "rank_revenue_estimated": false,
+      "name": "Carolina Restaurant Group",
+      "location": "Charlotte, NC",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 119
+        }
+      ],
+      "total_units": 119,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 79,
+      "rank_revenue_estimated": false,
+      "name": "Pizza Properties",
+      "location": "El Paso, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Peter Piper Pizza",
+          "unit_count": 52
+        },
+        {
+          "brand": "Applebee’s",
+          "unit_count": 12
+        }
+      ],
+      "total_units": 64,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 80,
+      "rank_revenue_estimated": false,
+      "name": "Meauxmentum Strategies and Investments",
+      "location": "Colleyville, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 63
+        },
+        {
+          "brand": "Wingstop",
+          "unit_count": 45
+        },
+        {
+          "brand": "Chicken Salad Chick",
+          "unit_count": 25
+        }
+      ],
+      "total_units": 133,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 81,
+      "rank_revenue_estimated": false,
+      "name": "BurgerBusters",
+      "location": "Virginia Beach, VA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 86
+        },
+        {
+          "brand": "Buffalo Wild Wings",
+          "unit_count": 5
+        },
+        {
+          "brand": "Blaze Pizza",
+          "unit_count": 3
+        }
+      ],
+      "total_units": 94,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 82,
+      "rank_revenue_estimated": false,
+      "name": "Calhoun Management",
+      "location": "Clemson, SC",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 87
+        },
+        {
+          "brand": "Wingstop",
+          "unit_count": 35
+        }
+      ],
+      "total_units": 122,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 83,
+      "rank_revenue_estimated": true,
+      "name": "CSM Group",
+      "location": "Houston, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Popeyes",
+          "unit_count": 132
+        },
+        {
+          "brand": "Tim Hortons",
+          "unit_count": 10
+        }
+      ],
+      "total_units": 142,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 84,
+      "rank_revenue_estimated": false,
+      "name": "Quality Brand Group",
+      "location": "Stamford, CT",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Dunkin’",
+          "unit_count": 182
+        },
+        {
+          "brand": "BWW GO",
+          "unit_count": 5
+        }
+      ],
+      "total_units": 187,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 85,
+      "rank_revenue_estimated": true,
+      "name": "CKA Management",
+      "location": "Lyndhurst, NJ",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 92
+        }
+      ],
+      "total_units": 92,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 86,
+      "rank_revenue_estimated": false,
+      "name": "Rackson Restaurants",
+      "location": "Bridgewater, NJ",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 95
+        },
+        {
+          "brand": "Dave’s Hot Chicken",
+          "unit_count": 10
+        }
+      ],
+      "total_units": 105,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 87,
+      "rank_revenue_estimated": false,
+      "name": "High Noon Restaurant Group",
+      "location": "Covington, LA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Popeyes",
+          "unit_count": 112
+        }
+      ],
+      "total_units": 112,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 88,
+      "rank_revenue_estimated": false,
+      "name": "Front Range Holdings",
+      "location": "Thornton, CO",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Great American Cookies",
+          "unit_count": 62
+        },
+        {
+          "brand": "Jimmy John’s",
+          "unit_count": 57
+        },
+        {
+          "brand": "Burger King",
+          "unit_count": 57
+        },
+        {
+          "brand": "KFC",
+          "unit_count": 22
+        }
+      ],
+      "total_units": 198,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 89,
+      "rank_revenue_estimated": true,
+      "name": "PARS Group",
+      "location": "Bellflower, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jack in the Box",
+          "unit_count": 89
+        }
+      ],
+      "total_units": 89,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 90,
+      "rank_revenue_estimated": true,
+      "name": "Bluegrass Restaurant Holdings",
+      "location": "Louisville, KY",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 124
+        },
+        {
+          "brand": "Panera Bread",
+          "unit_count": 48
+        }
+      ],
+      "total_units": 172,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 91,
+      "rank_revenue_estimated": false,
+      "name": "Tar Heel Capital",
+      "location": "Boone, NC",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 87
+        }
+      ],
+      "total_units": 87,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 92,
+      "rank_revenue_estimated": false,
+      "name": "The Saxton Group",
+      "location": "Dallas, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "McAlister’s Deli",
+          "unit_count": 77
+        },
+        {
+          "brand": "Jaggers",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 79,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 93,
+      "rank_revenue_estimated": false,
+      "name": "Team Schostak Family Restaurants",
+      "location": "Livonia, MI",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Applebee’s",
+          "unit_count": 60
+        },
+        {
+          "brand": "MOD Pizza",
+          "unit_count": 3
+        }
+      ],
+      "total_units": 63,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 94,
+      "rank_revenue_estimated": false,
+      "name": "Schmidt Family Restaurant Group",
+      "location": "Portsmouth, OH",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 76
+        },
+        {
+          "brand": "Buffalo Wild Wings",
+          "unit_count": 5
+        }
+      ],
+      "total_units": 81,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 95,
+      "rank_revenue_estimated": false,
+      "name": "Celebration Restaurant Group",
+      "location": "Celebration, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 88
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 35
+        },
+        {
+          "brand": "KFC",
+          "unit_count": 12
+        }
+      ],
+      "total_units": 135,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 96,
+      "rank_revenue_estimated": false,
+      "name": "The Rose Group",
+      "location": "Newtown, PA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Applebee’s",
+          "unit_count": 54
+        },
+        {
+          "brand": "Qdoba",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 56,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 97,
+      "rank_revenue_estimated": false,
+      "name": "RBD Hawaii Restaurants Limited",
+      "location": "Honolulu, HI",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 36
+        },
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 34
+        }
+      ],
+      "total_units": 70,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 98,
+      "rank_revenue_estimated": false,
+      "name": "TL Cannon",
+      "location": "Ponte Vedra Beach, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Applebee’s",
+          "unit_count": 53
+        }
+      ],
+      "total_units": 53,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 99,
+      "rank_revenue_estimated": false,
+      "name": "Chaac Foods",
+      "location": "Irving, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 110
+        },
+        {
+          "brand": "Applebee’s",
+          "unit_count": 2
+        },
+        {
+          "brand": "IHOP",
+          "unit_count": 1
+        },
+        {
+          "brand": "Jamba",
+          "unit_count": 1
+        }
+      ],
+      "total_units": 114,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 100,
+      "rank_revenue_estimated": true,
+      "name": "Roost & Rise Holdings",
+      "location": "West Lake Hills, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Zaxby’s",
+          "unit_count": 87
+        }
+      ],
+      "total_units": 87,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 101,
+      "rank_revenue_estimated": false,
+      "name": "Rucker Restaurant Holdings",
+      "location": "Buda, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jack in the Box",
+          "unit_count": 58
+        },
+        {
+          "brand": "Denny’s",
+          "unit_count": 36
+        }
+      ],
+      "total_units": 94,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 102,
+      "rank_revenue_estimated": false,
+      "name": "Diya & Raishaan Holdings",
+      "location": "Naperville, IL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Dunkin’",
+          "unit_count": 38
+        },
+        {
+          "brand": "Popeyes",
+          "unit_count": 22
+        },
+        {
+          "brand": "Jimmy John’s",
+          "unit_count": 15
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 14
+        }
+      ],
+      "total_units": 89,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 103,
+      "rank_revenue_estimated": false,
+      "name": "DRM",
+      "location": "Omaha, NE",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Arby’s",
+          "unit_count": 119
+        },
+        {
+          "brand": "BWW Go",
+          "unit_count": 1
+        }
+      ],
+      "total_units": 120,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 104,
+      "rank_revenue_estimated": false,
+      "name": "JRI Hospitality",
+      "location": "Salina, KS",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Freddy’s",
+          "unit_count": 82
+        }
+      ],
+      "total_units": 82,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 105,
+      "rank_revenue_estimated": false,
+      "name": "JS Fort Group",
+      "location": "Downers Grove, IL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jimmy John’s",
+          "unit_count": 172
+        },
+        {
+          "brand": "Dunkin’",
+          "unit_count": 1
+        }
+      ],
+      "total_units": 173,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 106,
+      "rank_revenue_estimated": false,
+      "name": "The Wolak Group",
+      "location": "Falmouth, ME",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Dunkin’",
+          "unit_count": 95
+        }
+      ],
+      "total_units": 95,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 107,
+      "rank_revenue_estimated": false,
+      "name": "Emerald City Pizza",
+      "location": "Mukilteo, WA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 138
+        }
+      ],
+      "total_units": 138,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 108,
+      "rank_revenue_estimated": true,
+      "name": "SMS Holdings",
+      "location": "Nashville, TN",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 64
+        },
+        {
+          "brand": "Wingstop",
+          "unit_count": 22
+        }
+      ],
+      "total_units": 86,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 109,
+      "rank_revenue_estimated": true,
+      "name": "Rottinghaus Company",
+      "location": "La Crosse, WI",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Subway",
+          "unit_count": 275
+        }
+      ],
+      "total_units": 275,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 110,
+      "rank_revenue_estimated": false,
+      "name": "Seaside Dining Group",
+      "location": "Newport Beach, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Denny’s",
+          "unit_count": 28
+        },
+        {
+          "brand": "Del Taco",
+          "unit_count": 20
+        },
+        {
+          "brand": "Jack in the Box",
+          "unit_count": 17
+        },
+        {
+          "brand": "Keke’s Breakfast",
+          "unit_count": 1
+        }
+      ],
+      "total_units": 66,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 111,
+      "rank_revenue_estimated": false,
+      "name": "DYNE Hospitality Group",
+      "location": "Little Rock, AR",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Tropical Smoothie Cafe",
+          "unit_count": 120
+        }
+      ],
+      "total_units": 120,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 112,
+      "rank_revenue_estimated": false,
+      "name": "Genesh",
+      "location": "Lenexa, KS",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 52
+        },
+        {
+          "brand": "Denny’s",
+          "unit_count": 35
+        }
+      ],
+      "total_units": 87,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 113,
+      "rank_revenue_estimated": false,
+      "name": "Sterling Restaurants",
+      "location": "Atlanta, GA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Moe’s Southwest Grill",
+          "unit_count": 87
+        }
+      ],
+      "total_units": 87,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 114,
+      "rank_revenue_estimated": false,
+      "name": "IRMG",
+      "location": "Coral Gables, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Popeyes",
+          "unit_count": 80
+        },
+        {
+          "brand": "Burger King",
+          "unit_count": 27
+        },
+        {
+          "brand": "Starbucks",
+          "unit_count": 12
+        },
+        {
+          "brand": "Firehouse Subs",
+          "unit_count": 5
+        }
+      ],
+      "total_units": 124,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 115,
+      "rank_revenue_estimated": true,
+      "name": "Roaring Fork Restaurant Group",
+      "location": "Milwaukee, WI",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Qdoba",
+          "unit_count": 62
+        },
+        {
+          "brand": "Dave’s Hot Chicken",
+          "unit_count": 11
+        }
+      ],
+      "total_units": 73,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 116,
+      "rank_revenue_estimated": false,
+      "name": "Convive Brands",
+      "location": "New York, NY",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Le Pain Quotidien",
+          "unit_count": 59
+        }
+      ],
+      "total_units": 59,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 117,
+      "rank_revenue_estimated": true,
+      "name": "23 Restaurant Services",
+      "location": "Tampa, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Ford’s Garage",
+          "unit_count": 23
+        }
+      ],
+      "total_units": 23,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 118,
+      "rank_revenue_estimated": false,
+      "name": "Fourjay",
+      "location": "Little Rock, AR",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 52
+        },
+        {
+          "brand": "Slim Chickens",
+          "unit_count": 16
+        }
+      ],
+      "total_units": 68,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 119,
+      "rank_revenue_estimated": false,
+      "name": "C&R Restaurant Group",
+      "location": "Costa Mesa, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 50
+        }
+      ],
+      "total_units": 50,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 120,
+      "rank_revenue_estimated": false,
+      "name": "JRN",
+      "location": "Columbia, TN",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "KFC",
+          "unit_count": 74
+        },
+        {
+          "brand": "YUM! Multi",
+          "unit_count": 7
+        }
+      ],
+      "total_units": 81,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 121,
+      "rank_revenue_estimated": false,
+      "name": "American Bread Company",
+      "location": "Cleveland, OH",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Panera Bread",
+          "unit_count": 47
+        }
+      ],
+      "total_units": 47,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 122,
+      "rank_revenue_estimated": false,
+      "name": "DMAC-SD",
+      "location": "Hershey, OH",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "McAlister’s Deli",
+          "unit_count": 76
+        },
+        {
+          "brand": "Moe’s SW Grill",
+          "unit_count": 8
+        }
+      ],
+      "total_units": 84,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 123,
+      "rank_revenue_estimated": false,
+      "name": "Metro Corral",
+      "location": "Winter Park, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Golden Corral",
+          "unit_count": 18
+        }
+      ],
+      "total_units": 18,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 124,
+      "rank_revenue_estimated": false,
+      "name": "RREMC Restaurants",
+      "location": "West Palm Beach , FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Denny’s",
+          "unit_count": 60
+        },
+        {
+          "brand": "Hurricane Grill",
+          "unit_count": 3
+        },
+        {
+          "brand": "Keke’s Breakfast",
+          "unit_count": 1
+        }
+      ],
+      "total_units": 64,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 125,
+      "rank_revenue_estimated": false,
+      "name": "Nisamex",
+      "location": "Pomona, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jersey Mike’s",
+          "unit_count": 92
+        }
+      ],
+      "total_units": 92,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 126,
+      "rank_revenue_estimated": false,
+      "name": "Premium Loaves",
+      "location": "Normal, IL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jimmy John’s",
+          "unit_count": 115
+        }
+      ],
+      "total_units": 115,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 127,
+      "rank_revenue_estimated": false,
+      "name": "FGNY",
+      "location": "New York, NY",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Five Guys",
+          "unit_count": 56
+        }
+      ],
+      "total_units": 56,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 128,
+      "rank_revenue_estimated": false,
+      "name": "Spark Restaurant Holdings",
+      "location": "Houston, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 65
+        },
+        {
+          "brand": "Buffalo Wild Wings",
+          "unit_count": 8
+        }
+      ],
+      "total_units": 73,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 129,
+      "rank_revenue_estimated": false,
+      "name": "Summit Restaurant Group, LLC",
+      "location": "Blue Springs, MO",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 124
+        },
+        {
+          "brand": "Long John Silver’s",
+          "unit_count": 5
+        }
+      ],
+      "total_units": 129,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 130,
+      "rank_revenue_estimated": false,
+      "name": "Anna Management",
+      "location": "Morristown, NJ",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Dunkin’",
+          "unit_count": 107
+        }
+      ],
+      "total_units": 107,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 131,
+      "rank_revenue_estimated": false,
+      "name": "Hyde Park Burgers",
+      "location": "Austin, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Five Guys",
+          "unit_count": 62
+        }
+      ],
+      "total_units": 62,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 132,
+      "rank_revenue_estimated": false,
+      "name": "Phase Three Brands",
+      "location": "Tampa, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Hardee’s",
+          "unit_count": 73
+        },
+        {
+          "brand": "Wingstop",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 75,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 133,
+      "rank_revenue_estimated": false,
+      "name": "KC Bell",
+      "location": "Wichita, KS",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 27
+        },
+        {
+          "brand": "7 Brew",
+          "unit_count": 17
+        },
+        {
+          "brand": "Freddy’s",
+          "unit_count": 15
+        }
+      ],
+      "total_units": 59,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 134,
+      "rank_revenue_estimated": true,
+      "name": "Liberty Restaurant Holdings",
+      "location": "Bellerose, NY",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Popeyes",
+          "unit_count": 37
+        },
+        {
+          "brand": "Burger King",
+          "unit_count": 35
+        },
+        {
+          "brand": "Arby’s",
+          "unit_count": 5
+        }
+      ],
+      "total_units": 77,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 135,
+      "rank_revenue_estimated": false,
+      "name": "RBD California Restaurants Limited",
+      "location": "City of Industry, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "KFC",
+          "unit_count": 61
+        },
+        {
+          "brand": "YUM! Multi",
+          "unit_count": 9
+        }
+      ],
+      "total_units": 70,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 136,
+      "rank_revenue_estimated": false,
+      "name": "Northland Restaurant Group",
+      "location": "Eau Claire, WI",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Hardee’s",
+          "unit_count": 82
+        },
+        {
+          "brand": "Taco John’s",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 84,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 137,
+      "rank_revenue_estimated": false,
+      "name": "Daland Corp.",
+      "location": "Wichita, KS",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 94
+        }
+      ],
+      "total_units": 94,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 138,
+      "rank_revenue_estimated": false,
+      "name": "Hoogland Foods",
+      "location": "Brentwood, TN",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Marco’s Pizza",
+          "unit_count": 121
+        }
+      ],
+      "total_units": 121,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 139,
+      "rank_revenue_estimated": true,
+      "name": "Subs of the South",
+      "location": "Charlotte, NC",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jersey Mike’s",
+          "unit_count": 93
+        }
+      ],
+      "total_units": 93,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 140,
+      "rank_revenue_estimated": true,
+      "name": "3 Brothers Restaurants",
+      "location": "Boise, ID",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Del Taco",
+          "unit_count": 41
+        },
+        {
+          "brand": "Jack in the Box",
+          "unit_count": 39
+        }
+      ],
+      "total_units": 80,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 141,
+      "rank_revenue_estimated": false,
+      "name": "Century Restaurants",
+      "location": "Charleston, SC",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jersey Mike’s",
+          "unit_count": 85
+        }
+      ],
+      "total_units": 85,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 142,
+      "rank_revenue_estimated": true,
+      "name": "Adiser Orlando",
+      "location": "Winter Park, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 77
+        }
+      ],
+      "total_units": 77,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 143,
+      "rank_revenue_estimated": false,
+      "name": "Falcon Holdings",
+      "location": "Westlake, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Church’s Chicken",
+          "unit_count": 30
+        },
+        {
+          "brand": "Hardee’s",
+          "unit_count": 24
+        },
+        {
+          "brand": "Carl’s Jr.",
+          "unit_count": 22
+        }
+      ],
+      "total_units": 76,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 144,
+      "rank_revenue_estimated": false,
+      "name": "The Jones Group",
+      "location": "La Porte, IN",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Buffalo Wild Wings",
+          "unit_count": 34
+        },
+        {
+          "brand": "BlackRock",
+          "unit_count": 1
+        }
+      ],
+      "total_units": 35,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 145,
+      "rank_revenue_estimated": false,
+      "name": "Clark Business Solutions",
+      "location": "Rhinelander, WI",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Culver’s",
+          "unit_count": 25
+        }
+      ],
+      "total_units": 25,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 146,
+      "rank_revenue_estimated": false,
+      "name": "Lehigh Valley Restaurant Brands",
+      "location": "Allentown, PA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Red Robin",
+          "unit_count": 24
+        },
+        {
+          "brand": "Wingstop",
+          "unit_count": 19
+        }
+      ],
+      "total_units": 43,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 147,
+      "rank_revenue_estimated": false,
+      "name": "Magic Concepts",
+      "location": "Toledo, OH",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wingstop",
+          "unit_count": 70
+        },
+        {
+          "brand": "Jersey Mike’s",
+          "unit_count": 6
+        }
+      ],
+      "total_units": 76,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 148,
+      "rank_revenue_estimated": false,
+      "name": "The Falcons Group",
+      "location": "Atlanta, GA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Dunkin’",
+          "unit_count": 31
+        },
+        {
+          "brand": "Rally’s",
+          "unit_count": 29
+        },
+        {
+          "brand": "Qdoba",
+          "unit_count": 13
+        }
+      ],
+      "total_units": 73,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 149,
+      "rank_revenue_estimated": true,
+      "name": "Ram-Z Restaurant Group",
+      "location": "Bentonville, AR",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Freddy’s",
+          "unit_count": 38
+        },
+        {
+          "brand": "Schlotzsky’s",
+          "unit_count": 34
+        }
+      ],
+      "total_units": 72,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 150,
+      "rank_revenue_estimated": true,
+      "name": "Staab Management Co.",
+      "location": "Grand Island, NE",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 91
+        },
+        {
+          "brand": "Dave’s Hot Chicken",
+          "unit_count": 6
+        }
+      ],
+      "total_units": 97,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 151,
+      "rank_revenue_estimated": true,
+      "name": "TICE",
+      "location": "Orlando, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Popeyes",
+          "unit_count": 63
+        }
+      ],
+      "total_units": 63,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 152,
+      "rank_revenue_estimated": false,
+      "name": "JDK Management Company",
+      "location": "Bloomsburg, PA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Perkins",
+          "unit_count": 47
+        }
+      ],
+      "total_units": 47,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 153,
+      "rank_revenue_estimated": false,
+      "name": "Den-Tex Central",
+      "location": "San Antonio, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Denny’s",
+          "unit_count": 56
+        }
+      ],
+      "total_units": 56,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 154,
+      "rank_revenue_estimated": false,
+      "name": "Shamrock Company",
+      "location": "Hinsdale, IL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 41
+        },
+        {
+          "brand": "Dunkin’",
+          "unit_count": 12
+        }
+      ],
+      "total_units": 53,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 155,
+      "rank_revenue_estimated": false,
+      "name": "Royal Restaurant Group",
+      "location": "West Palm Beach, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 61
+        },
+        {
+          "brand": "Potbelly",
+          "unit_count": 7
+        }
+      ],
+      "total_units": 68,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 156,
+      "rank_revenue_estimated": false,
+      "name": "Ansara Restaurant Group",
+      "location": "Farmington Hills, MI",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Red Robin",
+          "unit_count": 22
+        },
+        {
+          "brand": "Twin Peaks",
+          "unit_count": 4
+        },
+        {
+          "brand": "Daily Jam",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 28,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 157,
+      "rank_revenue_estimated": false,
+      "name": "Avants Operations",
+      "location": "Athens, GA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Zaxby’s",
+          "unit_count": 32
+        }
+      ],
+      "total_units": 32,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 158,
+      "rank_revenue_estimated": false,
+      "name": "Stellaris Group",
+      "location": "Los Angeles, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Carl’s Jr.",
+          "unit_count": 58
+        }
+      ],
+      "total_units": 58,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 159,
+      "rank_revenue_estimated": false,
+      "name": "S-Group Companies",
+      "location": "Sandusky, OH",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 31
+        }
+      ],
+      "total_units": 31,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 160,
+      "rank_revenue_estimated": false,
+      "name": "Value Foodservice",
+      "location": "Garfield, NJ",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "KFC",
+          "unit_count": 51
+        },
+        {
+          "brand": "YUM! Multi",
+          "unit_count": 6
+        }
+      ],
+      "total_units": 57,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 161,
+      "rank_revenue_estimated": false,
+      "name": "The Munson Group",
+      "location": "New Brunswick, NJ",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Buffalo Wild Wings",
+          "unit_count": 19
+        },
+        {
+          "brand": "Sonic",
+          "unit_count": 10
+        },
+        {
+          "brand": "BWW Go",
+          "unit_count": 6
+        }
+      ],
+      "total_units": 35,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 162,
+      "rank_revenue_estimated": false,
+      "name": "Parrish Restaurants",
+      "location": "Dallas, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "McDonald’s",
+          "unit_count": 19
+        }
+      ],
+      "total_units": 19,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 163,
+      "rank_revenue_estimated": false,
+      "name": "Sweetwater Franchise Group",
+      "location": "Houston, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Sonic",
+          "unit_count": 61
+        }
+      ],
+      "total_units": 61,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 164,
+      "rank_revenue_estimated": false,
+      "name": "JM West Holdings",
+      "location": "Orem, UT",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jersey Mike’s",
+          "unit_count": 51
+        },
+        {
+          "brand": "Wingstop",
+          "unit_count": 5
+        }
+      ],
+      "total_units": 56,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 165,
+      "rank_revenue_estimated": false,
+      "name": "Cedartown Foods",
+      "location": "New York, NY",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Bojangles",
+          "unit_count": 42
+        },
+        {
+          "brand": "Jersey Mike’s",
+          "unit_count": 11
+        }
+      ],
+      "total_units": 53,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 166,
+      "rank_revenue_estimated": false,
+      "name": "Serazen",
+      "location": "Costa Mesa, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Papa Johns",
+          "unit_count": 73
+        }
+      ],
+      "total_units": 73,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 167,
+      "rank_revenue_estimated": false,
+      "name": "Brumit Restaurant Group",
+      "location": "Asheville, NC",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Arby’s",
+          "unit_count": 64
+        }
+      ],
+      "total_units": 64,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 168,
+      "rank_revenue_estimated": false,
+      "name": "Denco Family",
+      "location": "Whittier, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Denny’s",
+          "unit_count": 27
+        },
+        {
+          "brand": "Popeyes",
+          "unit_count": 9
+        }
+      ],
+      "total_units": 36,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 169,
+      "rank_revenue_estimated": false,
+      "name": "Pentex Restaurant Group",
+      "location": "Fargo, ND",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco John’s",
+          "unit_count": 47
+        },
+        {
+          "brand": "HuHot Mongolian Grill",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 49,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 170,
+      "rank_revenue_estimated": false,
+      "name": "BMW Management",
+      "location": "Temecula, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Sizzler",
+          "unit_count": 21
+        }
+      ],
+      "total_units": 21,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 171,
+      "rank_revenue_estimated": false,
+      "name": "Built Different Brands",
+      "location": "Lutz, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Marco’s Pizza",
+          "unit_count": 53
+        },
+        {
+          "brand": "Dave’s Hot Chicken",
+          "unit_count": 5
+        },
+        {
+          "brand": "PopUp Bagels",
+          "unit_count": 3
+        }
+      ],
+      "total_units": 61,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 172,
+      "rank_revenue_estimated": false,
+      "name": "Utah Del Taco",
+      "location": "Salt Lake City, UT",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Del Taco",
+          "unit_count": 36
+        }
+      ],
+      "total_units": 36,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 173,
+      "rank_revenue_estimated": false,
+      "name": "US Leader Restaurants OpCo",
+      "location": "Miami, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Taco Bell",
+          "unit_count": 34
+        }
+      ],
+      "total_units": 34,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 174,
+      "rank_revenue_estimated": false,
+      "name": "The Mendoza Company",
+      "location": "Blacklick, OH",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "McDonald’s",
+          "unit_count": 19
+        }
+      ],
+      "total_units": 19,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 175,
+      "rank_revenue_estimated": true,
+      "name": "KK Corporation",
+      "location": "Houston, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Subway",
+          "unit_count": 155
+        }
+      ],
+      "total_units": 155,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 176,
+      "rank_revenue_estimated": false,
+      "name": "All Star Management",
+      "location": "Bourbonnais, IL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 38
+        }
+      ],
+      "total_units": 38,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 177,
+      "rank_revenue_estimated": false,
+      "name": "Platinum Corral",
+      "location": "Jacksonville, NC",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Golden Corral",
+          "unit_count": 12
+        }
+      ],
+      "total_units": 12,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 178,
+      "rank_revenue_estimated": false,
+      "name": "JMB Foods",
+      "location": "Brick, NJ",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jersey Mike’s",
+          "unit_count": 50
+        }
+      ],
+      "total_units": 50,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 179,
+      "rank_revenue_estimated": false,
+      "name": "Phoenix Organization",
+      "location": "Boca Raton, FL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 41
+        },
+        {
+          "brand": "Denny’s",
+          "unit_count": 6
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 1
+        }
+      ],
+      "total_units": 48,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 180,
+      "rank_revenue_estimated": false,
+      "name": "McJunkins Restaurant Group",
+      "location": "Shreveport, LA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Walk-On’s",
+          "unit_count": 11
+        },
+        {
+          "brand": "Smalls Sliders",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 13,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 181,
+      "rank_revenue_estimated": false,
+      "name": "Texas Subs",
+      "location": "Fort Worth, TX",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Subway",
+          "unit_count": 113
+        },
+        {
+          "brand": "Little Caesars",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 115,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 182,
+      "rank_revenue_estimated": false,
+      "name": "Superior Restaurant Group",
+      "location": "Princeton, NJ",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 19
+        }
+      ],
+      "total_units": 19,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 183,
+      "rank_revenue_estimated": false,
+      "name": "jThree",
+      "location": "Decatur, IL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jimmy John’s",
+          "unit_count": 67
+        },
+        {
+          "brand": "BWW Go",
+          "unit_count": 1
+        }
+      ],
+      "total_units": 68,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 184,
+      "rank_revenue_estimated": false,
+      "name": "Legacy Food & Beverage",
+      "location": "New York, NY",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wendy’s",
+          "unit_count": 20
+        },
+        {
+          "brand": "Nothing Bundt Cakes",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 22,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 185,
+      "rank_revenue_estimated": false,
+      "name": "Fuego Investments",
+      "location": "Fallbrook, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "El Pollo Loco",
+          "unit_count": 46
+        }
+      ],
+      "total_units": 46,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 186,
+      "rank_revenue_estimated": false,
+      "name": "Red Door Brands",
+      "location": "Knoxville, TN",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Del Taco",
+          "unit_count": 24
+        },
+        {
+          "brand": "Main Squeeze Juice",
+          "unit_count": 6
+        },
+        {
+          "brand": "McAlister’s Deli",
+          "unit_count": 5
+        },
+        {
+          "brand": "Little Caesars",
+          "unit_count": 3
+        }
+      ],
+      "total_units": 38,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 187,
+      "rank_revenue_estimated": true,
+      "name": "Freedom Enterprises",
+      "location": "Leawood, KS",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Scooter’s Coffee",
+          "unit_count": 68
+        }
+      ],
+      "total_units": 68,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 188,
+      "rank_revenue_estimated": false,
+      "name": "J & S Restaurants",
+      "location": "Cleveland, TN",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Hardee’s",
+          "unit_count": 35
+        }
+      ],
+      "total_units": 35,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 189,
+      "rank_revenue_estimated": false,
+      "name": "PMTD Restaurants",
+      "location": "Marietta, GA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "KFC",
+          "unit_count": 28
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 6
+        },
+        {
+          "brand": "Capriotti’s",
+          "unit_count": 5
+        },
+        {
+          "brand": "Spice & Tea Exchange",
+          "unit_count": 3
+        }
+      ],
+      "total_units": 42,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 190,
+      "rank_revenue_estimated": false,
+      "name": "Brodersen Management",
+      "location": "Milwaukee, WI",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Popeyes",
+          "unit_count": 20
+        }
+      ],
+      "total_units": 20,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 191,
+      "rank_revenue_estimated": false,
+      "name": "Blue Ribbon Restaurants",
+      "location": "Troy, MI",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Famous Dave’s",
+          "unit_count": 14
+        }
+      ],
+      "total_units": 14,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 192,
+      "rank_revenue_estimated": false,
+      "name": "Ryan Restaurant Corp.",
+      "location": "Missoula, MT",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Applebee’s",
+          "unit_count": 7
+        },
+        {
+          "brand": "Famous Dave’s",
+          "unit_count": 5
+        },
+        {
+          "brand": "Panera Bread",
+          "unit_count": 4
+        }
+      ],
+      "total_units": 16,
+      "brand_count": 3,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 193,
+      "rank_revenue_estimated": false,
+      "name": "Shere Foods",
+      "location": "Laguna Hills, CA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 26
+        },
+        {
+          "brand": "Popeyes",
+          "unit_count": 2
+        }
+      ],
+      "total_units": 28,
+      "brand_count": 2,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    },
+    {
+      "rank": 194,
+      "rank_revenue_estimated": false,
+      "name": "RoHoHo",
+      "location": "Charleston, SC",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Papa Johns",
+          "unit_count": 39
+        }
+      ],
+      "total_units": 39,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 195,
+      "rank_revenue_estimated": false,
+      "name": "RKS Ventures",
+      "location": "Wichita, KS",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Freddy’s",
+          "unit_count": 28
+        }
+      ],
+      "total_units": 28,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 196,
+      "rank_revenue_estimated": false,
+      "name": "D&D Management",
+      "location": "Salt Lake City, UT",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Jimmy John’s",
+          "unit_count": 35
+        }
+      ],
+      "total_units": 35,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 197,
+      "rank_revenue_estimated": false,
+      "name": "Tetra Management",
+      "location": "Wichita, KS",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Pizza Hut",
+          "unit_count": 45
+        }
+      ],
+      "total_units": 45,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 198,
+      "rank_revenue_estimated": false,
+      "name": "Zenith Investment Group",
+      "location": "Myrtle Beach, SC",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Tropical Smoothie Cafe",
+          "unit_count": 42
+        }
+      ],
+      "total_units": 42,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 199,
+      "rank_revenue_estimated": false,
+      "name": "Viking Restaurants",
+      "location": "Elmhurst, IL",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Burger King",
+          "unit_count": 26
+        }
+      ],
+      "total_units": 26,
+      "brand_count": 1,
+      "hierarchy_level": "franchisee_group"
+    },
+    {
+      "rank": 200,
+      "rank_revenue_estimated": false,
+      "name": "Mitsa Group",
+      "location": "Virginia Beach, VA",
+      "revenue_usd": null,
+      "brands": [
+        {
+          "brand": "Wingstop",
+          "unit_count": 14
+        },
+        {
+          "brand": "Taco Bell",
+          "unit_count": 9
+        },
+        {
+          "brand": "Einstein Bros",
+          "unit_count": 2
+        },
+        {
+          "brand": "Fazoli’s",
+          "unit_count": 1
+        }
+      ],
+      "total_units": 26,
+      "brand_count": 4,
+      "hierarchy_level": "multi_brand_franchisee_group"
+    }
+  ]
+}

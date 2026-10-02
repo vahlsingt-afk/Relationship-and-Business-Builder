@@ -1,0 +1,82 @@
+{
+  "contract": "rb_micro_graph_presence_index_v1",
+  "description": "Lightweight index of all registered RB micro ecosystem graphs. Used by getMicroGraphIndex to route company-specific factual questions to the correct micro graph before falling back to general knowledge.",
+  "trust_hierarchy": [
+    "user_artifact",
+    "rb_micro_graph",
+    "rb_macro_graph",
+    "verified_external_source",
+    "general_model_knowledge"
+  ],
+  "graphs": [
+    {
+      "graph_id": "micro_ecosystem:mcdonalds_us_ops",
+      "graph_slug": "mcdonalds_us_ops",
+      "graph_type": "micro_ecosystem",
+      "available": true,
+      "entity_name": "McDonald's",
+      "entity_aliases": [
+        "McDonalds",
+        "MCD",
+        "McDonald's Corporation",
+        "NSN",
+        "StoreTech"
+      ],
+      "scope_domains": [
+        "US operations",
+        "franchise structure",
+        "store technology",
+        "field support",
+        "co-op structure",
+        "operator entities"
+      ],
+      "question_domains": [
+        "franchisee_count",
+        "store_count",
+        "operator_structure",
+        "field_office_mapping",
+        "market_mapping",
+        "deployment_topology",
+        "pos_system",
+        "back_office_system",
+        "coop_distribution",
+        "regional_accountability",
+        "role_coverage",
+        "site_lookup"
+      ],
+      "implicit_trigger_terms": [
+        "mcdonalds",
+        "mcdonald's",
+        "nsn",
+        "storetech",
+        "store tech",
+        "field office",
+        "coop",
+        "co-op",
+        "rfm",
+        "otm",
+        "stim",
+        "fbp",
+        "otp",
+        "site id",
+        "store code"
+      ],
+      "confidence_summary": {
+        "overall": "high",
+        "node_count": 19777,
+        "edge_count": 127832,
+        "store_count": 14061,
+        "operator_entity_count": 1338
+      },
+      "freshness_date": "2026-08-07",
+      "source_workbook": "NSN Lookup 2026-08 AUG.xlsx",
+      "routing_action": "getMicroGraphSummary",
+      "routing_params": {
+        "query": "McDonald's"
+      },
+      "notes": "Covers US NSN topology, co-op/market/field structure, operator entities, POS and back-office deployment. For purely macro restaurant-industry questions keep dormant unless McDonald's operational topology is relevant."
+    }
+  ],
+  "generated_at": "2026-09-07T00:00:00",
+  "version": 1
+}

@@ -1,0 +1,145 @@
+{
+  "brand_id": "brand-del-taco",
+  "brand_name": "Del Taco",
+  "identity": {
+    "parent_ownership": {
+      "value": "Yadav Enterprises, Inc.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batches02-03"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "hq_city_state": {
+      "value": "Lake Forest, California, USA",
+      "status": "confirmed",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-30-rebuild-8brands"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "founded_year": {
+      "value": "1964",
+      "status": "confirmed",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-30-rebuild-8brands"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "market_identity": {
+      "value": "Limited-service / fast-casual restaurant concept",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batches02-03"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "ownership_type": {
+      "value": "Private",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batches02-03"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    }
+  },
+  "synopsis": {
+    "value": "Del Taco is a limited-service/fast-casual restaurant brand. Reviewed evidence places it under or alongside Yadav Enterprises, Inc.. Technology relationships are included only where the reviewed source established an actual deployment or required system scope.",
+    "status": "reported",
+    "evidence_ids": [
+      "top500-profile-gapfill::2026-09-29-deep-research-batches02-03"
+    ],
+    "confidence": "medium",
+    "as_of": "2026-09-29",
+    "scope": "brand",
+    "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": 594.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchised_units": {
+      "value": 461.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "company_owned_units": {
+      "value": 133.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [
+    {
+      "signal_type": "strategic_initiative",
+      "value": "Del Taco activated its \"Project Del Sunrise\" roadmap, launching an all-new catering platform as part of the Yadav Enterprises post-acquisition turnaround.",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-02",
+      "scope": "brand",
+      "last_reviewed_by": "system:deep_research",
+      "source_url": "https://www.restaurantnews.com/del-taco-expanded-catering-program-090226/"
+    }
+  ],
+  "pain_points": [],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-28T20:17:32Z",
+  "updated_at": "2026-09-30T10:44:36Z",
+  "trajectory": {
+    "badge": "Flat",
+    "metric_used": "unit_delta_pct",
+    "value_pct": 0.33783783783783783,
+    "as_of_year": "2024",
+    "underlying": {
+      "system_sales_usd": 956782000.0,
+      "unit_count": 594.0,
+      "auv_usd": 1615000.0,
+      "sales_delta_pct": -1.8124200184105175,
+      "units_delta_pct": 0.33783783783783783
+    },
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "account_id": "acct-del-taco",
+  "hypotheses": [
+    {
+      "hypothesis_id": "hyp-del-taco-0001",
+      "name": "Digital Menu Boards as the First Wedge",
+      "description": "Determine whether digital menu boards can support Project Sunrise through faster menu and price changes, stronger value communication, improved accuracy, and more consistent execution without requiring an immediate core-POS replacement.",
+      "supporting_evidence_ids": ["ev-del-taco-0001", "ev-del-taco-0003"],
+      "contradictory_evidence_ids": [],
+      "likely_buyer": "Marketing, operations, and technology leadership",
+      "relevant_capability": "Genius digital menu boards and content management",
+      "discovery_question_ids": ["dq-starter-004", "dq-starter-014", "dq-starter-017"],
+      "validation_status": "partially_validated",
+      "as_of": "2026-09-08"
+    },
+    {
+      "hypothesis_id": "hyp-del-taco-0002",
+      "name": "Post-Acquisition Stack Rationalization",
+      "description": "Yadav may reassess inherited Del Taco contracts, deployment plans, hardware, data architecture, and vendor overlap as it integrates the brand; the current Qu and NCR estate must be validated before selecting a motion.",
+      "supporting_evidence_ids": ["ev-del-taco-0001", "ev-del-taco-0003"],
+      "contradictory_evidence_ids": [],
+      "likely_buyer": "Yadav and Del Taco technology leadership",
+      "relevant_capability": "Genius restaurant platform, hardware, and integration portfolio",
+      "discovery_question_ids": ["dq-starter-013", "dq-starter-014", "dq-starter-015", "dq-starter-016"],
+      "validation_status": "partially_validated",
+      "as_of": "2026-09-08"
+    },
+    {
+      "hypothesis_id": "hyp-del-taco-0003",
+      "name": "Worldpay Relationship Adjacency",
+      "description": "The signed Worldpay extension and Maggie Lenhart's trusted access may create a coordinated path to Genius discovery, but the extension does not by itself establish customer demand, bundled authority, or a formal sourcing event.",
+      "supporting_evidence_ids": ["ev-del-taco-0001"],
+      "contradictory_evidence_ids": [],
+      "likely_buyer": "Daniel Mears and Yadav technology leadership",
+      "relevant_capability": "Coordinated Worldpay and Genius account strategy",
+      "discovery_question_ids": ["dq-starter-011", "dq-starter-017", "dq-starter-020"],
+      "validation_status": "unvalidated",
+      "as_of": "2026-09-08"
+    },
+    {
+      "hypothesis_id": "hyp-del-taco-0004",
+      "name": "Broader Yadav Portfolio Expansion",
+      "description": "A credible Del Taco result could create permission to explore other Yadav brands, including Nick the Greek, but every brand's technology, contracts, ownership, and buying process must be qualified independently.",
+      "supporting_evidence_ids": [],
+      "contradictory_evidence_ids": [],
+      "likely_buyer": "Yadav enterprise technology leadership",
+      "relevant_capability": "Genius multi-brand restaurant technology portfolio",
+      "discovery_question_ids": ["dq-starter-017", "dq-starter-020"],
+      "validation_status": "unvalidated",
+      "as_of": "2026-09-08"
+    }
+  ]
+}

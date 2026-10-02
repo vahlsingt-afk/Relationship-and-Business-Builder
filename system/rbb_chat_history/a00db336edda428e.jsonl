@@ -1,0 +1,2 @@
+{"ts": "2026-08-27T20:48:29+00:00", "role": "user", "text": "give me a link to view the blue sheet for mcdonalds"}
+{"ts": "2026-08-27T20:48:29+00:00", "role": "assistant", "text": "```\n\u274c RB DELIVERY FAILURE\nPre-rendered brief not available. No brief generated from memory.\nCheck: https://rb-api.bridgepointops.org/health\nType \"retry\" once the server is confirmed running.\n```", "response_id": "resp_0d84e80de35f325c006a90a29c2d3087d1a293c9b8d7f53d85", "tool_calls": [{"operation_id": "listBlueSheetAccounts", "arguments": {}, "status": 500}]}

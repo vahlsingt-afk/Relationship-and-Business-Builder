@@ -1,0 +1,89 @@
+{
+  "competitor_id": "comp-presto-presto-voice",
+  "competitor_slug": "presto-presto-voice",
+  "display_name": "Presto (Presto Voice)",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "**SEC cease-and-desist (Jan 14, 2025):** Presto made \"materially false and misleading statements\" about Presto Voice; \"the vast majority of drive-thru orders placed through this version of Presto Voice required human intervention\" (Nov 2021–May 2023). No civil penalty, citing cooperation",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:47:21Z"
+      },
+      {
+        "point": "CKE (a past Presto customer) signed Genius as its exclusive POS with \"end-to-end drive-thru technology\" (May 2026); Presto's status at CKE after that is not found",
+        "evidence_id": "note-0007",
+        "added_at": "2026-09-26T12:47:21Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Joined the Toast partner ecosystem Sep 21, 2026, so voice orders now flow into Toast POS/KDS — \"we're committed to integration partners who can help customers build the tech stacks they need\" (Justin Graham, VP, Toast)",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:21Z"
+      },
+      {
+        "point": "Past CKE upsell results: \"significant rise in revenue due to the upsell capability\" (Phil Crawford, CKE CTO, 2023)",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:47:21Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-09-29T14:57:12Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:12Z",
+  "latest_cos_commentary": {
+    "headline": "Voice AI integration with Toast widens Presto’s entry path at QSRs.",
+    "genius_exposure": "Voice AI integration with Toast widens Presto’s entry path at QSRs.",
+    "competitive_timing": "Presto announced a Toast integration for drive-thru voice automation in September 2026.",
+    "sales_response": "Verify actual pilots, POS handoff errors and labor economics; distinguish integration from a deployed footprint.",
+    "risk_and_uncertainty": "Announcement does not quantify completed Toast-integrated drive-thru deployments.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 53
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 53,
+    "pack_claim_count": 13,
+    "pack_claims_with_url": 12,
+    "pack_claims_inherited_url": 8,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 1,
+      "legacy_claims_need_date_and_current_status_check": 13,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

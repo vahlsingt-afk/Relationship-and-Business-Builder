@@ -1,0 +1,69 @@
+{
+  "subject_id": "subject-kds_kitchen_ops",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-25T16:12:19Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/kds_kitchen_ops/current/KDS-Kitchen-Ops_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-26T09:20:53Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/kds_kitchen_ops/current/KDS-Kitchen-Ops_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-27T09:18:40Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/kds_kitchen_ops/current/KDS-Kitchen-Ops_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-09-28T09:24:42Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/kds_kitchen_ops/current/KDS-Kitchen-Ops_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 5,
+      "generated_at": "2026-09-29T09:19:14Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/kds_kitchen_ops/current/KDS-Kitchen-Ops_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 6,
+      "generated_at": "2026-09-29T10:51:21Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/kds_kitchen_ops/current/KDS-Kitchen-Ops_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 7,
+      "generated_at": "2026-09-29T14:57:14Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/kds_kitchen_ops/current/KDS-Kitchen-Ops_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 8,
+      "generated_at": "2026-10-02T09:47:06Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/kds_kitchen_ops/current/KDS-Kitchen-Ops_Battle-Card.md",
+      "superseded": false
+    }
+  ]
+}

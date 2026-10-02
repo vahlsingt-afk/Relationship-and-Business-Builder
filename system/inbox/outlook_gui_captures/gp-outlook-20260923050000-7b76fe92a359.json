@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-23T05:00:00-05:00",
+  "account_id": "global-payments",
+  "source": "outlook_computer_use",
+  "window_days": 7,
+  "inbox": [
+    {
+      "counterpart_name": "Dale McKee",
+      "counterpart_email": "dale.mckee@globalpayments.com",
+      "subject": "Re: Todd Vahlsing shared \"Restaurant_Tech_Coverage_2026-09-22\" with you",
+      "received_at": "2026-09-22",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Claire Whelen",
+      "counterpart_email": null,
+      "subject": "WP BackBook ICP Review",
+      "received_at": "2026-09-22",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Corporate Communications",
+      "counterpart_email": null,
+      "subject": "Kicking off the next series of our Quarterly Product Broadcast events",
+      "received_at": "2026-09-22",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Claire Whelen",
+      "counterpart_email": null,
+      "subject": "Claire Whelen shared \"ABM WP Target Account List\" with you",
+      "received_at": "2026-09-22",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Mary Santiago",
+      "counterpart_email": "MS51280@globalpayments.com",
+      "subject": "Re: Subject: Pollo Campero menu board inventory \u2014 reuse and replacement review",
+      "received_at": "2026-09-22",
+      "unread": false,
+      "occurrence": 1
+    },
+    {
+      "counterpart_name": "Mary Santiago",
+      "counterpart_email": "MS51280@globalpayments.com",
+      "subject": "Re: Subject: Pollo Campero menu board inventory \u2014 reuse and replacement review",
+      "received_at": "2026-09-22",
+      "unread": false,
+      "occurrence": 2
+    },
+    {
+      "counterpart_name": "Scott Welvaert",
+      "counterpart_email": null,
+      "subject": "Scott Welvaert mentioned you in \"Kiosk & KDS RFP - Global Payments Response\".",
+      "received_at": "2026-09-22",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Scott Welvaert",
+      "counterpart_email": null,
+      "subject": "Re: Subway RFP - LAST DAY (EVERYTHING NEEDS TO BE WRAPPED UP BY NOON!)",
+      "received_at": "2026-09-22",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Corporate Communications",
+      "counterpart_email": null,
+      "subject": "Important announcement regarding your 2027 benefits",
+      "received_at": "2026-09-22",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Scott Welvaert",
+      "counterpart_email": null,
+      "subject": "Subway RFP - LAST DAY (EVERYTHING NEEDS TO BE WRAPPED UP BY NOON!)",
+      "received_at": "2026-09-22",
+      "unread": false
+    },
+    {
+      "counterpart_name": "ExpenseMgmtAMERICAS [S]",
+      "counterpart_email": null,
+      "subject": "US Bank Travel Card - 30 Day Past Due Notice",
+      "received_at": "2026-09-22",
+      "unread": false
+    }
+  ],
+  "sent": [
+    {
+      "counterpart_name": "Michael Estabrooks",
+      "counterpart_email": null,
+      "subject": "Todd Vahlsing shared \"Restaurant_Tech_Coverage_2026-09-22\" with you",
+      "sent_at": "2026-09-22"
+    },
+    {
+      "counterpart_name": "Dale McKee, Zakary Bertram",
+      "counterpart_email": null,
+      "subject": "Todd Vahlsing shared \"Restaurant_Tech_Coverage_2026-09-22\" with you",
+      "sent_at": "2026-09-22"
+    },
+    {
+      "counterpart_name": "Corporate Communications",
+      "counterpart_email": null,
+      "subject": "Declined: Session 3 of 4: Globalpayer Experience session",
+      "sent_at": "2026-09-22"
+    },
+    {
+      "counterpart_name": "Corporate Communications",
+      "counterpart_email": null,
+      "subject": "Accepted: Session 2 of 4: Globalpayer Experience session",
+      "sent_at": "2026-09-22"
+    },
+    {
+      "counterpart_name": "Corporate Communications",
+      "counterpart_email": null,
+      "subject": "Declined: Session 1 of 4: Globalpayer Experience session",
+      "sent_at": "2026-09-22"
+    },
+    {
+      "counterpart_name": "Claire Whelen",
+      "counterpart_email": null,
+      "subject": "Accepted: WP BackBook Sales/Marketing Weekly Sync",
+      "sent_at": "2026-09-22"
+    },
+    {
+      "counterpart_name": "Mary Santiago, Scott Welvaert, Ryan Hildebrand",
+      "counterpart_email": null,
+      "subject": "Re: Subject: Pollo Campero menu board inventory \u2014 reuse and replacement review",
+      "sent_at": "2026-09-22"
+    },
+    {
+      "counterpart_name": "Michael Morris",
+      "counterpart_email": null,
+      "subject": "Accepted: Subway RFP - Genius and Spencer",
+      "sent_at": "2026-09-22"
+    },
+    {
+      "counterpart_name": "Scott Welvaert",
+      "counterpart_email": null,
+      "subject": "Accepted: Subway RFP - KIOSK & KDS Hardware Work Session (PART 2)",
+      "sent_at": "2026-09-22"
+    }
+  ],
+  "calendar": [
+    {
+      "title": "FS/TEC",
+      "date": "2026-09-23",
+      "start": "2026-09-23",
+      "end": "2026-09-25",
+      "location": null
+    },
+    {
+      "title": "FS/Tec",
+      "date": "2026-09-23",
+      "start": "2026-09-23T05:00:00-05:00",
+      "end": "2026-09-25T17:00:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Flight to Dallas",
+      "date": "2026-09-23",
+      "start": "2026-09-23T07:00:00-05:00",
+      "end": "2026-09-23T10:00:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Thursday)",
+      "date": "2026-09-24",
+      "start": "2026-09-24T09:30:00-05:00",
+      "end": "2026-09-24T10:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Flight Home",
+      "date": "2026-09-25",
+      "start": "2026-09-25T09:00:00-05:00",
+      "end": "2026-09-25T11:30:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Maddie Wedding",
+      "date": "2026-09-26",
+      "start": "2026-09-26T16:00:00-05:00",
+      "end": "2026-09-26T16:30:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Monday)",
+      "date": "2026-09-28",
+      "start": "2026-09-28T11:00:00-05:00",
+      "end": "2026-09-28T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Hospitality Team Meeting",
+      "date": "2026-09-29",
+      "start": "2026-09-29T10:00:00-05:00",
+      "end": "2026-09-29T11:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "WP BackBook Sales/Marketing Weekly Sync",
+      "date": "2026-09-29",
+      "start": "2026-09-29T14:00:00-05:00",
+      "end": "2026-09-29T14:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Session 2 of 4: Globalpayer Experience session",
+      "date": "2026-09-30",
+      "start": "2026-09-30T10:00:00-05:00",
+      "end": "2026-09-30T11:00:00-05:00",
+      "location": "Teams"
+    },
+    {
+      "title": "WP BackBook ICP Review",
+      "date": "2026-09-30",
+      "start": "2026-09-30T11:30:00-05:00",
+      "end": "2026-09-30T12:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Maggie/Todd Meet and Greet",
+      "date": "2026-09-30",
+      "start": "2026-09-30T13:00:00-05:00",
+      "end": "2026-09-30T13:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    }
+  ]
+}

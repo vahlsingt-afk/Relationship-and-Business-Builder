@@ -1,0 +1,77 @@
+{
+  "account_id": "acct-churchs-texas-chicken",
+  "sources": [
+    {
+      "source_id": "ev-churchs-0001",
+      "type": "public_reference",
+      "description": "High Bluff portfolio page - Church's ownership and footprint",
+      "durable_source_id": "https://www.highbluffcap.com/portfolio/"
+    },
+    {
+      "source_id": "ev-churchs-0002",
+      "type": "public_reference",
+      "description": "Church's PRNewswire - Kevin Nemeth appointed EVP / Chief Commercial Officer",
+      "durable_source_id": "https://www.prnewswire.com/news-releases/churchs-texas-chicken-names-kevin-nemeth-executive-vice-president-chief-commercial-officer-302782084.html"
+    },
+    {
+      "source_id": "ev-churchs-0003",
+      "type": "public_reference",
+      "description": "Nation's Restaurant News - Church's growth equity from Golub Capital",
+      "durable_source_id": "https://www.nrn.com/quick-service/church-s-texas-chicken-secures-funding-for-next-stage-of-growth-"
+    },
+    {
+      "source_id": "ev-churchs-0004",
+      "type": "public_reference",
+      "description": "Restaurant Dive - Church's funding, remodels, growth",
+      "durable_source_id": "https://www.restaurantdive.com/news/churchs-texas-chicken-secures-golub-equity-investment-growth/826348/"
+    },
+    {
+      "source_id": "ev-churchs-0005",
+      "type": "public_reference",
+      "description": "Qu case study - Church's Chicken restaurant technology modernization",
+      "durable_source_id": "https://www.qubeyond.com/case-studies/churchs-chicken"
+    },
+    {
+      "source_id": "ev-churchs-0006",
+      "type": "public_reference",
+      "description": "QSR Web - Church's taps Qu to refresh tech stack",
+      "durable_source_id": "https://www.qsrweb.com/news/churchs-chicken-taps-qu-to-refresh-tech-stack/"
+    },
+    {
+      "source_id": "ev-churchs-0007",
+      "type": "public_reference",
+      "description": "PAR Punchh - Church's selected Punchh for loyalty",
+      "durable_source_id": "https://punchh.com/press/churchs-texas-chicken-selected-par-punchh-to-revolutionize-customer-engagement-and-loyalty/"
+    },
+    {
+      "source_id": "ev-churchs-0008",
+      "type": "public_reference",
+      "description": "Hospitality Technology - DTiQ / Church's managed video and Qu POS integration",
+      "durable_source_id": "https://hospitalitytech.com/churchs-texas-chicken-leans-surveillance"
+    },
+    {
+      "source_id": "ev-churchs-0012",
+      "type": "public_reference",
+      "description": "Envysion - Church's-specific managed video / Qu POS integration page",
+      "durable_source_id": "https://envysion.com/churchs-texas-chicken/"
+    },
+    {
+      "source_id": "ev-churchs-0009",
+      "type": "internal_relationship_intelligence",
+      "description": "Maggie Lenhart / Worldpay RM account intelligence, 2026-08-28",
+      "durable_source_id": "system/interaction_ledger.json"
+    },
+    {
+      "source_id": "ev-churchs-0010",
+      "type": "internal_account_intelligence",
+      "description": "2026-07-23 JPR Worldpay account intelligence - prior Genius evaluation / Jeff Caplin correction",
+      "durable_source_id": "system/account_intelligence/2026-07-23-jpr-worldpay-accounts.md"
+    },
+    {
+      "source_id": "ev-churchs-0011",
+      "type": "internal_relationship_intelligence",
+      "description": "RB baseline contact record - Jeff Caplin canonical spelling and CTO title",
+      "durable_source_id": "system/baseline_index.json"
+    }
+  ]
+}

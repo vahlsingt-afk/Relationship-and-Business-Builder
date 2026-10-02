@@ -1,0 +1,54 @@
+{
+  "competitor_id": "comp-tattle",
+  "competitor_slug": "tattle",
+  "display_name": "Tattle",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:37Z",
+  "latest_cos_commentary": {
+    "headline": "Tattle is a venture-funded AI guest-feedback and reputation-management platform for restaurants, positioned as an add-on to POS/ordering systems rather than a POS replacement.",
+    "genius_exposure": "Adjacent to Genius's loyalty_engagement line via guest satisfaction data, but does not compete on core pos, payments, or back_office functionality.",
+    "competitive_timing": "Aggregator data points to a Series A round in August 2025; no primary-source confirmation of this or more recent 2026 activity was found.",
+    "sales_response": "Position Genius's loyalty_engagement capabilities as native to the POS stack versus a bolt-on feedback layer when this vendor appears in a deal.",
+    "risk_and_uncertainty": "No specific named restaurant customers were verified (only an unverified \"250+ brands\" claim); funding figures are from a secondary aggregator, not confirmed primary sourcing.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 99
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 99,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 1,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Named Customers",
+        "C-Suite & Leadership",
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "Named restaurant customers (site claims \"250+ leading brands\" but names none)",
+        "Confirm funding figures via a primary press release rather than an aggregator",
+        "Current leadership/founders"
+      ]
+    }
+  }
+}

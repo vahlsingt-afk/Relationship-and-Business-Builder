@@ -1,0 +1,13 @@
+{
+  "account_id": "acct-del-taco",
+  "identity_ownership_footprint": [],
+  "leadership": [],
+  "technology_payment_landscape": {"ref": "See technology_stack in account.json.", "highlights": []},
+  "brand_digital_cx_strategy": [],
+  "account_economics_scale": [],
+  "relationship_history": [],
+  "opportunities": {"active": [], "historical": [], "parked": []},
+  "known_contradictions": [],
+  "open_questions": [],
+  "freshness": {"last_updated": null, "next_scheduled_review": "On first dedicated brief, meeting, or document"}
+}

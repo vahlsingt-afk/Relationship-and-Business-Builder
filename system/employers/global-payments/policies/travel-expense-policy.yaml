@@ -1,0 +1,41 @@
+# Travel & Expense — STUB, not a full policy extraction.
+# The Team Member Handbook references a separate "Corporate Travel Policy and
+# Guidelines" and an "applicable expense policy" as the authoritative documents for
+# this area, but neither has been provided to RB yet — only the Handbook's own
+# "Business and travel expenses" paragraph (p.45) is available. Do not treat this file
+# as complete; it captures only what the Handbook itself states.
+
+policy_id: travel-expense-policy
+title: "Business and Travel Expenses (Handbook summary — full Corporate Travel Policy and expense policy not yet on file)"
+source_document: "2026 Global Payments US Team Member Handbook_Corrected_Update.pdf"
+version: "2026 (Corrected Update)"
+effective_date: null
+superseded_by: null
+extracted_by: assisted
+last_reviewed: "2026-07-07"
+
+permissions:
+  - "Reimbursement for all reasonable and necessary expenses while traveling on authorized Company business."
+
+restrictions:
+  - id: preauthorization-required-for-travel-reservations
+    text: "Must obtain proper authorization prior to making any travel reservations; travel expenses are considered personal expenses until the expense report is approved (unless otherwise required by law)."
+  - id: authorized-travel-management-company-required
+    text: "Must use Global Payments' authorized travel management companies to book business travel."
+
+required_processes:
+  - trigger: "any business travel reservation"
+    process: "Obtain authorization before booking, and use an authorized travel management company."
+  - trigger: "expense report submission"
+    process: "Per the Corporate Travel Policy and Guidelines and applicable local expense policy — documents not yet on file. Do not assume specific dollar thresholds or approval tiers without the source document."
+
+escalation_rules: []   # unknown — the source document with actual dollar thresholds (e.g. customer entertainment approval tiers) has not been provided
+
+disclosure_required: false
+
+notes: |
+  INCOMPLETE. Ask Todd for the actual "Corporate Travel Policy and Guidelines" and
+  expense policy documents if/when travel or customer-entertainment compliance checks
+  become relevant (e.g. an escalation_rules threshold like "customer entertainment >
+  $500" from the original feature request has no source-backed number yet — do not
+  invent one).

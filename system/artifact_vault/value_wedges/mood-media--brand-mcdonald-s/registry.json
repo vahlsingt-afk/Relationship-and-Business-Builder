@@ -1,0 +1,13 @@
+{
+  "subject_id": "subject-mood-media--brand-mcdonald-s",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-29T11:53:26Z",
+      "generated_for": "todd",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/mood-media--brand-mcdonald-s/current/Mood-Media-vs-Genius-McDonalds_Value-Wedge.json",
+      "superseded": false
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Test Upload Contact
+N:Contact;Test Upload;;;
+TEL:555-0100
+END:VCARD

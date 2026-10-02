@@ -1,0 +1,31 @@
+{
+  "week_of": "2026-09-28",
+  "scored_at": "2026-10-02T10:15:43.059158Z",
+  "wins": [],
+  "misses": [
+    "Close out overdue and due-today loops",
+    "Close out overdue and due-today loops"
+  ],
+  "outcome_movements": {
+    "outcome-loop-stability": "stalled"
+  },
+  "relationship_movement": "",
+  "lessons": [],
+  "overall_score": 0,
+  "status": "draft_pending_confirmation",
+  "generated_at": "2026-10-02T10:15:43.059416Z",
+  "generation_provenance": [
+    {
+      "outcome_id": "outcome-loop-stability",
+      "title": "Close out overdue and due-today loops",
+      "movement": "stalled",
+      "rationale": "linked loop(s) still overdue (L-2026-08-31-001)"
+    },
+    {
+      "outcome_id": "outcome-loop-stability",
+      "title": "Close out overdue and due-today loops",
+      "movement": "stalled",
+      "rationale": "linked loop(s) still overdue (L-2026-08-28-001, L-2026-09-21-001)"
+    }
+  ]
+}

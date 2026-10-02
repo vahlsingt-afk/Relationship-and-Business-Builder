@@ -1,0 +1,71 @@
+{
+  "title": "P-036: User asks 'what did RB record?' — show proof, not suppressed silence",
+  "trace_type": "ri_assessment_doctrine",
+  "source": "canonical_response_provenance_test",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-25",
+  "sprint": "RB 9.9",
+  "protocol": "P-036",
+  "scenario_id": "p036-case-7",
+  "summary": "When the operator asks 'what did RB record today?', 'what was blocked?', 'what am I missing?', or 'did you capture that?', P-036 requires RB to surface proof — not suppress it. This is the audit path. The response should list recorded events (if any), proposed events pending confirmation, blocked signals with reasons, and unavailable sources. display_recommendation=suppress_unless_asked entries MUST be included in the response when the user explicitly asks.",
+  "expected_behavior": {
+    "trigger_phrases": [
+      "what did RB record",
+      "what was blocked",
+      "what am I missing",
+      "did you capture that",
+      "show me what you tracked",
+      "what was proposed"
+    ],
+    "required_response_elements": [
+      "recorded events (or explicit 'none recorded today')",
+      "proposed events pending confirmation",
+      "blocked signals with named reasons",
+      "unavailable sources if any",
+      "ri_assessment_summary counts"
+    ],
+    "display_recommendation_override": "show all statuses when user asks for audit"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label": "User asks provenance question",
+      "user_prompt": "What did RB record today? What was blocked?",
+      "description": "This is an explicit audit query. P-036 says display_recommendation=suppress_unless_asked entries MUST surface. RB should read passive_ri_ingest cache and ri_assessment_summary.",
+      "expected_response_contains": [
+        "proposed",
+        "blocked",
+        "confidence",
+        "reason"
+      ]
+    },
+    {
+      "step": 2,
+      "label": "RB surfaces full ri_assessment_summary",
+      "description": "Response includes: proposed (N events pending confirmation with contact names), blocked (M signals with reasons — low confidence, stale source, unmatched entity), duplicates skipped (K), unavailable sources (if any). Uses P-036 approved language.",
+      "example_acceptable_response": "Today RB assessed 8 relationship candidates. 2 are proposed and pending your confirmation (Jeff Wayman — last_touch update; Bob Gibson — active thread touch). 3 were blocked: 2 for low confidence (below 0.40), 1 because the email source is stale. 2 were duplicates already captured. 1 source (linkedin_messaging) was unavailable.",
+      "forbidden_response": "I didn't find anything significant today."
+    },
+    {
+      "step": 3,
+      "label": "Suppressed items now shown",
+      "description": "Items with display_recommendation=suppress_unless_asked (e.g., low-relevance blocked signals, duplicates) are surfaced because the user asked. RB does not silently omit them.",
+      "expected": "all statuses represented; no silent omissions when user explicitly asks"
+    }
+  ],
+  "defects": [],
+  "acceptance_criteria": [
+    "explicit audit query triggers full ri_assessment_summary",
+    "proposed events listed with contact names",
+    "blocked signals listed with named reasons",
+    "duplicates skipped count included",
+    "unavailable sources named if any",
+    "display_recommendation=suppress_unless_asked items SHOWN when user asks"
+  ],
+  "anti_patterns": [
+    "returning 'nothing to report' when there are blocked or proposed events",
+    "suppressing blocked signals even after explicit audit query",
+    "omitting the reason for each blocked signal",
+    "claiming 'I recorded X' when status is proposed, not recorded"
+  ]
+}

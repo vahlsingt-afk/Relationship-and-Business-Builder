@@ -1,0 +1,3072 @@
+{
+  "activation": {
+    "default_state": "dormant",
+    "load_policy": "Load graph.json only for matching query intent or active-thread evidence. Otherwise keep dormant.",
+    "primary_terms": [
+      "mcdonalds",
+      "mcdonald's",
+      "nsn",
+      "storetech",
+      "store tech",
+      "field office",
+      "coop",
+      "co-op",
+      "rfm",
+      "otm",
+      "stim",
+      "fbp",
+      "otp",
+      "site id",
+      "store code"
+    ],
+    "query_intents": [
+      "store lookup",
+      "field support routing",
+      "market mapping",
+      "operational accountability",
+      "deployment topology",
+      "role coverage",
+      "finance business partner mapping"
+    ]
+  },
+  "contract": "rb_micro_graph_index_v1",
+  "coop_distribution": [
+    {
+      "coop_id": "coop:06-moasc",
+      "name": "06 - MOASC",
+      "store_count": 686
+    },
+    {
+      "coop_id": "coop:46-new-york-metro",
+      "name": "46 - NEW YORK METRO",
+      "store_count": 520
+    },
+    {
+      "coop_id": "coop:45-new-england",
+      "name": "45 - NEW ENGLAND",
+      "store_count": 514
+    },
+    {
+      "coop_id": "coop:30-michigan",
+      "name": "30 - MICHIGAN",
+      "store_count": 494
+    },
+    {
+      "coop_id": "coop:20-north-texas",
+      "name": "20 - NORTH TEXAS",
+      "store_count": 472
+    },
+    {
+      "coop_id": "coop:48-bwe",
+      "name": "48 - BWE",
+      "store_count": 460
+    },
+    {
+      "coop_id": "coop:29-mocni",
+      "name": "29 - MOCNI",
+      "store_count": 459
+    },
+    {
+      "coop_id": "coop:50-central-florida",
+      "name": "50 - CENTRAL FLORIDA",
+      "store_count": 418
+    },
+    {
+      "coop_id": "coop:39-big-south",
+      "name": "39 - BIG SOUTH",
+      "store_count": 411
+    },
+    {
+      "coop_id": "coop:07-dsoa",
+      "name": "07 - DSOA",
+      "store_count": 409
+    },
+    {
+      "coop_id": "coop:47-philadelphia",
+      "name": "47 - PHILADELPHIA",
+      "store_count": 408
+    },
+    {
+      "coop_id": "coop:33-boa",
+      "name": "33 - BOA",
+      "store_count": 404
+    },
+    {
+      "coop_id": "coop:31-oroa",
+      "name": "31 - OROA",
+      "store_count": 386
+    },
+    {
+      "coop_id": "coop:21-sctoa",
+      "name": "21 - SCTOA",
+      "store_count": 375
+    },
+    {
+      "coop_id": "coop:41-acc",
+      "name": "41 - ACC",
+      "store_count": 367
+    },
+    {
+      "coop_id": "coop:23-ghoa",
+      "name": "23 - GHOA",
+      "store_count": 344
+    },
+    {
+      "coop_id": "coop:18-southern-plains",
+      "name": "18 - SOUTHERN PLAINS",
+      "store_count": 339
+    },
+    {
+      "coop_id": "coop:05-cnma",
+      "name": "05 - CNMA",
+      "store_count": 333
+    },
+    {
+      "coop_id": "coop:25-arklatx",
+      "name": "25 - ARKLATX",
+      "store_count": 329
+    },
+    {
+      "coop_id": "coop:28-gwos",
+      "name": "28 - GWOS",
+      "store_count": 316
+    },
+    {
+      "coop_id": "coop:35-alfa",
+      "name": "35 - ALFA",
+      "store_count": 311
+    },
+    {
+      "coop_id": "coop:51-south-florida",
+      "name": "51 - SOUTH FLORIDA",
+      "store_count": 308
+    },
+    {
+      "coop_id": "coop:38-gamoa",
+      "name": "38 - GAMOA",
+      "store_count": 301
+    },
+    {
+      "coop_id": "coop:34-gtvoa",
+      "name": "34 - GTVOA",
+      "store_count": 297
+    },
+    {
+      "coop_id": "coop:09-rmoa",
+      "name": "09 - RMOA",
+      "store_count": 271
+    },
+    {
+      "coop_id": "coop:16-great-plains",
+      "name": "16 - GREAT PLAINS",
+      "store_count": 269
+    },
+    {
+      "coop_id": "coop:54-gio",
+      "name": "54 - GIO",
+      "store_count": 267
+    },
+    {
+      "coop_id": "coop:14-moa",
+      "name": "14 - MOA",
+      "store_count": 261
+    },
+    {
+      "coop_id": "coop:44-empire",
+      "name": "44 - EMPIRE",
+      "store_count": 260
+    },
+    {
+      "coop_id": "coop:36-north-florida",
+      "name": "36 - NORTH FLORIDA",
+      "store_count": 243
+    },
+    {
+      "coop_id": "coop:55-neo",
+      "name": "55 - NEO",
+      "store_count": 243
+    },
+    {
+      "coop_id": "coop:15-illinois-iowa",
+      "name": "15 - ILLINOIS IOWA",
+      "store_count": 239
+    },
+    {
+      "coop_id": "coop:49-srt",
+      "name": "49 - SRT",
+      "store_count": 239
+    },
+    {
+      "coop_id": "coop:04-gaaf",
+      "name": "04 - GAAF",
+      "store_count": 233
+    },
+    {
+      "coop_id": "coop:10-imca",
+      "name": "10 - IMCA",
+      "store_count": 211
+    },
+    {
+      "coop_id": "coop:42-troa",
+      "name": "42 - TROA",
+      "store_count": 205
+    },
+    {
+      "coop_id": "coop:27-st-louis",
+      "name": "27 - ST LOUIS",
+      "store_count": 204
+    },
+    {
+      "coop_id": "coop:24-solatx",
+      "name": "24 - SOLATX",
+      "store_count": 187
+    },
+    {
+      "coop_id": "coop:03-oregon",
+      "name": "03 - OREGON",
+      "store_count": 173
+    },
+    {
+      "coop_id": "coop:01-wwoa",
+      "name": "01 - WWOA",
+      "store_count": 172
+    },
+    {
+      "coop_id": "coop:08-el-mac",
+      "name": "08 - EL MAC",
+      "store_count": 156
+    },
+    {
+      "coop_id": "coop:26-missouri",
+      "name": "26 - MISSOURI",
+      "store_count": 129
+    },
+    {
+      "coop_id": "coop:17-green-country",
+      "name": "17 - GREEN COUNTRY",
+      "store_count": 123
+    },
+    {
+      "coop_id": "coop:19-high-plains",
+      "name": "19 - HIGH PLAINS",
+      "store_count": 89
+    },
+    {
+      "coop_id": "coop:02-tsmoa",
+      "name": "02 - TSMOA",
+      "store_count": 82
+    },
+    {
+      "coop_id": "coop:53-hawaii",
+      "name": "53 - HAWAII",
+      "store_count": 72
+    },
+    {
+      "coop_id": "coop:52-alaska",
+      "name": "52 - ALASKA",
+      "store_count": 27
+    },
+    {
+      "coop_id": "coop:57-guam",
+      "name": "57 - GUAM",
+      "store_count": 8
+    },
+    {
+      "coop_id": "coop:60-guantanamo",
+      "name": "60 - GUANTANAMO",
+      "store_count": 1
+    }
+  ],
+  "counts": {
+    "coops_with_stores": 49,
+    "edge_types": {
+      "belongs_to_brand": 14499,
+      "belongs_to_coop": 14025,
+      "belongs_to_ecosystem": 223,
+      "belongs_to_market": 13935,
+      "contains_brand": 1,
+      "covered_by_field_office": 14602,
+      "fbp_for_entity": 110,
+      "fbp_for_store": 14499,
+      "maps_to_market": 52,
+      "operated_by_entity": 14076,
+      "operator_for_store": 14078,
+      "otm_for_store": 13935,
+      "otp_for_store": 13581,
+      "role_covers_coop": 104,
+      "role_covers_field_office": 20,
+      "role_covers_market": 102
+    },
+    "edges": 127842,
+    "field_offices_with_stores": 10,
+    "markets_with_stores": 47,
+    "node_types": {
+      "brand": 1,
+      "coop": 54,
+      "ecosystem": 1,
+      "entity": 1358,
+      "field_office": 10,
+      "market": 51,
+      "person": 3824,
+      "store": 14499
+    },
+    "nodes": 19798,
+    "operator_entities_with_stores": 1340,
+    "operator_tiers": {
+      "enterprise_25_plus": 102,
+      "mid_tier_5_to_24": 802,
+      "single_digit_1_to_4": 436,
+      "single_store": 47
+    },
+    "role_person_nodes": {
+      "fbp": 201,
+      "operator": 1831,
+      "otm": 11,
+      "otp": 1771,
+      "stim": 10
+    },
+    "states_with_stores": 54,
+    "stores_with_operator_entity": 14076
+  },
+  "field_office_distribution": [
+    {
+      "field_office_id": "field_office:dallas",
+      "name": "DALLAS",
+      "store_count": 1896
+    },
+    {
+      "field_office_id": "field_office:chicago",
+      "name": "CHICAGO",
+      "store_count": 1843
+    },
+    {
+      "field_office_id": "field_office:atlanta",
+      "name": "ATLANTA",
+      "store_count": 1757
+    },
+    {
+      "field_office_id": "field_office:bethesda",
+      "name": "BETHESDA",
+      "store_count": 1481
+    },
+    {
+      "field_office_id": "field_office:long-beach",
+      "name": "LONG BEACH",
+      "store_count": 1351
+    },
+    {
+      "field_office_id": "field_office:nashville",
+      "name": "NASHVILLE",
+      "store_count": 1337
+    },
+    {
+      "field_office_id": "field_office:stamford",
+      "name": "STAMFORD",
+      "store_count": 1336
+    },
+    {
+      "field_office_id": "field_office:columbus",
+      "name": "COLUMBUS",
+      "store_count": 1257
+    },
+    {
+      "field_office_id": "field_office:walnut-creek",
+      "name": "WALNUT CREEK",
+      "store_count": 1164
+    },
+    {
+      "field_office_id": "field_office:denver",
+      "name": "DENVER",
+      "store_count": 1077
+    }
+  ],
+  "generated_at": "2026-09-22T19:32:11",
+  "graph_id": "micro_ecosystem:mcdonalds_us_ops",
+  "graph_slug": "mcdonalds_us_ops",
+  "market_distribution": [
+    {
+      "market_id": "market:los-angeles-san-diego",
+      "name": "LOS ANGELES SAN DIEGO",
+      "store_count": 701
+    },
+    {
+      "market_id": "market:new-york-metro",
+      "name": "NEW YORK METRO",
+      "store_count": 528
+    },
+    {
+      "market_id": "market:new-england",
+      "name": "NEW ENGLAND",
+      "store_count": 519
+    },
+    {
+      "market_id": "market:dallas-tyler",
+      "name": "DALLAS TYLER",
+      "store_count": 499
+    },
+    {
+      "market_id": "market:michigan",
+      "name": "MICHIGAN",
+      "store_count": 499
+    },
+    {
+      "market_id": "market:chicago",
+      "name": "CHICAGO",
+      "store_count": 462
+    },
+    {
+      "market_id": "market:washington-dc-baltimore-eastern-shore",
+      "name": "WASHINGTON DC BALTIMORE EASTERN SHORE",
+      "store_count": 462
+    },
+    {
+      "market_id": "market:tampa-st-pete-orlando",
+      "name": "TAMPA ST PETE ORLANDO",
+      "store_count": 421
+    },
+    {
+      "market_id": "market:sw-north-carolina-e-south-carolina",
+      "name": "SW NORTH CAROLINA E SOUTH CAROLINA",
+      "store_count": 415
+    },
+    {
+      "market_id": "market:phoenix-las-vegas-tucson-yuma-el-centro",
+      "name": "PHOENIX LAS VEGAS TUCSON YUMA EL CENTRO",
+      "store_count": 412
+    },
+    {
+      "market_id": "market:philadelphia",
+      "name": "PHILADELPHIA",
+      "store_count": 410
+    },
+    {
+      "market_id": "market:louisville-lexington-knoxville-w-virginia",
+      "name": "LOUISVILLE LEXINGTON KNOXVILLE W VIRGINIA",
+      "store_count": 404
+    },
+    {
+      "market_id": "market:south-central-texas",
+      "name": "SOUTH CENTRAL TEXAS",
+      "store_count": 393
+    },
+    {
+      "market_id": "market:columbus-cincy-dayton-toledo-lima",
+      "name": "COLUMBUS CINCY DAYTON TOLEDO LIMA",
+      "store_count": 390
+    },
+    {
+      "market_id": "market:houston-beaumont",
+      "name": "HOUSTON BEAUMONT",
+      "store_count": 352
+    },
+    {
+      "market_id": "market:wichita-ok-city-tulsa-ft-smith",
+      "name": "WICHITA OK CITY TULSA FT SMITH",
+      "store_count": 343
+    },
+    {
+      "market_id": "market:sacramento-fresno-reno-bakersfield",
+      "name": "SACRAMENTO FRESNO RENO BAKERSFIELD",
+      "store_count": 337
+    },
+    {
+      "market_id": "market:little-rock-shreveport-memphis-jackson",
+      "name": "LITTLE ROCK SHREVEPORT MEMPHIS JACKSON",
+      "store_count": 333
+    },
+    {
+      "market_id": "market:wisconsin-rockford",
+      "name": "WISCONSIN ROCKFORD",
+      "store_count": 320
+    },
+    {
+      "market_id": "market:alabama-nw-florida",
+      "name": "ALABAMA NW FLORIDA",
+      "store_count": 315
+    },
+    {
+      "market_id": "market:miami-w-palm-beach-ft-myers",
+      "name": "MIAMI W PALM BEACH FT MYERS",
+      "store_count": 314
+    },
+    {
+      "market_id": "market:triad-wilmington-wi-s-gnw",
+      "name": "TRIAD WILMINGTON WI S GNW",
+      "store_count": 312
+    },
+    {
+      "market_id": "market:atlanta-nw-georgia",
+      "name": "ATLANTA NW GEORGIA",
+      "store_count": 303
+    },
+    {
+      "market_id": "market:greater-tennessee-valley",
+      "name": "GREATER TENNESSEE VALLEY",
+      "store_count": 302
+    },
+    {
+      "market_id": "market:rmbu",
+      "name": "RMBU",
+      "store_count": 274
+    },
+    {
+      "market_id": "market:greater-indiana",
+      "name": "GREATER INDIANA",
+      "store_count": 272
+    },
+    {
+      "market_id": "market:great-plains",
+      "name": "GREAT PLAINS",
+      "store_count": 269
+    },
+    {
+      "market_id": "market:nsa",
+      "name": "NSA",
+      "store_count": 264
+    },
+    {
+      "market_id": "market:albany-buffalo-rochester-syracuse",
+      "name": "ALBANY BUFFALO ROCHESTER SYRACUSE",
+      "store_count": 260
+    },
+    {
+      "market_id": "market:des-moines-quad-cities-peoria-cent-il",
+      "name": "DES MOINES QUAD CITIES PEORIA CENT IL",
+      "store_count": 245
+    },
+    {
+      "market_id": "market:jacksonville-tallahassee-savannah",
+      "name": "JACKSONVILLE TALLAHASSEE SAVANNAH",
+      "store_count": 245
+    },
+    {
+      "market_id": "market:cleveland",
+      "name": "CLEVELAND",
+      "store_count": 244
+    },
+    {
+      "market_id": "market:richmond-shenandoah-valley-norfolk-roanoke",
+      "name": "RICHMOND SHENANDOAH VALLEY NORFOLK ROANOKE",
+      "store_count": 240
+    },
+    {
+      "market_id": "market:san-francisco-santa-barbara",
+      "name": "SAN FRANCISCO SANTA BARBARA",
+      "store_count": 234
+    },
+    {
+      "market_id": "market:mwoa",
+      "name": "MWOA",
+      "store_count": 215
+    },
+    {
+      "market_id": "market:pittsburgh-johnstown-erie",
+      "name": "PITTSBURGH JOHNSTOWN ERIE",
+      "store_count": 206
+    },
+    {
+      "market_id": "market:st-louis",
+      "name": "ST LOUIS",
+      "store_count": 206
+    },
+    {
+      "market_id": "market:south-la",
+      "name": "SOUTH LA",
+      "store_count": 187
+    },
+    {
+      "market_id": "market:portland-medford-eugene-bend",
+      "name": "PORTLAND MEDFORD EUGENE BEND",
+      "store_count": 173
+    },
+    {
+      "market_id": "market:seattle-tacoma",
+      "name": "SEATTLE TACOMA",
+      "store_count": 172
+    },
+    {
+      "market_id": "market:albuquerque-el-paso",
+      "name": "ALBUQUERQUE EL PASO",
+      "store_count": 156
+    },
+    {
+      "market_id": "market:joplin-quincy-springfield-col-jeff-city",
+      "name": "JOPLIN QUINCY SPRINGFIELD COL JEFF CITY",
+      "store_count": 135
+    },
+    {
+      "market_id": "market:e-washington-nw-idaho-ne-oregon",
+      "name": "E WASHINGTON NW IDAHO NE OREGON",
+      "store_count": 84
+    },
+    {
+      "market_id": "market:hawaii",
+      "name": "HAWAII",
+      "store_count": 72
+    },
+    {
+      "market_id": "market:alaska",
+      "name": "ALASKA",
+      "store_count": 27
+    },
+    {
+      "market_id": "market:guam",
+      "name": "GUAM",
+      "store_count": 8
+    },
+    {
+      "market_id": "market:amarillo-lubbock",
+      "name": "AMARILLO LUBBOCK",
+      "store_count": 1
+    }
+  ],
+  "name": "McDonald's US Operations Micro Ecosystem",
+  "notes": [
+    "Operator/entity nodes come from workbook operational entity fields; they are not automatically personal RI contacts.",
+    "Counts are workbook-derived and should be cited as micro-graph evidence, not public McDonald's system totals.",
+    "Use this index for retrieval and summary. Load graph.json only for path traversal or store-level drilldown."
+  ],
+  "paths": {
+    "activation": "system/graphs/micro/mcdonalds_us_ops/activation.json",
+    "graph": "system/graphs/micro/mcdonalds_us_ops/graph.json",
+    "index": "system/graphs/micro/mcdonalds_us_ops/index.json",
+    "sources": "system/graphs/micro/mcdonalds_us_ops/sources.json"
+  },
+  "precomputed_answers": {
+    "coop_distribution": {
+      "answer": "Top 10 co-ops by store count (source: NSN Lookup 2026-09 SEP.xlsx, 49 co-ops total):\n06 - MOASC: 686 stores\n46 - NEW YORK METRO: 520 stores\n45 - NEW ENGLAND: 514 stores\n30 - MICHIGAN: 494 stores\n20 - NORTH TEXAS: 472 stores\n48 - BWE: 460 stores\n29 - MOCNI: 459 stores\n50 - CENTRAL FLORIDA: 418 stores\n39 - BIG SOUTH: 411 stores\n07 - DSOA: 409 stores",
+      "coop_list": [
+        {
+          "coop_id": "coop:06-moasc",
+          "name": "06 - MOASC",
+          "store_count": 686
+        },
+        {
+          "coop_id": "coop:46-new-york-metro",
+          "name": "46 - NEW YORK METRO",
+          "store_count": 520
+        },
+        {
+          "coop_id": "coop:45-new-england",
+          "name": "45 - NEW ENGLAND",
+          "store_count": 514
+        },
+        {
+          "coop_id": "coop:30-michigan",
+          "name": "30 - MICHIGAN",
+          "store_count": 494
+        },
+        {
+          "coop_id": "coop:20-north-texas",
+          "name": "20 - NORTH TEXAS",
+          "store_count": 472
+        },
+        {
+          "coop_id": "coop:48-bwe",
+          "name": "48 - BWE",
+          "store_count": 460
+        },
+        {
+          "coop_id": "coop:29-mocni",
+          "name": "29 - MOCNI",
+          "store_count": 459
+        },
+        {
+          "coop_id": "coop:50-central-florida",
+          "name": "50 - CENTRAL FLORIDA",
+          "store_count": 418
+        },
+        {
+          "coop_id": "coop:39-big-south",
+          "name": "39 - BIG SOUTH",
+          "store_count": 411
+        },
+        {
+          "coop_id": "coop:07-dsoa",
+          "name": "07 - DSOA",
+          "store_count": 409
+        }
+      ],
+      "note": "Computed from graph index at build time. Cite as: source=RB Micro Graph (McDonald's US Operations Micro Ecosystem), tier=1, confidence=verified.",
+      "query_type": "coop_lookup",
+      "source": "graph_index",
+      "tier": 1,
+      "total_coops": 49
+    },
+    "largest_operators": {
+      "answer": "Top 10 operators by store count (source: NSN Lookup 2026-09 SEP.xlsx):\n1. MCOPCO \u2014 599 stores (20 states)\n2. FARIS, JOHN JUDE, SONDRA B & JOHN JR & JAKE \u2014 102 stores (4 states)\n3. VALLUZZO, JOHN C, NICHOLAS J & MICHAEL J \u2014 88 stores (3 states)\n4. LOMMEN, RICHARD T, RICHARD T JR, & LAUREN LOMMEN MICKEY \u2014 67 stores (3 states)\n5. NAPOLI, PETER & SALVATORE \u2014 67 stores (4 states)\n6. ACOSTA, RICHARD, CELIA, CARLOS, LUIS, MARIA & CELIA JAIRALA \u2014 60 stores (1 states)\n7. MARTINEZ, ABELARDO III & ABELARDO JR \u2014 60 stores (4 states)\n8. MATEOS, LUIS C, CARLOS R \u2014 59 stores (5 states)\n9. WATSON, MARK & BRENT BOHN \u2014 57 stores (2 states)\n10. LOCKE, THOMAS, C THOMAS (TREY), & GIL SANTIAGO \u2014 53 stores (3 states)\n\nTotal operator entities with mapped stores: 1,340.",
+      "note": "Computed from graph index at build time. Cite as: source=RB Micro Graph (McDonald's US Operations Micro Ecosystem), tier=1, confidence=verified.",
+      "operator_list": [
+        {
+          "name": "MCOPCO",
+          "state_count": 20,
+          "store_count": 599
+        },
+        {
+          "name": "FARIS, JOHN JUDE, SONDRA B & JOHN JR & JAKE",
+          "state_count": 4,
+          "store_count": 102
+        },
+        {
+          "name": "VALLUZZO, JOHN C, NICHOLAS J & MICHAEL J",
+          "state_count": 3,
+          "store_count": 88
+        },
+        {
+          "name": "LOMMEN, RICHARD T, RICHARD T JR, & LAUREN LOMMEN MICKEY",
+          "state_count": 3,
+          "store_count": 67
+        },
+        {
+          "name": "NAPOLI, PETER & SALVATORE",
+          "state_count": 4,
+          "store_count": 67
+        },
+        {
+          "name": "ACOSTA, RICHARD, CELIA, CARLOS, LUIS, MARIA & CELIA JAIRALA",
+          "state_count": 1,
+          "store_count": 60
+        },
+        {
+          "name": "MARTINEZ, ABELARDO III & ABELARDO JR",
+          "state_count": 4,
+          "store_count": 60
+        },
+        {
+          "name": "MATEOS, LUIS C, CARLOS R",
+          "state_count": 5,
+          "store_count": 59
+        },
+        {
+          "name": "WATSON, MARK & BRENT BOHN",
+          "state_count": 2,
+          "store_count": 57
+        },
+        {
+          "name": "LOCKE, THOMAS, C THOMAS (TREY), & GIL SANTIAGO",
+          "state_count": 3,
+          "store_count": 53
+        }
+      ],
+      "query_type": "largest_operators",
+      "source": "graph_index",
+      "tier": 1
+    },
+    "operator_count": {
+      "answer": "McDonald's U.S. micro graph currently contains 1340 operator/entity nodes with mapped stores, 14076 stores mapped to an operator/entity, 102 enterprise-scale operators/entities with 25+ stores, 802 mid-tier operators/entities with 5-24 stores, and 436 single-digit operators/entities with 1-4 stores.",
+      "note": "Computed from graph index at build time. Cite as: source=RB Micro Graph (McDonald's US Operations Micro Ecosystem), tier=1, confidence=verified.",
+      "query_type": "operator_count",
+      "source": "graph_index",
+      "tier": 1
+    },
+    "state_distribution": {
+      "answer": "Top 10 states by store count (source: NSN Lookup 2026-09 SEP.xlsx, 54 states total):\nTX: 1,432 stores\nCA: 1,332 stores\nFL: 962 stores\nIL: 670 stores\nOH: 626 stores\nNY: 590 stores\nMI: 529 stores\nNC: 498 stores\nPA: 486 stores\nGA: 458 stores",
+      "note": "Computed from graph index at build time. Cite as: source=RB Micro Graph (McDonald's US Operations Micro Ecosystem), tier=1, confidence=verified. For a specific state call getMicroGraphSummary with query_type=state_lookup&state=XX.",
+      "query_type": "state_lookup",
+      "source": "graph_index",
+      "state_list": [
+        {
+          "state": "TX",
+          "store_count": 1432
+        },
+        {
+          "state": "CA",
+          "store_count": 1332
+        },
+        {
+          "state": "FL",
+          "store_count": 962
+        },
+        {
+          "state": "IL",
+          "store_count": 670
+        },
+        {
+          "state": "OH",
+          "store_count": 626
+        },
+        {
+          "state": "NY",
+          "store_count": 590
+        },
+        {
+          "state": "MI",
+          "store_count": 529
+        },
+        {
+          "state": "NC",
+          "store_count": 498
+        },
+        {
+          "state": "PA",
+          "store_count": 486
+        },
+        {
+          "state": "GA",
+          "store_count": 458
+        }
+      ],
+      "tier": 1,
+      "total_states": 54
+    }
+  },
+  "retrieval_answer_templates": {
+    "operator_distribution": "McDonald's U.S. micro graph currently contains {operator_entities_with_stores} operator/entity nodes with mapped stores, {stores_with_operator_entity} stores mapped to an operator/entity, {enterprise_25_plus} enterprise-scale operators/entities with 25+ stores, {mid_tier_5_to_24} mid-tier operators/entities with 5-24 stores, and {single_digit_1_to_4} single-digit operators/entities with 1-4 stores."
+  },
+  "source_sha256": "a4ec93c362a73470fb6656a7c89900072d0d6390f25a71cc08e345ecc788e373",
+  "source_workbook": "NSN Lookup 2026-09 SEP.xlsx",
+  "state_distribution": [
+    {
+      "state": "TX",
+      "store_count": 1432
+    },
+    {
+      "state": "CA",
+      "store_count": 1332
+    },
+    {
+      "state": "FL",
+      "store_count": 962
+    },
+    {
+      "state": "IL",
+      "store_count": 670
+    },
+    {
+      "state": "OH",
+      "store_count": 626
+    },
+    {
+      "state": "NY",
+      "store_count": 590
+    },
+    {
+      "state": "MI",
+      "store_count": 529
+    },
+    {
+      "state": "NC",
+      "store_count": 498
+    },
+    {
+      "state": "PA",
+      "store_count": 486
+    },
+    {
+      "state": "GA",
+      "store_count": 458
+    },
+    {
+      "state": "VA",
+      "store_count": 412
+    },
+    {
+      "state": "IN",
+      "store_count": 373
+    },
+    {
+      "state": "TN",
+      "store_count": 360
+    },
+    {
+      "state": "MO",
+      "store_count": 334
+    },
+    {
+      "state": "AZ",
+      "store_count": 320
+    },
+    {
+      "state": "WI",
+      "store_count": 292
+    },
+    {
+      "state": "MD",
+      "store_count": 280
+    },
+    {
+      "state": "KY",
+      "store_count": 271
+    },
+    {
+      "state": "NJ",
+      "store_count": 271
+    },
+    {
+      "state": "WA",
+      "store_count": 271
+    },
+    {
+      "state": "AL",
+      "store_count": 249
+    },
+    {
+      "state": "SC",
+      "store_count": 243
+    },
+    {
+      "state": "MA",
+      "store_count": 240
+    },
+    {
+      "state": "CO",
+      "store_count": 236
+    },
+    {
+      "state": "LA",
+      "store_count": 230
+    },
+    {
+      "state": "MN",
+      "store_count": 229
+    },
+    {
+      "state": "OK",
+      "store_count": 211
+    },
+    {
+      "state": "AR",
+      "store_count": 187
+    },
+    {
+      "state": "OR",
+      "store_count": 163
+    },
+    {
+      "state": "IA",
+      "store_count": 159
+    },
+    {
+      "state": "KS",
+      "store_count": 154
+    },
+    {
+      "state": "NV",
+      "store_count": 145
+    },
+    {
+      "state": "MS",
+      "store_count": 143
+    },
+    {
+      "state": "CT",
+      "store_count": 138
+    },
+    {
+      "state": "UT",
+      "store_count": 133
+    },
+    {
+      "state": "NM",
+      "store_count": 110
+    },
+    {
+      "state": "WV",
+      "store_count": 104
+    },
+    {
+      "state": "NE",
+      "store_count": 81
+    },
+    {
+      "state": "ID",
+      "store_count": 74
+    },
+    {
+      "state": "HI",
+      "store_count": 72
+    },
+    {
+      "state": "ME",
+      "store_count": 61
+    },
+    {
+      "state": "NH",
+      "store_count": 57
+    },
+    {
+      "state": "MT",
+      "store_count": 48
+    },
+    {
+      "state": "DE",
+      "store_count": 44
+    },
+    {
+      "state": "SD",
+      "store_count": 38
+    },
+    {
+      "state": "RI",
+      "store_count": 33
+    },
+    {
+      "state": "ND",
+      "store_count": 31
+    },
+    {
+      "state": "WY",
+      "store_count": 29
+    },
+    {
+      "state": "AK",
+      "store_count": 28
+    },
+    {
+      "state": "VT",
+      "store_count": 25
+    },
+    {
+      "state": "DC",
+      "store_count": 25
+    },
+    {
+      "state": "GU",
+      "store_count": 9
+    },
+    {
+      "state": "MP",
+      "store_count": 2
+    },
+    {
+      "state": "AE",
+      "store_count": 1
+    }
+  ],
+  "top_operator_entities": [
+    {
+      "entity_id": "entity:mcopco",
+      "name": "MCOPCO",
+      "state_count": 20,
+      "states": {
+        "AZ": 14,
+        "CA": 66,
+        "DE": 1,
+        "FL": 160,
+        "HI": 21,
+        "IA": 26,
+        "IL": 18,
+        "IN": 10,
+        "MD": 51,
+        "MI": 49,
+        "MO": 1,
+        "NC": 18,
+        "OH": 34,
+        "OK": 26,
+        "TN": 1,
+        "TX": 60,
+        "VA": 25,
+        "WA": 11,
+        "WI": 6,
+        "WV": 1
+      },
+      "store_count": 599,
+      "top_markets": [
+        {
+          "market_id": "market:tampa-st-pete-orlando",
+          "name": "TAMPA ST PETE ORLANDO",
+          "store_count": 123
+        },
+        {
+          "market_id": "market:washington-dc-baltimore-eastern-shore",
+          "name": "WASHINGTON DC BALTIMORE EASTERN SHORE",
+          "store_count": 77
+        },
+        {
+          "market_id": "market:los-angeles-san-diego",
+          "name": "LOS ANGELES SAN DIEGO",
+          "store_count": 54
+        },
+        {
+          "market_id": "market:michigan",
+          "name": "MICHIGAN",
+          "store_count": 48
+        },
+        {
+          "market_id": "market:miami-w-palm-beach-ft-myers",
+          "name": "MIAMI W PALM BEACH FT MYERS",
+          "store_count": 37
+        },
+        {
+          "market_id": "market:columbus-cincy-dayton-toledo-lima",
+          "name": "COLUMBUS CINCY DAYTON TOLEDO LIMA",
+          "store_count": 35
+        },
+        {
+          "market_id": "market:des-moines-quad-cities-peoria-cent-il",
+          "name": "DES MOINES QUAD CITIES PEORIA CENT IL",
+          "store_count": 27
+        },
+        {
+          "market_id": "market:wichita-ok-city-tulsa-ft-smith",
+          "name": "WICHITA OK CITY TULSA FT SMITH",
+          "store_count": 26
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:faris-john-jude-sondra-b-john-jr-jake",
+      "name": "FARIS, JOHN JUDE, SONDRA B & JOHN JR & JAKE",
+      "state_count": 4,
+      "states": {
+        "KY": 25,
+        "TN": 62,
+        "VA": 14,
+        "WV": 1
+      },
+      "store_count": 102,
+      "top_markets": [
+        {
+          "market_id": "market:louisville-lexington-knoxville-w-virginia",
+          "name": "LOUISVILLE LEXINGTON KNOXVILLE W VIRGINIA",
+          "store_count": 102
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:valluzzo-john-c-nicholas-j-michael-j",
+      "name": "VALLUZZO, JOHN C, NICHOLAS J & MICHAEL J",
+      "state_count": 3,
+      "states": {
+        "AL": 16,
+        "LA": 37,
+        "MS": 35
+      },
+      "store_count": 88,
+      "top_markets": [
+        {
+          "market_id": "market:south-la",
+          "name": "SOUTH LA",
+          "store_count": 40
+        },
+        {
+          "market_id": "market:alabama-nw-florida",
+          "name": "ALABAMA NW FLORIDA",
+          "store_count": 32
+        },
+        {
+          "market_id": "market:little-rock-shreveport-memphis-jackson",
+          "name": "LITTLE ROCK SHREVEPORT MEMPHIS JACKSON",
+          "store_count": 11
+        },
+        {
+          "market_id": "market:greater-tennessee-valley",
+          "name": "GREATER TENNESSEE VALLEY",
+          "store_count": 4
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:lommen-richard-t-richard-t-jr-lauren-lommen-mickey",
+      "name": "LOMMEN, RICHARD T, RICHARD T JR, & LAUREN LOMMEN MICKEY",
+      "state_count": 3,
+      "states": {
+        "IA": 5,
+        "MN": 19,
+        "WI": 43
+      },
+      "store_count": 67,
+      "top_markets": [
+        {
+          "market_id": "market:wisconsin-rockford",
+          "name": "WISCONSIN ROCKFORD",
+          "store_count": 37
+        },
+        {
+          "market_id": "market:nsa",
+          "name": "NSA",
+          "store_count": 26
+        },
+        {
+          "market_id": "market:des-moines-quad-cities-peoria-cent-il",
+          "name": "DES MOINES QUAD CITIES PEORIA CENT IL",
+          "store_count": 4
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:napoli-peter-salvatore",
+      "name": "NAPOLI, PETER & SALVATORE",
+      "state_count": 4,
+      "states": {
+        "ME": 16,
+        "NH": 32,
+        "NY": 6,
+        "VT": 13
+      },
+      "store_count": 67,
+      "top_markets": [
+        {
+          "market_id": "market:new-england",
+          "name": "NEW ENGLAND",
+          "store_count": 67
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:acosta-richard-celia-carlos-luis-maria-celia-jairala",
+      "name": "ACOSTA, RICHARD, CELIA, CARLOS, LUIS, MARIA & CELIA JAIRALA",
+      "state_count": 1,
+      "states": {
+        "TX": 60
+      },
+      "store_count": 60,
+      "top_markets": [
+        {
+          "market_id": "market:south-central-texas",
+          "name": "SOUTH CENTRAL TEXAS",
+          "store_count": 59
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:martinez-abelardo-iii-abelardo-jr",
+      "name": "MARTINEZ, ABELARDO III & ABELARDO JR",
+      "state_count": 4,
+      "states": {
+        "AZ": 46,
+        "CA": 2,
+        "NM": 11,
+        "NV": 1
+      },
+      "store_count": 60,
+      "top_markets": [
+        {
+          "market_id": "market:phoenix-las-vegas-tucson-yuma-el-centro",
+          "name": "PHOENIX LAS VEGAS TUCSON YUMA EL CENTRO",
+          "store_count": 50
+        },
+        {
+          "market_id": "market:albuquerque-el-paso",
+          "name": "ALBUQUERQUE EL PASO",
+          "store_count": 10
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:mateos-luis-c-carlos-r",
+      "name": "MATEOS, LUIS C, CARLOS R",
+      "state_count": 5,
+      "states": {
+        "DC": 2,
+        "MD": 19,
+        "NY": 21,
+        "VA": 7,
+        "WV": 10
+      },
+      "store_count": 59,
+      "top_markets": [
+        {
+          "market_id": "market:washington-dc-baltimore-eastern-shore",
+          "name": "WASHINGTON DC BALTIMORE EASTERN SHORE",
+          "store_count": 38
+        },
+        {
+          "market_id": "market:albany-buffalo-rochester-syracuse",
+          "name": "ALBANY BUFFALO ROCHESTER SYRACUSE",
+          "store_count": 21
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:watson-mark-brent-bohn",
+      "name": "WATSON, MARK & BRENT BOHN",
+      "state_count": 2,
+      "states": {
+        "AZ": 18,
+        "NV": 39
+      },
+      "store_count": 57,
+      "top_markets": [
+        {
+          "market_id": "market:phoenix-las-vegas-tucson-yuma-el-centro",
+          "name": "PHOENIX LAS VEGAS TUCSON YUMA EL CENTRO",
+          "store_count": 57
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:locke-thomas-c-thomas-trey-gil-santiago",
+      "name": "LOCKE, THOMAS, C THOMAS (TREY), & GIL SANTIAGO",
+      "state_count": 3,
+      "states": {
+        "OH": 44,
+        "PA": 6,
+        "WV": 3
+      },
+      "store_count": 53,
+      "top_markets": [
+        {
+          "market_id": "market:cleveland",
+          "name": "CLEVELAND",
+          "store_count": 40
+        },
+        {
+          "market_id": "market:pittsburgh-johnstown-erie",
+          "name": "PITTSBURGH JOHNSTOWN ERIE",
+          "store_count": 10
+        },
+        {
+          "market_id": "market:louisville-lexington-knoxville-w-virginia",
+          "name": "LOUISVILLE LEXINGTON KNOXVILLE W VIRGINIA",
+          "store_count": 3
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:kilian-steven-t-steven-jr",
+      "name": "KILIAN, STEVEN T & STEVEN JR",
+      "state_count": 2,
+      "states": {
+        "MI": 4,
+        "WI": 48
+      },
+      "store_count": 52,
+      "top_markets": [
+        {
+          "market_id": "market:wisconsin-rockford",
+          "name": "WISCONSIN ROCKFORD",
+          "store_count": 50
+        },
+        {
+          "market_id": "market:nsa",
+          "name": "NSA",
+          "store_count": 2
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:retzer-michael-l-michael-l-jr",
+      "name": "RETZER, MICHAEL L & MICHAEL L JR",
+      "state_count": 6,
+      "states": {
+        "AR": 15,
+        "LA": 2,
+        "MS": 5,
+        "OK": 1,
+        "TN": 20,
+        "TX": 7
+      },
+      "store_count": 50,
+      "top_markets": [
+        {
+          "market_id": "market:little-rock-shreveport-memphis-jackson",
+          "name": "LITTLE ROCK SHREVEPORT MEMPHIS JACKSON",
+          "store_count": 50
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:conn-charles-dion",
+      "name": "CONN, CHARLES DION",
+      "state_count": 1,
+      "states": {
+        "WI": 49
+      },
+      "store_count": 49,
+      "top_markets": [
+        {
+          "market_id": "market:wisconsin-rockford",
+          "name": "WISCONSIN ROCKFORD",
+          "store_count": 49
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:smith-adrian-t",
+      "name": "SMITH, ADRIAN T",
+      "state_count": 2,
+      "states": {
+        "NC": 38,
+        "SC": 11
+      },
+      "store_count": 49,
+      "top_markets": [
+        {
+          "market_id": "market:sw-north-carolina-e-south-carolina",
+          "name": "SW NORTH CAROLINA E SOUTH CAROLINA",
+          "store_count": 32
+        },
+        {
+          "market_id": "market:triad-wilmington-wi-s-gnw",
+          "name": "TRIAD WILMINGTON WI S GNW",
+          "store_count": 16
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:marroquin-hernando-mary-f-andrew",
+      "name": "MARROQUIN, HERNANDO, MARY F & ANDREW",
+      "state_count": 1,
+      "states": {
+        "CA": 47
+      },
+      "store_count": 47,
+      "top_markets": [
+        {
+          "market_id": "market:los-angeles-san-diego",
+          "name": "LOS ANGELES SAN DIEGO",
+          "store_count": 47
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:prado-juan-c-juan-c-jr-rachel-prado-millan",
+      "name": "PRADO, JUAN C, JUAN C JR. & RACHEL PRADO MILLAN",
+      "state_count": 1,
+      "states": {
+        "FL": 46
+      },
+      "store_count": 46,
+      "top_markets": [
+        {
+          "market_id": "market:tampa-st-pete-orlando",
+          "name": "TAMPA ST PETE ORLANDO",
+          "store_count": 43
+        },
+        {
+          "market_id": "market:jacksonville-tallahassee-savannah",
+          "name": "JACKSONVILLE TALLAHASSEE SAVANNAH",
+          "store_count": 2
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:bucciferro-guy-t-iii",
+      "name": "BUCCIFERRO, GUY T III",
+      "state_count": 2,
+      "states": {
+        "IL": 38,
+        "WI": 7
+      },
+      "store_count": 45,
+      "top_markets": [
+        {
+          "market_id": "market:wisconsin-rockford",
+          "name": "WISCONSIN ROCKFORD",
+          "store_count": 36
+        },
+        {
+          "market_id": "market:chicago",
+          "name": "CHICAGO",
+          "store_count": 8
+        },
+        {
+          "market_id": "market:des-moines-quad-cities-peoria-cent-il",
+          "name": "DES MOINES QUAD CITIES PEORIA CENT IL",
+          "store_count": 1
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:welburn-andrew-jillian",
+      "name": "WELBURN, ANDREW & JILLIAN",
+      "state_count": 5,
+      "states": {
+        "AR": 31,
+        "NC": 7,
+        "OK": 1,
+        "TX": 2,
+        "VA": 4
+      },
+      "store_count": 45,
+      "top_markets": [
+        {
+          "market_id": "market:little-rock-shreveport-memphis-jackson",
+          "name": "LITTLE ROCK SHREVEPORT MEMPHIS JACKSON",
+          "store_count": 33
+        },
+        {
+          "market_id": "market:triad-wilmington-wi-s-gnw",
+          "name": "TRIAD WILMINGTON WI S GNW",
+          "store_count": 7
+        },
+        {
+          "market_id": "market:richmond-shenandoah-valley-norfolk-roanoke",
+          "name": "RICHMOND SHENANDOAH VALLEY NORFOLK ROANOKE",
+          "store_count": 4
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:krampe-christopher-j-edward-j-iii",
+      "name": "KRAMPE, CHRISTOPHER J, EDWARD J  III",
+      "state_count": 1,
+      "states": {
+        "LA": 44
+      },
+      "store_count": 44,
+      "top_markets": [
+        {
+          "market_id": "market:south-la",
+          "name": "SOUTH LA",
+          "store_count": 44
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:booth-james-james-ryan-sarah-b-stafford",
+      "name": "BOOTH, JAMES, JAMES RYAN & SARAH B STAFFORD",
+      "state_count": 2,
+      "states": {
+        "GA": 5,
+        "SC": 38
+      },
+      "store_count": 43,
+      "top_markets": [
+        {
+          "market_id": "market:sw-north-carolina-e-south-carolina",
+          "name": "SW NORTH CAROLINA E SOUTH CAROLINA",
+          "store_count": 36
+        },
+        {
+          "market_id": "market:jacksonville-tallahassee-savannah",
+          "name": "JACKSONVILLE TALLAHASSEE SAVANNAH",
+          "store_count": 6
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:veliz-angel-rene-d",
+      "name": "VELIZ, ANGEL & RENE D",
+      "state_count": 1,
+      "states": {
+        "FL": 43
+      },
+      "store_count": 43,
+      "top_markets": [
+        {
+          "market_id": "market:miami-w-palm-beach-ft-myers",
+          "name": "MIAMI W PALM BEACH FT MYERS",
+          "store_count": 43
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:upchurch-james-r-jr-brent",
+      "name": "UPCHURCH, JAMES R JR. & BRENT",
+      "state_count": 1,
+      "states": {
+        "FL": 42
+      },
+      "store_count": 42,
+      "top_markets": [
+        {
+          "market_id": "market:miami-w-palm-beach-ft-myers",
+          "name": "MIAMI W PALM BEACH FT MYERS",
+          "store_count": 31
+        },
+        {
+          "market_id": "market:jacksonville-tallahassee-savannah",
+          "name": "JACKSONVILLE TALLAHASSEE SAVANNAH",
+          "store_count": 11
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:abbate-john",
+      "name": "ABBATE, JOHN",
+      "state_count": 1,
+      "states": {
+        "CA": 40
+      },
+      "store_count": 40,
+      "top_markets": [
+        {
+          "market_id": "market:sacramento-fresno-reno-bakersfield",
+          "name": "SACRAMENTO FRESNO RENO BAKERSFIELD",
+          "store_count": 39
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:gilley-deborah-tony-e-james-laird",
+      "name": "GILLEY, DEBORAH, TONY E, & JAMES LAIRD",
+      "state_count": 3,
+      "states": {
+        "AR": 4,
+        "LA": 29,
+        "TX": 7
+      },
+      "store_count": 40,
+      "top_markets": [
+        {
+          "market_id": "market:little-rock-shreveport-memphis-jackson",
+          "name": "LITTLE ROCK SHREVEPORT MEMPHIS JACKSON",
+          "store_count": 40
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:leonard-steven-nathan-r-blake-zogleman",
+      "name": "LEONARD, STEVEN, NATHAN R & BLAKE ZOGLEMAN",
+      "state_count": 4,
+      "states": {
+        "IA": 3,
+        "MN": 1,
+        "NE": 27,
+        "SD": 9
+      },
+      "store_count": 40,
+      "top_markets": [
+        {
+          "market_id": "market:great-plains",
+          "name": "GREAT PLAINS",
+          "store_count": 40
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:stagg-nedrick-l-fabiola-diaz",
+      "name": "STAGG, NEDRICK L & FABIOLA DIAZ",
+      "state_count": 1,
+      "states": {
+        "TX": 40
+      },
+      "store_count": 40,
+      "top_markets": [
+        {
+          "market_id": "market:south-central-texas",
+          "name": "SOUTH CENTRAL TEXAS",
+          "store_count": 40
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:goldblatt-bradley-a-howard-s-jason-d-phyllis-zachary",
+      "name": "GOLDBLATT, BRADLEY A, HOWARD S, JASON D, PHYLLIS, ZACHARY",
+      "state_count": 1,
+      "states": {
+        "CA": 39
+      },
+      "store_count": 39,
+      "top_markets": [
+        {
+          "market_id": "market:san-francisco-santa-barbara",
+          "name": "SAN FRANCISCO SANTA BARBARA",
+          "store_count": 39
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:gomez-jorge-b-george",
+      "name": "GOMEZ, JORGE B & GEORGE",
+      "state_count": 2,
+      "states": {
+        "CT": 6,
+        "MA": 33
+      },
+      "store_count": 39,
+      "top_markets": [
+        {
+          "market_id": "market:new-england",
+          "name": "NEW ENGLAND",
+          "store_count": 32
+        },
+        {
+          "market_id": "market:albany-buffalo-rochester-syracuse",
+          "name": "ALBANY BUFFALO ROCHESTER SYRACUSE",
+          "store_count": 7
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:mckinney-steve",
+      "name": "MCKINNEY, STEVE",
+      "state_count": 1,
+      "states": {
+        "TX": 39
+      },
+      "store_count": 39,
+      "top_markets": [
+        {
+          "market_id": "market:houston-beaumont",
+          "name": "HOUSTON BEAUMONT",
+          "store_count": 21
+        },
+        {
+          "market_id": "market:south-central-texas",
+          "name": "SOUTH CENTRAL TEXAS",
+          "store_count": 17
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:meoli-michael-a",
+      "name": "MEOLI, MICHAEL A",
+      "state_count": 3,
+      "states": {
+        "DE": 19,
+        "MD": 9,
+        "VA": 11
+      },
+      "store_count": 39,
+      "top_markets": [
+        {
+          "market_id": "market:washington-dc-baltimore-eastern-shore",
+          "name": "WASHINGTON DC BALTIMORE EASTERN SHORE",
+          "store_count": 20
+        },
+        {
+          "market_id": "market:richmond-shenandoah-valley-norfolk-roanoke",
+          "name": "RICHMOND SHENANDOAH VALLEY NORFOLK ROANOKE",
+          "store_count": 11
+        },
+        {
+          "market_id": "market:philadelphia",
+          "name": "PHILADELPHIA",
+          "store_count": 7
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:kades-kenneth-p",
+      "name": "KADES, KENNETH P",
+      "state_count": 1,
+      "states": {
+        "TX": 38
+      },
+      "store_count": 38,
+      "top_markets": [
+        {
+          "market_id": "market:houston-beaumont",
+          "name": "HOUSTON BEAUMONT",
+          "store_count": 38
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:mathews-bill-william-cody",
+      "name": "MATHEWS, BILL & WILLIAM (CODY)",
+      "state_count": 2,
+      "states": {
+        "AR": 34,
+        "OK": 4
+      },
+      "store_count": 38,
+      "top_markets": [
+        {
+          "market_id": "market:wichita-ok-city-tulsa-ft-smith",
+          "name": "WICHITA OK CITY TULSA FT SMITH",
+          "store_count": 34
+        },
+        {
+          "market_id": "market:joplin-quincy-springfield-col-jeff-city",
+          "name": "JOPLIN QUINCY SPRINGFIELD COL JEFF CITY",
+          "store_count": 2
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:rardin-scott-d",
+      "name": "RARDIN, SCOTT D",
+      "state_count": 1,
+      "states": {
+        "MD": 38
+      },
+      "store_count": 38,
+      "top_markets": [
+        {
+          "market_id": "market:washington-dc-baltimore-eastern-shore",
+          "name": "WASHINGTON DC BALTIMORE EASTERN SHORE",
+          "store_count": 38
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:chan-jonathan",
+      "name": "CHAN, JONATHAN",
+      "state_count": 2,
+      "states": {
+        "OK": 8,
+        "TX": 29
+      },
+      "store_count": 37,
+      "top_markets": [
+        {
+          "market_id": "market:dallas-tyler",
+          "name": "DALLAS TYLER",
+          "store_count": 29
+        },
+        {
+          "market_id": "market:wichita-ok-city-tulsa-ft-smith",
+          "name": "WICHITA OK CITY TULSA FT SMITH",
+          "store_count": 8
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:chapman-daniel",
+      "name": "CHAPMAN, DANIEL",
+      "state_count": 3,
+      "states": {
+        "NC": 20,
+        "NJ": 9,
+        "SC": 8
+      },
+      "store_count": 37,
+      "top_markets": [
+        {
+          "market_id": "market:triad-wilmington-wi-s-gnw",
+          "name": "TRIAD WILMINGTON WI S GNW",
+          "store_count": 18
+        },
+        {
+          "market_id": "market:sw-north-carolina-e-south-carolina",
+          "name": "SW NORTH CAROLINA E SOUTH CAROLINA",
+          "store_count": 10
+        },
+        {
+          "market_id": "market:new-york-metro",
+          "name": "NEW YORK METRO",
+          "store_count": 7
+        },
+        {
+          "market_id": "market:philadelphia",
+          "name": "PHILADELPHIA",
+          "store_count": 1
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:chapman-harry-h-chapman-iii-linda-steven",
+      "name": "CHAPMAN, HARRY H CHAPMAN III, LINDA, & STEVEN",
+      "state_count": 3,
+      "states": {
+        "NC": 20,
+        "NJ": 10,
+        "SC": 7
+      },
+      "store_count": 37,
+      "top_markets": [
+        {
+          "market_id": "market:triad-wilmington-wi-s-gnw",
+          "name": "TRIAD WILMINGTON WI S GNW",
+          "store_count": 20
+        },
+        {
+          "market_id": "market:new-york-metro",
+          "name": "NEW YORK METRO",
+          "store_count": 10
+        },
+        {
+          "market_id": "market:sw-north-carolina-e-south-carolina",
+          "name": "SW NORTH CAROLINA E SOUTH CAROLINA",
+          "store_count": 7
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:essig-david-melisa-a-ethan",
+      "name": "ESSIG, DAVID, MELISA A, & ETHAN",
+      "state_count": 2,
+      "states": {
+        "MO": 28,
+        "NE": 9
+      },
+      "store_count": 37,
+      "top_markets": [
+        {
+          "market_id": "market:great-plains",
+          "name": "GREAT PLAINS",
+          "store_count": 37
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:mcbee-mark-t",
+      "name": "MCBEE, MARK T",
+      "state_count": 2,
+      "states": {
+        "MA": 22,
+        "NY": 15
+      },
+      "store_count": 37,
+      "top_markets": [
+        {
+          "market_id": "market:new-england",
+          "name": "NEW ENGLAND",
+          "store_count": 21
+        },
+        {
+          "market_id": "market:albany-buffalo-rochester-syracuse",
+          "name": "ALBANY BUFFALO ROCHESTER SYRACUSE",
+          "store_count": 16
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:castro-richard-a-vincent-dion-jeraldo",
+      "name": "CASTRO, RICHARD A, VINCENT, & DION JERALDO",
+      "state_count": 2,
+      "states": {
+        "NM": 5,
+        "TX": 31
+      },
+      "store_count": 36,
+      "top_markets": [
+        {
+          "market_id": "market:albuquerque-el-paso",
+          "name": "ALBUQUERQUE EL PASO",
+          "store_count": 34
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:cook-gregory-l-derik",
+      "name": "COOK, GREGORY L & DERIK",
+      "state_count": 1,
+      "states": {
+        "AZ": 36
+      },
+      "store_count": 36,
+      "top_markets": [
+        {
+          "market_id": "market:phoenix-las-vegas-tucson-yuma-el-centro",
+          "name": "PHOENIX LAS VEGAS TUCSON YUMA EL CENTRO",
+          "store_count": 36
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:cottrell-christopher",
+      "name": "COTTRELL, CHRISTOPHER",
+      "state_count": 3,
+      "states": {
+        "NJ": 15,
+        "NY": 9,
+        "PA": 12
+      },
+      "store_count": 36,
+      "top_markets": [
+        {
+          "market_id": "market:new-york-metro",
+          "name": "NEW YORK METRO",
+          "store_count": 21
+        },
+        {
+          "market_id": "market:philadelphia",
+          "name": "PHILADELPHIA",
+          "store_count": 15
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:ebert-john-w-jr",
+      "name": "EBERT, JOHN W JR.",
+      "state_count": 2,
+      "states": {
+        "MD": 5,
+        "WV": 31
+      },
+      "store_count": 36,
+      "top_markets": [
+        {
+          "market_id": "market:pittsburgh-johnstown-erie",
+          "name": "PITTSBURGH JOHNSTOWN ERIE",
+          "store_count": 26
+        },
+        {
+          "market_id": "market:louisville-lexington-knoxville-w-virginia",
+          "name": "LOUISVILLE LEXINGTON KNOXVILLE W VIRGINIA",
+          "store_count": 8
+        },
+        {
+          "market_id": "market:washington-dc-baltimore-eastern-shore",
+          "name": "WASHINGTON DC BALTIMORE EASTERN SHORE",
+          "store_count": 2
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:murphy-gerard-f-jr-cheryl-d-stephen-g",
+      "name": "MURPHY, GERARD F JR, CHERYL D & STEPHEN G",
+      "state_count": 2,
+      "states": {
+        "AL": 33,
+        "FL": 3
+      },
+      "store_count": 36,
+      "top_markets": [
+        {
+          "market_id": "market:alabama-nw-florida",
+          "name": "ALABAMA NW FLORIDA",
+          "store_count": 36
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:schrader-craig-m-cathleen-meghan-dylan-c-carli-m-eager",
+      "name": "SCHRADER, CRAIG M, CATHLEEN, MEGHAN, DYLAN C & CARLI M EAGER",
+      "state_count": 1,
+      "states": {
+        "CA": 36
+      },
+      "store_count": 36,
+      "top_markets": [
+        {
+          "market_id": "market:sacramento-fresno-reno-bakersfield",
+          "name": "SACRAMENTO FRESNO RENO BAKERSFIELD",
+          "store_count": 36
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:schulz-matthew-a-lori-lynn",
+      "name": "SCHULZ, MATTHEW A & LORI LYNN",
+      "state_count": 1,
+      "states": {
+        "MI": 36
+      },
+      "store_count": 36,
+      "top_markets": [
+        {
+          "market_id": "market:michigan",
+          "name": "MICHIGAN",
+          "store_count": 36
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:delph-roger-p-linda-m-matthew-r-kevin-a",
+      "name": "DELPH, ROGER P, LINDA M, MATTHEW R & KEVIN A",
+      "state_count": 1,
+      "states": {
+        "CA": 35
+      },
+      "store_count": 35,
+      "top_markets": [
+        {
+          "market_id": "market:sacramento-fresno-reno-bakersfield",
+          "name": "SACRAMENTO FRESNO RENO BAKERSFIELD",
+          "store_count": 33
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:gray-philip-a",
+      "name": "GRAY, PHILIP A",
+      "state_count": 2,
+      "states": {
+        "AL": 2,
+        "TN": 33
+      },
+      "store_count": 35,
+      "top_markets": [
+        {
+          "market_id": "market:greater-tennessee-valley",
+          "name": "GREATER TENNESSEE VALLEY",
+          "store_count": 34
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:horner-peter-david-todd-bradley",
+      "name": "HORNER, PETER, DAVID, TODD & BRADLEY",
+      "state_count": 1,
+      "states": {
+        "CA": 34
+      },
+      "store_count": 34,
+      "top_markets": [
+        {
+          "market_id": "market:los-angeles-san-diego",
+          "name": "LOS ANGELES SAN DIEGO",
+          "store_count": 33
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:illas-juan-javier-jennie-illas-rincon-estate-of-jean-mauricio-rincon",
+      "name": "ILLAS, JUAN, JAVIER, JENNIE ILLAS RINCON & ESTATE OF JEAN MAURICIO RINCON",
+      "state_count": 1,
+      "states": {
+        "FL": 34
+      },
+      "store_count": 34,
+      "top_markets": [
+        {
+          "market_id": "market:tampa-st-pete-orlando",
+          "name": "TAMPA ST PETE ORLANDO",
+          "store_count": 33
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:michell-george-r",
+      "name": "MICHELL, GEORGE R",
+      "state_count": 4,
+      "states": {
+        "CT": 5,
+        "MA": 4,
+        "NJ": 7,
+        "NY": 18
+      },
+      "store_count": 34,
+      "top_markets": [
+        {
+          "market_id": "market:new-york-metro",
+          "name": "NEW YORK METRO",
+          "store_count": 19
+        },
+        {
+          "market_id": "market:albany-buffalo-rochester-syracuse",
+          "name": "ALBANY BUFFALO ROCHESTER SYRACUSE",
+          "store_count": 9
+        },
+        {
+          "market_id": "market:new-england",
+          "name": "NEW ENGLAND",
+          "store_count": 6
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:spadea-joseph-patricia-vincent-j-barbara-spadea-balducci-david-balducci",
+      "name": "SPADEA, JOSEPH,  PATRICIA, VINCENT J, BARBARA SPADEA BALDUCCI & DAVID BALDUCCI",
+      "state_count": 6,
+      "states": {
+        "CT": 2,
+        "MA": 18,
+        "NH": 1,
+        "NY": 6,
+        "RI": 6,
+        "VT": 1
+      },
+      "store_count": 34,
+      "top_markets": [
+        {
+          "market_id": "market:new-england",
+          "name": "NEW ENGLAND",
+          "store_count": 28
+        },
+        {
+          "market_id": "market:albany-buffalo-rochester-syracuse",
+          "name": "ALBANY BUFFALO ROCHESTER SYRACUSE",
+          "store_count": 6
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:alon-anne-regev",
+      "name": "ALON, ANNE & REGEV",
+      "state_count": 2,
+      "states": {
+        "KS": 29,
+        "MO": 4
+      },
+      "store_count": 33,
+      "top_markets": [
+        {
+          "market_id": "market:great-plains",
+          "name": "GREAT PLAINS",
+          "store_count": 31
+        },
+        {
+          "market_id": "market:wichita-ok-city-tulsa-ft-smith",
+          "name": "WICHITA OK CITY TULSA FT SMITH",
+          "store_count": 1
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:ingram-vera-tyrous-iii",
+      "name": "INGRAM, VERA & TYROUS III",
+      "state_count": 1,
+      "states": {
+        "TX": 33
+      },
+      "store_count": 33,
+      "top_markets": [
+        {
+          "market_id": "market:dallas-tyler",
+          "name": "DALLAS TYLER",
+          "store_count": 32
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:ruiz-nolan",
+      "name": "RUIZ, NOLAN",
+      "state_count": 1,
+      "states": {
+        "MO": 33
+      },
+      "store_count": 33,
+      "top_markets": [
+        {
+          "market_id": "market:st-louis",
+          "name": "ST LOUIS",
+          "store_count": 33
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:trefz-christian-c",
+      "name": "TREFZ, CHRISTIAN C",
+      "state_count": 2,
+      "states": {
+        "CT": 28,
+        "NY": 5
+      },
+      "store_count": 33,
+      "top_markets": [
+        {
+          "market_id": "market:new-york-metro",
+          "name": "NEW YORK METRO",
+          "store_count": 20
+        },
+        {
+          "market_id": "market:new-england",
+          "name": "NEW ENGLAND",
+          "store_count": 13
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:wade-carlton-r-lissette-devon-ashley",
+      "name": "WADE, CARLTON R, LISSETTE, & DEVON ASHLEY",
+      "state_count": 1,
+      "states": {
+        "FL": 33
+      },
+      "store_count": 33,
+      "top_markets": [
+        {
+          "market_id": "market:miami-w-palm-beach-ft-myers",
+          "name": "MIAMI W PALM BEACH FT MYERS",
+          "store_count": 32
+        },
+        {
+          "market_id": "market:tampa-st-pete-orlando",
+          "name": "TAMPA ST PETE ORLANDO",
+          "store_count": 1
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:karavites-janet-nicholas",
+      "name": "KARAVITES, JANET & NICHOLAS",
+      "state_count": 2,
+      "states": {
+        "IL": 29,
+        "WI": 3
+      },
+      "store_count": 32,
+      "top_markets": [
+        {
+          "market_id": "market:chicago",
+          "name": "CHICAGO",
+          "store_count": 29
+        },
+        {
+          "market_id": "market:wisconsin-rockford",
+          "name": "WISCONSIN ROCKFORD",
+          "store_count": 3
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:lawrence-tanya-laura-edgar-herrera",
+      "name": "LAWRENCE, TANYA & LAURA & EDGAR HERRERA",
+      "state_count": 1,
+      "states": {
+        "IL": 32
+      },
+      "store_count": 32,
+      "top_markets": [
+        {
+          "market_id": "market:chicago",
+          "name": "CHICAGO",
+          "store_count": 32
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:palmaccio-john",
+      "name": "PALMACCIO, JOHN",
+      "state_count": 2,
+      "states": {
+        "GA": 19,
+        "SC": 13
+      },
+      "store_count": 32,
+      "top_markets": [
+        {
+          "market_id": "market:jacksonville-tallahassee-savannah",
+          "name": "JACKSONVILLE TALLAHASSEE SAVANNAH",
+          "store_count": 27
+        },
+        {
+          "market_id": "market:sw-north-carolina-e-south-carolina",
+          "name": "SW NORTH CAROLINA E SOUTH CAROLINA",
+          "store_count": 5
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:sainani-rajesh-harjinder-priyanka",
+      "name": "SAINANI, RAJESH, HARJINDER, & PRIYANKA",
+      "state_count": 5,
+      "states": {
+        "AE": 1,
+        "DC": 1,
+        "MD": 2,
+        "VA": 27,
+        "WV": 1
+      },
+      "store_count": 32,
+      "top_markets": [
+        {
+          "market_id": "market:washington-dc-baltimore-eastern-shore",
+          "name": "WASHINGTON DC BALTIMORE EASTERN SHORE",
+          "store_count": 31
+        },
+        {
+          "market_id": "market:richmond-shenandoah-valley-norfolk-roanoke",
+          "name": "RICHMOND SHENANDOAH VALLEY NORFOLK ROANOKE",
+          "store_count": 1
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:santonastasso-john-kathleen-toni-howe",
+      "name": "SANTONASTASSO, JOHN, KATHLEEN, & TONI HOWE",
+      "state_count": 1,
+      "states": {
+        "PA": 32
+      },
+      "store_count": 32,
+      "top_markets": [
+        {
+          "market_id": "market:pittsburgh-johnstown-erie",
+          "name": "PITTSBURGH JOHNSTOWN ERIE",
+          "store_count": 32
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:shalhoub-richard-m-richard-m-jr-stacey",
+      "name": "SHALHOUB, RICHARD M, RICHARD M JR. & STACEY",
+      "state_count": 1,
+      "states": {
+        "CA": 32
+      },
+      "store_count": 32,
+      "top_markets": [
+        {
+          "market_id": "market:los-angeles-san-diego",
+          "name": "LOS ANGELES SAN DIEGO",
+          "store_count": 31
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:ellis-russell-w-jordan",
+      "name": "ELLIS, RUSSELL W & JORDAN",
+      "state_count": 1,
+      "states": {
+        "TX": 31
+      },
+      "store_count": 31,
+      "top_markets": [
+        {
+          "market_id": "market:south-central-texas",
+          "name": "SOUTH CENTRAL TEXAS",
+          "store_count": 29
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:farren-paul",
+      "name": "FARREN, PAUL",
+      "state_count": 3,
+      "states": {
+        "CT": 3,
+        "MA": 18,
+        "RI": 10
+      },
+      "store_count": 31,
+      "top_markets": [
+        {
+          "market_id": "market:new-england",
+          "name": "NEW ENGLAND",
+          "store_count": 30
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:hendel-paul-mark-lauren-hendel-frew",
+      "name": "HENDEL, PAUL, MARK, & LAUREN HENDEL FREW",
+      "state_count": 1,
+      "states": {
+        "NY": 31
+      },
+      "store_count": 31,
+      "top_markets": [
+        {
+          "market_id": "market:new-york-metro",
+          "name": "NEW YORK METRO",
+          "store_count": 31
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:mignosi-robert",
+      "name": "MIGNOSI, ROBERT",
+      "state_count": 1,
+      "states": {
+        "MS": 31
+      },
+      "store_count": 31,
+      "top_markets": [
+        {
+          "market_id": "market:little-rock-shreveport-memphis-jackson",
+          "name": "LITTLE ROCK SHREVEPORT MEMPHIS JACKSON",
+          "store_count": 28
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:nichols-glen-d-jr-thomas",
+      "name": "NICHOLS, GLEN D JR. & THOMAS",
+      "state_count": 3,
+      "states": {
+        "KS": 10,
+        "MO": 7,
+        "OK": 14
+      },
+      "store_count": 31,
+      "top_markets": [
+        {
+          "market_id": "market:wichita-ok-city-tulsa-ft-smith",
+          "name": "WICHITA OK CITY TULSA FT SMITH",
+          "store_count": 16
+        },
+        {
+          "market_id": "market:joplin-quincy-springfield-col-jeff-city",
+          "name": "JOPLIN QUINCY SPRINGFIELD COL JEFF CITY",
+          "store_count": 15
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:patel-ajay-k-rikesh-a",
+      "name": "PATEL, AJAY K, & RIKESH A",
+      "state_count": 1,
+      "states": {
+        "LA": 31
+      },
+      "store_count": 31,
+      "top_markets": [
+        {
+          "market_id": "market:south-la",
+          "name": "SOUTH LA",
+          "store_count": 27
+        },
+        {
+          "market_id": "market:little-rock-shreveport-memphis-jackson",
+          "name": "LITTLE ROCK SHREVEPORT MEMPHIS JACKSON",
+          "store_count": 4
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:sanchez-frank-m-julia-n-marisol-c-francisco-m-veronica",
+      "name": "SANCHEZ, FRANK M, JULIA N, MARISOL C, FRANCISCO M, & VERONICA",
+      "state_count": 2,
+      "states": {
+        "CA": 24,
+        "TX": 7
+      },
+      "store_count": 31,
+      "top_markets": [
+        {
+          "market_id": "market:los-angeles-san-diego",
+          "name": "LOS ANGELES SAN DIEGO",
+          "store_count": 22
+        },
+        {
+          "market_id": "market:south-central-texas",
+          "name": "SOUTH CENTRAL TEXAS",
+          "store_count": 4
+        },
+        {
+          "market_id": "market:dallas-tyler",
+          "name": "DALLAS TYLER",
+          "store_count": 3
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:scari-anthony-j-john-r-brian-a",
+      "name": "SCARI, ANTHONY J, JOHN R & BRIAN A",
+      "state_count": 2,
+      "states": {
+        "NJ": 26,
+        "PA": 5
+      },
+      "store_count": 31,
+      "top_markets": [
+        {
+          "market_id": "market:new-york-metro",
+          "name": "NEW YORK METRO",
+          "store_count": 20
+        },
+        {
+          "market_id": "market:philadelphia",
+          "name": "PHILADELPHIA",
+          "store_count": 10
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:willoughby-rex",
+      "name": "WILLOUGHBY, REX",
+      "state_count": 1,
+      "states": {
+        "NC": 31
+      },
+      "store_count": 31,
+      "top_markets": [
+        {
+          "market_id": "market:triad-wilmington-wi-s-gnw",
+          "name": "TRIAD WILMINGTON WI S GNW",
+          "store_count": 30
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:awad-ramzi-george-sabina",
+      "name": "AWAD, RAMZI, GEORGE, & SABINA",
+      "state_count": 1,
+      "states": {
+        "CA": 30
+      },
+      "store_count": 30,
+      "top_markets": [
+        {
+          "market_id": "market:los-angeles-san-diego",
+          "name": "LOS ANGELES SAN DIEGO",
+          "store_count": 30
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:doherty-michael-j-catlin-zachary",
+      "name": "DOHERTY, MICHAEL J, CATLIN, & ZACHARY",
+      "state_count": 2,
+      "states": {
+        "MN": 5,
+        "ND": 25
+      },
+      "store_count": 30,
+      "top_markets": [
+        {
+          "market_id": "market:nsa",
+          "name": "NSA",
+          "store_count": 30
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:darmody-richard-m-richard-m-jr-michael-alexander",
+      "name": "DARMODY, RICHARD M, RICHARD M JR & MICHAEL ALEXANDER",
+      "state_count": 1,
+      "states": {
+        "ID": 29
+      },
+      "store_count": 29,
+      "top_markets": [
+        {
+          "market_id": "market:mwoa",
+          "name": "MWOA",
+          "store_count": 28
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:doane-richard-ryan-alyssa-angelovich",
+      "name": "DOANE, RICHARD, RYAN, & ALYSSA ANGELOVICH",
+      "state_count": 2,
+      "states": {
+        "NJ": 9,
+        "PA": 20
+      },
+      "store_count": 29,
+      "top_markets": [
+        {
+          "market_id": "market:philadelphia",
+          "name": "PHILADELPHIA",
+          "store_count": 28
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:facey-roger-d-scott",
+      "name": "FACEY, ROGER D, & SCOTT",
+      "state_count": 1,
+      "states": {
+        "CT": 29
+      },
+      "store_count": 29,
+      "top_markets": [
+        {
+          "market_id": "market:new-england",
+          "name": "NEW ENGLAND",
+          "store_count": 26
+        },
+        {
+          "market_id": "market:new-york-metro",
+          "name": "NEW YORK METRO",
+          "store_count": 3
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:fonseca-peter-j",
+      "name": "FONSECA, PETER J",
+      "state_count": 2,
+      "states": {
+        "NJ": 10,
+        "NY": 19
+      },
+      "store_count": 29,
+      "top_markets": [
+        {
+          "market_id": "market:new-york-metro",
+          "name": "NEW YORK METRO",
+          "store_count": 29
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:heinrich-regan-gist-snyder-thomas-d",
+      "name": "HEINRICH, REGAN GIST & SNYDER, THOMAS D",
+      "state_count": 1,
+      "states": {
+        "KY": 29
+      },
+      "store_count": 29,
+      "top_markets": [
+        {
+          "market_id": "market:louisville-lexington-knoxville-w-virginia",
+          "name": "LOUISVILLE LEXINGTON KNOXVILLE W VIRGINIA",
+          "store_count": 29
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:linders-blake-w-jacob-r",
+      "name": "LINDERS, BLAKE W & JACOB R",
+      "state_count": 2,
+      "states": {
+        "IL": 28,
+        "IN": 1
+      },
+      "store_count": 29,
+      "top_markets": [
+        {
+          "market_id": "market:des-moines-quad-cities-peoria-cent-il",
+          "name": "DES MOINES QUAD CITIES PEORIA CENT IL",
+          "store_count": 29
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:williams-james-estel-jr",
+      "name": "WILLIAMS, JAMES ESTEL JR",
+      "state_count": 2,
+      "states": {
+        "IL": 14,
+        "MO": 15
+      },
+      "store_count": 29,
+      "top_markets": [
+        {
+          "market_id": "market:st-louis",
+          "name": "ST LOUIS",
+          "store_count": 29
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:fagundo-cosme-w-dania-cosme-a",
+      "name": "FAGUNDO, COSME W, DANIA & COSME A",
+      "state_count": 1,
+      "states": {
+        "CA": 28
+      },
+      "store_count": 28,
+      "top_markets": [
+        {
+          "market_id": "market:san-francisco-santa-barbara",
+          "name": "SAN FRANCISCO SANTA BARBARA",
+          "store_count": 28
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:lyon-ted-j-astrid-b-jerry-l-sarah-b-mcnair",
+      "name": "LYON, TED J, ASTRID B & JERRY L & SARAH B MCNAIR",
+      "state_count": 2,
+      "states": {
+        "KY": 2,
+        "TN": 26
+      },
+      "store_count": 28,
+      "top_markets": [
+        {
+          "market_id": "market:greater-tennessee-valley",
+          "name": "GREATER TENNESSEE VALLEY",
+          "store_count": 27
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:singelyn-david-david-b",
+      "name": "SINGELYN, DAVID & DAVID B",
+      "state_count": 2,
+      "states": {
+        "NY": 26,
+        "PA": 2
+      },
+      "store_count": 28,
+      "top_markets": [
+        {
+          "market_id": "market:albany-buffalo-rochester-syracuse",
+          "name": "ALBANY BUFFALO ROCHESTER SYRACUSE",
+          "store_count": 28
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:snowberger-nicholas",
+      "name": "SNOWBERGER, NICHOLAS",
+      "state_count": 2,
+      "states": {
+        "MT": 26,
+        "WY": 2
+      },
+      "store_count": 28,
+      "top_markets": [
+        {
+          "market_id": "market:mwoa",
+          "name": "MWOA",
+          "store_count": 17
+        },
+        {
+          "market_id": "market:rmbu",
+          "name": "RMBU",
+          "store_count": 11
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:thorley-rick-m-ryan-m-jacob-kathryn-e-lopez-thorley-gary-mornhinweg",
+      "name": "THORLEY, RICK M, RYAN M, JACOB, KATHRYN E LOPEZ-THORLEY, GARY MORNHINWEG",
+      "state_count": 2,
+      "states": {
+        "FL": 7,
+        "OK": 21
+      },
+      "store_count": 28,
+      "top_markets": [
+        {
+          "market_id": "market:wichita-ok-city-tulsa-ft-smith",
+          "name": "WICHITA OK CITY TULSA FT SMITH",
+          "store_count": 21
+        },
+        {
+          "market_id": "market:alabama-nw-florida",
+          "name": "ALABAMA NW FLORIDA",
+          "store_count": 7
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:glaser-jack-i-phyllis-trudy-david-b",
+      "name": "GLASER, JACK I, PHYLLIS TRUDY & DAVID B",
+      "state_count": 1,
+      "states": {
+        "TX": 27
+      },
+      "store_count": 27,
+      "top_markets": [
+        {
+          "market_id": "market:houston-beaumont",
+          "name": "HOUSTON BEAUMONT",
+          "store_count": 15
+        },
+        {
+          "market_id": "market:south-central-texas",
+          "name": "SOUTH CENTRAL TEXAS",
+          "store_count": 12
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:hilburn-vaini-andi",
+      "name": "HILBURN VAINI, ANDI",
+      "state_count": 2,
+      "states": {
+        "AR": 5,
+        "MO": 22
+      },
+      "store_count": 27,
+      "top_markets": [
+        {
+          "market_id": "market:joplin-quincy-springfield-col-jeff-city",
+          "name": "JOPLIN QUINCY SPRINGFIELD COL JEFF CITY",
+          "store_count": 14
+        },
+        {
+          "market_id": "market:st-louis",
+          "name": "ST LOUIS",
+          "store_count": 13
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:lopez-leonardo-jr-cynthia-e-anthony",
+      "name": "LOPEZ, LEONARDO JR, CYNTHIA E & ANTHONY",
+      "state_count": 1,
+      "states": {
+        "FL": 27
+      },
+      "store_count": 27,
+      "top_markets": [
+        {
+          "market_id": "market:tampa-st-pete-orlando",
+          "name": "TAMPA ST PETE ORLANDO",
+          "store_count": 15
+        },
+        {
+          "market_id": "market:miami-w-palm-beach-ft-myers",
+          "name": "MIAMI W PALM BEACH FT MYERS",
+          "store_count": 12
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:watson-allen-n-james-c",
+      "name": "WATSON, ALLEN N & JAMES C",
+      "state_count": 1,
+      "states": {
+        "UT": 27
+      },
+      "store_count": 27,
+      "top_markets": [
+        {
+          "market_id": "market:mwoa",
+          "name": "MWOA",
+          "store_count": 25
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:boxley-iv-a-price",
+      "name": "BOXLEY IV, A PRICE",
+      "state_count": 1,
+      "states": {
+        "VA": 26
+      },
+      "store_count": 26,
+      "top_markets": [
+        {
+          "market_id": "market:richmond-shenandoah-valley-norfolk-roanoke",
+          "name": "RICHMOND SHENANDOAH VALLEY NORFOLK ROANOKE",
+          "store_count": 23
+        },
+        {
+          "market_id": "market:washington-dc-baltimore-eastern-shore",
+          "name": "WASHINGTON DC BALTIMORE EASTERN SHORE",
+          "store_count": 3
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:darmody-dustin-j-karin",
+      "name": "DARMODY, DUSTIN J & KARIN",
+      "state_count": 2,
+      "states": {
+        "IA": 7,
+        "NE": 19
+      },
+      "store_count": 26,
+      "top_markets": [
+        {
+          "market_id": "market:great-plains",
+          "name": "GREAT PLAINS",
+          "store_count": 26
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:house-john-nancy",
+      "name": "HOUSE, JOHN & NANCY",
+      "state_count": 1,
+      "states": {
+        "OH": 26
+      },
+      "store_count": 26,
+      "top_markets": [
+        {
+          "market_id": "market:cleveland",
+          "name": "CLEVELAND",
+          "store_count": 26
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:massey-william-t-daniel-h-chanda",
+      "name": "MASSEY, WILLIAM T, DANIEL H & CHANDA",
+      "state_count": 1,
+      "states": {
+        "TX": 26
+      },
+      "store_count": 26,
+      "top_markets": [
+        {
+          "market_id": "market:dallas-tyler",
+          "name": "DALLAS TYLER",
+          "store_count": 24
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:o-reilly-henry-charles-iii-julianna-tara-o-reilly-gibson",
+      "name": "O'REILLY, HENRY CHARLES III, JULIANNA, & TARA O'REILLY GIBSON",
+      "state_count": 1,
+      "states": {
+        "TX": 26
+      },
+      "store_count": 26,
+      "top_markets": [
+        {
+          "market_id": "market:dallas-tyler",
+          "name": "DALLAS TYLER",
+          "store_count": 25
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:scott-benjamin-jr",
+      "name": "SCOTT, BENJAMIN JR",
+      "state_count": 2,
+      "states": {
+        "KY": 10,
+        "OH": 16
+      },
+      "store_count": 26,
+      "top_markets": [
+        {
+          "market_id": "market:columbus-cincy-dayton-toledo-lima",
+          "name": "COLUMBUS CINCY DAYTON TOLEDO LIMA",
+          "store_count": 16
+        },
+        {
+          "market_id": "market:louisville-lexington-knoxville-w-virginia",
+          "name": "LOUISVILLE LEXINGTON KNOXVILLE W VIRGINIA",
+          "store_count": 10
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:wagner-robert-e-iii",
+      "name": "WAGNER, ROBERT E III",
+      "state_count": 1,
+      "states": {
+        "OK": 26
+      },
+      "store_count": 26,
+      "top_markets": [
+        {
+          "market_id": "market:wichita-ok-city-tulsa-ft-smith",
+          "name": "WICHITA OK CITY TULSA FT SMITH",
+          "store_count": 26
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:barnes-william-d-jr-laurie-b",
+      "name": "BARNES, WILLIAM D JR. & LAURIE B",
+      "state_count": 1,
+      "states": {
+        "VA": 25
+      },
+      "store_count": 25,
+      "top_markets": [
+        {
+          "market_id": "market:richmond-shenandoah-valley-norfolk-roanoke",
+          "name": "RICHMOND SHENANDOAH VALLEY NORFOLK ROANOKE",
+          "store_count": 23
+        },
+        {
+          "market_id": "market:washington-dc-baltimore-eastern-shore",
+          "name": "WASHINGTON DC BALTIMORE EASTERN SHORE",
+          "store_count": 2
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:funderburk-tim-a",
+      "name": "FUNDERBURK, TIM A.",
+      "state_count": 1,
+      "states": {
+        "TN": 25
+      },
+      "store_count": 25,
+      "top_markets": [
+        {
+          "market_id": "market:greater-tennessee-valley",
+          "name": "GREATER TENNESSEE VALLEY",
+          "store_count": 23
+        },
+        {
+          "market_id": "market:louisville-lexington-knoxville-w-virginia",
+          "name": "LOUISVILLE LEXINGTON KNOXVILLE W VIRGINIA",
+          "store_count": 2
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:hunt-peter-k-katie-hunt-rotolo-peter-rotolo",
+      "name": "HUNT, PETER K,  KATIE HUNT-ROTOLO & PETER ROTOLO",
+      "state_count": 1,
+      "states": {
+        "NY": 25
+      },
+      "store_count": 25,
+      "top_markets": [
+        {
+          "market_id": "market:new-york-metro",
+          "name": "NEW YORK METRO",
+          "store_count": 25
+        }
+      ]
+    },
+    {
+      "entity_id": "entity:johnson-jack-n-steven-a",
+      "name": "JOHNSON, JACK N & STEVEN A",
+      "state_count": 1,
+      "states": {
+        "AL": 25
+      },
+      "store_count": 25,
+      "top_markets": [
+        {
+          "market_id": "market:greater-tennessee-valley",
+          "name": "GREATER TENNESSEE VALLEY",
+          "store_count": 21
+        },
+        {
+          "market_id": "market:alabama-nw-florida",
+          "name": "ALABAMA NW FLORIDA",
+          "store_count": 4
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

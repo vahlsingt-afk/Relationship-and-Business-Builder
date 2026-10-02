@@ -1,0 +1,356 @@
+{
+  "competitor_id": "comp-berry-ai",
+  "competitor_slug": "berry-ai",
+  "display_name": "Berry AI",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [
+    "kitchen_drive_thru"
+  ],
+  "positioning_summary": "Berry AI is supported in this pass as a restaurant-technology vendor in: drive thru timers, computer vision robotics, security video.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-10-01",
+  "last_synced_at": "2026-10-02T09:46:58Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:58Z",
+  "latest_cos_commentary": {
+    "headline": "Direct Genius portfolio overlap identified.",
+    "genius_exposure": [
+      "kitchen_drive_thru"
+    ],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Validate account-level incumbent and deployment scope before positioning against Genius.",
+    "risk_and_uncertainty": "Evidence quality varies materially across this long-tail batch; unresolved names remain deliberately unclassified rather than guessed.",
+    "priority": "P2",
+    "confidence": 87,
+    "sources": [
+      {
+        "url": "https://support.berry-ai.com/hc/en-us/articles/47662564350100-What-is-Berry-AI-s-Drive-thru-Timer-system",
+        "title": "What is Berry AI's Drive-thru Timer system?",
+        "publisher": "Berry AI",
+        "published_at": "2026-03-27",
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 13,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 1,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "financial health/funding"
+      ]
+    }
+  },
+  "canonical_company_name": "Berry AI",
+  "website": "https://www.berry-ai.com/",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": [
+      {
+        "url": "https://support.berry-ai.com/hc/en-us/articles/47662564350100-What-is-Berry-AI-s-Drive-thru-Timer-system",
+        "title": "What is Berry AI's Drive-thru Timer system?",
+        "publisher": "Berry AI",
+        "published_at": "2026-03-27",
+        "accessed_at": "2026-09-29",
+        "source_type": "official_product"
+      }
+    ]
+  },
+  "operating_status": "active",
+  "relationship_class_recommendation": "product_line_competitor",
+  "restaurant_tech_categories": [
+    {
+      "category": "drive_thru_timers",
+      "basis": "Current evidence supports drive thru timers as a restaurant-facing category for Berry AI.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://support.berry-ai.com/hc/en-us/articles/47662564350100-What-is-Berry-AI-s-Drive-thru-Timer-system",
+          "title": "What is Berry AI's Drive-thru Timer system?",
+          "publisher": "Berry AI",
+          "published_at": "2026-03-27",
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "computer_vision_robotics",
+      "basis": "Current evidence supports computer vision robotics as a restaurant-facing category for Berry AI.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://support.berry-ai.com/hc/en-us/articles/47662564350100-What-is-Berry-AI-s-Drive-thru-Timer-system",
+          "title": "What is Berry AI's Drive-thru Timer system?",
+          "publisher": "Berry AI",
+          "published_at": "2026-03-27",
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    },
+    {
+      "category": "security_video",
+      "basis": "Current evidence supports security video as a restaurant-facing category for Berry AI.",
+      "confidence": 95,
+      "sources": [
+        {
+          "url": "https://support.berry-ai.com/hc/en-us/articles/47662564350100-What-is-Berry-AI-s-Drive-thru-Timer-system",
+          "title": "What is Berry AI's Drive-thru Timer system?",
+          "publisher": "Berry AI",
+          "published_at": "2026-03-27",
+          "accessed_at": "2026-09-29",
+          "source_type": "official_product"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "value": "Berry AI Drive-Thru Timer (drive_thru_timers, computer_vision_robotics, security_video)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://support.berry-ai.com/hc/en-us/articles/47662564350100-What-is-Berry-AI-s-Drive-thru-Timer-system",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Berry AI Counter Timer (drive_thru_timers, computer_vision_robotics, security_video)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://support.berry-ai.com/hc/en-us/articles/47662564350100-What-is-Berry-AI-s-Drive-thru-Timer-system",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    },
+    {
+      "value": "Berry AI Loss Prevention/Security (drive_thru_timers, computer_vision_robotics, security_video)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://support.berry-ai.com/hc/en-us/articles/47662564350100-What-is-Berry-AI-s-Drive-thru-Timer-system",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "strengths": [
+    {
+      "value": "Vendor has current restaurant-specific product evidence in the cited source(s).",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://support.berry-ai.com/hc/en-us/articles/47662564350100-What-is-Berry-AI-s-Drive-thru-Timer-system",
+      "finding_type": "vendor_stated",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": true,
+      "is_inference": false
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated product evidence does not by itself establish ROI, reliability, implementation quality, or systemwide customer adoption; independent validation remains a research gap.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "https://support.berry-ai.com/hc/en-us/articles/47662564350100-What-is-Berry-AI-s-Drive-thru-Timer-system",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    },
+    {
+      "value": "Berry AI documents that offline cameras may require power cycling a restaurant PoE switch and waiting up to 15 minutes for feeds to recover.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://support.berry-ai.com/hc/en-us/articles/29853457778324-My-Berry-AI-camera-s-is-offline-How-do-I-restore-its-connection",
+      "finding_type": "independently_verified",
+      "source_owner": "Berry AI Support",
+      "source_type": "support documentation",
+      "published_at": "2024-10-10",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "The failure mode is documented but frequency is unknown."
+    }
+  ],
+  "key_customers": [
+    {
+      "value": "Restaurant Dive reported that Culver's planned to offer Berry AI vision technology across 1,000 restaurants beginning in Q2 2026.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.restaurantdive.com/news/culvers-berryai-vision-artificial-intelligence-rollout/817665/",
+      "finding_type": "independently_verified",
+      "source_owner": "Restaurant Dive",
+      "source_type": "industry publication",
+      "published_at": "2026-05-01",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Announced rollout, not audited completion."
+    },
+    {
+      "value": "Berry AI announced a brand-wide Culver's Vision AI deployment across 1,000-plus locations covering service execution, vehicle flow, throughput, and performance measurement across drive-thru, dine-in, and pickup.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.berry-ai.com/blog/what-a-1-000-location-vision-ai-rollout-signals-for-qsr/",
+      "finding_type": "independently_verified",
+      "source_owner": "Berry AI",
+      "source_type": "vendor announcement",
+      "published_at": "2026-05-08",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Vendor-controlled announcement with a Culver's COO statement; 1,000-plus is announced rollout scope, not an independently audited active-installation count."
+    },
+    {
+      "value": "An anonymous four-store Georgia Zaxby's franchisee deployed Berry AI Drive-Thru Timer with kitchen-monitor and cloud-dashboard surfaces over 90 days.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.berry-ai.com/case-studies/zaxby-s-operator-reverses-a-10-slide-by-installing-berry-ai-drive-thru-timer-in-georgia/",
+      "finding_type": "independently_verified",
+      "source_owner": "Berry AI",
+      "source_type": "case study",
+      "published_at": "2025-06-20",
+      "deployment_scope": "franchisee",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "The operator is unnamed, scope is four franchisee stores rather than corporate Zaxby's, and results are vendor-published."
+    },
+    {
+      "value": "Berry AI reports selected-location use of camera-based drive-thru timers by Wenspok Companies, with real-time pre-menu queue and drive-off signals and a stated intent to expand.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.berry-ai.com/blog/how-wenspok-companies-transformed-customer-service-with-berry-s-camera-based-timers/",
+      "finding_type": "independently_verified",
+      "source_owner": "Berry AI",
+      "source_type": "customer story",
+      "published_at": "2023-09-01",
+      "deployment_scope": "pilot",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "The page does not identify brands, locations, store count, or prove that the stated expansion occurred; the 14.9% speed result is vendor-authored."
+    },
+    {
+      "value": "Berry AI's pizza customer page attributes selection of its AI-based timer to an unnamed Little Caesars franchisee.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.berry-ai.com/customers/pizza/",
+      "finding_type": "independently_verified",
+      "source_owner": "Berry AI",
+      "source_type": "segment customer page / testimonial",
+      "deployment_scope": "franchisee",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "The testimonial names no legal operator, location, store count, implementation date, product configuration, or measured outcome."
+    }
+  ],
+  "recent_news": [],
+  "product_lineage": [],
+  "negative_findings": [],
+  "conflicts_notes": [],
+  "category_assessment_status": "researched",
+  "category_assessment_packet_id": "rbb-competitor-category-gapfill-20260929-batches02-04",
+  "category_assessed_at": "2026-09-29",
+  "vendor_claims": [
+    {
+      "value": "Berry AI's restaurant portfolio includes AI Drive-Thru Timer, AI Counter/Dining Room Timer, and AI Loss Prevention/Security.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.berry-ai.com/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Berry AI",
+      "source_type": "vendor website",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": ""
+    },
+    {
+      "value": "Drive-Thru Timer uses above-ground cameras to measure queue, speaker, window, pull-forward, and line-busting activity.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.berry-ai.com/solutions/ai-drive-thru-timer/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Berry AI",
+      "source_type": "vendor product page",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Accuracy and ROI comparisons remain vendor claims."
+    }
+  ]
+}

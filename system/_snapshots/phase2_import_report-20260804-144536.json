@@ -1,0 +1,111 @@
+{
+  "phase2_file": "system/research/phase2_kiosks_evidence_draft_2026-08-03.json",
+  "category": "Kiosks",
+  "rows_processed": 12,
+  "rows_skipped": 0,
+  "dry_run": true,
+  "added": 9,
+  "updated": 0,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 9,
+    "enrich_existing_relationship": 0,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 0,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 3,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Grubbrr",
+        "customer": "Bojangles",
+        "tech_category": "Kiosks",
+        "relationship_id": "rel-brand-bojangles-kiosks-approved-hardware-vendor-vendor-grubbrr"
+      },
+      {
+        "vendor": "Grubbrr",
+        "customer": "PDQ",
+        "tech_category": "Kiosks",
+        "relationship_id": "rel-brand-pdq-chicken-kiosks-approved-hardware-vendor-vendor-grubbrr"
+      },
+      {
+        "vendor": "Grubbrr",
+        "customer": "BurgerFi",
+        "tech_category": "Kiosks",
+        "relationship_id": "rel-brand-burgerfi-kiosks-approved-hardware-vendor-vendor-grubbrr"
+      },
+      {
+        "vendor": "Grubbrr",
+        "customer": "Dave's Hot Chicken",
+        "tech_category": "Kiosks",
+        "relationship_id": "rel-brand-dave-s-hot-chicken-kiosks-approved-hardware-vendor-vendor-grubbrr"
+      },
+      {
+        "vendor": "Zivelo",
+        "customer": "McDonald's",
+        "tech_category": "Kiosks",
+        "relationship_id": "rel-brand-mcdonald-s-kiosks-approved-hardware-vendor-vendor-zivelo"
+      },
+      {
+        "vendor": "Zivelo",
+        "customer": "Thai Chili 2 Go",
+        "tech_category": "Kiosks",
+        "relationship_id": "rel-brand-thai-chili-2-go-kiosks-approved-hardware-vendor-vendor-zivelo"
+      },
+      {
+        "vendor": "Olea Kiosks",
+        "customer": "The Habit Burger Grill",
+        "tech_category": "Kiosks",
+        "relationship_id": "rel-brand-the-habit-burger-grill-kiosks-approved-hardware-vendor-vendor-olea-kiosks"
+      },
+      {
+        "vendor": "Nextep Systems",
+        "customer": "Moe's Southwest Grill",
+        "tech_category": "Kiosks",
+        "relationship_id": "rel-brand-moe-s-southwest-grill-kiosks-franchisee-deployment-vendor-nextep-systems"
+      },
+      {
+        "vendor": "Appetize",
+        "customer": "Hale & Hearty",
+        "tech_category": "Kiosks",
+        "relationship_id": "rel-brand-hale-hearty-kiosks-unknown-vendor-appetize"
+      }
+    ],
+    "enrich_existing_relationship": [],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [
+      {
+        "vendor": "Zivelo",
+        "customer": "Sonic Drive-In",
+        "tech_category": "Kiosks",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Olea Kiosks",
+        "customer": "CEFCO",
+        "tech_category": "Kiosks",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Nextep Systems",
+        "customer": "Wow Bao",
+        "tech_category": "Kiosks",
+        "relationship_id": null
+      }
+    ],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

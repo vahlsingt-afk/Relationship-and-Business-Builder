@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-09-22T19:31:06",
+  "graph_id": "micro_ecosystem:mcdonalds_us_ops",
+  "sheets": [
+    {
+      "formula_cells": 47976,
+      "literal_cells": 25,
+      "max_column": 25,
+      "max_row": 2000,
+      "sheet": "NSN-Lookup"
+    },
+    {
+      "formula_cells": 0,
+      "literal_cells": 1415808,
+      "max_column": 129,
+      "max_row": 22047,
+      "sheet": "StoreTech"
+    },
+    {
+      "formula_cells": 11,
+      "literal_cells": 78,
+      "max_column": 8,
+      "max_row": 12,
+      "sheet": "FO OTM-STIM"
+    },
+    {
+      "formula_cells": 0,
+      "literal_cells": 424,
+      "max_column": 8,
+      "max_row": 53,
+      "sheet": "Markets"
+    },
+    {
+      "formula_cells": 41110,
+      "literal_cells": 27689,
+      "max_column": 7,
+      "max_row": 13843,
+      "sheet": "RFM"
+    },
+    {
+      "formula_cells": 37437,
+      "literal_cells": 42836,
+      "max_column": 11,
+      "max_row": 22047,
+      "sheet": "FBP"
+    },
+    {
+      "formula_cells": 0,
+      "literal_cells": 444,
+      "max_column": 4,
+      "max_row": 111,
+      "sheet": "Entity"
+    },
+    {
+      "formula_cells": 0,
+      "literal_cells": 27392,
+      "max_column": 2,
+      "max_row": 13696,
+      "sheet": "COOP2"
+    }
+  ],
+  "version": 1,
+  "workbook": {
+    "captured_at": "2026-09-22T19:30:53",
+    "id": "src-workbook-nsn-lookup-2026-09-sep-a4ec93c362",
+    "notes": "Raw upload treated as source material; graph projection is the durable query artifact.",
+    "path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/micro_graph_sources/NSN Lookup 2026-09 SEP.xlsx",
+    "retention_class": "derived_intelligence",
+    "sha256": "a4ec93c362a73470fb6656a7c89900072d0d6390f25a71cc08e345ecc788e373",
+    "source_type": "xlsx_micro_topology_workbook",
+    "title": "NSN Lookup 2026-09 SEP.xlsx"
+  }
+}

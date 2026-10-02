@@ -1,0 +1,83 @@
+{
+  "competitor_id": "comp-grubbrr",
+  "competitor_slug": "grubbrr",
+  "display_name": "GRUBBRR",
+  "aliases": [],
+  "vendor_entity_id": "vendor-grubbrr",
+  "primary_category": "kiosks",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Samsung hardware partnership with joint go-to-market, including a Mar 2025 \"results or clients don't pay\" guarantee",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:47:22Z"
+      },
+      {
+        "point": "**Bojangles** self-ordering kiosks via Samsung + GRUBBRR (Nov 12, 2024) — a Genius customer (signed Q1 2026 per Payments Dive), so a coexistence or displacement point to watch",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:22Z"
+      },
+      {
+        "point": "Claims +25% average ticket and $75K+ annual ROI per location",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:47:22Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:47:04Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:04Z",
+  "latest_cos_commentary": {
+    "headline": "Kiosk-led self-service competes with Genius ordering and DMB at some QSRs.",
+    "genius_exposure": "Kiosk-led self-service competes with Genius ordering and DMB at some QSRs.",
+    "competitive_timing": "GRUBBRR currently markets restaurant self-order kiosks plus digital menu boards.",
+    "sales_response": "Compare payment integration, menu maintenance and actual kiosk conversion in named stores.",
+    "risk_and_uncertainty": "Vendor product page does not confirm chain-scale live rollout.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 60
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 60,
+    "pack_claim_count": 11,
+    "pack_claims_with_url": 7,
+    "pack_claims_inherited_url": 5,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 4,
+      "legacy_claims_need_date_and_current_status_check": 11,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

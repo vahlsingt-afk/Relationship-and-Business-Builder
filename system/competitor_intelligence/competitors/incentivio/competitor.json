@@ -1,0 +1,63 @@
+{
+  "competitor_id": "comp-incentivio",
+  "competitor_slug": "incentivio",
+  "display_name": "Incentivio",
+  "aliases": [],
+  "vendor_entity_id": "vendor-incentivio",
+  "primary_category": "loyalty",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Case results: Huey Magoo's added 250,000+ members with loyalty sales +14.5%; Everbowl active membership +128%",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:20Z"
+      },
+      {
+        "point": "Publishes benchmark data (4,000+ locations, 19 cuisines) — builds category authority",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:47:20Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-10-02T09:47:00Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:00Z",
+  "latest_cos_commentary": {
+    "headline": "Combined restaurant ordering and engagement suite can protect guest relationships at growing chains.",
+    "genius_exposure": "Combined restaurant ordering and engagement suite can protect guest relationships at growing chains.",
+    "competitive_timing": "Incentivio announced an updated operator dashboard for loyalty, promotions and messaging in April 2026.",
+    "sales_response": "Compare first-party guest identity, rewards economics and integration quality at named restaurants.",
+    "risk_and_uncertainty": "Dashboard launch does not establish uptake or incremental sales lift.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 50
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 50,
+    "pack_claim_count": 12,
+    "pack_claims_with_url": 8,
+    "pack_claims_inherited_url": 6,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 4,
+      "legacy_claims_need_date_and_current_status_check": 12,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "competitor_id": "comp-touchpoint",
+  "competitor_slug": "touchpoint",
+  "display_name": "Touchpoint",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Touchpoint markets differentiators of ~80% loyalty program participation (vs. a claimed ~15% industry average), 99.95% platform uptime with 5x redundancy, merchant ownership of transaction/member data in a private data warehouse, and compatibility with legacy Windows/Android/iOS hardware.",
+        "evidence_id": "note-0002",
+        "added_at": "2026-09-29T15:44:16Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:38Z",
+  "latest_cos_commentary": {
+    "headline": "Touchpoint is a venture-backed, bootstrapped-origin unified commerce platform (OmniFusion) targeting enterprise multi-location QSR and coffee/pizza chains with a single-portal POS+KDS+ordering+loyalty stack.",
+    "genius_exposure": "Competes directly with Genius's pos, kitchen_drive_thru, and loyalty_engagement lines by offering a single-vendor consolidation play aimed at chains currently running fragmented point solutions.",
+    "competitive_timing": "Company is still small (11-50 employees per aggregator data) and has not published named customer case studies, suggesting an early enterprise sales stage rather than broad market penetration.",
+    "sales_response": "Where a prospect cites 'unified platform' or 'single portal' messaging, confirm whether they've evaluated Touchpoint; ask for specifics on uptime/loyalty-participation claims and request references, since none are publicly documented.",
+    "risk_and_uncertainty": "No independently verified customer list, revenue, or market share data exists; leadership and funding details rely on a single profile piece and aggregator sites rather than a primary press release.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 114
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 114,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Pricing signals",
+        "Financial / Market Health (audited)"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "named customer case study (none published as of research date)",
+        "confirm funding total and investor list via primary press release (currently sourced only from data-broker aggregators)",
+        "pricing / contract structure"
+      ]
+    }
+  }
+}

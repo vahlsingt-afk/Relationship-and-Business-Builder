@@ -1,0 +1,18 @@
+{
+  "competitor_slug": "lightspeed-commerce-lightspeed-restaurant-upserve",
+  "vendor_display_name": "Lightspeed Commerce (Lightspeed Restaurant / Upserve)",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Exited US restaurants, so it is now a weak US competitor to Genius"
+    },
+    {
+      "point": "Still GAAP loss-making: FY2026 net loss $(144.4)M"
+    }
+  ]
+}

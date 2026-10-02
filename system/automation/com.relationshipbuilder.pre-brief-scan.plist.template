@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Template — render this to:
+      ~/Library/LaunchAgents/com.relationshipbuilder.pre-brief-scan.plist
+
+  Pre-brief scan job — runs at 4:00 AM, one hour before the 5:00 AM brief.
+
+  This job runs the gather phase only (--scan-only):
+    1. fetch_google_accounts  — pull latest Gmail / Calendar into system/inbox/
+    2. refresh_intelligence_caches — refresh_sources.py, passive_email_intelligence,
+       relationship_signals, passive_ri_ingest, intelligence_assessment
+    3. capture_ingest_scan / capture_process_all — transcribe and summarize
+       Just Press Record captures. capture_process_all's LLM-based transcript
+       summary (transcript_summarizer.py) silently no-ops without
+       OPENAI_API_KEY in this job's own environment (found 2026-07-20: this
+       job ran for weeks with only RB_PROJECT_DIR set, so every automated
+       capture fell back to the much weaker keyword-trigger triage instead of
+       the LLM summary morning-pipeline.plist already has the key for).
+    4. Does NOT build or publish the brief.
+
+  By the time the 5:00 AM morning-pipeline (--brief-only) fires, all source
+  caches are already warm.  The brief build is fast (pure cache read) and
+  contains intelligence gathered at 4 AM, not 5 AM.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.relationshipbuilder.pre-brief-scan</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>__PYTHON__</string>
+        <string>__SECRETS_RUNNER__</string>
+        <string>__PYTHON__</string>
+        <string>__WRAPPER__</string>
+        <string>--scan-only</string>
+    </array>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>RB_PROJECT_DIR</key>
+        <string>__PROJECT_DIR__</string>
+    </dict>
+
+    <!-- Run at 4:00 AM local time — one hour before the brief build. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key><integer>4</integer>
+        <key>Minute</key><integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>__LOG_OUT__</string>
+    <key>StandardErrorPath</key>
+    <string>__LOG_ERR__</string>
+
+    <key>WorkingDirectory</key>
+    <string>__PROJECT_DIR__</string>
+
+    <key>LowPriorityIO</key>
+    <true/>
+    <key>Nice</key>
+    <integer>5</integer>
+</dict>
+</plist>

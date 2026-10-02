@@ -1,0 +1,45 @@
+{
+  "subject_id": "subject-upm-adhesive-materials",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-25T16:12:13Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/upm-adhesive-materials/current/UPM-Adhesive-Materials_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-25T16:12:28Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/upm-adhesive-materials/current/UPM-Adhesive-Materials_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-26T09:20:50Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/upm-adhesive-materials/current/UPM-Adhesive-Materials_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-09-29T09:19:07Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/upm-adhesive-materials/current/UPM-Adhesive-Materials_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 5,
+      "generated_at": "2026-10-01T10:43:12Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/upm-adhesive-materials/current/UPM-Adhesive-Materials_Competitive-Brief.md",
+      "superseded": false
+    }
+  ]
+}

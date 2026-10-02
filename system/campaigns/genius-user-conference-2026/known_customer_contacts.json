@@ -1,0 +1,353 @@
+{
+  "campaign_id": "genius-user-conference-2026",
+  "generated_at": "2026-07-10T18:30:11+00:00",
+  "contacts": [
+    {
+      "contact_id": "jeff-caplan",
+      "name": "Jeff Caplan",
+      "merchant": "Church's Chicken",
+      "title": "Senior VP, Enterprise Technology",
+      "matched_via": "name"
+    },
+    {
+      "contact_id": "mj-worsham",
+      "name": "MJ Worsham",
+      "merchant": "Five Guys",
+      "title": "VP, Restaurant Technology",
+      "matched_via": "name"
+    },
+    {
+      "contact_id": "zerrick-pearson",
+      "name": "Zerrick Pearson",
+      "merchant": "Five Guys",
+      "title": "CIO",
+      "matched_via": "name"
+    }
+  ],
+  "unmatched": [
+    {
+      "name": "Adam Wilkinson",
+      "email": "awilkinson@churchs.com",
+      "merchant": "Church's Chicken",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Dean Kimball",
+      "email": "dean.kimball@yadavgroup.net",
+      "merchant": "Del Taco",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Tara Hughes",
+      "email": "thughes@deltaco.com",
+      "merchant": "Del Taco",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Austin Sanders",
+      "email": "austin.sanders@dutchbros.com",
+      "merchant": "Dutch Bros.",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Krisha Nagavolu",
+      "email": "krisha.nagavolu@dutchbros.com",
+      "merchant": "Dutch Bros.",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Craig Eaton",
+      "email": "craig.eaton@graeters.com",
+      "merchant": "Graeter's",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Austin Bach",
+      "email": "austin.bach@graeters.com",
+      "merchant": "Graeter's",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Adam Paduchowski",
+      "email": "a.padochowski@goldencorral.net",
+      "merchant": "Golden Corral",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Dawn Gillis",
+      "email": "dawn.gillis@goldencorral.net",
+      "merchant": "Golden Corral",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Suzie Pfeiffer",
+      "email": "spfeiffer@larosas.com",
+      "merchant": "LaRosa's",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Nick LaRosa",
+      "email": "nlarosa@larosas.com",
+      "merchant": "LaRosa's",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Jeff Goehring",
+      "email": "jeff.goehring@steaknshake.com",
+      "merchant": "Steak N Shake",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Mark Doerr",
+      "email": "mark.doerr@steaknshake.com",
+      "merchant": "Steak N Shake",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Malcolm Fisher",
+      "email": "malcolm.fisher@dominos.com",
+      "merchant": "Domino's",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Mark Kennedy",
+      "email": "mark.kennedy@dominos.com",
+      "merchant": "Domino's",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Scott Engel",
+      "email": "sengel@starbucks.com",
+      "merchant": "Starbucks",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Peter Jessiman",
+      "email": "peter.jessiman@wendys.com",
+      "merchant": "Wendy's",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Lynsey Soliday",
+      "email": "lynsey.soliday@wendys.com",
+      "merchant": "Wendy's",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Jayne Stegemiller",
+      "email": "stegemiller_j@subway.com",
+      "merchant": "Subway",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Joanna Dean",
+      "email": "joanna.dean@blackbeardiner.com",
+      "merchant": "Black Bear Diner",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Adam Raver",
+      "email": "adam.raver@blackbeardiner.com",
+      "merchant": "Black Bear Diner",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Dave Hirasawa",
+      "email": "dave.hirasawa@boyneresorts.com",
+      "merchant": "Boyne USA",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Trish Morrisey",
+      "email": "trish.morrissey@boyneresorts.com",
+      "merchant": "Boyne USA",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Don Turowski",
+      "email": "dturowski@eatnpark.com",
+      "merchant": "Eat'n Park",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Michael Mihalso",
+      "email": "mmihalco@eatnpark.com",
+      "merchant": "Eat'n Park",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Erin Stoughton",
+      "email": "estoughton@eatnpark.com",
+      "merchant": "Eat'n Park",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Bill Valentas",
+      "email": "billv@freddysusa.com",
+      "merchant": "Freddy's",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Sean Thompson",
+      "email": "sean@freddysusa.com",
+      "merchant": "Freddy's",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Scott Haveman",
+      "email": "scott.haveman@lcecorp.com",
+      "merchant": "Little Caesars",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Keith Faigan",
+      "email": "keith.faigin@lcecorp.com",
+      "merchant": "Little Caesars",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Kenny Brooks",
+      "email": "kbrooks@millersalehouse.com",
+      "merchant": "Miller's Ale House",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Debbie Brown",
+      "email": "dbrown@millersalehouse.com",
+      "merchant": "Miller's Ale House",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Corey Ladusky",
+      "email": "corey@slimchickens.com",
+      "merchant": "Slim Chickens",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Michael Thunnel",
+      "email": "mthunell@redrobin.com",
+      "merchant": "Red Robin",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Tim McKenna",
+      "email": "tmckenna@redrobin.com",
+      "merchant": "Red Robin",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Janet Neafus",
+      "email": "janet_neafus@papajohns.com",
+      "merchant": "Papa Johns",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Sarah Pflug",
+      "email": "sarah.pflug@papajohns.com",
+      "merchant": "Papa Johns",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Eric Arnold",
+      "email": "eric_arnold@papajohns.com",
+      "merchant": "Papa Johns",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Jimmy Wood",
+      "email": "jimmy.wood@crackerbarrel.com",
+      "merchant": "Cracker Barrel",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Neisha Moore",
+      "email": "neisha.moore@crackerbarrel.com",
+      "merchant": "Cracker Barrel",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Russ McGill",
+      "email": "russ.mcgill@crackerbarrel.com",
+      "merchant": "Cracker Barrel",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Kathy Mueller",
+      "email": "kathy.mueller@bobevans.com",
+      "merchant": "Bob Evans",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Taylor Crane",
+      "email": "taylor.crane@bobevans.com",
+      "merchant": "Bob Evans",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Meghraj Tayade",
+      "email": "meghraj.tayade@bobevans.com",
+      "merchant": "Bob Evans",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Chris Lockhart",
+      "email": "chris.lockhart@bobevans.com",
+      "merchant": "Bob Evans",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Alejandro Issa",
+      "email": "aissa@popeyes.com",
+      "merchant": "Firehouse Subs",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Kathereen Jao",
+      "email": "kjao@rbi.com",
+      "merchant": "Firehouse Subs",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Kasie Spence",
+      "email": "kasie.spence@sixflags.com",
+      "merchant": "Six Flags",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Jack White",
+      "email": "jack.white@sixflags.com",
+      "merchant": "Six Flags",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Stephanie Kuipers",
+      "email": "stephanie.kuipers@nordstrom.com",
+      "merchant": "Nordstrom",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Anna Powell",
+      "email": "anna.powell@nordstrom.com",
+      "merchant": "Nordstrom",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Zachary Campbell",
+      "email": "zcampbel@delawarenorth.com",
+      "merchant": "Delaware North/Jacksonville Jags",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Linda Kopp",
+      "email": "lkopp@delawarenorth.com",
+      "merchant": "Delaware North/Jacksonville Jags",
+      "basis": "unmatched"
+    },
+    {
+      "name": "Arnold Perez",
+      "email": "mailto:arperez@heritagegrocers.com",
+      "merchant": "Heritage Grocery Group",
+      "basis": "unmatched"
+    }
+  ]
+}

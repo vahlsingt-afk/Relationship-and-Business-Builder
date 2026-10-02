@@ -1,0 +1,87 @@
+{
+  "file_id": "cap-eed0177ecf9a4bf8",
+  "queued_at": "2026-09-27T09:17:45+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-26_2207_3-owl-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-26_2207_3-owl-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260926-2207-3-owl-validation`\n- Research system: `Codex web research`\n- Started at: `2026-09-26 22:07 CDT`\n- Completed at: `2026-09-26 22:11 CDT`\n- Research scope: First-party customer and product-specific page validation for 3 Owl Inc\n- Queue item or vendor: `competitor:3-owl-inc`\n- Methodology: Candidate-page validation and first-party competitor/customer research\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 4\n- Company/competitor profile observations added or revised: 2\n- Conflicts found: 3\n- Material takeaway: 3 Owl is a restaurant-focused digital-experience implementation partner rather than a core POS vendor. Its public case studies show direct work across Olo commerce, Punchh or Thanx loyalty, Radar geolocation, Uberall or Yext location data, and custom restaurant frontends for Duck Donuts, Frank Pepe's, Blaze Pizza, and the Great American Cookies/Marble Slab portfolio. The relationships and integration scopes are strongly supported by first-party pages; performance claims remain vendor-authored and are not independently validated.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: Duck Donuts\n- Vendor: 3 Owl Inc\n- Product or category: Custom restaurant frontend; Olo commerce; Radar geolocation; Uberall location data\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: 3 Owl's first-party case study names Duck Donuts, links to the live brand site, and describes the implemented frontend and named integrations in detail.\n- Source title: Duck Donuts Custom Frontend\n- Source URL: https://3owl.agency/case-study/duck-donuts-custom-frontend/\n- Publisher or source owner: 3 Owl Inc\n- Published date, if known: Not stated\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: 3 Owl says it built a brand-owned custom frontend whose menu is fueled directly by Olo, with Radar for geolocation and Uberall for location data. It also describes custom dozen and half-dozen builders and a one-page checkout.\n- Product-specific evidence: Olo is described as the menu system of record; menu updates, upsells, and order details flow from Olo into the custom experience. The page reports an 82% checkout conversion rate, 28% revenue lift, and 60% reduction in monthly expenditures.\n- Conflicting or limiting evidence: The outcome metrics are vendor-authored, the measurement periods and baselines are not disclosed, and the page's animated result counters render as zero in extracted text even though narrative prose reports nonzero outcomes.\n- Recommended follow-up: Validate the current production relationship and outcome measurement window through Duck Donuts or Olo documentation.\n\n### Observation 2\n\n- Brand: Frank Pepe's Pizzeria Napoletana\n- Vendor: 3 Owl Inc\n- Product or category: Custom restaurant frontend; Olo commerce; Punchh loyalty; Uberall location data\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: 3 Owl's first-party case study names Frank Pepe's, links to the live site, and provides implementation-level descriptions of Olo, Punchh, and the custom frontend.\n- Source title: Frank Pepe's Pizzeria Custom Frontend\n- Source URL: https://3owl.agency/case-study/frank-pepes-pizzeria/\n- Publisher or source owner: 3 Owl Inc\n- Published date, if known: Not stated\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: 3 Owl says it integrated Olo into the core website architecture, built a mobile-first pizza customization interface and single-page checkout, and wove Punchh loyalty directly into the ordering flow. Uberall is listed for location data.\n- Product-specific evidence: The page describes direct Olo commerce integration, Punchh loyalty earning within the ordering flow, smart pickup/delivery handoff logic, and Uberall location data.\n- Conflicting or limiting evidence: The page says the project is live, but does not state launch date, estate coverage, or an independently measured results methodology. Animated outcome counters render as zero in extracted text and should not be treated as results.\n- Recommended follow-up: Confirm current estate-wide use and any independently supported lift metrics through Frank Pepe's, Olo, or Punchh.\n\n### Observation 3\n\n- Brand: Blaze Pizza\n- Vendor: 3 Owl Inc\n- Product or category: Enterprise marketing website; Olo menu data; Thanx loyalty/ordering handoff; Radar geolocation; Yext location data\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: The first-party case study names Blaze Pizza, links to its live website, and describes a brand-owned decoupled website plus named integrations and data flows.\n- Source title: Blaze Pizza Enterprise Marketing Website\n- Source URL: https://3owl.agency/case-study/blaze-pizza-website-design-development/\n- Publisher or source owner: 3 Owl Inc\n- Published date, if known: Not stated\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: 3 Owl says it rebuilt Blaze's digital presence on an open, brand-owned foundation, used Olo as the system of record for menu data, linked location listings to the Thanx ordering site, and integrated Yext location listings with Radar geolocation.\n- Product-specific evidence: Olo supplies current menu data to the marketing experience; Thanx is the ordering destination; Yext maintains location data; Radar identifies nearby restaurants.\n- Conflicting or limiting evidence: The stated 70% reduction in monthly out-of-pocket expenses and four-month launch timeline are vendor-authored with no disclosed baseline or independent validation. The page presents a marketing-site integration, not a claim that 3 Owl supplies POS.\n- Recommended follow-up: Confirm the current ordering and loyalty architecture through Blaze Pizza, Thanx, Olo, Yext, or Radar.\n\n### Observation 4\n\n- Brand: Great American Cookies and Marble Slab Creamery / FAT Brands\n- Vendor: 3 Owl Inc\n- Product or category: Co-branded digital commerce; Olo commerce; Punchh loyalty; Radar geolocation; Uberall location data; custom product builder\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 95%\n- Confidence rationale: 3 Owl's first-party case study names both brands and FAT Brands, gives detailed channel-migration and integration steps, and links the work to a scalable portfolio solution.\n- Source title: Great American Cookies' Cobranded Experience\n- Source URL: https://3owl.agency/case-study/great-american-cookies-custom-frontend-website/\n- Publisher or source owner: 3 Owl Inc\n- Published date, if known: Not stated\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: 3 Owl says it merged Marble Slab locations into the Great American Cookies Olo channel, preserved standalone Marble Slab identity through domain routing, integrated Punchh, Radar, and Uberall, and built a real-time 3D cookie-cake customizer.\n- Product-specific evidence: Olo channel consolidation, Punchh loyalty, Radar mapping, Uberall location data, POS-migration mapping for NCR Aloha Cloud, and Google Pay/Apple Pay checkout support are described.\n- Conflicting or limiting evidence: The 22% sales lift, 8% average-order-value lift, and 14% conversion lift are vendor-authored and lack disclosed baselines, time windows, or independent attribution. A solution described as scalable across 16 FAT Brands concepts should not be treated as proof that all 16 deployed it.\n- Recommended follow-up: Validate deployed-brand scope and current FAT Brands architecture through FAT Brands, Olo, Punchh, or NCR Voyix documentation.\n\n## Company / competitor profile observations\n\n### Competitor profile observation 1\n\n- Target: `competitor:3-owl-inc`\n- Field: synopsis\n- Value or observation: 3 Owl positions itself as a restaurant-focused digital-experience agency that designs and implements custom websites, apps, ordering frontends, and multi-brand platforms. The validated pages show it acting as an orchestration and implementation layer across third-party commerce, loyalty, geolocation, and location-data platforms, not as a core POS vendor.\n- Confidence: 95%\n- Confidence rationale: Four detailed first-party case studies consistently show the same operating model and integration pattern.\n- Source title: Duck Donuts, Frank Pepe's, Blaze Pizza, and Great American Cookies case studies\n- Source URL: https://3owl.agency/case-study/duck-donuts-custom-frontend/\n- Publisher or source owner: 3 Owl Inc\n- Published date, if known: Not stated\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: Across the four pages, 3 Owl repeatedly describes custom frontend, CMS, UX, commerce integration, loyalty integration, geolocation, location-data, and ongoing support work.\n- Conflicting or limiting evidence: Public positioning and case studies are self-authored; they establish capabilities and named work but do not independently establish market share or comparative performance.\n\n### Competitor profile observation 2\n\n- Target: `competitor:3-owl-inc`\n- Field: strengths\n- Value or observation: Demonstrated strength in integrating Olo-centered restaurant commerce with loyalty and location-data systems while tailoring high-friction product journeys such as pizza customization, donut box building, co-branded menus, and cookie-cake personalization.\n- Confidence: 90%\n- Confidence rationale: Each validated case study provides product-specific implementation details, though the outcome claims have not been independently reproduced.\n- Source title: 3 Owl restaurant case studies\n- Source URL: https://3owl.agency/case-study/frank-pepes-pizzeria/\n- Publisher or source owner: 3 Owl Inc\n- Published date, if known: Not stated\n- Accessed date: 2026-09-26\n- Exact supporting excerpt or faithful factual note: The pages describe Olo integration, Punchh or Thanx loyalty, custom product builders, one-page checkout, Radar mapping, and Uberall or Yext location data across multiple restaurant brands.\n- Conflicting or limiting evidence: Integration depth may differ by client, and the public pages do not disclose contract duration, fees, support scope, or current footprint.\n\n## Negative findings\n\n- Candidate or claim: 3 Owl is a core restaurant POS vendor.\n- Pages checked: All four validated case studies.\n- Result: Not supported. The pages consistently describe 3 Owl as the digital-experience, frontend, UX, CMS, and integration layer around systems such as Olo, Punchh, Thanx, NCR Aloha Cloud, Radar, Uberall, and Yext.\n\n- Candidate or claim: Every reported lift metric is independently verified and attributable solely to 3 Owl.\n- Pages checked: All four validated case studies.\n- Result: Not supported. Metrics are published by 3 Owl without disclosed measurement methods or independent validation; some animated counters render as zero in extracted text while prose reports nonzero results.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://3owl.agency/case-study/duck-donuts-custom-frontend/ | case study | 2026-09-26 | Observation 1; profile observations | Productive first-party page; outcome metrics remain vendor-authored. |\n| https://3owl.agency/case-study/frank-pepes-pizzeria/ | case study | 2026-09-26 | Observation 2; profile observations | Productive first-party page; no reliable numeric result extracted. |\n| https://3owl.agency/case-study/blaze-pizza-website-design-development/ | case study | 2026-09-26 | Observation 3; profile observations | Productive first-party page; current architecture strongly described. |\n| https://3owl.agency/case-study/great-american-cookies-custom-frontend-website/ | case study | 2026-09-26 | Observation 4; profile observations | Productive first-party page; 16-brand scalability is not 16-brand deployment proof. |\n\n## Research notes and inferences\n\n- Inference: 3 Owl competes with Genius primarily at the restaurant digital-experience strategy, frontend implementation, systems-integration, and ongoing optimization layers. It appears more complementary than substitutive to core POS and ordering platforms.\n- Inference: Olo is the clearest recurring commerce anchor across 3 Owl's public portfolio; Punchh, Thanx, Radar, Uberall, and Yext appear as complementary components selected by client context.\n- Review-first constraint: These observations belong in the intelligence-drop intake path. Do not promote performance claims or inferred competitive positioning to canonical records without morning-cycle review.",
+  "word_count": 1776,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-27T09:18:12+00:00",
+  "processing_result": {
+    "triage_stream_count": 7,
+    "noise_only": false,
+    "persisted_count": 7,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-016",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 3 trigger(s): named. Possible named subjects: Source, Duck Donuts Custom Frontend, Blaze Pizza Enterprise Marketing Website, Duck Donuts, Public, Blaze Pizza."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-017",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'account_dossier:global_payments' (matched term: 'genius'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-018",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Olo' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-019",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-020",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Ncr Voyix' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-021",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Blaze Pizza, Great American Cookies, Marble Slab Creamery, NCR Voyix, Genius, Olo, Google, Thanx, Punchh. Macro/industry signal detected: 13 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, ven"
+      },
+      {
+        "item_id": "INT-2026-09-27T09:17:45+00:00-022",
+        "intelligence_type": "strategic_memory",
+        "extracted_summary": "Strategic memory / thesis signal detected: 2 trigger(s): positioning."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "3 Owl Inc",
+        "Duck Donuts",
+        "Frank Pepe's Pizzeria Napoletana",
+        "Blaze Pizza, LLC",
+        "Great American Cookies",
+        "Marble Slab Creamery",
+        "FAT Brands Inc.",
+        "Olo",
+        "Punchh",
+        "Thanx"
+      ],
+      "topics": [
+        "Digital experience implementation",
+        "Case studies of restaurant brands",
+        "Integration with third-party systems",
+        "Performance metrics and validation"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Validate the current production relationship and outcome measurement window through Duck Donuts or Olo documentation.",
+        "Confirm current estate-wide use and any independently supported lift metrics through Frank Pepe's, Olo, or Punchh.",
+        "Confirm the current ordering and loyalty architecture through Blaze Pizza, Thanx, Olo, Yext, or Radar.",
+        "Validate deployed-brand scope and current FAT Brands architecture through FAT Brands, Olo, Punchh, or NCR Voyix documentation."
+      ],
+      "why_it_matters": "The insights on 3 Owl Inc's positioning and integration capabilities are crucial for understanding competitive dynamics in the restaurant digital experience space."
+    }
+  }
+}

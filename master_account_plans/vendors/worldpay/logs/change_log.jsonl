@@ -1,0 +1,14 @@
+{"at": "2026-08-28T13:40:38Z", "event": "ingested", "source_filename": "Worldpay_Master_Account_Plan_2026-08-14.xlsx", "ranked_portfolio_count": 30, "rm_portfolios_count": 6}
+{"at": "2026-08-29T20:23:51Z", "event": "safe_apply_pass", "evidence_appended": 0, "queued_for_review": 0, "cross_links_refreshed": 1}
+{"at": "2026-09-02T15:10:18Z", "event": "safe_apply_pass", "evidence_appended": 1, "queued_for_review": 1, "cross_links_refreshed": 1}
+{"at": "2026-09-04T19:35:55Z", "event": "safe_apply_pass", "evidence_appended": 0, "queued_for_review": 0, "cross_links_refreshed": 3}
+{"at": "2026-09-07T10:17:53Z", "event": "safe_apply_pass", "evidence_appended": 0, "queued_for_review": 0, "cross_links_refreshed": 3}
+{"at": "2026-09-08T17:10:39Z", "event": "safe_apply_pass", "evidence_appended": 0, "queued_for_review": 0, "cross_links_refreshed": 3}
+{"at": "2026-09-10T19:14:48Z", "event": "safe_apply_pass", "evidence_appended": 0, "queued_for_review": 0, "cross_links_refreshed": 2}
+{"at": "2026-09-11T16:53:25Z", "event": "safe_apply_pass", "evidence_appended": 0, "queued_for_review": 0, "cross_links_refreshed": 2}
+{"at": "2026-09-14T20:31:06Z", "event": "re-ingested", "source_filename": "Worldpay_Master_Account_Plan 9-10-26.xlsx", "ranked_portfolio_count": 30, "rm_portfolios_count": 6}
+{"at": "2026-09-14T20:33:02Z", "event": "re-ingested", "source_filename": "Worldpay_Master_Account_Plan 9-10-26.xlsx", "ranked_portfolio_count": 30, "rm_portfolios_count": 6}
+{"at": "2026-09-28T16:35:37Z", "event": "re-ingested", "source_filename": "Worldpay_Master_Account_Plan_2026-09-28.xlsx", "ranked_portfolio_count": 115, "rm_portfolios_count": 6}
+{"at": "2026-09-30T14:04:25Z", "event": "re-ingested", "source_filename": "Worldpay_Master_Account_Plan_2026-09-30.xlsx", "ranked_portfolio_count": 115, "rm_portfolios_count": 6}
+{"at": "2026-09-30T14:49:48Z", "event": "re-ingested", "source_filename": "Worldpay_Master_Account_Plan_2026-09-30.xlsx", "ranked_portfolio_count": 115, "rm_portfolios_count": 6}
+{"at": "2026-09-30T15:06:24Z", "event": "re-ingested", "source_filename": "Worldpay_Master_Account_Plan_2026-09-30.xlsx", "ranked_portfolio_count": 115, "rm_portfolios_count": 6}

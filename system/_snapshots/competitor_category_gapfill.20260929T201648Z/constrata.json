@@ -1,0 +1,50 @@
+{
+  "competitor_id": "comp-constrata",
+  "competitor_slug": "constrata",
+  "display_name": "ConStrata",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:31Z",
+  "latest_cos_commentary": {
+    "headline": "ConStrata is a foodservice/hospitality-focused technology consulting and managed-IT firm, not a software vendor itself.",
+    "genius_exposure": "No direct product competition — ConStrata advises restaurant operators, investors and suppliers on tech-stack decisions and can influence which pos/payments/back_office vendors a client selects or replaces.",
+    "competitive_timing": "No 2026-specific funding or leadership news found in this pass.",
+    "sales_response": "Treat as an industry advisor/influencer in accounts where ConStrata is engaged for tech-stack evaluation — worth understanding their vendor recommendations and evaluation criteria.",
+    "risk_and_uncertainty": "No named client list, revenue, or leadership data was verified in this pass.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 23
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 23,
+    "pack_claim_count": 1,
+    "pack_claims_with_url": 1,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "named client scope",
+        "financial health"
+      ]
+    }
+  }
+}

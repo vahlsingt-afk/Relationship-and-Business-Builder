@@ -1,0 +1,319 @@
+Subway: Esper/Genius Coordination
+
+Todd Vahlsing with Esper
+Recorded on Sep 18, 2026 via Microsoft Teams, 24m
+
+
+
+Participants
+
+Global Payments - USI
+Todd Vahlsing, Sales Executive
+Ryan Hildebrand, Senior Director - Sales - Restaurant
+Nicholas Hulayew, Restaurant Sales Executive
+Arjun Wadwalkar
+
+Other
+Christian Solovey
+James
+
+
+
+Transcript
+
+0:00 | Todd
+hey, Todd James. How are you today? 
+
+0:03 | James
+Doing well. How are you doing? 
+
+0:06 | Todd
+It's been a Friday? 
+
+0:08 | James
+Oh, yeah. Where are you based out of? 
+
+0:12 | Todd
+I'm in Wisconsin? Oh, nice. Yeah. So we're just starting to get fall rolling in here. Yeah. 
+
+0:22 | James
+Same here in Seattle. We're enjoying every last sunny day. We're getting. 
+
+0:26 | Todd
+That's the fact… hey, Christian, where are you out of? 
+
+0:33 | Christian
+I'm based in Seattle as well. Okay. I live in the westlake neighborhood, if you're familiar, basically right by the space needle. Oh, 
+
+0:41 | Todd
+okay. Very cool. Yeah. And. 
+
+0:44 | Christian
+I heard you're out in Wisconsin. I am. Yep. Nice. I have a couple friends that are from there… that I worked with at my first job out of college, so. 
+
+1:00 | Todd
+They must be good people then they. 
+
+1:04 | Christian
+Are some of my favorite people that's for sure? I'm heading out to one of their weddings here, and his wedding is in Minnesota this spring. So, OK, be a good time. Got a lot of good friends there, but are we waiting for anybody else on your side? 
+
+1:18 | Todd
+Pretty much everyone is on my side. We're waiting for, OK? 
+
+1:23 | Christian
+No problem whatsoever, but excited to connect with you today. So, if I'm remembering correctly, this is a regarding the subway RFP that's coming out. 
+
+1:33 | Todd
+That is correct. Yeah, awesome. And it is a beast. And yeah, yeah, we've got a lot going on there. 
+
+1:42 | Christian
+Exciting. Yeah, they had put out an RFP, I believe it was last year before I had joined Esper. But it looked like it was for android management. And then it kind of switched over to windows. I come near the last second here. And now, it seems like they're kind of switching over things with new leadership and trying to move towards like an android based architecture, hardware back end. So, things like that, if I'm remembering correctly? 
+
+2:08 | Todd
+Yeah, exciting. Hey, Ryan, there's one for awesome. How? 
+
+2:15 | Ryan
+We doing? 
+
+2:16 | Christian
+Well, happy Friday. Happy. 
+
+2:19 | Ryan
+Friday… so, 
+
+2:26 | Todd
+we're waiting for Arjun and Nick, I think Neil. 
+
+2:51 | Christian
+Ryan, where are you based out of? 
+
+2:53 | Ryan
+I live in Philadelphia. OK, you in Seattle, imagine? 
+
+2:57 | Christian
+The whole team is remote then I assume. 
+
+3:02 | Ryan
+We are, as of recent, I'd say most of the legacy team is Charlotte based, maybe Philadelphia area, some in Canada, but the last couple of hires that we've done have primarily been remote. Yes. Are you in Seattle? 
+
+3:21 | Christian
+Yeah, me and James are both based in Seattle here on the west coast as you guys have an office I assume then or formerly did out in Philadelphia and Charlotte. I would imagine, yes, we. 
+
+3:35 | Ryan
+Have one in Charlotte. Our global payments is based out of Atlanta, and we do have one in the Philadelphia area, I'd say, but most of the people now don't really go in where we've kind of been downsizing, that space here. 
+
+3:50 | Christian
+Makes sense. Have you guys both been with global payments for some time? 
+
+3:55 | Todd
+Not me. I'm one of those recent new hires. 
+
+3:59 | Christian
+OK. I've. 
+
+4:00 | Todd
+been around for a little over two months now, I guess. OK, but I've been in the space for a while so. 
+
+4:08 | Ryan
+He knows it better than most don't let him fool you. Yeah, at. 
+
+4:14 | Todd
+Least we figure it out one way or another. Yeah. 
+
+4:19 | Ryan
+Are you guys and apologies? I don't think we've met before. Are you guys on the account team? Yeah? 
+
+4:28 | Christian
+So, I'm an enterprise account executive here for Esper. I run a lot of our large scale opportunities with qsrs here. And, yeah, James works on the solutions engineering side of the business. So, he, me and him partner together on these opportunities. From, you know, technical perspective and lifecycle of the opportunities from top of funnel to close, and ongoing from there that's right? How about yourselves? I assume all on the sales side or account management, all on. 
+
+4:58 | Todd
+The sales side. Right now, there's a couple others who are coming. I think that are more on the support side and engineering side. I. 
+
+5:09 | Ryan
+Met with shiv, and David at, they were out at genius world and we had a good discussion with Neil and Arjun, who I don't know if they're coming or not. If they don't come, that's OK, we can get started kind of about our broader partnership, right? In ways that we can partner. And there were lots of different discussions that we had, but I think as it relates to subway, Nick or Todd, I don't know if you guys want to kick it off and we can just make this very much discussion based but give them, some background about where we stand, relationship wise and where the brand is going here. 
+
+5:48 | Todd
+Nick, you want to take it. 
+
+5:52 | Nicholas
+Yeah, sure. So as you may know, we're in RFP with subway for kiosks kitchen screens, kitchen screen, software, kiosk software, and digital menu boards and services and installation. So they had a program that they've been trying to launch the last year and a half. I guess… there was a new VP of procurement. He came in and was kind of looking at this whole project holistically and from my perspective and my gut feeling, I feel like this program was priced too high for the franchisees to adopt it. So he's coming back to do some vendor consolidation, some pricing exercises to see if they can kind of do one hand to shake approach and kind of consolidate all the offerings and hardwares and services to one or two vendors might not work out like that. So they might still end up going with multiple vendors. I think it's just kind of a squeeze to see who can come to the table with the best pricing. Now, you know, obviously that we were in a digital menu board RFP, they're using stratacache. I think you guys are kind of familiar with that whole conversion. Arjun was kind of mentioned that on the last call. So we needed to get with you on that. I believe he took over like 100,000 controllers or something in rbi. So, you know, that kind of would be possibly the strategy we would look at for the digital menu board side of things. Not to mention they do are a canopy shop. So, you know, that kind of, you know, I know, you know, when we were working with the other guys, Colin and all them like you guys were working on the Esper windows version and you demoed it and I believe our contact actually liked Esper. There was another contact in there who manages like the MDM partnerships was still bought into kanopy. So there might be an opportunity for that as well. But as of right now they are leaning towards canopy from MDM perspective. So it's kind of the lay of the land. So it's kind of third time we're doing this now, it's a little more robust of a program. It kind of touches everything that they were looking to incorporate in the restaurant. So we wanted to get together, see where we best can partner at. Obviously the digital menu boards I think is a big opportunity if we're able to take over the strata cache controllers and put our content on there. So Todd Ryan, feel free to add anything I missed. Hopefully that kind of gives you a perspective and context of the position we're in. 
+
+8:49 | Ryan
+I think you covered most of it. I'll just share with you candidly. We're reaching out to all of our different partners that in some way might have their hands already involved or potentially involved in this RFP or in a partnership with subway. I think just given the history that we have with subway, we're trying to put collectively our products and services in the best position to continue servicing them as a brand. You know, as Nick said, they have a pretty large turnover as it relates to some of the tech org and the people that we're working with. And so we really don't know our left from right right now. And so we're just collectively, like I said, trying to put our best foot forward to continue the partnership there. I think in particular, Nick had mentioned about the DMV solution. That was one of the topics that we wanted to cover with you guys today. Shiv had mentioned to Arjun and I when we were, I can't remember if it was dinner or the last night we were together. But I was mentioning the partnership that you guys started with chakri at rbi here, and how you guys were able to take over not just their dmvs but all their different devices from an MDM perspective. 
+
+10:12 | Nicholas
+Yeah. 
+
+10:13 | Christian
+Yeah. So I assume that's in relation to what's going on with strata cache, I think we're handling a handful of opportunities here. Obviously, like with them going insolvent or kind of going away, right? A lot of companies deploying their solutions need a way to manage those devices, keep, the ability to manage their content on those devices. So we've been filling in with that opportunity as well as a few others displacing and applying our MDM solution and helping those devices run as normal. And those companies display their content as they should. On the technical side of that, James, you might have some more insight on how we did that. Just candidly guys I joined in July, right? As that opportunity was starting to kick off. Yeah, I'm engaged on a few other ones where we're starting to deploy that. But from a technical perspective James, do you want to highlight some things from that opportunity? 
+
+11:04 | James
+Yeah, definitely. So with the rbi project, we did have like some collaboration with strata cash to kind of use their strata cash MDM to deploy Esper remotely and seamlessly so that rbi was able to deploy Esper across all of their existing strata cash managed and strata cash procured hardware in a totally seamless and touch free way. And so, you know, whatever. Yeah. 
+
+11:31 | Ryan
+So, you guys didn't work through a different CMS, you work directly with strata cash to get their keys. 
+
+11:40 | James
+I'm not sure what CMS or if rbi had switched cmss, but basically, in order to, because the devices both had strata cash as like the management platform, and also as like the content displaying platform, we were able rbi was able to leverage them to deploy our provisioning script essentially so that it was a touch free kind of setup and deployment. OK? 
+
+12:05 | Ryan
+Alright. So just so I understand it was, rbi worked with strata cash, right? To get the proper provisioning steps for you guys then to dial in to each of the devices to, you know, update them with your MDM. 
+
+12:20 | James
+Exactly, essentially just us getting the scripts needed for the rbi team to, yeah, seamlessly transition over. And so, you know, if subway is looking at something similar to that or if there's any other sort of management needs on the foundation OS side or just the other devices they manage, we can definitely help you guys out there. 
+
+12:42 | Ryan
+Okay. Yeah, I think, and I don't Nick, I don't know if you have it handed Nick or Todd, I don't know if you have it in hand or Arjun, if you have it handy there as well, but we wrote out a couple of scenarios specific to the digital menu board, the digital menu board project, that would be inclusive of doing exactly that. If they wanted to continue using the existing hardware that was on site. 
+
+13:16 | Ryan
+Do any of you guys have that handy right now? 
+
+13:18 | Christian
+I'm looking for it, right? 
+
+13:19 | James
+Now. 
+
+13:20 | Ryan
+Okay. I think, you know, from my perspective, I most would be interested to see how we have it written today. I think Arjun and Mary and maybe Neil, right, helped write some of that. I would be interested to see how, you know, what you guys have already done with rbi here? How that might differ from the approach that we've kind of written out sure. 
+
+13:48 | Christian
+I would love to take a look at it if you guys have it on hand. 
+
+13:56 | Christian
+I have too many windows open right now. 
+
+13:58 | Ryan
+I'm in that boat too. 
+
+14:02 | Arjun
+Hey, did you see Ryan Anand's feedback on that? He sent a one pager outlining the process they took for converting the rbi fleet. 
+
+14:17 | Ryan
+From Keith. 
+
+14:21 | Arjun
+Oh, no, Anand… yeah, I had emailed him. He said I copied you on that thread. 
+
+14:30 | Ryan
+Okay. I may have just missed it Arjun. 
+
+14:33 | Arjun
+Okay. Let me find it and forward it. 
+
+14:36 | Ryan
+Thank you. I appreciate that. Sure. 
+
+14:49 | Ryan
+I think I found it Arjun. Oh, you did. Okay. 
+
+14:53 | Arjun
+Yeah. 
+
+14:54 | Ryan
+Full real estate? 
+
+15:00 | Ryan
+A spreadsheet cache, DMV controller fleets, I found it and. 
+
+15:05 | Arjun
+20,000 for 50,000 deployment laser, one time fee. And then we can quote our tiered pricing, whatever we have in addition to that. Okay? 
+
+15:19 | Ryan
+I don't know if you guys were copied on this. Maybe you weren't I think it was just David and shiv… and then, yeah. 
+
+15:34 | Arjun
+Yeah, James and Christian were not on it. Yeah. 
+
+15:38 | Ryan
+Yeah, I have. I didn't see the attachment here Arjun, thank you. I think. And James, I think that this doc that was sent over probably covers, the ask there. It pretty clearly articulates both the hardware, the enrollment, the onboarding. 
+
+16:05 | James
+Are you staying on? Is this subway project primarily focused on the strata cache devices or are there other devices that you're targeting for this digital? 
+
+16:16 | Ryan
+Menu boards is just one component, of the RFP. But it's a big, it's a big portion because they already have all strata cache controllers, and all of their sites. And so from a capital expense versus proposing that they buy net new screens that would run on system on chip or even swapping of the controllers, this process that's being proposed to take over the devices would be a huge savings to them. Very cool. 
+
+16:58 | Christian
+I think from our perspective being that we've done this a handful of different projects now, but largely with rbi and stuff, we have a good story to tell on our process and ability to supply a solution that can help them navigate this transition without having to do a large scale hardware refresh of these screens, we can take a look at the document or what the situation is, if you want to forward that our way or if you are kind of review things back to you. And then I guess on the other side of this, right? Are they looking for like a one time back to James question? Is there other assets out here that are going to like need an MDM solution? I think just to give you some other context here, I know that they largely have a pretty like something around 30,000 windows devices out there… that they're potentially looking at. This is what we've heard just not too long ago, is that they're potentially looking at wanting to move those either replace them or potentially look at us for like something like a foundation offering to flip them to android. So I'm curious. Is that tied to this RFP? I haven't seen it at all. So, yeah. 
+
+18:18 | Ryan
+All the hardware is included. I think Nick had shared their canopy shop today. 
+
+18:25 | Christian
+And so, 
+
+18:27 | Ryan
+that is like that is one of the listed requirements in there is for canopy with that said if they're doing such a large going through such a large change management process here, I certainly don't think that it's out of the question that they'd be looking at potentially swapping MDM solutions as well. 
+
+18:49 | Christian
+Yeah. I think with the RFP that we responded to or the Esper team responded to a year or so ago, we were from my understanding, we were the leader because they were going for an android solution. Then they kind of flipped it over to windows towards the end there. And canopy won it. But my understanding is that contract with them is up at the end of right at the start of (REDACTED) so potentially like if we get down the line and there needs to be like some sort of pricing negotiation where we can like negate our MDM cost or something like that to get it across the line and then flip over once that contract is done with canopy, that's something we can navigate, you know? Yeah, but we can certainly take a look at what the RFP looks like in terms of support, right? What do you need from us? What can we help with? Do we need to like look through the RFP together? Understand how we can respond or look through some of the assets that you have and what you're responding to? I just haven't seen anything like with my eyes, right? So trying to understand what we can support on or what you need help with exactly. 
+
+19:59 | Ryan
+Yeah, I don't know. I mean just given the doc that, you know, Arjun had mentioned here, I forwarded to you guys. I don't know, if you received it yet or not. But I think with that, we're in pretty good shape as it relates to at least the digital menu board, the digital menu board component… and the change management process there. Outside of that, I don't know Todd or Nick or Arjun, if you guys have anything that… we haven't already discussed with the rest of the Esper team? 
+
+20:38 | Todd
+No, it's at least for the RFP. This is kind of the narrow focus of the digital menu board piece to be able to give them another option for a lower cost solution in their existing strata cash stores. 
+
+20:54 | Christian
+Yeah, absolutely. So I think what we can do is look over these assets and kind of come back to you guys with how we can support and tell the story about what we can offer, what, are there any deadlines or kind of like dates for presentations to come back and deliver some materials or anything back to you right now? 
+
+21:13 | Todd
+We have to have the RFP end by Tuesday. So we're turning around pretty quickly. Sure, you know, how that goes though. I mean this is get through the gate to the door to get to be able to present. 
+
+21:27 | Christian
+Of course. Yeah. Okay. Well, yeah, I haven't I'm sure it'll come over email here shortly, Ryan. So I think what would serve best is we can look at start to look at the assets and we can, I would imagine we can get something back in your hands from our side by Monday afternoon. So you're able to deliver? 
+
+21:49 | Ryan
+Yeah, that's what I'm saying this came from you guys. So. 
+
+21:52 | Christian
+Oh, okay. So I haven't seen this so that's yeah. 
+
+21:54 | Ryan
+It's all good. I sent it over to you that's what Arjun was sharing. So I don't think, I mean, of course, if there's added color that you guys can provide great, but I think it pretty clearly articulates the process. 
+
+22:11 | Christian
+Okay. Yeah. Well, I'll take a peek at all this and then if there's anything else we can add furthermore, we can certainly do that and we can have that back to you by Monday afternoon. Yeah, apologies, I just wasn't made aware of this or any of this email thread specifically. Okay? 
+
+22:27 | Ryan
+I just forwarded it to you. You're in the box there? 
+
+22:34 | Christian
+Cool. All right. Well, James, do you have any questions for this team or anything like that? Yeah. 
+
+22:41 | James
+Once we start digging into a technical eval, or if you guys get hardware to start testing and playing around with Arjun, happy to help you guys out with anything there. So just let us know how we can assist with this and looking forward to seeing the RFP responses. 
+
+22:55 | Arjun
+Yeah, I think one thing potentially if you can share is like a video or a video demonstration of taking over the stratacache… controller through Esper. I think that would make it very real, yes, and allow us to show it like I remember this conversation at genius world. I think shay or somebody did mention that you all have a video or something or you can create a video or something that you can share to actually showcase taking over a device? 
+
+23:32 | Todd
+Yeah, happy. 
+
+23:32 | James
+To look into getting that over to you guys. Yeah, I'll check with my team. 
+
+23:39 | Arjun
+Great. Okay. That'd be awesome, James. Thanks. 
+
+23:44 | Christian
+Awesome. All right. Well, sounds like we've got a good plan. We'll be back in touch with you guys early next week before Tuesday, and we'll take it from there. 
+
+23:53 | Ryan
+Thank you so much. 
+
+23:54 | Todd
+Appreciate. 
+
+23:55 | Christian
+your time. Have a great weekend, guys. You. 
+
+23:57 | Ryan
+Too. Take care, see. 
+
+23:58 | Todd
+You. Thanks guys. 
+
+24:09 | Christian
+Why is this not working?

@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-19T10:58:34Z",
+  "account_id": "global-payments",
+  "source": "outlook_computer_use",
+  "window_days": 7,
+  "inbox": [
+    {
+      "counterpart_name": "Chad Horn",
+      "counterpart_email": null,
+      "subject": "You've got a slot on ChatGTM on FSTEC",
+      "received_at": "2026-09-18",
+      "unread": true
+    },
+    {
+      "counterpart_name": "Michael Morris",
+      "counterpart_email": null,
+      "subject": "Re: Spencertech/Genius Subway RFP",
+      "received_at": "2026-09-18",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Nicholas Hulayew",
+      "counterpart_email": null,
+      "subject": "Fw: Subway NA Connected Restaurant Technology Program - Q&A",
+      "received_at": "2026-09-18",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Katherine Celeste Urbina Barillas",
+      "counterpart_email": null,
+      "subject": "RE: Pollo Campero Digital Menu Board RFI",
+      "received_at": "2026-09-18",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Amy Kovar [C]",
+      "counterpart_email": null,
+      "subject": "You're invited: exclusive FSTEC event -for your use",
+      "received_at": "2026-09-18",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Michael Estabrooks (via Google Sheets)",
+      "counterpart_email": null,
+      "subject": "Spreadsheet shared with you: \"Deal Review - Template_07152021\"",
+      "received_at": "2026-09-18",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Corporate Communications",
+      "counterpart_email": null,
+      "subject": "Procurement blackout and transition dates",
+      "received_at": "2026-09-18",
+      "unread": false
+    }
+  ],
+  "sent": [
+    {
+      "counterpart_name": "Claire Whelen",
+      "counterpart_email": null,
+      "subject": "Accepted: WP Backbook Marketing / Sales Alignment",
+      "sent_at": "2026-09-18"
+    },
+    {
+      "counterpart_name": "Nicholas Hulayew",
+      "counterpart_email": null,
+      "subject": "Accepted: Spencertech/Genius Subway RFP",
+      "sent_at": "2026-09-18"
+    },
+    {
+      "counterpart_name": "Michael Estabrooks, Nicholas Hulayew, Ryan Hildebrand",
+      "counterpart_email": null,
+      "subject": "Hardware pricing",
+      "sent_at": "2026-09-18"
+    },
+    {
+      "counterpart_name": "Mary Santiago, Scott Welvaert, Ryan Hildebrand",
+      "counterpart_email": null,
+      "subject": "Subject: Pollo Campero menu board inventory \u2014 reuse and replacement review",
+      "sent_at": "2026-09-18"
+    },
+    {
+      "counterpart_name": "Katherine Celeste Urbina Barillas",
+      "counterpart_email": null,
+      "subject": "Re: Pollo Campero Digital Menu Board RFI",
+      "sent_at": "2026-09-18"
+    }
+  ],
+  "calendar": [
+    {
+      "title": "FS/TEC",
+      "date": "2026-09-23",
+      "start": "2026-09-23",
+      "end": "2026-09-26",
+      "location": null
+    },
+    {
+      "title": "FS/Tec",
+      "date": "2026-09-23",
+      "start": "2026-09-23T05:00:00-05:00",
+      "end": "2026-09-25T17:00:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Monday)",
+      "date": "2026-09-21",
+      "start": "2026-09-21T11:00:00-05:00",
+      "end": "2026-09-21T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Sales Team Subway Pricing",
+      "date": "2026-09-21",
+      "start": "2026-09-21T12:30:00-05:00",
+      "end": "2026-09-21T14:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "WP Backbook Marketing / Sales Alignment",
+      "date": "2026-09-22",
+      "start": "2026-09-22T11:30:00-05:00",
+      "end": "2026-09-22T12:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Global Payments Follow-Up Meeting",
+      "date": "2026-09-22",
+      "start": "2026-09-22T14:00:00-05:00",
+      "end": "2026-09-22T15:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Flight to Dallas",
+      "date": "2026-09-23",
+      "start": "2026-09-23T07:00:00-05:00",
+      "end": "2026-09-23T10:00:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Subway RFP - DMB Pricing Breakout",
+      "date": "2026-09-23",
+      "start": "2026-09-23T11:00:00-05:00",
+      "end": "2026-09-23T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - Installation & Managed Services Pricing Breakout",
+      "date": "2026-09-23",
+      "start": "2026-09-23T11:30:00-05:00",
+      "end": "2026-09-23T12:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Thursday)",
+      "date": "2026-09-24",
+      "start": "2026-09-24T09:30:00-05:00",
+      "end": "2026-09-24T10:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - DMB Pricing Breakout",
+      "date": "2026-09-24",
+      "start": "2026-09-24T11:00:00-05:00",
+      "end": "2026-09-24T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - Installation & Managed Services Pricing Breakout",
+      "date": "2026-09-24",
+      "start": "2026-09-24T11:30:00-05:00",
+      "end": "2026-09-24T12:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Flight Home",
+      "date": "2026-09-25",
+      "start": "2026-09-25T09:00:00-05:00",
+      "end": "2026-09-25T11:30:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Subway RFP - DMB Pricing Breakout",
+      "date": "2026-09-25",
+      "start": "2026-09-25T11:00:00-05:00",
+      "end": "2026-09-25T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Subway RFP - Installation & Managed Services Pricing Breakout",
+      "date": "2026-09-25",
+      "start": "2026-09-25T11:30:00-05:00",
+      "end": "2026-09-25T12:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "competitor_id": "comp-thanx",
+  "competitor_slug": "thanx",
+  "display_name": "Thanx",
+  "aliases": [],
+  "vendor_entity_id": "vendor-thanx",
+  "primary_category": "loyalty",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Claims 90% of customers grow first-party digital sales in year one; captures \"5–10x more transactions than legacy solutions\"",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "Early agentic-AI + MCP integration for developers",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:23:32Z"
+      },
+      {
+        "point": "Partner ecosystem: Klaviyo (Apr 2026), Ovation (planned Q3 2026), Deliverect, Square",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:23:32Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:47:01Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:01Z",
+  "latest_cos_commentary": {
+    "headline": "Loyalty specialist competes through broad digital-ordering integrations rather than POS replacement.",
+    "genius_exposure": "Loyalty specialist competes through broad digital-ordering integrations rather than POS replacement.",
+    "competitive_timing": "Thanx reported that its ordering integration footprint tripled in 2026 and expanded loyalty controls in its July product update. Latest check: Thanx’s August update says its ordering runs on Deliverect middleware for multi-location brands.",
+    "sales_response": "Benchmark loyalty activation and incremental frequency against the actual ordering stack at each prospect.",
+    "risk_and_uncertainty": "The July page gives a month but no confirmed day; source_date represents month only. Product availability does not establish rollout to all Thanx customers; release gives month only.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 12
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 12,
+    "pack_claim_count": 16,
+    "pack_claims_with_url": 11,
+    "pack_claims_inherited_url": 2,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 5,
+      "legacy_claims_need_date_and_current_status_check": 16,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

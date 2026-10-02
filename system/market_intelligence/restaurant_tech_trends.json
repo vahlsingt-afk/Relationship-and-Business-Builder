@@ -1,0 +1,439 @@
+{
+  "generated_at": "2026-09-30",
+  "window_days": 30,
+  "trends": [
+    {
+      "trend_id": "trend-pos",
+      "category": "pos",
+      "name": "POS Modernization",
+      "sector": "restaurant_technology",
+      "direction": "Established",
+      "confidence": "high",
+      "recent_count": 260,
+      "prior_count": 254,
+      "qualitative_evidence_count": 0,
+      "note": "This window's volume is entirely public-market price/volume monitoring -- no qualitative news or strategic developments reported for this category in the last 30 days.",
+      "rationale": "260 signal(s) in the last 30 days vs. 254 in the prior 30 days (+2%), which is why this is classified \"Established.\" None of that volume is qualitative news -- every signal behind this count is public-market price/volume monitoring. Treat the direction and confidence above as market-activity-only, not a confirmed strategic trend.",
+      "window_days": 30,
+      "companies": [
+        "Papa Johns International Inc",
+        "Dutch Bros Inc.",
+        "Wingstop Inc.",
+        "Oracle Corp",
+        "Portillo's Inc.",
+        "Kura Sushi USA, Inc.",
+        "NCR Voyix",
+        "Sweetgreen, Inc."
+      ],
+      "evidence": [
+        {
+          "headline": "[📈 PRICE MOVE] NCR Voyix (VYX) ↓3.1% — possible undisclosed event",
+          "source": "Price Watch (VYX)",
+          "published_date": "2026-09-29",
+          "summary": "NCR Voyix (VYX) moved -3.1% today ($6.83 → $6.62). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "NCR Voyix (VYX) moved -3.1% today ($6.83 → $6.62). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "NCR Voyix"
+          ],
+          "category": "pos",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/VYX",
+          "signal_type": "price_move"
+        },
+        {
+          "headline": "[📊 VOLUME SPIKE] Dine Brands (DIN) 2.7x normal volume — elevated activity",
+          "source": "Price Watch (DIN)",
+          "published_date": "2026-09-29",
+          "summary": "Dine Brands (DIN) trading 2.7x normal volume today ($1,135,700 shares vs 418,535 20-day avg) with -2.5% price move. Elevated activity without confirmed news.",
+          "why_it_matters_to_gp": "Dine Brands (DIN) trading 2.7x normal volume today ($1,135,700 shares vs 418,535 20-day avg) with -2.5% price move. Elevated activity without confirmed news.",
+          "companies": [
+            "Dine Brands"
+          ],
+          "category": "pos",
+          "side": "operator_demand",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/DIN",
+          "signal_type": "volume_spike"
+        },
+        {
+          "headline": "[📈 PRICE MOVE] Oracle Corp (ORCL) ↑3.9% — possible undisclosed event",
+          "source": "Price Watch (ORCL)",
+          "published_date": "2026-09-29",
+          "summary": "Oracle Corp (ORCL) moved +3.9% today ($132.60 → $137.79). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "Oracle Corp (ORCL) moved +3.9% today ($132.60 → $137.79). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "Oracle Corp"
+          ],
+          "category": "pos",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/ORCL",
+          "signal_type": "price_move"
+        },
+        {
+          "headline": "[📈 PRICE MOVE] Domino's Pizza Inc (DPZ) ↑3.3% — possible undisclosed event",
+          "source": "Price Watch (DPZ)",
+          "published_date": "2026-09-29",
+          "summary": "Domino's Pizza Inc (DPZ) moved +3.3% today ($292.27 → $301.81). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "Domino's Pizza Inc (DPZ) moved +3.3% today ($292.27 → $301.81). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "Domino's Pizza Inc"
+          ],
+          "category": "pos",
+          "side": "operator_demand",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/DPZ",
+          "signal_type": "price_move"
+        },
+        {
+          "headline": "[🔻 52W LOW] Texas Roadhouse, Inc. (TXRH) near 52-week low — distress or M&A signal",
+          "source": "Price Watch (TXRH)",
+          "published_date": "2026-09-29",
+          "summary": "Texas Roadhouse, Inc. (TXRH) at $157.21, within 1.7% of 52-week low ($154.62). Possible distress, leadership instability, or acquisition target positioning.",
+          "why_it_matters_to_gp": "Texas Roadhouse, Inc. (TXRH) at $157.21, within 1.7% of 52-week low ($154.62). Possible distress, leadership instability, or acquisition target positioning.",
+          "companies": [
+            "Texas Roadhouse, Inc."
+          ],
+          "category": "pos",
+          "side": "operator_demand",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/TXRH",
+          "signal_type": "52w_low"
+        }
+      ],
+      "first_observed": "2026-04-15",
+      "last_updated": "2026-09-30"
+    },
+    {
+      "trend_id": "trend-restaurant_ai",
+      "category": "restaurant_ai",
+      "name": "Restaurant AI Adoption",
+      "sector": "restaurant_technology",
+      "direction": "Established",
+      "confidence": "high",
+      "recent_count": 48,
+      "prior_count": 48,
+      "qualitative_evidence_count": 0,
+      "note": "This window's volume is entirely public-market price/volume monitoring -- no qualitative news or strategic developments reported for this category in the last 30 days.",
+      "rationale": "48 signal(s) in the last 30 days vs. 48 in the prior 30 days (+0%), which is why this is classified \"Established.\" None of that volume is qualitative news -- every signal behind this count is public-market price/volume monitoring. Treat the direction and confidence above as market-activity-only, not a confirmed strategic trend.",
+      "window_days": 30,
+      "companies": [
+        "McDonald's",
+        "Yum Brands",
+        "Cerence Inc.",
+        "SoundHound AI",
+        "Restaurant Brands International"
+      ],
+      "evidence": [
+        {
+          "headline": "[🔻 52W LOW] McDonald's (MCD) near 52-week low — distress or M&A signal",
+          "source": "Price Watch (MCD)",
+          "published_date": "2026-09-29",
+          "summary": "McDonald's (MCD) at $233.98, within 0.2% of 52-week low ($233.60). Possible distress, leadership instability, or acquisition target positioning.",
+          "why_it_matters_to_gp": "McDonald's (MCD) at $233.98, within 0.2% of 52-week low ($233.60). Possible distress, leadership instability, or acquisition target positioning.",
+          "companies": [
+            "McDonald's"
+          ],
+          "category": "restaurant_ai",
+          "side": "operator_demand",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/MCD",
+          "signal_type": "52w_low"
+        },
+        {
+          "headline": "[🔻 52W LOW] Yum Brands (YUM) near 52-week low — distress or M&A signal",
+          "source": "Price Watch (YUM)",
+          "published_date": "2026-09-29",
+          "summary": "Yum Brands (YUM) at $137.73, within 1.6% of 52-week low ($135.58). Possible distress, leadership instability, or acquisition target positioning.",
+          "why_it_matters_to_gp": "Yum Brands (YUM) at $137.73, within 1.6% of 52-week low ($135.58). Possible distress, leadership instability, or acquisition target positioning.",
+          "companies": [
+            "Yum Brands"
+          ],
+          "category": "restaurant_ai",
+          "side": "operator_demand",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/YUM",
+          "signal_type": "52w_low"
+        },
+        {
+          "headline": "8-K  - Current report",
+          "source": "SEC EDGAR (MCD)",
+          "published_date": "2026-09-23",
+          "summary": "8-K  - Current report. Material event filed with SEC (Item 7.01 Regulation FD Disclosure -- not an earnings release; reclassified 2026-09-30 after RB-DEFECT-2026-09-30 fix).",
+          "why_it_matters_to_gp": "McDonald's earnings release — monitor for vendor relationship impact.",
+          "companies": [
+            "McDonald's"
+          ],
+          "category": "restaurant_ai",
+          "side": "operator_demand",
+          "gp_relevance": "high",
+          "source_link": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000076/0000063908-26-000076-index.htm",
+          "signal_type": "material_event"
+        },
+        {
+          "headline": "[📈 PRICE MOVE] McDonald's (MCD) ↓4.8% — possible undisclosed event",
+          "source": "Price Watch (MCD)",
+          "published_date": "2026-09-23",
+          "summary": "McDonald's (MCD) moved -4.8% today ($250.35 → $238.32). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "McDonald's (MCD) moved -4.8% today ($250.35 → $238.32). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "McDonald's"
+          ],
+          "category": "restaurant_ai",
+          "side": "operator_demand",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/MCD",
+          "signal_type": "price_move"
+        },
+        {
+          "headline": "[📊 VOLUME SPIKE] McDonald's (MCD) 3.3x normal volume — elevated activity",
+          "source": "Price Watch (MCD)",
+          "published_date": "2026-09-23",
+          "summary": "McDonald's (MCD) trading 3.3x normal volume today ($16,576,600 shares vs 4,956,165 20-day avg) with -4.8% price move. Elevated activity without confirmed news.",
+          "why_it_matters_to_gp": "McDonald's (MCD) trading 3.3x normal volume today ($16,576,600 shares vs 4,956,165 20-day avg) with -4.8% price move. Elevated activity without confirmed news.",
+          "companies": [
+            "McDonald's"
+          ],
+          "category": "restaurant_ai",
+          "side": "operator_demand",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/MCD",
+          "signal_type": "volume_spike"
+        }
+      ],
+      "first_observed": "2026-03-31",
+      "last_updated": "2026-09-30"
+    },
+    {
+      "trend_id": "trend-payments",
+      "category": "payments",
+      "name": "Payments Platform Convergence",
+      "sector": "restaurant_technology",
+      "direction": "Fading",
+      "confidence": "medium",
+      "recent_count": 13,
+      "prior_count": 27,
+      "qualitative_evidence_count": 0,
+      "note": "This window's volume is entirely public-market price/volume monitoring -- no qualitative news or strategic developments reported for this category in the last 30 days.",
+      "rationale": "13 signal(s) in the last 30 days vs. 27 in the prior 30 days (-52%), which is why this is classified \"Fading.\" None of that volume is qualitative news -- every signal behind this count is public-market price/volume monitoring. Treat the direction and confidence above as market-activity-only, not a confirmed strategic trend.",
+      "window_days": 30,
+      "companies": [
+        "Block, Inc.",
+        "Fiserv"
+      ],
+      "evidence": [
+        {
+          "headline": "[📈 PRICE MOVE] Block, Inc. (XYZ) ↓4.1% — possible undisclosed event",
+          "source": "Price Watch (XYZ)",
+          "published_date": "2026-09-28",
+          "summary": "Block, Inc. (XYZ) moved -4.1% today ($76.42 → $73.31). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "Block, Inc. (XYZ) moved -4.1% today ($76.42 → $73.31). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "Block, Inc."
+          ],
+          "category": "payments",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/XYZ",
+          "signal_type": "price_move"
+        },
+        {
+          "headline": "8-K  - Current report",
+          "source": "SEC EDGAR (None)",
+          "published_date": "2026-09-22",
+          "summary": "8-K  - Current report. Material event filed with SEC. Review for vendor impact, leadership changes, or strategic shifts.",
+          "why_it_matters_to_gp": "Fiserv material event — monitor for vendor relationship impact.",
+          "companies": [
+            "Fiserv"
+          ],
+          "category": "payments",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://www.sec.gov/Archives/edgar/data/798354/000119312526397250/0001193125-26-397250-index.htm",
+          "signal_type": "material_event"
+        },
+        {
+          "headline": "[📈 PRICE MOVE] Fiserv (FISV) ↓4.0% — possible undisclosed event",
+          "source": "Price Watch (FISV)",
+          "published_date": "2026-09-08",
+          "summary": "Fiserv (FISV) moved -4.0% today ($53.00 → $50.86). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "Fiserv (FISV) moved -4.0% today ($53.00 → $50.86). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "Fiserv"
+          ],
+          "category": "payments",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/FISV",
+          "signal_type": "price_move"
+        },
+        {
+          "headline": "[📊 VOLUME SPIKE] Fiserv (FISV) 2.7x normal volume — elevated activity",
+          "source": "Price Watch (FISV)",
+          "published_date": "2026-09-08",
+          "summary": "Fiserv (FISV) trading 2.7x normal volume today ($16,660,200 shares vs 6,137,760 20-day avg) with -4.0% price move. Elevated activity without confirmed news.",
+          "why_it_matters_to_gp": "Fiserv (FISV) trading 2.7x normal volume today ($16,660,200 shares vs 6,137,760 20-day avg) with -4.0% price move. Elevated activity without confirmed news.",
+          "companies": [
+            "Fiserv"
+          ],
+          "category": "payments",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/FISV",
+          "signal_type": "volume_spike"
+        },
+        {
+          "headline": "[📈 PRICE MOVE] Block, Inc. (XYZ) ↓3.2% — possible undisclosed event",
+          "source": "Price Watch (XYZ)",
+          "published_date": "2026-09-08",
+          "summary": "Block, Inc. (XYZ) moved -3.2% today ($82.76 → $80.10). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "Block, Inc. (XYZ) moved -3.2% today ($82.76 → $80.10). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "Block, Inc."
+          ],
+          "category": "payments",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/XYZ",
+          "signal_type": "price_move"
+        }
+      ],
+      "first_observed": "2026-05-04",
+      "last_updated": "2026-09-30"
+    },
+    {
+      "trend_id": "trend-online_ordering",
+      "category": "online_ordering",
+      "name": "Online Ordering Evolution",
+      "sector": "restaurant_technology",
+      "direction": "Fading",
+      "confidence": "medium",
+      "recent_count": 10,
+      "prior_count": 16,
+      "qualitative_evidence_count": 0,
+      "note": "This window's volume is entirely public-market price/volume monitoring -- no qualitative news or strategic developments reported for this category in the last 30 days.",
+      "rationale": "10 signal(s) in the last 30 days vs. 16 in the prior 30 days (-38%), which is why this is classified \"Fading.\" None of that volume is qualitative news -- every signal behind this count is public-market price/volume monitoring. Treat the direction and confidence above as market-activity-only, not a confirmed strategic trend.",
+      "window_days": 30,
+      "companies": [
+        "DoorDash, Inc.",
+        "Uber Technologies, Inc."
+      ],
+      "evidence": [
+        {
+          "headline": "[📈 PRICE MOVE] DoorDash, Inc. (DASH) ↑4.9% — possible undisclosed event",
+          "source": "Price Watch (DASH)",
+          "published_date": "2026-09-29",
+          "summary": "DoorDash, Inc. (DASH) moved +4.9% today ($178.39 → $187.10). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "DoorDash, Inc. (DASH) moved +4.9% today ($178.39 → $187.10). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "DoorDash, Inc."
+          ],
+          "category": "online_ordering",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/DASH",
+          "signal_type": "price_move"
+        },
+        {
+          "headline": "[📈 PRICE MOVE] DoorDash, Inc. (DASH) ↓7.7% — possible undisclosed event",
+          "source": "Price Watch (DASH)",
+          "published_date": "2026-09-28",
+          "summary": "DoorDash, Inc. (DASH) moved -7.7% today ($193.36 → $178.39). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "DoorDash, Inc. (DASH) moved -7.7% today ($193.36 → $178.39). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "DoorDash, Inc."
+          ],
+          "category": "online_ordering",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/DASH",
+          "signal_type": "price_move"
+        },
+        {
+          "headline": "[📊 VOLUME SPIKE] DoorDash, Inc. (DASH) 1.8x normal volume — elevated activity",
+          "source": "Price Watch (DASH)",
+          "published_date": "2026-09-28",
+          "summary": "DoorDash, Inc. (DASH) trading 1.8x normal volume today ($6,847,900 shares vs 3,912,555 20-day avg) with -7.7% price move. Elevated activity without confirmed news.",
+          "why_it_matters_to_gp": "DoorDash, Inc. (DASH) trading 1.8x normal volume today ($6,847,900 shares vs 3,912,555 20-day avg) with -7.7% price move. Elevated activity without confirmed news.",
+          "companies": [
+            "DoorDash, Inc."
+          ],
+          "category": "online_ordering",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/DASH",
+          "signal_type": "volume_spike"
+        },
+        {
+          "headline": "[📈 PRICE MOVE] DoorDash, Inc. (DASH) ↑3.1% — possible undisclosed event",
+          "source": "Price Watch (DASH)",
+          "published_date": "2026-09-25",
+          "summary": "DoorDash, Inc. (DASH) moved +3.1% today ($187.53 → $193.36). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "DoorDash, Inc. (DASH) moved +3.1% today ($187.53 → $193.36). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "DoorDash, Inc."
+          ],
+          "category": "online_ordering",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/DASH",
+          "signal_type": "price_move"
+        },
+        {
+          "headline": "[📊 VOLUME SPIKE] Uber Technologies, Inc. (UBER) 2.3x normal volume — elevated activity",
+          "source": "Price Watch (UBER)",
+          "published_date": "2026-09-10",
+          "summary": "Uber Technologies, Inc. (UBER) trading 2.3x normal volume today ($35,320,100 shares vs 15,561,400 20-day avg) with +2.1% price move. Elevated activity without confirmed news.",
+          "why_it_matters_to_gp": "Uber Technologies, Inc. (UBER) trading 2.3x normal volume today ($35,320,100 shares vs 15,561,400 20-day avg) with +2.1% price move. Elevated activity without confirmed news.",
+          "companies": [
+            "Uber Technologies, Inc."
+          ],
+          "category": "online_ordering",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/UBER",
+          "signal_type": "volume_spike"
+        }
+      ],
+      "first_observed": "2026-05-06",
+      "last_updated": "2026-09-30"
+    },
+    {
+      "trend_id": "trend-operator_expansion",
+      "category": "operator_expansion",
+      "name": "Operator Expansion & Growth",
+      "sector": "restaurant_technology",
+      "direction": "Emerging",
+      "confidence": "low",
+      "recent_count": 1,
+      "prior_count": 0,
+      "qualitative_evidence_count": 1,
+      "note": null,
+      "rationale": "First appeared in the last 30 days: 1 signal(s), none in the prior 30-day window. 1 of those signal(s) are substantive news or filings (product launches, funding, leadership, vendor moves -- not bare price moves) -- see the evidence links below.",
+      "window_days": 30,
+      "companies": [
+        "Raising Cane's Chicken Fingers"
+      ],
+      "evidence": [
+        {
+          "headline": "Raising Cane's expansion plan raises throughput and restaurant-tech leverage questions",
+          "source": "Todd Wamsley LinkedIn post citing NRN and QSR Magazine",
+          "published_date": "2026-09-09",
+          "summary": "LinkedIn post states Raising Cane's reached 1,000 restaurants, plans 600 more before decade-end, and targets AUV growth from roughly $6.56M to $8M on a very focused menu.",
+          "why_it_matters_to_gp": "Vendors should look for wedges tied to drive-thru throughput, order accuracy, kitchen/display orchestration, hardware reliability, deployment consistency, reporting visibility, and market-opening execution rather than generic POS replacement.",
+          "companies": [
+            "Raising Cane's Chicken Fingers"
+          ],
+          "category": "operator_expansion",
+          "side": "operator_demand",
+          "gp_relevance": "high",
+          "source_link": "linkedin://todd-wamsley-raising-canes-expansion-2026-09-09",
+          "signal_type": "unit_growth_velocity"
+        }
+      ],
+      "first_observed": "2026-07-01",
+      "last_updated": "2026-09-30"
+    }
+  ]
+}

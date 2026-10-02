@@ -1,0 +1,312 @@
+--- SLIDE 1 ---
+Overview
+01
+
+--- SLIDE 2 ---
+© 2025 Global Payments Inc. All rights reserved.
+Your complete commerce platform – delivered by one worldwide partner
+As a Fortune 500® company, Global Payments is the Official Commerce Technology Provider for some of the world’s most iconic brands. We deliver unmatched technology and expertise across hospitality today, and set the framework for continuous innovation tomorrow.
+
+--- SLIDE 3 ---
+A global powerhouse today
+Operating in  | 175+ | countries
+Fortune | 500 | company
+6m+ | Merchant locations
+$1b  | Annual business investment
+94b | Transactions annually
+Physical presence | $3.7t | Payment volume
+3
+3
+
+--- SLIDE 4 ---
+KDS
+Order Status Boards
+Indoor / Outdoor Digital Menu Boards
+4
+Enterprise Customers
+We’re proud of the companies we keep
+Quick Service Restaurants  | (QSR) and Fast Casual
+Food Service  | Management (FSM)
+Sports and Entertainment | Venues (S&E)
+Representative Brands
+Representative Brands
+Representative Brands
+
+--- SLIDE 5 ---
+We’re proud of the company we keep
+Genius Cloud Enterprise Customers
+
+--- SLIDE 6 ---
+Global scale, local support
+Serving customers in 62 countries and counting
+
+--- SLIDE 7 ---
+© 2025 Global Payments Inc. All rights reserved.
+Genius
+02
+
+--- SLIDE 8 ---
+Providing a full suite of functionality
+Point of Sale
+Kitchen
+Back Office
+Drive Thru
+Digital Menu Boards
+Kiosk
+Connect to third party integrations
+Key functional component
+Built for the busiest businesses | Easy to get started and scale | Connecting the front and back of the house seamlessly
+
+--- SLIDE 9 ---
+The ecosystem that delivers it all
+Modern, customizable interface for guests, integrating loyalty payment options for a seamless experience.
+Real-time digital signage for indoor and outdoor use—easy updates, no coding needed.
+Smart drive-thru solution with detectors, cameras, and automated order handling to boost throughput and reduce staffing needs.
+Profit-focused ops solution with actionable insights on sales, inventory, and labor.
+Kiosk
+Digital Menu Boards
+Drive Thru
+Back Office
+Kitchen
+POS & Loyalty
+Payments
+Run Efficiently
+Connecting your business from the front of the house to the back
+Grow Revenue
+…with the versatility to grow with customers preferences
+Streamlined kitchen management with real-time routing, smart bumping, and device flexibility — all tightly integrated with operations.
+Cloud-native POS for enterprise restaurants — real-time sync, conversational ordering, offline mode, and centralized control.
+
+--- SLIDE 10 ---
+10
+Rolling out 530+ locations in 9 weeks
+Client success stories
+As 7Brew rapidly expanded from a small drive-thru concept into one of the fastest-growing beverage brands in the U.S., it needed an enterprise-grade POS that could scale without disrupting baristas or daily operations.
+Global Payments enabled a rapid, nationwide rollout with centralized control, real-time updates, and a consistent experience across corporate and franchise locations
+530+ locations deployed nationwide in 9 weeks | Millions of transactions supported weekly  | Real-time menu and pricing updates managed centrally  | Consistent barista workflows and guest experience across all locations
+What I value the most about our partnership with Global Payments is how responsive and aligned they are with our goals. They don’t just provide technology, they listen to what we need, they respond quickly, and they evolve with us. They’ve been a true partner every step of the way.
+Danyel Bischof-Forsyth  | CTO, 7Brew
+
+--- SLIDE 11 ---
+11
+A nation-wide QSR transformation
+Client success stories
+When A&W needed to modernize over 1,000+ restaurant locations, they partnered with Genius to overhaul an outdated POS system and unify a fragmented tech stack.
+Together, we rolled out a scalable, cloud-based platform that overcame franchisee complexity, provincial tax challenges, and legacy hardware limitations - all while improving speed of service and system visibility.
+Rolled out to 1,032 restaurants in under 3 years | Improved staff training and onboarding with intuitive UI | Enabled real-time visibility with tools like Kibana | Supported French localization and Quebec SRM compliance
+
+--- SLIDE 12 ---
+Powering innovation
+“CosMc’s undertook a comprehensive process when choosing Global Payments to enable our unique new concept. The breadth and depth of their solutions allowed us to pick a single supplier and enabled us to move faster, unlocking our speed to market.”
+Cloud POS | Indoor and outdoor kiosks | Drive-thru digital menu boards | Integrated unified commerce platform
+Josh Wesolowski  | Director, Digital Product and Experience, CosMc's
+12
+Client success stories
+
+--- SLIDE 13 ---
+13
+Integrations
+Delivery
+Online ordering/kiosk
+Gift and loyalty
+Operational
+Back office
+Payments
+Coming soon
+Voice AI ordering
+
+--- SLIDE 14 ---
+Designed for Speed. Engineered for performance
+
+--- SLIDE 15 ---
+PRIVATE & CONFIDENTIAL
+2. Counter stand
+4. CFD Payment-mounted
+As Payment Kiosk
+( landscape)
+( portrait)
+Single cable connection through Type-c. | (Up to 1.8m)
+3. Low profile stand
+1. Wall-mounted
+Modular design that adapts to your environment.
+
+--- SLIDE 16 ---
+Performance, | Unparalleled. |  | Design, | Unrivaled. |  | It’s Genius.
+Performance
+Design
+Screen: ultra-thin edge to edge glass | Merchant Facing Display: 15.6” with embedded camera | Customer Facing Display: 10.1” available with or without payment | Counter: hide wires with hub in the stand; low profile stand available | Mounting: VESA adapter and hub on screen allows for wall or arm mounts | Kiosk: convert CFD to portrait or landscape self-order station
+Speed: 2x faster than current flagship device (XC23) | PoE: install anywhere across the restaurant without extra outlets | CPU: Upgrade without replacing the whole device | Hub: Interchangeable as inputs change (USB, Ethernet, AC etc) | Durability:  spill proof and water resistant, for semi-outdoor use | Brightness: 500 nits for semi-outdoor use
+
+--- SLIDE 17 ---
+Introducing the  | handheld
+Seamless control with Esper
+
+--- SLIDE 18 ---
+Countertop
+GP One
+Kiosks
+Tethered
+w MSR
+Genius: In-Store Hardware Portfolio
+One Genius Identity. Unified across customer segments and verticals
+
+--- SLIDE 19 ---
+Product Line
+© 2025 Global Payments Inc. All rights reserved.
+
+--- SLIDE 20 ---
+20
+Genius Enterprise POS
+In-Store
+Flexible & Robust APIs
+01
+Easy and Seamless Deployments
+02
+Device and OS Agnostic
+03
+Genius Kitchen
+Supports Omni-Channel Orders
+01
+High Volume Order Accuracy
+02
+Efficient Kitchen Operations
+03
+Raise your expectations ofwhat a POS can be.
+Fulfillment kitchen management system.
+
+--- SLIDE 21 ---
+21
+LG SOC (System-On-Chip) displays; Indoor & Outdoor | Scheduled content to ensure up to date content, even in internet outage
+Genius Digital Menu Board
+In-store
+System-On-Chip
+
+--- SLIDE 22 ---
+22
+20+ years of Kiosk development | 15,000+ Self Serve solutions installed worldwide | Dynamic splash screens | Favorites/Repeat orders | Accessibility options | Multilingual support | Pickup options
+Genius Kiosk: Industry leading self-serve technology
+
+--- SLIDE 23 ---
+© 2025 Global Payments Inc. All rights reserved.
+Genius for Enterprise  | Architecture Overview
+03
+
+--- SLIDE 24 ---
+Genius
+In-store Architecture
+No single point of failure means money saved.
+Patented in-store data synchronization ensures data integrity through ledger-balancing technology
+A true cloud POS, reducing cost and single points of failure with a serverless solution
+Ultimate flexibility to spin terminals up or down and allow new terminals to take over for any hardware failures in seconds
+Offline capabilities for up to 30 days
+Genius supports       Windows       iOS and         Android
+
+--- SLIDE 25 ---
+Genius platform resilience
+Genius In-Store
+¹ Loss of functionality if networked device
+Most critical system capabilities are still available while offline.
+✅
+25
+¹ Loss of functionality if networked device
+🔶
+🔺
+No loss of functionality
+Limited loss of functionality
+Loss of functionality
+
+--- SLIDE 26 ---
+Example Genius Transaction Flow
+Vision
+Delivery Adapters
+Mobile | Ordering
+Data | Stream
+Pipeline
+Ordering API
+Back Office/ Data Warehouse
+Payment Gateway/Processor
+Vehicle Feed published from Vision including timestamps
+Order Association to Vehicles and Events sent from POS
+TCP/IP
+WebSocket
+Orders with POS, Kitchen and Vehicle Timing Data Sent to Xenial Cloud via Pipeline
+Mobile and Kiosk Orders Sent to Store
+Order Confirmation Output to Service Point-Assigned OCU
+Kiosk Orders
+Payment Requests  to Service Point-Assigned Payment Terminal
+Core Cloud pipeline
+Non-core Cloud
+ILLUSTRATIVE – NON-EXHAUSTIVE
+In store
+Data Surveillance
+
+--- SLIDE 27 ---
+27
+Genius Drive Thru - Vision
+Drive-thru
+Cameras are placed to get a full view of the customer journey which can include stack size and parking spots for pickup or cars asked to pull forward.
+One contiguous picture of drive-thru experience. Order tracked throughout lifecycle.
+Zone configuration and detection
+
+--- SLIDE 28 ---
+Our platform powering stadiums, theme parks and more
+28
+Food & Beverage
+Retail
+Data & Analytics
+Suite Catering
+Payments
+Self Service
+Digital Menu Boards
+Fan Engagement
+Mobile Ordering
+Back Office Management
+Sports & Entertainment Platform
+— NFL League Office
+
+--- SLIDE 29 ---
+Dynamic scaling using AWS ECS and Lambda technologies
+Scalable
+29
+Cloud Architecture
+JWT token authorization. | Genius ACL controls access
+Secure
+All endpoints dynamically routed to the live stack
+Available
+Genius Architecture Overview
+Interfaces designed up front for cloud microservices
+API First
+Built for up time. Powered by cloud resilient.
+
+--- SLIDE 30 ---
+Ordering API
+Backoffice API
+Portal API
+Gift & Loyalty API
+Reporting API
+Data Stream
+Data Mgmt API
+Online Ordering API | Order Fulfilment | Order Notification | Past Orders | Store Availability | Menu Engine API | Marketplace aware | Park Car | Payment Routers
+Cart API | Product Availability | Legacy ETL | Quest / XAL | Pricing Update | Price points | DM Updates
+Inventory | Transfers | Scheduling | Employees | POS Credentials | Store hours | Time Keeping
+People Management | Locations | Role Management | SSO | Translations | Site Hierarchies  | Company Management
+Custom Loyalty | Activate | Refund | Add Value | Payment | Refund | Bulk Activate | Balance Inquiry | Reverse Transaction
+Speed of Service | Customer Exports | Statistics  | Named Calculation | Drawers Transactions | Orders Payments | Sales by Time
+Stream | Resends | Restarts | Storedata  | Logs | SSR
+APIs — Ecosystem
+Cloud APIs
+Genius Architecture Overview
+
+--- SLIDE 31 ---
+APIs for In-Store Operations
+Ordering API
+POS | Plug-In
+Kitchen | API
+Vision | API
+Data Feed API
+Ordering API | Order Fulfilment | Order Notification | Past Orders | Store Availability |  | Enables: | Kiosks | Voice AI
+Order Events |  |  |  |  |  | Enables: | Drink Dispensers | Kitchen Robotics | Order Confirmation | Kitchen Video | Surveillance
+File System | HTTP | TCP Socket | USB | UI Control | Print | Order | Terminal | Application Events | EOD Events | Order Events | Payment Events
+Orders | Kitchen Schemes | Alerts | Forecast | Kitchen Events
+Vehicle Feed | Vehicle Orders
+Genius In-Store

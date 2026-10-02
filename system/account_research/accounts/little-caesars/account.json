@@ -1,0 +1,35 @@
+{
+  "account_id": "acct-little-caesars",
+  "account_slug": "little-caesars",
+  "display_name": "Little Caesars",
+  "aliases": [],
+  "portfolio_status": {
+    "value": "pre-engagement research — not yet a confirmed active opportunity",
+    "status": "confirmed",
+    "evidence_ids": [],
+    "confidence": "high",
+    "as_of": "2026-09-04",
+    "scope": "account",
+    "last_reviewed_by": "system:account_research_common"
+  },
+  "owners": [],
+  "executive_summary": "",
+  "current_business_situation": "",
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "technology_stack": [],
+  "commercial_models": [],
+  "buying_influences": [],
+  "opportunities": [],
+  "qualification": {
+    "criteria": []
+  },
+  "strategic_position": {},
+  "bottom_line": "",
+  "latest_review": {},
+  "template_version": "account-research-v1",
+  "updated_at": "2026-09-04T16:18:39Z",
+  "blue_sheet_slug": null
+}

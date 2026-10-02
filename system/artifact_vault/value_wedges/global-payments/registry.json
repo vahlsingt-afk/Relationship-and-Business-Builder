@@ -1,0 +1,13 @@
+{
+  "subject_id": "subject-global-payments",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-28T09:24:50Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/global-payments/current/Global-Payments_Value-Wedge.md",
+      "superseded": false
+    }
+  ]
+}

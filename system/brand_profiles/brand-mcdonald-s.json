@@ -1,0 +1,232 @@
+{
+  "brand_id": "brand-mcdonald-s",
+  "brand_name": "McDonald's",
+  "identity": {
+    "parent_ownership": {
+      "value": "Independent, publicly traded company (NYSE: MCD); no external corporate parent",
+      "status": "confirmed",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-30-rebuild-8brands"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "hq_city_state": {
+      "value": "Chicago, Illinois, USA",
+      "status": "confirmed",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-30-rebuild-8brands"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "founded_year": {
+      "value": "1940",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "market_identity": {
+      "value": "Limited-service / quick-service restaurant brand",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "ownership_type": {
+      "value": "Public",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "operating_structure": {
+      "value": "Operates through a combination of company-operated and franchised/licensed restaurants; exact mix should be read from the cited current source.",
+      "status": "reported",
+      "evidence_ids": [
+        "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    }
+  },
+  "synopsis": {
+    "value": "McDonald's is a limited-service restaurant brand. the reviewed evidence indicates a franchise-led or mixed operating model. For RBB, ownership and operator structure should be kept separate from any technology deployment claims, and only explicitly evidenced technology relationships are included here.",
+    "status": "reported",
+    "evidence_ids": [
+      "top500-profile-gapfill::2026-09-29-deep-research-batch01"
+    ],
+    "confidence": "medium",
+    "as_of": "2026-09-29",
+    "scope": "brand",
+    "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": 13557.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-10-01",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchised_units": {
+      "value": 12886.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-10-01",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "company_owned_units": {
+      "value": 671.0,
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-10-01",
+      "scope": "brand",
+      "last_reviewed_by": "system:technomic_ingest"
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [
+    {
+      "signal_type": "other",
+      "value": "[🔻 52W LOW] McDonald's (MCD) near 52-week low — distress or M&A signal",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-06-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/MCD"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] McDonald's (MCD) ↑4.2% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-07-03",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/MCD"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] McDonald's (MCD) ↑3.2% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-07-16",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/MCD"
+    },
+    {
+      "signal_type": "other",
+      "value": "8-K  - Current report",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-28",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/63754/000006375426000305/0000063754-26-000305-index.htm"
+    },
+    {
+      "signal_type": "financial_health",
+      "value": "8-K  - Current report",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-04",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000069/0000063908-26-000069-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "10-Q  - Quarterly report [Sections 13 or 15(d)]",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-07",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/0000063908-26-000073-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] McDonald's (MCD) ↓4.8% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-23",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/MCD"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📊 VOLUME SPIKE] McDonald's (MCD) 3.3x normal volume — elevated activity",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-23",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/MCD"
+    }
+  ],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-25T21:08:00Z",
+  "updated_at": "2026-10-01T10:36:02Z",
+  "trajectory": {
+    "badge": "Flat",
+    "metric_used": "unit_delta_pct",
+    "value_pct": 0.7431076763022961,
+    "as_of_year": "2024",
+    "underlying": {
+      "system_sales_usd": 53469000000.0,
+      "unit_count": 13557.0,
+      "auv_usd": 3960000.0,
+      "sales_delta_pct": 0.6302920346820592,
+      "units_delta_pct": 0.7431076763022961
+    },
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

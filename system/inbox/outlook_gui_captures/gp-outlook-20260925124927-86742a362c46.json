@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-25T12:49:27-05:00",
+  "account_id": "global-payments",
+  "source": "outlook_computer_use",
+  "window_days": 7,
+  "inbox": [
+    {
+      "counterpart_name": "Todd Vahlsing",
+      "counterpart_email": "tv74852@globalpayments.com",
+      "subject": "Fwd: Del Taco Canonical Account Background Brief",
+      "received_at": "2026-09-23",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Jazmin Hamilton",
+      "counterpart_email": null,
+      "subject": "Jazmin Hamilton shared \"Del Taco Brand Profile and Contacts\" with you",
+      "received_at": "2026-09-23",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Jazmin Hamilton (via Google Slides)",
+      "counterpart_email": "jazmin.hamilton@globalpay.com",
+      "subject": "Presentation shared with you: \"Del Taco Deck\"",
+      "received_at": "2026-09-23",
+      "unread": false
+    },
+    {
+      "counterpart_name": "FS/TEC Events",
+      "counterpart_email": null,
+      "subject": "Get ready to gather leads at 2026 FS/TEC",
+      "received_at": "2026-09-23",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Cindy Turner",
+      "counterpart_email": null,
+      "subject": "The Agentic Commerce Report 2026 is here",
+      "received_at": "2026-09-23",
+      "unread": false
+    },
+    {
+      "counterpart_name": "FS/TEC Events",
+      "counterpart_email": null,
+      "subject": "Verification code: 356952",
+      "received_at": "2026-09-23",
+      "unread": false
+    },
+    {
+      "counterpart_name": "You have new messages in Teams",
+      "counterpart_email": null,
+      "subject": "Jazmin Hamilton and Dale McKee sent 2 messages to your chat",
+      "received_at": "2026-09-23",
+      "unread": false
+    },
+    {
+      "counterpart_name": "FS/TEC Events",
+      "counterpart_email": null,
+      "subject": "2026 FS/TEC - *Important* Badge Access",
+      "received_at": "2026-09-23",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Jazmin Hamilton",
+      "counterpart_email": null,
+      "subject": "Del Taco/ Genius Quick Chat",
+      "received_at": "2026-09-23",
+      "unread": false
+    }
+  ],
+  "sent": [
+    {
+      "counterpart_name": "Jazmin Hamilton",
+      "counterpart_email": null,
+      "subject": "Accepted: Insights & Chat",
+      "sent_at": "2026-09-23"
+    },
+    {
+      "counterpart_name": "Jazmin Hamilton",
+      "counterpart_email": null,
+      "subject": "Re: Del Taco Canonical Account Background Brief",
+      "sent_at": "2026-09-23"
+    },
+    {
+      "counterpart_name": "Dale McKee, Jazmin Hamilton",
+      "counterpart_email": null,
+      "subject": "FW: Del Taco Canonical Account Background Brief",
+      "sent_at": "2026-09-23"
+    },
+    {
+      "counterpart_name": "Jazmin Hamilton",
+      "counterpart_email": null,
+      "subject": "Accepted: Del Taco Quick Chat",
+      "sent_at": "2026-09-23"
+    },
+    {
+      "counterpart_name": "Jazmin Hamilton",
+      "counterpart_email": null,
+      "subject": "New Time Proposed: Del Taco Quick Chat",
+      "sent_at": "2026-09-23"
+    },
+    {
+      "counterpart_name": "Jazmin Hamilton",
+      "counterpart_email": null,
+      "subject": "Accepted: Del Taco/ Genius Quick Chat",
+      "sent_at": "2026-09-23"
+    }
+  ],
+  "calendar": [
+    {
+      "title": "Flight Home",
+      "date": "2026-09-25",
+      "start": "2026-09-25T09:00:00-05:00",
+      "end": "2026-09-25T11:30:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Del Taco/ Genius Quick Chat",
+      "date": "2026-09-25",
+      "start": "2026-09-25T15:00:00-05:00",
+      "end": "2026-09-25T15:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Maddie Wedding",
+      "date": "2026-09-26",
+      "start": "2026-09-26T16:00:00-05:00",
+      "end": "2026-09-26T16:30:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Monday)",
+      "date": "2026-09-28",
+      "start": "2026-09-28T11:00:00-05:00",
+      "end": "2026-09-28T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Insights & Chat",
+      "date": "2026-09-28",
+      "start": "2026-09-28T13:00:00-05:00",
+      "end": "2026-09-28T13:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Hospitality Team Meeting",
+      "date": "2026-09-29",
+      "start": "2026-09-29T10:00:00-05:00",
+      "end": "2026-09-29T11:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "WP BackBook Sales/Marketing Weekly Sync",
+      "date": "2026-09-29",
+      "start": "2026-09-29T14:00:00-05:00",
+      "end": "2026-09-29T14:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Session 2 of 4: Globalpayer Experience session",
+      "date": "2026-09-30",
+      "start": "2026-09-30T10:00:00-05:00",
+      "end": "2026-09-30T11:00:00-05:00",
+      "location": "Teams"
+    },
+    {
+      "title": "WP BackBook ICP Review",
+      "date": "2026-09-30",
+      "start": "2026-09-30T11:30:00-05:00",
+      "end": "2026-09-30T12:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Maggie/Todd Meet and Greet",
+      "date": "2026-09-30",
+      "start": "2026-09-30T13:00:00-05:00",
+      "end": "2026-09-30T13:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Thursday)",
+      "date": "2026-10-01",
+      "start": "2026-10-01T09:30:00-05:00",
+      "end": "2026-10-01T10:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Session 4 of 4: Globalpayer Experience session",
+      "date": "2026-10-01",
+      "start": "2026-10-01T10:00:00-05:00",
+      "end": "2026-10-01T11:00:00-05:00",
+      "location": "Teams"
+    },
+    {
+      "title": "A Little Friday - Sales Town Hall Series",
+      "date": "2026-10-01",
+      "start": "2026-10-01T10:30:00-05:00",
+      "end": "2026-10-01T11:20:00-05:00",
+      "location": "Gong"
+    }
+  ]
+}

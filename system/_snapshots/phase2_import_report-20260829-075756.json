@@ -1,0 +1,63 @@
+{
+  "phase2_file": "system/research/phase2_genius_evidence_draft_2026-08-29.json",
+  "category": null,
+  "rows_processed": 4,
+  "rows_skipped": 0,
+  "dry_run": true,
+  "added": 1,
+  "updated": 0,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 1,
+    "enrich_existing_relationship": 0,
+    "duplicate_no_change": 3,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 0,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 0,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Genius",
+        "customer": "Checkers & Rally's",
+        "tech_category": "Back Office",
+        "relationship_id": "rel-brand-checkers-rally-s-back-office-acquirer-or-payments-vendor-genius"
+      }
+    ],
+    "enrich_existing_relationship": [],
+    "duplicate_no_change": [
+      {
+        "vendor": "Genius",
+        "customer": "A&W",
+        "tech_category": "POS Software",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Genius",
+        "customer": "Subway",
+        "tech_category": "KDS",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Genius",
+        "customer": "Bojangles",
+        "tech_category": "POS Software",
+        "relationship_id": null
+      }
+    ],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

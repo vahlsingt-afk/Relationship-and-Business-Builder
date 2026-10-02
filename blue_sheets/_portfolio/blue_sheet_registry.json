@@ -1,0 +1,84 @@
+{
+  "registry": [
+    {
+      "account_id": "acct-pollo-campero",
+      "aliases": [
+        "Campero",
+        "Campero USA",
+        "CMI Alimentos"
+      ],
+      "opportunity_ids": [
+        "opp-pollo-campero-dmb-payments"
+      ],
+      "owner": "Todd Vahlsing",
+      "workbook_path": "blue_sheets/accounts/pollo-campero/current/Pollo_Campero_Blue_Sheet.xlsx",
+      "template_version": "0.3-seed",
+      "last_evidence_date": "2026-09-07",
+      "last_review_date": "2026-08-21",
+      "activation_authorized_by": "Todd Vahlsing",
+      "activation_date": "2026-08-21",
+      "activation_note": "Activated by Todd providing the actual Pollo Campero Blue Sheet workbook directly and confirming it as the standard.",
+      "status": "current",
+      "portfolio_dashboard_state": "Material update awaiting approval",
+      "dashboard_state_reason": "10 buying-influence ratings and role attributions are hypothesis-status pending human approval per Section 8; no automated publish has occurred yet.",
+      "data_owner_id": "todd"
+    },
+    {
+      "account_id": "acct-five-guys",
+      "aliases": [],
+      "opportunity_ids": [],
+      "owner": "Todd Vahlsing",
+      "workbook_path": null,
+      "template_version": "0.3-seed",
+      "last_evidence_date": null,
+      "last_review_date": null,
+      "activation_authorized_by": "Todd Vahlsing",
+      "activation_date": "2026-08-21",
+      "activation_note": "Folder shell only, authorized via Todd's 'proceed' on the plan that named this account. No Blue Sheet workbook exists and none should be created without a further, explicit go-ahead per the 2026-08-21 activation_policy in system/CANONICAL_REGISTRY.yaml.",
+      "status": "missing_blue_sheet",
+      "portfolio_dashboard_state": "Missing Blue Sheet",
+      "dashboard_state_reason": "No dedicated source material identified yet; account.json shell only.",
+      "data_owner_id": "todd"
+    },
+    {
+      "account_id": "acct-del-taco",
+      "aliases": [
+        "Yadav Enterprises"
+      ],
+      "opportunity_ids": [],
+      "owner": "Todd Vahlsing",
+      "workbook_path": null,
+      "template_version": "0.3-seed",
+      "last_evidence_date": "2026-09-02",
+      "last_review_date": null,
+      "activation_authorized_by": "Todd Vahlsing",
+      "activation_date": "2026-08-21",
+      "activation_note": "Folder shell only, authorized via Todd's 'proceed' on the plan that named this account. No Blue Sheet workbook exists and none should be created without a further, explicit go-ahead per the 2026-08-21 activation_policy in system/CANONICAL_REGISTRY.yaml.",
+      "status": "missing_blue_sheet",
+      "portfolio_dashboard_state": "Missing Blue Sheet",
+      "dashboard_state_reason": "No dedicated source material identified yet; account.json shell only.",
+      "data_owner_id": "todd"
+    },
+    {
+      "account_id": "acct-mcdonalds",
+      "aliases": [
+        "McDonald's Corporation",
+        "McDonald's USA",
+        "McDonalds"
+      ],
+      "opportunity_ids": [
+        "opp-mcdonalds-dmb-hardware-timer"
+      ],
+      "owner": "Todd Vahlsing",
+      "workbook_path": "blue_sheets/accounts/mcdonalds/current/McDonald's_Blue_Sheet.xlsx",
+      "template_version": "blue-sheet-v1",
+      "last_evidence_date": "2026-08-27",
+      "last_review_date": "2026-08-27",
+      "activation_authorized_by": "Todd Vahlsing",
+      "activation_date": "2026-08-27",
+      "activation_note": "Created 2026-08-27 at Todd's explicit direction, from the real system/account_intelligence/ McDonald's corpus, following the Pollo Campero Blue Sheet as the structural reference.",
+      "status": "active",
+      "data_owner_id": "todd"
+    }
+  ]
+}

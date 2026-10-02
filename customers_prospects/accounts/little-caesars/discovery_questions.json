@@ -1,0 +1,205 @@
+{
+  "account_id": "acct-little-caesars",
+  "questions": [
+    {
+      "question_id": "dq-starter-001",
+      "topic": "Business and Operating Priorities",
+      "question": "What are current leadership's top strategic priorities?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-002",
+      "topic": "Business and Operating Priorities",
+      "question": "What operating metrics (comps, traffic, margin) are under the most pressure right now?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-003",
+      "topic": "Business and Operating Priorities",
+      "question": "Is there an active turnaround, growth push, or ownership/leadership change underway?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-004",
+      "topic": "Business and Operating Priorities",
+      "question": "What is driving any current technology or vendor evaluation, if one exists?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-005",
+      "topic": "Loyalty and Digital",
+      "question": "What loyalty platform is currently in use, if any?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-006",
+      "topic": "Loyalty and Digital",
+      "question": "What percentage of transactions come through loyalty or digital channels?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-007",
+      "topic": "Loyalty and Digital",
+      "question": "What are the current app, online-ordering, and delivery platforms?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-008",
+      "topic": "Loyalty and Digital",
+      "question": "Who owns digital engagement and customer data internally?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-009",
+      "topic": "Payments",
+      "question": "Who processes in-store and digital payments today?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-010",
+      "topic": "Payments",
+      "question": "Is there a single payments gateway/acquirer, or a fragmented setup across channels?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-011",
+      "topic": "Payments",
+      "question": "When do the current payments agreements renew?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-012",
+      "topic": "Payments",
+      "question": "Are there known pain points (fees, chargebacks, fraud, reliability)?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-013",
+      "topic": "Restaurant Technology",
+      "question": "What POS system is currently deployed?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-014",
+      "topic": "Restaurant Technology",
+      "question": "What hardware is installed, and is there a known refresh or support deadline?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-015",
+      "topic": "Restaurant Technology",
+      "question": "What systems handle KDS, back office, inventory, and labor management?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-016",
+      "topic": "Restaurant Technology",
+      "question": "Are there known integration or data-quality issues across systems?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-017",
+      "topic": "Decision Process",
+      "question": "Who owns technology strategy and vendor decisions?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-018",
+      "topic": "Decision Process",
+      "question": "Who owns loyalty, payments, and digital commerce internally?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-019",
+      "topic": "Decision Process",
+      "question": "Is there an existing Global Payments/Genius relationship or contact?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    },
+    {
+      "question_id": "dq-starter-020",
+      "topic": "Decision Process",
+      "question": "What are the next known renewal, budgeting, or vendor-review dates?",
+      "gap_type": "missing",
+      "related_fact_path": null,
+      "importance": "medium",
+      "status": "open",
+      "as_of": "2026-09-04"
+    }
+  ]
+}

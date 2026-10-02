@@ -1,0 +1,713 @@
+{
+  "version": 1,
+  "count": 29,
+  "protocols": [
+    {
+      "id": "P-001",
+      "title": "Daily Brief Regeneration",
+      "script": "system/scripts/daily_brief.py",
+      "cache": "system/.cache/daily_brief.json",
+      "reads": [
+        "system/baseline_index.json",
+        "system/loop_ledger.md",
+        "system/settings.json",
+        "system/restaurant_tech_watchlist.md",
+        "system/circles/",
+        "system/cards/"
+      ],
+      "writes": [
+        "system/today.md",
+        "system/MANIFEST.md"
+      ],
+      "inputs": [
+        {
+          "name": "date",
+          "description": "ISO date to treat as 'today'.",
+          "required": "false"
+        }
+      ],
+      "trigger": "daily 05:00 America/Chicago",
+      "file": "system/protocols/P-001_daily_brief_regen.md"
+    },
+    {
+      "id": "P-002",
+      "title": "LinkedIn Data Export Ingest",
+      "script": "system/scripts/linkedin_ingest.py",
+      "reads": [
+        "system/baseline_index.json",
+        "system/_snapshots/",
+        "system/schemas/baseline.schema.json"
+      ],
+      "writes": [
+        "system/baseline_index.json",
+        "system/_snapshots/baseline_index.<date>.json",
+        "system/deltas/linkedin_export_<date>.md"
+      ],
+      "inputs": [
+        {
+          "name": "linkedin_export_zip",
+          "description": "A Complete_LinkedInDataExport_*.zip from LinkedIn.",
+          "required": "true"
+        }
+      ],
+      "trigger": "automatic on LinkedIn export ZIP upload or operator-initiated on a new LinkedIn export",
+      "file": "system/protocols/P-002_linkedin_ingest.md"
+    },
+    {
+      "id": "P-003",
+      "title": "Baseline validation",
+      "script": "system/scripts/validate_baseline.py",
+      "cache": "system/.cache/validate_baseline.json",
+      "reads": [
+        "system/baseline_index.json",
+        "system/schemas/baseline.schema.json"
+      ],
+      "writes": [],
+      "trigger": "before any procedure that writes to baseline_index.json",
+      "file": "system/protocols/P-003_baseline_validation.md"
+    },
+    {
+      "id": "P-004",
+      "title": "RC, card, and contact-field gap detection",
+      "script": "system/scripts/gap_detection.py",
+      "cache": "system/.cache/gap_detection.json",
+      "reads": [
+        "system/baseline_index.json",
+        "system/cards/"
+      ],
+      "writes": [],
+      "trigger": "inside daily brief; after RC promotion; quarterly network review",
+      "file": "system/protocols/P-004_rc_card_gap_detection.md"
+    },
+    {
+      "id": "P-005",
+      "title": "Loop ledger parsing",
+      "script": "system/scripts/loop_parser.py",
+      "cache": "system/.cache/loop_parser.json",
+      "reads": [
+        "system/loop_ledger.md"
+      ],
+      "writes": [],
+      "inputs": [
+        {
+          "name": "date",
+          "description": "ISO date for 'today' comparison.",
+          "required": "false"
+        }
+      ],
+      "trigger": "inside daily brief; meeting prep; any session reasoning about open obligations",
+      "file": "system/protocols/P-005_loop_parsing.md"
+    },
+    {
+      "id": "P-006",
+      "title": "Network gap scoring",
+      "script": "system/scripts/network_gap.py",
+      "cache": "system/.cache/network_gap.json",
+      "reads": [
+        "system/baseline_index.json"
+      ],
+      "writes": [],
+      "inputs": [
+        {
+          "name": "min_cluster",
+          "description": "Minimum cluster size to consider.",
+          "required": "false"
+        },
+        {
+          "name": "gaps_only",
+          "description": "Show only unanchored clusters.",
+          "required": "false"
+        }
+      ],
+      "trigger": "weekly (Monday); after any material ingest; on-demand when operator asks",
+      "file": "system/protocols/P-006_network_gap_scoring.md"
+    },
+    {
+      "id": "P-007",
+      "title": "Dynamic Relationship Relevance scoring (prototype)",
+      "script": "system/scripts/drr_score.py",
+      "cache": "system/.cache/drr_score.json",
+      "reads": [
+        "system/baseline_index.json"
+      ],
+      "writes": [],
+      "inputs": [
+        {
+          "name": "date",
+          "description": "ISO date to score against.",
+          "required": "false"
+        },
+        {
+          "name": "class",
+          "description": "Filter by signal_class (VC, NPR, LMI, LKI, RC).",
+          "required": "false"
+        },
+        {
+          "name": "id",
+          "description": "Explain a single entry's score by id.",
+          "required": "false"
+        }
+      ],
+      "trigger": "on-demand; before any procedure that needs a comparable ranking",
+      "file": "system/protocols/P-007_drr_scoring.md"
+    },
+    {
+      "id": "P-008",
+      "title": "Active strategic threads",
+      "script": "(declarative \u2014 read system/active_threads.yaml directly)",
+      "cache": "(consumed via daily_brief and drr_score caches)",
+      "reads": [
+        "system/active_threads.yaml"
+      ],
+      "writes": [],
+      "inputs": [],
+      "trigger": "read at the top of every daily brief and DRR score call",
+      "file": "system/protocols/P-008_active_threads.md"
+    },
+    {
+      "id": "P-009",
+      "title": "Write-back mutations",
+      "script": "system/scripts/mutations.py",
+      "cache": "(none \u2014 mutations invalidate caches on the next read by mtime)",
+      "reads": [
+        "system/baseline_index.json",
+        "system/loop_ledger.md",
+        "system/active_threads.yaml",
+        "system/schemas/baseline.schema.json"
+      ],
+      "writes": [
+        "system/baseline_index.json",
+        "system/loop_ledger.md",
+        "system/active_threads.yaml",
+        "system/_snapshots/"
+      ],
+      "inputs": [
+        {
+          "name": "subcommand",
+          "description": "One of loop-add, loop-close, touch, contact-add, thread-open, thread-close.",
+          "required": "true"
+        }
+      ],
+      "trigger": "operator-initiated (or AI-initiated after operator confirms an outcome)",
+      "file": "system/protocols/P-009_mutations.md"
+    },
+    {
+      "id": "P-010",
+      "title": "Calendar + email overlay",
+      "script": "system/scripts/calendar_overlay.py + system/scripts/email_overlay.py",
+      "cache": "(computed each daily-brief run; not cached separately by default)",
+      "reads": [
+        "system/inbox/accounts.yaml",
+        "system/inbox/calendar.*.json",
+        "system/inbox/email.*.json",
+        "system/baseline_index.json",
+        "system/active_threads.yaml"
+      ],
+      "writes": [],
+      "inputs": [
+        {
+          "name": "date",
+          "description": "ISO date for 'today' (calendar bucket boundaries).",
+          "required": "false"
+        }
+      ],
+      "trigger": "every daily brief run; on-demand when operator asks about meetings or inbox",
+      "file": "system/protocols/P-010_calendar_email_overlay.md"
+    },
+    {
+      "id": "P-011",
+      "title": "Social inbound \u2014 what your graph is posting about",
+      "script": "system/scripts/social_overlay.py",
+      "cache": "system/.cache/social_overlay.json",
+      "reads": [
+        "system/inbox/social.feed.json",
+        "system/baseline_index.json",
+        "system/active_threads.yaml"
+      ],
+      "writes": [],
+      "inputs": [
+        {
+          "name": "recent_days",
+          "description": "Window size for the overlay (default 14).",
+          "required": "false"
+        }
+      ],
+      "trigger": "every daily brief run; on-demand when operator asks \"what is my network talking about\"",
+      "file": "system/protocols/P-011_social_inbound.md"
+    },
+    {
+      "id": "P-012",
+      "title": "Conversation memory",
+      "script": "system/scripts/session_writer.py + system/scripts/session_index.py",
+      "cache": "(the index.json IS the cache \u2014 regenerated from the .md files on demand)",
+      "reads": [
+        "system/_sessions/index.json",
+        "system/_sessions/*.md"
+      ],
+      "writes": [
+        "system/_sessions/<session-id>.md",
+        "system/_sessions/index.json"
+      ],
+      "inputs": [
+        {
+          "name": "focus_areas",
+          "description": "Short tags describing what this session worked on.",
+          "required": "false"
+        },
+        {
+          "name": "threads_touched",
+          "description": "Active-thread ids that were created, closed, or updated.",
+          "required": "false"
+        },
+        {
+          "name": "contacts_touched",
+          "description": "Baseline ids added, promoted, or otherwise touched.",
+          "required": "false"
+        },
+        {
+          "name": "mutations",
+          "description": "Counts of write operations by kind.",
+          "required": "false"
+        },
+        {
+          "name": "body",
+          "description": "Structured narrative \u2014 what we worked on / what was decided / in flight / notable findings.",
+          "required": "false"
+        }
+      ],
+      "trigger": "end of every material session (creator decides \u2014 trivial Q&A sessions don't need an entry)",
+      "file": "system/protocols/P-012_conversation_memory.md"
+    },
+    {
+      "id": "P-013",
+      "title": "Intro engine \u2014 broker paths to a target",
+      "script": "system/scripts/intro_engine.py",
+      "cache": "system/.cache/intro_engine.<sanitized-target>.json",
+      "reads": [
+        "system/baseline_index.json",
+        "system/active_threads.yaml",
+        "system/circles/",
+        "system/heuristics.md"
+      ],
+      "writes": [],
+      "inputs": [
+        {
+          "name": "target",
+          "description": "Person id, person name, or company name.",
+          "required": "true"
+        },
+        {
+          "name": "limit",
+          "description": "Max broker paths to return (default 3).",
+          "required": "false"
+        },
+        {
+          "name": "include_suppressed",
+          "description": "Include heuristic-blocked candidates (for debugging).",
+          "required": "false"
+        }
+      ],
+      "trigger": "operator-initiated when there's a named target to reach",
+      "file": "system/protocols/P-013_intro_engine.md"
+    },
+    {
+      "id": "P-014",
+      "title": "Network analysis \u2014 strategic report card",
+      "script": "system/scripts/network_analysis.py",
+      "cache": "system/.cache/network_analysis.json",
+      "reads": [
+        "system/baseline_index.json",
+        "system/active_threads.yaml",
+        "system/cards/"
+      ],
+      "writes": [
+        "system/analysis/<date>-network-analysis.md  (when run with --write)"
+      ],
+      "inputs": [
+        {
+          "name": "date",
+          "description": "ISO date for \"as of\" framing (default: system date).",
+          "required": "false"
+        }
+      ],
+      "trigger": "weekly review; before strategic planning; on-demand whenever the operator asks \"where is my network strong/weak\"",
+      "file": "system/protocols/P-014_network_analysis.md"
+    },
+    {
+      "id": "P-015",
+      "title": "Social outbound \u2014 your posts + engagement",
+      "script": "system/scripts/social_outbound.py",
+      "cache": "system/.cache/social_outbound.json",
+      "reads": [
+        "system/inbox/social.own_posts.json",
+        "system/inbox/social.engagement.json",
+        "system/baseline_index.json",
+        "system/active_threads.yaml"
+      ],
+      "writes": [],
+      "inputs": [
+        {
+          "name": "recent_days",
+          "description": "Window for \"recent posts\" + engagement silence (default 30).",
+          "required": "false"
+        }
+      ],
+      "trigger": "every daily brief run; on-demand when operator asks what to post or how recent posts performed",
+      "file": "system/protocols/P-015_social_outbound.md"
+    },
+    {
+      "id": "P-016",
+      "title": "MCP + HTTP runtime validation",
+      "script": "system/scripts/mcp_smoke_test.py + system/scripts/api_smoke_test.py",
+      "cache": "(none \u2014 these are validation scripts, not data producers)",
+      "reads": [
+        "system/baseline_index.json",
+        "system/active_threads.yaml",
+        "system/inbox/*",
+        "system/_sessions/index.json"
+      ],
+      "writes": [],
+      "inputs": [],
+      "trigger": "before installing or registering the MCP/HTTP servers; after any change to rb_core.py or the server wrappers",
+      "file": "system/protocols/P-016_runtime_validation.md"
+    },
+    {
+      "id": "P-019",
+      "title": "Apple Messages + Call History \u2014 direct interaction overlay",
+      "script": "system/scripts/fetch_apple_messages.py + system/scripts/fetch_apple_calls.py + system/scripts/interaction_overlay.py",
+      "cache": "system/.cache/interaction_overlay.json",
+      "reads": [
+        "~/Library/Messages/chat.db",
+        "~/Library/Application Support/CallHistoryDB/CallHistory.storedata",
+        "system/inbox/messages.json",
+        "system/inbox/calls.json",
+        "system/baseline_index.json"
+      ],
+      "writes": [
+        "system/inbox/messages.json",
+        "system/inbox/calls.json",
+        "(optionally) system/baseline_index.json (when --apply-last-touch is passed)"
+      ],
+      "inputs": [
+        {
+          "name": "days",
+          "description": "Window to read from chat.db / CallHistory.",
+          "required": "false"
+        },
+        {
+          "name": "include_snippets",
+          "description": "Capture 80-char message snippets (default false \u2014 metadata only).",
+          "required": "false"
+        }
+      ],
+      "trigger": "scheduled (suggest daily); on-demand before the daily brief; after any session where you texted or called known contacts",
+      "file": "system/protocols/P-019_apple_interaction.md"
+    },
+    {
+      "id": "P-020",
+      "title": "Conversation artifact ingestion",
+      "script": "partial system/scripts/source_watch.py",
+      "cache": "partial system/.cache/source_watch.json; planned system/.cache/conversation_artifacts.json",
+      "reads": [
+        "system/source_watch.yaml",
+        "system/inbox/conversation_artifacts/",
+        "system/baseline_index.json",
+        "system/active_threads.yaml",
+        "system/loop_ledger.md",
+        "system/briefs/"
+      ],
+      "writes": [
+        "system/.cache/source_watch.json",
+        "system/briefs/*.md",
+        "system/loop_ledger.md",
+        "system/baseline_index.json",
+        "system/active_threads.yaml",
+        "system/.cache/conversation_artifacts.json"
+      ],
+      "inputs": [
+        {
+          "name": "source_dir",
+          "description": "Folder containing exported transcripts, recaps, notes, and chat logs.",
+          "required": "false"
+        },
+        {
+          "name": "since",
+          "description": "Date/time lower bound for daily processing.",
+          "required": "false"
+        },
+        {
+          "name": "review_mode",
+          "description": "If true, produce proposed mutations but do not write canonical files.",
+          "required": "false"
+        }
+      ],
+      "trigger": "daily before the morning brief; on-demand after uploading/exporting transcripts; after high-value meetings",
+      "file": "system/protocols/P-020_conversation_artifact_ingestion.md"
+    },
+    {
+      "id": "P-021",
+      "title": "RI event sourcing architecture",
+      "script": "planned",
+      "cache": "planned projection caches",
+      "reads": [
+        "system/briefs/",
+        "system/baseline_index.json",
+        "system/cards/",
+        "system/loop_ledger.md",
+        "system/active_threads.yaml",
+        "system/inbox/"
+      ],
+      "writes": [
+        "system/ri_events/*.jsonl",
+        "projection caches",
+        "migration reports"
+      ],
+      "inputs": [
+        {
+          "name": "source_event",
+          "description": "A normalized relationship-intelligence signal from email, transcript, chat, call, calendar, social, manual note, or file ingestion.",
+          "required": "true"
+        }
+      ],
+      "trigger": "every RI-bearing ingestion; migration/backfill from existing briefs; projection rebuild",
+      "file": "system/protocols/P-021_ri_event_sourcing.md"
+    },
+    {
+      "id": "P-022",
+      "title": "Legacy RB thread transfer ingestion",
+      "script": "system/scripts/legacy_transfer_watch.py (watch only; semantic ingestion planned)",
+      "cache": "system/.cache/legacy_transfer_watch.json",
+      "reads": [
+        "RB 8.0 transfer data/",
+        "system/ARCHITECTURE.md",
+        "system/01_RB_TENETS.md",
+        "system/SCHEMAS.md",
+        "system/OPERATIONALIZATION.md",
+        "system/protocols/"
+      ],
+      "writes": [
+        "system/.cache/legacy_transfer_watch.json",
+        "system/_sessions/*.md",
+        "system/protocols/",
+        "system/OPERATIONALIZATION.md",
+        "system/architecture_decisions/ (planned)",
+        "migration reports"
+      ],
+      "inputs": [
+        {
+          "name": "source_dir",
+          "description": "Folder of exported RB 8.0 / RB 9.0 transfer documents and prior thread summaries.",
+          "required": "true"
+        }
+      ],
+      "trigger": "on-demand when Todd drops legacy RB thread exports into the workspace",
+      "file": "system/protocols/P-022_legacy_thread_transfer.md"
+    },
+    {
+      "id": "P-023",
+      "title": "Trace mode / developer test logging",
+      "script": "system/scripts/test_trace.py",
+      "cache": "(none \u2014 writes to system/test_traces/ directly)",
+      "reads": [
+        "operator-supplied trace payload (CLI stdin or POST /test_traces body)"
+      ],
+      "writes": [
+        "system/test_traces/YYYY-MM-DD-<slug>.md",
+        "system/test_traces/YYYY-MM-DD-<slug>.json"
+      ],
+      "inputs": [
+        {
+          "name": "title",
+          "description": "Short human title; used to build the filename slug.",
+          "required": "true"
+        },
+        {
+          "name": "trace_type",
+          "description": "One of interface_test, regression, field_defect, smoke_test.",
+          "required": "false"
+        },
+        {
+          "name": "source",
+          "description": "Where the trace came from (e.g. \"ChatGPT Custom GPT\").",
+          "required": "false"
+        },
+        {
+          "name": "steps",
+          "description": "Ordered list of prompt/response/tool-call records.",
+          "required": "false"
+        },
+        {
+          "name": "defects",
+          "description": "Operator-observed defects to capture alongside the trace.",
+          "required": "false"
+        },
+        {
+          "name": "raw_text",
+          "description": "Operator-provided verbatim paste; capped at 256KB.",
+          "required": "false"
+        }
+      ],
+      "trigger": "|",
+      "Operator command \"Export this test session for Codex.\" in the Custom GPT,": [],
+      "or `python3 system/scripts/test_trace.py --append-from path.json` from a": [],
+      "shell session.": [],
+      "file": "system/protocols/P-023_trace_mode.md"
+    },
+    {
+      "id": "P-024",
+      "title": "Relationship signals from the last 24 hours",
+      "script": "system/scripts/relationship_signals.py",
+      "cache": "system/.cache/relationship_signals.json",
+      "reads": [
+        "system/inbox/email.*.json",
+        "system/inbox/calendar.*.json",
+        "system/inbox/messages.json",
+        "system/inbox/calls.json",
+        "system/inbox/social.feed.json",
+        "system/inbox/social.own_posts.json",
+        "system/inbox/social.engagement.json",
+        "system/baseline_index.json",
+        "system/active_threads.yaml"
+      ],
+      "writes": [],
+      "inputs": [
+        {
+          "name": "date",
+          "description": "ISO anchor date used for calendar bucketing.",
+          "required": "false"
+        },
+        {
+          "name": "hours",
+          "description": "Look-back window in hours. Default 24.",
+          "required": "false"
+        }
+      ],
+      "trigger": "|",
+      "Every daily-brief run (the build_report dict embeds the signals report).": [],
+      "On-demand via `getRelationshipSignals` (\"What changed since yesterday?\"": [],
+      "type questions).": [],
+      "file": "system/protocols/P-024_relationship_signals.md"
+    },
+    {
+      "id": "P-031",
+      "title": "Strategic Operator Intelligence",
+      "script": "system/scripts/strategic_operators.py",
+      "cache": "system/.cache/strategic_operators.json",
+      "reads": [
+        "system/strategic_operators.yaml",
+        "system/schemas/strategic_operators.schema.json",
+        "system/scoring/strategic_operator_rubric.md",
+        "system/inbox/market_signals.json",
+        "system/baseline_index.json",
+        "system/active_threads.yaml",
+        "system/settings.json"
+      ],
+      "writes": [
+        "system/.cache/strategic_operators.json"
+      ],
+      "inputs": [
+        {
+          "name": "recent_days",
+          "description": "Movement look-back window. Default 90.",
+          "required": "false"
+        }
+      ],
+      "trigger": "Every daily-brief run, every full cache refresh, and after any operator-add/operator-update/operator-record-movement/operator-close mutation.",
+      "file": "system/protocols/P-031_strategic_operator_intelligence.md"
+    },
+    {
+      "id": "P-032",
+      "title": "Native ChatGPT Task Delivery",
+      "trigger": "runs automatically at 05:05 CT as a ChatGPT scheduled task",
+      "reads": "GET /daily_brief?use_cache=true (via Cloudflare tunnel + Custom GPT action)",
+      "writes": "ChatGPT task result message (native, inside ChatGPT platform)",
+      "file": "system/protocols/P-032_native_chatgpt_task_delivery.md"
+    },
+    {
+      "id": "P-033",
+      "title": "LinkedIn Messaging Export Ingest",
+      "script": "system/scripts/linkedin_messaging.py",
+      "cache": "system/inbox/linkedin.messages.json",
+      "reads": [
+        "system/inbox/linkedin_messages_export.csv (operator-dropped)",
+        "system/baseline_index.json"
+      ],
+      "writes": [
+        "system/inbox/linkedin.messages.json"
+      ],
+      "trigger": "on-demand after each LinkedIn export download; suggest monthly",
+      "file": "system/protocols/P-033_linkedin_messaging_export_ingest.md"
+    },
+    {
+      "id": "P-034",
+      "title": "Loop Lifecycle Autopilot",
+      "script": "system/scripts/loop_autopilot.py",
+      "cache": "system/.cache/loop_autopilot_*.json",
+      "reads": [
+        "system/.cache/daily_brief.json (morning)",
+        "system/loop_ledger.md (all phases)",
+        "system/.cache/source_health.json (midday/closeout context)"
+      ],
+      "writes": [
+        "system/.cache/loop_autopilot_*.json",
+        "system/closeouts/YYYY-MM-DD.md (closeout phase, --confirm)",
+        "system/loop_ledger.md (morning apply or closeout closure, --confirm)"
+      ],
+      "trigger": "morning (05:00 automation, dry-run); midday (on-demand); 16:30 (closeout)",
+      "file": "system/protocols/P-034_loop_lifecycle_autopilot.md"
+    },
+    {
+      "id": "P-035",
+      "title": "ChatGPT Task Delivery Verification",
+      "script": "system/scripts/task_delivery_check.py",
+      "cache": "system/.cache/task_delivery_check.json",
+      "trigger": "on-demand after initial Task setup; weekly spot-check",
+      "file": "system/protocols/P-035_chatgpt_task_delivery_verification.md"
+    },
+    {
+      "id": "P-036",
+      "title": "RI Assessment Doctrine and Trust Display Hardening",
+      "script": "system/scripts/relationship_signals.py (ri_assessment blocks per signal); system/scripts/passive_ri_ingest.py (assessment contract on all events); system/scripts/daily_brief.py (proof rows distinguish all 7 statuses)",
+      "cache": "system/.cache/relationship_signals.json; system/.cache/passive_ri_ingest.json",
+      "reads": [
+        "system/baseline_index.json",
+        "system/active_threads.yaml",
+        "system/inbox/",
+        "system/.cache/passive_ri_ingest.json",
+        "system/.cache/relationship_signals.json"
+      ],
+      "writes": [],
+      "trigger": "Embedded in every signal or event produced by relationship_signals.py, passive_ri_ingest.py, linkedin_own_engagement.py, linkedin_session_reader.py. Governs what daily_brief.py may say about relationship intelligence without a canonical write having occurred.",
+      "file": "system/protocols/P-036_ri_assessment_and_trust_display.md",
+      "sprint": "RB 9.9",
+      "added": "2026-05-25"
+    },
+    {
+      "id": "P-039",
+      "title": "HubSpot CRM Export Ingest",
+      "script": "system/scripts/hubspot_ingest.py",
+      "cache": "system/.cache/hubspot_ingest_latest.json",
+      "reads": [
+        "system/baseline_index.json",
+        "system/_snapshots/"
+      ],
+      "writes": [
+        "system/baseline_index.json",
+        "system/_snapshots/baseline_index.pre-hubspot-ingest-<date>.json",
+        "system/deltas/hubspot_crm_export_<date>.md"
+      ],
+      "inputs": [
+        {
+          "name": "hubspot_crm_export_csv",
+          "description": "A HubSpot Export contacts CSV.",
+          "required": "true"
+        }
+      ],
+      "trigger": "automatic on HubSpot CRM export CSV upload, gated on dataset_classifier.py confidence >= structured_ingest.confidence_threshold",
+      "file": "system/protocols/P-039_hubspot_crm_ingest.md",
+      "sprint": "RB-DEFECT-064 Phase 1",
+      "added": "2026-07-07"
+    }
+  ],
+  "_notes": "Generated by system/scripts/protocol_index.py from each protocol's YAML frontmatter. P-036 entry added manually in RB 9.9 (2026-05-25). Cold-start sessions should load this file (one small JSON) instead of scanning the protocols/ directory."
+}

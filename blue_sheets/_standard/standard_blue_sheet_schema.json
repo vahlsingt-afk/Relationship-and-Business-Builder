@@ -1,0 +1,107 @@
+{
+  "template_version": "0.3",
+  "status": "draft - Phase 0 iteration, not yet v1.0 (see Section 7 checklist in the spec)",
+  "reference_source": "accounts/pollo-campero/sources/2026-08-21_Pollo_Campero_Blue_Sheet_as_provided.xlsx",
+  "note_on_tab_list": "This schema follows the 11-tab structure of the actual Pollo Campero workbook Todd confirmed as the standard on 2026-08-21, not the 8-tab list in the original spec draft (Section 7). Differences: Buying Influences lives inside the Blue Sheet tab rather than as its own tab; Sources & Assumptions and Change Log do not yet exist as tabs (tracked instead in evidence.jsonl / logs/change_log.jsonl at the dossier layer, pending a decision on whether to also surface them as workbook tabs). Method & Governance, Criteria Statements, Presentation View 1/2, and Concept Card side 1/2 are additional tabs the spec draft did not name.",
+  "tabs": [
+    {
+      "name": "Blue Sheet",
+      "purpose": "One-page strategic analysis in Miller Heiman form.",
+      "protected": true,
+      "sections": [
+        {"section": "header", "fields": ["account", "geography_area", "salesperson", "date", "sales_revenue_units", "close_date", "customer_timing"], "source": "account.json:opportunities[]", "editable_cells": "date, salesperson only; account identity fields come from account.json"},
+        {"section": "single_sales_objective", "source": "account.json:opportunities[].single_sales_objective", "editable": "approval-required (Section 8 does not list this explicitly, but it defines the account's strategic frame - treat as owner-edited, not automation-written)"},
+        {"section": "customer_stated_objective", "source": "account.json:opportunities[].customer_stated_objective", "editable": "auto-updatable from executed_customer_document or direct_customer_correspondence evidence"},
+        {"section": "opportunity_scorecard", "source": "account.json:qualification", "protected_formula": "N column = IF(answer=\"Y\", weight, 0); total = SUM(N6:N10)", "editable_cells": "answer (L column) is approval-required for ebi/coach criteria per Section 8; access/buying_process/budget answers may auto-update on adequate evidence"},
+        {"section": "euphoria_panic", "source": "account.json:strategic_position.euphoria_panic", "editable": "approval-required (judgment)"},
+        {"section": "competition", "source": "account.json:strategic_position.competition", "editable": "auto-updatable factual technology/vendor mentions; competitive-preference judgment is approval-required"},
+        {"section": "position", "source": "account.json:strategic_position.position", "editable": "approval-required"},
+        {"section": "buying_influences_table", "source": "account.json:buying_influences[]", "columns": ["name_title_location", "role_etuc", "influence", "mode", "personal_win", "business_result", "competitive_preference", "rating", "current_read", "access", "next_step", "owner"], "editable_cells": "current_read, access, next_step, owner, and factual name/title/location auto-updatable; role_etuc, influence rating changes, mode, personal_win, competitive_preference, and rating are approval-required per Section 8"},
+        {"section": "summary_strengths_redflags_actionplan", "source": "actions.json + account.json:strategic_position", "editable": "approval-required narrative; individual action rows link to actions.json"}
+      ]
+    },
+    {
+      "name": "Brand",
+      "purpose": "Public and internal account intelligence, clearly classified.",
+      "protected": false,
+      "source": "brand_profile.json",
+      "columns": ["category", "what_we_know", "strategic_implication", "confidence", "as_of", "buying_relevance", "question_to_validate", "owner"],
+      "editable_cells": "auto-updatable for facts that do not overwrite a stronger contradictory source (Section 11); strategic_implication and question_to_validate are owner-authored judgment"
+    },
+    {
+      "name": "Technology Stack",
+      "purpose": "Current vendor/product, state, evidence, owner, value, incumbent advantage, risk, and verification.",
+      "protected": false,
+      "source": "account.json:technology_stack[]",
+      "columns": ["layer", "current_vendor_product", "current_state", "confidence", "decision_owner_influence", "customer_value_pain", "genius_worldpay_relevance", "incumbent_advantage", "risk_constraint", "next_step", "status"],
+      "editable_cells": "auto-updatable from observed technology endpoints and customer-stated facts (Section 11); status transitions (Verify -> Confirmed) require the triggering evidence to be logged"
+    },
+    {
+      "name": "Actions & Decisions",
+      "purpose": "Commitments, decisions, risks, dependencies, opportunities, owners, targets, status, and blockers. (Named 'Actions & Evidence' in the spec draft; kept as 'Actions & Decisions' to match the confirmed reference file.)",
+      "protected": false,
+      "source": "actions.json:actions[]",
+      "columns": ["type", "issue_opportunity", "why_it_matters", "customer_outcome", "worldpay_genius_value", "stakeholders", "priority", "action_commitment", "owner", "trigger_target", "status", "blocker_update"],
+      "editable_cells": "status auto-updatable only with explicit completion evidence (Section 11); closing an action without such evidence is approval-required; new rows require an RBB add_loop proposal, not direct mutation (Section 13)"
+    },
+    {
+      "name": "Commercial Model",
+      "purpose": "Opportunity economics, assumptions, formulas, and validation gates.",
+      "protected": true,
+      "source": "account.json:commercial_models[]",
+      "columns": ["item", "current_read", "value", "unit", "confidence", "commercial_implication", "required_validation", "status"],
+      "protected_formula": "Illustrative monthly figures are formulas over approved unit price x screen archetype - never hardcode a computed result",
+      "editable_cells": "customer-facing price, discount, subsidy, margin and contractual commitment values are approval-required (Section 11); observed statement data may auto-update from customer-provided operational data"
+    },
+    {
+      "name": "Presentation View 1",
+      "purpose": "Executive-facing condensed rendering of the Blue Sheet tab for screen/print presentation.",
+      "protected": true,
+      "source": "render target for account.json (verified in the reference file: this tab holds 105 static literal values, zero formulas - it is NOT an Excel formula link to the Blue Sheet tab, just a manually-copied snapshot. The deterministic renderer (Section 19 item 6) must regenerate this tab's literal values from account.json on every publish, or it will silently drift out of sync with the Blue Sheet tab.)",
+      "editable_cells": "none once the renderer exists - fully regenerated; until then, treat as stale the moment the Blue Sheet tab changes"
+    },
+    {
+      "name": "Presentation View 2",
+      "purpose": "Alternate executive-facing condensed rendering, e.g. for a different audience or print layout.",
+      "protected": true,
+      "source": "render target for account.json (verified: 100 static literals, zero formulas - same drift risk as Presentation View 1)",
+      "editable_cells": "none once the renderer exists - fully regenerated; until then, treat as stale the moment the Blue Sheet tab changes"
+    },
+    {
+      "name": "Method & Governance",
+      "purpose": "Internal operating standard for disciplined opportunity strategy and review; encodes the same evidence-discipline and Coach-standard principles as spec Sections 3, 8, and 11.",
+      "protected": true,
+      "source": "static reference content, identical across all accounts, plus per-account owner/review-control block",
+      "columns_static": ["area", "standard", "minimum_evidence_output"],
+      "columns_per_account": ["blue_sheet_owner", "core_contributors", "last_reviewed", "review_status", "next_formal_review", "current_critical_test"],
+      "editable_cells": "per-account block only (owners, review dates, status); static governance text is protected and identical across the portfolio"
+    },
+    {
+      "name": "Criteria Statements",
+      "purpose": "Reference definitions for the five opportunity scorecard criteria.",
+      "protected": true,
+      "source": "static reference content, identical across all accounts",
+      "editable_cells": "none - protected reference content"
+    },
+    {
+      "name": "Concept Card side 1",
+      "purpose": "Miller Heiman reference/coaching card (internal use only per Method & Governance tab's internal-use notice).",
+      "protected": true,
+      "source": "static reference content, identical across all accounts",
+      "editable_cells": "none"
+    },
+    {
+      "name": "Concept Card side 2",
+      "purpose": "Miller Heiman reference/coaching card, continued.",
+      "protected": true,
+      "source": "static reference content, identical across all accounts",
+      "editable_cells": "none"
+    }
+  ],
+  "not_yet_implemented": [
+    "A dedicated Sources & Assumptions tab surfacing evidence.jsonl / contradictions.json inside the workbook itself (currently only in the JSON dossier).",
+    "A generated Change Log tab surfacing logs/change_log.jsonl inside the workbook itself.",
+    "Stable IDs are assigned at the dossier (JSON) layer (account_id, opportunity_id, person_id, action_id, evidence_id) but are not yet written into the workbook cells themselves.",
+    "Visible contradiction count and stale-evidence warning are tracked in contradictions.json/brand_profile.json but not yet rendered into the workbook."
+  ]
+}

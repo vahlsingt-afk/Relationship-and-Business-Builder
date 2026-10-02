@@ -1,0 +1,58 @@
+{
+  "competitor_id": "comp-marigold",
+  "competitor_slug": "marigold",
+  "display_name": "Marigold",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:09Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:34Z",
+  "latest_cos_commentary": {
+    "headline": "Marigold's enterprise loyalty/marketing software business (Marigold Loyalty, Cheetah Digital, Sailthru, Selligent, Liveclicker, Grow) was acquired by Zeta Global in a deal that closed November 24, 2025; Marigold's SMB brands (Campaign Monitor, Emma, Vuture) were not included and remain independent.",
+    "genius_exposure": "Marigold Loyalty is a direct competitor to Genius's loyalty_engagement product line, with confirmed restaurant-brand usage (KFC Rewards, White Castle Crave Continuum, Bloomin' Brands/Outback punch-card campaigns); now operates under Zeta Global's ownership and balance sheet.",
+    "competitive_timing": "Recently closed acquisition (Nov 2025) means the product is now backed by Zeta Global's resources and cross-sell base (Zeta's broader ad-tech/CDP customers), which could accelerate enterprise loyalty deal flow going forward.",
+    "sales_response": "If a prospect currently runs Marigold Loyalty, note the recent Zeta Global ownership change — ask whether their contract, support, or roadmap has changed since the November 2025 transition, since new ownership can create a natural point to re-evaluate vendors.",
+    "risk_and_uncertainty": "Treat this as a name/ownership change, not a product shutdown — Marigold Loyalty continues operating under Zeta Global; do not assume disruption to existing customer contracts without direct confirmation.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 58
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 58,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Positioning",
+        "Pricing signals",
+        "Recent News / Product Updates",
+        "Snapshot",
+        "Strengths",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership post-acquisition integration status",
+        "current pricing under Zeta Global",
+        "broader named restaurant customer scope"
+      ]
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "competitor_id": "comp-stratacache",
+  "competitor_slug": "stratacache",
+  "display_name": "STRATACACHE",
+  "aliases": [],
+  "vendor_entity_id": "vendor-stratacache",
+  "primary_category": "digital_menu_boards",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "**Layoffs (Mar 2026):** confirmed at Dayton HQ, \"below the 50-employee threshold\" for WARN; industry sources say ~50% of Scala software staff affected. Riegel: \"The continued challenges with tariffs and the global memory spike/supply chain availability difficulties are certainly headwinds.\"",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:23:33Z"
+      },
+      {
+        "point": "**Asset \"firesale\" (2026):** Scala sold to VertiseIT (May 2026); PRN sold to Perion (Aug 2026); Real Digital Media and X20 shut down; Dayton real estate auctioned",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:23:34Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Large QSR outdoor/drive-thru install base and in-house manufacturing",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:33Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-10-02T09:47:02Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:02Z",
+  "latest_cos_commentary": {
+    "headline": "Large DMB footprint and CMS/media scope make it a plausible incumbent in enterprise RFPs.",
+    "genius_exposure": "Large DMB footprint and CMS/media scope make it a plausible incumbent in enterprise RFPs.",
+    "competitive_timing": "Current vendor product page claims 750,000+ digital menu boards globally and trust from eight of the top ten QSR brands. Latest check: STRATACACHE identifies Chris Riegel as founder and CEO.",
+    "sales_response": "Obtain named restaurant references and validate any 2026 subsidiary changes from corporate filings or the company.",
+    "risk_and_uncertainty": "Scale figures are vendor assertions; pack allegations of financial distress and layoffs remain unverified here. Current company page accessed 2026-09-28; no publication date or audited financial status.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 22
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 22,
+    "pack_claim_count": 14,
+    "pack_claims_with_url": 10,
+    "pack_claims_inherited_url": 3,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 4,
+      "legacy_claims_need_date_and_current_status_check": 14,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

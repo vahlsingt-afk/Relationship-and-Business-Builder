@@ -1,0 +1,73 @@
+{
+  "competitor_id": "comp-raydiant",
+  "competitor_slug": "raydiant",
+  "display_name": "Raydiant",
+  "aliases": [],
+  "vendor_entity_id": "vendor-raydiant",
+  "primary_category": "digital_menu_boards",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "POS integration with Square (SMB channel)",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:23:34Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-10-02T09:47:02Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:02Z",
+  "latest_cos_commentary": {
+    "headline": "Franchise signage may compete in local deployments but enterprise operating scope needs proof.",
+    "genius_exposure": "Franchise signage may compete in local deployments but enterprise operating scope needs proof.",
+    "competitive_timing": "Raydiant advertises franchise digital menu boards and POS-linked screen updates.",
+    "sales_response": "Verify current ownership, customer support and actual live restaurant screens before scoring a threat.",
+    "risk_and_uncertainty": "Undated franchise page is a vendor capability claim, not a deployment audit.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 25
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 25,
+    "pack_claim_count": 9,
+    "pack_claims_with_url": 5,
+    "pack_claims_inherited_url": 2,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 4,
+      "legacy_claims_need_date_and_current_status_check": 9,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

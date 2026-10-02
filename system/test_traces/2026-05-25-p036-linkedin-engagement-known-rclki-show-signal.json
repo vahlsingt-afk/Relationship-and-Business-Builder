@@ -1,0 +1,62 @@
+{
+  "title": "P-036: LinkedIn engagement from known RC/LKI should display relationship signal",
+  "trace_type": "ri_assessment_doctrine",
+  "source": "linkedin_own_engagement_test",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-25",
+  "sprint": "RB 9.9",
+  "protocol": "P-036",
+  "scenario_id": "p036-case-3",
+  "summary": "Todd posts on LinkedIn. A known RC (Patrick Nelson) likes and comments on the post. linkedin_own_engagement.py or linkedin_session_reader.py should detect the engagement, match the engager to baseline, produce an ri_assessment with status=proposed (touch candidate), display_recommendation=show. The daily brief or on-demand engagement query should surface this as a relationship signal.",
+  "expected_ri_assessment": {
+    "status": "proposed",
+    "source_freshness": "fresh",
+    "confidence_gte": 0.60,
+    "display_recommendation": "show",
+    "signal_type": "engagement_on_own_post"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label": "linkedin_own_engagement detects engagement from RC",
+      "description": "social.engagement.json contains a record: Patrick Nelson (LI URL matched to baseline contact patrick-nelson) liked and commented on post published 2026-05-23. Source freshness: fresh (fetched_at within 48h threshold).",
+      "input": {
+        "source": "linkedin_own_engagement",
+        "engager_name": "Patrick Nelson",
+        "engager_linkedin_url": "https://www.linkedin.com/in/patricknelson",
+        "engagement_type": "like_and_comment",
+        "post_published_at": "2026-05-23T10:00:00Z",
+        "baseline_match": "patrick-nelson",
+        "signal_class": "RC"
+      },
+      "expected_signal_type": "engagement_on_own_post",
+      "expected_ri_assessment_status": "proposed"
+    },
+    {
+      "step": 2,
+      "label": "social_outbound or relationship_signals surfaces the signal",
+      "description": "The engagement is classified as engagement_on_own_post with strategic_relevance=high (RC engager), signal_strength >= 0.70. ri_assessment.status=proposed, display_recommendation=show.",
+      "expected_outcome": "signal emitted; ri_assessment.proposed_mutation.command=touch"
+    },
+    {
+      "step": 3,
+      "label": "Brief or engagement query surfaces RI language",
+      "description": "Response says something like: 'Patrick Nelson liked and commented on your post from May 23. I would propose recording a last_touch update for Patrick Nelson — confirm to apply.' Source grounding: system_detected.",
+      "expected_display": "show",
+      "example_acceptable_response": "Patrick Nelson (RC) engaged with your May 23 post. I would propose recording a touch — pending confirmation."
+    }
+  ],
+  "defects": [],
+  "acceptance_criteria": [
+    "engagement from known RC baseline match produces ri_assessment.status=proposed",
+    "display_recommendation=show",
+    "proposed_mutation.command=touch",
+    "response surfaces engagement as a named relationship signal",
+    "response does NOT claim touch was already recorded"
+  ],
+  "anti_patterns": [
+    "claiming 'touch recorded' before confirmation",
+    "suppressing engagement from a known RC",
+    "no ri_assessment block on the engagement signal"
+  ]
+}

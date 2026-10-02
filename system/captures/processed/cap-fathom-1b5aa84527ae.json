@@ -1,0 +1,22 @@
+{
+  "file_id": "cap-fathom-1b5aa84527ae",
+  "queued_at": "2026-07-01T13:39:44.965270",
+  "source_id": "fathom",
+  "source_label": "Fathom",
+  "source_file": "fathom://call/test-001",
+  "capture_type": "meeting",
+  "title_hint": "Test Meeting",
+  "transcription_method": "fathom_api",
+  "transcript": "Hello this is a test transcript.",
+  "word_count": 6,
+  "transcript_available": true,
+  "status": "processed",
+  "fathom_call_id": "test-001",
+  "fathom_started_at": "2026-07-01T13:39:44.964812",
+  "processed_at": "2026-07-01T14:06:06+00:00",
+  "processing_result": {
+    "triage_stream_count": 0,
+    "triage_type_count": 0,
+    "noise_only": true
+  }
+}

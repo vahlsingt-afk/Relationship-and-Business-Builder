@@ -1,0 +1,55 @@
+# industry_sources_template.yaml — RB Industry Sources Setup Template
+# ─────────────────────────────────────────────────────────────────────────────
+# COPY THIS FILE TO system/industry_sources.yaml and fill it in.
+#
+# Step 1: Set your metadata (industry name and section labels)
+# Step 2: Add 3–8 RSS/Atom feeds relevant to your industry
+# Step 3: Set default_domain for each source (see options below)
+# Step 4: Run the morning pipeline — your headlines will appear in the brief
+#
+# default_domain options:
+#   world_national      — world/national news (shown regardless of industry)
+#   industry_primary    — your industry's core news (operations, market, deals)
+#   industry_technology — technology within your industry
+#   mixed               — let RB classify each article by keyword
+#
+# Finding RSS feeds: most publications have a /feed, /rss.xml, or /rss endpoint.
+# Example: https://www.example-publication.com/feed/
+# ─────────────────────────────────────────────────────────────────────────────
+
+metadata:
+  industry_name: ""           # e.g. "Commercial Real Estate"
+  primary_label: ""           # e.g. "Real Estate Industry"  — shown as section heading
+  technology_label: ""        # e.g. "PropTech"              — shown as section heading
+  world_label: "World & National"
+  version: "1.0"
+
+sources:
+
+  # Primary industry source (operations, market, deals, brands)
+  - name: ""
+    url: ""
+    default_domain: industry_primary
+    confidence: medium
+    description: ""
+
+  # Technology source (software, platforms, vendors in your industry)
+  - name: ""
+    url: ""
+    default_domain: industry_technology
+    confidence: medium
+    description: ""
+
+  # Additional primary sources (add as many as needed)
+  # - name: ""
+  #   url: ""
+  #   default_domain: industry_primary
+  #   confidence: medium
+  #   description: ""
+
+  # World/macro source (financial, regulatory, economic)
+  # - name: ""
+  #   url: ""
+  #   default_domain: world_national
+  #   confidence: high
+  #   description: ""

@@ -1,0 +1,22 @@
+{
+  "subject_id": "subject-del-taco",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-11T15:48:49Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Top-of-funnel account plan and qualification",
+      "path": "system/artifact_vault/account_plans/del-taco/current/Del-Taco_Account-Plan.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-11T15:59:57Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Top-of-funnel account plan and qualification",
+      "path": "system/artifact_vault/account_plans/del-taco/current/Del-Taco_Account-Plan.md",
+      "superseded": false
+    }
+  ],
+  "data_owner_id": "todd"
+}

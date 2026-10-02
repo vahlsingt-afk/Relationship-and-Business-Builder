@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-28T06:42:42-05:00",
+  "account_id": "global-payments",
+  "source": "outlook_computer_use",
+  "window_days": 7,
+  "inbox": [
+    {
+      "counterpart_name": "noreply",
+      "counterpart_email": null,
+      "subject": "Your password will expire in 7 days.",
+      "received_at": "2026-09-28T00:01:00-05:00",
+      "unread": true
+    },
+    {
+      "counterpart_name": "Udemy Business",
+      "counterpart_email": null,
+      "subject": "Recommendations to get you to certification",
+      "received_at": "2026-09-27",
+      "unread": true
+    }
+  ],
+  "sent": [],
+  "calendar": [
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Monday)",
+      "date": "2026-09-28",
+      "start": "2026-09-28T11:00:00-05:00",
+      "end": "2026-09-28T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Insights & Chat",
+      "date": "2026-09-28",
+      "start": "2026-09-28T13:00:00-05:00",
+      "end": "2026-09-28T13:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Pollo Campero Existing Inventory",
+      "date": "2026-09-29",
+      "start": "2026-09-29T09:00:00-05:00",
+      "end": "2026-09-29T09:30:00-05:00",
+      "location": "https://us-1506.join.gong.io/global-payments-us/todd.vahlsing/968104105402170444"
+    },
+    {
+      "title": "Hospitality Team Meeting",
+      "date": "2026-09-29",
+      "start": "2026-09-29T10:00:00-05:00",
+      "end": "2026-09-29T11:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "WP BackBook Sales/Marketing Weekly Sync",
+      "date": "2026-09-29",
+      "start": "2026-09-29T14:00:00-05:00",
+      "end": "2026-09-29T14:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Session 2 of 4: Globalpayer Experience session",
+      "date": "2026-09-30",
+      "start": "2026-09-30T10:00:00-05:00",
+      "end": "2026-09-30T11:00:00-05:00",
+      "location": "Teams"
+    },
+    {
+      "title": "WP BackBook ICP Review",
+      "date": "2026-09-30",
+      "start": "2026-09-30T11:30:00-05:00",
+      "end": "2026-09-30T12:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Maggie/Todd Meet and Greet",
+      "date": "2026-09-30",
+      "start": "2026-09-30T13:00:00-05:00",
+      "end": "2026-09-30T13:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Thursday)",
+      "date": "2026-10-01",
+      "start": "2026-10-01T09:30:00-05:00",
+      "end": "2026-10-01T10:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Session 4 of 4: Globalpayer Experience session",
+      "date": "2026-10-01",
+      "start": "2026-10-01T10:00:00-05:00",
+      "end": "2026-10-01T11:00:00-05:00",
+      "location": "Teams"
+    },
+    {
+      "title": "A Little Friday - Sales Town Hall Series",
+      "date": "2026-10-01",
+      "start": "2026-10-01T10:30:00-05:00",
+      "end": "2026-10-01T11:30:00-05:00",
+      "location": "https://us-1506.join.gong.io/global-payments-us/jerry.gallimore/6575986815786887444"
+    },
+    {
+      "title": "Learning from Your Previous Experiences",
+      "date": "2026-10-02",
+      "start": "2026-10-02T13:30:00-05:00",
+      "end": "2026-10-02T14:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    }
+  ]
+}

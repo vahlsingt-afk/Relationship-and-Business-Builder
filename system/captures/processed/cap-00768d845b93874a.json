@@ -1,0 +1,49 @@
+{
+  "file_id": "cap-00768d845b93874a",
+  "queued_at": "2026-07-27T16:12:31+00:00",
+  "source_id": "just_press_record",
+  "source_label": "Just Press Record",
+  "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-07-27/11-02-31.m4a",
+  "capture_type": "meeting",
+  "title_hint": "Just Press Record \u2014 2026-07-27 11-02-31",
+  "transcription_method": "whisper_local",
+  "transcript": "It was an update here. Yeah, sure. So we spoke to Dingo General this morning and their office at 600. They've the increase it a little bit. We're just figuring through the paperwork now. They also want to sign for POS. So it'll be more than six and they. We've put out there that they have to sign by Friday and they say, yeah, yeah, send this on papers and we'll review them and we shall have them back to you by Friday. So we will confident in signature. It's going to be north of six. The exact number is unsure, but. We feel good about that one. Excellent. Awesome. Yeah, I just have to add a couple more things. But right now it's about 850. So we should be right around there. My star investments. I called them again as he didn't answer our sentiment message. So. I might be pushing that out. Mikey, I know me and you've been talking about the loves deal, which I'm definitely going to hold about that. I'm just waiting for Megan to approve it. So I could send it off, which I did pinger this morning about it. I'm just waiting on it to get approval and then I can send it off to Scott Brown and then have that conversation to. Get him to sign in by the end of this week. You got anything else on the CKD or any other fields working up? Just those that they just the loves big one that's worth mentioning. All the other ones are small coming in a couple thousand here and there, but. Ready. Let's move over to my babies. Anyway, so RBI just you know, revolving door of Alec our hardware. Got to slide on about 25,000 more for them. Jeremiah's I did lower the confidence on that just with the the pushback of the rollout in August. They want to basically take a two week breather after their final install on August 13th. And then start installing again on August 31st, which is going to delay some of the welcome emails going out, which is going to turn delay the POS and back off its quotes. With that being said, we do still need about six weeks lead time for our payments agreements. So we got a meeting with them tomorrow. We're going to push to get these welcome emails out as soon as possible to pull in as much as we can for for this month. That's good. The ability. It just needs to shore up the. And arose this week for some room. Thanks on the latest listing. And then we'll have that done. I'd like to say by the Wednesday. Okay, that is already booked. Correct. No. No, it's not. Okay, it's. Yeah, it's. Excellent. I still think it's one one 20 issue. Yeah, yeah, to be 40 maybe more, but. Standard drum 40. Christian. Yep, I'm Mike. The only off I have there on the sheet is the indoor and outdoor menu boards for Midwest first star. Faruk emailed me this morning so they have the quote their plan to sign it either today or tomorrow. So, I'm confident with that one coming back. We have. See, holy you, but Johnny Christian, do we have a site any other franchisees for CKE? PUS signups at least for this month. I don't have any. We were open that some of the corporate sites would be added, but I think that's getting pushed back outside of that. I don't have any for this month. It's like we're nearing release of this landing page and communication out to the franchisees. So hopefully that that'll help kind of kickstart things up again and work down the remainder of the list. Try to get this all done and hearing. I don't think they gave us a date and one we can release that though. Yeah, not not as of yet. We predict and so confirming here. I think. I thought Ryan Molendov said that. First he said the one who waited for the first convention, which is coming up at the end of the month, August. Or getting sent down for whatever that is. But I also heard and say we can start in August. So I hope we can get this thing out for next few days here, but we'll wait here back for Nick. Tom and then Laura. Michael, listen, that's it for me for this week. I'm gonna step out the next month. For me, I have a little bit for our bees. It's the acquisition that we just got word of about 19,000 for Burger King between POS swaps and a burger bar and acquisition. CK, there's a couple of quotes sitting out there, one for a store app for West Star and one for OTAC. Then the Jeremiah's still for unsigned. Popeyes, we've got some POS swaps and Wendy's data retention. That's CKE also. I think we still, I don't know if you've had a chance to circle back on how we need to record that here, but just let me know when you do. Yeah, well, do I message the Tracy bit of them still waiting their back when I'm going to say calculation. I've been feeling it's probably going to be. What do we do? Is it like four years technically here at however, whatever the length of the. It changes for each deal. So I entered the total extended price over the course of like these for this month, they're 64 month deals. So I just took the extended price and divided it by 64 I think is how I did it. Probably, but I will. Thank you. Okay. Morgan. Hey, like Dan said, just waiting on today's open stand report to finish up that seven brew up for the NROs. And then on the water, what a burger side just a couple D&B replacement, smaller ops, but nothing sizable on the sheet. We already brought in the NROs for this month. Yeah, we definitely. Even with line of sight, I think we'll still be. Probably about one point close to two, not short here for the month. Unfortunately, we've had some successful prior months. So we got a little bit of runway here, but not too much. So we got to make sure we're not falling too far behind. And there are summers usually. Third slow up a little bit and we'll pick back up again here, especially when we get approvals from CKE and. Once once that he does, he goes, well, we'll make some pretty big progress here, but. Just keep fun on the gas please. And let me know if you guys have any. Create ideas or any last minute deals that come through that you need any support with. We'll do against it. Have a great week. Talk to you soon. Thank you. Thank you.",
+  "word_count": 1157,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-07-28T16:31:17+00:00",
+  "processing_result": {
+    "triage_stream_count": 5,
+    "noise_only": false,
+    "persisted_count": 5,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-07-27T16:12:31+00:00-007",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 1 trigger(s): meeting with. Possible named subjects: Yeah, So, Dingo General, So, Friday, Friday."
+      },
+      {
+        "item_id": "INT-2026-07-27T16:12:31+00:00-008",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'franchisee'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-07-27T16:12:31+00:00-009",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Ncr Voyix' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-07-27T16:12:31+00:00-010",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Macro/industry signal detected: 6 keyword hit(s) across categorie(s): industry_trend, market_signal, vendor_tech. Key terms: acquisition, back office, franchise, payment, pos, rollout."
+      },
+      {
+        "item_id": "INT-2026-07-27T16:12:31+00:00-011",
+        "intelligence_type": "strategic_memory",
+        "extracted_summary": "Strategic memory / thesis signal detected: 5 trigger(s): i think."
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": null
+  }
+}

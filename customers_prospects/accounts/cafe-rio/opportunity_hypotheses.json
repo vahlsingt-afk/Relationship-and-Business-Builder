@@ -1,0 +1,89 @@
+{
+  "account_id": "acct-cafe-rio",
+  "hypotheses": [
+    {
+      "hypothesis_id": "hyp-cafe-rio-0001",
+      "name": "Guest Engagement",
+      "description": "Help Café Rio improve visit frequency and customer retention while reducing dependence on broad discounts and expensive delivery promotions.",
+      "supporting_evidence_ids": [
+        "ev-cafe-rio-0005"
+      ],
+      "contradictory_evidence_ids": [],
+      "likely_buyer": "Marketing / Loyalty leadership",
+      "relevant_capability": "Global Payments / Genius restaurant technology",
+      "discovery_question_ids": [],
+      "validation_status": "unvalidated",
+      "as_of": "2026-08-27"
+    },
+    {
+      "hypothesis_id": "hyp-cafe-rio-0002",
+      "name": "Restaurant Execution",
+      "description": "Explore technology that improves speed, order accuracy, manager visibility, restaurant cleanliness and operating consistency.",
+      "supporting_evidence_ids": [
+        "ev-cafe-rio-0005"
+      ],
+      "contradictory_evidence_ids": [],
+      "likely_buyer": "Operations leadership",
+      "relevant_capability": "Global Payments / Genius restaurant technology",
+      "discovery_question_ids": [],
+      "validation_status": "unvalidated",
+      "as_of": "2026-08-27"
+    },
+    {
+      "hypothesis_id": "hyp-cafe-rio-0003",
+      "name": "Payments and Unified Commerce",
+      "description": "Determine whether Café Rio has fragmented in-store, app, web, catering and delivery payments -- and whether consolidated payments and customer data could improve economics and insight.",
+      "supporting_evidence_ids": [
+        "ev-cafe-rio-0005"
+      ],
+      "contradictory_evidence_ids": [],
+      "likely_buyer": "CFO / Payments owner",
+      "relevant_capability": "Global Payments / Genius restaurant technology",
+      "discovery_question_ids": [],
+      "validation_status": "unvalidated",
+      "as_of": "2026-08-27"
+    },
+    {
+      "hypothesis_id": "hyp-cafe-rio-0004",
+      "name": "Hardware and Infrastructure",
+      "description": "Identify hardware lifecycle, reliability, service, support, security or deployment issues that could impede the turnaround or future growth.",
+      "supporting_evidence_ids": [
+        "ev-cafe-rio-0005"
+      ],
+      "contradictory_evidence_ids": [],
+      "likely_buyer": "CIO / IT leadership",
+      "relevant_capability": "Global Payments / Genius restaurant technology",
+      "discovery_question_ids": [],
+      "validation_status": "unvalidated",
+      "as_of": "2026-08-27"
+    },
+    {
+      "hypothesis_id": "hyp-cafe-rio-0005",
+      "name": "Digital Ordering and Delivery Economics",
+      "description": "Understand channel profitability, third-party delivery dependence, first-party ordering adoption and the relationship between digital demand and restaurant throughput.",
+      "supporting_evidence_ids": [
+        "ev-cafe-rio-0005"
+      ],
+      "contradictory_evidence_ids": [],
+      "likely_buyer": "Digital / Marketing leadership",
+      "relevant_capability": "Global Payments / Genius restaurant technology",
+      "discovery_question_ids": [],
+      "validation_status": "unvalidated",
+      "as_of": "2026-08-27"
+    },
+    {
+      "hypothesis_id": "hyp-cafe-rio-0006",
+      "name": "Growth Readiness",
+      "description": "Determine what technology and operating changes Café Rio needs before returning to more aggressive development in 2028.",
+      "supporting_evidence_ids": [
+        "ev-cafe-rio-0005"
+      ],
+      "contradictory_evidence_ids": [],
+      "likely_buyer": "CEO / Development leadership",
+      "relevant_capability": "Global Payments / Genius restaurant technology",
+      "discovery_question_ids": [],
+      "validation_status": "unvalidated",
+      "as_of": "2026-08-27"
+    }
+  ]
+}

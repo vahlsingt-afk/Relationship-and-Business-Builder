@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>RBB Team Portal</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --bg-elevated: #f7f7f8;
+    --border: #e5e5e6;
+    --text: #1e1f22;
+    --text-muted: #6b6f76;
+    --accent: #5b7fff;
+    --accent-text: #ffffff;
+    --danger-bg: #fdecec;
+    --danger-border: #f3b8b8;
+    --danger-text: #b23a3a;
+    --code-bg: #f2f2f3;
+  }
+  /* No manual light/dark toggle -- follows the OS/browser's
+     prefers-color-scheme, same as rbb_chat_ui.html. */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #212123;
+      --bg-elevated: #2a2b2e;
+      --border: #333437;
+      --text: #ececec;
+      --text-muted: #a6a9b0;
+      --accent: #6e8fff;
+      --accent-text: #ffffff;
+      --danger-bg: #3a2222;
+      --danger-border: #6b2c2c;
+      --danger-text: #ffb4b4;
+      --code-bg: #1a1b1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--text);
+  }
+  header {
+    padding: 14px 20px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  header h1 { font-size: 16px; margin: 0; }
+  #whoami { font-size: 12px; color: var(--text-muted); }
+  main { max-width: 900px; margin: 0 auto; padding: 20px; }
+  .hidden { display: none !important; }
+  input, select, textarea, button {
+    font-family: inherit; font-size: 14px; color: var(--text); background: var(--bg);
+    border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px;
+  }
+  button { cursor: pointer; background: var(--accent); color: var(--accent-text); border: none; }
+  button.secondary { background: var(--bg-elevated); color: var(--text); }
+  button:disabled { opacity: 0.5; cursor: default; }
+  .row { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; }
+  .row input[type=text], .row input[type=search] { flex: 1; }
+  .table-scroll { width: 100%; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 16px; }
+  .table-scroll table { min-width: 640px; }
+  th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { color: var(--text-muted); font-weight: 600; }
+  tr.clickable { cursor: pointer; }
+  tr.clickable:hover { background: var(--bg-elevated); }
+  .tabs { display: flex; gap: 4px; margin-bottom: 12px; }
+  .tabs button { background: var(--bg-elevated); color: var(--text); }
+  .tabs button.active { background: var(--accent); color: var(--accent-text); }
+  .card { border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 16px; background: var(--bg-elevated); }
+  .card h2 { margin-top: 0; font-size: 15px; }
+  .error { background: var(--danger-bg); border: 1px solid var(--danger-border); color: var(--danger-text); border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; font-size: 13px; }
+  .muted { color: var(--text-muted); font-size: 13px; }
+  #brief-view, .brief-content { font-size: 13px; line-height: 1.5; background: var(--code-bg); border-radius: 8px; padding: 14px; max-height: 60vh; overflow-y: auto; }
+  .brief-content > :first-child { margin-top: 0; }
+  .brief-content h3 { font-size: 15px; margin: 14px 0 6px; }
+  .brief-content h4 { font-size: 12px; margin: 14px 0 4px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em; }
+  .brief-content h5 { font-size: 13px; margin: 10px 0 4px; font-weight: 600; }
+  .brief-content p { margin: 6px 0; }
+  .brief-content ul { margin: 4px 0 10px; padding-left: 20px; }
+  .brief-content li { padding: 2px 0; border-bottom: none; }
+  #welcome-view .card { line-height: 1.6; }
+  #welcome-view ol, #welcome-view ul { padding-left: 20px; margin: 8px 0; }
+  #welcome-view li { margin-bottom: 4px; }
+  form.entry-form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  form.entry-form label { font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 3px; }
+  form.entry-form .full { grid-column: 1 / -1; }
+  #back-btn { margin-bottom: 14px; }
+  .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 12px; }
+  .profile-field dt { font-size: 12px; color: var(--text-muted); }
+  .profile-field dd { margin: 0 0 8px 0; }
+  .field-as-of { font-size: 11px; color: var(--text-muted); }
+  .field-list { list-style: none; margin: 0; padding: 0; }
+  .field-list li { padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .field-list li:last-child { border-bottom: none; }
+  .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .badge-growing { background: #dff3e3; color: #1e7a3a; }
+  .badge-contracting { background: var(--danger-bg); color: var(--danger-text); }
+  .badge-flat { background: var(--bg-elevated); color: var(--text-muted); border: 1px solid var(--border); }
+  .badge-insufficient_data { background: var(--bg-elevated); color: var(--text-muted); border: 1px dashed var(--border); }
+  .stale-badge { display: inline-block; padding: 1px 7px; border-radius: 999px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; background: var(--danger-bg); color: var(--danger-text); border: 1px solid var(--danger-border); }
+  @media (prefers-color-scheme: dark) { .badge-growing { background: #1e3a26; color: #7fd99a; } }
+  .top-nav { display: flex; gap: 4px; margin-bottom: 18px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+  .top-nav button { background: transparent; color: var(--text-muted); border-radius: 8px; font-weight: 600; }
+  .top-nav button.active { background: var(--accent); color: var(--accent-text); }
+  .news-section h3 { font-size: 13px; margin: 18px 0 6px; }
+  .news-item { padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .news-item:last-child { border-bottom: none; }
+  .news-item .headline { font-weight: 600; font-size: 13px; }
+  .news-item .meta { font-size: 11px; color: var(--text-muted); margin: 2px 0 4px; }
+  .news-item .summary { font-size: 13px; margin: 4px 0; }
+  .news-item .why { font-size: 12px; color: var(--text-muted); font-style: italic; }
+  .filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+  .filter-row select, .filter-row input { font-size: 13px; }
+  .mi-noise-toggle { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-muted); margin: 10px 0 14px; }
+  .coverage-bar-track { background: var(--bg-elevated); border-radius: 999px; height: 10px; overflow: hidden; border: 1px solid var(--border); }
+  .coverage-bar-fill { background: var(--accent); height: 100%; }
+  .checklist { list-style: none; margin: 6px 0; padding: 0; }
+  .checklist li { padding: 3px 0; font-size: 13px; }
+  .checklist .done::before { content: "\2713  "; color: #1e7a3a; }
+  .checklist .todo::before { content: "\25CB  "; color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>RBB Team Portal</h1>
+  <div id="whoami"></div>
+</header>
+
+<main>
+  <div id="token-screen">
+    <div class="card">
+      <h2>Enter your token</h2>
+      <p class="muted">You should have received a token directly from Todd. It's stored only in this browser.</p>
+      <div class="row">
+        <input type="text" id="token-input" placeholder="Paste your token">
+        <button id="token-submit">Continue</button>
+      </div>
+      <div id="token-error" class="error hidden"></div>
+    </div>
+  </div>
+
+  <div id="app-screen" class="hidden">
+    <div class="top-nav">
+      <button id="nav-market-intel">Market Intelligence</button>
+      <button id="nav-companies" class="active">Companies</button>
+      <button id="nav-sales-tools">Sales Tools</button>
+    </div>
+    <div id="global-error" class="error hidden"></div>
+
+    <div id="section-market-intel" class="hidden">
+      <div class="tabs">
+        <button id="mi-tab-trends" class="active">Top 5 Restaurant Technology Trends</button>
+        <button id="mi-tab-news">Latest News</button>
+        <button id="mi-tab-earnings">Earnings Center</button>
+      </div>
+
+      <label class="mi-noise-toggle">
+        <input type="checkbox" id="mi-hide-noise" checked>
+        Hide stock price/volume noise (price moves, volume spikes, 52-week highs/lows)
+      </label>
+
+      <div id="mi-trends-view-wrap">
+        <div class="card">
+          <h2>Top 5 Restaurant Technology Trends</h2>
+          <p class="muted" id="mi-trends-asof"></p>
+          <div id="mi-trends-view"><p class="muted">Loading...</p></div>
+        </div>
+      </div>
+
+      <div id="mi-news-view" class="hidden">
+        <div class="filter-row">
+          <select id="mi-news-days">
+            <option value="7">Last 7 days</option>
+            <option value="14">Last 14 days</option>
+            <option value="30">Last 30 days</option>
+          </select>
+          <select id="mi-news-side">
+            <option value="">Restaurant + Technology</option>
+            <option value="operator_demand">Restaurant Operators</option>
+            <option value="vendor_supply">Restaurant Technology</option>
+          </select>
+          <select id="mi-news-company">
+            <option value="">All companies</option>
+          </select>
+        </div>
+        <div id="mi-news-results"><p class="muted">Loading...</p></div>
+      </div>
+
+      <div id="mi-earnings-view" class="hidden">
+        <div id="mi-earnings-list"><p class="muted">Loading...</p></div>
+        <div id="mi-earnings-detail"></div>
+      </div>
+    </div>
+
+    <div id="section-sales-tools" class="hidden">
+      <div class="card">
+        <h2>Pick a brand</h2>
+        <div class="row">
+          <input type="search" id="st-brand-search" placeholder="Search by name...">
+        </div>
+        <table id="st-results-table"><tbody id="st-results-body"></tbody></table>
+      </div>
+      <div id="st-tools-container"></div>
+    </div>
+
+    <div id="section-companies">
+    <div id="welcome-view">
+      <div class="card">
+        <h2>What this is</h2>
+        <p>The RBB Ecosystem Lookup Tool is a shared, searchable view into restaurant brand and technology-vendor
+        intelligence: company facts, leadership, tech stack, and competitive positioning. It's read-first — browse
+        anything on file, and optionally add tech-stack entries or suggest corrections for review.</p>
+        <h2 style="margin-top:18px;">How to use it</h2>
+        <ol>
+          <li>Pick <strong>Brands</strong> or <strong>Vendors</strong> above, then search by name -- or use <strong>Partner Finder</strong> to search by product, capability, or a problem to solve (e.g. "labor scheduling", "digital menu boards").</li>
+          <li>Open a result to see its profile: identity, leadership, recent signals, and technology environment.</li>
+          <li>Know something that's missing or wrong? Use the "Suggest a correction" form on that page — it's
+          queued for review, never applied live.</li>
+          <li>On a brand page, you can also log a tech-stack entry directly (vendor, category, deployment stage).</li>
+        </ol>
+        <button id="welcome-start-btn" style="margin-top:6px;">Start searching</button>
+      </div>
+    </div>
+
+    <div id="search-view" class="hidden">
+      <button id="about-link" class="secondary" style="margin-bottom:12px;font-size:12px;">&larr; What is this?</button>
+      <div class="tabs">
+        <button id="tab-brands" class="active">Brands</button>
+        <button id="tab-vendors">Vendors</button>
+        <button id="tab-partners">Partner Finder</button>
+      </div>
+      <div class="row">
+        <input type="search" id="search-input" placeholder="Search by name...">
+        <select id="partner-category-filter" class="hidden">
+          <option value="">All categories</option>
+        </select>
+      </div>
+      <div id="partner-finder-hint" class="muted hidden" style="margin:-6px 0 12px;">
+        Search by partner name, product, capability, or a problem to solve -- e.g. "digital menu boards",
+        "labor scheduling", "we need better inventory visibility".
+      </div>
+      <table id="results-table">
+        <thead id="results-head"></thead>
+        <tbody id="results-body"></tbody>
+      </table>
+      <div id="results-empty" class="muted hidden">Type a name above to search.</div>
+    </div>
+
+    <div id="detail-view" class="hidden">
+      <button id="back-btn" class="secondary">&larr; Back to search</button>
+      <div id="detail-content"></div>
+    </div>
+    </div>
+  </div>
+</main>
+
+<script>
+const state = { token: localStorage.getItem('rbb_team_token') || '', mode: 'brands', current: null, member: null };
+
+function api(path, opts) {
+  opts = opts || {};
+  opts.headers = Object.assign({ 'Authorization': 'Bearer ' + state.token }, opts.headers || {});
+  if (opts.body && typeof opts.body !== 'string') {
+    opts.headers['Content-Type'] = 'application/json';
+    opts.body = JSON.stringify(opts.body);
+  }
+  return fetch(path, opts).then(async (r) => {
+    if (r.status === 401) {
+      localStorage.removeItem('rbb_team_token');
+      state.token = '';
+      showTokenScreen('Your token is invalid or was revoked. Ask Todd for a new one.');
+      throw new Error('unauthorized');
+    }
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(data.detail || ('HTTP ' + r.status));
+    return data;
+  });
+}
+
+function showTokenScreen(err) {
+  document.getElementById('token-screen').classList.remove('hidden');
+  document.getElementById('app-screen').classList.add('hidden');
+  const e = document.getElementById('token-error');
+  if (err) { e.textContent = err; e.classList.remove('hidden'); }
+}
+
+function showAppScreen() {
+  document.getElementById('token-screen').classList.add('hidden');
+  document.getElementById('app-screen').classList.remove('hidden');
+}
+
+document.getElementById('token-submit').addEventListener('click', () => {
+  const val = document.getElementById('token-input').value.trim();
+  if (!val) return;
+  localStorage.setItem('rbb_team_token', val);
+  state.token = val;
+  init();
+});
+
+function setError(msg) {
+  const e = document.getElementById('global-error');
+  if (msg) { e.textContent = msg; e.classList.remove('hidden'); } else { e.classList.add('hidden'); }
+}
+
+// ---- Search ----
+
+let partnerCategoriesLoaded = false;
+
+function loadPartnerCategoriesOnce() {
+  if (partnerCategoriesLoaded) return;
+  partnerCategoriesLoaded = true;
+  api('/api/partners/categories').then((data) => {
+    const select = document.getElementById('partner-category-filter');
+    const options = (data.categories || []).map((c) => `<option value="${esc(c.value)}">${esc(c.label)}</option>`).join('');
+    select.insertAdjacentHTML('beforeend', options);
+  }).catch(() => {});
+}
+
+function setMode(mode) {
+  state.mode = mode;
+  document.getElementById('tab-brands').classList.toggle('active', mode === 'brands');
+  document.getElementById('tab-vendors').classList.toggle('active', mode === 'vendors');
+  document.getElementById('tab-partners').classList.toggle('active', mode === 'partners');
+  const isPartners = mode === 'partners';
+  document.getElementById('search-input').placeholder = isPartners
+    ? 'Search by name, product, capability, or problem to solve...' : 'Search by name...';
+  document.getElementById('partner-category-filter').classList.toggle('hidden', !isPartners);
+  document.getElementById('partner-finder-hint').classList.toggle('hidden', !isPartners);
+  if (isPartners) loadPartnerCategoriesOnce();
+  runSearch();
+}
+document.getElementById('tab-brands').addEventListener('click', () => setMode('brands'));
+document.getElementById('tab-vendors').addEventListener('click', () => setMode('vendors'));
+document.getElementById('tab-partners').addEventListener('click', () => setMode('partners'));
+
+let searchTimer = null;
+document.getElementById('search-input').addEventListener('input', () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(runSearch, 250);
+});
+document.getElementById('partner-category-filter').addEventListener('change', runSearch);
+
+function runSearch() {
+  const q = document.getElementById('search-input').value.trim();
+  const category = document.getElementById('partner-category-filter').value;
+  const empty = document.getElementById('results-empty');
+  if (!q && !(state.mode === 'partners' && category)) {
+    // Todd, 2026-09-27: the opening/search page should never dump an
+    // unfiltered list of every brand or vendor on file -- it's only
+    // useful once someone's looking for something specific.
+    document.getElementById('results-body').innerHTML = '';
+    empty.textContent = 'Type a name above to search.';
+    empty.classList.remove('hidden');
+    return;
+  }
+  let endpoint, itemsKey;
+  if (state.mode === 'brands') { endpoint = '/api/brands/search?q=' + encodeURIComponent(q); itemsKey = 'brands'; }
+  else if (state.mode === 'vendors') { endpoint = '/api/vendors/search?q=' + encodeURIComponent(q); itemsKey = 'vendors'; }
+  else {
+    endpoint = '/api/partners/search?q=' + encodeURIComponent(q) + (category ? '&category=' + encodeURIComponent(category) : '');
+    itemsKey = 'partners';
+  }
+  api(endpoint).then((data) => {
+    setError(null);
+    empty.textContent = 'No matches.';
+    renderResults(data[itemsKey]);
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+function renderResults(items) {
+  const head = document.getElementById('results-head');
+  const body = document.getElementById('results-body');
+  const empty = document.getElementById('results-empty');
+  body.innerHTML = '';
+  if (state.mode === 'brands') {
+    head.innerHTML = '<tr><th>Name</th><th>Segment</th><th>Rank</th><th>Units</th></tr>';
+    items.forEach((b) => {
+      const tr = document.createElement('tr');
+      tr.className = 'clickable';
+      tr.innerHTML = `<td>${b.name}</td><td>${b.segment || ''}</td><td>${b.rank ?? ''}</td><td>${b.unit_count ?? ''}</td>`;
+      tr.addEventListener('click', () => openBrand(b));
+      body.appendChild(tr);
+    });
+  } else if (state.mode === 'vendors') {
+    head.innerHTML = '<tr><th>Name</th><th>Primary category</th></tr>';
+    items.forEach((v) => {
+      const tr = document.createElement('tr');
+      tr.className = 'clickable';
+      tr.innerHTML = `<td>${v.name}</td><td>${v.primary_category || ''}</td>`;
+      tr.addEventListener('click', () => openVendor(v));
+      body.appendChild(tr);
+    });
+  } else {
+    head.innerHTML = '<tr><th>Name</th><th>Why this matched</th><th>Categories</th><th>Products</th>'
+      + '<th>Partner status</th><th>Brands using it</th><th>Confidence</th></tr>';
+    items.forEach((p) => {
+      const tr = document.createElement('tr');
+      tr.className = 'clickable';
+      tr.innerHTML = `<td>${esc(p.name)}</td><td>${esc(p.match_reason || '')}</td>`
+        + `<td>${esc((p.categories || []).join(', '))}</td><td>${esc((p.products || []).join(', '))}</td>`
+        + `<td>${esc(p.partner_status || 'unknown')}</td><td>${p.tracked_brand_count ?? 0}</td>`
+        + `<td>${esc(p.confidence || 'unknown')}</td>`;
+      tr.addEventListener('click', () => openVendor({ id: p.vendor_id, name: p.name }));
+      body.appendChild(tr);
+    });
+  }
+  empty.classList.toggle('hidden', items.length > 0);
+}
+
+document.getElementById('back-btn').addEventListener('click', () => {
+  document.getElementById('detail-view').classList.add('hidden');
+  document.getElementById('search-view').classList.remove('hidden');
+  state.current = null;
+});
+
+// ---- Field rendering helpers (shared by brand + competitor profiles) ----
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+
+// Minimal markdown -> HTML for the plain-markdown briefs the backend
+// returns (headings, bullet lists, **bold**) -- enough to make them
+// readable without pulling in a real markdown library for a handful of
+// tags. Everything is escaped through esc() first, so this never opens
+// an HTML-injection path even though the source is server-generated.
+function mdToHtml(md) {
+  if (!md) return '';
+  const inline = (s) => esc(s)
+    .replace(/\[(.+?)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  let html = '', inList = false;
+  const closeList = () => { if (inList) { html += '</ul>'; inList = false; } };
+  for (const raw of md.split('\n')) {
+    const line = raw.trim();
+    let m;
+    if (!line) { closeList(); continue; }
+    if ((m = line.match(/^###\s+(.*)/))) { closeList(); html += `<h5>${inline(m[1])}</h5>`; }
+    else if ((m = line.match(/^##\s+(.*)/))) { closeList(); html += `<h4>${inline(m[1])}</h4>`; }
+    else if ((m = line.match(/^#\s+(.*)/))) { closeList(); html += `<h3>${inline(m[1])}</h3>`; }
+    else if ((m = line.match(/^[-*]\s+(.*)/))) {
+      if (!inList) { html += '<ul>'; inList = true; }
+      html += `<li>${inline(m[1])}</li>`;
+    } else { closeList(); html += `<p>${inline(line)}</p>`; }
+  }
+  closeList();
+  return html;
+}
+
+// Phase D (2026-09-25): staleness is a purely presentational badge, never a
+// stored value -- trajectory is already recomputed live on every read
+// (brand_profile_common.compute_trajectory), and the exec-move/ownership/
+// vulnerability scans already run daily against the full graph via
+// morning_pipeline.py, so the only genuinely missing piece was surfacing
+// "this fact hasn't been re-checked in a while" without ever touching or
+// dropping the underlying value. Computed client-side from the as_of date
+// every field already carries -- no new API field needed.
+const STALE_THRESHOLD_DAYS = 90;
+
+function isStale(asOf) {
+  if (!asOf) return false;
+  const then = new Date(asOf + 'T00:00:00Z').getTime();
+  if (Number.isNaN(then)) return false;
+  return (Date.now() - then) / 86400000 > STALE_THRESHOLD_DAYS;
+}
+
+function staleBadge(asOf) {
+  return isStale(asOf) ? ' <span class="stale-badge" title="Not re-checked in over 90 days">stale</span>' : '';
+}
+
+function sourceLinkHtml(url) {
+  return url ? ` <a href="${esc(url)}" target="_blank" rel="noopener">(source)</a>` : '';
+}
+
+function fieldHtml(f, label) {
+  if (!f || f.status === 'not_yet_researched' || f.value == null) {
+    return `<dt>${esc(label)}</dt><dd class="muted">Not yet researched</dd>`;
+  }
+  const asOf = f.as_of ? `as of ${esc(f.as_of)}` : '';
+  const conf = f.confidence ? `, ${esc(f.confidence)} confidence` : '';
+  return `<dt>${esc(label)}</dt><dd>${esc(f.value)}<div class="field-as-of">${asOf}${conf}${staleBadge(f.as_of)}${sourceLinkHtml(f.source_url)}</div></dd>`;
+}
+
+function fieldListHtml(items, emptyText) {
+  if (!items || !items.length) return `<p class="muted">${esc(emptyText || 'None on file yet.')}</p>`;
+  const lis = items.map((f) => {
+    const asOf = f.as_of ? `as of ${esc(f.as_of)}` : '';
+    return `<li>${esc(f.value)}<div class="field-as-of">${asOf}${staleBadge(f.as_of)}${sourceLinkHtml(f.source_url)}</div></li>`;
+  }).join('');
+  return `<ul class="field-list">${lis}</ul>`;
+}
+
+const SIGNAL_TYPE_LABELS = {
+  strategic_initiative: 'Strategic initiative', financial_health: 'Financial health',
+  leadership_change: 'Leadership change', ownership_change: 'Ownership change',
+  expansion_or_contraction: 'Expansion / contraction', challenge_or_headwind: 'Challenge / headwind',
+  competitive_positioning: 'Positioning', other: 'Other',
+};
+
+function signalHtml(s) {
+  if (typeof s === 'string') return `<li>${esc(s)}</li>`;
+  const typeLabel = SIGNAL_TYPE_LABELS[s.signal_type] || s.signal_type;
+  const value = s.value || s.summary || '';
+  const meta = [typeLabel, s.as_of ? `as of ${s.as_of}` : null, s.status ? s.status : null].filter(Boolean).join(' · ');
+  return `<li>${esc(value)}<div class="field-as-of">${esc(meta)}${staleBadge(s.as_of)}${sourceLinkHtml(s.source_url)}</div></li>`;
+}
+
+function sortSignalsRecentFirst(signals) {
+  return [...signals].sort((a, b) => {
+    const aDate = (typeof a === 'object' && a.as_of) || '';
+    const bDate = (typeof b === 'object' && b.as_of) || '';
+    return bDate.localeCompare(aDate);
+  });
+}
+
+function trajectoryHtml(t) {
+  if (!t) return '';
+  const badge = t.badge || 'insufficient_data';
+  const cls = 'badge badge-' + badge.toLowerCase();
+  const detail = t.value_pct != null ? `${t.value_pct > 0 ? '+' : ''}${t.value_pct}% (${esc(t.metric_used || '')}, ${esc(t.as_of_year || '')})` : 'No Technomic delta data on file';
+  return `<span class="${cls}">${esc(badge)}</span> <span class="field-as-of">${detail}</span>`;
+}
+
+// ---- Suggest a correction (queues to Todd's review, never applied live) ----
+
+function correctionFormHtml(idPrefix) {
+  return `<form class="entry-form" id="${idPrefix}-form">
+    <div class="full"><label>Field (e.g. identity.hq_city_state, synopsis, strengths)</label>
+      <input type="text" id="${idPrefix}-field" placeholder="field path" required style="width:100%"></div>
+    <div class="full"><label>Proposed value</label><textarea id="${idPrefix}-value" rows="2" style="width:100%" required></textarea></div>
+    <div><label>Source URL (optional)</label><input type="text" id="${idPrefix}-source" style="width:100%"></div>
+    <div><label>Note (optional)</label><input type="text" id="${idPrefix}-note" style="width:100%"></div>
+    <div class="full"><button type="submit">Submit for review</button> <span id="${idPrefix}-status" class="muted"></span></div>
+  </form>`;
+}
+
+// ---- Email any generated report (2026-09-28, generic across artifact types) ----
+
+function emailReportFormHtml(idPrefix) {
+  return `<div style="margin-top:10px;">
+    <input type="text" id="${idPrefix}-email-input" placeholder="email address" style="width:220px;">
+    <button id="${idPrefix}-email-btn">Email this</button>
+    <span id="${idPrefix}-email-status" class="muted"></span>
+  </div>`;
+}
+
+function wireEmailReportButton(idPrefix, getSubjectAndMarkdown) {
+  const input = document.getElementById(`${idPrefix}-email-input`);
+  const btn = document.getElementById(`${idPrefix}-email-btn`);
+  const status = document.getElementById(`${idPrefix}-email-status`);
+  if (!input || !btn) return;
+  if (state.member && state.member.email) input.value = state.member.email;
+  btn.addEventListener('click', () => {
+    const recipient = input.value.trim();
+    if (!recipient) { status.textContent = 'Enter an email address first.'; return; }
+    const { subject, markdown } = getSubjectAndMarkdown();
+    if (!markdown) { status.textContent = 'Nothing generated yet.'; return; }
+    status.textContent = 'Sending...';
+    api('/api/email-report', { method: 'POST', body: { recipient, subject, markdown } }).then(() => {
+      status.textContent = `Sent to ${recipient}.`;
+    }).catch((e) => { if (e.message !== 'unauthorized') status.textContent = 'Error: ' + e.message; });
+  });
+}
+
+function wireCorrectionForm(idPrefix, targetType, targetId) {
+  document.getElementById(`${idPrefix}-form`).addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const status = document.getElementById(`${idPrefix}-status`);
+    const body = {
+      target_type: targetType,
+      target_id: targetId,
+      field_path: document.getElementById(`${idPrefix}-field`).value.trim(),
+      proposed_value: document.getElementById(`${idPrefix}-value`).value,
+      source_url: document.getElementById(`${idPrefix}-source`).value.trim() || null,
+      note: document.getElementById(`${idPrefix}-note`).value.trim(),
+    };
+    status.textContent = 'Submitting...';
+    api('/api/profile-submissions', { method: 'POST', body }).then(() => {
+      status.textContent = 'Submitted -- queued for review, not live yet.';
+      ev.target.reset();
+    }).catch((e) => { if (e.message !== 'unauthorized') status.textContent = 'Error: ' + e.message; });
+  });
+}
+
+// ---- Brand detail ----
+
+function openBrand(brand) {
+  state.current = { type: 'brand', id: brand.id, name: brand.name };
+  document.getElementById('search-view').classList.add('hidden');
+  document.getElementById('detail-view').classList.remove('hidden');
+  const content = document.getElementById('detail-content');
+  content.innerHTML = `<h2>${esc(brand.name)}</h2>
+    <div class="card"><h2>Company Profile</h2><div id="company-profile"></div></div>
+    <div id="tech-stack-table"></div>
+    <div class="card"><h2>Account Facts</h2>
+      <p class="muted">Brand profile, technology environment, leadership, and related artifacts on file. Not a strategy document -- internal notes and sales approach are not included here.</p>
+      <div id="brief-view" class="brief-content"></div>
+      <div style="margin-top:12px;">
+        <button id="canonical-brief-btn">Generate Canonical Team Brief</button>
+        <span id="canonical-brief-status" class="muted"></span>
+        <div id="canonical-brief-email-row" class="hidden" style="margin-top:8px;">
+          <input type="text" id="canonical-brief-email" placeholder="email address" style="width:220px;">
+          <button id="canonical-brief-email-btn">Email it</button>
+          <span id="canonical-brief-email-status" class="muted"></span>
+        </div>
+      </div>
+    </div>
+    <div class="card"><h2>Value Wedge</h2>
+      <p class="muted">Pick a Genius product line and a competitor to compare -- doesn't require an existing tech-stack entry (useful for prospecting a vendor this brand hasn't logged yet). Rows in the tech-stack table above also have their own quick "Value Wedge" shortcut.</p>
+      ${valueWedgeStandaloneFormHtml()}
+      <div id="value-wedge-standalone-container"></div>
+    </div>
+    <div class="card"><h2>Add / update tech-stack entry</h2>${entryFormHtml()}</div>
+    <div class="card"><h2>Suggest a correction to the Company Profile</h2>
+      <p class="muted">Reviewed before it goes live -- not applied immediately.</p>
+      ${correctionFormHtml('brand-corr')}
+    </div>`;
+  loadTechStack(brand.id);
+  wireEntryForm(brand.id);
+  loadBrief(brand.id);
+  loadCompanyProfile(brand.id);
+  wireCorrectionForm('brand-corr', 'brand', brand.id);
+  wireCanonicalBrief(brand.id);
+  wireValueWedgeStandaloneForm(brand.id);
+}
+
+const GENIUS_PRODUCT_LINES = [
+  ['pos', 'POS'], ['payments', 'Payments'], ['back_office', 'Back Office'],
+  ['kitchen_drive_thru', 'Kitchen / Drive-Thru'], ['loyalty_engagement', 'Loyalty & Engagement'],
+  ['digital_menu_boards', 'Digital Menu Boards'], ['restaurant_os_platform', 'Restaurant OS Platform'],
+];
+
+function valueWedgeStandaloneFormHtml() {
+  return `<form class="entry-form" id="vw-standalone-form">
+    <div><label>Genius product</label><select id="vw-standalone-category" required>
+      <option value="">Select...</option>
+      ${GENIUS_PRODUCT_LINES.map(([v, label]) => `<option value="${v}">${esc(label)}</option>`).join('')}
+    </select></div>
+    <div><label>Competitor</label><input type="text" id="vw-standalone-vendor-search" placeholder="Search vendors..." autocomplete="off">
+      <select id="vw-standalone-vendor-id" size="4" style="width:100%;margin-top:4px;"></select></div>
+    <div class="full"><button type="submit">Generate Value Wedge</button> <span id="vw-standalone-status" class="muted"></span></div>
+  </form>`;
+}
+
+function wireValueWedgeStandaloneForm(brandId) {
+  const categorySelect = document.getElementById('vw-standalone-category');
+  const vendorSearch = document.getElementById('vw-standalone-vendor-search');
+  const vendorSelect = document.getElementById('vw-standalone-vendor-id');
+  let vTimer = null;
+
+  // 2026-09-28, Todd: "we should always go 1-1 product" -- the competitor
+  // list is scoped to whoever actually competes on the picked Genius
+  // product (never every tracked vendor), so pick the product first.
+  const runSearch = () => {
+    const qs = 'q=' + encodeURIComponent(vendorSearch.value.trim())
+      + '&competes_on=' + encodeURIComponent(categorySelect.value);
+    api('/api/vendors/search?' + qs).then((data) => {
+      vendorSelect.innerHTML = data.vendors.length
+        ? data.vendors.map((v) => `<option value="${v.id}">${v.name}</option>`).join('')
+        : '<option disabled>No tracked competitors declared for this product yet</option>';
+    });
+  };
+
+  vendorSearch.disabled = true;
+  vendorSearch.placeholder = 'Pick a Genius product first...';
+  categorySelect.addEventListener('change', () => {
+    vendorSearch.value = '';
+    vendorSelect.innerHTML = '';
+    const hasCategory = !!categorySelect.value;
+    vendorSearch.disabled = !hasCategory;
+    vendorSearch.placeholder = hasCategory ? 'Search competitors on this product...' : 'Pick a Genius product first...';
+    if (hasCategory) runSearch();
+  });
+
+  vendorSearch.addEventListener('input', () => {
+    clearTimeout(vTimer);
+    vTimer = setTimeout(runSearch, 250);
+  });
+
+  document.getElementById('vw-standalone-form').addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const vendorId = vendorSelect.value;
+    const category = document.getElementById('vw-standalone-category').value;
+    const status = document.getElementById('vw-standalone-status');
+    if (!vendorId) { status.textContent = 'Pick a competitor from the list first.'; return; }
+    if (!category) { status.textContent = 'Pick a Genius product line first.'; return; }
+    status.textContent = '';
+    const vendorName = vendorSelect.options[vendorSelect.selectedIndex].textContent;
+    openValueWedge('value-wedge-standalone-container', brandId, vendorId, vendorName, category);
+  });
+}
+
+function wireCanonicalBrief(brandId) {
+  const genBtn = document.getElementById('canonical-brief-btn');
+  const genStatus = document.getElementById('canonical-brief-status');
+  const emailRow = document.getElementById('canonical-brief-email-row');
+  const emailInput = document.getElementById('canonical-brief-email');
+  const emailBtn = document.getElementById('canonical-brief-email-btn');
+  const emailStatus = document.getElementById('canonical-brief-email-status');
+  if (state.member && state.member.email) emailInput.value = state.member.email;
+
+  genBtn.addEventListener('click', () => {
+    genStatus.textContent = 'Generating...';
+    api(`/api/brands/${brandId}/canonical-background-brief`, { method: 'POST' }).then((data) => {
+      genStatus.textContent = data.markdown ? 'Generated.' : 'Not yet available.';
+      emailRow.classList.remove('hidden');
+    }).catch((e) => { if (e.message !== 'unauthorized') genStatus.textContent = 'Error: ' + e.message; });
+  });
+
+  emailBtn.addEventListener('click', () => {
+    const recipient = emailInput.value.trim();
+    if (!recipient) { emailStatus.textContent = 'Enter an email address first.'; return; }
+    emailStatus.textContent = 'Sending...';
+    api(`/api/brands/${brandId}/canonical-background-brief/email`, { method: 'POST', body: { recipient } }).then(() => {
+      emailStatus.textContent = `Sent to ${recipient}.`;
+    }).catch((e) => { if (e.message !== 'unauthorized') emailStatus.textContent = 'Error: ' + e.message; });
+  });
+}
+
+function loadCompanyProfile(brandId) {
+  const view = document.getElementById('company-profile');
+  view.innerHTML = '<p class="muted">Loading...</p>';
+  api(`/api/brands/${brandId}/ecosystem-profile`).then((p) => {
+    const identity = p.identity || {};
+    const footprint = p.footprint || {};
+    const leadership = ((p.leadership || {}).confirmed) || [];
+    const signals = sortSignalsRecentFirst(p.recent_signals || []);
+    view.innerHTML = `
+      <div style="margin-bottom:10px;">${trajectoryHtml(p.trajectory)}</div>
+      <dl class="profile-grid">
+        ${fieldHtml(identity.parent_ownership, 'Parent / ownership')}
+        ${fieldHtml(identity.hq_city_state, 'Headquarters')}
+        ${fieldHtml(identity.founded_year, 'Founded')}
+        ${fieldHtml(p.synopsis, 'Synopsis')}
+        ${fieldHtml(footprint.total_units, 'Total units')}
+        ${fieldHtml(footprint.franchised_units, 'Franchised units')}
+        ${fieldHtml(footprint.company_owned_units, 'Company-owned units')}
+        ${fieldHtml(footprint.franchisee_count, 'Franchisee count')}
+      </dl>
+      <h3 style="font-size:13px;margin-bottom:4px;">Leadership</h3>
+      ${leadership.length ? `<ul class="field-list">${leadership.map((l) => `<li>${esc(l.name)}${l.title ? ' — ' + esc(l.title) : ''}</li>`).join('')}</ul>` : '<p class="muted">Not yet researched.</p>'}
+      <h3 style="font-size:13px;margin-bottom:4px;">Recent signals</h3>
+      ${signals.length ? `<ul class="field-list">${signals.map(signalHtml).join('')}</ul>` : '<p class="muted">No signals on file yet.</p>'}
+    `;
+  }).catch((e) => { if (e.message !== 'unauthorized') view.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+}
+
+function loadTechStack(brandId) {
+  api(`/api/brands/${brandId}/tech-stack`).then((data) => {
+    const rows = data.vendor_relationships.map((r) => `<tr>
+      <td>${r.vendor || ''}</td><td>${r.category || ''}</td><td>${r.vendor_role || ''}</td>
+      <td>${r.product || ''}</td><td>${r.deployment_stage || ''}</td><td>${r.confidence || ''}</td>
+      <td>${r.roster_posture === 'canonical_current' || r.roster_posture === 'canonical_current_unlinked' ? 'Canonical current' : 'Supplemental — verify'}</td>
+      <td>${r.last_modified_by ? '👤 ' + r.last_modified_by : ''}</td>
+      <td>${r.vendor_id && r.is_genius_competitor ? `<button class="vw-btn" data-vendor-id="${esc(r.vendor_id)}" data-vendor-name="${esc(r.vendor || r.vendor_id)}">Value Wedge</button>` : ''}</td>
+    </tr>`).join('');
+    document.getElementById('tech-stack-table').innerHTML = `<div class="table-scroll"><table>
+      <thead><tr><th>Vendor</th><th>Category</th><th>Role</th><th>Product</th><th>Stage</th><th>Confidence</th><th>Posture</th><th>Edited by</th><th></th></tr></thead>
+      <tbody>${rows || '<tr><td colspan="9" class="muted">No tech-stack entries recorded yet.</td></tr>'}</tbody></table></div>
+      <p class="muted">${data.reconciliation && data.reconciliation.policy === 'canonical_account_facts_win_by_category'
+        ? `Roster reconciled to canonical account facts; ${data.reconciliation.suppressed || 0} stale/conflicting graph row(s) hidden from the current view.`
+        : 'No canonical technology facts are available yet; roster entries remain unreconciled.'}</p>
+      <div id="value-wedge-container"></div>`;
+    document.querySelectorAll('.vw-btn').forEach((btn) => {
+      btn.addEventListener('click', () => openValueWedge('value-wedge-container', brandId, btn.dataset.vendorId, btn.dataset.vendorName));
+    });
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+function openValueWedge(containerId, brandId, vendorId, vendorName, category) {
+  const container = document.getElementById(containerId);
+  const isOwner = !!(state.member && state.member.is_owner);
+  container.innerHTML = `<div class="card"><h2>Value Wedge — ${esc(vendorName)}</h2>
+    <p class="muted">${isOwner ? 'Generates and saves a new official version of the Value Wedge for this account/vendor pair.' : 'Shows the latest Value Wedge generated for this account/vendor pair.'}</p>
+    <button id="vw-generate-btn">Regenerate</button>
+    <div id="vw-view" style="margin-top:12px;"></div>
+  </div>`;
+  container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  const regenerate = () => {
+    const view = document.getElementById('vw-view');
+    view.innerHTML = '<p class="muted">Generating...</p>';
+    const qs = category ? `?category=${encodeURIComponent(category)}` : '';
+    api(`/api/brands/${brandId}/value-wedge/${vendorId}${qs}`, { method: 'POST' }).then((res) => {
+      if (!res.data) { view.innerHTML = '<p class="muted">Not yet generated yet.</p>'; return; }
+      view.innerHTML = valueWedgeSvg(res.data) + emailReportFormHtml('vw-email');
+      if (!(res.data.circle2_customer_needs || []).length) wireQuickAddPainPoint(brandId, regenerate);
+      wireEmailReportButton('vw-email', () => ({ subject: `${vendorName} vs. Genius — Value Wedge`, markdown: res.markdown }));
+    }).catch((e) => { if (e.message !== 'unauthorized') view.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+  };
+  document.getElementById('vw-generate-btn').addEventListener('click', regenerate);
+  regenerate();
+}
+
+function wireQuickAddPainPoint(brandId, onAdded) {
+  const form = document.getElementById('vw-need-form');
+  if (!form) return;
+  form.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const input = document.getElementById('vw-need-input');
+    const status = document.getElementById('vw-need-status');
+    const value = input.value.trim();
+    if (!value) return;
+    status.textContent = 'Saving...';
+    api(`/api/brands/${brandId}/pain-points`, { method: 'POST', body: { value } }).then(() => {
+      onAdded();
+    }).catch((e) => { if (e.message !== 'unauthorized') status.textContent = 'Error: ' + e.message; });
+  });
+}
+
+// Three overlapping circles -- Company Strengths / Customer Needs /
+// Competitor Weaknesses -- the real value-wedge methodology (not a
+// side-by-side comparison; that's Battle Card's job, deliberately kept
+// separate). A real diagram, with the sourced lists underneath rather
+// than crammed unreadably inside the circles -- this module never
+// invents which strength/need/weakness actually connect (see
+// value_wedge.py's docstring); the diagram frames the concept, the RM
+// finds the wedge.
+function valueWedgeSvg(data) {
+  const c1 = data.circle1_genius_strengths || [];
+  const c2 = data.circle2_customer_needs || [];
+  const c3 = data.circle3_competitor_weaknesses || [];
+  const svg = `<svg viewBox="0 0 360 260" style="width:100%;max-width:420px;display:block;margin:0 auto 16px;">
+    <circle cx="150" cy="110" r="90" fill="#6366f1" opacity="0.35"/>
+    <circle cx="210" cy="110" r="90" fill="#059669" opacity="0.35"/>
+    <circle cx="180" cy="170" r="90" fill="#dc2626" opacity="0.35"/>
+    <text x="90" y="60" font-size="13" font-weight="600" text-anchor="middle">Genius Strengths</text>
+    <text x="90" y="76" font-size="18" font-weight="700" text-anchor="middle">${c1.length}</text>
+    <text x="270" y="60" font-size="13" font-weight="600" text-anchor="middle">Customer Needs</text>
+    <text x="270" y="76" font-size="18" font-weight="700" text-anchor="middle">${c2.length}</text>
+    <text x="180" y="230" font-size="13" font-weight="600" text-anchor="middle">Competitor Weaknesses</text>
+    <text x="180" y="214" font-size="18" font-weight="700" text-anchor="middle">${c3.length}</text>
+    <text x="180" y="130" font-size="11" font-style="italic" text-anchor="middle" fill="#1f2937">the wedge</text>
+  </svg>`;
+  const col = (title, items, render, extra) => `<div style="flex:1;min-width:180px;">
+    <h4 style="font-size:12px;margin-bottom:6px;">${esc(title)}</h4>
+    ${items.length ? `<ul class="field-list">${items.map(render).join('')}</ul>` : '<p class="muted">None on file yet.</p>'}
+    ${extra || ''}
+  </div>`;
+  const needQuickAdd = c2.length ? '' : `<form id="vw-need-form" style="margin-top:8px;">
+    <input type="text" id="vw-need-input" placeholder="e.g. concerned about kiosk uptime" style="width:100%;box-sizing:border-box;" required>
+    <button type="submit" style="margin-top:6px;">Add a customer need</button>
+    <span id="vw-need-status" class="muted"></span>
+  </form>`;
+  const needLabel = (i) => i.source === 'known_challenge' ? ' <span class="muted">(known challenge)</span>' : '';
+  const lists = `<div style="display:flex;gap:16px;flex-wrap:wrap;">
+    ${col('Genius Strengths' + (data.category ? ` — ${GENIUS_PRODUCT_LINES.find((p) => p[0] === data.category)?.[1] || data.category}` : ''), c1, (i) => `<li>${esc(i.point)}${i.category && !data.category ? ` <span class="muted">(${esc(i.category)})</span>` : ''}</li>`)}
+    ${col(`Customer Needs — ${data.brand_name || ''}`, c2, (i) => `<li>${esc(i.value)}${needLabel(i)}${i.as_of ? `<div class="field-as-of">as of ${esc(i.as_of)}</div>` : ''}</li>`, needQuickAdd)}
+    ${col(`Where ${data.vendor_display_name || ''} is weak`, c3, (i) => `<li>${esc(i.point)}</li>`)}
+  </div>`;
+  return svg + lists;
+}
+
+function entryFormHtml() {
+  return `<form class="entry-form" id="entry-form">
+    <div><label>Vendor</label><input type="text" id="ef-vendor-search" placeholder="Search vendors..." autocomplete="off">
+      <select id="ef-vendor-id" size="4" style="width:100%;margin-top:4px;"></select></div>
+    <div><label>Category</label><input type="text" id="ef-category" placeholder="e.g. pos, online_ordering, loyalty" required></div>
+    <div><label>Product</label><input type="text" id="ef-product"></div>
+    <div><label>Vendor role</label><input type="text" id="ef-vendor-role" placeholder="e.g. system_of_record_pos"></div>
+    <div><label>Deployment stage</label><input type="text" id="ef-stage" placeholder="e.g. full_deployment, pilot"></div>
+    <div><label>Penetration %</label><input type="number" id="ef-penetration" min="0" max="100"></div>
+    <div class="full"><label>Note (how do you know this?)</label><textarea id="ef-note" rows="2" style="width:100%"></textarea></div>
+    <div class="full"><button type="submit">Submit</button> <span id="ef-status" class="muted"></span></div>
+  </form>`;
+}
+
+function wireEntryForm(brandId) {
+  const vendorSearch = document.getElementById('ef-vendor-search');
+  const vendorSelect = document.getElementById('ef-vendor-id');
+  let vTimer = null;
+  vendorSearch.addEventListener('input', () => {
+    clearTimeout(vTimer);
+    vTimer = setTimeout(() => {
+      api('/api/vendors/search?q=' + encodeURIComponent(vendorSearch.value.trim())).then((data) => {
+        vendorSelect.innerHTML = data.vendors.map((v) => `<option value="${v.id}">${v.name}</option>`).join('');
+      });
+    }, 250);
+  });
+
+  document.getElementById('entry-form').addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const vendorId = vendorSelect.value;
+    const status = document.getElementById('ef-status');
+    if (!vendorId) { status.textContent = 'Pick a vendor from the list first.'; return; }
+    const penetration = document.getElementById('ef-penetration').value;
+    const body = {
+      vendor_id: vendorId,
+      category: document.getElementById('ef-category').value,
+      product: document.getElementById('ef-product').value || null,
+      vendor_role: document.getElementById('ef-vendor-role').value || null,
+      deployment: {
+        stage: document.getElementById('ef-stage').value || null,
+        penetration_pct: penetration ? Number(penetration) : null,
+      },
+      note: document.getElementById('ef-note').value || null,
+    };
+    status.textContent = 'Submitting...';
+    api(`/api/brands/${brandId}/tech-stack`, { method: 'POST', body }).then((res) => {
+      status.textContent = res.conflict ? 'Saved — flagged as a conflict with an existing claim.' : 'Saved.';
+      loadTechStack(brandId);
+    }).catch((e) => { if (e.message !== 'unauthorized') status.textContent = 'Error: ' + e.message; });
+  });
+}
+
+function loadBrief(brandId) {
+  const view = document.getElementById('brief-view');
+  view.classList.remove('hidden');
+  view.innerHTML = '<p class="muted">Loading...</p>';
+  api(`/api/brands/${brandId}/background-brief`)
+    .then((data) => { view.innerHTML = mdToHtml(data.markdown); })
+    .catch((e) => { if (e.message !== 'unauthorized') view.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+}
+
+// ---- Vendor detail ----
+
+function openVendor(vendor) {
+  state.current = { type: 'vendor', id: vendor.id, name: vendor.name };
+  document.getElementById('search-view').classList.add('hidden');
+  document.getElementById('detail-view').classList.remove('hidden');
+  const content = document.getElementById('detail-content');
+  content.innerHTML = `<h2>${esc(vendor.name)}</h2>
+    <div class="card"><h2>Company Profile</h2><div id="vendor-company-profile"></div></div>
+    <div class="card"><h2>Competitor Snapshot</h2><div id="competitor-extended-profile"></div></div>
+    <div class="card"><h2>Competitor Profile</h2>
+      <button id="profile-generate-btn">Generate / refresh</button>
+      <div id="brief-view" class="brief-content hidden"></div>
+    </div>
+    <div class="card"><h2>Competitive Brief</h2>
+      <p class="muted" id="comp-brief-desc">Loading...</p>
+      <button id="comp-brief-btn">Generate competitive brief</button>
+      <button id="comp-brief-refresh-btn" class="secondary">Request earlier "bottom line" refresh</button>
+      <p class="muted" id="comp-brief-refresh-status" style="margin-top:6px;"></p>
+      <div id="comp-brief-view" class="hidden" style="margin-top:12px;"></div>
+    </div>
+    <div class="card"><h2>Battle Card</h2>
+      <p class="muted" id="battle-card-desc">Loading...</p>
+      <button id="battle-card-btn">Generate battle card</button>
+      <div id="battle-card-view" class="hidden" style="margin-top:12px;"></div>
+    </div>
+    <div class="card"><h2>Suggest a correction to the Competitor Snapshot</h2>
+      <p class="muted">Reviewed before it goes live -- not applied immediately.</p>
+      <div id="competitor-corr-container" class="muted">Loading...</div>
+    </div>`;
+  document.getElementById('profile-generate-btn').addEventListener('click', () => {
+    const view = document.getElementById('brief-view');
+    view.classList.remove('hidden');
+    view.innerHTML = '<p class="muted">Generating...</p>';
+    api(`/api/vendors/${vendor.id}/profile`, { method: 'POST' }).then((data) => {
+      view.innerHTML = mdToHtml(data.markdown) + emailReportFormHtml('profile');
+      wireEmailReportButton('profile', () => ({ subject: `${vendor.name} — Competitor Profile`, markdown: data.markdown }));
+    }).catch((e) => { if (e.message !== 'unauthorized') view.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+  });
+  loadVendorCompanyProfile(vendor.id);
+  loadCompetitorExtendedProfile(vendor.id);
+  wireCompetitiveBrief(vendor.id);
+  wireBattleCard(vendor.id);
+}
+
+function loadVendorCompanyProfile(vendorId) {
+  const view = document.getElementById('vendor-company-profile');
+  view.innerHTML = '<p class="muted">Loading...</p>';
+  api(`/api/vendors/${vendorId}/company-profile`).then((p) => {
+    const identity = p.identity || {};
+    const footprint = p.footprint || {};
+    const leadership = ((p.leadership || {}).confirmed) || [];
+    const signals = sortSignalsRecentFirst(p.recent_signals || []);
+    const productLines = p.product_lines || [];
+    // Real 2026-09-30 request (Todd): rationalize a vendor's own product
+    // lines -- e.g. PAR Technology's POS (Brink), back-office (PAR Ops,
+    // formerly Data Central), loyalty (PAR Loyalty, formerly Punchh),
+    // payment gateway (PAR Pay), payment processing (PAR Payments),
+    // online ordering (PAR Ordering, formerly MENU), drive-thru headset
+    // and drive-thru timer lines -- so a teammate can see what categories
+    // a vendor can fill under one company, not eight unrelated names.
+    // Only rendered when at least one product line is on file (the vast
+    // majority of vendors have none tracked yet).
+    // Rollups (2026-09-30, Todd: "these aliases should all roll up to
+    // NCR POS totals but should be kept intact underneath it") -- one
+    // combined total per category alongside the individually-named lines
+    // the table below already keeps intact, not instead of them.
+    const rollups = p.product_line_rollups || [];
+    const rollupsHtml = rollups.length ? `<p class="muted" style="margin:4px 0 8px;">${rollups.map((r) =>
+      `${esc(r.category_label)} total: ${r.total_brand_count} brand(s) across ${esc(r.product_names.join(', '))}`
+    ).join(' · ')}</p>` : '';
+    const REPLACEMENT_BADGE = { high: 'badge-contracting', medium: 'badge-flat', low: 'badge-growing' };
+    const productLinesHtml = productLines.length ? `
+      <h3 style="font-size:13px;margin-bottom:4px;">Product lines</h3>
+      ${rollupsHtml}
+      <div class="table-scroll"><table><thead><tr><th>Product</th><th>Category</th><th>Also known as</th><th>Replacement signal</th></tr></thead>
+      <tbody>${productLines.map((pl) => `<tr>
+        <td>${esc(pl.product_name || '')}${pl.is_parent ? ' <span class="muted">(this company)</span>' : ''}</td>
+        <td>${esc(pl.category_label || '')}</td>
+        <td>${esc((pl.aliases || []).join(', '))}</td>
+        <td>${pl.replacement_signal ? `<span class="badge ${REPLACEMENT_BADGE[pl.replacement_signal] || 'badge-flat'}">${esc(pl.replacement_signal)}${pl.product_generation ? ' · ' + esc(pl.product_generation) : ''}</span>` : ''}</td>
+      </tr>`).join('')}</tbody></table></div>
+    ` : '';
+    view.innerHTML = `
+      <dl class="profile-grid">
+        ${fieldHtml(identity.parent_ownership, 'Parent / ownership')}
+        ${fieldHtml(identity.hq_city_state, 'Headquarters')}
+        ${fieldHtml(identity.founded_year, 'Founded')}
+        ${fieldHtml(p.synopsis, 'Synopsis')}
+        ${fieldHtml(footprint.brand_count, 'Brands using this vendor')}
+      </dl>
+      ${productLinesHtml}
+      <h3 style="font-size:13px;margin-bottom:4px;">Leadership</h3>
+      ${leadership.length ? `<ul class="field-list">${leadership.map((l) => `<li>${esc(l.name)}${l.title ? ' — ' + esc(l.title) : ''}</li>`).join('')}</ul>` : '<p class="muted">Not yet researched.</p>'}
+      <h3 style="font-size:13px;margin-bottom:4px;">Recent signals</h3>
+      ${signals.length ? `<ul class="field-list">${signals.map(signalHtml).join('')}</ul>` : '<p class="muted">No signals on file yet.</p>'}
+    `;
+  }).catch((e) => { if (e.message !== 'unauthorized') view.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+}
+
+function wireCompetitiveBrief(vendorId) {
+  const isOwner = !!(state.member && state.member.is_owner);
+  document.getElementById('comp-brief-desc').textContent = isOwner
+    ? 'Generates and saves a new official version of the canonical Competitive Brief.'
+    : 'Shows the latest Competitive Brief generated -- editorial commentary excluded.';
+  document.getElementById('comp-brief-btn').addEventListener('click', () => {
+    const view = document.getElementById('comp-brief-view');
+    view.classList.remove('hidden');
+    view.className = 'brief-content';
+    view.innerHTML = '<p class="muted">Generating...</p>';
+    api(`/api/vendors/${vendorId}/competitive-brief`, { method: 'POST' }).then((data) => {
+      if (!data.markdown) { view.innerHTML = '<p class="muted">Not yet generated yet.</p>'; return; }
+      view.innerHTML = mdToHtml(data.markdown) + emailReportFormHtml('comp-brief');
+      wireEmailReportButton('comp-brief', () => ({ subject: 'Competitive Brief', markdown: data.markdown }));
+    }).catch((e) => { if (e.message !== 'unauthorized') view.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+  });
+  // The "bottom line" synthesis is never generated live -- see system/
+  // scripts/competitive_brief.py's own module docstring (Todd, 2026-09-
+  // 30: "there are no on demand request or real-time reports in the
+  // team portal option"). This only queues a request for the next
+  // morning's intelligence cycle, which emails the result to whoever
+  // asked -- it does not refresh the view above.
+  document.getElementById('comp-brief-refresh-btn').addEventListener('click', () => {
+    const status = document.getElementById('comp-brief-refresh-status');
+    status.textContent = 'Requesting...';
+    api(`/api/vendors/${vendorId}/competitive-brief/request-refresh`, { method: 'POST' }).then(() => {
+      status.textContent = 'Requested -- the updated brief will be emailed to you after tomorrow morning\'s intelligence cycle runs.';
+    }).catch((e) => { if (e.message !== 'unauthorized') status.textContent = 'Error: ' + e.message; });
+  });
+}
+
+function wireBattleCard(vendorId) {
+  const isOwner = !!(state.member && state.member.is_owner);
+  document.getElementById('battle-card-desc').textContent = isOwner
+    ? 'Generates and saves a new official version of the canonical Battle Card for this vendor\'s category.'
+    : 'Shows the latest Battle Card generated for this vendor\'s category -- editorial commentary excluded.';
+  document.getElementById('battle-card-btn').addEventListener('click', () => {
+    const view = document.getElementById('battle-card-view');
+    view.classList.remove('hidden');
+    view.className = 'brief-content';
+    view.innerHTML = '<p class="muted">Generating...</p>';
+    api(`/api/vendors/${vendorId}/battle-card`, { method: 'POST' }).then((data) => {
+      if (!data.available) { view.innerHTML = '<p class="muted">No tech-stack category on file for this vendor -- a battle card can\'t be resolved yet.</p>'; return; }
+      if (!data.markdown) { view.innerHTML = '<p class="muted">Not yet generated yet.</p>'; return; }
+      view.innerHTML = mdToHtml(data.markdown) + emailReportFormHtml('battle-card');
+      wireEmailReportButton('battle-card', () => ({ subject: `${data.category} — Battle Card`, markdown: data.markdown }));
+    }).catch((e) => { if (e.message !== 'unauthorized') view.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+  });
+}
+
+function loadCompetitorExtendedProfile(vendorId) {
+  const view = document.getElementById('competitor-extended-profile');
+  view.innerHTML = '<p class="muted">Loading...</p>';
+  api(`/api/vendors/${vendorId}/competitor-extended-profile`).then((p) => {
+    view.innerHTML = `
+      <h3 style="font-size:13px;margin-bottom:4px;">Products</h3>${fieldListHtml(p.products)}
+      <h3 style="font-size:13px;margin-bottom:4px;">Strengths</h3>${fieldListHtml(p.strengths)}
+      <h3 style="font-size:13px;margin-bottom:4px;">Key customers</h3>${fieldListHtml(p.key_customers)}
+      <h3 style="font-size:13px;margin-bottom:4px;">Recent news</h3>${fieldListHtml(p.recent_news)}
+      <h3 style="font-size:13px;margin-bottom:4px;">Trends</h3>${fieldHtml(p.trends, 'Trends').replace('<dt>Trends</dt>', '')}
+    `;
+    const corrContainer = document.getElementById('competitor-corr-container');
+    corrContainer.classList.remove('muted');
+    corrContainer.innerHTML = correctionFormHtml('vendor-corr');
+    wireCorrectionForm('vendor-corr', 'competitor', p.competitor_slug);
+  }).catch((e) => { if (e.message !== 'unauthorized') view.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+}
+
+// ---- Market Intelligence: Latest News ----
+
+function newsSectionOrder() {
+  return ['Top Stories', 'Restaurant Technology', 'Restaurant Operators', 'Press Releases', 'Earnings', 'Leadership Changes', 'M&A and Funding'];
+}
+
+function newsItemHtml(item) {
+  const companies = (item.companies || []).join(', ');
+  return `<div class="news-item">
+    <div class="headline">${esc(item.headline || '')}</div>
+    <div class="meta">${esc(item.source || '')}${item.published_date ? ' · ' + esc(item.published_date) : ''}${companies ? ' · ' + esc(companies) : ''}${item.gp_relevance ? ' · GP relevance: ' + esc(item.gp_relevance) : ''}
+      ${item.source_link ? `· <a href="${esc(item.source_link)}" target="_blank" rel="noopener">source</a>` : ''}</div>
+    ${item.summary ? `<div class="summary">${esc(item.summary)}</div>` : ''}
+    ${item.why_it_matters_to_gp ? `<div class="why">Why it matters to GP: ${esc(item.why_it_matters_to_gp)}</div>` : ''}
+  </div>`;
+}
+
+function loadLatestNews() {
+  const results = document.getElementById('mi-news-results');
+  results.innerHTML = '<p class="muted">Loading...</p>';
+  const days = document.getElementById('mi-news-days').value;
+  const side = document.getElementById('mi-news-side').value;
+  const company = document.getElementById('mi-news-company').value.trim();
+  const hideNoise = document.getElementById('mi-hide-noise').checked;
+  const qs = new URLSearchParams({ days, hide_noise: hideNoise });
+  if (side) qs.set('side', side);
+  if (company) qs.set('company', company);
+  api('/api/market/news?' + qs.toString()).then((data) => {
+    const sections = data.sections || {};
+    const order = newsSectionOrder().filter((s) => (sections[s] || []).length);
+    if (!order.length) { results.innerHTML = '<p class="muted">No news in this window.</p>'; return; }
+    results.innerHTML = order.map((name) => `<div class="news-section">
+      <h3>${esc(name)}</h3>
+      ${sections[name].map(newsItemHtml).join('')}
+    </div>`).join('');
+  }).catch((e) => { if (e.message !== 'unauthorized') results.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+}
+
+document.getElementById('mi-news-days').addEventListener('change', loadLatestNews);
+document.getElementById('mi-news-side').addEventListener('change', () => {
+  // Selecting a side (Restaurant Operators / Restaurant Technology) also
+  // narrows the company dropdown to just that side's companies -- real
+  // 2026-09-29 feedback: picking "Restaurant Technology" but still seeing
+  // McDonald's etc. in the company list was confusing. Reset the company
+  // selection first since the previously-picked company may not exist in
+  // the narrowed group.
+  document.getElementById('mi-news-company').value = '';
+  rebuildNewsCompanyOptions();
+  loadLatestNews();
+});
+document.getElementById('mi-news-company').addEventListener('change', loadLatestNews);
+document.getElementById('mi-hide-noise').addEventListener('change', () => {
+  loadTopTrends();
+  loadLatestNews();
+});
+
+// A dropdown of real company names -- built from the earnings watchlist
+// (so Global Payments and every tracked vendor is selectable even with
+// zero recent news) rather than free text, so the filter always matches
+// the feed's own exact spelling. Grouped so restaurant-tech vendors are
+// visibly distinct from operators, not buried alphabetically together --
+// and, per the side filter above, narrowed to just vendors when
+// "Restaurant Technology" is selected or just operators when "Restaurant
+// Operators" is selected, rather than always showing every group.
+let newsCompaniesData = null;
+function rebuildNewsCompanyOptions() {
+  if (!newsCompaniesData) return;
+  const data = newsCompaniesData;
+  const side = document.getElementById('mi-news-side').value;
+  const select = document.getElementById('mi-news-company');
+  const group = (label, names) => (names && names.length)
+    ? `<optgroup label="${esc(label)}">${names.map((n) => `<option value="${esc(n)}">${esc(n)}</option>`).join('')}</optgroup>` : '';
+  let html = '';
+  if (side === 'vendor_supply') {
+    html = group('Restaurant Technology', data.restaurant_technology);
+  } else if (side === 'operator_demand') {
+    html = group('Restaurant Operators', data.restaurant_operators);
+  } else {
+    html = group('Restaurant Technology', data.restaurant_technology)
+      + group('Restaurant Operators', data.restaurant_operators)
+      + group('Other / Adjacent', data.other);
+  }
+  select.innerHTML = '<option value="">All companies</option>' + html;
+}
+
+let newsCompaniesLoaded = false;
+function loadNewsCompaniesOnce() {
+  if (newsCompaniesLoaded) return;
+  newsCompaniesLoaded = true;
+  api('/api/market/news/companies').then((data) => {
+    newsCompaniesData = data;
+    rebuildNewsCompanyOptions();
+  }).catch(() => {});
+}
+
+// ---- Market Intelligence: Earnings Center ----
+
+function loadEarningsCenter() {
+  const list = document.getElementById('mi-earnings-list');
+  list.innerHTML = '<p class="muted">Loading...</p>';
+  api('/api/market/earnings').then((data) => {
+    const row = (c) => `<tr class="clickable" data-company="${esc(c.name)}">
+      <td>${esc(c.name)}${c.ticker ? ' (' + esc(c.ticker) + ')' : ''}</td><td>${esc(c.category_label || c.category || '')}</td>
+      <td>${esc(c.last_reported_date || (c.days_until != null ? 'in ' + c.days_until + ' days' : ''))}</td></tr>`;
+    list.innerHTML = `
+      <h3 style="font-size:13px;">Recently reported</h3>
+      <div class="table-scroll"><table><thead><tr><th>Company</th><th>Category</th><th>Reported</th></tr></thead>
+      <tbody>${(data.recently_reported || []).map(row).join('') || '<tr><td colspan="3" class="muted">None in the last 45 days.</td></tr>'}</tbody></table></div>
+      <h3 style="font-size:13px;">Upcoming</h3>
+      <div class="table-scroll"><table><thead><tr><th>Company</th><th>Category</th><th>Estimated</th></tr></thead>
+      <tbody>${(data.upcoming || []).map(row).join('') || '<tr><td colspan="3" class="muted">None estimated in the next 60 days.</td></tr>'}</tbody></table></div>
+    `;
+    list.querySelectorAll('tr[data-company]').forEach((tr) => {
+      tr.addEventListener('click', () => loadEarningsDetail(tr.dataset.company));
+    });
+  }).catch((e) => { if (e.message !== 'unauthorized') list.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+}
+
+function loadEarningsDetail(companyId) {
+  const detail = document.getElementById('mi-earnings-detail');
+  detail.innerHTML = '<div class="card"><p class="muted">Loading...</p></div>';
+  api('/api/market/earnings/' + encodeURIComponent(companyId)).then((d) => {
+    const history = (d.history || []).map((h) => `<li>${esc(h.event_date || '')} — ${esc(h.title || '')}
+      ${h.report_url ? `<a href="${esc(h.report_url)}" target="_blank" rel="noopener">${h.exhibit_url ? 'earnings report' : 'filing'}</a>` : ''}
+      ${h.exhibit_url && h.source_url ? `· <a href="${esc(h.source_url)}" target="_blank" rel="noopener">SEC filing index</a>` : ''}
+      ${h.excerpt ? `<div class="summary">${esc(h.excerpt)}</div>` : ''}</li>`).join('');
+    detail.innerHTML = `<div class="card">
+      <h2>${esc(d.company)}${d.ticker ? ' (' + esc(d.ticker) + ')' : ''}</h2>
+      <p class="muted">${esc((d.trend || {}).answer || '')}</p>
+      <button id="mi-talking-points-btn">Generate account talking points</button>
+      <div id="mi-talking-points-view"></div>
+      <h3 style="font-size:13px;margin-top:12px;">History</h3>
+      <ul class="field-list">${history || '<li class="muted">No recorded events.</li>'}</ul>
+    </div>`;
+    document.getElementById('mi-talking-points-btn').addEventListener('click', () => {
+      const tp = document.getElementById('mi-talking-points-view');
+      tp.innerHTML = '<p class="muted">Generating...</p>';
+      api('/api/market/earnings/' + encodeURIComponent(companyId) + '/talking-points', { method: 'POST' }).then((r) => {
+        tp.innerHTML = `<ul class="field-list">${(r.talking_points || []).map((p) => `<li>${esc(p)}</li>`).join('')}</ul>`;
+      }).catch((e) => { if (e.message !== 'unauthorized') tp.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+    });
+  }).catch((e) => { if (e.message !== 'unauthorized') detail.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+}
+
+// ---- Market Intelligence tabs: Top 5 Trends / Latest News / Earnings Center ----
+
+const MI_TABS = ['trends', 'news', 'earnings'];
+let miEarningsLoaded = false;
+function setMarketIntelTab(name) {
+  MI_TABS.forEach((t) => {
+    document.getElementById('mi-tab-' + t).classList.toggle('active', t === name);
+    document.getElementById(t === 'trends' ? 'mi-trends-view-wrap' : 'mi-' + t + '-view').classList.toggle('hidden', t !== name);
+  });
+  if (name === 'earnings' && !miEarningsLoaded) {
+    miEarningsLoaded = true;
+    loadEarningsCenter();
+  }
+}
+document.getElementById('mi-tab-trends').addEventListener('click', () => setMarketIntelTab('trends'));
+document.getElementById('mi-tab-news').addEventListener('click', () => setMarketIntelTab('news'));
+document.getElementById('mi-tab-earnings').addEventListener('click', () => setMarketIntelTab('earnings'));
+
+// ---- Market Intelligence: Top 5 Restaurant Technology Trends ----
+
+const TREND_DIRECTION_BADGE = {
+  'Accelerating': 'badge-growing', 'Emerging': 'badge-growing',
+  'Fading': 'badge-contracting', 'Established': 'badge-flat',
+  'Insufficient evidence': 'badge-insufficient_data',
+};
+
+function trendCardHtml(t) {
+  const badgeClass = TREND_DIRECTION_BADGE[t.direction] || 'badge-flat';
+  const companies = (t.companies || []).slice(0, 6).join(', ');
+  const evidenceItems = (t.evidence || []).slice(0, 5);
+  // Each evidence citation is the actual fact behind the count -- headline,
+  // where it came from, when, and a link to verify it -- real 2026-09-30
+  // feedback: a bare headline list "is not a trend just because the CoS
+  // says it is," so every line here needs to be independently checkable.
+  const evidence = evidenceItems.map((e) => `<li>
+    <div>${esc(e.headline || '')}</div>
+    <div class="meta" style="margin:2px 0 0;">${esc(e.source || '')}${e.published_date ? ' · ' + esc(e.published_date) : ''}
+      ${e.source_link ? `· <a href="${esc(e.source_link)}" target="_blank" rel="noopener">source</a>` : ''}</div>
+  </li>`).join('');
+  const evidenceBlock = evidence
+    ? `<ul class="field-list" style="margin-top:8px;">${evidence}</ul>`
+    : `<p class="muted" style="margin-top:8px;">No qualitative evidence to cite${t.note ? ' -- see note above' : ' for this window'}.</p>`;
+  return `<div class="news-item">
+    <div class="headline">${esc(t.name)} <span class="badge ${badgeClass}">${esc(t.direction)}</span></div>
+    <div class="meta">confidence: ${esc(t.confidence)}</div>
+    ${t.rationale ? `<div class="why" style="font-style:normal;">${esc(t.rationale)}</div>` : ''}
+    ${t.note ? `<div class="why">${esc(t.note)}</div>` : ''}
+    ${evidenceBlock}
+    ${companies ? `<div class="meta" style="margin-top:8px;">Companies in this window: ${esc(companies)}</div>` : ''}
+  </div>`;
+}
+
+function loadTopTrends() {
+  const view = document.getElementById('mi-trends-view');
+  const asOf = document.getElementById('mi-trends-asof');
+  const hideNoise = document.getElementById('mi-hide-noise').checked;
+  api('/api/market/trends?hide_noise=' + hideNoise).then((data) => {
+    const trends = data.trends || [];
+    asOf.textContent = data.generated_at ? `Updated ${data.generated_at} (refreshes weekly)` : '';
+    view.innerHTML = trends.length
+      ? trends.map(trendCardHtml).join('')
+      : '<p class="muted">Not generated yet.</p>';
+  }).catch((e) => { if (e.message !== 'unauthorized') view.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+}
+
+let marketIntelLoaded = false;
+function loadMarketIntelOnce() {
+  if (marketIntelLoaded) return;
+  marketIntelLoaded = true;
+  loadTopTrends();
+  loadNewsCompaniesOnce();
+  loadLatestNews();
+}
+
+// ---- Sales Tools: Blue Sheet Center + Green Sheet Center ----
+
+let stSearchTimer = null;
+document.getElementById('st-brand-search').addEventListener('input', () => {
+  clearTimeout(stSearchTimer);
+  stSearchTimer = setTimeout(runSalesToolsSearch, 250);
+});
+
+function runSalesToolsSearch() {
+  const q = document.getElementById('st-brand-search').value.trim();
+  const body = document.getElementById('st-results-body');
+  if (!q) { body.innerHTML = ''; return; }
+  // Scoped to real customers_prospects accounts (slugs like "mcdonalds"),
+  // not /api/brands/search's much broader ecosystem graph (entity ids
+  // like "brand-mcdonalds") -- a Blue Sheet/Green Sheet only exists for
+  // the former.
+  api('/api/sales-tools/accounts/search?q=' + encodeURIComponent(q)).then((data) => {
+    body.innerHTML = (data.accounts || []).map((a) =>
+      `<tr class="clickable" data-slug="${esc(a.slug)}" data-name="${esc(a.display_name)}"><td>${esc(a.display_name)}</td><td class="muted">${esc(a.engagement_tier || '')}</td></tr>`,
+    ).join('') || '<tr><td class="muted">No matches.</td></tr>';
+    body.querySelectorAll('tr[data-slug]').forEach((tr) => {
+      tr.addEventListener('click', () => openSalesTools(tr.dataset.slug, tr.dataset.name));
+    });
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+function openSalesTools(brandId, brandName) {
+  const container = document.getElementById('st-tools-container');
+  container.innerHTML = `<h2>${esc(brandName)}</h2>
+    <div class="card"><h2>Blue Sheet Center</h2>
+      <div id="st-bs-coverage"><p class="muted">Loading coverage...</p></div>
+      <div class="row" style="margin-top:10px;">
+        <button id="st-bs-blank-btn" class="secondary">Download blank Blue Sheet</button>
+        <button id="st-bs-download-btn">Download prefilled working Blue Sheet</button>
+        <span id="st-bs-download-status" class="muted"></span>
+      </div>
+    </div>
+    <div class="card"><h2>Green Sheet Center</h2>
+      <form class="entry-form" id="st-gs-form">
+        <div class="full"><label>Call objective</label>
+          <input type="text" id="st-gs-purpose" placeholder="e.g. Discovery call on DMB second-source path" required style="width:100%"></div>
+        <div class="full"><label>Attendees (comma-separated names)</label>
+          <input type="text" id="st-gs-attendees" placeholder="e.g. Bruce Sellnow, Jeff Coffland" required style="width:100%"></div>
+        <div class="full"><label>Talking points (optional)</label>
+          <textarea id="st-gs-talking-points" rows="2" style="width:100%"></textarea></div>
+        <div class="full"><button type="submit">Generate Green Sheet</button> <span id="st-gs-status" class="muted"></span></div>
+      </form>
+      <div id="st-gs-result"></div>
+    </div>`;
+  container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  loadBlueSheetCoverage(brandId);
+  wireBlueSheetDownload(brandId, brandName);
+  wireGreenSheetForm(brandId);
+}
+
+function loadBlueSheetCoverage(brandId) {
+  const view = document.getElementById('st-bs-coverage');
+  api('/api/sales-tools/blue-sheet/' + encodeURIComponent(brandId) + '/coverage').then((cov) => {
+    const populated = (cov.populated || []).map((p) => `<li class="done">${esc(p)}</li>`).join('');
+    const needsInput = (cov.needs_team_input || []).map((p) => `<li class="todo">${esc(p)}</li>`).join('');
+    view.innerHTML = `
+      <p>Blue Sheet coverage: <strong>${cov.coverage_pct}%</strong></p>
+      <div class="coverage-bar-track"><div class="coverage-bar-fill" style="width:${cov.coverage_pct}%"></div></div>
+      <ul class="checklist" style="margin-top:10px;">${populated}${needsInput}</ul>
+      <p class="muted">Data as of ${esc(cov.data_as_of || 'unknown')}. Working draft -- requires human validation before use with a customer.</p>
+    `;
+  }).catch((e) => { if (e.message !== 'unauthorized') view.innerHTML = `<p class="error">${esc(e.message)}</p>`; });
+}
+
+// Bearer-auth'd file download -- a plain <a href> can't carry the
+// Authorization header this API requires, so every download button fetches
+// the bytes itself and hands them to the browser via a throwaway blob URL.
+function downloadWithAuth(url, filename, statusEl, opts) {
+  opts = opts || {};
+  const headers = Object.assign({ 'Authorization': 'Bearer ' + state.token }, opts.headers || {});
+  let body = opts.body;
+  if (body && typeof body !== 'string') { headers['Content-Type'] = 'application/json'; body = JSON.stringify(body); }
+  if (statusEl) statusEl.textContent = 'Preparing...';
+  return fetch(url, { method: opts.method || 'GET', headers, body }).then((r) => {
+    if (r.status === 401) { localStorage.removeItem('rbb_team_token'); state.token = ''; showTokenScreen('Your token is invalid or was revoked. Ask Todd for a new one.'); throw new Error('unauthorized'); }
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.blob();
+  }).then((blob) => {
+    const objUrl = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = objUrl; a.download = filename;
+    document.body.appendChild(a); a.click(); a.remove();
+    URL.revokeObjectURL(objUrl);
+    if (statusEl) statusEl.textContent = 'Downloaded.';
+  }).catch((e) => { if (statusEl && e.message !== 'unauthorized') statusEl.textContent = 'Error: ' + e.message; });
+}
+
+function wireBlueSheetDownload(brandId, brandName) {
+  const status = document.getElementById('st-bs-download-status');
+  document.getElementById('st-bs-blank-btn').addEventListener('click', () => {
+    downloadWithAuth('/api/sales-tools/blue-sheet/' + encodeURIComponent(brandId) + '/template', 'Blank_Blue_Sheet.xlsx', status);
+  });
+  document.getElementById('st-bs-download-btn').addEventListener('click', () => {
+    downloadWithAuth(
+      '/api/sales-tools/blue-sheet/' + encodeURIComponent(brandId) + '/download',
+      brandName.replace(/\s+/g, '_') + '_Team_Blue_Sheet.xlsx', status, { method: 'POST' },
+    );
+  });
+}
+
+function wireGreenSheetForm(brandId) {
+  document.getElementById('st-gs-form').addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const status = document.getElementById('st-gs-status');
+    const attendees = document.getElementById('st-gs-attendees').value.split(',').map((s) => s.trim()).filter(Boolean);
+    const body = {
+      account_slug: brandId,
+      call_purpose: document.getElementById('st-gs-purpose').value.trim(),
+      attendees,
+      talking_points: document.getElementById('st-gs-talking-points').value,
+    };
+    if (!attendees.length) { status.textContent = 'Name at least one real attendee.'; return; }
+    status.textContent = 'Generating...';
+    api('/api/sales-tools/green-sheet/preview', { method: 'POST', body }).then((result) => {
+      status.textContent = 'Generated.';
+      const view = document.getElementById('st-gs-result');
+      view.innerHTML = `<div class="brief-content" style="margin-top:10px;">${mdToHtml(result.markdown)}</div>
+        <div class="row" style="margin-top:10px;">
+          <button id="st-gs-download-btn">Download</button>
+        </div>
+        ${emailReportFormHtml('st-gs')}`;
+      document.getElementById('st-gs-download-btn').addEventListener('click', () => {
+        downloadWithAuth('/api/sales-tools/green-sheet/download', brandId + '_Green_Sheet.md', null, { method: 'POST', body });
+      });
+      wireEmailReportButton('st-gs', () => ({ subject: `Green Sheet — ${brandId}`, markdown: result.markdown }));
+      // st-gs-email posts to the generic /api/email-report route above,
+      // which just forwards markdown already in hand -- consistent
+      // whether that markdown came from a brief or a Green Sheet.
+    }).catch((e) => { if (e.message !== 'unauthorized') status.textContent = 'Error: ' + e.message; });
+  });
+}
+
+// ---- Top-level section nav ----
+
+function setSection(name) {
+  document.getElementById('nav-market-intel').classList.toggle('active', name === 'market-intel');
+  document.getElementById('nav-companies').classList.toggle('active', name === 'companies');
+  document.getElementById('nav-sales-tools').classList.toggle('active', name === 'sales-tools');
+  document.getElementById('section-market-intel').classList.toggle('hidden', name !== 'market-intel');
+  document.getElementById('section-companies').classList.toggle('hidden', name !== 'companies');
+  document.getElementById('section-sales-tools').classList.toggle('hidden', name !== 'sales-tools');
+  if (name === 'market-intel') loadMarketIntelOnce();
+}
+document.getElementById('nav-market-intel').addEventListener('click', () => setSection('market-intel'));
+document.getElementById('nav-companies').addEventListener('click', () => setSection('companies'));
+document.getElementById('nav-sales-tools').addEventListener('click', () => setSection('sales-tools'));
+
+// ---- Init ----
+
+document.getElementById('welcome-start-btn').addEventListener('click', () => {
+  document.getElementById('welcome-view').classList.add('hidden');
+  document.getElementById('search-view').classList.remove('hidden');
+  runSearch();
+});
+document.getElementById('about-link').addEventListener('click', () => {
+  document.getElementById('search-view').classList.add('hidden');
+  document.getElementById('welcome-view').classList.remove('hidden');
+});
+
+function init() {
+  if (!state.token) { showTokenScreen(); return; }
+  showAppScreen();
+  api('/api/me').then((member) => {
+    state.member = member;
+    document.getElementById('whoami').textContent = member.name + (member.is_owner ? ' (owner)' : '');
+  }).catch(() => {});
+  // Todd, 2026-09-27: land on the explainer, not a company list -- the
+  // search view only appears once someone clicks through it.
+  document.getElementById('welcome-view').classList.remove('hidden');
+  document.getElementById('search-view').classList.add('hidden');
+  setSection('companies');
+}
+init();
+</script>
+</body>
+</html>

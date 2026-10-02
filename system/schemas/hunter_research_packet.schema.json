@@ -1,0 +1,322 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rbb.local/schemas/hunter_research_packet.schema.json",
+  "title": "Hunter Public-Source Research Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "packet_id", "research_agent", "cycle", "targets",
+    "started_at", "completed_at", "status", "public_sources_only",
+    "research_modules", "questions", "source_ledger", "query_ledger",
+    "findings", "gap_outcomes", "change_events", "mutation_proposals", "cos_handoffs", "paid_source_recommendations", "negative_findings", "conflicts", "unanswered_questions",
+    "method_feedback", "quality", "resource_usage", "payload_schema", "payload"
+  ],
+  "properties": {
+    "schema": {"const": "rb.hunter_research_packet.v1"},
+    "packet_id": {"type": "string", "pattern": "^hunter-[a-z0-9][a-z0-9._-]*$"},
+    "research_agent": {"const": "Hunter"},
+    "cycle": {
+      "type": "object", "additionalProperties": false,
+      "required": ["cycle_type", "playbook", "depth", "objective", "requested_by", "prior_state_as_of", "known_gap_ids", "discovery_domains", "resource_plan", "budget", "exit_criteria"],
+      "properties": {
+        "cycle_type": {"type": "string", "minLength": 1},
+        "playbook": {"type": "string", "minLength": 1},
+        "depth": {"enum": ["scan", "standard", "deep", "forensic", "monitor"]},
+        "objective": {"type": "string", "minLength": 1},
+        "requested_by": {"type": "string", "minLength": 1},
+        "prior_state_as_of": {"type": "string", "format": "date-time"},
+        "known_gap_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "discovery_domains": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "resource_plan": {
+          "type": "object", "additionalProperties": false,
+          "required": ["status", "reason", "chat_research_status", "codex_work_status", "codex_work_reason", "capacity_snapshot", "preferred_execution_tier", "max_targets", "recommended_batch_targets", "five_hour_capacity_ceiling_pct", "reset_credit_allowed"],
+          "properties": {
+            "status": {"enum": ["authorized", "blocked"]},
+            "reason": {"type": "string", "minLength": 1},
+            "chat_research_status": {"enum": ["authorized", "unavailable"]},
+            "codex_work_status": {"enum": ["authorized", "blocked"]},
+            "codex_work_reason": {"type": "string", "minLength": 1},
+            "capacity_snapshot": {
+              "type": "object", "additionalProperties": false,
+              "required": ["captured_at", "five_hour_used_pct", "weekly_used_pct", "hours_to_weekly_reset"],
+              "properties": {
+                "captured_at": {"type": "string", "format": "date-time"},
+                "five_hour_used_pct": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+                "weekly_used_pct": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+                "hours_to_weekly_reset": {"type": ["number", "null"], "minimum": 0}
+              }
+            },
+            "preferred_execution_tier": {"enum": ["chatgpt_deep_research_economy", "codex_standard_reasoning"]},
+            "max_targets": {"type": ["integer", "null"], "minimum": 0},
+            "recommended_batch_targets": {"type": "integer", "minimum": 1},
+            "five_hour_capacity_ceiling_pct": {"type": "number", "minimum": 0, "maximum": 50},
+            "weekly_reserve_pct": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+            "five_hour_reserve_pct": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+            "reset_credit_allowed": {"const": false}
+          }
+        },
+        "budget": {"type": "object"},
+        "exit_criteria": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "targets": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["target_key", "display_name", "entity_type", "priority"],
+        "properties": {
+          "target_key": {"type": "string", "pattern": "^(company|competitor|vendor|operator|genius):.+$"},
+          "display_name": {"type": "string", "minLength": 1},
+          "entity_type": {"enum": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "startup", "supplier", "competitor", "genius", "other"]},
+          "priority": {"enum": ["enterprise_primary", "emerging_primary", "secondary", "explicit"]}
+        }
+      }
+    },
+    "started_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["complete", "partial", "blocked", "no_material_findings"]},
+    "public_sources_only": {"const": true},
+    "research_modules": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["name", "required", "status"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "required": {"type": "boolean"},
+          "status": {"enum": ["complete", "partial", "not_applicable", "blocked"]},
+          "notes": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "questions": {"type": "array", "items": {"type": "string"}},
+    "source_ledger": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["source_id", "url", "title", "publisher", "source_type", "source_owner", "access_tier", "directness", "evidence_chain_id", "accessed_at", "access_status", "productive"],
+        "properties": {
+          "source_id": {"type": "string", "pattern": "^src-[a-z0-9][a-z0-9._-]*$"},
+          "url": {"type": "string", "pattern": "^https?://"},
+          "canonical_url": {"type": ["string", "null"], "pattern": "^https?://"},
+          "title": {"type": ["string", "null"]},
+          "publisher": {"type": ["string", "null"]},
+          "source_type": {"type": "string", "minLength": 1},
+          "source_owner": {"enum": ["government_or_regulator", "restaurant_or_operator", "customer_joint", "vendor", "trade_press", "general_news", "analyst_or_research", "public_review_or_directory", "social_or_event", "archive", "other"]},
+          "access_tier": {"enum": ["free_public", "free_registration", "paid_subscription", "unknown"]},
+          "directness": {"enum": ["direct", "derived", "discovery_only"]},
+          "evidence_chain_id": {"type": "string", "minLength": 1},
+          "published_at": {"type": ["string", "null"], "format": "date"},
+          "accessed_at": {"type": "string", "format": "date-time"},
+          "access_status": {"enum": ["accessible", "partial", "paywalled", "blocked", "not_found", "error"]},
+          "productive": {"type": "boolean"},
+          "archive_url": {"type": ["string", "null"], "pattern": "^https?://"},
+          "notes": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "query_ledger": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["query", "purpose", "executed_at", "productive"],
+        "properties": {
+          "query": {"type": "string", "minLength": 1},
+          "purpose": {"type": "string", "minLength": 1},
+          "executed_at": {"type": "string", "format": "date-time"},
+          "productive": {"type": "boolean"},
+          "notes": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/finding"}
+    },
+    "gap_outcomes": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["gap_id", "status", "finding_ids", "reason"],
+        "properties": {
+          "gap_id": {"type": "string", "minLength": 1},
+          "status": {"enum": ["filled", "partially_filled", "not_found_publicly", "blocked", "not_applicable"]},
+          "finding_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+          "reason": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "change_events": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["change_event_id", "target_key", "change_type", "summary", "prior_state", "new_state", "effective_at", "observed_at", "materiality", "finding_ids", "source_ids", "confidence_pct"],
+        "properties": {
+          "change_event_id": {"type": "string", "pattern": "^chg-[a-z0-9][a-z0-9._-]*$"},
+          "target_key": {"type": "string", "minLength": 1},
+          "change_type": {"enum": ["leadership", "ownership", "funding", "acquisition", "product", "customer_relationship", "deployment", "technology_stack", "expansion", "contraction", "financial_operating_health", "strategy", "legal_regulatory", "competitive_position", "industry_pattern", "other"]},
+          "summary": {"type": "string", "minLength": 1},
+          "prior_state": {},
+          "new_state": {},
+          "effective_at": {"type": ["string", "null"], "format": "date"},
+          "observed_at": {"type": "string", "format": "date-time"},
+          "materiality": {"enum": ["critical", "high", "medium", "low"]},
+          "finding_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "source_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "confidence_pct": {"type": "integer", "minimum": 0, "maximum": 100}
+        }
+      }
+    },
+    "mutation_proposals": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["proposal_id", "target_key", "operation", "field_path", "existing_value", "new_value", "effective_at", "confidence_pct", "change_event_ids", "finding_ids", "source_ids"],
+        "properties": {
+          "proposal_id": {"type": "string", "pattern": "^mut-[a-z0-9][a-z0-9._-]*$"},
+          "target_key": {"type": "string", "minLength": 1},
+          "operation": {"enum": ["add", "append_event", "update", "supersede"]},
+          "field_path": {"type": "string", "minLength": 1},
+          "existing_value": {},
+          "new_value": {},
+          "effective_at": {"type": ["string", "null"], "format": "date"},
+          "confidence_pct": {"type": "integer", "minimum": 0, "maximum": 100},
+          "change_event_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "finding_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "source_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+        }
+      }
+    },
+    "cos_handoffs": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["handoff_id", "headline", "connected_target_keys", "change_event_ids", "finding_ids", "connection", "why_it_matters", "is_inference", "confidence_pct", "time_horizon"],
+        "properties": {
+          "handoff_id": {"type": "string", "pattern": "^cos-[a-z0-9][a-z0-9._-]*$"},
+          "headline": {"type": "string", "minLength": 1},
+          "connected_target_keys": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "change_event_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "finding_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "connection": {"type": "string", "minLength": 1},
+          "why_it_matters": {"type": "string", "minLength": 1},
+          "is_inference": {"type": "boolean"},
+          "confidence_pct": {"type": "integer", "minimum": 0, "maximum": 100},
+          "time_horizon": {"enum": ["immediate", "days_to_weeks", "months", "long_term", "unknown"]}
+        }
+      }
+    },
+    "paid_source_recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["recommendation_id", "source_name", "source_url", "unresolved_gap_ids", "unique_value", "decision_improved", "free_sources_checked", "free_query_families_tried", "recommendation_status"],
+        "properties": {
+          "recommendation_id": {"type": "string", "pattern": "^paid-[a-z0-9][a-z0-9._-]*$"},
+          "source_name": {"type": "string", "minLength": 1},
+          "source_url": {"type": "string", "pattern": "^https?://"},
+          "unresolved_gap_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "unique_value": {"type": "string", "minLength": 1},
+          "decision_improved": {"type": "string", "minLength": 1},
+          "free_sources_checked": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "free_query_families_tried": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "recommendation_status": {"const": "recommended_not_accessed"}
+        }
+      }
+    },
+    "negative_findings": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["question_or_claim", "search_scope", "result", "source_ids"],
+        "properties": {
+          "question_or_claim": {"type": "string", "minLength": 1},
+          "search_scope": {"type": "string", "minLength": 1},
+          "result": {"type": "string", "minLength": 1},
+          "source_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["topic", "source_ids", "analysis", "resolution_status"],
+        "properties": {
+          "topic": {"type": "string", "minLength": 1},
+          "source_ids": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+          "analysis": {"type": "string", "minLength": 1},
+          "resolution_status": {"enum": ["resolved", "unresolved", "scope_difference", "date_difference"]}
+        }
+      }
+    },
+    "unanswered_questions": {"type": "array", "items": {"type": "string"}},
+    "method_feedback": {
+      "type": "object", "additionalProperties": false,
+      "required": ["productive_patterns", "unproductive_patterns", "proposed_method_changes", "next_cycle_recommendations"],
+      "properties": {
+        "productive_patterns": {"type": "array", "items": {"type": "string"}},
+        "unproductive_patterns": {"type": "array", "items": {"type": "string"}},
+        "proposed_method_changes": {"type": "array", "items": {"type": "string"}},
+        "next_cycle_recommendations": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "quality": {
+      "type": "object", "additionalProperties": false,
+      "required": ["pages_opened", "productive_pages", "primary_source_pages", "findings_count", "findings_with_sources", "required_modules_complete", "validation_status"],
+      "properties": {
+        "pages_opened": {"type": "integer", "minimum": 0},
+        "productive_pages": {"type": "integer", "minimum": 0},
+        "primary_source_pages": {"type": "integer", "minimum": 0},
+        "findings_count": {"type": "integer", "minimum": 0},
+        "findings_with_sources": {"type": "integer", "minimum": 0},
+        "required_modules_complete": {"type": "boolean"},
+        "validation_status": {"enum": ["valid", "invalid", "not_run"]}
+      }
+    },
+    "resource_usage": {
+      "type": "object", "additionalProperties": false,
+      "required": ["selected_execution_tier", "chatgpt_deep_research_calls", "codex_model_calls", "premium_reasoning_calls", "targets_attempted", "targets_completed", "budget_outcome", "escalation_reasons"],
+      "properties": {
+        "selected_execution_tier": {"enum": ["none", "chatgpt_deep_research_economy", "codex_standard_reasoning", "premium_reasoning_escalation"]},
+        "chatgpt_deep_research_calls": {"type": "integer", "minimum": 0},
+        "codex_model_calls": {"type": "integer", "minimum": 0},
+        "premium_reasoning_calls": {"type": "integer", "minimum": 0},
+        "targets_attempted": {"type": "integer", "minimum": 0},
+        "targets_completed": {"type": "integer", "minimum": 0},
+        "budget_outcome": {"enum": ["within_budget", "stopped_at_boundary", "blocked_before_start", "usage_recheck_unavailable"]},
+        "escalation_reasons": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "payload_schema": {"type": "string", "minLength": 1},
+    "payload": {"type": "object"}
+  },
+  "$defs": {
+    "finding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["finding_id", "target_key", "module", "claim", "contribution_type", "gap_ids", "novelty_rationale", "evidence_status", "confidence_pct", "observed_at", "as_of", "temporal_status", "scope", "commercial_relevance", "source_ids", "is_vendor_claim", "is_inference", "limitations"],
+      "properties": {
+        "finding_id": {"type": "string", "pattern": "^f-[a-z0-9][a-z0-9._-]*$"},
+        "target_key": {"type": "string", "minLength": 1},
+        "module": {"type": "string", "minLength": 1},
+        "claim": {"type": "string", "minLength": 1},
+        "contribution_type": {"enum": ["fills_known_gap", "updates_existing_fact", "new_data_point"]},
+        "gap_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "novelty_rationale": {"type": ["string", "null"]},
+        "evidence_status": {"enum": ["verified", "supported", "reported", "inference", "conflicted", "not_found", "inaccessible"]},
+        "confidence_pct": {"type": "integer", "minimum": 0, "maximum": 100},
+        "observed_at": {"type": "string", "format": "date-time"},
+        "as_of": {"type": ["string", "null"], "format": "date"},
+        "temporal_status": {"enum": ["current_verified", "current_probable", "historical", "superseded", "currentness_unknown"]},
+        "scope": {"type": "string", "minLength": 1},
+        "commercial_relevance": {"enum": ["sales_relevance", "competitive_relevance", "replacement_opportunity", "partner_opportunity", "account_risk", "buying_signal", "timing_signal", "decision_maker_relevance", "no_immediate_relevance"]},
+        "source_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "is_vendor_claim": {"type": "boolean"},
+        "is_inference": {"type": "boolean"},
+        "inference_premises": {"type": "array", "items": {"type": "string"}},
+        "limitations": {"type": ["string", "null"]},
+        "recommended_follow_up": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

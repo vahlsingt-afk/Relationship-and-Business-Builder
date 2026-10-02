@@ -1,0 +1,73 @@
+{
+  "file_id": "cap-c3be95f117f024e4",
+  "queued_at": "2026-09-23T09:19:03+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-22_1306_adyen-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-22_1306_adyen-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260922-1306-candidate-validation`\n- Research system: `Codex web research`\n- Started at: `2026-09-22 13:06 CDT`\n- Completed at: `2026-09-22 13:08 CDT`\n- Research scope: Validate four direct Adyen restaurant and restaurant-platform customer stories.\n- Queue item or vendor: `competitor:adyen`\n- Methodology: Direct vendor-page validation with product, geography, deployment-scope, and recency limits preserved.\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 4\n- Conflicts found: 0\n- Material takeaway: Adyen publishes credible named restaurant evidence for unified online/in-store payments, tokenization, franchise payout reporting, and donation flows, plus a restaurant-platform relationship with Zenchef. All four pages are vendor-authored and dated 2021-2023, so they support historical or then-current deployments rather than independently verified 2026 installed-base claims.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: JOE & THE JUICE\n- Vendor: Adyen\n- Product or category: Unified online, app, and in-store payments; centralized risk monitoring and payment reporting\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: case study\n- Confidence: 85%\n- Confidence rationale: Adyen's named case study quotes a JOE & THE JUICE executive describing a single global interface, connected in-app and terminal payments, centralized payment data, and global safety controls.\n- Source title: Joe & The Juice: Using payment technology to improve customer experience\n- Source URL: https://www.adyen.com/en_GB/knowledge-hub/joe-and-the-juice\n- Publisher or source owner: Adyen\n- Published date, if known: 2021-02-05\n- Accessed date: 2026-09-22\n- Exact supporting excerpt or faithful factual note: The brand describes connecting ecommerce and physical-store payments so customers can pay in-app or at the terminal while the business sees performance through one back-end view.\n- Product-specific evidence: Unified online and in-store payment processing, saved card details, global interface, transaction monitoring, and regional risk controls.\n- Conflicting or limiting evidence: Vendor-authored and rooted in the 2020 pandemic period; the page does not establish current 2026 modules, contract status, location coverage, or payment volume.\n- Recommended follow-up: Seek a current brand-controlled payments or expansion source and confirm 2026 geography and terminal footprint.\n\n### Observation 2\n\n- Brand: Domino's Netherlands\n- Vendor: Adyen\n- Product or category: Unified commerce payments, Sales Day Payout reporting, online and in-store payment consolidation, and fallback processing\n- Relationship indication: customer\n- Deployment scope: regional\n- Evidence type: case study\n- Confidence: 90%\n- Confidence rationale: The page explicitly says Domino's Netherlands chose Adyen's unified commerce solution and quotes Domino's Netherlands and Europe executives about the payment and data relationship.\n- Source title: Fresh hot innovation: How Domino's perfected operational agility with unified commerce\n- Source URL: https://www.adyen.com/knowledge-hub/how-dominos-perfected-operational-agility-with-unified-commerce-payments\n- Publisher or source owner: Adyen\n- Published date, if known: 2021-09-02\n- Accessed date: 2026-09-22\n- Exact supporting excerpt or faithful factual note: Adyen states that Domino's Netherlands consolidated online and in-store payments and uses Sales Day Payout reporting so franchisees can reconcile sales and payouts by channel, method, and day.\n- Product-specific evidence: Unified commerce, Sales Day Payout, offline/store-and-forward processing, mobile-network failover, cross-channel reporting, and customer/payment insights.\n- Conflicting or limiting evidence: The evidence is specifically Netherlands/Europe context and must not be generalized to Domino's globally. It is vendor-authored and five years old.\n- Recommended follow-up: Confirm current deployment with Domino's Netherlands or European franchise disclosures and determine whether the same stack remains active.\n\n### Observation 3\n\n- Brand: Leon\n- Vendor: Adyen, integrated through Vita Mojo\n- Product or category: Omnichannel payments, shopper tokenization, payment data, and Adyen Giving\n- Relationship indication: customer\n- Deployment scope: regional\n- Evidence type: case study\n- Confidence: 85%\n- Confidence rationale: Adyen's case study names the three-party relationship, quotes Leon and Vita Mojo leaders, and describes implemented tokenization and Giving functionality.\n- Source title: Melding millennial tech demands with a fresh approach to QSR: Leon restaurants\n- Source URL: https://www.adyen.com/knowledge-hub/leon-changing-qsr-expections-\n- Publisher or source owner: Adyen\n- Published date, if known: 2022-05-18\n- Accessed date: 2026-09-22\n- Exact supporting excerpt or faithful factual note: Vita Mojo introduced Leon to Adyen for payments across mobile, kiosk, and ecommerce; the page says Adyen tokenization supplied repeat-visit insight and Giving was implemented at checkout.\n- Product-specific evidence: Cross-channel payments, shopper tokenization, guest-frequency analytics, and terminal donation flow.\n- Conflicting or limiting evidence: The ordering app and kiosks are attributed to Vita Mojo, not Adyen. The page's 70-location context and donation result are historical, not verified current footprint.\n- Recommended follow-up: Verify the current Leon-Vita Mojo-Adyen architecture and geographic coverage through a brand-controlled or current partner source.\n\n### Observation 4\n\n- Brand: Zenchef\n- Vendor: Adyen\n- Product or category: Adyen for Platforms powering Zenchef Payments, prepayment, pre-authorization, QR pay-at-table, processing, and payment data\n- Relationship indication: partner\n- Deployment scope: regional\n- Evidence type: case study\n- Confidence: 90%\n- Confidence rationale: Zenchef's VP of Partnerships is quoted describing the 2021 selection of Adyen, the white-label platform requirements, and the resulting Zenchef Payments capabilities.\n- Source title: Zenchef and Adyen: The recipe for a successful customer experience\n- Source URL: https://www.adyen.com/knowledge-hub/zenchef-adyen-recipe-for-customer-experience\n- Publisher or source owner: Adyen\n- Published date, if known: 2023-08-04\n- Accessed date: 2026-09-22\n- Exact supporting excerpt or faithful factual note: The page says Zenchef turned to Adyen in 2021, uses Adyen for Platforms for its white-label payments offering, and that Adyen processes a large proportion of Zenchef payments in France.\n- Product-specific evidence: Platform payments, prepayments, card pre-authorization, QR table payments, authorization optimization, payment data, and transaction-level commercial reporting.\n- Conflicting or limiting evidence: This is a SaaS-platform partnership, not evidence that every one of Zenchef's 11,000 restaurant customers uses Adyen. The stated processing scope is a large proportion in France, not all Zenchef markets.\n- Recommended follow-up: Confirm current European rollout, restaurant adoption by market, and whether Zenchef Payments remains exclusively or primarily powered by Adyen.\n\n## Negative findings\n\n- Candidate or claim: Current 2026 global enterprise deployment for each named restaurant brand.\n- Pages checked: All four source pages in the ledger.\n- Result: None independently establishes a current 2026 global footprint. Domino's evidence is Netherlands/Europe scoped, Leon is a three-party implementation with Vita Mojo, Zenchef is a platform relationship with partial France processing scope, and all pages are vendor-authored.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://www.adyen.com/en_GB/knowledge-hub/joe-and-the-juice | Case study | 2026-09-22 | 1 | Named executive and global-interface evidence; pandemic-period context. |\n| https://www.adyen.com/knowledge-hub/how-dominos-perfected-operational-agility-with-unified-commerce-payments | Case study | 2026-09-22 | 2 | Explicit Netherlands selection and franchise reporting; not a global Domino's claim. |\n| https://www.adyen.com/knowledge-hub/leon-changing-qsr-expections- | Case study | 2026-09-22 | 3 | Adyen payments are mediated through Vita Mojo; ordering and kiosks belong to Vita Mojo. |\n| https://www.adyen.com/knowledge-hub/zenchef-adyen-recipe-for-customer-experience | Case study | 2026-09-22 | 4 | Strong platform-partnership evidence with limited France processing scope. |\n\n## Research notes and inferences\n\n- Inference: Adyen's restaurant-market strength appears concentrated in cross-channel payment unification, tokenized customer insight, franchise reconciliation, and embedded platform payments rather than core restaurant POS.\n- Inference: The Vita Mojo and Zenchef examples show channel-partner leverage, but downstream restaurant coverage cannot be inferred without customer- or market-level evidence.\n- Review instruction: Preserve the publication dates, geography, partner boundaries, and absence of independent 2026 confirmation during morning-cycle triage.",
+  "word_count": 1201,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-23T09:19:23+00:00",
+  "processing_result": {
+    "triage_stream_count": 4,
+    "noise_only": false,
+    "persisted_count": 4,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-011",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 6 trigger(s): introduced, named, network. Possible named subjects: Named, Leon, Vita Mojo, Adyen, Case, Material."
+      },
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-012",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'franchisee'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-013",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-23T09:19:03+00:00-014",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: Domino's, Adyen. Macro/industry signal detected: 16 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: competitor, customer, deployment, enterprise, expansion, franchise, "
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [
+        "executive",
+        "Domino's Netherlands and Europe executives",
+        "Leon and Vita Mojo leaders",
+        "Zenchef's VP of Partnerships"
+      ],
+      "companies_mentioned": [
+        "Adyen",
+        "JOE & THE JUICE",
+        "Domino's Netherlands",
+        "Leyton",
+        "Zenchef",
+        "Vita Mojo"
+      ],
+      "topics": [
+        "Adyen restaurant customer stories",
+        "payment technology",
+        "case studies",
+        "partnerships"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Seek a current brand-controlled payments or expansion source and confirm 2026 geography and terminal footprint.",
+        "Confirm current deployment with Domino's Netherlands or European franchise disclosures and determine whether the same stack remains active.",
+        "Verify the current Leon-Vita Mojo-Adyen architecture and geographic coverage through a brand-controlled or current partner source.",
+        "Confirm current European rollout, restaurant adoption by market, and whether Zenchef Payments remains exclusively or primarily powered by Adyen."
+      ],
+      "why_it_matters": "The findings provide insights into Adyen's market position and partnerships in the restaurant sector, which could inform strategic decisions."
+    }
+  }
+}

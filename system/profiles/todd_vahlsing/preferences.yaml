@@ -1,0 +1,58 @@
+# todd_vahlsing — preferences.yaml
+# Communication and CoS behavior preferences.
+# source: seeded_from_00_TODD_PROFILE_2026-05-27
+
+profile_id: todd_vahlsing
+
+response_mode: expert
+verbosity: concise
+time_horizon: this_week
+
+communication_style:
+  tone: direct_but_warm
+  region: midwestern
+  prohibited:
+    - ai_fluff
+    - buzzwords
+    - exaggerated_enthusiasm
+    - one_line_paragraphs
+  preferred: conversational_concise_human_sounding
+
+intro_philosophy: balanced  # conservative | balanced | aggressive
+intro_constraints:
+  - no_intro_without_conviction
+  - no_free_advice_arrangements
+  - relationship_capital_is_not_free_inventory
+
+default_workflows:
+  daily_brief: enabled
+  opportunity_sensing: enabled
+  market_signals: enabled
+  relationship_signals: enabled
+
+reference_models:
+  budgetary_proposals:
+    - name: IKEA Food Truck POS + KDS Budgetary Proposal
+      source_url: https://drive.google.com/file/d/1plVx5Nt4ankXevyNdnQDSvJVsLV4b_oT
+      validated_on: "2026-07-23"
+      validation: Received major kudos from Todd's skip-level leader.
+      reuse_as_default: true
+      preserve:
+        - concise executive solution overview
+        - recommended configuration with clear rationale
+        - clean separation of one-time and recurring investment
+        - alternatives expressed as pricing impacts
+        - explicit exclusions and implementation assumptions
+        - customer confirmation questions and a concrete next step
+        - polished, confident, budgetary-not-contractual tone
+
+daily_brief:
+  time_of_day_local: "07:00"
+  timezone: America/Chicago
+  sections_enabled:
+    - resource_verification
+    - relationship_signals
+    - industry_brief
+    - opportunity_sensing
+    - recommended_actions
+    - action_orchestration

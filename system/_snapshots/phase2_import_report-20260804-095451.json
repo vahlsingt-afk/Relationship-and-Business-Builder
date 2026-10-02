@@ -1,0 +1,275 @@
+{
+  "phase2_file": "system/research/phase2_drivethru_voiceai_evidence_draft_2026-08-03.json",
+  "category": "Drive-Thru/Voice AI",
+  "rows_processed": 39,
+  "rows_skipped": 0,
+  "dry_run": true,
+  "added": 29,
+  "updated": 1,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 23,
+    "enrich_existing_relationship": 1,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 6,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 9,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "SoundHound AI",
+        "customer": "Torchy's Tacos",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-torchy-s-tacos-drive-thru-ai-unknown-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "Red Lobster",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-red-lobster-drive-thru-ai-unknown-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "MOD Pizza",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-mod-pizza-drive-thru-ai-unknown-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "Habit Burger",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-habit-burger-grill-drive-thru-ai-unknown-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "White Castle",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-white-castle-drive-thru-ai-pilot-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "Chipotle",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-chipotle-mexican-grill-drive-thru-ai-unknown-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "Casey's General Stores",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-casey-s-general-stores-drive-thru-ai-unknown-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "Firehouse Subs",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-firehouse-subs-drive-thru-ai-franchisee-deployment-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "Five Guys",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-five-guys-drive-thru-ai-franchisee-deployment-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "McAllister's Deli",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-mcallister-s-deli-drive-thru-ai-franchisee-deployment-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "Applebee's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-applebee-s-drive-thru-ai-unknown-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "Noodles & Company",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-noodles-company-drive-thru-ai-unknown-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "Beef O'Brady's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-beef-o-brady-s-drive-thru-ai-unknown-vendor-soundhound-ai"
+      },
+      {
+        "vendor": "ConverseNow",
+        "customer": "Domino's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-domino-s-drive-thru-ai-unknown-vendor-conversenow"
+      },
+      {
+        "vendor": "ConverseNow",
+        "customer": "Anthony's Coal Fired Pizza & Wings",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-anthony-s-coal-fired-pizza-wings-drive-thru-ai-unknown-vendor-conversenow"
+      },
+      {
+        "vendor": "ConverseNow",
+        "customer": "Jet's Pizza",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-jet-s-pizza-drive-thru-ai-franchisee-deployment-vendor-conversenow"
+      },
+      {
+        "vendor": "ConverseNow",
+        "customer": "Blake's Lotaburger",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-blake-s-lotaburger-drive-thru-ai-unknown-vendor-conversenow"
+      },
+      {
+        "vendor": "ConverseNow",
+        "customer": "Fazoli's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-fazoli-s-drive-thru-ai-pilot-vendor-conversenow"
+      },
+      {
+        "vendor": "Hi Auto",
+        "customer": "Popeyes UK",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-popeyes-uk-drive-thru-ai-unknown-vendor-hi-auto"
+      },
+      {
+        "vendor": "Hi Auto",
+        "customer": "Bojangles",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-bojangles-drive-thru-ai-unknown-vendor-hi-auto"
+      },
+      {
+        "vendor": "Hi Auto",
+        "customer": "Lee's Famous Recipe Chicken",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-lee-s-famous-recipe-chicken-drive-thru-ai-franchisee-deployment-vendor-hi-auto"
+      },
+      {
+        "vendor": "Coates Group",
+        "customer": "McDonald's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-mcdonald-s-drive-thru-ai-unknown-vendor-coates-group"
+      },
+      {
+        "vendor": "Coates Group",
+        "customer": "Hungry Jack's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-hungry-jack-s-drive-thru-ai-unknown-vendor-coates-group"
+      }
+    ],
+    "enrich_existing_relationship": [
+      {
+        "vendor": "Coates Group",
+        "customer": "McDonald's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-mcdonald-s-drive-thru-ai-unknown-vendor-coates-group"
+      }
+    ],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [
+      {
+        "vendor": "HME",
+        "customer": "El Pollo Loco",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-el-pollo-loco-drive-thru-ai-approved-hardware-vendor-vendor-hme"
+      },
+      {
+        "vendor": "HME",
+        "customer": "Dairy Queen",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-dairy-queen-drive-thru-ai-approved-hardware-vendor-vendor-hme"
+      },
+      {
+        "vendor": "HME",
+        "customer": "Taco Bell",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-taco-bell-drive-thru-ai-approved-hardware-vendor-vendor-hme"
+      },
+      {
+        "vendor": "HME",
+        "customer": "McDonald's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-mcdonald-s-drive-thru-ai-approved-hardware-vendor-vendor-hme"
+      },
+      {
+        "vendor": "HME",
+        "customer": "CKE Restaurants",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-cke-restaurants-holdings-hardee-s-and-carl-s-jr-drive-thru-ai-approved-hardware-vendor-vendor-hme"
+      },
+      {
+        "vendor": "HME",
+        "customer": "Checkers & Rally's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": "rel-brand-checkers-rally-s-drive-thru-ai-approved-hardware-vendor-vendor-hme"
+      }
+    ],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [
+      {
+        "vendor": "SoundHound AI",
+        "customer": "Jersey Mike's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": null
+      },
+      {
+        "vendor": "SoundHound AI",
+        "customer": "Church's Texas Chicken",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": null
+      },
+      {
+        "vendor": "ConverseNow",
+        "customer": "Wingstop",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Valyant AI",
+        "customer": "Carl's Jr.",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Valyant AI",
+        "customer": "Hardee's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Presto",
+        "customer": "Carl's Jr.",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Presto",
+        "customer": "Hardee's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Presto",
+        "customer": "Taco John's",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": null
+      },
+      {
+        "vendor": "Hi Auto",
+        "customer": "Burger King New Zealand",
+        "tech_category": "Drive-Thru AI",
+        "relationship_id": null
+      }
+    ],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

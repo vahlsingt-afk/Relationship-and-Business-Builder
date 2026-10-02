@@ -1,0 +1,79 @@
+{
+  "competitor_id": "comp-preferred-patron",
+  "competitor_slug": "preferred-patron",
+  "display_name": "Preferred Patron",
+  "aliases": [],
+  "vendor_entity_id": "vendor-preferred-patron",
+  "primary_category": "loyalty",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Integrations listed are Square, Lightspeed X-Series and QuickBooks — no enterprise restaurant POS — so there is little overlap with Genius's enterprise base",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:20Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Simple SMB pricing; 30-day cancellation window",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:47:20Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-10-02T09:47:04Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:04Z",
+  "latest_cos_commentary": {
+    "headline": "Restaurant loyalty offer appears active in the single-location and mid-market segment.",
+    "genius_exposure": "Restaurant loyalty offer appears active in the single-location and mid-market segment.",
+    "competitive_timing": "Preferred Patron published a 2026 restaurant loyalty case study for Veky’s International Cuisine.",
+    "sales_response": "Confirm multi-unit program administration and POS integration before treating it as an enterprise incumbent.",
+    "risk_and_uncertainty": "One vendor-authored case study cannot establish broad chain-scale adoption.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 48
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 48,
+    "pack_claim_count": 9,
+    "pack_claims_with_url": 6,
+    "pack_claims_inherited_url": 3,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 3,
+      "legacy_claims_need_date_and_current_status_check": 9,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

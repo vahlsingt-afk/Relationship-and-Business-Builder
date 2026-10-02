@@ -1,0 +1,187 @@
+{
+  "competitor_id": "comp-adyen-talon-one",
+  "competitor_slug": "adyen-talon-one",
+  "display_name": "Adyen / Talon.One",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "Current restaurant-technology positioning for Adyen / Talon.One was not established with sufficient confidence in this bounded pass.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Restaurants are not a named core segment for Talon.One",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:47:21Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Expected to add €60M of ARR by year-end 2026",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:47:21Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated evidence does not prove performance, ROI, reliability, implementation quality, or systemwide deployment; independent validation remains incomplete.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "rbb-packet:rbb-competitor-category-gapfill-20260929-batches02-04",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [
+    {
+      "value": "Panera Bread uses Talon.One for loyalty rewards and non-loyalty promotions integrated with internal customer-platform and ecommerce systems; Talon.One reports more than 1,100 campaigns migrated during a five-month rollout.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.talon.one/customers/panera-bread",
+      "finding_type": "vendor_stated",
+      "source_owner": "Talon.One",
+      "source_type": "customer story",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Page date is absent, scale figures are vendor-reported, and the source does not state that Panera uses Adyen payments or a combined product."
+    },
+    {
+      "value": "Joe & The Juice uses Talon.One for loyalty, coupons, discounts, personalized omnichannel promotions, and real-time checkout incentives in an implementation led by EPAM and connected with Braze, mParticle, and commercetools.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.talon.one/customers/joe-and-the-juice",
+      "finding_type": "vendor_stated",
+      "source_owner": "Talon.One",
+      "source_type": "customer story",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Planned in-store and geofencing campaigns are not completed deployments; the page does not state that Adyen payments are part of this specific stack."
+    },
+    {
+      "value": "Scooter's Coffee uses Talon.One for loyalty, discounts, automated gamified challenges, customer-level reward logic, fraud controls, and real-time daypart promotions.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.talon.one/customers/scooter-s-coffee",
+      "finding_type": "vendor_stated",
+      "source_owner": "Talon.One",
+      "source_type": "customer story",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "The page does not disclose implementation date, location count, member count, connected ordering/POS systems, or use of Adyen payments."
+    }
+  ],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:47:04Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:47:04Z",
+  "latest_cos_commentary": {
+    "headline": "Unresolved vendor; no competitive claim should be made without further verification.",
+    "genius_exposure": [],
+    "competitive_timing": "Evidence reviewed as of 2026-09-29.",
+    "sales_response": "Track for account influence or future expansion into Genius categories.",
+    "risk_and_uncertainty": "Evidence quality varies; unresolved records were intentionally left empty rather than guessed.",
+    "priority": "P3",
+    "confidence": 45,
+    "sources": []
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 52,
+    "pack_claim_count": 11,
+    "pack_claims_with_url": 7,
+    "pack_claims_inherited_url": 6,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 4,
+      "legacy_claims_need_date_and_current_status_check": 11,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  },
+  "canonical_company_name": "Adyen / Talon.One",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 45,
+    "sources": []
+  },
+  "operating_status": "unclear",
+  "relationship_class_recommendation": "unclassified_vendor",
+  "negative_findings": [
+    {
+      "value": "No sufficiently unambiguous current restaurant-specific product evidence was established in this pass; no Genius overlap assigned.",
+      "confidence": 60,
+      "sources": []
+    }
+  ],
+  "product_lineage": [
+    {
+      "value": "Adyen completed its acquisition of Talon.One on July 1, 2026 and began integrating Talon.One's loyalty and promotions engine; the evidence establishes common ownership and an integration phase, not completed product convergence.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.adyen.com/press-and-media/adyen-closes-talonone-and-orb-acquisitions-announces-leadership-updates",
+      "finding_type": "vendor_stated",
+      "source_owner": "Adyen",
+      "source_type": "press release",
+      "published_at": "2026-07-01",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "The closing announcement does not establish customer migration, technical convergence, or adoption of Adyen payments by Talon.One customers."
+    }
+  ],
+  "restaurant_tech_categories": [],
+  "conflicts_notes": [],
+  "category_assessment_status": "researched",
+  "category_assessment_packet_id": "rbb-competitor-category-gapfill-20260929-batches02-04",
+  "category_assessed_at": "2026-09-29"
+}

@@ -1,0 +1,122 @@
+{
+  "account_id": "acct-churchs-texas-chicken",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-08-29T20:18:46Z",
+      "generated_for": "",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-29",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-08-30T09:46:04Z",
+      "generated_for": "",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-30",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-08-30T09:46:09Z",
+      "generated_for": "",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-30",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-08-30T13:21:56Z",
+      "generated_for": "",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-30",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 5,
+      "generated_at": "2026-08-30T13:23:09Z",
+      "generated_for": "",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-30",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 6,
+      "generated_at": "2026-08-31T12:24:29Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-31",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 7,
+      "generated_at": "2026-08-31T12:24:54Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-08-31",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 8,
+      "generated_at": "2026-09-02T09:10:03Z",
+      "generated_for": "",
+      "purpose": "Automated 24h SLA refresh — flagged stale on a prior run and not yet addressed.",
+      "intelligence_verification_date": "2026-09-02",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 9,
+      "generated_at": "2026-09-03T09:09:24Z",
+      "generated_for": "",
+      "purpose": "Automated 24h SLA refresh — flagged stale on a prior run and not yet addressed.",
+      "intelligence_verification_date": "2026-09-03",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 10,
+      "generated_at": "2026-09-04T09:09:18Z",
+      "generated_for": "",
+      "purpose": "Automated 24h SLA refresh — flagged stale on a prior run and not yet addressed.",
+      "intelligence_verification_date": "2026-09-04",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 11,
+      "generated_at": "2026-09-05T09:04:23Z",
+      "generated_for": "",
+      "purpose": "Automated 24h SLA refresh — flagged stale on a prior run and not yet addressed.",
+      "intelligence_verification_date": "2026-09-05",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 12,
+      "generated_at": "2026-09-06T09:04:22Z",
+      "generated_for": "",
+      "purpose": "Automated 24h SLA refresh — flagged stale on a prior run and not yet addressed.",
+      "intelligence_verification_date": "2026-09-06",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 13,
+      "generated_at": "2026-09-08T13:25:30Z",
+      "generated_for": "",
+      "purpose": "Automated 24h SLA refresh — flagged stale on a prior run and not yet addressed.",
+      "intelligence_verification_date": "2026-09-08",
+      "path": "system/account_research/accounts/churchs-texas-chicken/briefs/current/Background_Brief.md",
+      "superseded": false
+    }
+  ]
+}

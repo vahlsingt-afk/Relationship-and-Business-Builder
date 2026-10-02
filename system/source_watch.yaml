@@ -1,0 +1,113 @@
+# RB local source watch configuration.
+#
+# This is Todd's first working setup, not generic onboarding.
+# The scanner inventories matching files into system/.cache/source_watch.json.
+# Raw files stay in their original locations or in git-ignored inbox folders.
+
+version: 1
+
+defaults:
+  recursive: true
+  enabled: true
+
+watch_folders:
+  zoom_native:
+    label: Zoom native saves
+    enabled: true
+    source_type: zoom
+    path: /Users/toddvahlsing/Documents/Zoom
+    route_to: system/inbox/conversation_artifacts/zoom
+    file_types:
+      - .txt
+      - .vtt
+      - .srt
+      - .csv
+      - .json
+    filename_hints:
+      - chat
+      - transcript
+      - meeting
+      - audio
+      - zoom
+    require_filename_hint: false
+    notes: Native Zoom meeting folders often contain chat.txt, audio transcript .vtt, and related meeting metadata.
+
+  zoom_inbox:
+    label: RB Zoom drop folder
+    enabled: true
+    source_type: zoom
+    path: system/inbox/conversation_artifacts/zoom
+    route_to: system/inbox/conversation_artifacts/zoom
+    file_types:
+      - .txt
+      - .md
+      - .vtt
+      - .srt
+      - .csv
+      - .json
+      - .pdf
+      - .docx
+    filename_hints: []
+    require_filename_hint: false
+    notes: Manual Zoom drops. Any matching file here is intentional.
+
+  fathom_downloads:
+    label: Fathom downloads
+    enabled: true
+    source_type: fathom
+    path: /Users/toddvahlsing/Downloads
+    route_to: system/inbox/conversation_artifacts/fathom
+    file_types:
+      - .txt
+      - .md
+      - .vtt
+      - .srt
+      - .pdf
+      - .docx
+      - .mp3
+      - .m4a
+      - .wav
+      - .mp4
+      - .mov
+      - .webm
+    filename_hints:
+      - fathom
+      - transcript-
+      - recording-
+      - fathom_
+      - fathom-
+    filename_excludes:
+      - rb_session
+      - full_session
+      - full_verbatim
+      - full_visible
+      - reconstructed
+      - session_export
+      - session_transcript
+      - visible_conversation
+      - operator_visible
+    require_filename_hint: true
+    notes: Downloads is noisy, so Fathom scanning requires a Fathom-like filename hint and excludes generic RB/ChatGPT transcript exports.
+
+  fathom_inbox:
+    label: RB Fathom drop folder
+    enabled: true
+    source_type: fathom
+    path: system/inbox/conversation_artifacts/fathom
+    route_to: system/inbox/conversation_artifacts/fathom
+    file_types:
+      - .txt
+      - .md
+      - .vtt
+      - .srt
+      - .pdf
+      - .docx
+      - .mp3
+      - .m4a
+      - .wav
+      - .mp4
+      - .mov
+      - .webm
+    filename_hints: []
+    require_filename_hint: false
+    notes: Manual Fathom drops. Any matching file here is intentional.

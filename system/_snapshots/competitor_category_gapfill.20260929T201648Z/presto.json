@@ -1,0 +1,37 @@
+{
+  "competitor_id": "comp-presto",
+  "competitor_slug": "presto",
+  "display_name": "Presto",
+  "aliases": [
+    "Presto Voice"
+  ],
+  "vendor_entity_id": "vendor-presto",
+  "primary_category": "voice_ai",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": null,
+  "last_synced_at": "2026-09-29T14:57:13Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:13Z"
+}

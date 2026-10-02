@@ -1,0 +1,14 @@
+{
+  "subject_id": "subject-del-taco",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-25T19:10:34Z",
+      "generated_for": "Todd Vahlsing",
+      "purpose": "Single-call preparation",
+      "path": "system/artifact_vault/green_sheets/del-taco/current/Del-Taco_Green-Sheet.md",
+      "superseded": false
+    }
+  ],
+  "data_owner_id": "todd"
+}

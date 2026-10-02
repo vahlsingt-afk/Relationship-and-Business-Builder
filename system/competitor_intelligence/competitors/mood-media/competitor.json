@@ -1,0 +1,121 @@
+{
+  "competitor_id": "comp-mood-media",
+  "competitor_slug": "mood-media",
+  "display_name": "Mood Media",
+  "aliases": [],
+  "vendor_entity_id": "vendor-mood-media",
+  "primary_category": "digital_menu_boards",
+  "competes_on": [
+    "kitchen_drive_thru"
+  ],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "2020 bankruptcy history",
+        "evidence_id": "note-0007",
+        "added_at": "2026-09-26T12:23:34Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Huge commercial footprint and brand relationships (McDonald's listed as client)",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:23:34Z"
+      }
+    ]
+  },
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:46:56Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:56Z",
+  "latest_cos_commentary": {
+    "headline": "Full-service QSR menu-board operations may be a Genius Digital Menu Board incumbent.",
+    "genius_exposure": "Full-service QSR menu-board operations may be a Genius Digital Menu Board incumbent.",
+    "competitive_timing": "Mood markets QSR digital menu boards alongside signage content, hardware and installation services.",
+    "sales_response": "Confirm exact CMS, hardware owner and service-level terms at each chain before proposing replacement.",
+    "risk_and_uncertainty": "Undated vendor page does not establish named deployment scope; accessed 2026-09-28.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 23
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 23,
+    "pack_claim_count": 13,
+    "pack_claims_with_url": 8,
+    "pack_claims_inherited_url": 1,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 5,
+      "legacy_claims_need_date_and_current_status_check": 13,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  },
+  "vendor_claims": [
+    {
+      "value": "Mood Media markets Pandora for Business as licensed, ad-free commercial music with playlist-control features.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://pandora.moodmedia.com/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Mood Media",
+      "source_type": "vendor_product_page",
+      "published_at": "",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "No independent restaurant performance or ROI evidence was validated."
+    },
+    {
+      "value": "Mood Media identifies Harmony as an integrated digital-signage/brand-experience CMS alongside digital signage, Mood TV, menu boards and video walls.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://moodmedia.com/ie/sight/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Mood Media",
+      "source_type": "vendor_product_page",
+      "published_at": "",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Source is an Ireland regional page; global SKU parity was not validated."
+    },
+    {
+      "value": "Mood Media markets restaurant drive-thru systems that include timer-based performance tracking plus design, installation and equipment monitoring services.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://us.moodmedia.com/smb/drive-thru-systems/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Mood Media",
+      "source_type": "vendor_product_page",
+      "published_at": "",
+      "deployment_scope": "location-level",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "No independent restaurant implementation result was validated."
+    }
+  ]
+}

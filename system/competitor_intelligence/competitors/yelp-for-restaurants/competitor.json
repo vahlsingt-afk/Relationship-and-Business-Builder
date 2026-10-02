@@ -1,0 +1,94 @@
+{
+  "competitor_id": "comp-yelp-for-restaurants",
+  "competitor_slug": "yelp-for-restaurants",
+  "display_name": "Yelp for Restaurants",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "Yelp for Restaurants could not be classified confidently from unambiguous current restaurant-specific evidence in this bounded pass.",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-10-02T09:46:57Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:57Z",
+  "latest_cos_commentary": {
+    "headline": "Classification unresolved; avoid competitive claims until identity/product evidence is verified.",
+    "genius_exposure": [],
+    "competitive_timing": "Current evidence reviewed as of 2026-09-29.",
+    "sales_response": "Monitor for expansion into Genius categories and verify account-level influence before treating as a direct competitor.",
+    "risk_and_uncertainty": "Evidence quality varies materially across this long-tail batch; unresolved names remain deliberately unclassified rather than guessed.",
+    "priority": "P3",
+    "confidence": 45,
+    "sources": []
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 111,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "Financial performance specific to the restaurant/reservations segment (Yelp Inc. is public but does not break this out cleanly)",
+        "Independent verification of Brinker International as an active customer"
+      ]
+    }
+  },
+  "canonical_company_name": "Yelp for Restaurants",
+  "ownership": {
+    "parent": null,
+    "ownership_type": "unknown",
+    "as_of": "2026-09-29",
+    "confidence": 50,
+    "sources": []
+  },
+  "operating_status": "unclear",
+  "relationship_class_recommendation": "unclassified_vendor",
+  "negative_findings": [
+    {
+      "value": "No sufficiently unambiguous current restaurant-technology product evidence was established in this bounded pass; do not infer a Genius overlap from the vendor name alone.",
+      "confidence": 55,
+      "sources": []
+    }
+  ],
+  "products": [],
+  "strengths": [],
+  "vulnerabilities": [
+    {
+      "value": "Vendor-originated product evidence does not by itself establish ROI, reliability, implementation quality, or systemwide customer adoption; independent validation remains a research gap.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": null,
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_category_gapfill",
+      "source_url": "rbb-packet:rbb-competitor-category-gapfill-20260929-batches02-04",
+      "finding_type": "inference",
+      "source_type": "structured_research_packet",
+      "is_vendor_claim": false,
+      "is_inference": true
+    }
+  ],
+  "key_customers": [],
+  "recent_news": [],
+  "product_lineage": [],
+  "restaurant_tech_categories": [],
+  "conflicts_notes": [],
+  "category_assessment_status": "researched",
+  "category_assessment_packet_id": "rbb-competitor-category-gapfill-20260929-batches02-04",
+  "category_assessed_at": "2026-09-29"
+}

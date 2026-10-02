@@ -1,0 +1,45 @@
+{
+  "subject_id": "subject-in_restaurant_media",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-25T16:12:19Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/in_restaurant_media/current/In-Restaurant-Media_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-28T09:24:41Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/in_restaurant_media/current/In-Restaurant-Media_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-29T09:19:14Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/in_restaurant_media/current/In-Restaurant-Media_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-09-29T14:57:14Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/in_restaurant_media/current/In-Restaurant-Media_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 5,
+      "generated_at": "2026-10-02T09:47:06Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/in_restaurant_media/current/In-Restaurant-Media_Battle-Card.md",
+      "superseded": false
+    }
+  ]
+}

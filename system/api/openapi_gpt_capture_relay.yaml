@@ -1,0 +1,98 @@
+# RB Capture Relay -- RBB_TOKEN_EFFICIENT_ARCHITECTURE_SCOPE_2026-09-19.md,
+# Phase 1, build-order item 3. Deliberately a single operation, not a
+# subset of the full 30-operation openapi_gpt.yaml -- that schema is a
+# different, retired GPT's surface (see the Custom GPT / ChatGPT Project
+# "RBB" retirement in project memory). This file exists independently and
+# is not validated by validate_openapi_gpt.py's GPT_OPERATIONS allowlist,
+# since it isn't part of that schema. Every description field below is
+# kept under GPT Builder's 300-character-per-field import limit (confirmed
+# live 2026-09-22 -- it rejected an earlier, longer operation description
+# with "description has length 364 exceeding limit of 300"); the fuller
+# rationale that longer descriptions used to carry lives in this comment
+# block and in custom_gpt_capture_relay_instructions.md instead.
+openapi: 3.1.0
+info:
+  title: RB Capture Relay
+  description: >-
+    Actions backend for the RB Capture Relay Custom GPT. This GPT's only
+    job: read a file or pasted text, extract the real content, and relay
+    it here so it reaches RB's normal capture pipeline. It never processes
+    content itself and never fabricates a summary.
+  version: 0.1.0
+servers:
+  - url: https://rb-api.bridgepointops.org
+    description: RB API tunnel
+security:
+  - ApiKeyAuth: []
+paths:
+  /captures/queue-text:
+    post:
+      tags:
+        - write
+      operationId: queueCaptureText
+      summary: Queue extracted text for the next scheduled intelligence sweep
+      description: >-
+        Queues real, user-provided or file-extracted text for the next
+        automatic morning intelligence pass. This is the only way this GPT
+        gets content into RB -- it has no filesystem access. Never invent
+        or summarize; relay exactly what was read from the file or pasted
+        by the user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QueueCaptureTextBody"
+      responses:
+        "200":
+          description: Queued (or already queued, if this exact text was seen before).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: "'pending' for a newly queued capture, 'already_queued' if this exact text was already seen (safe to relay again; dedup is automatic)."
+                  file_id:
+                    type: string
+        "400":
+          description: text was empty, or capture_type was not a recognized value.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+  schemas:
+    QueueCaptureTextBody:
+      type: object
+      required:
+        - text
+      properties:
+        text:
+          type: string
+          description: >-
+            The real text extracted from the user's file, or pasted by the
+            user -- never text you generated yourself. For a PDF/Excel/
+            image, read the file natively and put its actual extracted
+            content here; never describe the file instead of relaying it.
+        title_hint:
+          type: string
+          description: >-
+            A short human-readable label, e.g. "Restaurant Business article
+            on Del Taco" or the file's own name. Falls back to a generic
+            label if omitted.
+        source_url:
+          type: string
+          description: The real URL this came from, if the user gave one.
+        capture_type:
+          type: string
+          enum:
+            - pasted_content
+            - deep_research
+          description: >-
+            Optional override. Omit for ordinary pasted text, articles, or
+            documents -- defaults to 'pasted_content'. Use 'deep_research'
+            only for a completed deep-research evidence packet, so it
+            reports the same way a local client's dropped file does.

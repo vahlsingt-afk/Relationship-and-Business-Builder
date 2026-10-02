@@ -1,0 +1,89 @@
+{
+  "competitor_id": "comp-square-for-restaurants-block",
+  "competitor_slug": "square-for-restaurants-block",
+  "display_name": "Square for Restaurants (Block)",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Block cut ~4,000 staff (~40–50%, from >10,000 to <6,000) on Feb 26, 2026, citing AI — possible support/service risk",
+        "evidence_id": "note-0008",
+        "added_at": "2026-09-26T12:47:18Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "\"GPV from food and beverage sellers was up 20% year over year, driven by U.S. food and beverage GPV accelerating to its strongest growth rate since the first quarter of 2023\"",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:18Z"
+      },
+      {
+        "point": "#3 share of ex-top-250 US restaurants (~13%), ahead of Global Payments (~11%)",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:47:18Z"
+      },
+      {
+        "point": "Moving up to small chains: The Hat (11 SoCal units + Las Vegas) rolled out Dec 2025–Mar 2026 — \"the team at Square has delivered on their promise to provide the human support\" (Joe Conzonire Jr., CFO/COO)",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:47:18Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-09-29T14:57:11Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:11Z",
+  "latest_cos_commentary": {
+    "headline": "Square has a public 100-location QSR win supporting its move toward multi-unit restaurant accounts.",
+    "genius_exposure": "Square has a public 100-location QSR win supporting its move toward multi-unit restaurant accounts.",
+    "competitive_timing": "Whit’s Frozen Custard selected Square’s unified commerce platform for 100 locations in September 2026. Latest check: Square reported an expanded OpenTable integration for shared guest and payment insights in August 2026.",
+    "sales_response": "Validate rollout and franchise administration economics at Whit’s; compare full-store payments, KDS and management costs.",
+    "risk_and_uncertainty": "Selected 100-location scope is not proof every location is already live. Newsroom listing confirms announcement; exact scope should be checked in full release before account claims.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 35
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 35,
+    "pack_claim_count": 16,
+    "pack_claims_with_url": 14,
+    "pack_claims_inherited_url": 9,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 2,
+      "legacy_claims_need_date_and_current_status_check": 16,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

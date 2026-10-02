@@ -1,0 +1,170 @@
+# todd_vahlsing — opportunity_context.yaml
+# What RB uses to score opportunity fit against this profile.
+# source: seeded_from_00_TODD_PROFILE_2026-05-27
+
+profile_id: todd_vahlsing
+
+# Career / business context
+career_context: founder_advisor  # employed | consulting | job_search | founder | operator | advisor | investor
+
+# Core capabilities — what this user can personally do or deliver
+capabilities:
+  - enterprise_restaurant_tech_sales
+  - gtm_strategy_and_execution
+  - franchise_operator_adoption
+  - mcdonalds_global_account_management
+  - above_store_analytics
+  - drive_thru_operations_and_technology
+  - pos_and_payments_ecosystem
+  - restaurant_ai_readiness_assessment
+  - consulting_and_advisory_structuring
+  - interim_cso_and_sales_leadership
+  - customer_success_and_account_management
+
+# Product / service capabilities — what BridgePoint Ops delivers
+product_service_capabilities:
+  - gtm_execution_consulting_for_restaurant_tech_vendors
+  - enterprise_sales_strategy_for_restaurant_tech
+  - franchise_adoption_consulting
+  - advisory_fractional_sales_leadership
+  - operator_technology_readiness_assessment
+  - sales_process_and_pipeline_design
+
+# Target industries
+target_industries:
+  - restaurant_technology
+  - foodservice_technology
+  - hospitality_technology
+  - quick_service_restaurants
+  - fast_casual_restaurants
+  - enterprise_restaurant_chains
+
+# Adjacent industries (secondary fit)
+adjacent_industries:
+  - retail_technology
+  - payments_and_fintech
+  - enterprise_b2b_saas
+  - supply_chain_and_foodservice_distribution
+
+# Target customers (for consulting / advisory)
+target_customers:
+  - restaurant_tech_vendors_series_b_to_public
+  - enterprise_restaurant_chains_200_plus_units
+  - private_equity_backed_restaurant_tech
+  - restaurant_tech_vendors_entering_enterprise_segment
+
+# Target employers (for full-time or fractional roles)
+target_employers:
+  - restaurant_tech_vendors_vp_enterprise_or_above
+  - enterprise_restaurant_operators_head_of_technology_or_revenue
+  - restaurant_tech_investors_and_pe_firms_operating_partner
+
+# Preferred opportunity types
+preferred_opportunity_types:
+  - consulting       # paid advisory engagement
+  - job              # full-time or fractional enterprise role
+  - sales            # vendor pipeline where Todd's product can solve the pain
+  - partnership      # strategic alliance or co-sell
+  - content          # thought leadership from validated signal
+
+# No-go categories
+no_go_categories:
+  - free_strategy_or_unpaid_thinking
+  - commission_only_arrangements
+  - intro_only_without_conviction
+  - small_market_restaurant_tech_below_series_b
+  - consumer_facing_tech_with_no_restaurant_operator_angle
+
+# Pain the user can credibly solve
+credible_pain_types:
+  - gtm_execution_failure          # vendor can't crack enterprise accounts
+  - franchise_adoption_resistance  # great tech but operators won't roll it out
+  - enterprise_sales_stall         # pipeline moving but deals not closing
+  - integration_failure            # rollout failing at the operator level
+  - vendor_gap                     # operator needs a capability no current vendor delivers well
+  - leadership_gap                 # interim or fractional sales/GTM leadership needed
+  - digital_transformation         # operator modernizing POS, payments, or above-store
+
+# Relationship and intro boundaries
+intro_philosophy: balanced
+intro_boundaries:
+  - no_intro_without_conviction
+  - must_believe_in_both_sides
+  - no_cold_blasts_on_behalf_of_others
+
+# ── Job Search Intelligence Gate ─────────────────────────────────────────────
+# Set job_search_active: true to enable job intelligence scanning and brief surfacing.
+# When false: job_intelligence section is completely suppressed from the daily brief.
+# When true:  email, LinkedIn messages, and relationship signals are scanned for
+#             job postings matching the profile. Roles are scored and surfaced with links.
+job_search_active: false
+career_phase: onboarding  # offer_accepted 2026-06-21 — Global Payments / Worldpay Sales Executive
+
+# job_search_context: populated when job_search_active is true.
+# Defines the filter and scoring criteria for job opportunity detection.
+# Leave null when not searching — it will not be used.
+job_search_context:
+  # Target role titles (any match triggers deeper analysis)
+  target_titles:
+    - Chief Revenue Officer
+    - Chief Sales Officer
+    - VP Enterprise Sales
+    - VP Sales
+    - Head of Sales
+    - Head of Revenue
+    - VP Customer Success
+    - SVP Sales
+    - General Manager
+    - Managing Director
+    - President
+    - COO
+  # Target companies (any match elevates fit score)
+  target_companies:
+    - Toast
+    - PAR Technology
+    - Olo
+    - NCR Voyix
+    - Oracle Hospitality
+    - Agilysys
+    - Restaurant365
+    - Qu
+    - Harri
+    - Coates Group
+    - Global Payments
+    - Shift4
+    - Foods Connected
+    - HungerRush
+    - Presto
+    - Xenial
+  # Minimum fit score to surface in brief (0–100)
+  minimum_fit_score: 60
+  # Sources to scan (email | linkedin | both)
+  scan_sources: both
+  # Lookback window for job signal detection (days)
+  scan_days: 14
+  # Whether to include speculative roles (no formal posting, just signal)
+  include_speculative: true
+  # Geography preference (null = no filter)
+  geography_preference: "US"
+  # Compensation range (null = no filter)
+  compensation_minimum: null
+
+# Buyer personas Todd can access
+accessible_buyer_personas:
+  - mcdonalds_franchise_operator_ceo_and_directors
+  - enterprise_restaurant_chain_cto_coo_vp_technology
+  - restaurant_tech_vendor_ceo_cro_vp_sales
+  - pe_backed_restaurant_portfolio_operator
+
+# Proof preferences
+proof_preferences:
+  - prefer_multi_source_convergence
+  - require_relationship_path_evidence
+  - flag_stale_sources_explicitly
+
+# Constraints
+constraints:
+  geographic: open_us_preference
+  compensation_minimum: null   # not specified
+  travel: open
+  work_style: remote_or_hybrid

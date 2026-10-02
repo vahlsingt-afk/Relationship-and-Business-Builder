@@ -1,0 +1,985 @@
+# earnings_calendar.yaml — Public company registry for RB earnings monitoring.
+#
+# Managed by earnings_monitor.py. Do not hand-edit the companies list while
+# the pipeline is running. Snapshots are written to system/_snapshots/ before
+# each mutation.
+#
+# Fields: name, ticker, edgar_cik, ir_rss_url, ir_page_url, side, category,
+#         report_months, strategic_relevance, watch_priority, notes,
+#         added_by, added_at (auto-set on dynamic entries).
+#         last_reported_date (auto-set by _reconcile_confirmed_dates once a
+#         real earnings_release signal lands -- supersedes the report_months
+#         estimate for that cycle; see RB-DEFECT-066).
+#         ir_page_url is the plain investor-relations page, used as a
+#         fallback source only when ir_rss_url fails to fetch.
+
+version: 1
+updated_at: '2026-09-25'
+companies:
+- name: PAR Technology
+  ticker: PAR
+  edgar_cik: '708821'
+  ir_rss_url: https://investors.partech.com/rss/news-releases.xml
+  ir_page_url: https://investors.partech.com/
+  side: vendor_supply
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: high
+  watch_priority: true
+  last_reported_date: '2026-08-06'
+  notes: 'Restaurant POS and tech platform. Oliver Ostertag (President, Growth+AI)
+    has M&A/corporate development background. Activist investor board pressure and
+    stock decline as of 2026-Q2. Exit-positioning hypothesis active.
+
+    '
+  aliases:
+  - PAR
+  - ParTech
+  - Brink POS
+  - PAR Brink
+  - PAR Technology (Brink POS)
+  search_terms:
+  - PAR Technology
+  - PAR
+  - ParTech
+  - Brink POS
+  - PAR Brink
+  - PAR Technology (Brink POS)
+  search_queries:
+  - '"PAR Technology" earnings OR investor relations'
+  - '"PAR" earnings OR investor relations'
+  - '"ParTech" earnings OR investor relations'
+  - '"Brink POS" earnings OR investor relations'
+  - '"PAR Brink" earnings OR investor relations'
+  - '"PAR Technology (Brink POS)" earnings OR investor relations'
+- name: Olo
+  ticker: null
+  edgar_cik: '1643953'
+  ir_rss_url: https://investors.olo.com/rss/news-releases.xml
+  side: vendor_supply
+  category: online_ordering
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: high
+  watch_priority: true
+  notes: 'Online ordering and guest engagement platform for enterprise restaurants.
+    Key competitor and potential partner. Q1 2026 earnings flagged AI-driven order
+    accuracy as strategic priority.
+
+    '
+  aliases: []
+  search_terms:
+  - Olo
+  search_queries:
+  - '"Olo" earnings OR investor relations'
+  last_reported_date: '2026-08-10'
+- name: Toast
+  ticker: TOST
+  edgar_cik: '1650164'
+  ir_rss_url: https://investors.toasttab.com/rss/news-releases.xml
+  side: vendor_supply
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: high
+  watch_priority: true
+  notes: 'Restaurant POS and payments platform. Bob Gibson thread active. Active thread
+    T-2026-05-bob-gibson-toast.
+
+    '
+  aliases: []
+  search_terms:
+  - Toast
+  - TOST
+  search_queries:
+  - '"Toast" earnings OR investor relations'
+  - '"TOST" earnings OR investor relations'
+  last_reported_date: '2026-08-04'
+- name: Shift4 Payments
+  ticker: null
+  edgar_cik: '1794783'
+  ir_rss_url: https://investors.shift4.com/rss/news-releases.xml
+  side: vendor_supply
+  category: payments
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: true
+  notes: 'Integrated payments with strong hospitality/restaurant vertical. Acquired
+    Appetize (enterprise POS) and Revel Systems.
+
+    '
+  search_terms:
+  - Shift4 Payments
+  search_queries:
+  - '"Shift4 Payments" earnings OR investor relations'
+  aliases: []
+  last_reported_date: '2026-08-25'
+- name: NCR Voyix
+  ticker: VYX
+  edgar_cik: '70866'
+  ir_rss_url: https://investors.ncrvoyix.com/rss/news-releases.xml
+  side: vendor_supply
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: false
+  notes: 'Legacy POS (Aloha). Split from NCR Atleos in 2023. Declining relevance in
+    restaurant-tech but still large installed base.
+
+    '
+  aliases:
+  - NCR Corporation
+  - NCR Voyix
+  - NCR Aloha
+  - Aloha POS
+  search_terms:
+  - NCR Voyix
+  - NCR Corporation
+  - NCR Aloha
+  - Aloha POS
+  - VYX
+  search_queries:
+  - '"NCR Voyix" earnings OR investor relations'
+  - '"NCR Corporation" earnings OR investor relations'
+  - '"NCR Aloha" earnings OR investor relations'
+  - '"Aloha POS" earnings OR investor relations'
+  - '"VYX" earnings OR investor relations'
+- name: Lightspeed Commerce
+  ticker: LSPD
+  edgar_cik: '1823306'
+  ir_rss_url: https://investors.lightspeedhq.com/rss/news-releases.xml
+  side: vendor_supply
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: low
+  watch_priority: false
+  notes: 'POS for restaurant and retail (Canadian co., cross-listed NYSE). Less focused
+    on QSR/enterprise than PAR/Toast/Olo.
+
+    '
+  search_terms:
+  - Lightspeed Commerce
+  - LSPD
+  search_queries:
+  - '"Lightspeed Commerce" earnings OR investor relations'
+  - '"LSPD" earnings OR investor relations'
+- name: McDonald's
+  ticker: MCD
+  edgar_cik: '63908'
+  ir_rss_url: https://corporate.mcdonalds.com/corpmcd/en-us/our-stories/rss.html
+  side: operator_demand
+  category: restaurant_ai
+  report_months:
+  - 1
+  - 4
+  - 7
+  - 10
+  strategic_relevance: high
+  watch_priority: true
+  notes: 'Primary operator target. McDonald''s tech deployment decisions (AI, POS,
+    loyalty, drive-thru) set the agenda for the entire restaurant-tech sector. NSN
+    micro-graph active.
+
+    '
+  aliases:
+  - McDonalds
+  - McDonald's Corporation
+  search_terms:
+  - McDonald's
+  - McDonalds
+  - McDonald's Corporation
+  - MCD
+  search_queries:
+  - '"McDonald''s" earnings OR investor relations'
+  - '"McDonalds" earnings OR investor relations'
+  - '"McDonald''s Corporation" earnings OR investor relations'
+  - '"MCD" earnings OR investor relations'
+  last_reported_date: '2026-08-04'
+- name: Yum Brands
+  ticker: YUM
+  edgar_cik: '1041061'
+  ir_rss_url: https://ir.yum.com/rss/news-releases.xml
+  side: operator_demand
+  category: restaurant_ai
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: high
+  watch_priority: true
+  notes: 'KFC, Pizza Hut, Taco Bell. Major restaurant-tech buyer. Pizza Hut / Dragontail
+    AI rollout lawsuit signal active (2026-05).
+
+    '
+  search_terms:
+  - Yum Brands
+  - YUM
+  search_queries:
+  - '"Yum Brands" earnings OR investor relations'
+  - '"YUM" earnings OR investor relations'
+  last_reported_date: '2026-09-01'
+- name: Restaurant Brands International
+  ticker: null
+  ir_rss_url: https://investor.rbi.com/rss/news-releases.xml
+  side: operator_demand
+  category: restaurant_ai
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: false
+  notes: Burger King, Popeyes, Tim Hortons, Firehouse Subs.
+  search_terms:
+  - Restaurant Brands International
+  search_queries:
+  - '"Restaurant Brands International" earnings OR investor relations'
+  edgar_cik: '1618756'
+  aliases: []
+- name: Darden Restaurants
+  ticker: null
+  edgar_cik: '940944'
+  ir_rss_url: https://ir.darden.com/rss/news-releases.xml
+  side: operator_demand
+  category: pos
+  report_months:
+  - 1
+  - 4
+  - 7
+  - 10
+  strategic_relevance: medium
+  watch_priority: false
+  notes: Olive Garden, LongHorn Steakhouse. Tech decisions inform casual dining.
+  search_terms:
+  - Darden Restaurants
+  search_queries:
+  - '"Darden Restaurants" earnings OR investor relations'
+  aliases: []
+  last_reported_date: '2026-09-24'
+- name: Dine Brands
+  ticker: DIN
+  edgar_cik: '49754'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: low
+  watch_priority: false
+  notes: Applebee's, IHOP. Lower priority.
+  search_terms:
+  - Dine Brands
+  - DIN
+  search_queries:
+  - '"Dine Brands" earnings OR investor relations'
+  - '"DIN" earnings OR investor relations'
+  last_reported_date: '2026-09-04'
+- name: Global Payments
+  ticker: null
+  edgar_cik: '1123360'
+  ir_rss_url: null
+  side: vendor_supply
+  category: payments
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: high
+  watch_priority: true
+  notes: Todd's own employer's parent company (Genius/Global Payments). Primary strategic-context
+    tracking, not just competitive monitoring.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Global Payments
+  search_queries:
+  - '"Global Payments" earnings OR investor relations'
+  aliases: []
+  last_reported_date: '2026-08-05'
+- name: Fiserv
+  ticker: null
+  edgar_cik: '798354'
+  ir_rss_url: null
+  side: vendor_supply
+  category: payments
+  report_months:
+  - 1
+  - 4
+  - 7
+  - 10
+  strategic_relevance: high
+  watch_priority: true
+  notes: Major payments processor with restaurant-vertical exposure (Clover POS/payments).
+    Ticker trades as FI on Nasdaq; SEC registry still lists FISV.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Fiserv
+  search_queries:
+  - '"Fiserv" earnings OR investor relations'
+  last_reported_date: '2026-08-06'
+  aliases: []
+- name: Block, Inc.
+  ticker: XYZ
+  edgar_cik: '1512673'
+  ir_rss_url: null
+  side: vendor_supply
+  category: payments
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: true
+  notes: Square POS/payments for restaurants and small business. Ticker renamed from
+    SQ to XYZ in 2025.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Block, Inc.
+  - XYZ
+  search_queries:
+  - '"Block, Inc." earnings OR investor relations'
+  - '"XYZ" earnings OR investor relations'
+  last_reported_date: '2026-08-05'
+- name: Oracle Corp
+  ticker: ORCL
+  edgar_cik: '1341439'
+  ir_rss_url: null
+  side: vendor_supply
+  category: pos
+  report_months:
+  - 3
+  - 6
+  - 9
+  - 12
+  strategic_relevance: medium
+  watch_priority: true
+  notes: Oracle MICROS/Simphony enterprise POS -- major incumbent across large restaurant
+    operators (fiscal year ends May, reports quarterly ~1 month after each fiscal
+    quarter close).
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Oracle Corp
+  - ORCL
+  search_queries:
+  - '"Oracle Corp" earnings OR investor relations'
+  - '"ORCL" earnings OR investor relations'
+  last_reported_date: '2026-09-14'
+- name: SoundHound AI
+  ticker: null
+  edgar_cik: '1840856'
+  ir_rss_url: null
+  side: vendor_supply
+  category: restaurant_ai
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: true
+  notes: Drive-thru/voice AI ordering vendor with named restaurant deployments.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - SoundHound AI
+  search_queries:
+  - '"SoundHound AI" earnings OR investor relations'
+  aliases: []
+  last_reported_date: '2026-08-05'
+- name: Cerence Inc.
+  ticker: CRNC
+  edgar_cik: '1768267'
+  ir_rss_url: null
+  side: vendor_supply
+  category: restaurant_ai
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: low
+  watch_priority: false
+  notes: Primarily automotive conversational AI; restaurant/drive-thru exposure is
+    a smaller, adjacent business line. Monitoring only per the request's own framing.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Cerence Inc.
+  - CRNC
+  search_queries:
+  - '"Cerence Inc." earnings OR investor relations'
+  - '"CRNC" earnings OR investor relations'
+- name: DoorDash, Inc.
+  ticker: DASH
+  edgar_cik: '1792789'
+  ir_rss_url: null
+  side: vendor_supply
+  category: online_ordering
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: true
+  notes: Third-party delivery/online-ordering platform. Track for disclosed first-party
+    restaurant-platform integrations, not general delivery-marketplace news.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - DoorDash, Inc.
+  - DASH
+  search_queries:
+  - '"DoorDash, Inc." earnings OR investor relations'
+  - '"DASH" earnings OR investor relations'
+  last_reported_date: '2026-08-05'
+- name: Uber Technologies, Inc.
+  ticker: UBER
+  edgar_cik: '1543151'
+  ir_rss_url: null
+  side: vendor_supply
+  category: online_ordering
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: false
+  notes: Uber Eats. Track for disclosed first-party restaurant-platform integrations
+    only.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Uber Technologies, Inc.
+  - UBER
+  search_queries:
+  - '"Uber Technologies, Inc." earnings OR investor relations'
+  - '"UBER" earnings OR investor relations'
+- name: Wendy's Co
+  ticker: WEN
+  edgar_cik: '30697'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: true
+  notes: Major QSR operator; digital/AI ordering initiatives (e.g. AI drive-thru pilots)
+    are strategically relevant.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Wendy's Co
+  - WEN
+  search_queries:
+  - '"Wendy''s Co" earnings OR investor relations'
+  - '"WEN" earnings OR investor relations'
+  last_reported_date: '2026-08-07'
+- name: Starbucks Corp
+  ticker: SBUX
+  edgar_cik: '829224'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 1
+  - 4
+  - 7
+  - 11
+  strategic_relevance: high
+  watch_priority: true
+  notes: Large tech-forward operator (mobile order/pay, loyalty). Fiscal year ends
+    late September/early October, so report months are offset from calendar-year peers.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Starbucks Corp
+  - SBUX
+  search_queries:
+  - '"Starbucks Corp" earnings OR investor relations'
+  - '"SBUX" earnings OR investor relations'
+  last_reported_date: '2026-07-29'
+- name: Domino's Pizza Inc
+  ticker: DPZ
+  edgar_cik: '1286681'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 1
+  - 4
+  - 7
+  - 10
+  strategic_relevance: medium
+  watch_priority: true
+  notes: Digital-ordering-forward operator with a long history of proprietary ordering-tech
+    investment.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Domino's Pizza Inc
+  - DPZ
+  search_queries:
+  - '"Domino''s Pizza Inc" earnings OR investor relations'
+  - '"DPZ" earnings OR investor relations'
+- name: Brinker International, Inc
+  ticker: EAT
+  edgar_cik: '703351'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: low
+  watch_priority: false
+  notes: Chili's, Maggiano's. Lower priority casual-dining operator.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Brinker International, Inc
+  - EAT
+  search_queries:
+  - '"Brinker International, Inc" earnings OR investor relations'
+  - '"EAT" earnings OR investor relations'
+  last_reported_date: '2026-09-17'
+- name: Bloomin' Brands, Inc.
+  ticker: BLMN
+  edgar_cik: '1546417'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: low
+  watch_priority: false
+  notes: Outback, Carrabba's, Bonefish Grill. Lower priority casual-dining operator.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Bloomin' Brands, Inc.
+  - BLMN
+  search_queries:
+  - '"Bloomin'' Brands, Inc." earnings OR investor relations'
+  - '"BLMN" earnings OR investor relations'
+- name: Texas Roadhouse, Inc.
+  ticker: TXRH
+  edgar_cik: '1289460'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: low
+  watch_priority: false
+  notes: Casual dining; lower restaurant-tech signal density than QSR/fast-casual
+    peers.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Texas Roadhouse, Inc.
+  - TXRH
+  search_queries:
+  - '"Texas Roadhouse, Inc." earnings OR investor relations'
+  - '"TXRH" earnings OR investor relations'
+- name: Shake Shack Inc.
+  ticker: SHAK
+  edgar_cik: '1620533'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: false
+  notes: Fast-casual, tech-forward (kiosk/mobile ordering) but smaller footprint than
+    top-tier QSR.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Shake Shack Inc.
+  - SHAK
+  search_queries:
+  - '"Shake Shack Inc." earnings OR investor relations'
+  - '"SHAK" earnings OR investor relations'
+- name: Wingstop Inc.
+  ticker: WING
+  edgar_cik: '1636222'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: true
+  notes: Digital-ordering-forward QSR; high proportion of digital sales mix makes
+    tech-vendor signals unusually relevant.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Wingstop Inc.
+  - WING
+  search_queries:
+  - '"Wingstop Inc." earnings OR investor relations'
+  - '"WING" earnings OR investor relations'
+  last_reported_date: '2026-07-29'
+- name: Dutch Bros Inc.
+  ticker: BROS
+  edgar_cik: '1866581'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: true
+  notes: Fast-growing drive-thru coffee chain; already surfaced in RB's Horizon Watch
+    this session.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Dutch Bros Inc.
+  - BROS
+  search_queries:
+  - '"Dutch Bros Inc." earnings OR investor relations'
+  - '"BROS" earnings OR investor relations'
+  last_reported_date: '2026-08-05'
+- name: CAVA Group, Inc.
+  ticker: CAVA
+  edgar_cik: '1639438'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: false
+  notes: Fast-casual Mediterranean, digital-ordering-forward, high-growth.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - CAVA Group, Inc.
+  - CAVA
+  search_queries:
+  - '"CAVA Group, Inc." earnings OR investor relations'
+  - '"CAVA" earnings OR investor relations'
+  last_reported_date: '2026-09-18'
+- name: Sweetgreen, Inc.
+  ticker: SG
+  edgar_cik: '1477815'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: low
+  watch_priority: false
+  notes: Fast-casual salad chain; digital/kiosk ordering forward but smaller scale.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Sweetgreen, Inc.
+  - SG
+  search_queries:
+  - '"Sweetgreen, Inc." earnings OR investor relations'
+  - '"SG" earnings OR investor relations'
+- name: Papa Johns International Inc
+  ticker: PZZA
+  edgar_cik: '901491'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: true
+  notes: QSR pizza operator with significant digital-ordering technology investment.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Papa Johns International Inc
+  - PZZA
+  search_queries:
+  - '"Papa Johns International Inc" earnings OR investor relations'
+  - '"PZZA" earnings OR investor relations'
+  last_reported_date: '2026-08-25'
+- name: Jack In The Box Inc
+  ticker: JACK
+  edgar_cik: '807882'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: low
+  watch_priority: false
+  notes: QSR burger operator; lower restaurant-tech signal density than top-tier peers.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Jack In The Box Inc
+  - JACK
+  search_queries:
+  - '"Jack In The Box Inc" earnings OR investor relations'
+  - '"JACK" earnings OR investor relations'
+  last_reported_date: '2026-08-20'
+- name: Cheesecake Factory Inc
+  ticker: CAKE
+  edgar_cik: '887596'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: low
+  watch_priority: false
+  notes: Casual dining; lower restaurant-tech signal density than QSR/fast-casual
+    peers.
+  added_by: audit_2026-07-31
+  added_at: '2026-07-31T14:48:43.332602+00:00'
+  search_terms:
+  - Cheesecake Factory Inc
+  - CAKE
+  search_queries:
+  - '"Cheesecake Factory Inc" earnings OR investor relations'
+  - '"CAKE" earnings OR investor relations'
+- name: Red Robin Gourmet Burgers, Inc.
+  ticker: RRGB
+  edgar_cik: '1171759'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: high
+  watch_priority: true
+  notes: Casual-dining brand actively investing in restaurant technology (Ziosk tabletop
+    refresh, handheld replacement per FY2026 Q2 call); directly relevant to the Worldpay/Genius
+    transaction-metered POS thesis.
+  added_by: claude_2026-08-20
+  added_at: '2026-08-20T14:55:14.341910+00:00'
+  search_terms:
+  - Red Robin Gourmet Burgers, Inc.
+  - RRGB
+  search_queries:
+  - '"Red Robin Gourmet Burgers, Inc." earnings OR investor relations'
+  - '"RRGB" earnings OR investor relations'
+  ir_page_url: https://ir.redrobin.com/news-events/press-releases
+  last_reported_date: '2026-09-01'
+- name: Krispy Kreme, Inc.
+  ticker: DNUT
+  edgar_cik: '1857154'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: false
+  notes: Added in 2026-08-19 watchlist brand expansion.
+  added_by: claude_2026-08-20
+  added_at: '2026-08-20T14:55:14.638173+00:00'
+  search_terms:
+  - Krispy Kreme, Inc.
+  - DNUT
+  search_queries:
+  - '"Krispy Kreme, Inc." earnings OR investor relations'
+  - '"DNUT" earnings OR investor relations'
+  ir_page_url: https://investors.krispykreme.com/
+  last_reported_date: '2026-08-06'
+- name: Portillo's Inc.
+  ticker: PTLO
+  edgar_cik: '1871509'
+  ir_rss_url: https://investors.portillos.com/rss/news-releases.xml
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: false
+  notes: Added in 2026-08-19 watchlist brand expansion.
+  added_by: claude_2026-08-20
+  added_at: '2026-08-20T14:55:14.953225+00:00'
+  search_terms:
+  - Portillo's Inc.
+  - PTLO
+  search_queries:
+  - '"Portillo''s Inc." earnings OR investor relations'
+  - '"PTLO" earnings OR investor relations'
+  ir_page_url: https://investors.portillos.com/news-releases
+- name: El Pollo Loco Holdings, Inc.
+  ticker: LOCO
+  edgar_cik: '1606366'
+  ir_rss_url: https://investor.elpolloloco.com/rss/news-releases.xml
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: false
+  notes: Added in 2026-08-19 watchlist brand expansion.
+  added_by: claude_2026-08-20
+  added_at: '2026-08-20T14:55:15.256265+00:00'
+  search_terms:
+  - El Pollo Loco Holdings, Inc.
+  - LOCO
+  search_queries:
+  - '"El Pollo Loco Holdings, Inc." earnings OR investor relations'
+  - '"LOCO" earnings OR investor relations'
+  ir_page_url: https://investor.elpolloloco.com/press-releases
+- name: BJ's Restaurants, Inc.
+  ticker: BJRI
+  edgar_cik: '1013488'
+  ir_rss_url: null
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: false
+  notes: Added in 2026-08-19 watchlist brand expansion.
+  added_by: claude_2026-08-20
+  added_at: '2026-08-20T14:55:15.580829+00:00'
+  search_terms:
+  - BJ's Restaurants, Inc.
+  - BJRI
+  search_queries:
+  - '"BJ''s Restaurants, Inc." earnings OR investor relations'
+  - '"BJRI" earnings OR investor relations'
+  ir_page_url: https://investors.bjsrestaurants.com/news/default.aspx
+  last_reported_date: '2026-09-09'
+- name: Noodles & Company
+  ticker: null
+  edgar_cik: '1275158'
+  ir_rss_url: https://investor.noodles.com/rss/news-releases.xml
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: false
+  notes: Added in 2026-08-19 watchlist brand expansion.
+  added_by: claude_2026-08-20
+  added_at: '2026-08-20T14:55:15.926904+00:00'
+  aliases:
+  - Noodles and Company
+  - Noodles Company
+  search_terms:
+  - Noodles & Company
+  - Noodles and Company
+  - Noodles Company
+  search_queries:
+  - '"Noodles & Company" earnings OR investor relations'
+  - '"Noodles and Company" earnings OR investor relations'
+  - '"Noodles Company" earnings OR investor relations'
+  ir_page_url: https://investor.noodles.com/press-releases
+- name: Kura Sushi USA, Inc.
+  ticker: KRUS
+  edgar_cik: '1772177'
+  ir_rss_url: https://ir.kurausa.com/rss/news-releases.xml
+  side: operator_demand
+  category: pos
+  report_months:
+  - 2
+  - 5
+  - 8
+  - 11
+  strategic_relevance: medium
+  watch_priority: false
+  notes: Added in 2026-08-19 watchlist brand expansion.
+  added_by: claude_2026-08-20
+  added_at: '2026-08-20T14:55:16.275933+00:00'
+  search_terms:
+  - Kura Sushi USA, Inc.
+  - KRUS
+  search_queries:
+  - '"Kura Sushi USA, Inc." earnings OR investor relations'
+  - '"KRUS" earnings OR investor relations'
+  ir_page_url: https://ir.kurausa.com/news-events/news-releases

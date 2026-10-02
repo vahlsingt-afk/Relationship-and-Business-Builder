@@ -1,0 +1,54 @@
+{
+  "competitor_id": "comp-datadelivers",
+  "competitor_slug": "datadelivers",
+  "display_name": "DataDelivers",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:33Z",
+  "latest_cos_commentary": {
+    "headline": "DataDelivers is a restaurant-focused customer data platform (CDP) that unifies POS, loyalty, and marketing-channel data into single guest profiles for personalization and campaign execution.",
+    "genius_exposure": "Competes with Genius's loyalty_engagement line on the data/marketing layer -- unifying guest data across POS and loyalty systems -- rather than on core POS or payments processing; DataDelivers explicitly integrates with (rather than replaces) POS platforms including NCR/Aloha, Oracle Micros, Olo, Revel, Qu, and Toast.",
+    "competitive_timing": "Most recent sourced news is from 2023 (integration announcement and a five-brand customer win); no 2025-2026 news was found in this pass, so current momentum is unconfirmed.",
+    "sales_response": "Since DataDelivers integrates alongside POS rather than replacing it, its presence at an account does not by itself signal POS displacement risk -- confirm which POS/loyalty systems it is actually pulling data from before assuming any competitive overlap beyond loyalty/marketing.",
+    "risk_and_uncertainty": "All quantified impact and customer-growth figures come from the company's own press releases; no independent verification of scale, revenue, or current customer count was found, and information is now roughly three years old.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 46
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 46,
+    "pack_claim_count": 4,
+    "pack_claims_with_url": 4,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 4,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Pricing signals",
+        "Weaknesses / Vulnerabilities",
+        "Financial / Market Health (independent)"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "No independent (non-self-reported) revenue or customer-count figures found",
+        "No pricing model or contract-size signals found",
+        "Company financial health / funding status not found"
+      ]
+    }
+  }
+}

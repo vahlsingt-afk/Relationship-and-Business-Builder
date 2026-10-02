@@ -1,0 +1,75 @@
+{
+  "title": "P-036: Simple operational question should not expose trust machinery",
+  "trace_type": "ri_assessment_doctrine",
+  "source": "display_suppression_test",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-25",
+  "sprint": "RB 9.9",
+  "protocol": "P-036",
+  "scenario_id": "p036-case-8",
+  "summary": "The operator asks a simple factual or operational question ('how many open loops do I have?', 'what time is my next meeting?', 'who is in my hospitality circle?'). These questions have no relationship intelligence consequence. RB should answer directly without surfacing ri_assessment blocks, trust language, proposed mutations, signal counts, or proof rows. Exposing the internal machinery in response to a simple question reduces clarity.",
+  "expected_behavior": {
+    "ri_assessment_display": "none — do not surface",
+    "trust_language_in_response": false,
+    "proof_rows_in_response": false,
+    "ri_signal_counts_in_response": false
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label": "User asks: how many open loops do I have?",
+      "user_prompt": "How many open loops do I have?",
+      "description": "This is a data lookup. Answer comes from loop_parser.py / cached loop buckets. No RI assessment required or relevant.",
+      "expected_response_shape": "You have N open loops: M overdue, K due today, J this week.",
+      "forbidden_in_response": [
+        "ri_assessment",
+        "proposed mutation",
+        "trust updated",
+        "relationship state",
+        "I assessed",
+        "confidence",
+        "display_recommendation",
+        "source_freshness"
+      ]
+    },
+    {
+      "step": 2,
+      "label": "User asks: what time is my next meeting?",
+      "user_prompt": "What time is my next meeting today?",
+      "description": "Calendar lookup from calendar_overlay.py. RI is internally assessed but irrelevant to this question. Answer is just the time and event name.",
+      "expected_response_shape": "Your next meeting is [Event Name] at [time].",
+      "forbidden_in_response": [
+        "relationship signal",
+        "I would propose recording",
+        "last_touch",
+        "active thread"
+      ]
+    },
+    {
+      "step": 3,
+      "label": "User asks: who is in my hospitality circle?",
+      "user_prompt": "Who is in my hospitality circle?",
+      "description": "Circle membership lookup from circles/. No RI write path. Answer is a list of names.",
+      "expected_response_shape": "Your hospitality circle has N people: [names].",
+      "forbidden_in_response": [
+        "I propose updating",
+        "trust signal detected",
+        "ri_assessment_summary"
+      ]
+    }
+  ],
+  "defects": [],
+  "acceptance_criteria": [
+    "simple operational questions answered directly without RI machinery",
+    "no trust/RI language in responses to factual lookups",
+    "no proposed mutations surfaced for non-RI questions",
+    "no proof rows or signal counts unless user asked for them",
+    "brief/concise answer that respects CoS 'quiet judgment' principle"
+  ],
+  "anti_patterns": [
+    "appending 'by the way I detected 3 relationship signals...' to every response",
+    "including ri_assessment_summary in a loop count response",
+    "saying 'relationship state updated' in response to a calendar lookup",
+    "treating every interaction as an opportunity to surface the RI machinery"
+  ]
+}

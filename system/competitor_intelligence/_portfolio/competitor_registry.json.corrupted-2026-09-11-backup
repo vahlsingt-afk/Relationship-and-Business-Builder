@@ -1,0 +1,82 @@
+{
+  "registry": [
+    {
+      "competitor_slug": "par-technology",
+      "display_name": "PAR Technology",
+      "first_tracked_at": "2026-08-28T17:44:08Z",
+      "last_updated_at": "2026-09-11T19:16:16Z"
+    },
+    {
+      "competitor_slug": "toast",
+      "display_name": "Toast",
+      "first_tracked_at": "2026-08-28T17:44:54Z",
+      "last_updated_at": "2026-09-11T19:16:16Z"
+    },
+    {
+      "competitor_slug": "oracle-food-beverage-simphony-micros",
+      "display_name": "Oracle Food & Beverage (Simphony / MICROS)",
+      "first_tracked_at": "2026-08-28T17:44:55Z",
+      "last_updated_at": "2026-09-11T09:16:10Z"
+    },
+    {
+      "competitor_slug": "ncr",
+      "display_name": "NCR Voyix",
+      "first_tracked_at": "2026-08-28T17:44:55Z",
+      "last_updated_at": "2026-09-11T19:16:16Z"
+    },
+    {
+      "competitor_slug": "qu",
+      "display_name": "Qu",
+      "first_tracked_at": "2026-08-28T17:44:55Z",
+      "last_updated_at": "2026-09-11T09:16:10Z"
+    },
+    {
+      "competitor_slug": "nory",
+      "display_name": "Nory",
+      "first_tracked_at": "2026-08-28T17:44:55Z",
+      "last_updated_at": "2026-09-11T19:16:16Z"
+    },
+    {
+      "competitor_slug": "restaurant365",
+      "display_name": "Restaurant365",
+      "first_tracked_at": "2026-08-28T17:44:55Z",
+      "last_updated_at": "2026-09-11T19:16:16Z"
+    },
+    {
+      "competitor_slug": "revel-systems",
+      "display_name": "Revel Systems",
+      "first_tracked_at": "2026-08-28T17:44:55Z",
+      "last_updated_at": "2026-09-11T09:16:10Z"
+    },
+    {
+      "competitor_slug": "mood-media",
+      "display_name": "Mood Media",
+      "first_tracked_at": "2026-08-28T19:44:20Z",
+      "last_updated_at": "2026-09-11T09:16:10Z"
+    },
+    {
+      "competitor_slug": "shift4-payments",
+      "display_name": "Shift4 Payments",
+      "first_tracked_at": "2026-09-11T14:03:44Z",
+      "last_updated_at": "2026-09-11T14:04:21Z"
+    },
+    {
+      "competitor_slug": "fiserv",
+      "display_name": "Fiserv",
+      "first_tracked_at": "2026-09-11T14:03:49Z",
+      "last_updated_at": "2026-09-11T14:04:33Z"
+    },
+    {
+      "competitor_slug": "kluck",
+      "display_name": "Kluck",
+      "first_tracked_at": "2026-09-11T19:17:41Z",
+      "last_updated_at": "2026-09-11T19:17:41Z"
+    }
+  ]
+}
+}
+  ]
+}
+}
+  ]
+}

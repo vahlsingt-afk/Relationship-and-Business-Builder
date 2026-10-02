@@ -1,0 +1,21 @@
+{
+  "competitor_slug": "olo",
+  "vendor_display_name": "Olo",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Loyalty is newly acquired (Spendgo, ~120 brands) — integration still in progress in 2026"
+    },
+    {
+      "point": "Stock fell >65% during 4 years public before take-private"
+    },
+    {
+      "point": "No longer discloses financials post take-private"
+    }
+  ]
+}

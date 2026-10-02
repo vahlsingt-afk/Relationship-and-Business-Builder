@@ -1,0 +1,58 @@
+{
+  "_schema": "rb_account_dossier_v1",
+  "artifact_id": "account_dossier:foods_connected",
+  "created_at": "2026-06-04",
+  "last_updated": "2026-06-04",
+  "entity": "Foods Connected",
+  "summary": "Foods Connected is a restaurant procurement and supply chain SaaS platform. Active RB interest: Commercial Director NA opportunity. Warm intro via Jeff. Recruiter: Sarah McAngus (Silver Stone Search). Interview completed. Waiting on Duncan review.",
+  "key_contacts": [
+    {
+      "name": "Mairi Patton",
+      "email": "mairi.patton@foodsconnected.com",
+      "title": "Interview Coordinator / Internal Contact",
+      "signal_class": "n/a",
+      "relationship": "Scheduled Teams interview. Post-interview thank-you sent.",
+      "loop_ids": [],
+      "aliases": {"emails": ["mairi.patton@foodsconnected.com"], "phones": []}
+    },
+    {
+      "name": "Sarah McAngus",
+      "contact_id": "sarah-mcangus",
+      "email": "sarah.mcangus@ssssltd.com",
+      "title": "Director, Silver Stone Search & Selection",
+      "signal_class": "VC",
+      "relationship": "Recruiter managing the Commercial Director NA search. Active engagement cadence.",
+      "loop_ids": [],
+      "aliases": {"emails": ["sarah.mcangus@ssssltd.com"], "phones": []}
+    },
+    {
+      "name": "Duncan (TBD)",
+      "title": "Internal reviewer at Foods Connected",
+      "relationship": "Referenced in thread context as key reviewer for next-step movement.",
+      "notes": "Full name TBD \u2014 not yet matched to baseline contact."
+    }
+  ],
+  "opportunity": {
+    "role": "Commercial Director, North America",
+    "status": "Waiting on Duncan review / next step",
+    "thread_id": "T-2026-05-foods-connected-commercial-director",
+    "target_close": "2026-07-15",
+    "warm_intro_via": "Jeff (likely Jeff Wayman \u2014 inner-tier RC)",
+    "recruiter_assessment": "Immediate scheduling, CV review completed, specific alignment noted."
+  },
+  "company_context": {
+    "product": "Restaurant procurement and supply chain management SaaS.",
+    "market": "UK-headquartered, expanding in North America (hence Commercial Director NA role).",
+    "stage": "Growth stage \u2014 NA expansion phase."
+  },
+  "email_evidence": [
+    "Interview invitation: mairi.patton@foodsconnected.com \u2014 Teams meeting scheduled.",
+    "Thank-you sent by Todd: acknowledged learning about Foods Connected, positive tone.",
+    "Recruiter follow-up: sarah.mcangus@ssssltd.com provided overview of role."
+  ],
+  "next_actions": [
+    "Follow up with Sarah McAngus on Duncan review timeline.",
+    "Prepare deeper Foods Connected company context for next interview stage.",
+    "Close thread if no movement by 2026-07-15."
+  ]
+}

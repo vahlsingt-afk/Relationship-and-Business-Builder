@@ -1,0 +1,79 @@
+{
+  "competitor_id": "comp-fourth-hotschedules",
+  "competitor_slug": "fourth-hotschedules",
+  "display_name": "Fourth (HotSchedules)",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "No new customer or M&A announcements 2025–2026",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:35Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "HotSchedules labor-scheduling incumbency in chains",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:23:35Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-09-29T14:57:11Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:11Z",
+  "latest_cos_commentary": {
+    "headline": "Established labor management software can limit the Genius Back Office workforce wedge.",
+    "genius_exposure": "Established labor management software can limit the Genius Back Office workforce wedge.",
+    "competitive_timing": "Current Fourth HotSchedules page describes restaurant scheduling and labor-compliance functionality.",
+    "sales_response": "Map named chain contracts and compare labor rule coverage, scheduling effort and integration cost with operator teams.",
+    "risk_and_uncertainty": "Undated product page supports capability, not current customer scope; accessed 2026-09-28.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 34
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 34,
+    "pack_claim_count": 10,
+    "pack_claims_with_url": 7,
+    "pack_claims_inherited_url": 4,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 3,
+      "legacy_claims_need_date_and_current_status_check": 10,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

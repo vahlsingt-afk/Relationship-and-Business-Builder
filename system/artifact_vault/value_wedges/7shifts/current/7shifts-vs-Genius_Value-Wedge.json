@@ -1,0 +1,15 @@
+{
+  "competitor_slug": "7shifts",
+  "vendor_display_name": "7shifts",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Layoffs in late 2023 and early 2024 (including a 19% cut to start 2024)"
+    }
+  ]
+}

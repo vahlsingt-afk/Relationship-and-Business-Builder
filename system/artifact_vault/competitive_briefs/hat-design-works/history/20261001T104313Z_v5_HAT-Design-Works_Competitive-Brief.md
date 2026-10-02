@@ -1,0 +1,8 @@
+# HAT Design Works — Competitive Brief
+
+## Where we're competing against them right now
+*No current tech-stack relationship on file for this vendor.*
+
+## What's new (last 60 days)
+- (2026-09-29) HAT Design Works (hatdw.com) is a mounting and workspace-hardware manufacturer, not a menu-board or signage design firm as its name might suggest; it has operated for over 40 years designing monitor arms and mounting systems. (Scope note: Important correction: this vendor is a physical mounting-hardware company (monitor arms, kiosk/payment device mounts, pole mounts), not a digital-signage or menu-board design company; verify the tracker's category tag matches this.) — *https://www.hatdw.com/product-library*
+- (2026-09-29) HAT Design Works' product line includes payment-device mounts, kiosk/tablet enclosures, and commerce pole-mount systems explicitly marketed for POS and retail checkout environments, with "Commerce + Retail" and "Hospitality" listed among its served markets. — *https://www.hatdw.com/product-library*

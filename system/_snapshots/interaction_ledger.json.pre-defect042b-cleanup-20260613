@@ -1,0 +1,908 @@
+{
+  "_schema_version": "1.0",
+  "interactions": [
+    {
+      "id": "ri-20260611T112033-3f4d80",
+      "contact_id": "sarah-mcangus",
+      "entity": {
+        "name": "Sarah McAngus",
+        "org": "Foods Connected",
+        "role": null
+      },
+      "interaction_date": "2026-06-11",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Update on the Global Payments process: I received a verbal offer from Global Payments and the offer package is now under evaluation. Separately, I followed up with Sarah McAngus at Foods Connected about the timeline, and she confirmed I'm one of the final two candidates for the Commercial Director N",
+      "created_at": "2026-06-11T11:20:33.700704+00:00",
+      "claim_status": "confirmed",
+      "persistence_status": "RB recorded",
+      "confirmed_at": "2026-06-12T10:59:48.921383+00:00"
+    },
+    {
+      "id": "ri-20260612T110342-53e38c",
+      "contact_id": "ryan-hildebrand",
+      "entity": {
+        "name": "Ryan Hildebrand",
+        "org": "Global Payments Inc.",
+        "role": "Senior Director Account Executives"
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "unsolicited_positive_followup",
+      "trust_delta": 2,
+      "relationship_state_proposed": "warm",
+      "strategic_classification": "Strategic Ecosystem Connector",
+      "recommended_posture": "Low-pressure trust cultivation \u2014 long-horizon ecosystem relationship management",
+      "executive_weight": 2,
+      "ecosystem_tags": [
+        "opportunity-relationship",
+        "executive_network"
+      ],
+      "who_matters_now_score": 7,
+      "source_text_snippet": "Ryan Hildebrand (Global Payments hiring manager) accelerated the offer process and extended a verbal offer for the Sales Executive role. He resolved the PTO concern via manager discretion, confirmed a dedicated Worldpay territory, and used trust-based language ('when you know, you know') signaling s",
+      "created_at": "2026-06-12T11:03:42.531581+00:00",
+      "claim_status": "confirmed",
+      "persistence_status": "RB recorded",
+      "confirmed_at": "2026-06-12T11:03:42.666605+00:00"
+    },
+    {
+      "id": "ri-20260612T110342-dee25e",
+      "contact_id": "matt",
+      "entity": {
+        "name": "Matt",
+        "org": "Perfect Hire",
+        "role": "Founder/CEO"
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "direct_inquiry",
+      "trust_delta": 2,
+      "relationship_state_proposed": "strategic",
+      "strategic_classification": "Executive Strategic Contact",
+      "recommended_posture": "Consistent, value-first engagement \u2014 monitor for strategic opportunity window",
+      "executive_weight": 2,
+      "ecosystem_tags": [
+        "opportunity-relationship"
+      ],
+      "who_matters_now_score": 7,
+      "source_text_snippet": "Founder of Perfect Hire discussed bringing Todd on as a strategic advisor with equity participation, saying he was 'already percolating a thousand ideas' and asking 'where could you see this going?' Recommended mutation: Networking Contact -> Strategic Advisor Opportunity (advisory/equity).",
+      "created_at": "2026-06-12T11:03:42.598609+00:00",
+      "claim_status": "confirmed",
+      "persistence_status": "RB recorded",
+      "confirmed_at": "2026-06-12T11:03:42.716945+00:00"
+    },
+    {
+      "id": "ri-20260612T224108-871b8f",
+      "contact_id": "david-mann",
+      "entity": {
+        "name": "David Mann",
+        "org": "Restaurant Consulting Group",
+        "role": "Principal"
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "linkedin_post",
+      "signal_type": "thought_leader_alignment",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Strategic Thought Leader",
+      "recommended_posture": "Monitor content for thesis alignment \u2014 evaluate for amplification and collaborative opportunity",
+      "executive_weight": 1,
+      "ecosystem_tags": [
+        "operator_network",
+        "restaurant_tech"
+      ],
+      "who_matters_now_score": 5,
+      "source_text_snippet": "People drove into Five Guys parking lots, sat for a minute, and drove away. They didn't get out of the car. The math just doesn't add up anymore \u2014 a meal for two is thirty-five dollars when McDonald's costs a fraction. Consumer affordability is cracking. Operators cannot pass costs anymore.",
+      "created_at": "2026-06-12T22:41:08.001045+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260612T224110-664b11",
+      "contact_id": "anna-jones",
+      "entity": {
+        "name": "Anna Jones",
+        "org": "Global Payments",
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Todd met with Anna Jones at Global Payments about partnerships.",
+      "created_at": "2026-06-12T22:41:10.662978+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260612T224110-812850",
+      "contact_id": "sarah-chen",
+      "entity": {
+        "name": "Sarah Chen",
+        "org": "Olo",
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "meeting_completed",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 4,
+      "source_text_snippet": "Had a great call with Sarah Chen at Olo. She's interested in the pilot.",
+      "created_at": "2026-06-12T22:41:10.666980+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260612T224110-a48b67",
+      "contact_id": "michael-scott",
+      "entity": {
+        "name": "Michael Scott",
+        "org": null,
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Just spoke with Michael Scott at Dunder Mifflin about the deal.",
+      "created_at": "2026-06-12T22:41:10.674660+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260612T224110-f61e0d",
+      "contact_id": "bob-gibson",
+      "entity": {
+        "name": "Bob Gibson",
+        "org": "Toast",
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [
+        "restaurant_tech"
+      ],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Bob Gibson confirmed the Toast meeting for next week.",
+      "created_at": "2026-06-12T22:41:10.680103+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260612T224110-7b1cc2",
+      "contact_id": "oliver-ostertag",
+      "entity": {
+        "name": "Oliver Ostertag",
+        "org": "PAR Technology",
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Meeting with Oliver Ostertag at PAR went well.",
+      "created_at": "2026-06-12T22:41:10.686408+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260612T224110-ee21cf",
+      "contact_id": "dan-price",
+      "entity": {
+        "name": "Dan Price",
+        "org": null,
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "linkedin_message",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "LinkedIn message from Dan Price.",
+      "created_at": "2026-06-12T22:41:10.692334+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260612T224110-61b10f",
+      "contact_id": "sarah-chen",
+      "entity": {
+        "name": "Sarah Chen",
+        "org": "Olo",
+        "role": "VP Sales"
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "linkedin_post",
+      "signal_type": "thought_leader_alignment",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 1,
+      "ecosystem_tags": [
+        "operator_network"
+      ],
+      "who_matters_now_score": 5,
+      "source_text_snippet": "Seeing real affordability stress across the quick-service segment.",
+      "created_at": "2026-06-12T22:41:10.698807+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260612T224204-8c2584",
+      "contact_id": "david-mann",
+      "entity": {
+        "name": "David Mann",
+        "org": "Restaurant Group",
+        "role": "Principal"
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "linkedin_post",
+      "signal_type": "thought_leader_alignment",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 1,
+      "ecosystem_tags": [
+        "operator_network"
+      ],
+      "who_matters_now_score": 5,
+      "source_text_snippet": "Saw people pulling into the Five Guys parking lot, sitting a few minutes, and driving away. They did not get out of the car. The math just does not add up \u2014 two burgers costs $35 when McDonald's is a fraction of the price. Affordability is cracking in the premium segment.",
+      "created_at": "2026-06-12T22:42:04.740100+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260612T224204-afc103",
+      "contact_id": "david-mann",
+      "entity": {
+        "name": "David Mann",
+        "org": "Restaurant Group",
+        "role": "Principal"
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "linkedin_post",
+      "signal_type": "thought_leader_alignment",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 1,
+      "ecosystem_tags": [
+        "operator_network"
+      ],
+      "who_matters_now_score": 5,
+      "source_text_snippet": "Saw people pulling into the Five Guys parking lot, sitting a few minutes, and driving away. They did not get out of the car. The math just does not add up \u2014 two burgers costs $35 when McDonald's is a fraction of the price. Affordability is cracking in the premium segment.",
+      "created_at": "2026-06-12T22:42:04.891687+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260612T224310-377780",
+      "contact_id": "oliver-ostertag",
+      "entity": {
+        "name": "Oliver Ostertag",
+        "org": "PAR Technology",
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "meeting_completed",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 4,
+      "source_text_snippet": "Had a great call with Oliver Ostertag at PAR Technology. He confirmed the pilot launch is on track for Q4.",
+      "created_at": "2026-06-12T22:43:10.395517+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T022704-536ac5",
+      "contact_id": "david-mann",
+      "entity": {
+        "name": "David Mann",
+        "org": "Restaurant Consulting Group",
+        "role": "Principal"
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "linkedin_post",
+      "signal_type": "thought_leader_alignment",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Strategic Thought Leader",
+      "recommended_posture": "Monitor content for thesis alignment \u2014 evaluate for amplification and collaborative opportunity",
+      "executive_weight": 1,
+      "ecosystem_tags": [
+        "operator_network",
+        "restaurant_tech"
+      ],
+      "who_matters_now_score": 5,
+      "source_text_snippet": "People drove into Five Guys parking lots, sat for a minute, and drove away. They didn't get out of the car. The math just doesn't add up anymore \u2014 a meal for two is thirty-five dollars when McDonald's costs a fraction. Consumer affordability is cracking. Operators cannot pass costs anymore.",
+      "created_at": "2026-06-13T02:27:04.768497+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T022707-7576ef",
+      "contact_id": "anna-jones",
+      "entity": {
+        "name": "Anna Jones",
+        "org": "Global Payments",
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Todd met with Anna Jones at Global Payments about partnerships.",
+      "created_at": "2026-06-13T02:27:07.791741+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T022707-daae4d",
+      "contact_id": "sarah-chen",
+      "entity": {
+        "name": "Sarah Chen",
+        "org": "Olo",
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "meeting_completed",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 4,
+      "source_text_snippet": "Had a great call with Sarah Chen at Olo. She's interested in the pilot.",
+      "created_at": "2026-06-13T02:27:07.795592+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T022707-efde05",
+      "contact_id": "michael-scott",
+      "entity": {
+        "name": "Michael Scott",
+        "org": null,
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Just spoke with Michael Scott at Dunder Mifflin about the deal.",
+      "created_at": "2026-06-13T02:27:07.803700+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T022707-a1d519",
+      "contact_id": "bob-gibson",
+      "entity": {
+        "name": "Bob Gibson",
+        "org": "Toast",
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [
+        "restaurant_tech"
+      ],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Bob Gibson confirmed the Toast meeting for next week.",
+      "created_at": "2026-06-13T02:27:07.809132+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T022707-8da8f4",
+      "contact_id": "oliver-ostertag",
+      "entity": {
+        "name": "Oliver Ostertag",
+        "org": "PAR Technology",
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Meeting with Oliver Ostertag at PAR went well.",
+      "created_at": "2026-06-13T02:27:07.814542+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T022707-5311b3",
+      "contact_id": "dan-price",
+      "entity": {
+        "name": "Dan Price",
+        "org": null,
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "linkedin_message",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "LinkedIn message from Dan Price.",
+      "created_at": "2026-06-13T02:27:07.820503+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T022707-c35fb6",
+      "contact_id": "sarah-chen",
+      "entity": {
+        "name": "Sarah Chen",
+        "org": "Olo",
+        "role": "VP Sales"
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "linkedin_post",
+      "signal_type": "thought_leader_alignment",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 1,
+      "ecosystem_tags": [
+        "operator_network"
+      ],
+      "who_matters_now_score": 5,
+      "source_text_snippet": "Seeing real affordability stress across the quick-service segment.",
+      "created_at": "2026-06-13T02:27:07.829065+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T022802-7f8c6e",
+      "contact_id": "david-mann",
+      "entity": {
+        "name": "David Mann",
+        "org": "Restaurant Group",
+        "role": "Principal"
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "linkedin_post",
+      "signal_type": "thought_leader_alignment",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 1,
+      "ecosystem_tags": [
+        "operator_network"
+      ],
+      "who_matters_now_score": 5,
+      "source_text_snippet": "Saw people pulling into the Five Guys parking lot, sitting a few minutes, and driving away. They did not get out of the car. The math just does not add up \u2014 two burgers costs $35 when McDonald's is a fraction of the price. Affordability is cracking in the premium segment.",
+      "created_at": "2026-06-13T02:28:02.680189+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T022802-b55374",
+      "contact_id": "david-mann",
+      "entity": {
+        "name": "David Mann",
+        "org": "Restaurant Group",
+        "role": "Principal"
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "linkedin_post",
+      "signal_type": "thought_leader_alignment",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 1,
+      "ecosystem_tags": [
+        "operator_network"
+      ],
+      "who_matters_now_score": 5,
+      "source_text_snippet": "Saw people pulling into the Five Guys parking lot, sitting a few minutes, and driving away. They did not get out of the car. The math just does not add up \u2014 two burgers costs $35 when McDonald's is a fraction of the price. Affordability is cracking in the premium segment.",
+      "created_at": "2026-06-13T02:28:02.834599+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T022909-871100",
+      "contact_id": "oliver-ostertag",
+      "entity": {
+        "name": "Oliver Ostertag",
+        "org": "PAR Technology",
+        "role": null
+      },
+      "interaction_date": "2026-06-12",
+      "source_type": "email",
+      "signal_type": "meeting_completed",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 4,
+      "source_text_snippet": "Had a great call with Oliver Ostertag at PAR Technology. He confirmed the pilot launch is on track for Q4.",
+      "created_at": "2026-06-13T02:29:09.224642+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T103458-95669f",
+      "contact_id": "david-mann",
+      "entity": {
+        "name": "David Mann",
+        "org": "Restaurant Consulting Group",
+        "role": "Principal"
+      },
+      "interaction_date": "2026-06-13",
+      "source_type": "linkedin_post",
+      "signal_type": "thought_leader_alignment",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Strategic Thought Leader",
+      "recommended_posture": "Monitor content for thesis alignment \u2014 evaluate for amplification and collaborative opportunity",
+      "executive_weight": 1,
+      "ecosystem_tags": [
+        "operator_network",
+        "restaurant_tech"
+      ],
+      "who_matters_now_score": 5,
+      "source_text_snippet": "People drove into Five Guys parking lots, sat for a minute, and drove away. They didn't get out of the car. The math just doesn't add up anymore \u2014 a meal for two is thirty-five dollars when McDonald's costs a fraction. Consumer affordability is cracking. Operators cannot pass costs anymore.",
+      "created_at": "2026-06-13T10:34:58.276244+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T103501-635000",
+      "contact_id": "anna-jones",
+      "entity": {
+        "name": "Anna Jones",
+        "org": "Global Payments",
+        "role": null
+      },
+      "interaction_date": "2026-06-13",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Todd met with Anna Jones at Global Payments about partnerships.",
+      "created_at": "2026-06-13T10:35:01.024816+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T103501-19e27c",
+      "contact_id": "sarah-chen",
+      "entity": {
+        "name": "Sarah Chen",
+        "org": "Olo",
+        "role": null
+      },
+      "interaction_date": "2026-06-13",
+      "source_type": "email",
+      "signal_type": "meeting_completed",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 4,
+      "source_text_snippet": "Had a great call with Sarah Chen at Olo. She's interested in the pilot.",
+      "created_at": "2026-06-13T10:35:01.036540+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T103501-e4d4ce",
+      "contact_id": "michael-scott",
+      "entity": {
+        "name": "Michael Scott",
+        "org": null,
+        "role": null
+      },
+      "interaction_date": "2026-06-13",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Just spoke with Michael Scott at Dunder Mifflin about the deal.",
+      "created_at": "2026-06-13T10:35:01.055276+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T103501-54698f",
+      "contact_id": "bob-gibson",
+      "entity": {
+        "name": "Bob Gibson",
+        "org": "Toast",
+        "role": null
+      },
+      "interaction_date": "2026-06-13",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [
+        "restaurant_tech"
+      ],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Bob Gibson confirmed the Toast meeting for next week.",
+      "created_at": "2026-06-13T10:35:01.062116+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T103501-b2070e",
+      "contact_id": "oliver-ostertag",
+      "entity": {
+        "name": "Oliver Ostertag",
+        "org": "PAR Technology",
+        "role": null
+      },
+      "interaction_date": "2026-06-13",
+      "source_type": "email",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "Meeting with Oliver Ostertag at PAR went well.",
+      "created_at": "2026-06-13T10:35:01.069079+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T103501-15971b",
+      "contact_id": "dan-price",
+      "entity": {
+        "name": "Dan Price",
+        "org": null,
+        "role": null
+      },
+      "interaction_date": "2026-06-13",
+      "source_type": "linkedin_message",
+      "signal_type": "unknown",
+      "trust_delta": 0,
+      "relationship_state_proposed": "cold",
+      "strategic_classification": "Network Contact",
+      "recommended_posture": "Monitor \u2014 no immediate action required",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 3,
+      "source_text_snippet": "LinkedIn message from Dan Price.",
+      "created_at": "2026-06-13T10:35:01.077698+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T103501-b77d7f",
+      "contact_id": "sarah-chen",
+      "entity": {
+        "name": "Sarah Chen",
+        "org": "Olo",
+        "role": "VP Sales"
+      },
+      "interaction_date": "2026-06-13",
+      "source_type": "linkedin_post",
+      "signal_type": "thought_leader_alignment",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 1,
+      "ecosystem_tags": [
+        "operator_network"
+      ],
+      "who_matters_now_score": 5,
+      "source_text_snippet": "Seeing real affordability stress across the quick-service segment.",
+      "created_at": "2026-06-13T10:35:01.087091+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T103558-62266e",
+      "contact_id": "david-mann",
+      "entity": {
+        "name": "David Mann",
+        "org": "Restaurant Group",
+        "role": "Principal"
+      },
+      "interaction_date": "2026-06-13",
+      "source_type": "linkedin_post",
+      "signal_type": "thought_leader_alignment",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 1,
+      "ecosystem_tags": [
+        "operator_network"
+      ],
+      "who_matters_now_score": 5,
+      "source_text_snippet": "Saw people pulling into the Five Guys parking lot, sitting a few minutes, and driving away. They did not get out of the car. The math just does not add up \u2014 two burgers costs $35 when McDonald's is a fraction of the price. Affordability is cracking in the premium segment.",
+      "created_at": "2026-06-13T10:35:58.688030+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T103559-75a559",
+      "contact_id": "david-mann",
+      "entity": {
+        "name": "David Mann",
+        "org": "Restaurant Group",
+        "role": "Principal"
+      },
+      "interaction_date": "2026-06-13",
+      "source_type": "linkedin_post",
+      "signal_type": "thought_leader_alignment",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 1,
+      "ecosystem_tags": [
+        "operator_network"
+      ],
+      "who_matters_now_score": 5,
+      "source_text_snippet": "Saw people pulling into the Five Guys parking lot, sitting a few minutes, and driving away. They did not get out of the car. The math just does not add up \u2014 two burgers costs $35 when McDonald's is a fraction of the price. Affordability is cracking in the premium segment.",
+      "created_at": "2026-06-13T10:35:59.253994+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    },
+    {
+      "id": "ri-20260613T103709-cb0319",
+      "contact_id": "oliver-ostertag",
+      "entity": {
+        "name": "Oliver Ostertag",
+        "org": "PAR Technology",
+        "role": null
+      },
+      "interaction_date": "2026-06-13",
+      "source_type": "email",
+      "signal_type": "meeting_completed",
+      "trust_delta": 1,
+      "relationship_state_proposed": "warming",
+      "strategic_classification": "Active Relationship Contact",
+      "recommended_posture": "Engage deliberately \u2014 one thoughtful touchpoint in the next 60 days",
+      "executive_weight": 0,
+      "ecosystem_tags": [],
+      "who_matters_now_score": 4,
+      "source_text_snippet": "Had a great call with Oliver Ostertag at PAR Technology. He confirmed the pilot launch is on track for Q4.",
+      "created_at": "2026-06-13T10:37:09.751296+00:00",
+      "claim_status": "proposed",
+      "persistence_status": "pending confirmation",
+      "confirmed_at": null
+    }
+  ],
+  "_last_updated": "2026-06-13T10:37:09.752198+00:00"
+}

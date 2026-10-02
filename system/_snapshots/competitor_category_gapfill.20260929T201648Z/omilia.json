@@ -1,0 +1,84 @@
+{
+  "competitor_id": "comp-omilia",
+  "competitor_slug": "omilia",
+  "display_name": "Omilia",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "One restaurant customer; integrated with Yum's proprietary Byte platform, so portability to other POS is unproven",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:47:21Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "Taco Bell voice AI at 890+ US drive-thrus in 38 states (partnership since 2023); transaction times \"on par with, and in some cases faster than\" people; higher employee retention at voice-AI stores",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:47:21Z"
+      },
+      {
+        "point": "Analyst recognition: Forrester Wave Leader (Q2 2026); Gartner MQ Visionary",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:47:21Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-09-29T14:57:12Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:12Z",
+  "latest_cos_commentary": {
+    "headline": "Large named voice-AI footprint makes Taco Bell a consequential Genius Kitchen/drive-thru account benchmark.",
+    "genius_exposure": "Large named voice-AI footprint makes Taco Bell a consequential Genius Kitchen/drive-thru account benchmark.",
+    "competitive_timing": "Omilia said its Taco Bell voice AI was deployed at more than 890 U.S. restaurants in 38 states by July 2026.",
+    "sales_response": "Confirm current live count and independently measure speed, accuracy and handoff at Taco Bell.",
+    "risk_and_uncertainty": "Count is company-reported; agreement for further expansion is not a completed rollout.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 54
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 54,
+    "pack_claim_count": 11,
+    "pack_claims_with_url": 9,
+    "pack_claims_inherited_url": 6,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 2,
+      "legacy_claims_need_date_and_current_status_check": 11,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

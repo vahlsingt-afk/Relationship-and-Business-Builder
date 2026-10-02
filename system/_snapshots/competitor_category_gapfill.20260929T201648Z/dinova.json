@@ -1,0 +1,53 @@
+{
+  "competitor_id": "comp-dinova",
+  "competitor_slug": "dinova",
+  "display_name": "Dinova",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:32Z",
+  "latest_cos_commentary": {
+    "headline": "Dinova is a corporate dining referral/loyalty network linking 24,000+ restaurants to roughly 600 corporate accounts, not a POS or payments platform.",
+    "genius_exposure": "Minimal direct overlap with Genius's core pos/payments/back_office lines; its myDinova points program is loyalty_engagement-adjacent but operates as a network layer above any given restaurant's POS.",
+    "competitive_timing": "Dinova is emphasizing business dining as a growth segment in 2026 amid flat consumer foot traffic, continuing to expand its restaurant partner roster.",
+    "sales_response": "Relevant mainly as an ecosystem/referral partner conversation, not a head-to-head POS displacement; no evidence Dinova competes on payments processing.",
+    "risk_and_uncertainty": "No current leadership, ownership, or pricing/fee-model information was found in this pass; do not assume Dinova is a payments competitor without further evidence.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 28
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 28,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "pricing/fee model",
+        "operator-side ROI evidence"
+      ]
+    }
+  }
+}

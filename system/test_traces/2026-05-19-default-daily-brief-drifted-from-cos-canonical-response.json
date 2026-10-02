@@ -1,0 +1,44 @@
+{
+  "title": "Default daily brief drifted from CoS canonical response",
+  "trace_type": "daily_brief_default_behavior_regression",
+  "source": "chatgpt_relationship_bridge_9_0",
+  "operator": "Todd Vahlsing",
+  "captured_at": "2026-05-19",
+  "session_id": "rb-default-daily-brief-2026-05-19",
+  "summary": "User asked for the daily briefing with a plain/default command. The response produced a market/industry strategy briefing centered on restaurant tech, AI, National Restaurant Show, PAR, NCR, Toast, Global Payments, and Shifty. It included some relationship commentary about Ish Singh/Maho, but did not behave as the canonical RB CoS daily brief by default.",
+  "observed_issue": "Default daily briefing response still drifts toward industry/news/strategy synthesis unless the user explicitly asks for CoS-level grounding. Canonical behavior should not require a special prompt.",
+  "steps": [
+    {
+      "step": 1,
+      "label": "User requested default daily briefing",
+      "timestamp": "2026-05-19",
+      "user_prompt": "show me the daily briefing",
+      "assistant_response": "Generated a Daily Briefing for May 19, 2026 led by Top Strategic Signals: restaurant tech narrative shifting from AI features to operational AI, National Restaurant Show, PAR/NCR/Toast/Global Payments watchlist, macro trade/cost pressure, Ish Singh/Maho relationship note, and broad strategic recommendations around Shifty and operational AI.",
+      "intended_operation": "Call getDailyBrief and render the canonical RB CoS daily brief by default.",
+      "endpoint": "getDailyBrief",
+      "response_status": 200,
+      "response_summary": "Response may have been derived from daily brief data or external/contextual synthesis, but the user-observed output did not foreground canonical CoS sections: grounding labels, last-24h relationship signals, stale-source warnings, loops, what to ignore, active relationship priorities, and mutation/reconciliation prompts.",
+      "mutation_confirmation": "No mutation expected; read-only daily brief test.",
+      "post_validation": "User explicitly challenged that canonical CoS-level briefing should be the default, not require a custom prompt.",
+      "observed_issue": "Default command produced an industry strategy briefing rather than the canonical CoS relationship/action briefing."
+    }
+  ],
+  "defects": [
+    {
+      "id": "DB-CANONICAL-DEFAULT-001",
+      "title": "Default daily brief prompt does not enforce canonical CoS format",
+      "severity": "high",
+      "description": "A plain daily-brief request should produce RB's canonical Chief-of-Staff briefing by default. The observed response led with market/industry strategy and company watchlist commentary, only lightly touching relationship intelligence. This recreates the earlier 'news briefing versus CoS briefing' failure mode after the system can already produce better CoS output when explicitly prompted.",
+      "recommendation": "Harden the Custom GPT prompt and/or API response contract so getDailyBrief is always rendered in canonical order: relationship signals and freshness, top priorities, recommended actions, what to ignore, loops/reconciliations, network/relationship implications, then subordinate industry intelligence. Do not require the user to say 'CoS-level' explicitly."
+    },
+    {
+      "id": "DB-GROUNDING-DEFAULT-001",
+      "title": "Default brief did not visibly use grounding labels",
+      "severity": "medium",
+      "description": "The observed default briefing did not label major priorities as system_detected, inferred, manual_user_provided, or stale_source_limited, despite the updated API/prompt contract requiring these labels for CoS brief output.",
+      "recommendation": "Ensure the Custom GPT instruction says any daily brief request, including 'show me my daily briefing', must use grounding labels. Consider making grounding labels part of the API-rendered daily brief text so the interface cannot omit them."
+    }
+  ],
+  "raw_text": "User provided the full default daily briefing output in chat on 2026-05-19. The response opened with Top Strategic Signals around restaurant tech shifting from AI features to operational AI, the National Restaurant Show, PAR/NCR/Toast/Global Payments watchlist, Ish Singh/Maho relationship intelligence, macro trade/cost pressure, and Chief-of-Staff Style Recommendations. User pushed back: shouldn't CoS-level briefing be canonical by default? Codex assessment: yes, this is a default-behavior regression.",
+  "trace_id": "T-2026-05-19-001"
+}

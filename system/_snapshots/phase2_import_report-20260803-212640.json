@@ -1,0 +1,221 @@
+{
+  "phase2_file": "system/research/phase2_loyalty_evidence_draft_2026-08-03.json",
+  "category": "Loyalty/CRM",
+  "rows_processed": 30,
+  "rows_skipped": 0,
+  "dry_run": true,
+  "added": 28,
+  "updated": 1,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 24,
+    "enrich_existing_relationship": 1,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 0,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 4,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 0,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 1
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "Paytronix",
+        "customer": "Dutch Bros Coffee",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-dutch-bros-coffee-loyalty-unknown-vendor-paytronix"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Jamba",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-jamba-loyalty-unknown-vendor-paytronix"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Walk-On's Sports Bistreaux",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-walk-on-s-sports-bistreaux-loyalty-franchisee-deployment-vendor-paytronix"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "JINYA Ramen Bar",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-jinya-ramen-bar-loyalty-unknown-vendor-paytronix"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Uno Pizzeria & Grill",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-uno-pizzeria-grill-loyalty-unknown-vendor-paytronix"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "National Coney Island",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-national-coney-island-loyalty-unknown-vendor-paytronix"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Smashburger",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-smashburger-loyalty-unknown-vendor-paytronix"
+      },
+      {
+        "vendor": "Paytronix",
+        "customer": "Lion's Choice",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-lion-s-choice-loyalty-unknown-vendor-paytronix"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Velvet Taco",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-velvet-taco-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Cheba Hut",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-cheba-hut-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Taco Bueno",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-taco-bueno-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Big Chicken",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-big-chicken-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Hopdoddy Burger Bar",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-hopdoddy-burger-bar-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "Thanx",
+        "customer": "Flower Child",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-flower-child-loyalty-unknown-vendor-thanx"
+      },
+      {
+        "vendor": "PAR Punchh",
+        "customer": "Carl's Jr. / Hardee's (CKE Restaurants)",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-cke-restaurants-holdings-hardee-s-and-carl-s-jr-loyalty-unknown-vendor-par-punchh"
+      },
+      {
+        "vendor": "PAR Punchh",
+        "customer": "Torchy's Tacos",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-torchy-s-tacos-loyalty-unknown-vendor-par-punchh"
+      },
+      {
+        "vendor": "PAR Punchh",
+        "customer": "Denny's",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-denny-s-loyalty-unknown-vendor-par-punchh"
+      },
+      {
+        "vendor": "Preferred Patron",
+        "customer": "Happy Lemon USA",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-happy-lemon-usa-loyalty-franchisee-deployment-vendor-preferred-patron"
+      },
+      {
+        "vendor": "SevenRooms",
+        "customer": "ThinkFoodGroup (Jose Andres)",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-thinkfoodgroup-jose-andres-loyalty-unknown-vendor-sevenrooms"
+      },
+      {
+        "vendor": "SevenRooms",
+        "customer": "Marriott International (in-hotel restaurants)",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-marriott-international-in-hotel-restaurants-loyalty-unknown-vendor-sevenrooms"
+      },
+      {
+        "vendor": "Bikky",
+        "customer": "City Barbeque",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-city-barbeque-loyalty-unknown-vendor-bikky"
+      },
+      {
+        "vendor": "Bikky",
+        "customer": "Eggs Up Grill",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-eggs-up-grill-loyalty-franchisee-deployment-vendor-bikky"
+      },
+      {
+        "vendor": "Yumpingo",
+        "customer": "Rosa Mexicano",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-rosa-mexicano-restaurants-loyalty-unknown-vendor-yumpingo"
+      },
+      {
+        "vendor": "Craver",
+        "customer": "Rook Coffee",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-rook-coffee-loyalty-regional-deployment-vendor-craver"
+      }
+    ],
+    "enrich_existing_relationship": [
+      {
+        "vendor": "Thanx",
+        "customer": "Pokeworks",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-pokeworks-loyalty-unknown-logo-or-customer-page-vendor-thanx"
+      }
+    ],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [
+      {
+        "vendor": "SessionM (Mastercard)",
+        "customer": "Chipotle Mexican Grill",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-chipotle-mexican-grill-loyalty-unknown-vendor-sessionm-mastercard"
+      },
+      {
+        "vendor": "LevelUp (Grubhub)",
+        "customer": "Pret A Manger",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-pret-a-manger-loyalty-legacy-incumbent-vendor-levelup-grubhub"
+      },
+      {
+        "vendor": "LevelUp (Grubhub)",
+        "customer": "sweetgreen",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-sweetgreen-loyalty-legacy-incumbent-vendor-levelup-grubhub"
+      },
+      {
+        "vendor": "Yumpingo",
+        "customer": "The Restaurant Group (Chiquito, Frankie & Benny's)",
+        "tech_category": "Loyalty",
+        "relationship_id": "rel-brand-the-restaurant-group-chiquito-frankie-benny-s-loyalty-unknown-vendor-yumpingo"
+      }
+    ],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": [
+      {
+        "vendor": "Bikky",
+        "customer": "Blaze Pizza",
+        "tech_category": "Loyalty",
+        "relationship_id": null
+      }
+    ]
+  }
+}

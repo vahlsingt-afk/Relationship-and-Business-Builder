@@ -1,0 +1,64 @@
+{
+  "competitor_id": "comp-level-10",
+  "competitor_slug": "level-10",
+  "display_name": "Level 10",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Level 10 lists OEM/technology partnerships with Apple, HP, Verifone, Ingenico, Epson, Honeywell, Zebra Technologies, Lenovo, and Dell, positioning itself as a hardware-agnostic deployment integrator rather than a POS software vendor.",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-29T15:44:11Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:33Z",
+  "latest_cos_commentary": {
+    "headline": "Level 10 is a multi-vendor IT deployment and managed-services integrator for restaurant and retail technology rollouts, not a POS or payments platform itself.",
+    "genius_exposure": "Indirect competitive exposure: Level 10 could be a deployment partner or a displacement risk for Genius's own field-services/installation model when operators choose a third-party integrator to stage and install hardware across multiple POS/payment vendors.",
+    "competitive_timing": "No recent funding, acquisition, or leadership news found as of research date; appears to be an established, steady-state services business.",
+    "sales_response": "If Level 10 is already the operator's deployment/rollout vendor, treat it as a services layer that can sit on top of a Genius POS/payments deployment rather than a direct product competitor.",
+    "risk_and_uncertainty": "No named restaurant brands, leadership, financials, or independent ROI evidence found; the 'top 10 most valuable restaurants' claim is unverified and vendor-supplied.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 54
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 54,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 3,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Pricing signals",
+        "Recent News / Product Updates",
+        "Snapshot",
+        "Weaknesses / Vulnerabilities"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "named restaurant customer scope",
+        "current pricing",
+        "financial health"
+      ]
+    }
+  }
+}

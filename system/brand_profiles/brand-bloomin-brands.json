@@ -1,0 +1,308 @@
+{
+  "brand_id": "brand-bloomin-brands",
+  "brand_name": "Bloomin' Brands",
+  "identity": {
+    "parent_ownership": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "hq_city_state": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "founded_year": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "synopsis": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "brand",
+    "last_reviewed_by": null
+  },
+  "leadership": {
+    "confirmed": [],
+    "reported_unverified": []
+  },
+  "footprint": {
+    "total_units": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "franchised_units": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "company_owned_units": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    },
+    "franchisee_count": {
+      "value": null,
+      "status": "not_yet_researched",
+      "evidence_ids": [],
+      "confidence": "unknown",
+      "as_of": null,
+      "scope": "brand",
+      "last_reviewed_by": null
+    }
+  },
+  "recent_signals": [
+    {
+      "signal_type": "other",
+      "value": "8-K  - Current report",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-07-01",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1546417/000154641726000028/0001546417-26-000028-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "[🔺 52W HIGH] Bloomin' Brands, Inc. (BLMN) near 52-week high — watch for announcement",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-04",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↑32.8% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-05",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📊 VOLUME SPIKE] Bloomin' Brands, Inc. (BLMN) 6.6x normal volume — elevated activity",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-05",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "10-Q  - Quarterly report [Sections 13 or 15(d)]",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-06",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1546417/000154641726000032/0001546417-26-000032-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↓8.2% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-06",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📊 VOLUME SPIKE] Bloomin' Brands, Inc. (BLMN) 2.0x normal volume — elevated activity",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-06",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↑11.0% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-21",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↓3.5% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-25",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↓6.4% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-08-27",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↓5.4% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-01",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↓5.6% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-09",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↓4.1% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-10",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↓10.1% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-15",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📊 VOLUME SPIKE] Bloomin' Brands, Inc. (BLMN) 1.8x normal volume — elevated activity",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-15",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↑4.5% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-21",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↓5.0% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-24",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    },
+    {
+      "signal_type": "ownership_change",
+      "value": "8-K  - Current report",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "visibility": "team_shareable",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1546417/000154641726000035/0001546417-26-000035-index.htm"
+    },
+    {
+      "signal_type": "other",
+      "value": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↓3.8% — possible undisclosed event",
+      "status": "reported",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-30",
+      "scope": "brand",
+      "last_reviewed_by": "system:earnings_monitor_bridge",
+      "visibility": "team_shareable",
+      "source_url": "https://finance.yahoo.com/quote/BLMN"
+    }
+  ],
+  "template_version": "brand-profile-v1",
+  "created_at": "2026-09-25T21:08:00Z",
+  "updated_at": "2026-10-01T10:36:02Z",
+  "trajectory": {
+    "badge": "insufficient_data",
+    "metric_used": null,
+    "value_pct": null,
+    "as_of_year": null,
+    "underlying": null,
+    "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  }
+}

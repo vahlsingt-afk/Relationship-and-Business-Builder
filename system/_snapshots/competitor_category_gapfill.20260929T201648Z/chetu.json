@@ -1,0 +1,56 @@
+{
+  "competitor_id": "comp-chetu",
+  "competitor_slug": "chetu",
+  "display_name": "Chetu",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Chetu states its restaurant POS development practices comply with PCI-DSS, PA-DSS, SOX, Dodd-Frank and Check-21 standards.",
+        "evidence_id": "note-0002",
+        "added_at": "2026-09-29T15:44:08Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:08Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:31Z",
+  "latest_cos_commentary": {
+    "headline": "Chetu is a custom software development shop that builds bespoke POS and payment integrations for restaurant clients, rather than selling its own packaged POS product.",
+    "genius_exposure": "Indirect competitor — Chetu enables restaurant brands or ISVs to build custom pos/payments integrations in-house instead of buying a packaged platform like Genius's; relevant mainly when a prospect is considering a build-vs-buy decision.",
+    "competitive_timing": "No 2026-specific news found in this pass.",
+    "sales_response": "If a prospect mentions building custom POS/payments integrations, a firm like Chetu may be the build-side alternative to a packaged Genius solution — frame the conversation around total cost of ownership and maintenance burden of custom builds.",
+    "risk_and_uncertainty": "No named restaurant clients, revenue, or leadership data verified — Chetu is a broad enterprise dev shop, not restaurant-tech-exclusive.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 21
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 21,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current leadership/ownership",
+        "named restaurant customer scope",
+        "financial health"
+      ]
+    }
+  }
+}

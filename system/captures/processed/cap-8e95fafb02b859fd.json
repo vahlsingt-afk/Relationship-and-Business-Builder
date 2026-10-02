@@ -1,0 +1,66 @@
+{
+  "file_id": "cap-8e95fafb02b859fd",
+  "queued_at": "2026-09-22T09:19:03+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-21_1606_candidate-validation_deep-research.md",
+  "capture_type": "deep_research",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-21_1606_candidate-validation_deep-research",
+  "transcription_method": "pre_transcribed",
+  "transcript": "# Deep Research Intelligence Packet\n\n## Cycle metadata\n\n- Packet ID: `dr-20260921-1606-candidate-validation`\n- Research system: `ChatGPT Deep Research`\n- Started at: `2026-09-21 16:06 CDT`\n- Completed at: `2026-09-21 16:11 CDT`\n- Research scope: Validate four unresolved candidate pages for Panera Bread, Texas Roadhouse, and SONIC.\n- Queue items: `company:brand-panera-bread`, `company:brand-texas-roadhouse`, `company:brand-sonic`\n- Methodology: Direct vendor-page validation with product, rollout-scope, recency, and deployment checks.\n\n## Executive result\n\n- Pages reviewed: 4\n- Candidate pages validated: 4\n- Brand-vendor-product observations added or revised: 3\n- Conflicts found: 0\n- Material takeaway: Panera Bread has strong vendor-reported, executive-quoted evidence for Crunchtime Operations Execution (formerly Zenput) across more than 2,200 U.S. cafes. Texas Roadhouse has strong vendor-reported evidence for a Learning Live mobile training deployment across a 650-location brand family. Restaurant365's SONIC webinar supports only a low-confidence franchisee transition indication, not a brand-wide deployment. A separate Panera webinar preview is a useful negative because it names speakers and generic tools but does not assert Crunchtime use.\n\n## Evidence observations\n\n### Observation 1\n\n- Brand: Panera Bread\n- Vendor: Crunchtime\n- Product or category: Operations Execution (formerly Zenput); readiness checklists, food-safety protocols, task management, and operational visibility\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: customer story\n- Confidence: 95%\n- Confidence rationale: The vendor-authored customer spotlight quotes Panera's VP of Operations Standards & Growth Initiatives naming the Zenput daily agenda, explicitly says Panera uses Crunchtime Operations Execution, and describes coverage across more than 2,200 U.S. cafes.\n- Source title: How Panera Bread Drives Customer Loyalty and Empowers Teams\n- Source URL: https://www.crunchtime.com/blog/customer-spotlight-how-panera-bread-drives-customer-loyalty-and-empowers-teams\n- Publisher or source owner: Crunchtime\n- Published date, if known: 2025-09-25\n- Accessed date: 2026-09-21\n- Exact supporting excerpt or faithful factual note: Panera's operations executive describes a Zenput daily readiness agenda, while Crunchtime says the Operations Execution solution standardizes food safety, automates task management, and provides real-time operational visibility across more than 2,200 cafes.\n- Product-specific evidence: Crunchtime Operations Execution / Zenput daily agenda, food-safety standardization, automated task management, and real-time visibility.\n- Conflicting or limiting evidence: Vendor-authored story; the stated network size is over 2,200 U.S. cafes, while a July 2025 webinar preview on the same vendor site says nearly 4,000 cafes in ten countries. These figures appear to use different geographic scope and should not be treated as a contradiction without additional context.\n- Recommended follow-up: Seek a Panera-controlled technology statement or implementation artifact confirming current global versus U.S. scope.\n\n### Observation 2\n\n- Brand: Texas Roadhouse brand family\n- Vendor: Crunchtime\n- Product or category: Learning Live mobile training and development platform\n- Relationship indication: customer\n- Deployment scope: enterprise\n- Evidence type: customer story\n- Confidence: 85%\n- Confidence rationale: The Crunchtime-hosted case-style article describes product workflows, named reporting capabilities, in-store iPad usage, nearly 90,000 employees across 650 locations, and a reported 70% increase in on-time LTO training completion.\n- Source title: Texas Roadhouse Sees 70% Increase in Training Completions\n- Source URL: https://www.crunchtime.com/blog/texas-roadhouse-sees-70-increase-in-training-completions\n- Publisher or source owner: Crunchtime\n- Published date, if known: 2024-02-05\n- Accessed date: 2026-09-21\n- Exact supporting excerpt or faithful factual note: The page says Learning Live is central to Texas Roadhouse training, describes automated learning paths and Exam Response Reports, and reports use across a 650-location brand family including Jaggers and Bubba's 33.\n- Product-specific evidence: Learning Live mobile app, targeted content triggers, automated learning paths, micro-learning search, Exam Response Report, and in-store iPad access.\n- Conflicting or limiting evidence: Vendor-authored; the 650-location figure covers the wider brand family, so it should not be read as 650 Texas Roadhouse restaurants specifically. Current 2026 installed scope was not independently verified.\n- Recommended follow-up: Find a current Texas Roadhouse-controlled training or technology source and separate each brand's location scope.\n\n### Observation 3\n\n- Brand: SONIC\n- Vendor: Restaurant365\n- Product or category: Accounting and restaurant operations platform, including POS integrations, P&L and AvT reporting, AP automation, inventory, purchasing, and multi-entity support\n- Relationship indication: unknown\n- Deployment scope: franchisee\n- Evidence type: webinar\n- Confidence: 35%\n- Confidence rationale: Restaurant365 markets a SONIC-owner/operator-specific webinar and says its account executive supports SONIC owner/operators transitioning to the platform. This indicates at least some franchisee transition activity, but no owner/operator, location count, contract, implementation, or production deployment is named.\n- Source title: SONIC's Guide to R365: Centralizing Accounting and Operations\n- Source URL: https://www.restaurant365.com/webinars/recorded-webinars/sonics-guide-to-r365-centralizing-accounting-and-operations/\n- Publisher or source owner: Restaurant365\n- Published date, if known: Unknown; the page lists March 20 without a year and references planning for 2025 and beyond.\n- Accessed date: 2026-09-21\n- Exact supporting excerpt or faithful factual note: The webinar is designed for SONIC owner/operators nationwide and describes R365 accounting and operations capabilities; its speaker biography says the R365 account executive supports enterprise clients, including SONIC owner/operators, in transitioning to the platform.\n- Product-specific evidence: Micros and Infor POS integration, automated P&L and actual-versus-theoretical reporting, invoice/AP automation, inventory and purchase-order management, and multi-entity/location support.\n- Conflicting or limiting evidence: This is a sales webinar rather than a named customer case study. It cannot support a SONIC enterprise relationship or quantify deployed franchisee locations.\n- Recommended follow-up: Find a named SONIC franchisee case study, implementation announcement, customer quote, or technical integration artifact.\n\n## Negative findings\n\n- Candidate or claim: Crunchtime's July 2025 Panera/CAVA webinar preview establishes that Panera uses Crunchtime.\n- Pages checked: https://www.crunchtime.com/blog/webinar-preview-how-cava-and-panera-bread-drive-market-share-through-guest-experience\n- Result: The preview names Panera and CAVA speakers and says they will discuss people, processes, and tools, but it does not name a Crunchtime product or assert that either brand is a customer. Retain it as event context only; the September customer spotlight supplies the actual relationship evidence.\n\n## Source ledger\n\n| URL | Source type | Accessed | Supports observation(s) | Notes |\n|---|---|---|---|---|\n| https://www.crunchtime.com/blog/webinar-preview-how-cava-and-panera-bread-drive-market-share-through-guest-experience | webinar preview | 2026-09-21 | none | Names Panera and CAVA speakers but asserts no vendor-product deployment. |\n| https://www.crunchtime.com/blog/customer-spotlight-how-panera-bread-drives-customer-loyalty-and-empowers-teams | customer story | 2026-09-21 | 1 | Strong Operations Execution / Zenput evidence across 2,200+ U.S. cafes. |\n| https://www.crunchtime.com/blog/texas-roadhouse-sees-70-increase-in-training-completions | customer story | 2026-09-21 | 2 | Strong Learning Live evidence; 650-location figure covers a multi-brand family. |\n| https://www.restaurant365.com/webinars/recorded-webinars/sonics-guide-to-r365-centralizing-accounting-and-operations/ | webinar | 2026-09-21 | 3 | Low-confidence franchisee transition indication, not enterprise deployment proof. |\n\n## Research notes and inferences\n\n- Inference: Panera's July webinar participation alone is not customer proof; the later product-specific story and executive quote are what raise confidence.\n- Inference: SONIC-specific sales enablement is useful marketplace evidence at 35% confidence, but it must remain separate from a confirmed customer or installed-base claim.",
+  "word_count": 1085,
+  "transcript_available": true,
+  "status": "processed",
+  "processed_at": "2026-09-22T09:23:15+00:00",
+  "processing_result": {
+    "triage_stream_count": 4,
+    "noise_only": false,
+    "persisted_count": 4,
+    "persisted_items": [
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-006",
+        "intelligence_type": "ri_event",
+        "extracted_summary": "Person-level RI signal detected: 5 trigger(s): named, network. Possible named subjects: Find, Recommended, Guide, Vendor, July, Centralizing Accounting."
+      },
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-007",
+        "intelligence_type": "micro_graph_enrichment",
+        "extracted_summary": "Entity-scoped data detected for existing artifact 'micro_graph:mcdonalds_us_ops' (matched term: 'franchisee'). Topology terms present \u2014 enrichment candidate."
+      },
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-008",
+        "intelligence_type": "micro_graph_build",
+        "extracted_summary": "Entity-scoped topology data detected for 'Oracle Hospitality' \u2014 no registered artifact exists. This input is a candidate for a new micro graph artifact."
+      },
+      {
+        "item_id": "INT-2026-09-22T09:19:03+00:00-009",
+        "intelligence_type": "macro_signal",
+        "extracted_summary": "Mentions tracked watchlist entities: CAVA, Panera Bread, Texas Roadhouse, Restaurant365, Crunchtime. Macro/industry signal detected: 14 keyword hit(s) across categorie(s): competitive, consumer_behavior, industry_trend, market_signal, vendor_tech. Key terms: automation, customer,"
+      }
+    ],
+    "exec_mutations": 0,
+    "llm_summary": {
+      "people_mentioned": [],
+      "companies_mentioned": [
+        "Panera Bread",
+        "Texas Roadhouse",
+        "SONIC",
+        "Crunchtime",
+        "Restaurant365"
+      ],
+      "topics": [
+        "candidate page validation",
+        "vendor relationships",
+        "product deployment evidence",
+        "training and operations platforms"
+      ],
+      "decisions": [],
+      "action_items": [
+        "Seek a Panera-controlled technology statement or implementation artifact confirming current global versus U.S. scope.",
+        "Find a current Texas Roadhouse-controlled training or technology source and separate each brand's location scope.",
+        "Find a named SONIC franchisee case study, implementation announcement, customer quote, or technical integration artifact."
+      ],
+      "why_it_matters": "This research validates vendor relationships and product deployments for major restaurant brands, which is crucial for strategic planning and operational efficiency."
+    }
+  }
+}

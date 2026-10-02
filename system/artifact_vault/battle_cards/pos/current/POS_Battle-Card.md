@@ -1,0 +1,153 @@
+# POS — Battle Card
+
+Genius: 3 brands (4.8% of known) out of 63/1764 brands tracked with a known vendor in this category.
+
+## Competitors
+
+### Qu
+
+Genius: 3 brands (4.8% of known) vs. Qu: 25 brands (39.7% of known) -- delta +34.9 pts
+
+**Qu advantages:**
+- Jack in the Box: 2,100+ restaurants in 15 months; "Qu's platform gives us the speed and stability we need" (Doug Cook, CTO)
+- Offline/edge resilience claim; 0.2% order failure rate
+- Now bundling payments (Qu Pay, Jul 2026) — direct overlap with Genius+Worldpay bundle
+
+*No category-specific battle card content on file yet.*
+
+### PAR Technology
+
+Genius: 3 brands (4.8% of known) vs. PAR Technology: 14 brands (22.2% of known) -- delta +17.4 pts
+
+**Positioning:** PAR has assembled real products (Brink/PAR POS, Data Central, Punchh, digital ordering) but they don't work seamlessly together and lack a bundled pricing story -- "portfolio, not platform." Real tech debt in the POS product, NPS not strong; benefits from POS stickiness (switching cost) rather than satisfaction. Markets itself as "open" (integrate anything), which helps land new deals but works against a unified cross-sell narrative. Reports footprint at the product level (60.1K Operator Cloud sites + 121.8K Engagement Cloud sites, ~March 2026), not unique-location level -- makes total footprint look larger than true platform penetration.
+
+**Todd's POV:** Todd Vahlsing’s interpretation of Wendy’s selecting TRAY: despite PAR’s incumbent loyalty relationship with Wendy’s, PAR was unable to cross-sell its other products into this decision. This is Todd’s strategic interpretation, not a confirmed statement from Wendy’s or PAR.
+
+**Genius advantages:**
+- Genius built its own point-of-sale system from the ground up, so all the pieces work together smoothly. PAR put its POS system together from several different companies it bought over the years, so the pieces don't always fit together as well.
+- Genius has many more years of experience building back-office reporting tools for franchise businesses. PAR's back-office tool, called Data Central, is newer and less proven.
+- Genius already owns its own payment processing, so it can offer one combined bill for software and payments. PAR does not process payments itself yet, so it has to team up with other companies to offer that.
+- PAR lost $16.9 million in the second quarter of 2026, using standard accounting rules. The company is not yet profitable.
+- PAR's AI tool is currently free for the 20,000 restaurant locations using it. PAR does not plan to start charging for more advanced AI features until 2027.
+- Parent still GAAP loss-making (see PAR in POS file)
+
+**PAR Technology advantages:**
+- PAR is perceived as more modern/cloud-native in demos; cleaner sales narrative
+- PAR's "open" integration strategy is easier to plug into a brand's existing heterogeneous vendor stack
+- Burger King exclusive NA POS; rollout "400+ stores/month," expected complete end-2026
+- Papa Johns (first pizza chain) and Pizza Factory signed
+- Profitability inflecting: Q2 2026 adj. EBITDA $14.3M vs $5.5M; FY26 guide raised to revenue $516–523M, adj. EBITDA $50–53M
+- Singh on rivals: legacy vendors "(NCR Voyix, Oracle, Global Payments) retain market share but lack strategic focus on restaurant tech"
+- Marquee enterprise logos (Wendy's, Church's Texas Chicken)
+- Bridg bought for $27.5M in stock (up to $30M) from Cardlytics (which paid $350M in 2021)
+- "Largest restaurant loyalty customer" signed months after Bridg closed (unnamed)
+
+**Status:** source_backed (confidence: 75%)
+
+**RM posture:** PAR will lead with restaurant specialization, Burger King rollout execution, and reusable enterprise vertical capability from Papa Johns. Counter with Genius's restaurant depth plus integrated payments economics—not a generic claim that Global Payments is simply larger.
+
+**Listen for:**
+- PAR framing Global Payments, NCR Voyix, and Oracle as legacy competitors whose primary focus is not restaurant technology.
+- PAR citing Burger King rollout velocity above 400 stores per month and Papa Johns as proof of enterprise execution and pizza-specific capability.
+
+**When to bring Todd in:** Bring Todd in when PAR uses Burger King rollout scale, Papa Johns pizza capability, or the 'restaurant specialist versus payments company' wedge.
+
+*Last validated: 2026-09-11*
+
+**Recent financial health (PAR Technology):** PAR Technology: 19 recorded earnings event(s). Earnings-relevant events are stable in frequency (last 4 span 91 days vs. 112 days for the 4 before that).
+
+### Toast
+
+Genius: 3 brands (4.8% of known) vs. Toast: 8 brands (12.7% of known) -- delta +7.9 pts
+
+**Positioning:** Clearest share gainer in restaurant POS/platforms: ~164,000 total locations at YE2025, +30,000 net in 2025 (~8,000 in Q4), landing enterprise deals with Applebee's (~1,500 US locations), Firehouse Subs, Papa Murphy's. POS-first, expanding into payroll/scheduling/review management -- reports clean unified location counts rather than per-product metrics.
+
+**Todd's POV:** Toast owns the momentum in the market narrative right now, taking share across independents, regional groups, and increasingly enterprise.
+
+**Genius advantages:**
+- Broader enterprise operations depth (drive-thru, kitchen orchestration, franchise back office, stadium/venue) than Toast's POS-first stack
+- Hardware memory cost pressure: "P&L impact in '27 to be greater than '26" (Elena Gomez, CFO)
+- Enterprise/QSR drive-thru is new territory: first drive-thru product announced 2025 — direct threat to Genius drive-thru but unproven at scale
+- Trails Clover in ex-top-250 US share (17% vs 20%)
+- Toast's own research finds 48% of diners prioritize being remembered over points (22%) — i.e., points-based loyalty is losing appeal
+- Product page does not state support for non-Toast POS, which limits it in multi-POS enterprise systems
+
+**Toast advantages:**
+- Strongest momentum and clean, unified location-count reporting vs. Genius's more nuanced installation story
+- Record 9,500 net location adds in Q2 2026
+- Profitable scale: Q2 2026 adj. EBITDA $221M; GAAP operating income $152M; FY26 guide raised (recurring gross profit $2.325–2.355B; adj. EBITDA $805–825M)
+- Enterprise momentum: Applebee's (~1,500 US units, Apr 2025), Firehouse Subs, Papa Murphy's (2025), Perkins/Huddle House
+- Baird projects Toast from 134k (end 2024) to 244k locations by end 2028
+- Pilot: restaurants with Marketing Success Managers averaged +8% sales vs. similar Toast restaurants
+- Toast's data: loyalty members return ~2x the rate of new guests; 86% of email orders come from returning guests
+- IQ Grow "on track to become the fastest product to reach $10 million in ARR" (Aman Narang, CEO)
+- Case study: Underbelly Hospitality cut costs ~3%, "saving them over $330,000 on the year"
+- Bundled with the fastest-growing restaurant POS (Toast, ~180k locations) — the closest analog to Genius's POS+DMB bundle
+
+*No category-specific battle card content on file yet.*
+
+**Recent financial health (Toast):** Toast: 17 recorded earnings event(s). Dimension shift: Operational up (1→2 events). Earnings-relevant events are stable in frequency (last 4 span 89 days vs. 106 days for the 4 before that).
+
+### NCR
+
+Genius: 3 brands (4.8% of known) vs. NCR: 7 brands (11.1% of known) -- delta +6.3 pts
+
+**Genius advantages:**
+- Shrinking reported revenue: Q2 2026 revenue $523M (−21% reported; +1% pro forma); restaurant revenue $158M (−23%); FY26 revenue guide −13% to −18% (−2% to −3% pro forma)
+- Hardware outsourced to Ennoconn (Foxconn subsidiary) from Jan 2026; hardware revenue reported net from Q2 2026
+
+**NCR advantages:**
+- Huge installed base; restaurant adj. EBITDA margin 36.7% (Q2 2026)
+- Claims to have "reclaimed the top position in new restaurant deployments" (Dec 2025)
+- Remaining contract value $286M (+65% YoY)
+
+*No category-specific battle card content on file yet.*
+
+### Oracle
+
+Genius: 3 brands (4.8% of known) vs. Oracle: 3 brands (4.8% of known) -- delta +0.0 pts
+
+*No category-specific battle card content on file yet.*
+
+**Recent financial health (Oracle Corp):** Oracle Corp: 22 recorded earnings event(s). Dimension shift: Customer down (1→0 events); Financial up (3→4 events); Operational down (1→0 events); Technology up (3→4 events). Earnings-relevant events are decreasing in frequency (last 4 span 96 days vs. 63 days for the 4 before that).
+
+*No competitor_intelligence profile on file for this vendor yet.*
+
+### Shift4 Payments
+
+No current brand-count relationship is on file for Shift4 Payments in pos; category-specific competitive intelligence is retained below.
+
+**Genius advantages:**
+- Cut 2026 outlook on Middle East travel disruption (~$25M Q3) and FX (~$20M); shares fell
+- Organic growth (11%) much lower than headline (M&A-driven)
+
+**Shift4 Payments advantages:**
+- Aggressive international POS rollout: Shift4 Dine launched in Spain and Australia; Shift4 One in 12 countries (target 15 by YE)
+- Stadiums/venues overlap with Genius S&E: new customer Buffalo Bills
+- Global Blue acquisition (~$1.5B announced 2025) completed
+
+**Status:** source_backed (confidence: 70%)
+
+**RM posture:** Shift4 positions restaurants as a core complex-commerce vertical with POS and payments at the employee/guest transaction point. Counter on restaurant operating depth and the economics of an integrated Genius/Worldpay stack.
+
+**When to bring Todd in:** Bring Todd in when Shift4 presents POS and payments as one enterprise commerce decision.
+
+*Last validated: 2026-09-11*
+
+### Fiserv
+
+No current brand-count relationship is on file for Fiserv in pos; category-specific competitive intelligence is retained below.
+
+**Status:** source_backed (confidence: 70%)
+
+**RM posture:** Clover becomes more formidable if Fiserv materially improves stability and integrates it more tightly with acquiring and broader infrastructure. Compete on proven restaurant-grade reliability and operational fit.
+
+**When to bring Todd in:** Bring Todd in when Clover is positioned as an enterprise restaurant platform rather than an SMB POS.
+
+**Red flags:**
+- Do not treat management's stated priority to improve platform stability as proof that the reliability problem has already been resolved.
+
+*Last validated: 2026-09-11*
+
+---
+*Sourced from ecosystem_intelligence.json + competitor_intelligence — not re-researched from scratch.*

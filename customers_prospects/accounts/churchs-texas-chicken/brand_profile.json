@@ -1,0 +1,109 @@
+{
+  "account_id": "acct-churchs-texas-chicken",
+  "founded": {
+    "value": "1952",
+    "status": "confirmed",
+    "evidence_ids": [
+      "ev-churchs-0002",
+      "ev-churchs-0007"
+    ],
+    "confidence": "high",
+    "as_of": "2026-08-31",
+    "scope": "account",
+    "last_reviewed_by": "codex:web+rb"
+  },
+  "headquarters": {
+    "value": "Atlanta, Georgia",
+    "status": "reported",
+    "evidence_ids": [
+      "ev-churchs-0006"
+    ],
+    "confidence": "medium",
+    "as_of": "2026-08-31",
+    "scope": "account",
+    "last_reviewed_by": "codex:web+rb"
+  },
+  "segment": {
+    "value": "Quick-service chicken",
+    "status": "confirmed",
+    "evidence_ids": [
+      "ev-churchs-0002",
+      "ev-churchs-0007"
+    ],
+    "confidence": "high",
+    "as_of": "2026-08-31",
+    "scope": "account",
+    "last_reviewed_by": "codex:web+rb"
+  },
+  "footprint": {
+    "value": "More than 1,400 to 1,500 restaurants globally across roughly 25+ countries/markets; U.S. base reported around 770 locations in 2025",
+    "status": "confirmed",
+    "evidence_ids": [
+      "ev-churchs-0002",
+      "ev-churchs-0003",
+      "ev-churchs-0004"
+    ],
+    "confidence": "high",
+    "as_of": "2026-08-31",
+    "scope": "account",
+    "last_reviewed_by": "codex:web+rb"
+  },
+  "ownership": {
+    "value": "Owned by High Bluff Capital Partners and FS Investments/Future Standard since 2021; new growth equity from Golub Capital announced July 2026",
+    "status": "confirmed",
+    "evidence_ids": [
+      "ev-churchs-0001",
+      "ev-churchs-0003",
+      "ev-churchs-0004"
+    ],
+    "confidence": "high",
+    "as_of": "2026-08-31",
+    "scope": "account",
+    "last_reviewed_by": "codex:web+rb"
+  },
+  "geography": {
+    "value": "U.S. plus international Texas Chicken markets; China market-entry agreement announced in 2026",
+    "status": "confirmed",
+    "evidence_ids": [
+      "ev-churchs-0002",
+      "ev-churchs-0003"
+    ],
+    "confidence": "high",
+    "as_of": "2026-08-31",
+    "scope": "account",
+    "last_reviewed_by": "codex:web+rb"
+  },
+  "differentiation": {
+    "value": "Value-oriented bone-in chicken, tenders, sandwiches, and Honey-Butter Biscuits; global Texas Chicken identity outside the U.S.",
+    "status": "confirmed",
+    "evidence_ids": [
+      "ev-churchs-0002",
+      "ev-churchs-0007"
+    ],
+    "confidence": "medium",
+    "as_of": "2026-08-31",
+    "scope": "account",
+    "last_reviewed_by": "codex:web+rb"
+  },
+  "competitive_set": {
+    "value": "Popeyes, KFC, Bojangles, Raising Cane's, Zaxby's, Wingstop, Chick-fil-A, regional chicken QSRs",
+    "status": "inferred",
+    "evidence_ids": [],
+    "confidence": "medium",
+    "as_of": "2026-08-31",
+    "scope": "account",
+    "last_reviewed_by": "codex:web+rb"
+  },
+  "growth_and_modernization_read": "The account is moving from operational recovery to accelerated growth. Funding, remodel momentum, leadership additions, and hiring around restaurant technology / AI / digital suggest a management team investing in the operating platform. That does not mean they are looking to replace Qu; it means they may be open to practical tools that make the current estate perform better.",
+  "relationship_strategy": "Use Maggie Lenhart as the current account-intelligence sponsor and Jeff Caplin as the executive target. The tone should be: 'I understand Qu is the core POS direction. I am not trying to reopen a decision that is already made. I would like to understand where digital menu boards, drive-thru, hardware, payments, and integration still create friction, and whether Genius/Global can be useful.'",
+  "opportunity_wedges": "Primary wedge: digital menu boards / drive-thru visual-estate modernization. Secondary wedges: hardware refresh or support model, payment architecture visibility, and operational reporting/integration pain. Low-probability wedge: POS displacement, unless Qu renewal is not final or a major execution failure appears.",
+  "recommended_approach": "Before FSTEC, align with Maggie on what Jeff said, confirm the Qu renewal status, and identify whether there is an actual DMB initiative. At FSTEC, do discovery rather than pitch: ask about DMB incumbent, refresh timing, content ownership, drive-thru priorities, hardware standards, Worldpay payment flow, franchisee pain, and who owns funding. Bring a concise Genius DMB/hardware/restaurant-infrastructure POV only after validating the pain.",
+  "risks_and_cautions": [
+    "Qu appears entrenched and reportedly renewing for five years; POS displacement is low probability unless new evidence changes that.",
+    "Prior Genius evaluation was negative; re-entry must be concrete and enterprise-grade, not generic.",
+    "The public tech stack is incomplete; DMB, drive-thru, gateway, app, marketplace, KDS, and hardware incumbent data require direct validation.",
+    "Church's is actively modernizing, so vendor conversations should connect to remodels, franchisee economics, and operating execution.",
+    "Do not overuse loyalty as the wedge: PAR Punchh appears to be the current loyalty platform and Kevin Nemeth/Jessica Wu-McConnell likely own that agenda.",
+    "Jeff Caplin direct path improved through Maggie, but exact FSTEC meeting timing is still unconfirmed."
+  ]
+}

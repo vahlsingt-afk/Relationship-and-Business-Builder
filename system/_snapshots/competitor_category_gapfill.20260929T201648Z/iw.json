@@ -1,0 +1,62 @@
+{
+  "competitor_id": "comp-iw",
+  "competitor_slug": "iw",
+  "display_name": "IW",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "IW Technologies advertises 'Rapid-Scale Deployments in Under 8 Weeks' and states it supported 50+ checkout lanes/locations across North America in 2024, combining hardware sourcing, field deployment, break/fix, and secure IT-asset disposition under one team.",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-29T15:44:11Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:06Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:33Z",
+  "latest_cos_commentary": {
+    "headline": "IW Technologies is a POS hardware and IT-lifecycle services provider (procurement, field deployment, break/fix, disposition) serving multi-site retail and restaurant brands, not a software/POS-platform vendor.",
+    "genius_exposure": "Competes with Genius primarily on the hardware/field-services layer underneath POS (kitting, deployment, break/fix, disposition) rather than on POS software, payments processing, or back-office functionality -- most relevant to kitchen_drive_thru and pos where physical terminal/hardware refreshes are in play.",
+    "competitive_timing": "No dated news found in this pass; company positioning emphasizes rapid nationwide hardware rollouts as a current capability.",
+    "sales_response": "Where IW Technologies is present at an account, it most likely signals a hardware-deployment or break/fix relationship rather than a software/POS-platform competitor -- clarify whether it is deploying hardware for a specific POS software vendor before treating it as displacement risk.",
+    "risk_and_uncertainty": "Entity identification carries real ambiguity given the bare 'IW' slug; no leadership names, named restaurant customers, pricing, or financial data were found to further confirm or triangulate the match.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 49
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 49,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 3,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Pricing signals",
+        "C-Suite & Leadership",
+        "Named Customers",
+        "Financial / Market Health"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "No specific named restaurant customers found (page references brand categories, not names)",
+        "No leadership names found",
+        "No pricing or financial data found",
+        "Confirm this is the intended entity -- 'IW' is a very short/ambiguous slug; identified here as IW Technologies (weareiw.com) based on POS/restaurant-hardware relevance, but this identification should be double-checked against whatever originally generated the 'IW' slug"
+      ]
+    }
+  }
+}

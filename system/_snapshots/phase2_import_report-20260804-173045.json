@@ -1,0 +1,221 @@
+{
+  "phase2_file": "system/research/phase2_kds_kitchen_ops_evidence_draft_2026-08-03.json",
+  "category": "KDS/Kitchen Ops",
+  "rows_processed": 30,
+  "rows_skipped": 0,
+  "dry_run": false,
+  "added": 27,
+  "updated": 3,
+  "conflicts_detected": 0,
+  "auto_superseded": 0,
+  "outcome_counts": {
+    "new_relationship": 25,
+    "enrich_existing_relationship": 2,
+    "duplicate_no_change": 0,
+    "new_source_for_existing_relationship": 1,
+    "lifecycle_update": 0,
+    "supersedes_existing_relationship": 2,
+    "conflict_requires_review": 0,
+    "working_profile_not_promoted": 0,
+    "pilot_not_promoted": 0,
+    "invalid_customer_or_module_excluded": 0,
+    "entity_resolution_required": 0
+  },
+  "outcomes": {
+    "new_relationship": [
+      {
+        "vendor": "QSR Automations",
+        "customer": "Boston Pizza",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-boston-s-pizza-restaurant-sports-bar-kds-kitchen-ops-unknown-vendor-qsr-automations"
+      },
+      {
+        "vendor": "QSR Automations",
+        "customer": "Brinker International",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-brinker-international-kds-kitchen-ops-unknown-vendor-qsr-automations"
+      },
+      {
+        "vendor": "QSR Automations",
+        "customer": "Dave's Hot Chicken",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-dave-s-hot-chicken-kds-kitchen-ops-unknown-vendor-qsr-automations"
+      },
+      {
+        "vendor": "QSR Automations",
+        "customer": "The Cheesecake Factory",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-cheesecake-factory-the-kds-kitchen-ops-unknown-vendor-qsr-automations"
+      },
+      {
+        "vendor": "Fresh KDS",
+        "customer": "Taziki's Mediterranean Cafe",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-taziki-s-mediterranean-cafe-kds-kitchen-ops-unknown-vendor-fresh-kds"
+      },
+      {
+        "vendor": "Fresh KDS",
+        "customer": "Bonchon",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-bonchon-kds-kitchen-ops-unknown-vendor-fresh-kds"
+      },
+      {
+        "vendor": "Fresh KDS",
+        "customer": "Smashburger",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-smashburger-kds-kitchen-ops-franchisee-deployment-vendor-fresh-kds"
+      },
+      {
+        "vendor": "Delaget",
+        "customer": "Taco Bell",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-taco-bell-kds-kitchen-ops-franchisee-deployment-vendor-delaget"
+      },
+      {
+        "vendor": "Delaget",
+        "customer": "Long John Silver's",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-long-john-silver-s-kds-kitchen-ops-franchisee-deployment-vendor-delaget"
+      },
+      {
+        "vendor": "Meazure Up",
+        "customer": "Krystal",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-krystal-company-kds-kitchen-ops-unknown-vendor-meazure-up"
+      },
+      {
+        "vendor": "Meazure Up",
+        "customer": "Golden Corral",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-golden-corral-kds-kitchen-ops-unknown-vendor-meazure-up"
+      },
+      {
+        "vendor": "Meazure Up",
+        "customer": "Pizza Ranch",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-pizza-ranch-kds-kitchen-ops-unknown-vendor-meazure-up"
+      },
+      {
+        "vendor": "Meazure Up",
+        "customer": "Osmow's Shawarma",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-osmow-s-shawarma-kds-kitchen-ops-unknown-vendor-meazure-up"
+      },
+      {
+        "vendor": "Meazure Up",
+        "customer": "Papa Gino's",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-papa-gino-s-pizzeria-kds-kitchen-ops-unknown-vendor-meazure-up"
+      },
+      {
+        "vendor": "Meazure Up",
+        "customer": "D'Angelo Grilled Sandwiches",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-d-angelo-grilled-sandwiches-kds-kitchen-ops-unknown-vendor-meazure-up"
+      },
+      {
+        "vendor": "Meazure Up",
+        "customer": "LaRosa's Pizzeria",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-larosa-s-pizzeria-kds-kitchen-ops-unknown-vendor-meazure-up"
+      },
+      {
+        "vendor": "Meazure Up",
+        "customer": "Kernels Popcorn",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-kernels-popcorn-kds-kitchen-ops-unknown-vendor-meazure-up"
+      },
+      {
+        "vendor": "Meazure Up",
+        "customer": "The Keg",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-the-keg-kds-kitchen-ops-unknown-vendor-meazure-up"
+      },
+      {
+        "vendor": "Meazure Up",
+        "customer": "Spur Steak Ranches",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-spur-steak-ranches-kds-kitchen-ops-unknown-vendor-meazure-up"
+      },
+      {
+        "vendor": "Jolt",
+        "customer": "Casey's",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-casey-s-general-stores-kds-kitchen-ops-unknown-vendor-jolt"
+      },
+      {
+        "vendor": "Jolt",
+        "customer": "Dave & Buster's",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-dave-buster-s-kds-kitchen-ops-unknown-vendor-jolt"
+      },
+      {
+        "vendor": "Jolt",
+        "customer": "Main Event",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-main-event-kds-kitchen-ops-unknown-vendor-jolt"
+      },
+      {
+        "vendor": "Jolt",
+        "customer": "Chick-fil-A",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-chick-fil-a-kds-kitchen-ops-unknown-vendor-jolt"
+      },
+      {
+        "vendor": "Jolt",
+        "customer": "Culver's",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-culver-s-kds-kitchen-ops-unknown-vendor-jolt"
+      },
+      {
+        "vendor": "Jolt",
+        "customer": "Buffalo Wild Wings",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-buffalo-wild-wings-kds-kitchen-ops-franchisee-deployment-vendor-jolt"
+      }
+    ],
+    "enrich_existing_relationship": [
+      {
+        "vendor": "Delaget",
+        "customer": "Taco Bell",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-taco-bell-kds-kitchen-ops-franchisee-deployment-vendor-delaget"
+      },
+      {
+        "vendor": "Delaget",
+        "customer": "Taco Bell",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-taco-bell-kds-kitchen-ops-franchisee-deployment-vendor-delaget"
+      }
+    ],
+    "duplicate_no_change": [],
+    "new_source_for_existing_relationship": [
+      {
+        "vendor": "Delaget",
+        "customer": "KFC",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-kfc-kds-kitchen-ops-franchisee-deployment-vendor-delaget"
+      }
+    ],
+    "lifecycle_update": [],
+    "supersedes_existing_relationship": [
+      {
+        "vendor": "QSR Automations",
+        "customer": "CKE Restaurants Holdings",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-cke-restaurants-holdings-hardee-s-and-carl-s-jr-kds-kitchen-ops-unknown-vendor-qsr-automations"
+      },
+      {
+        "vendor": "Delaget",
+        "customer": "KFC",
+        "tech_category": "KDS/Kitchen Ops",
+        "relationship_id": "rel-brand-kfc-kds-kitchen-ops-franchisee-deployment-vendor-delaget"
+      }
+    ],
+    "conflict_requires_review": [],
+    "working_profile_not_promoted": [],
+    "pilot_not_promoted": [],
+    "invalid_customer_or_module_excluded": [],
+    "entity_resolution_required": []
+  }
+}

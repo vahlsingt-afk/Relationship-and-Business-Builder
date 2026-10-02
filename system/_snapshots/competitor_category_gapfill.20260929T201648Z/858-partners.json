@@ -1,0 +1,49 @@
+{
+  "competitor_id": "comp-858-partners",
+  "competitor_slug": "858-partners",
+  "display_name": "858 Partners",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:30Z",
+  "latest_cos_commentary": {
+    "headline": "858 Partners is a small (2-10 employee) advisory and go-to-market firm for restaurant-tech vendors, founded by ex-Olo executives — not a direct product competitor.",
+    "genius_exposure": "No direct product overlap; relevant because 858 Partners curates and recommends vendor shortlists (potentially including Genius's competitors) to restaurant brands evaluating tech stacks.",
+    "competitive_timing": "The firm has run vendor showcases with NRN and industry conferences, giving it visibility into which POS/payments alternatives get surfaced to operators.",
+    "sales_response": "Treat as an industry influencer/curator rather than a vendor to displace; worth knowing if a prospect has engaged 858 Partners for tech-stack advice.",
+    "risk_and_uncertainty": "Very small firm (2-10 employees per LinkedIn); influence is likely narrow and concentrated within its own network.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 3
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 3,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "current product/pricing (not applicable — advisory firm)",
+        "financial health"
+      ]
+    }
+  }
+}

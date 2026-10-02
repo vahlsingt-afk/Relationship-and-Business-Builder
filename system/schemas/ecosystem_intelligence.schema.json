@@ -1,0 +1,539 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RB Ecosystem Intelligence Graph",
+  "description": "Industry-agnostic persistent ecosystem intelligence layer. Domain packs add vocabulary; this schema owns universal primitives.",
+  "type": "object",
+  "required": [
+    "version",
+    "contract",
+    "last_updated",
+    "domain_packs",
+    "entities",
+    "relationships",
+    "signals",
+    "assessments",
+    "sources",
+    "user_relevance",
+    "strategic_recommendations"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"type": "integer", "minimum": 1, "maximum": 999},
+    "contract": {"const": "rb_ecosystem_intelligence_v1"},
+    "last_updated": {"type": "string", "format": "date"},
+    "description": {"type": "string"},
+    "domain_packs": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{1,80}$"}
+    },
+    "entities": {"type": "array", "items": {"$ref": "#/definitions/entity"}},
+    "relationships": {"type": "array", "items": {"$ref": "#/definitions/relationship"}},
+    "signals": {"type": "array", "items": {"$ref": "#/definitions/signal"}},
+    "assessments": {"type": "array", "items": {"$ref": "#/definitions/assessment"}},
+    "sources": {"type": "array", "items": {"$ref": "#/definitions/source"}},
+    "user_relevance": {"type": "array", "items": {"$ref": "#/definitions/user_relevance"}},
+    "strategic_recommendations": {"type": "array", "items": {"$ref": "#/definitions/strategic_recommendation"}},
+    "watch_list": {"type": "array", "items": {"$ref": "#/definitions/watch_list_entry"}}
+  },
+  "definitions": {
+    "confidence": {
+      "type": "object",
+      "required": ["level"],
+      "additionalProperties": false,
+      "properties": {
+        "level": {"type": "string", "enum": ["low", "medium", "high", "critical"]},
+        "score": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "rationale": {"type": "string"},
+        "review_after": {"type": ["string", "null"], "format": "date"}
+      }
+    },
+    "entity": {
+      "type": "object",
+      "required": ["id", "name", "entity_type", "status", "domains", "attributes", "sources"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,120}$"},
+        "name": {"type": "string", "minLength": 1, "maxLength": 240},
+        "entity_type": {
+          "type": "string",
+          "enum": ["company", "person", "vendor", "product", "brand", "operator", "market", "asset", "unknown"]
+        },
+        "subtype": {"type": ["string", "null"]},
+        "status": {"type": "string", "enum": ["active", "inactive", "watch", "unknown"]},
+        "domains": {"type": "array", "items": {"type": "string"}},
+        "aliases": {"type": "array", "items": {"type": "string"}},
+        "ticker": {"type": ["string", "null"]},
+        "owner_name": {
+          "type": ["string", "null"],
+          "description": "RB-2026-09-11: the entity's real, confirmed current parent/owner company name (e.g. an acquirer), when known -- never guessed. Set only via ownership_promotion.py's review-first record_proposal(), same discipline as every other review-first fact in this graph."
+        },
+        "owner_entity_id": {
+          "type": ["string", "null"],
+          "description": "Resolved via ecosystem_intelligence._resolve_entity_id_any_type() when owner_name matches an already-tracked brand/vendor entity in this graph; null when the owner isn't itself tracked here. Never guessed -- stays null rather than a low-confidence match."
+        },
+        "owner_confidence": {
+          "type": "object",
+          "description": "Confidence-Based Auto-Recording Phase 6 (2026-09-25): the source_type-derived confidence_calibration score behind the current owner_name, so a later claim can be compared against it before overwriting.",
+          "additionalProperties": false,
+          "properties": {
+            "level": {"type": "string", "enum": ["low", "medium", "high", "critical"]},
+            "score": {"type": "number", "minimum": 0, "maximum": 1}
+          }
+        },
+        "owner_confirmed_by": {
+          "type": ["string", "null"],
+          "description": "Confidence-Based Auto-Recording Phase 6 (2026-09-25): provenance for the current owner_name -- \"human\" (an explicit reviewer confirm) or \"system:<module>\" (an unattended auto-apply), matching brand_profile_common.py's human:/system: last_reviewed_by convention."
+        },
+        "reported_alternates": {
+          "type": "array",
+          "description": "Confidence-Based Auto-Recording Phase 6 (2026-09-25): a sourced ownership claim that didn't clear the confidence margin needed to overwrite the current owner_name -- recorded here instead of silently dropped, never promoted automatically.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "owner_name": {"type": ["string", "null"]},
+              "owner_entity_id": {"type": ["string", "null"]},
+              "confidence": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "level": {"type": "string", "enum": ["low", "medium", "high", "critical"]},
+                  "score": {"type": "number", "minimum": 0, "maximum": 1}
+                }
+              },
+              "source_title": {"type": ["string", "null"]},
+              "source_url": {"type": ["string", "null"]},
+              "evidence_date": {"type": ["string", "null"]},
+              "recorded_at": {"type": "string"},
+              "candidate_id": {"type": "string"}
+            }
+          }
+        },
+        "attributes": {"type": "object", "additionalProperties": true},
+        "sources": {"type": "array", "items": {"type": "string"}},
+        "confidence": {"$ref": "#/definitions/confidence"},
+        "notes": {"type": "string"},
+        "created_at": {"type": "string"},
+        "updated_at": {"type": "string"},
+        "strategic_narratives": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/strategic_narrative"}
+        }
+      }
+    },
+    "strategic_narrative": {
+      "type": "object",
+      "required": ["id", "narrative_type", "status", "confidence", "supporting_signals", "next_expected_signals", "last_updated"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string"},
+        "narrative_type": {"type": "string"},
+        "status": {"type": "string", "enum": ["active", "resolved", "superseded"]},
+        "confidence": {"type": "string", "enum": ["low", "medium", "high"]},
+        "supporting_signals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["category", "signal_type", "description", "source", "added_at"],
+            "additionalProperties": false,
+            "properties": {
+              "category": {"type": "string"},
+              "signal_type": {"type": "string"},
+              "description": {"type": "string"},
+              "source": {"type": "object"},
+              "added_at": {"type": "string"}
+            }
+          }
+        },
+        "next_expected_signals": {"type": "array", "items": {"type": "string"}},
+        "last_updated": {"type": "string"}
+      }
+    },
+    "relationship": {
+      "type": "object",
+      "required": ["id", "from_entity_id", "to_entity_id", "relationship_type", "status", "sources", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^rel-[a-z0-9][a-z0-9-]{1,160}$"},
+        "from_entity_id": {"type": "string"},
+        "to_entity_id": {"type": "string"},
+        "relationship_type": {"type": "string"},
+        "status": {"type": "string", "enum": ["active", "historical", "rumored", "evaluating", "replacing", "superseded", "conflicting", "unknown"]},
+        "domains": {"type": "array", "items": {"type": "string"}},
+        "category": {"type": ["string", "null"]},
+        "product": {"type": ["string", "null"]},
+        "vendor_role": {
+          "type": ["string", "null"],
+          "description": "Specific deployment role within the category, e.g. system_of_record_pos vs approved_hardware_vendor. Prevents collapsing distinct vendor relationships into one edge.",
+          "enum": [
+            "system_of_record_pos",
+            "approved_hardware_vendor",
+            "hardware_reseller_service_provider",
+            "installation_service_provider",
+            "service_maintenance_provider",
+            "payment_device_vendor",
+            "acquirer_or_payments",
+            "franchisee_deployment",
+            "regional_deployment",
+            "pilot",
+            "legacy_incumbent",
+            "replacement_candidate",
+            "unknown",
+            null
+          ]
+        },
+        "deployment": {"$ref": "#/definitions/deployment"},
+        "relationship_classification": {"$ref": "#/definitions/relationship_classification"},
+        "geography": {"type": ["string", "null"]},
+        "channel": {"type": ["string", "null"]},
+        "service_role": {"type": ["string", "null"]},
+        "deployment_claim_type": {
+          "type": ["string", "null"],
+          "enum": [
+            "systemwide_deployment",
+            "partial_deployment",
+            "limited_operator_deployment",
+            "franchisee_deployment",
+            "pilot",
+            "approved_vendor",
+            "reseller_service",
+            "logo_or_customer_page",
+            "reference_only",
+            "unknown",
+            null
+          ]
+        },
+        "customer_operator": {"type": ["string", "null"]},
+        "scope_unit_count": {"type": ["number", "null"]},
+        "evidence_posture": {
+          "type": "string",
+          "enum": ["provisional", "partially_substantiated", "substantiated", "conflicting", "refuted", "unknown"]
+        },
+        "interpretation_scope": {"type": "string"},
+        "risk": {"type": "string", "enum": ["green", "yellow", "red", "unknown"]},
+        "sources": {"type": "array", "items": {"type": "string"}},
+        "confidence": {"$ref": "#/definitions/confidence"},
+        "strategic_note": {"type": "string"},
+        "last_verified_at": {"type": ["string", "null"], "format": "date"},
+        "verified_by": {"type": ["string", "null"]},
+        "last_modified_by": {
+          "type": ["string", "null"],
+          "description": "Team-portal member id who created or last edited this relationship via system/api/team_portal_api.py. Distinct from verified_by, which is evidence-corroboration provenance, not editor attribution. Absent/null for relationships never touched by that surface."
+        },
+        "staleness_flag": {"type": ["boolean", "null"]},
+        "ai_application": {
+          "type": ["string", "null"],
+          "description": "Single AI use case this relationship represents, when the category/product is AI-driven. One edge = one application; a brand/vendor pair with multiple distinct AI applications gets multiple relationship edges rather than an array here.",
+          "enum": [
+            "voice_ai",
+            "computer_vision",
+            "ai_personalization_next_best_action",
+            "forecasting",
+            "labor_optimization",
+            "food_waste_optimization",
+            "robotics_autonomous_systems",
+            "predictive_maintenance",
+            "guest_sentiment_conversational_analytics",
+            "order_accuracy_kitchen_throughput_ops_intelligence",
+            "other",
+            null
+          ]
+        },
+        "deployment_status": {
+          "type": ["string", "null"],
+          "description": "Normalized deployment/lifecycle status independent of deployment.stage. Distinguishes contracted-but-not-yet-live from actually-deployed, and current from historical/superseded, for current-win eligibility filtering.",
+          "enum": [
+            "contracted_deployment_pending",
+            "active_rollout",
+            "significant_deployed_footprint",
+            "brand_wide_deployment",
+            "enterprise_wide_deployment",
+            "all_location_deployment",
+            "multi_unit_deployment",
+            "franchisee_deployment_not_brand_standard",
+            "parent_platform_relationship_brand_scope_unresolved",
+            "deployed_scope_not_publicly_disclosed",
+            "historical_current_status_not_reconfirmed",
+            "historical_reseller_relationship_superseded",
+            "discontinued_or_replaced",
+            "pilot_only",
+            "working_profile_public_source_required",
+            null
+          ]
+        },
+        "deployment_detail": {
+          "type": ["string", "null"],
+          "description": "Short human-readable elaboration of deployment_status, e.g. '300+ locations per 2026 SEC filing; prior estimate was 350+ corporate and franchise'."
+        },
+        "source_assertions": {
+          "type": "array",
+          "description": "Per-source provenance ledger for this relationship. Distinct from sources[] (a list of source-id strings): each entry preserves what a specific source actually claimed, so competing or superseding claims can be preserved rather than overwritten.",
+          "items": {"$ref": "#/definitions/source_assertion"}
+        },
+        "created_at": {"type": "string"},
+        "updated_at": {"type": "string"},
+        "superseded_by": {
+          "type": ["string", "null"],
+          "description": "Relationship id of the newer claim that auto-superseded this one (check_relationship_conflict resolution='auto_superseded'). Set alongside status='superseded'."
+        },
+        "requires_confirmation": {
+          "type": ["boolean", "null"],
+          "description": "True when check_relationship_conflict flagged this relationship as rivaling an already-confirmed incumbent claim (resolution='requires_confirmation'). Set alongside status='conflicting'; a human must resolve which claim is current before either is treated as authoritative."
+        },
+        "conflicts_with": {
+          "type": ["string", "null"],
+          "description": "Relationship id of the rival claim this one conflicts with, when requires_confirmation is true."
+        },
+        "related_claim_id": {
+          "type": ["string", "null"],
+          "description": "Relationship id of the incumbent claim this one was recorded alongside (check_relationship_conflict resolution='recorded_alongside' -- a plain cross-reference, not a 'requires action' flag). Set by resolve_and_upsert_relationship()/check_relationship_conflict() in ecosystem_intelligence.py; added here 2026-10-01 after a real write failed validation against a pre-existing relationship (rel-brand-papa-johns-pos-system-of-record-pos-vendor-par-ops) that already carried this field in production without it ever being added to the schema."
+        }
+      }
+    },
+    "deployment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "stage": {"type": "string"},
+        "deployed_units": {"type": ["number", "null"]},
+        "target_units": {"type": ["number", "null"]},
+        "target_date": {"type": ["string", "null"]},
+        "penetration_pct": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+        "scope": {"type": "string"},
+        "geography": {"type": ["string", "null"]},
+        "channel": {"type": ["string", "null"]},
+        "service_role": {"type": ["string", "null"]},
+        "deployment_claim_type": {"type": ["string", "null"]},
+        "customer_operator": {"type": ["string", "null"]},
+        "scope_unit_count": {"type": ["number", "null"]},
+        "estimated_franchise_groups": {"type": ["number", "null"]},
+        "geographic_concentration": {"type": ["string", "null"]},
+        "corporate_vs_franchise": {
+          "type": ["string", "null"],
+          "enum": [
+            "corporate_mandated",
+            "corporate_recommended",
+            "franchise_choice",
+            "mixed",
+            "unknown",
+            null
+          ]
+        },
+        "evidence": {"type": "string"}
+      }
+    },
+    "relationship_classification": {
+      "type": "object",
+      "required": ["level", "level_name", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "level": {"type": "integer", "minimum": 1, "maximum": 6},
+        "level_name": {
+          "type": "string",
+          "enum": [
+            "pilot",
+            "single_franchisee",
+            "multi_franchisee_adoption",
+            "preferred_vendor",
+            "standardized_platform",
+            "strategic_platform"
+          ]
+        },
+        "confidence": {"$ref": "#/definitions/confidence"},
+        "rationale": {"type": "string"},
+        "basis": {"type": "array", "items": {"type": "string"}},
+        "last_assessed": {"type": ["string", "null"], "format": "date"}
+      }
+    },
+    "signal": {
+      "type": "object",
+      "required": ["id", "event_at", "signal_type", "summary", "entities", "sources", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^sig-[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+$"},
+        "event_at": {"type": "string", "format": "date"},
+        "captured_at": {"type": "string"},
+        "signal_type": {"type": "string"},
+        "summary": {"type": "string"},
+        "domains": {"type": "array", "items": {"type": "string"}},
+        "entities": {"type": "array", "items": {"type": "string"}},
+        "sources": {"type": "array", "items": {"type": "string"}},
+        "confidence": {"$ref": "#/definitions/confidence"},
+        "interpretation": {"type": "string"},
+        "source_type": {"type": "string"},
+        "source_quality": {"type": "string", "enum": ["primary", "strong", "medium", "weak", "unknown"]},
+        "confidence_score": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "corroboration_count": {"type": "integer", "minimum": 0},
+        "corroboration_sources": {"type": "array", "items": {"type": "string"}},
+        "claim_status": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "likely_true",
+            "plausible_but_unverified",
+            "disputed",
+            "likely_false",
+            "insufficient_evidence"
+          ]
+        },
+        "verification_timestamp": {"type": "string", "format": "date"},
+        "narrative_classification": {
+          "type": "string",
+          "enum": [
+            "vendor_claim",
+            "opinion",
+            "rumor",
+            "strategic_weak_signal",
+            "anecdotal_operator_feedback",
+            "verified_reporting",
+            "thought_leadership_narrative",
+            "marketing_adjacent_positioning"
+          ]
+        },
+        "graph_mutation_eligibility": {
+          "type": "string",
+          "enum": [
+            "canonical_fact",
+            "corroborated_intelligence",
+            "weak_signal",
+            "emerging_narrative",
+            "vendor_positioning",
+            "not_eligible"
+          ]
+        },
+        "strategic_relevance_score": {"type": ["number", "null"], "minimum": 0, "maximum": 1}
+      }
+    },
+    "assessment": {
+      "type": "object",
+      "required": ["id", "entity_id", "assessment_type", "summary", "confidence", "sources"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^asm-[a-z0-9][a-z0-9-]{1,160}$"},
+        "entity_id": {"type": "string"},
+        "assessment_type": {"type": "string"},
+        "summary": {"type": "string"},
+        "risk": {"type": "string", "enum": ["green", "yellow", "red", "unknown"]},
+        "confidence": {"$ref": "#/definitions/confidence"},
+        "sources": {"type": "array", "items": {"type": "string"}},
+        "updated_at": {"type": "string"}
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "source_type", "title", "captured_at"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^src-[a-z0-9][a-z0-9-]{1,160}$"},
+        "source_type": {"type": "string"},
+        "title": {"type": "string"},
+        "url": {"type": ["string", "null"]},
+        "path": {"type": ["string", "null"]},
+        "published_at": {"type": ["string", "null"]},
+        "captured_at": {"type": "string"},
+        "quality": {"type": "string", "enum": ["primary", "strong", "medium", "weak", "unknown"]},
+        "notes": {"type": "string"}
+      }
+    },
+    "user_relevance": {
+      "type": "object",
+      "required": ["id", "entity_id", "relevance_type", "score", "relationship_coverage"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^ur-[a-z0-9][a-z0-9-]{1,160}$"},
+        "entity_id": {"type": "string"},
+        "relevance_type": {"type": "string"},
+        "score": {"type": "number", "minimum": 0, "maximum": 100},
+        "relationship_coverage": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {"type": "string", "enum": ["direct", "one_hop", "two_hop", "none", "unknown"]},
+            "people": {"type": "array", "items": {"type": "string"}},
+            "threads": {"type": "array", "items": {"type": "string"}},
+            "notes": {"type": "string"}
+          }
+        },
+        "rationale": {"type": "string"},
+        "updated_at": {"type": "string"}
+      }
+    },
+    "strategic_recommendation": {
+      "type": "object",
+      "required": ["id", "recommendation_type", "summary", "priority", "entities", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^rec-[a-z0-9][a-z0-9-]{1,160}$"},
+        "recommendation_type": {"type": "string"},
+        "summary": {"type": "string"},
+        "priority": {"type": "string", "enum": ["today", "this_week", "monitor", "ignore"]},
+        "entities": {"type": "array", "items": {"type": "string"}},
+        "confidence": {"$ref": "#/definitions/confidence"},
+        "source_assessments": {"type": "array", "items": {"type": "string"}},
+        "updated_at": {"type": "string"}
+      }
+    },
+    "watch_list_entry": {
+      "type": "object",
+      "required": ["entity_id", "priority", "added_at", "reason"],
+      "additionalProperties": false,
+      "properties": {
+        "entity_id": {"type": "string"},
+        "priority": {"type": "string", "enum": ["tier_1", "tier_2", "tier_3"]},
+        "added_at": {"type": "string", "format": "date"},
+        "added_by": {"type": "string", "enum": ["user", "cos_suggested"]},
+        "reason": {"type": "string"},
+        "last_signal_at": {"type": ["string", "null"], "format": "date"},
+        "interrupt_eligible": {"type": "boolean"}
+      }
+    },
+    "source_assertion": {
+      "type": "object",
+      "description": "One source's specific claim about a relationship, preserved even when a later source disagrees or supersedes it. Distinct from the entity/relationship-level sources[] id list.",
+      "required": ["source_id", "url", "discovered_at", "posture"],
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {"type": "string"},
+        "url": {"type": ["string", "null"]},
+        "title": {"type": ["string", "null"]},
+        "publisher": {"type": ["string", "null"]},
+        "published_at": {"type": ["string", "null"], "format": "date"},
+        "discovered_at": {"type": "string", "format": "date"},
+        "source_type": {"type": ["string", "null"]},
+        "source_authority": {
+          "type": ["string", "null"],
+          "enum": [
+            "sec_or_regulatory_filing",
+            "operator_filing_earnings_investor",
+            "vendor_filing_earnings_investor",
+            "official_brand_announcement",
+            "vendor_case_study_named_customer",
+            "official_customer_page_or_executive_statement",
+            "credible_trade_reporting_direct_attribution",
+            "vendor_logo_or_listing_page",
+            "unknown",
+            null
+          ]
+        },
+        "commercial_incentive_posture": {
+          "type": ["string", "null"],
+          "enum": ["vendor_self_interested", "operator_self_interested", "independent", "unknown", null]
+        },
+        "claim_type": {"type": ["string", "null"]},
+        "contracted_locations": {"type": ["number", "null"]},
+        "live_locations": {"type": ["number", "null"]},
+        "rollout_target": {"type": ["string", "null"]},
+        "customer_explicitly_named": {"type": ["boolean", "null"]},
+        "evidence_origin": {
+          "type": ["string", "null"],
+          "enum": ["vendor", "operator", "regulator", "independent_reporting", "unknown", null]
+        },
+        "paraphrase": {"type": ["string", "null"]},
+        "posture": {
+          "type": "string",
+          "enum": ["current", "historical", "contradictory", "superseding"]
+        }
+      }
+    }
+  }
+}

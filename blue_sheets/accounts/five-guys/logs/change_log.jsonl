@@ -1,0 +1,1 @@
+{"change_id": "chg-five-guys-0001", "timestamp": "2026-08-21T00:00:00Z", "type": "shell_created", "description": "Account shell created in the governed Blue Sheet repository; no dossier content populated yet.", "auto_applied": ["account.json shell", "empty evidence/actions/contradictions/source_index"], "requires_approval": [], "reviewed_by": "automation:blue-sheet-seed-v0.1"}

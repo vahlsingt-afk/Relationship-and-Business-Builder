@@ -1,0 +1,19 @@
+{
+  "file_id": "cap-9646b6639666f94a",
+  "queued_at": "2026-09-19T11:23:20+00:00",
+  "source_id": "chatgpt_intelligence_drop",
+  "source_label": "ChatGPT Intelligence Drop",
+  "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-09-18_wendys_meritage_bankruptcy_screenshot.md",
+  "capture_type": "meeting",
+  "title_hint": "ChatGPT Intelligence Drop \u2014 chatgpt_intelligence_drop 2026-09-18_wendys_meritage_bankruptcy_screenshot",
+  "transcription_method": "unavailable",
+  "transcript": "",
+  "word_count": 0,
+  "transcript_available": false,
+  "status": "processed",
+  "processed_at": "2026-09-19T11:23:27+00:00",
+  "processing_result": {
+    "skipped": true,
+    "reason": "no_transcript_available"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "competitor_id": "comp-upserve-skyview-equity",
+  "competitor_slug": "upserve-skyview-equity",
+  "display_name": "Upserve (Skyview Equity)",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-09-29T14:57:11Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:11Z",
+  "latest_cos_commentary": {
+    "headline": "Skyview now owns the Upserve line; ownership transition may create POS and payments renewal windows.",
+    "genius_exposure": "Skyview now owns the Upserve line; ownership transition may create POS and payments renewal windows.",
+    "competitive_timing": "Lightspeed sold the Upserve U.S. hospitality product line to Skyview Equity in April 2026; the divested scope included about 3,200 U.S. customer locations.",
+    "sales_response": "Identify Upserve contracts and ask about support, roadmap, processing and data portability post-sale.",
+    "risk_and_uncertainty": "The approximately 3,200 locations are the divested product-line scope, not all Lightspeed restaurants.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 38
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 38,
+    "pack_claim_count": 3,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 1,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "Positioning",
+        "Strengths",
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Recent News / Product Updates",
+        "Named Customers"
+      ],
+      "unlinked_pack_claims": 1,
+      "legacy_claims_need_date_and_current_status_check": 3,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

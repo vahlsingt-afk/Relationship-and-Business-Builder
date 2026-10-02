@@ -1,0 +1,78 @@
+{
+  "competitor_id": "comp-hme-hm-electronics",
+  "competitor_slug": "hme-hm-electronics",
+  "display_name": "HME (HM Electronics)",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": [
+      {
+        "point": "Installed-base incumbency across major QSR brands (headsets/timers)",
+        "evidence_id": "note-0003",
+        "added_at": "2026-09-26T12:23:33Z"
+      },
+      {
+        "point": "Nitro Vision AI: \"cost-effective add-on to existing ZOOM Nitro systems\"",
+        "evidence_id": "note-0004",
+        "added_at": "2026-09-26T12:23:33Z"
+      }
+    ]
+  },
+  "category_battle_cards": {},
+  "products": [],
+  "strengths": [],
+  "weaknesses": [],
+  "vulnerabilities": [],
+  "key_customers": [],
+  "recent_news": [],
+  "trends": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "competitor",
+    "last_reviewed_by": null
+  },
+  "last_evidence_date": "2026-09-28",
+  "last_synced_at": "2026-09-29T14:57:10Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T14:57:10Z",
+  "latest_cos_commentary": {
+    "headline": "Headsets and drive-thru timers create an operations incumbent at QSR windows.",
+    "genius_exposure": "Headsets and drive-thru timers create an operations incumbent at QSR windows.",
+    "competitive_timing": "HME markets ZOOM Nitro timers with real-time drive-thru insights for mobile pickup and pull-forward waiting areas. Second check: Omilia describes an HME hardware integration in the Taco Bell voice-AI drive-thru case study.",
+    "sales_response": "Confirm timer and headset model by chain, then compare speed-of-service measurement and interoperability.",
+    "risk_and_uncertainty": "Undated product page supports features, not named deployments; accessed 2026-09-28. Joint case study does not establish the exact HME timer or headset count across 890+ sites.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 20
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 20,
+    "pack_claim_count": 12,
+    "pack_claims_with_url": 8,
+    "pack_claims_inherited_url": 3,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 4,
+      "legacy_claims_need_date_and_current_status_check": 12,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  }
+}

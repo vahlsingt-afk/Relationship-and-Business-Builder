@@ -1,0 +1,837 @@
+{
+  "schema_version": "1.0",
+  "projection_type": "generated_read_only",
+  "generated_at": "2026-10-02T10:00:21.935690+00:00",
+  "as_of_date": "2026-10-02",
+  "repository_revision": "c042e92fa20180ece58b26354fb2e9754b1742b0",
+  "authority_registry": "system/CANONICAL_REGISTRY.yaml",
+  "freshness": {
+    "inputs": {
+      "registry": {
+        "path": "system/CANONICAL_REGISTRY.yaml",
+        "modified_at": "2026-09-28T20:51:02.479312+00:00",
+        "age_hours": 85.2
+      },
+      "manifest": {
+        "path": "system/MANIFEST.md",
+        "modified_at": "2026-10-02T10:00:21.190464+00:00",
+        "age_hours": 0.0
+      },
+      "weekly_plan": {
+        "path": "system/weekly_plan.json",
+        "modified_at": "2026-09-29T01:00:06.061000+00:00",
+        "age_hours": 81.0
+      },
+      "legacy_loops": {
+        "path": "system/loop_ledger.md",
+        "modified_at": "2026-10-01T10:54:46.459057+00:00",
+        "age_hours": 23.1
+      },
+      "executive_loops": {
+        "path": "system/eolms/loops.json",
+        "modified_at": "2026-09-10T11:56:40.911638+00:00",
+        "age_hours": 526.1
+      },
+      "active_threads": {
+        "path": "system/active_threads.yaml",
+        "modified_at": "2026-09-18T17:44:15.866677+00:00",
+        "age_hours": 328.3
+      },
+      "strategic_events": {
+        "path": "system/strategic_events.json",
+        "modified_at": "2026-10-02T10:00:06.891739+00:00",
+        "age_hours": 0.0
+      },
+      "identity_matches": {
+        "path": "system/.cache/identity_match_candidates.json",
+        "modified_at": "2026-10-02T09:06:10.584162+00:00",
+        "age_hours": 0.9
+      },
+      "ecosystem_intelligence": {
+        "path": "system/ecosystem_intelligence.json",
+        "modified_at": "2026-10-02T09:17:44.986194+00:00",
+        "age_hours": 0.7
+      }
+    },
+    "stale_after_hours": 48,
+    "stale_inputs": [
+      "registry",
+      "weekly_plan",
+      "executive_loops",
+      "active_threads"
+    ],
+    "input_fingerprint": "3107e3977f62eb2c6fc9c9082d053a157e47f3a04d7f8e8e6ff2010915b0e4cf"
+  },
+  "section_freshness": {
+    "weekly_outcomes_and_priorities": {
+      "stale": true,
+      "based_on_stale_inputs": [
+        "weekly_plan"
+      ]
+    },
+    "active_opportunities": {
+      "stale": true,
+      "based_on_stale_inputs": [
+        "active_threads"
+      ]
+    },
+    "open_loops": {
+      "stale": true,
+      "based_on_stale_inputs": [
+        "executive_loops"
+      ]
+    },
+    "active_theses_and_evidence_state": {
+      "stale": false,
+      "based_on_stale_inputs": []
+    },
+    "recent_material_intelligence": {
+      "stale": false,
+      "based_on_stale_inputs": []
+    },
+    "pending_decisions": {
+      "stale": true,
+      "based_on_stale_inputs": [
+        "executive_loops"
+      ]
+    }
+  },
+  "weekly_outcomes_and_priorities": {
+    "week_of": "2026-09-28",
+    "status": "active",
+    "outcomes": [
+      {
+        "id": "outcome-loop-stability",
+        "title": "Close out overdue and due-today loops",
+        "success_criteria": "Carried over from week of 2026-09-21, still not resolved: Resolve all 1 overdue/due-today loop(s) — close, re-date with reason, or explicitly defer with a new target.",
+        "linked_opportunity_ids": [],
+        "linked_loop_ids": [
+          "L-2026-08-31-001"
+        ],
+        "portfolio_allocation_pct": 50.0,
+        "status": "active"
+      },
+      {
+        "id": "outcome-loop-stability",
+        "title": "Close out overdue and due-today loops",
+        "success_criteria": "Resolve all 2 overdue/due-today loop(s) — close, re-date with reason, or explicitly defer with a new target.",
+        "linked_opportunity_ids": [],
+        "linked_loop_ids": [
+          "L-2026-08-28-001",
+          "L-2026-09-21-001"
+        ],
+        "portfolio_allocation_pct": 50.0,
+        "status": "active"
+      }
+    ],
+    "risks": [],
+    "forcing_functions": []
+  },
+  "active_opportunities": [
+    {
+      "id": "T-2026-05-otp3-cohort-cadence",
+      "title": "OTP3 cohort daily cadence",
+      "opened": "2026-05-08",
+      "status": "open",
+      "type": "chapter_activation",
+      "people": [
+        "bruce-sellnow",
+        "dave-richards",
+        "john-adams"
+      ],
+      "companies": [],
+      "context": "OTP3 leadership cohort formalized as a Circle 2026-05-08. Daily-cadence\ntext contact pattern. McDonald's-franchise-side / OTP Level 3 leaders\nfrom the PAR alumni era.\n",
+      "current_state": "All three at 8d last_touch — well inside threshold; the cohort is\noperating as designed. Dave Richards has an owed-text loop\n(L-2026-05-12-001, due 2026-05-15).\n",
+      "boost_for_brief": "low",
+      "boost_score": 1.1
+    }
+  ],
+  "open_loops": {
+    "legacy": [
+      {
+        "id": "L-2026-07-23-002",
+        "opened": "2026-07-23",
+        "party": "IKEA / Monica / Ray Ghazali",
+        "action": "Parked until 2026-08-24. Positive solution signal; product/payment requirement identified. Todd followed up with Ray Ghazali on 2026-08-03. Ray reported that Monica loves the solution, needs debit support without adding another device, and is focused on the in-store work because pressure from Sweden on development is increasing. On 2026-08-10 Todd directed RB to park this loop for two weeks. When it reopens, align internally on a credible debit-on-the-existing-device answer and its technical/commercial implications, then send Monica a concise response through or coordinated with Ray. Closure evidence: Monica confirms the debit/device path and an explicit next meeting, pilot, proposal revision, or no-go decision is captured. [Re-dated 2026-08-31 from 2026-09-25: Reopened from parked state for this week: resolve Ray/IKEA follow-up gate before any Monica ping; either send a clean debit/support answer or explicitly park again.] [Re-dated 2026-08-31 from 2026-09-05: Todd reset IKEA timing: follow up by 2026-09-30 rather than forcing this week.] [Re-dated 2026-08-31 from 2026-09-30: Todd confirmed: parked the IKEA opportunity until the end of September.] [Re-dated 2026-09-21 from 2026-09-30: Todd directed that the IKEA opportunity remain parked until October 31.]",
+        "target_date": "2026-10-31",
+        "status": "open — parked until 2026-09-30",
+        "authority": "system/loop_ledger.md"
+      },
+      {
+        "id": "L-2026-08-10-002",
+        "opened": "2026-08-10",
+        "party": "Worldpay/Genius transaction-metered POS initiative / Five Guys",
+        "action": "Internal initiative approval gate before any customer approach. Todd has defined a repeatable Worldpay/Genius transaction-metered POS initiative for qualified Worldpay customers, with Five Guys as the first candidate design and pilot account—not a one-account pricing exception or approved offer. This is not a payment-processing subsidy: the transaction is the usage meter and potentially the collection rail. The working model uses a separately stated fixed POS software fee per eligible card transaction, never a percentage or blended processing uplift, with a defined monthly floor and ceiling; collection beginning with production activity through existing payment/billing rails if technically feasible; three- or five-year price protection; device flexibility; API-first preservation of customer choice; and one global software foundation. An optional earned service-fee credit can reward faster activation. Business benefits to validate include earlier cash collection, less separate SaaS invoicing, lower accounts-receivable and collections exposure, processing retention, faster deployment, and a reusable Worldpay differentiation. Market research confirms that payments-funded/no-monthly POS is established at SMB scale (including Toast, SpotOn, Square, Shift4, and Global Payments/Genius); no public source reviewed showed the complete fixed-per-transaction/floor-and-ceiling/open/global model for an enterprise restaurant. Do not claim “industry first.” Use “transaction-metered POS software” and “no separate SaaS invoice,” since the customer still purchases software and the floor may operate like a minimum service charge. Todd recalls that the Five Guys PAR contract renews or ends in March 2027; Avery independently described spring 2027. First secure Ryan's approval to investigate: (1) can Worldpay/Genius physically, financially, legally, and operationally deliver the initiative; (2) does the business have the will to pursue it; and (3) is Five Guys the right first pilot? Do not present the concept to M.J. until these gates clear and Avery is aligned. Executive summary: system/account_intelligence/2026-08-10-worldpay-transaction-funded-pos-executive-summary.md. Market research: system/account_intelligence/2026-08-10-transaction-funded-pos-market-research.md. Closure evidence: Ryan reviews the initiative; an explicit stop/proceed decision is recorded; if proceeding, feasibility owners and a decision date are named; and the Five Guys contract calendar is verified. [Re-dated 2026-08-31 from 2026-08-14: Re-dated to current execution week: force Ryan stop/proceed decision on transaction-metered POS / Five Guys initiative before external escalation.] [Re-dated 2026-08-31 from 2026-09-05: Todd moved transaction-metered POS initiative to next week's schedule.] [Re-dated 2026-09-11 from 2026-09-11: Put back on next week's action list to push Ryan again for a stop/proceed decision on the transaction-metered POS / Five Guys initiative.] [Re-dated 2026-09-21 from 2026-09-18: Todd directed that the transaction-metered POS / Five Guys initiative be parked until October.]",
+        "target_date": "2026-10-01",
+        "status": "open — moved to next week schedule",
+        "authority": "system/loop_ledger.md"
+      },
+      {
+        "id": "L-2026-08-28-001",
+        "opened": "2026-08-28",
+        "party": "Jeff Caplin (Church's Texas Chicken)",
+        "action": "Jeff Caplan plans to stop by FSTEC to talk with Todd (per Maggie Lenhart, Worldpay RM, 2026-08-28 email) -- exact date/time TBD, confirm against FSTEC schedule and Church's Qu POS renewal / DMB opportunity context. [Re-dated 2026-09-11 from 2026-09-27: Leave active for FSTEC; confirm Jeff Caplin timing and Church's context before the September 23-25 event.]",
+        "target_date": "2026-09-22",
+        "status": "open",
+        "authority": "system/loop_ledger.md"
+      },
+      {
+        "id": "L-2026-08-31-001",
+        "opened": "2026-08-31",
+        "party": "Josh Wesolowski / McDonald's",
+        "action": "LinkedIn reply 2026-08-31: Josh is open to meeting after sabbatical, returns 2026-09-09, and suggested finding time near the end of the month. He specifically asked for Traffic Manager and DMB material. Next: confirm McDonald's email, send collateral, and aim for a late-September meeting. [Re-dated 2026-09-10 from 2026-09-10: Collateral was sent 2026-09-09 and Josh confirmed receipt and interest in finding time. Follow up next week to schedule a late-September meeting; offer deeper Traffic Manager/DMB material only if useful.]",
+        "target_date": "2026-09-15",
+        "status": "open",
+        "authority": "system/loop_ledger.md"
+      },
+      {
+        "id": "L-2026-08-11-001",
+        "opened": "2026-08-11",
+        "party": "Jeff Coffland",
+        "action": "Migrated from EL-2026-08-11-002 (EOLMS). Receive Jeff Coffland's Justine Power introduction and McDonald's routing feedback -- establishes the correct McDonald's category-owner path and validates whether DMB, drive-thru timing, or hardware merits a real motion. Waiting on Jeff Coffland since the Genius product map was sent (2026-08-11); no response yet as of 2026-09-10. [Re-dated 2026-09-11 from 2026-08-20: Ball is in Jeff Coffland’s court; Todd will wait and not ping him before September 30.]",
+        "target_date": "2026-09-30",
+        "status": "open",
+        "authority": "system/loop_ledger.md"
+      },
+      {
+        "id": "L-2026-09-21-001",
+        "opened": "2026-09-21",
+        "party": "RB self-audit",
+        "action": "Self-audit findings: 1 write op(s) receiving traffic with zero confirmed mutations: refreshSources; 2 JPR recording(s) sitting unqueued or unprocessed; full test suite failing (9 failed, 5746 passed, 2 skipped, 7 warnings in 668.54s (0:11:08)): system/tests/test_earnings_monitor.py::BridgeSignalsToBrandProfilesTest::test_dry_run_does_not_persist, system/tests/test_earnings_monitor.py::BridgeSignalsToBrandProfilesTest::test_empty_title_is_skipped, system/tests/test_earnings_monitor.py::BridgeSignalsToBrandProfilesTest::test_entity_id_resolving_to_a_vendor_not_a_brand_is_skipped, system/tests/test_earnings_monitor.py::BridgeSignalsToBrandProfilesTest::test_operator_side_row_bridges_into_brand_profile, system/tests/test_earnings_monitor.py::BridgeSignalsToBrandProfilesTest::test_rerun_does_not_duplicate_the_same_signal...",
+        "target_date": "2026-09-24",
+        "status": "open",
+        "authority": "system/loop_ledger.md"
+      }
+    ],
+    "executive": [
+      {
+        "id": "EL-2026-08-11-002",
+        "title": "Receive Jeff Coffland’s Justine Power introduction and McDonald’s routing feedback",
+        "category": "waiting",
+        "status": "archived",
+        "priority": "high",
+        "owner": "Todd Vahlsing",
+        "next_action": "After sending the product map, monitor for Justine Power’s contact/introduction and Jeff’s feedback from CosMc’s-aware contacts or sourcing.",
+        "waiting_on": "Jeff Coffland",
+        "due_date": "2026-08-20",
+        "related_people": [
+          "Jeff Coffland",
+          "Justine Power"
+        ],
+        "related_orgs": [
+          "McDonald’s",
+          "Global Payments",
+          "Genius"
+        ],
+        "updated_at": "2026-09-10",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-002",
+        "title": "Global Payments — Receive Enterprise Account Portfolio",
+        "category": "waiting",
+        "status": "archived",
+        "priority": "high",
+        "owner": "Todd Vahlsing",
+        "next_action": "Confirm portfolio scope once assigned",
+        "waiting_on": "Account assignments from Global Payments leadership",
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-09-10",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-003",
+        "title": "Global Payments — Enterprise Capture Strategy",
+        "category": "project",
+        "status": "archived",
+        "priority": "high",
+        "owner": "Todd Vahlsing",
+        "next_action": "Present strategic account capture plan to Ryan",
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-09-10",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-05-08-002",
+        "title": "**Introduce** Noelle and Cristina — both hospitality consultants in the `hospitality-from-success-champions` orbit; first concrete intro the",
+        "category": "action",
+        "status": "archived",
+        "priority": "medium",
+        "owner": "Todd Vahlsing",
+        "next_action": "**Introduce** Noelle and Cristina — both hospitality consultants in the `hospitality-from-success-champions` orbit; first concrete intro the system has surfaced [Re-dated 2026-06-04 from 2026-06-01: Intro still pending. Noelle active in email (Hospitality Table). Reach out to mak",
+        "waiting_on": null,
+        "due_date": "2026-06-11",
+        "related_people": [
+          "Noelle Labrie → Cristina Gia Luciano"
+        ],
+        "related_orgs": [],
+        "updated_at": "2026-09-10",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-001",
+        "title": "Global Payments — Develop 90-Day Success Plan",
+        "category": "action",
+        "status": "deferred",
+        "priority": "high",
+        "owner": "Todd Vahlsing",
+        "next_action": "Draft 90-day success plan for the VP Sales role at Global Payments",
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-07-02",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-004",
+        "title": "RB — Intelligence Platform",
+        "category": "strategic_initiative",
+        "status": "active",
+        "priority": "medium",
+        "owner": "Todd Vahlsing",
+        "next_action": "Continue development: Intelligence Brief, Daily Brief, Executive Dashboard, Personal Intelligence, Knowledge Graph, Mutation Engine, Proof Statistics, Freshness Engine",
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-07-02",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-005",
+        "title": "RB — Capture Platform",
+        "category": "strategic_initiative",
+        "status": "active",
+        "priority": "high",
+        "owner": "Todd Vahlsing",
+        "next_action": "Begin testing with live meetings next week — JPR, Fathom, Apple Watch capture, cloud intelligence ingestion, meeting intelligence processing",
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-07-02",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-006",
+        "title": "RB — Executive Chief of Staff",
+        "category": "strategic_initiative",
+        "status": "active",
+        "priority": "high",
+        "owner": "Todd Vahlsing",
+        "next_action": "Continue building Executive Operating System: Open Loop Register, Relationship Intelligence, Executive Task Intelligence, CoS workflows",
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-07-02",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-007",
+        "title": "RB — Claude Development",
+        "category": "strategic_initiative",
+        "status": "active",
+        "priority": "medium",
+        "owner": "Todd Vahlsing",
+        "next_action": "Remaining defect resolution, architecture improvements, intelligence quality improvements, automation enhancements",
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-07-02",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-008",
+        "title": "BridgePoint Ops — Transition to personal brand / publishing / side business",
+        "category": "project",
+        "status": "active",
+        "priority": "medium",
+        "owner": "Todd Vahlsing",
+        "next_action": "Website transition, LinkedIn transition, brand messaging",
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-07-02",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-009",
+        "title": "Publishing — Perfect Life Is a Perfect Lie",
+        "category": "project",
+        "status": "active",
+        "priority": "medium",
+        "owner": "Todd Vahlsing",
+        "next_action": "Rewrite, editing, publication strategy, launch planning",
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-07-02",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-010",
+        "title": "Executive Thought Leadership",
+        "category": "strategic_initiative",
+        "status": "deferred",
+        "priority": "low",
+        "owner": "Todd Vahlsing",
+        "next_action": null,
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-07-02",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-011",
+        "title": "Executive Relationship Capital",
+        "category": "relationship",
+        "status": "deferred",
+        "priority": "medium",
+        "owner": "Todd Vahlsing",
+        "next_action": null,
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-07-02",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-012",
+        "title": "Home Projects — Bathroom Remodel",
+        "category": "project",
+        "status": "active",
+        "priority": "medium",
+        "owner": "Todd Vahlsing",
+        "next_action": "Purchase tub, surround, toilet, vanity; then demo and remodel",
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-07-02",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-013",
+        "title": "Home Projects — Blink Cameras RMA",
+        "category": "action",
+        "status": "active",
+        "priority": "low",
+        "owner": "Todd Vahlsing",
+        "next_action": "Follow up on RMA replacement cameras",
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-07-02",
+        "authority": "system/eolms/loops.json"
+      },
+      {
+        "id": "EL-2026-07-02-014",
+        "title": "Passive Career Intelligence",
+        "category": "opportunity",
+        "status": "monitor",
+        "priority": "monitor",
+        "owner": "Todd Vahlsing",
+        "next_action": "Remain open to exceptional executive opportunities; no active job search",
+        "waiting_on": null,
+        "due_date": null,
+        "related_people": [],
+        "related_orgs": [],
+        "updated_at": "2026-07-02",
+        "authority": "system/eolms/loops.json"
+      }
+    ],
+    "total": 22
+  },
+  "active_theses_and_evidence_state": [
+    {
+      "event_id": "sev_c0401462297996",
+      "title": "Global Payments / Genius AI integration for restaurant operators",
+      "lifecycle": "validated_signal",
+      "confidence_score": 0.98,
+      "last_seen_at": "2026-10-01T10:17:28+00:00",
+      "entities": {
+        "companies": [
+          "7 Brew",
+          "DoorDash",
+          "Fiserv",
+          "Genius",
+          "Global Payments",
+          "RestaurantData",
+          "Smoothie King",
+          "Subway",
+          "Toast",
+          "U.S. and Canada restaurant market",
+          "Worldpay",
+          "ncr",
+          "olo",
+          "qu"
+        ],
+        "people": []
+      },
+      "thesis_alignment": {
+        "aligned": true,
+        "matched_theses": [
+          "operational_ai_realism",
+          "franchisee_trust",
+          "restaurant_tech_implementation_risk",
+          "friday_night_survivability"
+        ],
+        "summary": "Reinforces Todd's operational AI realism thesis: restaurant AI has to survive store operations, trust, governance, and measurable ROI."
+      },
+      "proof_stats": {
+        "evidence_count": 10,
+        "channels_distinct": 4,
+        "last_fresh_evidence_at": "2026-10-01T10:17:28+00:00"
+      }
+    },
+    {
+      "event_id": "sev_1f0262884bd5b8",
+      "title": "Operational AI implementation risk in restaurants",
+      "lifecycle": "validated_signal",
+      "confidence_score": 0.98,
+      "last_seen_at": "2026-09-30T12:22:12+00:00",
+      "entities": {
+        "companies": [
+          "Berry AI",
+          "Blue Apron",
+          "Cerence Inc.",
+          "Chaac Pizza Northeast",
+          "Checkers & Rally's",
+          "Chipotle",
+          "Craveworthy Brands",
+          "Culver's",
+          "Dairy Queen",
+          "DoorDash, Inc.",
+          "Dragontail",
+          "Fat Brands",
+          "Founders Table Restaurant Group",
+          "Gold Star Chili",
+          "Google Cloud",
+          "Grubhub",
+          "Hopdoddy",
+          "Jersey Mike's",
+          "MOD Pizza",
+          "Mas Restaurant Group",
+          "McDonald's",
+          "Miso Robotics",
+          "National Restaurant Association Show",
+          "Olo",
+          "Omilia",
+          "On the Border",
+          "PAR Technology",
+          "Papa Johns",
+          "Pizza Hut",
+          "Punchh",
+          "QDOBA",
+          "QSR operators",
+          "Qu",
+          "Raising Cane's Chicken Fingers",
+          "Red Robin",
+          "Restaurant Brands",
+          "Restaurant Brands International",
+          "Restaurant brands",
+          "Restaurant365",
+          "Shake Shack",
+          "Smooth Commerce",
+          "Smooth Commerce, Pizza Hut, Yum Brands, Dragontail, Chaac Pizza Northeast",
+          "Smoothie King",
+          "SoundHound",
+          "SoundHound AI",
+          "Southpaw",
+          "Spencer Marks",
+          "Square",
+          "TGI Fridays",
+          "Taco Bell",
+          "U.S. restaurant labor market",
+          "Uber Technologies, Inc.",
+          "Whataburger",
+          "Wingstop",
+          "Wonder",
+          "Yum Brands",
+          "Zume",
+          "ncr",
+          "olo",
+          "qu",
+          "restaurant brands",
+          "restaurant operators"
+        ],
+        "people": []
+      },
+      "thesis_alignment": {
+        "aligned": true,
+        "matched_theses": [
+          "operational_ai_realism",
+          "franchisee_trust",
+          "restaurant_tech_implementation_risk",
+          "friday_night_survivability"
+        ],
+        "summary": "Reinforces Todd's operational AI realism thesis: restaurant AI has to survive store operations, trust, governance, and measurable ROI."
+      },
+      "proof_stats": {
+        "evidence_count": 123,
+        "channels_distinct": 4,
+        "last_fresh_evidence_at": "2026-09-30T12:22:12+00:00"
+      }
+    },
+    {
+      "event_id": "sev_6e3550a79bbe73",
+      "title": "Pizza Hut / Yum / Dragontail rollout litigation",
+      "lifecycle": "rumor_or_early_signal",
+      "confidence_score": 0.59,
+      "last_seen_at": "2026-05-28T09:33:53+00:00",
+      "entities": {
+        "companies": [
+          "Chaac Pizza Northeast",
+          "Dragontail",
+          "LinkedIn restaurant-tech signal",
+          "Pizza Hut",
+          "Yum Brands",
+          "olo"
+        ],
+        "people": []
+      },
+      "thesis_alignment": {
+        "aligned": true,
+        "matched_theses": [
+          "operational_ai_realism",
+          "franchisee_trust",
+          "restaurant_tech_implementation_risk",
+          "friday_night_survivability"
+        ],
+        "summary": "Reinforces Todd's operational AI realism thesis: restaurant AI has to survive store operations, trust, governance, and measurable ROI."
+      },
+      "proof_stats": {
+        "evidence_count": 2,
+        "channels_distinct": 1,
+        "last_fresh_evidence_at": "2026-05-28T09:33:53+00:00"
+      }
+    },
+    {
+      "event_id": "sev_949bc4ac39072d",
+      "title": "Starbucks AI inventory rollback",
+      "lifecycle": "rumor_or_early_signal",
+      "confidence_score": 0.65,
+      "last_seen_at": "2026-05-27T10:00:39+00:00",
+      "entities": {
+        "companies": [
+          "NomadGo",
+          "Starbucks"
+        ],
+        "people": []
+      },
+      "thesis_alignment": {
+        "aligned": true,
+        "matched_theses": [
+          "operational_ai_realism",
+          "franchisee_trust",
+          "restaurant_tech_implementation_risk",
+          "friday_night_survivability"
+        ],
+        "summary": "Reinforces Todd's operational AI realism thesis: restaurant AI has to survive store operations, trust, governance, and measurable ROI."
+      },
+      "proof_stats": {
+        "evidence_count": 1,
+        "channels_distinct": 1,
+        "last_fresh_evidence_at": "2026-05-27T10:00:39+00:00"
+      }
+    }
+  ],
+  "recent_material_intelligence": [
+    {
+      "signal_id": "sig-2022-06-29-brand-slice-factory-leadership-change",
+      "signal_type": "leadership_change",
+      "entities": [
+        "Slice Factory"
+      ],
+      "summary": "AI Tech Company Nala Robotics Signs Expansion Deal with Slice Factory Pizza Chain - PR Newswire. AI Tech Company Nala Robotics Signs Expansion Deal with Slice Factory Pizza Chain - PR Newswire",
+      "confidence": "medium",
+      "event_at": "2022-06-29",
+      "captured_at": "2026-10-02T09:16:26.402325Z",
+      "source": "ecosystem_intelligence"
+    },
+    {
+      "signal_id": "sig-2026-09-30-vendor-doordash-rfp-cycle-signal",
+      "signal_type": "rfp_cycle_signal",
+      "entities": [
+        "DoorDash"
+      ],
+      "summary": "DoorDash introduces DashOS to connect restaurant guest relationships across channels. Operators may gain a cross-channel guest view without replacing the POS, but should test data control, economics, and rollout eligibility",
+      "confidence": "medium",
+      "event_at": "2026-09-30",
+      "captured_at": "2026-10-01T10:17:29.265205Z",
+      "source": "ecosystem_intelligence"
+    },
+    {
+      "event_id": "sev_c0401462297996",
+      "title": "Global Payments / Genius AI integration for restaurant operators",
+      "last_seen_at": "2026-10-01T10:17:28+00:00",
+      "recommended_actions": [
+        "Develop LinkedIn thought leadership post",
+        "Add to operational AI case-study repository",
+        "Monitor vendor positioning changes",
+        "Watch franchisee sentiment and legal escalation"
+      ],
+      "source": "strategic_events"
+    },
+    {
+      "event_id": "sev_1f0262884bd5b8",
+      "title": "Operational AI implementation risk in restaurants",
+      "last_seen_at": "2026-09-30T12:22:12+00:00",
+      "recommended_actions": [
+        "Develop LinkedIn thought leadership post",
+        "Add to operational AI case-study repository",
+        "Monitor vendor positioning changes",
+        "Watch franchisee sentiment and legal escalation"
+      ],
+      "source": "strategic_events"
+    },
+    {
+      "signal_id": "sig-2026-09-28-brand-smoothie-king-extreme-pain",
+      "signal_type": "extreme_pain",
+      "entities": [
+        "Smoothie King"
+      ],
+      "summary": "Smoothie King and 7 Brew prioritize back-office automation that protects guest touchpoints. Back-office reliability and inventory accuracy can remove morning store disruption and manual work without changing the guest experience",
+      "confidence": "medium",
+      "event_at": "2026-09-28",
+      "captured_at": "2026-09-29T10:13:14.565447Z",
+      "source": "ecosystem_intelligence"
+    },
+    {
+      "signal_id": "sig-2025-06-02-brand-pinkberry-leadership-change",
+      "signal_type": "leadership_change",
+      "entities": [
+        "Pinkberry"
+      ],
+      "summary": "Pinkberry Announces Partnership with Bestselling Author Emily Henry and Unveils Ultimate Cool-Down Treat Featuring Classic Summer Flavors - PR Newswire. Pinkberry Announces Partnership with Bestselling Author Emily Henry and Unveils Ultimate Cool-Down Treat Featuring Classic Summer Flavors - PR News",
+      "confidence": "medium",
+      "event_at": "2025-06-02",
+      "captured_at": "2026-09-28T09:21:14.045004Z",
+      "source": "ecosystem_intelligence"
+    },
+    {
+      "signal_id": "sig-2023-10-02-brand-just-salad-vendor-relationship-formed",
+      "signal_type": "vendor_relationship_formed",
+      "entities": [
+        "Just Salad"
+      ],
+      "summary": "Just Salad Partners With Wellness Educator, Mona Vand to Launch Dreamy Caesar Salad - PR Newswire. Just Salad Partners With Wellness Educator, Mona Vand to Launch Dreamy Caesar Salad - PR Newswire",
+      "confidence": "medium",
+      "event_at": "2023-10-02",
+      "captured_at": "2026-09-27T09:13:02.573276Z",
+      "source": "ecosystem_intelligence"
+    },
+    {
+      "signal_id": "sig-2025-09-25-brand-andy-s-frozen-custard-vendor-relationship-formed",
+      "signal_type": "vendor_relationship_formed",
+      "entities": [
+        "Andy's Frozen Custard"
+      ],
+      "summary": "Andy's Frozen Custard Selects Signal Theory as AOR for Creative and Strategic Partnership - PR Newswire. Andy's Frozen Custard Selects Signal Theory as AOR for Creative and Strategic Partnership - PR Newswire",
+      "confidence": "medium",
+      "event_at": "2025-09-25",
+      "captured_at": "2026-09-27T09:12:49.099483Z",
+      "source": "ecosystem_intelligence"
+    },
+    {
+      "signal_id": "sig-2026-02-05-brand-fatburger-leadership-change",
+      "signal_type": "leadership_change",
+      "entities": [
+        "Fatburger"
+      ],
+      "summary": "It’s Flat Out Delicious! Fatburger Introduces All-New Flatburger - GlobeNewswire. It’s Flat Out Delicious! Fatburger Introduces All-New Flatburger - GlobeNewswire",
+      "confidence": "medium",
+      "event_at": "2026-02-05",
+      "captured_at": "2026-09-26T09:17:28.573330Z",
+      "source": "ecosystem_intelligence"
+    },
+    {
+      "signal_id": "sig-2026-09-24-brand-dave-buster-s-vendor-relationship-formed",
+      "signal_type": "vendor_relationship_formed",
+      "entities": [
+        "Dave & Buster's"
+      ],
+      "summary": "Dave & Buster's Taps GUT and Mediaplus to Power the Next Chapter of Growth Marketing - PR Newswire. Dave & Buster's Taps GUT and Mediaplus to Power the Next Chapter of Growth Marketing - PR Newswire",
+      "confidence": "medium",
+      "event_at": "2026-09-24",
+      "captured_at": "2026-09-25T09:15:03.759279Z",
+      "source": "ecosystem_intelligence"
+    },
+    {
+      "event_id": "sev_6e3550a79bbe73",
+      "title": "Pizza Hut / Yum / Dragontail rollout litigation",
+      "last_seen_at": "2026-05-28T09:33:53+00:00",
+      "recommended_actions": [
+        "Develop LinkedIn thought leadership post",
+        "Add to operational AI case-study repository",
+        "Monitor vendor positioning changes",
+        "Watch franchisee sentiment and legal escalation"
+      ],
+      "source": "strategic_events"
+    },
+    {
+      "event_id": "sev_949bc4ac39072d",
+      "title": "Starbucks AI inventory rollback",
+      "last_seen_at": "2026-05-27T10:00:39+00:00",
+      "recommended_actions": [
+        "Develop LinkedIn thought leadership post",
+        "Add to operational AI case-study repository",
+        "Monitor vendor positioning changes",
+        "Watch franchisee sentiment and legal escalation"
+      ],
+      "source": "strategic_events"
+    }
+  ],
+  "pending_decisions": [],
+  "reconciliation_queue": {
+    "authority_gaps": [
+      "establish the canonical account registry",
+      "establish the canonical opportunity registry",
+      "establish the canonical thesis registry",
+      "establish the canonical decision ledger",
+      "choose a single long-term loop authority or formalize permanent namespace split",
+      "define atomic cross-projection regeneration and rollback",
+      "RESOLVED 2026-08-21 (Todd): blue_sheets/ is a downstream, opt-in projection of the canonical account/opportunity registry, not a replacement for it — see the blue_sheets domain's architectural_decision above. The underlying establish-the- canonical-account-registry / establish-the-canonical-opportunity-registry items two lines up remain separately unresolved and still need their own decision."
+    ],
+    "stale_active_threads": [],
+    "pending_identity_matches": [
+      {
+        "id": "polly-watt::web@happenstance.fyi",
+        "baseline_id": "polly-watt",
+        "baseline_name": "Polly Watt",
+        "baseline_company": "WattNext",
+        "sender_name": "Polly Watt",
+        "sender_email": "web@happenstance.fyi",
+        "account": "bridgepoint",
+        "thread_subject": "Add me on Happenstance",
+        "last_message_at": "Sun, 30 Aug 2026 06:11:15 +0000",
+        "first_seen": "2026-08-30",
+        "match_type": "exact_name_no_email_on_file"
+      }
+    ],
+    "cross_namespace_loop_conflicts": []
+  },
+  "promotion_contract": {
+    "allowed_statuses": [
+      "not_persisted",
+      "proposed_write_pending_confirmation",
+      "persisted",
+      "blocked_conflict",
+      "skipped_duplicate"
+    ]
+  }
+}

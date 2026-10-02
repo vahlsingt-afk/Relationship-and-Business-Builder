@@ -1,0 +1,1002 @@
+version: 1
+registry_id: rbb-canonical-registry
+effective_date: 2026-08-19
+status: approved_with_amendments
+status_history:
+  - status: proposed
+    effective_date: 2026-08-19
+  - status: approved_with_amendments
+    effective_date: 2026-08-21
+    decided_by: Todd Vahlsing
+    note: >-
+      Flipped from proposed to approved_with_amendments — multiple sessions
+      (including the one that built blue_sheets/) had already been building
+      against this registry as accepted before the status field caught up.
+      "With amendments" because the domains list keeps growing (e.g. the
+      blue_sheets domain added 2026-08-21) and several items under
+      unresolved_governance_decisions remain genuinely open — approval of
+      the registry's authority model does not mean every domain within it
+      is finished.
+purpose: >-
+  Machine-readable declaration of authority, projections, mutation ownership,
+  validation, freshness, conflict handling, and legacy posture for each RBB domain.
+
+workspace:
+  canonical_path: /Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder
+  designation_source: system/WORKSPACE_CANONICAL.md
+  repository_role: sole_system_of_record
+  mirrors_and_worktrees:
+    role: development_or_cached_projection_only
+    writable_as_canonical: false
+  chat_transcripts:
+    role: input_evidence
+    canonical_only_after_promotion: true
+
+global_policies:
+  event_first_direction: >-
+    Immutable events are the intended authoritative history; current-state files
+    are projections except where a domain below explicitly declares otherwise.
+  persistence_receipts:
+    allowed_statuses:
+      - not_persisted
+      - proposed_write_pending_confirmation
+      - persisted
+      - blocked_conflict
+      - skipped_duplicate
+  mutation_transaction:
+    required_steps:
+      - snapshot
+      - append_or_update_authoritative_store
+      - regenerate_affected_projections
+      - validate
+      - read_back
+      - issue_receipt
+  conflict_policy: >-
+    Preserve competing assertions with provenance and dates. Do not silently
+    overwrite a disagreement; route unresolved conflicts to reconciliation.
+  mutation_authorization:
+    effective_date: 2026-08-20
+    decided_by: >-
+      Claude, in response to RBB Defect — Explicit User Updates Are Not
+      Automatically Promoted (2026-08-20). See
+      system/CLAUDE_RESPONSE_RBB_EXPLICIT_ASSERTION_PROMOTION_2026-08-20.md.
+    explicit_user_assertion:
+      definition: >-
+        A fact, correction, decision, commitment, priority, deadline,
+        completed action, or direct instruction the user stated or confirmed
+        themselves in a cockpit conversation.
+      authorization: auto_promote
+      still_requires_confirmation_when:
+        - referent_is_ambiguous (e.g. "close that opportunity" with more
+          than one open candidate; resolve or ask, never guess)
+        - target_domain.authority_status == distributed_consolidation_pending
+          (accounts, opportunities, strategic_theses, decisions — no single
+          canonical store yet; see domains below)
+        - mutation_is_destructive_or_irreversible (deletion, evidence
+          removal — legacy_policy and guardrails still apply)
+      receipt_required: true
+      persisted_status_must_be_independently_verifiable: >-
+        A reported "persisted" status is a claim, not proof. Verify via the
+        API request log or by confirming the change appears in the next
+        regenerated context.json before treating it as done — this project
+        has two documented cases (closeLoop, ingestExecutiveDeclaration) of
+        a write being reported as confirmed while never actually firing.
+    assistant_inference:
+      definition: >-
+        A conclusion RBB proposes on its own — inferred opportunity status,
+        recommended loop closure, inferred relationship change, or any
+        newly-inferred fact not directly stated by the user.
+      authorization: proposed_write_pending_confirmation
+    external_intelligence:
+      definition: News, meeting intelligence, email-derived information, research.
+      authorization: follow_domain_evidence_and_reconciliation_rules
+  legacy_policy: >-
+    RB 8.x, Relationship Bridge 9.0 transfer material, archived workspaces, and
+    Super KB artifacts are evidence inputs only until explicitly promoted.
+
+domains:
+  identity_relationships:
+    authority_status: operational_with_event_projection_transition
+    authoritative_history:
+      - system/ri_events/*.jsonl
+    current_projections:
+      - system/baseline_index.json
+      - system/cards/
+      - system/briefs/
+      - system/circles/
+      - system/intro_brokers.md (RB-2026-09-08: hand-curated, added to the registry for the first time -- previously undeclared despite being a real, active file; see note below)
+    schemas:
+      - system/SCHEMAS.md
+      - system/schemas/baseline.schema.json
+    mutation_owner:
+      - system/scripts/ri_events.py
+      - system/scripts/mutations.py
+      - system/scripts/intelligence_mutation_engine.py
+    validation:
+      - python3 system/scripts/validate_baseline.py
+    freshness_policy: project events immediately after validated promotion
+    conflict_policy: preserve event assertions; require explicit correction semantics
+    note: >-
+      RB-2026-09-08: relationship-side artifact family added a governed
+      layer on top of this domain's existing projections, not a new domain
+      of its own. relationship_card.py publishes a versioned SNAPSHOT of an
+      existing system/cards/<id>.md into
+      system/artifact_vault/relationship_cards/<contact_id>/ -- it never
+      generates card content; the hand-authored file under system/cards/
+      remains the one real source of truth, this only adds history/
+      indexing/a download link around it. inner_circle.py is new,
+      genuinely computed content: a singleton roll-up
+      (system/artifact_vault/inner_circle/master/) over baseline_index.json
+      contacts with rc_tier == "inner", distinct from the pre-existing,
+      differently-scoped system/circles/*.md (goal-anchored network-
+      activation groups) -- neither is touched or superseded by the other.
+      Same day, phase 2: referral_network.py closes a real, previously-
+      undeclared gap in this domain -- rb_core.py::find_intro_paths()
+      (intro_engine.py's real logic; GET /intro / findIntro) is a tested,
+      already-live broker-path finder that had never been persisted
+      (recomputed fresh every call) NOR represented in this registry at
+      all before today. referral_network.py adds two things: (1) publishes
+      a versioned SNAPSHOT of system/intro_brokers.md (Todd's own
+      hand-curated broker/domain narrative -- never generated, same
+      discipline as relationship_card.py; note this source file is itself
+      currently stale, ~100+ days since last human update, unfixed by this
+      work) into system/artifact_vault/referral_network_overview/master/;
+      (2) persists find_intro_paths(target)'s own computed output
+      per-target into system/artifact_vault/referral_network_analyses/<slug>/,
+      the same additive-parallel-view relationship battle_card.py has to
+      getCategoryMarketShare. findIntro/GET /intro itself is unchanged and
+      still computes fresh by design; it was also newly exposed as a chat
+      tool this same day (previously REST/MCP-only, never callable from
+      chat -- a real, separate gap found while wiring the KB docs for the
+      above).
+      Same day, phase 3 (final): relationship_plan.py closes Todd's entire
+      original 3-bucket artifact taxonomy (customer-side 6 + competitive-
+      side 3 + relationship-side 4 = 13). Unlike the 3 relationship-side
+      artifacts above, this is a genuine green field, not existing
+      infrastructure wired into the governed pattern -- confirmed via
+      investigation, zero prior art beyond the name on ROADMAP.md's list.
+      A relationship_goal + next_moves + status, the per-person analogue
+      of system/circles/*.md's goal/status/"Next moves" shape, gated by
+      user_authorization_quote like createAccountPlan/createWinPlan (real,
+      new, caller-supplied judgment -- unlike the fully-computed or
+      verbatim-snapshot artifacts above). Deliberately vault-only
+      (system/artifact_vault/relationship_plans/<contact_id>/) -- Todd's
+      own choice: never adds fields to baseline_index.json, unlike Account
+      Plan's precedent on account.json, since this domain's authority_status
+      above declares exactly 3 mutation_owner scripts and this module does
+      not become a fourth. Works for any contact regardless of signal_class
+      -- also Todd's own choice, since "build this LMI/LKI contact toward
+      RC" is a real, intended use, not an edge case.
+    legacy_status: inputs_only
+
+  accounts:
+    authority_status: distributed_consolidation_pending
+    authoritative_store: null
+    current_stores:
+      - system/account_intelligence/
+      - system/ecosystem_intelligence.json
+      - system/campaigns/
+      - system/strategic_events.json
+    projections:
+      - system/briefs/
+      - system/published/
+    schemas:
+      - system/SCHEMAS.md
+      - system/schemas/ecosystem_intelligence.schema.json
+    mutation_owner:
+      - system/scripts/ecosystem_intelligence.py
+      - system/scripts/intelligence_mutation_engine.py
+      - system/scripts/campaign_engine.py
+    validation:
+      - python3 system/schemas/validate.py --ecosystem-only
+    freshness_policy: source-dated assertions; rendered views must expose evidence cutoff
+    conflict_policy: retain source assertions and queue relationship conflicts
+    consolidation_target: canonical_account_registry
+    legacy_status: evidence_only
+
+  opportunities:
+    authority_status: distributed_consolidation_pending
+    authoritative_store: null
+    current_stores:
+      - system/active_threads.yaml
+      - system/loop_ledger.md
+      - system/eolms/loops.json
+      - system/account_intelligence/
+      - system/campaigns/
+    projections:
+      - system/weekly_plan.json
+      - system/briefs/
+      - system/published/
+    schema: system/SCHEMAS.md
+    mutation_owner:
+      - system/scripts/mutations.py
+      - system/scripts/eolms.py
+      - system/scripts/weekly_planning.py
+    validation:
+      - python3 system/scripts/validate_baseline.py
+    freshness_policy: next action, owner, and target date required for active motions
+    conflict_policy: preserve competing stage/status claims pending reconciliation
+    consolidation_target: canonical_opportunity_registry
+    legacy_status: evidence_only
+
+  strategic_theses:
+    authority_status: distributed_consolidation_pending
+    authoritative_store: null
+    current_stores:
+      - system/active_threads.yaml
+      - system/strategic_events.json
+      - system/account_intelligence/
+      - system/research/
+    projections:
+      - system/briefs/
+      - system/published/
+    schema: system/SCHEMAS.md
+    mutation_owner:
+      - system/scripts/strategic_events.py
+      - system/scripts/intelligence_mutation_engine.py
+    validation:
+      - python3 system/scripts/validate_baseline.py
+    freshness_policy: every thesis must carry dated evidence and a review date
+    conflict_policy: contradictory evidence lowers confidence; it never disappears
+    consolidation_target: canonical_thesis_registry
+    legacy_status: evidence_only
+
+  execution_loops:
+    # RB-2026-09-10: resolved. This was flagged split_by_identifier_namespace
+    # with consolidation_target=explicit_single_loop_authority_decision since
+    # 2026-08-19 -- the split is actually by ALTITUDE, not namespace happen-
+    # stance. loop_ledger.md (L-) is the actively-maintained tactical system
+    # (counterparty follow-ups, deal loops, a specific closure target).
+    # eolms/loops.json (EL-) is a portfolio-level register of standing
+    # Strategic Initiatives and Projects that don't have a counterparty or a
+    # single closure date -- confirmed live those two categories are
+    # eolms/loops.json's only remaining open content as of this date; the
+    # three tactical action/waiting/blocked items that had drifted into it
+    # (a stale 2026-07-02 migration snapshot, never resynced -- one had
+    # already been closed in loop_ledger.md for two months while its EOLMS
+    # fork kept showing active) were migrated to loop_ledger.md as real L-
+    # loops and archived on the EOLMS side.
+    authority_status: split_by_altitude
+    authoritative_stores:
+      L-: system/loop_ledger.md  # tactical: counterparty follow-ups, deal loops, anything with a closure target
+      EL-: system/eolms/loops.json  # portfolio: strategic_initiative + project only, going forward
+    projections:
+      - system/.cache/loop_parser.json
+      - system/weekly_plan.json
+      - system/briefs/
+      - system/published/
+    schemas:
+      - system/SCHEMAS.md
+      - system/eolms/loops.schema.json
+    mutation_owner:
+      L-: system/scripts/mutations.py
+      EL-: system/scripts/eolms.py
+    validation:
+      - python3 system/scripts/eolms.py validate
+      - python3 system/scripts/loop_reconciliation.py
+      - python3 system/scripts/verify_weekly_plan_consistency.py
+    freshness_policy: changes must invalidate weekly and daily briefing projections
+    conflict_policy: >
+      a tactical intent (action/waiting/blocked/research/relationship
+      category with a counterparty or closure target) must live in
+      loop_ledger.md, not eolms/loops.json -- new EOLMS entries should only
+      be strategic_initiative or project. Run loop_reconciliation.py to
+      check for drift.
+    consolidation_target: resolved_2026-09-10_split_by_altitude
+    legacy_status: closed
+
+  priorities_planning:
+    authority_status: operational
+    authoritative_store: system/weekly_plan.json
+    proposal_stores:
+      - system/weekly_plan_draft.json
+      - system/weekly_scorecard_draft.json
+    projections:
+      - system/briefs/
+      - system/published/
+      - live_api:getDailyBrief
+    schema: system/SCHEMAS.md
+    mutation_owner:
+      - system/scripts/weekly_planning.py
+      - system/scripts/weekly_plan_generator.py
+    validation:
+      - python3 system/scripts/verify_weekly_plan_consistency.py
+    freshness_policy: adopted plan fingerprint must match every rendered consumer
+    conflict_policy: adopted plan wins over pending drafts; stale projections are defects
+    legacy_status: not_applicable
+
+  decisions:
+    authority_status: distributed_consolidation_pending
+    authoritative_store: null
+    current_stores:
+      - system/_sessions/
+      - system/active_threads.yaml
+      - system/ri_events/*.jsonl
+      - system/audit/*.jsonl
+      - system/account_intelligence/
+    projections:
+      - system/briefs/
+    schema: system/SCHEMAS.md
+    mutation_owner:
+      - system/scripts/session_writer.py
+      - system/scripts/ri_events.py
+    validation:
+      - python3 system/scripts/session_index.py
+    freshness_policy: material decisions require actor, date, scope, and affected entities
+    conflict_policy: later decisions supersede earlier decisions without deleting history
+    consolidation_target: canonical_decision_ledger
+    legacy_status: evidence_only
+
+  industry_ecosystem_intelligence:
+    authority_status: operational
+    authoritative_store: system/ecosystem_intelligence.json
+    evidence_stores:
+      - system/inbox/market_signals_earnings.jsonl
+      - system/earnings_history/
+      - system/research/
+      - system/deltas/
+    projections:
+      - system/restaurant_tech_watchlist.md
+      - system/briefs/
+      - system/exports/
+    schemas:
+      - system/SCHEMAS.md
+      - system/schemas/ecosystem_intelligence.schema.json
+    mutation_owner:
+      - system/scripts/ecosystem_intelligence.py
+      - system/scripts/intelligence_mutation_engine.py
+      - system/scripts/earnings_monitor.py
+      # Added 2026-08-24 (RB-2026-08-24 intelligence pipeline map): confirmed
+      # writing directly to this domain's authoritative_store via code
+      # tracing, not previously listed here -- the registry had drifted out
+      # of sync with the actual write paths.
+      - system/scripts/ecosystem_brief.py
+      - system/scripts/technomic_watchlist_scan.py
+      - system/scripts/linkedin_freshness_bridge.py
+      # Added 2026-08-29: system/api/team_portal_api.py (the first
+      # multi-user-facing surface in RBB, existing-brands/vendors-only tech-
+      # stack query/edit for a small team) writes relationship edits through
+      # this module's own resolve_and_upsert_relationship()/_write_graph()
+      # -- never a raw read/write of its own -- via team_tech_stack.py.
+      - system/scripts/team_tech_stack.py
+    validation:
+      - python3 system/schemas/validate.py --ecosystem-only
+    freshness_policy: assertions expose source date, discovery date, confidence, and cutoff
+    conflict_policy: preserve assertions; non-live claims cannot displace live incumbents
+    legacy_status: evidence_only
+    entity_keying: >-
+      3-store unification Phase 3, DONE 2026-09-08. 3 durable per-entity
+      caches keyed by fragile raw string names now carry a real entity_id
+      resolved against this domain's authoritative_store:
+      system/.cache/entity_alerts_cache.json (via entity_alerts.py),
+      system/.cache/technomic_watchlist_promoted.json (via
+      technomic_watchlist_scan.py), and market_signals_earnings.jsonl above
+      (via earnings_monitor.py). Shared resolver:
+      ecosystem_intelligence.py::_resolve_entity_id_any_type() -- exact
+      name/alias match across brand and vendor entity types, returns None
+      rather than guessing on no match or genuine ambiguity (e.g. the real
+      NCR / NCR Voyix duplicate-entity case). Not yet done: teaching
+      downstream consumers (daily_brief.py,
+      competitive_landscape.py's hardcoded _VENDOR_TO_EARNINGS_COMPANY map)
+      to prefer entity_id over their current name-matching -- a real,
+      separate follow-on.
+
+  evidence_artifacts:
+    authority_status: append_or_preserve
+    authoritative_stores:
+      - system/research/
+      - system/account_intelligence/
+      - system/captures/processed/
+      - system/artifacts/
+      - system/briefs/
+    projections:
+      - system/artifacts/registry.json
+    schema: system/SCHEMAS.md
+    mutation_owner:
+      # RB-2026-08-28: system/scripts/artifact_ingest.py does not exist and
+      # never has (confirmed 2026-08-28 as part of the strategic-assessment
+      # priority list) -- registry drift, same pattern as the 2026-08-24
+      # industry_ecosystem_intelligence fix. The real, working owner for
+      # this registry is micro_graph_builder.py (its own module docstring:
+      # "Updates system/artifacts/registry.json"; confirmed it genuinely
+      # writes status/stats/source_lineage updates via _update_registry()).
+      - system/scripts/micro_graph_builder.py
+      - system/scripts/transcript_summarizer.py
+    validation:
+      - python3 system/scripts/validate_baseline.py
+    freshness_policy: retain source identity, event date, capture date, and provenance
+    conflict_policy: evidence is preserved; promotion policy controls canonical impact
+    legacy_status: retain_with_explicit_provenance
+
+  customers_prospects:
+    authority_status: operational
+    decided_by: >-
+      Todd Vahlsing, 2026-09-06/07, in direct response to a question raised by
+      the recommended-action work in industry_ecosystem_intelligence's
+      blast-radius propagation: "do we have a standardized, canonical method
+      for account research and storage... it probably needs to be enhanced
+      and used as the model for this and all account research including the
+      background brief, account plans, blue sheets and user initiated
+      research?" His own scoping call: exactly 3 storage systems should exist
+      -- identity_relationships (people), customers_prospects (companies
+      under pursuit), industry_ecosystem_intelligence's competitor/vendor
+      side (companies fought against/partnered with) -- with
+      master_account_plans kept deliberately separate (a portfolio/territory
+      tool, not a company dossier).
+    architectural_decision: >-
+      Unifies two systems that were ~85% schema-duplicates and had already
+      diverged for real accounts: system/account_research/ (pre-engagement,
+      cheap/ungated) and blue_sheets/ (active engagement, gated). One record
+      per brand now; `engagement_tier` on account.json
+      ("pre_engagement" | "active_engagement") replaces "which directory is
+      this file in" as the lifecycle signal. Creating a pre_engagement
+      record stays cheap/ungated (Account Research's philosophy); promoting
+      to active_engagement requires the same explicit-authorization
+      discipline Blue Sheet activation always had (a named authorizer + a
+      real reason). The Blue Sheet workbook layer (Tabs 1-5, scoring,
+      Miller Heiman fields) is now a downstream capability of this domain
+      for active_engagement accounts specifically -- see the blue_sheets
+      domain below, which documents that layer's own real design history
+      and is retained rather than merged wholesale, since its architectural
+      decisions (field_provenance_split, workbook_architecture) still apply
+      unchanged.
+    background_brief_canonical_template:
+      status: default_required
+      decided_by: >-
+        Todd Vahlsing, 2026-09-08: "The background brief should always use
+        this cannonical template as its default."
+      template_skill: artifact-template-canonical-account-background-brief
+      approved_reference: /Users/toddvahlsing/Documents/Genius Info/Del Taco Background Brief - Internal.docx
+      required_section_order:
+        - Executive Summary
+        - Brand Profile
+        - Current Business Situation
+        - Leadership
+        - Technology Environment
+        - Relationship and Access Map
+        - Opportunity Assessment
+        - Key Discovery Questions
+        - Risks and Cautions
+        - Recommended Engagement Strategy
+        - Immediate Actions
+        - Bottom Line
+        - Research and Internal Intelligence Sources
+      rendering_rules: >-
+        This is the default for every new, refreshed, displayed, and
+        downloadable Account Background Brief; the user does not need to
+        name the template again. Preserve the approved reference's
+        internal-facing hierarchy, typography, spacing, tables, headers,
+        footers, and restrained visual system in Word exports. Omit empty
+        optional sections and resolved or superseded discovery questions.
+        Clearly distinguish confirmed facts, reported intelligence,
+        hypotheses, and unknowns. Do not expose RBB, automation, internal
+        filenames, system paths, generation metadata, or a "Prior Account
+        Intelligence" wrapper in the body of the document. Never fill a
+        blank with an invented fact.
+    migration: >-
+      Migrated for real, all 9 accounts, 2026-09-06/07 (see
+      system/scripts/migrate_to_customers_prospects.py, one-time and
+      read-only against both predecessor systems -- never modified or
+      deleted either). The 4 accounts with a real Blue Sheet (del-taco,
+      five-guys, mcdonalds, pollo-campero) took Blue Sheet's richer content
+      as base (engagement_tier: active_engagement); the 5 Account-Research-
+      only accounts (cafe-rio, churchs-texas-chicken, little-caesars,
+      red-robin, worldpay) carried forward as-is (engagement_tier:
+      pre_engagement). Verified byte-for-byte against both predecessor
+      systems for every file in all 9 accounts before either predecessor
+      system's consumers were repointed. Consumer cutover (system/api/
+      server.py's Blue Sheet/Account Research endpoints,
+      blue_sheets/_engine's write modules, ecosystem_intelligence.py's live
+      mutation hooks) done via a single redirect in blue_sheets/_engine/
+      common.py's account_dir()/registry_path() rather than rewriting every
+      consumer individually -- see that module's own docstring.
+      system/account_research/ and blue_sheets/accounts/*/ still exist on
+      disk as frozen, pre-migration snapshots (the migration script never
+      deletes them) but receive no further real updates; do not treat them
+      as live.
+    authoritative_stores_native:
+      - customers_prospects/accounts/*/account.json
+      - customers_prospects/accounts/*/brand_profile.json
+      - customers_prospects/accounts/*/evidence.jsonl
+      - customers_prospects/accounts/*/actions.json
+      - customers_prospects/accounts/*/contradictions.json
+      - customers_prospects/accounts/*/source_index.json
+      - customers_prospects/accounts/*/opportunity_hypotheses.json (pre_engagement-originated; carried forward, not tier-gated)
+      - customers_prospects/accounts/*/discovery_questions.json (pre_engagement-originated; carried forward, not tier-gated)
+      - customers_prospects/accounts/*/customer_facing_artifacts.jsonl (active_engagement-originated)
+    projections:
+      - customers_prospects/accounts/*/briefs/current/Background_Brief.md
+      - customers_prospects/accounts/*/current/*.xlsx (active_engagement only)
+      - customers_prospects/_portfolio/customers_prospects_registry.json
+    schemas:
+      - system/scripts/customers_prospects_common.py (the shape; no separate JSON schema file yet)
+    mutation_owner:
+      - system/scripts/customers_prospects_common.py (storage primitives; account_dir(), registry helpers, engagement_tier transition)
+      - system/scripts/account_background_brief.py (Background Brief lifecycle, both tiers)
+      - system/scripts/account_reference_detector.py (evidence auto-linking for active_engagement accounts)
+      - system/scripts/competitive_vulnerability.py (recommended_action() reads this domain to route a signal)
+      - blue_sheets/_engine/{impact_review,render,validate,add_evidence,create_account,customer_artifact}.py (all repointed via blue_sheets/_engine/common.py's redirect, not individually -- see that module)
+      - system/scripts/ecosystem_intelligence.py (_log_blue_sheet_coverage, _sync_blue_sheet_technology_stack -- the live per-mutation hook, auto-repointed via the same redirect)
+    validation: not_yet_built (system/schemas/ has no customers_prospects schema; account.json/brand_profile.json shape is enforced by convention only)
+    freshness_policy: >-
+      Background Briefs regenerate on a 24h SLA once flagged stale
+      (system/scripts/intelligence_cascade.py's _apply_customers_prospects_sync()
+      -- RB-2026-09-08: merged from the former _apply_blue_sheet_sync()/
+      _process_account_research() per the original unification plan's own
+      step 4, one function now, behavior unchanged), via
+      customers_prospects_common.py's refresh-flag cache. The old
+      pre-2026-09-06 account_research_common.py cache file is dead (that
+      module itself was archived 2026-09-08, plan step 7, to
+      _archive/one-time-scripts-pre-2026-09/scripts/ -- zero real importers
+      remained); do not read it expecting current state. Blue Sheet
+      workbook fields follow the freshness_policy documented under
+      blue_sheets below.
+    conflict_policy: preserve competing claims in contradictions.json; do not resolve by recency alone (scope first) -- same policy blue_sheets always had, now domain-wide
+    consolidation_target: null (this domain IS the consolidation target the accounts/opportunities domains above still name as unresolved for restaurant-brand accounts specifically)
+    legacy_status: not_applicable_new_domain
+
+  blue_sheets:
+    authority_status: downstream_projection_opt_in
+    superseded_note: >-
+      RB-2026-09-06/07: this domain's storage split from customers_prospects
+      is superseded -- see that domain above. What remains true and current
+      here: the workbook architecture (11-tab standard, scoring_rules.json,
+      field_provenance_split), the activation_policy (still Todd-explicit-
+      direction-gated, now expressed as engagement_tier promotion), and this
+      section's own real design/incident history. What is NOT current below:
+      authoritative_stores_native and projections still name pre-migration
+      blue_sheets/accounts/*/ paths -- the real, live paths are documented
+      under customers_prospects above (blue_sheets/accounts/*/ is a frozen,
+      no-longer-written snapshot). Read this domain as "the Blue Sheet
+      workbook layer, which applies to customers_prospects accounts with
+      engagement_tier: active_engagement," not as a separate storage domain.
+    decided_by: >-
+      Todd Vahlsing, 2026-08-21, in direct response to the overlap_warning
+      this domain carried on creation. Supersedes that warning.
+    architectural_decision: >-
+      The Blue Sheet is downstream of the canonical account/opportunity
+      registry, not a replacement or competing copy of it. The accounts and
+      opportunities domains above (and identity_relationships,
+      industry_ecosystem_intelligence, execution_loops, evidence_artifacts as
+      relevant) remain the upstream sources of fact. A Blue Sheet is created
+      only for a targeted account with a specific sales motion, and only on
+      Todd's explicit direction — never auto-created just because an account
+      meets the Section 16 active-portfolio policy. Once a Blue Sheet exists
+      for an account, the canonical registry becomes a major, ongoing source
+      of data and updates to it (see mutation_owner below) — but the registry
+      never becomes Blue-Sheet-shaped, and this domain never becomes the
+      canonical_account_registry / canonical_opportunity_registry that
+      accounts/opportunities above still separately need to resolve.
+    field_provenance_split:
+      registry_sourced: >-
+        Fields that exist upstream (identity, ownership, footprint, technology
+        stack, actions/loops, public/CRM facts) are synced from the domains
+        above into blue_sheets/accounts/<slug>/account.json and
+        brand_profile.json on every canonical-registry mutation that touches
+        that account. These fields must never be hand-edited only inside
+        blue_sheets/ — edit upstream and re-sync, or the two will drift.
+      blue_sheet_native: >-
+        Miller Heiman interpretive fields that do not exist upstream at all —
+        qualification scorecard answers, buying-influence role/mode/personal
+        win/competitive preference/rating, euphoria-panic read, best action
+        plan — live only in blue_sheets/ and are never written back upstream
+        except as ordinary evidence (e.g. a rating change may itself become a
+        new evidence/decision event upstream, but the rating field itself is
+        not part of the canonical account record).
+    workbook_architecture:
+      decided_by: >-
+        Todd Vahlsing, 2026-08-23, generalizing the confirmed Pollo Campero
+        reference workbook into the standard every Blue Sheet must follow.
+      standard: >-
+        11 tabs total (see standard_blue_sheet_schema.json for the full
+        field-level spec). Tabs 1-5 (Blue Sheet, Brand, Technology Stack,
+        Actions & Decisions, Commercial Model) are the account-specific
+        working tabs -- same form, fields, and scoring methodology for
+        every account. Presentation View 1 and Presentation View 2 are
+        generated views, not independently authored -- their cells are
+        recomputed from Tabs 1-5 by render.py on every render() call. The
+        final 4 tabs (Method & Governance, Criteria Statements, Concept
+        Card side 1, Concept Card side 2) are static and identical across
+        every Blue Sheet; they are never customized per account. The
+        scoring methodology (scoring_rules.json) is invariant across
+        accounts -- it may be deliberately revised over time, but never
+        forked per account. A new Blue Sheet is created by preserving this
+        workbook architecture and replacing only Tabs 1-5's
+        account-specific content, per the existing activation_policy above.
+      operational_status: >-
+        render.py's regeneration of Presentation View 1/2 from Tabs 1-5 is
+        real and already correct (verified 2026-08-23: it writes computed
+        static literals on every render() call, matching the reference
+        file's own behavior -- not linked spreadsheet formulas, so it must
+        be re-invoked or the views drift, exactly as GAP_REPORT_2026-08-21.md
+        already flagged). As of 2026-08-24, one of four intended mutation
+        entry points (ecosystem_intelligence.py's promote_posture/promote_
+        confidence) now calls impact_review.process_event() for it -- but
+        only on an unambiguous category-to-row match (see mutation_owner
+        below); everything else still falls through to coverage-log-only.
+        mutations.py/ri_events.py/eolms.py remain entirely unwired. Do not
+        describe this as fully automatic until those close too.
+    authoritative_stores_upstream:
+      - (see accounts, opportunities, identity_relationships,
+        industry_ecosystem_intelligence, execution_loops, evidence_artifacts
+        domains above)
+    authoritative_stores_native:
+      - blue_sheets/accounts/*/account.json (blue_sheet_native fields only)
+      - blue_sheets/accounts/*/brand_profile.json (blue_sheet_native fields only)
+      - blue_sheets/accounts/*/evidence.jsonl
+      - blue_sheets/accounts/*/actions.json
+      - blue_sheets/accounts/*/contradictions.json
+    projections:
+      - blue_sheets/accounts/*/current/*.xlsx
+      - blue_sheets/_portfolio/active_accounts.json
+      - blue_sheets/_portfolio/blue_sheet_registry.json
+      - blue_sheets/_portfolio/portfolio_health.xlsx
+    schemas:
+      - blue_sheets/_standard/standard_blue_sheet_schema.json
+      - blue_sheets/_standard/field_dictionary.md
+      - blue_sheets/_standard/scoring_rules.json
+    activation_policy: >-
+      A new account folder under blue_sheets/accounts/ may only be created on
+      Todd's explicit direction. blue_sheet_registry.json entries must carry
+      activation_authorized_by and activation_date so this is auditable.
+      Meeting the Section 16 active-portfolio policy is necessary but not
+      sufficient for activation.
+    mutation_owner:
+      status: partially_built
+      built:
+        - >-
+          system/scripts/ecosystem_intelligence.py (promote_posture,
+          promote_confidence) — added 2026-08-24. Coverage logging (which
+          accounts a mutation touched, activated or not) fires unconditionally.
+          Field-level sync to technology_stack[].status only fires when a
+          relationship's category maps to exactly one unambiguous
+          technology_stack[] row (blue_sheets/_engine/common.py's
+          match_technology_stack_row + CATEGORY_TO_LAYER_KEYWORDS) — verified
+          against Pollo Campero's real data that "pos" and "payments" both
+          match more than one row and correctly resolve to no-match rather
+          than guessing. Only ever writes status (via POSTURE_TO_STATUS,
+          which never asserts "Active"/"Reconcile" — those stay human-only),
+          through the same governed impact_review.process_event() path
+          everything else uses. Verified end-to-end 2026-08-24 with a
+          synthetic relationship against the real, activated Pollo Campero
+          account; reverted afterward, diffed byte-for-byte clean against
+          pre-test snapshots.
+      not_yet_built:
+        - >-
+          system/scripts/mutations.py — no single shared writer (each cmd_*
+          has its own write call) and no field literally called account_id
+          anywhere in the file; would need per-command hooks with their own
+          free-text-to-account_id resolution.
+        - >-
+          system/scripts/ri_events.py — append() is a single shared writer
+          (the good part), but its real unattended production trigger is the
+          once-daily 04:00 LaunchAgent chain, so a hook here can't be
+          live-verified same-session; entities.companies[].matched_id is
+          buried in a free-form event dict, not a named append() parameter.
+        - >-
+          system/scripts/eolms.py — deliberately deferred. match_and_
+          transition() fires from the executive-declaration API route with
+          no confirmation gate (documented rationale: "CEO declarations are
+          the highest-fidelity source"), and its scoring is tuned constants
+          with an explicit "a wrong auto-close is worse than no auto-close"
+          design intent — do not touch without understanding it.
+      last_updated: "2026-08-24"
+    validation: not_yet_built
+    freshness_policy: every material field carries evidence_ids, confidence, as_of, scope, and last_reviewed_by (spec Section 5); actions.json mutation_status must read proposed_add_loop until a real RBB add_loop/close_loop mutation occurs
+    conflict_policy: preserve competing claims in contradictions.json; do not resolve by recency alone (scope first)
+    legacy_status: not_applicable_new_domain
+
+  master_account_plans:
+    authority_status: downstream_projection_of_externally_authored_baseline
+    decided_by: >-
+      Todd Vahlsing, 2026-08-28, after a real incident: a portfolio-level,
+      multi-account Worldpay document ("update the worldpay account plan
+      given our current intelligence") was misread as a single-account Blue
+      Sheet request and produced an empty, falsely-authorized Blue Sheet.
+      Todd's own words: "the blue sheet is a specific artifact designed for
+      one account and a single sales objective - I uploaded a multi layered
+      plan for the worldpay accounts that includes account assessments to
+      RMs and is designed to start building relationships and conversations
+      within the context of the WP customer base." He then directed this be
+      built as a real third artifact type, viewed through the lens of "a
+      portfolio of accounts that a rep might have to identify where the rep
+      should spend most of their time," and corrected the initial
+      implementation plan: "This should be a mid-stream artifact that
+      mutates with gathered intelligence - and should be updated like a blue
+      sheet - facts and safe updates automatically - flagged for user input
+      when needed."
+    architectural_decision: >-
+      A Master Account Plan is VENDOR/PARTNER-scoped (e.g. "worldpay"), not
+      one of Todd's own single-account Blue Sheets or Account Research
+      records. Its initial content is externally authored (Todd's own real
+      uploaded workbook, built with his own process) and seeds the record --
+      RBB never regenerates a competing version of that baseline. But unlike
+      a static archive, the live JSON state IS RBB-mutated day to day, same
+      as a Blue Sheet: see mutation_owner below. ranked_portfolio.json rows
+      CROSS-LINK to blue_sheets/accounts/<slug> and system/account_research/
+      accounts/<slug> when a real match resolves (e.g. Del Taco, Five Guys
+      both appear in Worldpay's portfolio AND have their own Blue Sheets) --
+      it references, never duplicates, that per-account state. RM names
+      (Worldpay's own employees, e.g. Maggie Lenhart, Avery Churchwell) are
+      NOT modeled as baseline_index.json contacts -- they are third-party
+      people, not Todd's own relationships; they live only inside
+      rm_portfolios.json.
+    authoritative_stores_upstream:
+      - master_account_plans/vendors/*/current/*.xlsx (Todd's real uploaded workbook, the baseline for each version)
+      - (see blue_sheets, account_research above for the accounts a ranked_portfolio row may cross-link to)
+    authoritative_stores_native:
+      - master_account_plans/vendors/*/plan.json
+      - master_account_plans/vendors/*/ranked_portfolio.json
+      - master_account_plans/vendors/*/rm_portfolios.json
+      - master_account_plans/vendors/*/evidence.jsonl
+      - master_account_plans/vendors/*/contradictions.json
+    projections:
+      - master_account_plans/vendors/*/current/*.xlsx (re-saved in place after a safe auto-apply -- Evidence Ledger/RM Portfolio cells only, Todd's own tab structure/formatting preserved)
+      - master_account_plans/_portfolio/master_account_plan_registry.json
+      - master_account_plans/_portfolio/review_queue.json
+    schemas:
+      - master_account_plans/_engine/parse_workbook.py (the sheet-column contract; no separate schema file -- mirrors the real workbook's own headers)
+    activation_policy: >-
+      Ingestion is CLASSIFIER-TRIGGERED, not Todd-explicit-direction-gated
+      like Blue Sheet activation -- a real uploaded workbook matching the
+      Ranked-Portfolio+RM-Portfolio sheet fingerprint (system/scripts/
+      dataset_classifier.py's master_account_plan_workbook signature) is
+      auto-ingested, because the document shape is unambiguous by
+      construction (same precedent as the McDonald's NSN Lookup workbook) --
+      there is nothing for a human to authorize about recognizing Todd's own
+      real, complete document. The separate curated-JSON programmatic path
+      (ingestMasterAccountPlanUpload, for RBB-authored content NOT from a
+      raw upload) DOES require an explicit user_authorization_quote, same
+      discipline as createBlueSheetAccount's own guard -- curation-from-
+      scratch carries the fabrication risk the mechanical-parse path
+      structurally doesn't.
+    mutation_owner:
+      status: built
+      built:
+        - >-
+          master_account_plans/_engine/mp_impact_review.py::run_safe_apply()
+          -- called daily from system/scripts/intelligence_cascade.py
+          alongside its existing Blue Sheet sync. Safe, auto-applied (never
+          interpretive): (1) evidence.jsonl append for a material signal
+          touching a ranked account (reuses ecosystem_brief.py's
+          _is_material_signal(), never re-derives it); (2) cross-link
+          refresh when a Blue Sheet/Account Research match becomes newly
+          unambiguous; (3) rm_portfolios.json aggregate recompute
+          (opportunity_accounts_count/p1_accounts_count/average_score) --
+          pure arithmetic over ranked_portfolio.json's own already-approved
+          scores; (4) coverage-gap logging (into blue_sheets' own
+          coverage_log.jsonl -- the exact consumer intelligence_cascade.py's
+          assess_coverage_gaps() already reads) for a P1 account with no
+          Blue Sheet yet. Flagged, never auto-applied: any Score/Tier/Rank/
+          Priority change a material signal implies -- recomputing the
+          weighted Scoring Model is itself an interpretive call, same
+          principle as Blue Sheet's buying-influence ratings staying
+          human-only. Idempotent: evidence.jsonl's own already-recorded IDs
+          gate re-appends, so a re-run (daily_brief.build_report() runs
+          twice per pipeline cycle) never double-writes. Verified live
+          2026-08-28 against the real Worldpay workbook: 30 ranked accounts,
+          6 RMs, 3 real Blue Sheet cross-links resolved (Del Taco, Five
+          Guys, Pollo Campero), a real coverage gap logged (Subway, P1, no
+          Blue Sheet), and — with a backdated evidence threshold — two real
+          historical signals correctly evidenced, queued for review, and
+          confirmed to leave ranked_portfolio.json's score/tier untouched.
+      not_yet_built:
+        - >-
+          A UI/chat surface for Todd to resolve a queued review item beyond
+          resolveMasterAccountPlanReviewItem's basic mark-resolved (no
+          actual score/tier edit path yet -- that stays a direct JSON/xlsx
+          edit Todd makes himself, by design).
+      last_updated: "2026-08-28"
+    validation: not_yet_built
+    freshness_policy: plan.json.last_evidence_date advances only on a real re-upload from Todd (a new human-authored baseline), never on an automatic safe-apply pass
+    conflict_policy: contradictions.json preserves the source workbook's own Conflict Register; RBB never auto-resolves a flagged conflict
+    legacy_status: not_applicable_new_domain
+
+  competitor_intelligence:
+    authority_status: operational
+    note: >-
+      RB-2026-09-07: added to close a real governance gap found during an
+      artifact-inventory audit -- this subsystem has real, active data on
+      disk and code-backed mutation paths but had never been declared here.
+      Conceptually the same "competition & partnerships" bucket as
+      industry_ecosystem_intelligence below (Todd's 3-storage-system model),
+      but its own separate store/registry -- industry_ecosystem_intelligence
+      holds the vendor RELATIONSHIP graph (who uses what); this domain holds
+      per-competitor EVIDENCE and battle-card content specifically about
+      Genius's own competitive position against each one.
+    authoritative_store: system/competitor_intelligence/competitors/*/{competitor.json,evidence.jsonl}
+    projections:
+      - system/competitor_intelligence/_portfolio/competitor_registry.json
+    schemas:
+      - system/scripts/competitor_intelligence_common.py (the shape; no separate JSON schema file)
+    mutation_owner:
+      - system/scripts/competitor_intelligence.py (ensure_competitor, ensure_competitor_by_slug, sync_from_ecosystem, add_competitive_note, upsert_category_battle_card)
+      - system/scripts/competitor_intelligence_common.py
+      - system/scripts/account_reference_detector.py (auto-linked reference evidence)
+      - system/scripts/competitive_brief.py (persists render_competitor_profile()'s output -- see known_gap below)
+      - system/scripts/genius_capabilities.py (RB-2026-09-25: Todd's own curated Genius product-capability library, per GENIUS_PRODUCT_LINES category -- separate flat store, system/genius_capabilities.json, not per-competitor)
+      - system/scripts/value_wedge.py (RB-2026-09-25: persists a competitor-scoped "why Genius wins" document pairing genius_capabilities.py against that competitor's category battle cards + vs_genius.competitor_advantages -- see competitive_landscape's note below)
+    validation: not_yet_built
+    freshness_policy: not_yet_declared
+    conflict_policy: not_yet_declared
+    known_gap: >-
+      FIXED 2026-09-07 (same day, follow-up to the audit that found it):
+      render_competitor_profile()/generate_profile() still only return their
+      markdown in the API response and are unchanged -- but
+      competitive_brief.py::generate_competitive_brief() now versions that
+      same markdown into system/artifact_vault/competitive_briefs/<competitor_slug>/
+      via artifact_vault_common.py, indexed in intelligence_index.py under
+      resource_type competitive_brief (getCompetitiveBrief/createCompetitiveBrief
+      in server.py). getCompetitorProfile itself is untouched and still
+      computes fresh, by design -- this is a parallel persisted path, not a
+      change to the existing endpoint.
+      FIXED 2026-09-25: render_competitor_profile() previously never
+      rendered category_battle_cards content at all (only battle_card.py's
+      category-scoped Battle Card did) -- Competitive Brief now aggregates
+      every category this competitor has a battle card for, via a shared
+      render_category_battle_card_body() helper in
+      competitor_intelligence_common.py (also used by battle_card.py and
+      value_wedge.py, so the three documents never render this content
+      differently). Also reversed: generate_competitive_brief() (and
+      generate_value_wedge()) now auto-create a competitor shell via
+      ensure_competitor_by_slug() when the slug doesn't resolve yet,
+      instead of erroring -- Todd's explicit direction, accepting a
+      typo'd slug now creates a new shell rather than failing loudly.
+    legacy_status: not_applicable_new_domain
+
+  watchlist:
+    authority_status: operational
+    note: >-
+      RB-2026-09-07: added, same audit as competitor_intelligence above.
+      Defines which brands/vendors are on the mandatory daily-scan list.
+    authoritative_store: system/watchlist_registry.json
+    evidence_stores:
+      - system/.cache/technomic_watchlist_history.jsonl
+      - system/.cache/technomic_watchlist_promoted.json
+    mutation_owner:
+      - system/scripts/watchlist_registry.py
+      - system/scripts/technomic_watchlist_scan.py (also writes system/ecosystem_intelligence.json directly -- see industry_ecosystem_intelligence's mutation_owner list)
+      - system/scripts/watchlist_promotion.py (candidate scoring/promotion; confirmed 2026-09-06 to be the only writer of watchlist_registry.json, and structurally cannot produce a candidate with no matching ecosystem_intelligence.json entity)
+    validation: not_yet_built
+    freshness_policy: not_yet_declared
+    conflict_policy: not_yet_declared
+    legacy_status: not_applicable_new_domain
+
+  competitive_landscape:
+    authority_status: computed_on_demand_not_persisted
+    note: >-
+      RB-2026-09-07: added, same audit. Market-share/battle-card views
+      computed purely at query time from industry_ecosystem_intelligence's
+      authoritative_store -- has no store of its own. The one persistence
+      path (competitive_landscape_export.py::export_workbook()) writes a
+      timestamped, on-demand system/exports/competitive-landscape-*.xlsx
+      that is not retained/indexed anywhere after creation.
+      FIXED (partially) same day: battle_card.py::generate_battle_card()
+      now versions battle_card_for_category()'s own computed markdown into
+      system/artifact_vault/battle_cards/<category>/ via
+      artifact_vault_common.py, indexed under resource_type battle_card
+      (getBattleCard/createBattleCard in server.py). This engine
+      (competitive_landscape.py) and getCategoryMarketShare are unchanged
+      and still compute fresh by design -- battle_card.py is a parallel,
+      additive persisted view, not a replacement.
+      Same day, third competitive-side view added: vendor_engagement_analysis.py
+      is account-scoped (not category- or competitor-scoped like the two
+      above) -- for one account, which vendor(s) it actually uses (joining
+      account.technology_stack with the richer uses_vendor_for_category
+      relationship fields this domain's own note above already describes as
+      dropped by render_technology_environment_section) plus a competitive
+      angle for any vendor that's also a tracked competitor. Persists to
+      system/artifact_vault/vendor_engagement_analyses/<account_slug>/,
+      resource_type vendor_engagement_analysis. Genuinely new content, not a
+      persistence layer over an existing computed function like the other two.
+      RB-2026-09-25, fourth competitive-side view added: value_wedge.py is
+      competitor-scoped like competitive_brief.py, but framed as "why
+      Genius wins against THIS competitor specifically" rather than a
+      general profile -- for every product line the competitor competes on
+      (competes_on), pairs genius_capabilities.py's (new, competitor_
+      intelligence's own domain -- Todd's curated "what Genius offers")
+      content for that category with the category's battle card and
+      vs_genius.competitor_advantages. Persists to
+      system/artifact_vault/value_wedges/<competitor_slug>/, resource_type
+      value_wedge. Deliberately does not call sync_from_ecosystem() --
+      nothing it renders is evidence-sourced.
+    authoritative_store: null (derives from industry_ecosystem_intelligence.authoritative_store)
+    mutation_owner: []  # read-only compute; writes nothing
+    generator:
+      - system/scripts/competitive_landscape.py
+      - system/scripts/competitive_landscape_export.py
+      - system/scripts/battle_card.py (persists a rendering of battle_card_for_category(), does not recompute it)
+      - system/scripts/vendor_engagement_analysis.py (account-scoped view, joins this domain with customers_prospects + competitor_intelligence)
+      - system/scripts/value_wedge.py (competitor-scoped "why Genius wins" view, joins this domain's category battle cards with competitor_intelligence's genius_capabilities.py)
+    validation: not_applicable
+    freshness_policy: as fresh as industry_ecosystem_intelligence at query time
+    conflict_policy: not_applicable
+    legacy_status: not_applicable_new_domain
+
+  vulnerability_signals:
+    authority_status: computed_on_demand_not_persisted
+    note: >-
+      RB-2026-09-07: added, same audit. Feeds the Daily Brief's "Competitive
+      Opportunity Watchlist." competitive_vulnerability.py::build_report()
+      is a pure in-memory computation with no store of its own -- its
+      --cache CLI flag would persist system/.cache/competitive_vulnerability.json
+      but no caller (daily_brief.py calls build_report() directly) actually
+      invokes it with --cache, so the result is only durable as whatever
+      ends up embedded in that day's system/briefs/ output.
+    authoritative_store: null (derives from industry_ecosystem_intelligence + system/.cache/entity_alerts.json + web-scanner/LinkedIn friction signals + earnings signals)
+    mutation_owner: []  # read-only compute; writes nothing under normal operation
+    generator:
+      - system/scripts/competitive_vulnerability.py
+    validation: not_applicable
+    freshness_policy: computed fresh on every daily_brief.py invocation
+    conflict_policy: not_applicable
+    legacy_status: not_applicable_new_domain
+
+  audit_sessions_receipts:
+    authority_status: operational
+    authoritative_stores:
+      - system/audit/*.jsonl
+      - system/_sessions/*.md
+      - system/ri_events/*.jsonl
+      - system/.cache/*receipt*.json
+    projections:
+      - system/_sessions/index.json
+      - system/MANIFEST.md
+    schema: system/SCHEMAS.md
+    mutation_owner:
+      - system/scripts/session_writer.py
+      - system/scripts/session_index.py
+      - mutation-specific scripts
+    validation:
+      - python3 system/scripts/session_index.py
+      - python3 system/scripts/validate_baseline.py
+    freshness_policy: material sessions and mutations must emit dated trace records
+    conflict_policy: append corrections; do not rewrite closed historical records
+    legacy_status: retain
+
+cockpit_projection_contract:
+  target: system/cockpit/context.json
+  status: operational
+  generated_only: true
+  cached_projection_endpoints:
+    - type: google_drive_file
+      name: RBB Cockpit Export/context.json
+      authority: false
+      writable_as_canonical: false
+      update_owner: system/scripts/cockpit_drive_export.py
+      target_identity: fixed_file_id
+      health_state: system/.cache/cockpit_drive_export_state.json
+      failure_policy: non_fatal
+      legacy_mirror_relationship: none
+  minimum_sections:
+    - version_and_freshness
+    - weekly_outcomes_and_priorities
+    - active_opportunities
+    - open_loops
+    - relevant_accounts_and_relationships
+    - active_theses_and_evidence_state
+    - recent_material_intelligence
+    - pending_decisions
+    - reconciliation_queue
+  invalidation_triggers:
+    - weekly_plan_mutation
+    - loop_mutation
+    - opportunity_or_thread_mutation
+    - account_state_mutation
+    - thesis_or_strategic_event_mutation
+    - material_relationship_event
+    - identity_match_confirmation_or_rejection
+  hand_maintained: false
+
+unresolved_governance_decisions:
+  - establish the canonical account registry
+  - establish the canonical opportunity registry
+  - establish the canonical thesis registry
+  - establish the canonical decision ledger
+  - choose a single long-term loop authority or formalize permanent namespace split
+  - define atomic cross-projection regeneration and rollback
+  - "RESOLVED 2026-08-21 (Todd): blue_sheets/ is a downstream, opt-in projection of the
+    canonical account/opportunity registry, not a replacement for it — see the
+    blue_sheets domain's architectural_decision above. The underlying establish-the-
+    canonical-account-registry / establish-the-canonical-opportunity-registry items
+    two lines up remain separately unresolved and still need their own decision."

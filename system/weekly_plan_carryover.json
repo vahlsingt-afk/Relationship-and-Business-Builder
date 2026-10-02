@@ -1,0 +1,36 @@
+{
+  "from_week_of": "2026-09-28",
+  "generated_at": "2026-10-01T11:41:51+00:00",
+  "carryover_outcomes": [
+    {
+      "id": "outcome-loop-stability",
+      "title": "Close out overdue and due-today loops",
+      "success_criteria": "Carried over from week of 2026-09-21, still not resolved: Resolve all 1 overdue/due-today loop(s) \u2014 close, re-date with reason, or explicitly defer with a new target.",
+      "linked_opportunity_ids": [],
+      "linked_loop_ids": [
+        "L-2026-08-31-001"
+      ],
+      "still_open_loop_ids": [
+        "L-2026-08-31-001"
+      ],
+      "prior_allocation_pct": 50.0,
+      "prior_status": "active"
+    },
+    {
+      "id": "outcome-loop-stability",
+      "title": "Close out overdue and due-today loops",
+      "success_criteria": "Resolve all 2 overdue/due-today loop(s) \u2014 close, re-date with reason, or explicitly defer with a new target.",
+      "linked_opportunity_ids": [],
+      "linked_loop_ids": [
+        "L-2026-08-28-001",
+        "L-2026-09-21-001"
+      ],
+      "still_open_loop_ids": [
+        "L-2026-08-28-001",
+        "L-2026-09-21-001"
+      ],
+      "prior_allocation_pct": 50.0,
+      "prior_status": "active"
+    }
+  ]
+}

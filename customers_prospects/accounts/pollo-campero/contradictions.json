@@ -1,0 +1,15 @@
+{
+  "account_id": "acct-pollo-campero",
+  "contradictions": [
+    {
+      "contradiction_id": "ct-pollo-campero-0001",
+      "field": "technology_stack.in_store_acquiring",
+      "claim_a": {"value": "Bank of America is the processor for the R016/R138/R173 sample stores.", "evidence_ids": ["ev-pollo-campero-0006"], "confidence": "medium"},
+      "claim_b": {"value": "Fiserv is the in-store acquirer (field report).", "evidence_ids": ["ev-pollo-campero-0008"], "confidence": "low"},
+      "reconciliation_status": "unresolved",
+      "note": "Both claims may be correct for different entities, stores, channels or roles per the spec's evidence-precedence example. Do not resolve by recency; resolve by mapping acquirer/processor/gateway to entity and store/channel footprint first (see act-pollo-campero-0010).",
+      "opened_at": "2026-08-21",
+      "scope": "account"
+    }
+  ]
+}

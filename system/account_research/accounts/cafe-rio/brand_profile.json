@@ -1,0 +1,24 @@
+{
+  "account_id": "acct-cafe-rio",
+  "founded": {"value": "1997", "status": "confirmed", "evidence_ids": ["ev-cafe-rio-0005"], "confidence": "high", "as_of": "2026-08-27", "scope": "account", "last_reviewed_by": "human:todd"},
+  "headquarters": {"value": "Salt Lake City, Utah", "status": "confirmed", "evidence_ids": ["ev-cafe-rio-0005"], "confidence": "high", "as_of": "2026-08-27", "scope": "account", "last_reviewed_by": "human:todd"},
+  "segment": {"value": "Fast-casual Mexican", "status": "confirmed", "evidence_ids": ["ev-cafe-rio-0005"], "confidence": "high", "as_of": "2026-08-27", "scope": "account", "last_reviewed_by": "human:todd"},
+  "footprint": {"value": "Approximately 150-160 locations, predominantly or entirely company-owned", "status": "confirmed", "evidence_ids": ["ev-cafe-rio-0004", "ev-cafe-rio-0005"], "confidence": "high", "as_of": "2026-08-27", "scope": "account", "last_reviewed_by": "human:todd"},
+  "ownership": {"value": "Freeman Spogli acquired a majority interest in 2017", "status": "confirmed", "evidence_ids": ["ev-cafe-rio-0003"], "confidence": "high", "as_of": "2026-08-27", "scope": "account", "last_reviewed_by": "human:todd"},
+  "geography": {"value": "Utah and the broader Mountain West, with an additional presence in the Washington, D.C. market", "status": "reported", "evidence_ids": ["ev-cafe-rio-0005"], "confidence": "medium", "as_of": "2026-08-27", "scope": "account", "last_reviewed_by": "human:todd"},
+  "differentiation": {"value": "Made-from-scratch food, customizable meals, strong recognition around signature products such as Sweet Pork", "status": "reported", "evidence_ids": ["ev-cafe-rio-0005"], "confidence": "medium", "as_of": "2026-08-27", "scope": "account", "last_reviewed_by": "human:todd"},
+  "competitive_set": {"value": "Chipotle, Qdoba, Moe's Southwest Grill, Costa Vida, and other fast-casual Mexican concepts", "status": "reported", "evidence_ids": ["ev-cafe-rio-0005"], "confidence": "medium", "as_of": "2026-08-27", "scope": "account", "last_reviewed_by": "human:todd"},
+  "why_loyalty_matters": "Café Rio's loyalty population appears to represent roughly half of its transactions. Management wants to use that audience to drive frequency and engagement without relying on constant discounts. Key questions: is Punchh still the active platform; who owns loyalty and guest engagement under the new leadership team; how effectively can Café Rio segment and activate its customers; can it measure incremental visits without over-discounting; are POS, ordering, payments and loyalty data properly connected; what is the current contract/renewal timeline; is there an optimization, expansion or competitive-review event?",
+  "recommended_approach": "Start with account validation and operational discovery rather than a broad product presentation. Credible framing: 'Café Rio is working to restore the guest experience, improve restaurant execution and prepare for its next growth phase. We would like to understand where technology, payments and customer data are helping -- or creating friction -- in that effort.' Initial objectives: (1) a verified leadership and stakeholder map; (2) a current technology-stack map; (3) a current loyalty and payments assessment; (4) a contract and renewal calendar; (5) the top two or three operating problems affecting the turnaround; (6) one specific, sponsor-backed opportunity worth advancing.",
+  "risks_and_cautions": [
+    "Most detailed stack information is old.",
+    "The Punchh relationship needs current validation.",
+    "The historical Aloha reference may no longer be accurate.",
+    "Several historical contacts and leadership titles may be stale.",
+    "No active buying event has been confirmed.",
+    "No current internal account owner has been established.",
+    "Different sources report materially different sales figures.",
+    "Café Rio's immediate focus is operational recovery, not rapid expansion.",
+    "A generic technology pitch would likely miss the company's present priorities."
+  ]
+}

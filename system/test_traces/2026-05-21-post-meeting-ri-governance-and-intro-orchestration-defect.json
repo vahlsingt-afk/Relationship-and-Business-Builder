@@ -1,0 +1,49 @@
+{
+  "trace_id": "T-2026-05-21-003",
+  "title": "Post-meeting RI governance and intro orchestration defect",
+  "captured_at": "2026-05-21T18:00:00-05:00",
+  "source": "Codex / operator-provided test summary",
+  "operator": "Todd",
+  "trace_type": "field_defect",
+  "severity": "HIGH",
+  "category": "Transcript ingestion / RI mutation / loop lifecycle / intro governance",
+  "summary": "RB produced smart meeting and transcript analysis, but failed canonical relationship-OS behavior: source-backed RI, proposed mutations, loop lifecycle, trust/reciprocity governance, intro candidate scoring, and persistence status.",
+  "defects": [
+    {
+      "id": "RI-MUTATION-001",
+      "title": "Transcript analysis did not mutate relationship state",
+      "severity": "high",
+      "recommendation": "Transcript ingestion must propose RI events, contact updates, relationship-stage changes, topic tags, trust/reciprocity scoring, and interaction briefs."
+    },
+    {
+      "id": "LOOP-LIFECYCLE-001",
+      "title": "Meeting completion did not close or create loops",
+      "severity": "high",
+      "recommendation": "Post-meeting ingestion must close meeting loops and propose follow-up, research, nurture, waiting-on, and cadence loops."
+    },
+    {
+      "id": "INTRO-GOVERNANCE-001",
+      "title": "Intro recommendation lacked governed candidate scoring",
+      "severity": "high",
+      "recommendation": "Score intro candidates for fit, trust maturity, reciprocity, operational readiness, and network-equity risk before recommending any intro."
+    },
+    {
+      "id": "RECIPROCITY-TRUST-001",
+      "title": "Reciprocity and trust were analyzed but not operationalized",
+      "severity": "medium_high",
+      "recommendation": "Persist reciprocity/trust signals and make them visible in proposed mutation bundles."
+    },
+    {
+      "id": "CALENDAR-DISCOVERY-001",
+      "title": "Multi-calendar ambiguity overtrusted",
+      "severity": "high",
+      "recommendation": "Run source readiness before interpreting empty calendar results."
+    }
+  ],
+  "regression_anchors": [
+    "Hassan should not trigger high-network-equity intros yet; posture is low-frequency nurture.",
+    "Ashwin should trigger strategic-peer and Dog Haus POS opportunity tracking.",
+    "Ish Singh should be scored as promising but conditional with operational maturity and international-readiness risks unresolved.",
+    "Good advice with no mutation proposal is a failing response for transcript-bearing RI."
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "competitor_id": "comp-restaurant365",
+  "competitor_slug": "restaurant365",
+  "display_name": "Restaurant365",
+  "aliases": [
+    "R365",
+    "Restaurant 365"
+  ],
+  "vendor_entity_id": "vendor-restaurant365",
+  "primary_category": "inventory",
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [
+      {
+        "point": "Heavy C-suite churn in 18 months (see below)",
+        "evidence_id": "note-0009",
+        "added_at": "2026-09-26T12:23:34Z"
+      }
+    ],
+    "competitor_advantages": [
+      {
+        "point": "**Jack in the Box** (2,128 locations) chose R365 as sole back-office inventory platform (Mar 5, 2026); R365 already did accounting for ~half the system — \"Restaurant365 delivers unified, real-time visibility into sales, food costs, and labor\" (Doug Cook, CTO)",
+        "evidence_id": "note-0005",
+        "added_at": "2026-09-26T12:23:34Z"
+      },
+      {
+        "point": "Hungry Howie's systemwide (Jun 4, 2026)",
+        "evidence_id": "note-0006",
+        "added_at": "2026-09-26T12:23:34Z"
+      }
+    ]
+  },
+  "last_evidence_date": "2026-09-30",
+  "last_synced_at": "2026-10-02T09:46:55Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-10-02T09:46:55Z",
+  "latest_cos_commentary": {
+    "headline": "Accounting plus inventory integration is a sticky Genius Back Office rival at Jack in the Box.",
+    "genius_exposure": "Accounting plus inventory integration is a sticky Genius Back Office rival at Jack in the Box.",
+    "competitive_timing": "Jack in the Box chose R365 as sole back-office inventory platform in March 2026; rollout scope must be verified separately. Second check: Hungry Howie’s selected Restaurant365 for systemwide back-office operations in June 2026.",
+    "sales_response": "Map accounting/inventory data ownership, franchisee contracting and deployment stage before positioning replacement.",
+    "risk_and_uncertainty": "Selection as sole platform does not establish systemwide live adoption or vendor financial performance. Selection and future standardization are not equivalent to a completed franchise rollout.",
+    "priority": "P1",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-28",
+    "pack_order": 29
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-28",
+    "pack_order": 29,
+    "pack_claim_count": 19,
+    "pack_claims_with_url": 17,
+    "pack_claims_inherited_url": 8,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 2,
+      "legacy_claims_need_date_and_current_status_check": 19,
+      "verification_needed": [
+        "Current leadership and ownership",
+        "Named restaurant customer scope",
+        "Current product and pricing",
+        "Financial health if disclosed",
+        "Operator ROI evidence"
+      ]
+    }
+  },
+  "vendor_claims": [
+    {
+      "value": "Restaurant365 currently markets a restaurant-management suite spanning accounting, inventory, scheduling, payroll and R365 AI.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.restaurant365.com/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Restaurant365",
+      "source_type": "vendor_platform_page",
+      "published_at": "",
+      "deployment_scope": "franchisee",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Advertised efficiency and cost-saving percentages were not independently validated and are not classified as strengths."
+    },
+    {
+      "value": "Restaurant365 maintains an API layer for third-party services to exchange data with the platform.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://docs.restaurant365.com/docs/r365-api",
+      "finding_type": "vendor_stated",
+      "source_owner": "Restaurant365",
+      "source_type": "vendor_technical_documentation",
+      "published_at": "",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Endpoint breadth and read/write restrictions were not exhaustively inventoried."
+    },
+    {
+      "value": "Restaurant365 documents near-real-time OData transaction access but states that sales and labor data become available only after Daily Sales Summary polling.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://docs.restaurant365.com/docs/restaurant365-odata-connector",
+      "finding_type": "vendor_stated",
+      "source_owner": "Restaurant365",
+      "source_type": "vendor_technical_documentation",
+      "published_at": "2026-09-09",
+      "deployment_scope": "enterprise",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Actual polling cadence and therefore end-to-end latency are deployment-dependent."
+    },
+    {
+      "value": "Restaurant365 markets a restaurant-specific employee-training platform for standardized learning and compliance.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.restaurant365.com/workforce/employee-training/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Restaurant365",
+      "source_type": "vendor_product_page",
+      "published_at": "",
+      "deployment_scope": "franchisee",
+      "is_vendor_claim": true,
+      "is_inference": false,
+      "limitations_or_conflicts": "Independent training outcome evidence and ExpandShare acquisition lineage were not validated in the opened corpus."
+    }
+  ],
+  "product_lineage": [
+    {
+      "value": "Restaurant365 acquired Compeat in June 2021; Restaurant365 described Compeat as restaurant back-office, workforce and business-intelligence software.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.restaurant365.com/press/restaurant365-acquires-compeat-to-create-market-leader-in-restaurant-management-software/",
+      "finding_type": "vendor_stated",
+      "source_owner": "Restaurant365",
+      "source_type": "primary_acquisition_release",
+      "published_at": "2021-06-10",
+      "deployment_scope": "historical",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Current migration/support status of individual Compeat modules remains unclear."
+    },
+    {
+      "value": "A Ctuit RADAR web endpoint remained reachable during the 2026-09-29 research cycle.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://radar.ctuit.com/",
+      "finding_type": "independently_verified",
+      "source_owner": "Ctuit / Restaurant365 estate",
+      "source_type": "legacy_product_endpoint",
+      "published_at": "",
+      "deployment_scope": "historical",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "Reachable login endpoint does not establish active sales, support horizon or customer count."
+    }
+  ],
+  "weaknesses": [
+    {
+      "value": "A two-location restaurant operator publicly questioned the value of a quoted Restaurant365 annual cost of $10,876.32.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": "2026-09-29",
+      "scope": "competitor",
+      "last_reviewed_by": "system:competitor_intelligence_common",
+      "source_url": "https://www.reddit.com/r/restaurateur/comments/1ddodi7/is_restaurant_365_worth_the_1087632_a_year_for/",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Reddit r/restaurateur",
+      "source_type": "operator_discussion",
+      "published_at": "",
+      "deployment_scope": "franchisee",
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations_or_conflicts": "One quote only; bundle, negotiation and contract terms are unknown and the amount is not a list-price benchmark."
+    }
+  ]
+}

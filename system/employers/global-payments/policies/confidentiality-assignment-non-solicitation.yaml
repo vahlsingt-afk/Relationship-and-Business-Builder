@@ -1,0 +1,53 @@
+# Confidentiality, Assignment, and Non-Solicitation Agreement — Global Payments
+# Extracted from: "Global Payments 2025 Confidentiality Assignment-Non-California_Employees  7.pdf"
+# (signed employment agreement, not a general policy — 13 numbered sections).
+
+policy_id: confidentiality-assignment-non-solicitation
+title: "Confidentiality, Assignment, and Non-Solicitation Agreement"
+source_document: "Global Payments 2025 Confidentiality Assignment-Non-California_Employees  7.pdf"
+version: "Rev. 7/2025"
+effective_date: "2025-07-01"   # approximate — document footer reads "CONFIDENTIAL - REV. 7/2025"; exact effective/signature date not machine-readable (scanned form)
+superseded_by: null
+extracted_by: assisted   # transcribed from a scanned/image PDF (OCR via visual read) on 2026-07-07 — needs Todd's line-by-line review before being treated as fully verified
+last_reviewed: "2026-07-07"
+
+permissions: []   # this document is entirely obligations/restrictions — no permissions section
+
+restrictions:
+  - id: developed-works-owned-by-company
+    text: "All 'Developed Works' (inventions, designs, discoveries, trade secrets, business plans, financial projections, know-how, etc.) conceived/created/produced during employment — whether during or outside business hours, on or off Company premises — that relate to Company business, customers/suppliers, or use Company equipment/property, are owned by the Company. Rights are irrevocably assigned; Moral Rights are waived."
+  - id: no-disclosure-of-company-or-customer-information
+    text: "'Company Information' and 'Customer Information' (trade secrets, customer lists, pricing, marketing strategies, financial results, source code, compensation data, and any information learned through employment that derives economic value from not being publicly known) may not be used or disclosed, directly or indirectly, to any individual/corporation/partnership/entity — during the 'Restricted Period' (term of employment + 5 years after termination), and trade-secret-status information indefinitely beyond that."
+  - id: no-solicitation-of-customers
+    text: "For 24 months after termination, may not directly or indirectly solicit, entice, induce, or assist anyone in soliciting any Company customer/potential customer with whom Todd had 'Material Contact' to terminate/modify/reduce their relationship with the Company."
+  - id: no-solicitation-of-employees
+    text: "For 24 months after termination, may not solicit, recruit, entice, induce, or hire any Company employee Todd worked with or had direct contact with, in the geographic area of the Company's business or Todd's role."
+  - id: must-return-company-property-on-termination
+    text: "Must immediately deliver (or destroy, if the Company permits in writing) all confidential Company/Customer Information and Company property upon termination or request. No copies may be retained."
+  - id: must-report-unauthorized-access-attempts
+    text: "Must immediately report to supervisor any unauthorized attempt to obtain or use Company or Customer Information."
+
+required_processes:
+  - trigger: "Developed Work created that Todd believes should be excluded from Company ownership"
+    process: "Must be explicitly identified in writing on the Agreement itself at signing (the 'Excluded Developed Works' blank) — this is a point-in-time election, not something that can be added later."
+  - trigger: "termination of employment"
+    process: "Immediate return/destruction of all Company/Customer Information and property; no retained copies."
+
+escalation_rules: []   # no dollar-amount or approval-tier triggers — this document is a signed personal covenant, not an approval-routing policy
+
+disclosure_required: false
+
+jurisdiction: "Governed by Georgia law; disputes venued in Muscogee County, Georgia Superior/State Court or the U.S. District Court, Middle District of Georgia."
+
+notes: |
+  This is Todd's own signed (or to-be-signed) agreement, not a general company policy —
+  its restrictions apply personally and survive termination (5-year confidentiality tail,
+  24-month non-solicit tail on both customers and employees). The "Material Contact"
+  definition for the customer non-solicit is broad: it covers anyone Todd dealt with,
+  supervised dealings with, learned Confidential Information about, or who generated
+  compensation/commissions for Todd within 2 years of termination — this will matter
+  directly to RB's relationship-network logic if/when Todd ever leaves Global Payments,
+  since it constrains which contacts in baseline_index.json Todd could solicit for a
+  next role or venture. Not actionable now (Todd is on day 1-2), but worth a note in
+  system/employers/global-payments/profile.yaml if this agreement is superseded or a new
+  version is signed.

@@ -1,0 +1,1180 @@
+{
+  "registry": [
+    {
+      "competitor_slug": "par-technology",
+      "display_name": "PAR Technology",
+      "first_tracked_at": "2026-08-28T17:44:08Z",
+      "last_updated_at": "2026-10-02T09:46:54Z"
+    },
+    {
+      "competitor_slug": "toast",
+      "display_name": "Toast",
+      "first_tracked_at": "2026-08-28T17:44:54Z",
+      "last_updated_at": "2026-10-02T09:46:54Z"
+    },
+    {
+      "competitor_slug": "ncr",
+      "display_name": "NCR Voyix",
+      "first_tracked_at": "2026-08-28T17:44:55Z",
+      "last_updated_at": "2026-10-02T09:46:55Z"
+    },
+    {
+      "competitor_slug": "nory",
+      "display_name": "Nory",
+      "first_tracked_at": "2026-08-28T17:44:55Z",
+      "last_updated_at": "2026-10-02T09:46:55Z"
+    },
+    {
+      "competitor_slug": "oracle-food-beverage-simphony-micros",
+      "display_name": "Oracle Food & Beverage (Simphony / MICROS)",
+      "first_tracked_at": "2026-08-28T17:44:55Z",
+      "last_updated_at": "2026-10-02T09:46:55Z"
+    },
+    {
+      "competitor_slug": "qu",
+      "display_name": "Qu",
+      "first_tracked_at": "2026-08-28T17:44:55Z",
+      "last_updated_at": "2026-10-02T09:46:55Z"
+    },
+    {
+      "competitor_slug": "restaurant365",
+      "display_name": "Restaurant365",
+      "first_tracked_at": "2026-08-28T17:44:55Z",
+      "last_updated_at": "2026-10-02T09:46:55Z"
+    },
+    {
+      "competitor_slug": "revel-systems",
+      "display_name": "Revel Systems",
+      "first_tracked_at": "2026-08-28T17:44:55Z",
+      "last_updated_at": "2026-10-02T09:46:55Z"
+    },
+    {
+      "competitor_slug": "mood-media",
+      "display_name": "Mood Media",
+      "first_tracked_at": "2026-08-28T19:44:20Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "shift4-payments",
+      "display_name": "Shift4 Payments",
+      "first_tracked_at": "2026-09-11T14:03:44Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "fiserv",
+      "display_name": "Fiserv",
+      "first_tracked_at": "2026-09-11T14:03:49Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "cbs-northstar",
+      "display_name": "CBS NorthStar",
+      "first_tracked_at": "2026-09-11T19:17:41Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "freedompay",
+      "display_name": "FreedomPay",
+      "first_tracked_at": "2026-09-11T19:17:41Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "iconex",
+      "display_name": "Iconex",
+      "first_tracked_at": "2026-09-11T19:17:41Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "iw",
+      "display_name": "IW",
+      "first_tracked_at": "2026-09-11T19:17:41Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "kluck",
+      "display_name": "Kluck",
+      "first_tracked_at": "2026-09-11T19:17:41Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "stickypos",
+      "display_name": "StickyPOS",
+      "first_tracked_at": "2026-09-11T19:17:41Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "swipe-savvy-pos",
+      "display_name": "Swipe Savvy POS",
+      "first_tracked_at": "2026-09-11T19:17:41Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "verifone",
+      "display_name": "Verifone",
+      "first_tracked_at": "2026-09-11T19:17:41Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "adyen",
+      "display_name": "Adyen",
+      "first_tracked_at": "2026-09-11T19:17:42Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "hp",
+      "display_name": "HP",
+      "first_tracked_at": "2026-09-11T19:17:42Z",
+      "last_updated_at": "2026-10-02T09:46:56Z"
+    },
+    {
+      "competitor_slug": "posiflex",
+      "display_name": "Posiflex",
+      "first_tracked_at": "2026-09-11T19:17:42Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "rds",
+      "display_name": "RDS",
+      "first_tracked_at": "2026-09-11T19:17:42Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "tabit",
+      "display_name": "Tabit",
+      "first_tracked_at": "2026-09-11T19:17:42Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "touchpoint",
+      "display_name": "Touchpoint",
+      "first_tracked_at": "2026-09-11T19:17:42Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "transaction-network-services",
+      "display_name": "Transaction Network Services",
+      "first_tracked_at": "2026-09-11T19:17:42Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "tray",
+      "display_name": "TRAY",
+      "first_tracked_at": "2026-09-11T19:17:42Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "yelp-for-restaurants",
+      "display_name": "Yelp for Restaurants",
+      "first_tracked_at": "2026-09-11T19:17:42Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "agilysys",
+      "display_name": "Agilysys",
+      "first_tracked_at": "2026-09-11T19:17:43Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "level-10",
+      "display_name": "Level 10",
+      "first_tracked_at": "2026-09-11T19:17:43Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "otter",
+      "display_name": "Otter",
+      "first_tracked_at": "2026-09-11T19:17:43Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "restroworks",
+      "display_name": "Restroworks",
+      "first_tracked_at": "2026-09-11T19:17:43Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "retail-technology-group",
+      "display_name": "Retail Technology Group",
+      "first_tracked_at": "2026-09-11T19:17:43Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "spoton",
+      "display_name": "SpotOn",
+      "first_tracked_at": "2026-09-11T19:17:43Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "star-micronics",
+      "display_name": "Star Micronics",
+      "first_tracked_at": "2026-09-11T19:17:43Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "upm-adhesive-materials",
+      "display_name": "UPM Adhesive Materials",
+      "first_tracked_at": "2026-09-11T19:17:43Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "xpr-pos",
+      "display_name": "XPR POS",
+      "first_tracked_at": "2026-09-11T19:17:43Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "858-partners",
+      "display_name": "858 Partners",
+      "first_tracked_at": "2026-09-11T19:17:44Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "directv",
+      "display_name": "DIRECTV",
+      "first_tracked_at": "2026-09-11T19:17:44Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "hostie",
+      "display_name": "Hostie",
+      "first_tracked_at": "2026-09-11T19:17:44Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "marqii",
+      "display_name": "Marqii",
+      "first_tracked_at": "2026-09-11T19:17:44Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "ovation",
+      "display_name": "Ovation",
+      "first_tracked_at": "2026-09-11T19:17:44Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "rockbot",
+      "display_name": "Rockbot",
+      "first_tracked_at": "2026-09-11T19:17:44Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "slang-ai",
+      "display_name": "Slang AI",
+      "first_tracked_at": "2026-09-11T19:17:44Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "tattle",
+      "display_name": "Tattle",
+      "first_tracked_at": "2026-09-11T19:17:44Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "ziosk",
+      "display_name": "Ziosk",
+      "first_tracked_at": "2026-09-11T19:17:44Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "alchemer",
+      "display_name": "Alchemer",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "arc",
+      "display_name": "Arc",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "canopy",
+      "display_name": "Canopy",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "constrata",
+      "display_name": "ConStrata",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "custom-channels",
+      "display_name": "Custom Channels",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "ecolab",
+      "display_name": "Ecolab",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "field-advantage",
+      "display_name": "Field Advantage",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "kitchen-armor",
+      "display_name": "Kitchen Armor",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "mirus",
+      "display_name": "Mirus",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "perfect-company",
+      "display_name": "Perfect Company",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "revmo-ai",
+      "display_name": "Revmo AI",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "solugenix",
+      "display_name": "Solugenix",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "soundhound-ai",
+      "display_name": "SoundHound AI",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:57Z"
+    },
+    {
+      "competitor_slug": "synergysuite",
+      "display_name": "SynergySuite",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "tcg",
+      "display_name": "TCG",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "tiphaus",
+      "display_name": "TipHaus",
+      "first_tracked_at": "2026-09-11T19:17:45Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "7shifts",
+      "display_name": "7shifts",
+      "first_tracked_at": "2026-09-11T19:17:46Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "all-gravy",
+      "display_name": "All Gravy",
+      "first_tracked_at": "2026-09-11T19:17:46Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "back-office",
+      "display_name": "Back Office",
+      "first_tracked_at": "2026-09-11T19:17:46Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "berry-ai",
+      "display_name": "Berry AI",
+      "first_tracked_at": "2026-09-11T19:17:46Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "bixolon",
+      "display_name": "BIXOLON",
+      "first_tracked_at": "2026-09-11T19:17:46Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "branch",
+      "display_name": "Branch",
+      "first_tracked_at": "2026-09-11T19:17:46Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "chetu",
+      "display_name": "Chetu",
+      "first_tracked_at": "2026-09-11T19:17:46Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "glory",
+      "display_name": "Glory",
+      "first_tracked_at": "2026-09-11T19:17:46Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "transact-technologies",
+      "display_name": "TransAct Technologies",
+      "first_tracked_at": "2026-09-11T19:17:46Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "trison",
+      "display_name": "TRISON",
+      "first_tracked_at": "2026-09-11T19:17:46Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "5-5",
+      "display_name": "5&5",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "axial-shift",
+      "display_name": "Axial Shift",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "envysion",
+      "display_name": "Envysion",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "epson",
+      "display_name": "Epson",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "fusion-connect",
+      "display_name": "Fusion Connect",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "hat-design-works",
+      "display_name": "HAT Design Works",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "hi-auto",
+      "display_name": "Hi Auto",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "qsrsoft",
+      "display_name": "QSRSoft",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "revenue-management-solutions",
+      "display_name": "Revenue Management Solutions",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "rosnet",
+      "display_name": "Rosnet",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "savi",
+      "display_name": "Savi",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "shenzhen-electron-technology-co-ltd",
+      "display_name": "Shenzhen Electron Technology Co., Ltd.",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "sona",
+      "display_name": "Sona",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "truemeter",
+      "display_name": "TrueMeter",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "u-experten",
+      "display_name": "U-Experten",
+      "first_tracked_at": "2026-09-11T19:17:47Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "ando",
+      "display_name": "Ando",
+      "first_tracked_at": "2026-09-11T19:17:48Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "cap-energy",
+      "display_name": "Cap Energy",
+      "first_tracked_at": "2026-09-11T19:17:48Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "comcast-business",
+      "display_name": "Comcast Business",
+      "first_tracked_at": "2026-09-11T19:17:48Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "decision-logic",
+      "display_name": "Decision Logic",
+      "first_tracked_at": "2026-09-11T19:17:48Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "heytruffle",
+      "display_name": "heytruffle",
+      "first_tracked_at": "2026-09-11T19:17:48Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "incept-ai",
+      "display_name": "Incept AI",
+      "first_tracked_at": "2026-09-11T19:17:48Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "precitaste",
+      "display_name": "PreciTaste",
+      "first_tracked_at": "2026-09-11T19:17:48Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "reality-based-group",
+      "display_name": "Reality Based Group",
+      "first_tracked_at": "2026-09-11T19:17:48Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "resideo",
+      "display_name": "Resideo",
+      "first_tracked_at": "2026-09-11T19:17:48Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "vox-ai",
+      "display_name": "Vox AI",
+      "first_tracked_at": "2026-09-11T19:17:48Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "xenia",
+      "display_name": "Xenia",
+      "first_tracked_at": "2026-09-11T19:17:48Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "bikky",
+      "display_name": "Bikky",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "card-market",
+      "display_name": "Card Market",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "cogs-well",
+      "display_name": "COGS-Well",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:46:58Z"
+    },
+    {
+      "competitor_slug": "crunchtime",
+      "display_name": "Crunchtime",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:46:59Z"
+    },
+    {
+      "competitor_slug": "datadelivers",
+      "display_name": "DataDelivers",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:46:59Z"
+    },
+    {
+      "competitor_slug": "deepgram",
+      "display_name": "Deepgram",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:46:59Z"
+    },
+    {
+      "competitor_slug": "dinova",
+      "display_name": "Dinova",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:46:59Z"
+    },
+    {
+      "competitor_slug": "ecard-systems",
+      "display_name": "eCard Systems",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:46:59Z"
+    },
+    {
+      "competitor_slug": "fresh-kds",
+      "display_name": "Fresh KDS",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:46:59Z"
+    },
+    {
+      "competitor_slug": "incentivio",
+      "display_name": "Incentivio",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "nastar",
+      "display_name": "NAStar",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "paytronix",
+      "display_name": "Paytronix",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "vibes",
+      "display_name": "Vibes",
+      "first_tracked_at": "2026-09-11T19:17:49Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "apex-order-pickup",
+      "display_name": "Apex Order Pickup",
+      "first_tracked_at": "2026-09-11T19:17:50Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "bite",
+      "display_name": "Bite",
+      "first_tracked_at": "2026-09-11T19:17:50Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "elo",
+      "display_name": "Elo",
+      "first_tracked_at": "2026-09-11T19:17:50Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "loop-ai",
+      "display_name": "Loop AI",
+      "first_tracked_at": "2026-09-11T19:17:50Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "mako-networks",
+      "display_name": "Mako Networks",
+      "first_tracked_at": "2026-09-11T19:17:50Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "menu-order-ai",
+      "display_name": "Menu-Order AI",
+      "first_tracked_at": "2026-09-11T19:17:50Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "nibble-one",
+      "display_name": "Nibble ONE",
+      "first_tracked_at": "2026-09-11T19:17:50Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "olo",
+      "display_name": "Olo",
+      "first_tracked_at": "2026-09-11T19:17:50Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "onosys",
+      "display_name": "Onosys",
+      "first_tracked_at": "2026-09-11T19:17:50Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "sparkfly",
+      "display_name": "Sparkfly",
+      "first_tracked_at": "2026-09-11T19:17:50Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "tillster",
+      "display_name": "Tillster",
+      "first_tracked_at": "2026-09-11T19:17:50Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "unplug",
+      "display_name": "unPLUG",
+      "first_tracked_at": "2026-09-11T19:17:50Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "3-owl-inc",
+      "display_name": "3 Owl Inc",
+      "first_tracked_at": "2026-09-11T19:17:51Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "ai2cs",
+      "display_name": "AI2CS",
+      "first_tracked_at": "2026-09-11T19:17:51Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "altametrics",
+      "display_name": "Altametrics",
+      "first_tracked_at": "2026-09-11T19:17:51Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "conversenow",
+      "display_name": "ConverseNow",
+      "first_tracked_at": "2026-09-11T19:17:51Z",
+      "last_updated_at": "2026-10-02T09:47:00Z"
+    },
+    {
+      "competitor_slug": "dsa-signage",
+      "display_name": "DSA Signage",
+      "first_tracked_at": "2026-09-11T19:17:51Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "essintial-enterprise-solutions",
+      "display_name": "Essintial Enterprise Solutions",
+      "first_tracked_at": "2026-09-11T19:17:51Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "frandata",
+      "display_name": "FRANdata",
+      "first_tracked_at": "2026-09-11T19:17:51Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "hughes",
+      "display_name": "Hughes",
+      "first_tracked_at": "2026-09-11T19:17:51Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "one-source",
+      "display_name": "One Source",
+      "first_tracked_at": "2026-09-11T19:17:51Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "spectrum-business",
+      "display_name": "Spectrum Business",
+      "first_tracked_at": "2026-09-11T19:17:51Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "worldlink-integration-group",
+      "display_name": "Worldlink Integration Group",
+      "first_tracked_at": "2026-09-11T19:17:51Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "entegra-procurement-services",
+      "display_name": "Entegra Procurement Services",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "fourth-enterprises",
+      "display_name": "Fourth Enterprises",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "hang",
+      "display_name": "Hang",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "harri",
+      "display_name": "Harri",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "harris-technologies-inc",
+      "display_name": "Harris Technologies Inc.",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "ingest",
+      "display_name": "Ingest",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "landed-management",
+      "display_name": "Landed Management",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "loman-ai",
+      "display_name": "Loman AI",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "marigold",
+      "display_name": "Marigold",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "microtouch-systems",
+      "display_name": "MicroTouch Systems",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "momos",
+      "display_name": "Momos",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "opentable",
+      "display_name": "OpenTable",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "sagent",
+      "display_name": "Sagent",
+      "first_tracked_at": "2026-09-11T19:17:52Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "scale-computing",
+      "display_name": "Scale Computing",
+      "first_tracked_at": "2026-09-11T19:17:53Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "sunday",
+      "display_name": "sunday",
+      "first_tracked_at": "2026-09-11T19:17:53Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "telaid",
+      "display_name": "Telaid",
+      "first_tracked_at": "2026-09-11T19:17:53Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "touch-dynamic-inc",
+      "display_name": "Touch Dynamic, Inc.",
+      "first_tracked_at": "2026-09-11T19:17:53Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "voicify",
+      "display_name": "Voicify",
+      "first_tracked_at": "2026-09-11T19:17:53Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "square",
+      "display_name": "Square",
+      "first_tracked_at": "2026-09-11T19:18:04Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "fiserv-clover",
+      "display_name": "Fiserv (Clover)",
+      "first_tracked_at": "2026-09-26T12:23:31Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "stripe",
+      "display_name": "Stripe",
+      "first_tracked_at": "2026-09-26T12:23:31Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "thanx",
+      "display_name": "Thanx",
+      "first_tracked_at": "2026-09-26T12:23:32Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "sevenrooms",
+      "display_name": "SevenRooms",
+      "first_tracked_at": "2026-09-26T12:23:33Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "coates-group",
+      "display_name": "Coates Group",
+      "first_tracked_at": "2026-09-26T12:23:33Z",
+      "last_updated_at": "2026-10-02T09:47:01Z"
+    },
+    {
+      "competitor_slug": "hme-hm-electronics",
+      "display_name": "HME (HM Electronics)",
+      "first_tracked_at": "2026-09-26T12:23:33Z",
+      "last_updated_at": "2026-10-02T09:47:02Z"
+    },
+    {
+      "competitor_slug": "adjacent-kitchen-voice-players-brief",
+      "display_name": "Adjacent kitchen / voice players (brief)",
+      "first_tracked_at": "2026-09-26T12:23:33Z",
+      "last_updated_at": "2026-10-02T09:47:02Z"
+    },
+    {
+      "competitor_slug": "stratacache",
+      "display_name": "STRATACACHE",
+      "first_tracked_at": "2026-09-26T12:23:33Z",
+      "last_updated_at": "2026-10-02T09:47:02Z"
+    },
+    {
+      "competitor_slug": "rise-vision",
+      "display_name": "Rise Vision",
+      "first_tracked_at": "2026-09-26T12:23:34Z",
+      "last_updated_at": "2026-10-02T09:47:02Z"
+    },
+    {
+      "competitor_slug": "raydiant",
+      "display_name": "Raydiant",
+      "first_tracked_at": "2026-09-26T12:23:34Z",
+      "last_updated_at": "2026-10-02T09:47:02Z"
+    },
+    {
+      "competitor_slug": "spectrio",
+      "display_name": "Spectrio",
+      "first_tracked_at": "2026-09-26T12:23:34Z",
+      "last_updated_at": "2026-10-02T09:47:02Z"
+    },
+    {
+      "competitor_slug": "acrelec",
+      "display_name": "Acrelec",
+      "first_tracked_at": "2026-09-26T12:23:34Z",
+      "last_updated_at": "2026-10-02T09:47:02Z"
+    },
+    {
+      "competitor_slug": "crunchtime-qsr-automations",
+      "display_name": "Crunchtime (+ QSR Automations)",
+      "first_tracked_at": "2026-09-26T12:23:34Z",
+      "last_updated_at": "2026-10-02T09:47:02Z"
+    },
+    {
+      "competitor_slug": "marginedge",
+      "display_name": "MarginEdge",
+      "first_tracked_at": "2026-09-26T12:23:35Z",
+      "last_updated_at": "2026-10-02T09:47:02Z"
+    },
+    {
+      "competitor_slug": "craftable",
+      "display_name": "Craftable",
+      "first_tracked_at": "2026-09-26T12:23:35Z",
+      "last_updated_at": "2026-10-02T09:47:03Z"
+    },
+    {
+      "competitor_slug": "fourth-hotschedules",
+      "display_name": "Fourth (HotSchedules)",
+      "first_tracked_at": "2026-09-26T12:23:35Z",
+      "last_updated_at": "2026-10-02T09:47:03Z"
+    },
+    {
+      "competitor_slug": "square-for-restaurants-block",
+      "display_name": "Square for Restaurants (Block)",
+      "first_tracked_at": "2026-09-26T12:47:18Z",
+      "last_updated_at": "2026-10-02T09:47:03Z"
+    },
+    {
+      "competitor_slug": "squirrel-systems",
+      "display_name": "Squirrel Systems",
+      "first_tracked_at": "2026-09-26T12:47:19Z",
+      "last_updated_at": "2026-10-02T09:47:03Z"
+    },
+    {
+      "competitor_slug": "lightspeed-commerce-lightspeed-restaurant-upserve",
+      "display_name": "Lightspeed Commerce (Lightspeed Restaurant / Upserve)",
+      "first_tracked_at": "2026-09-26T12:47:19Z",
+      "last_updated_at": "2026-10-02T09:47:03Z"
+    },
+    {
+      "competitor_slug": "upserve-skyview-equity",
+      "display_name": "Upserve (Skyview Equity)",
+      "first_tracked_at": "2026-09-26T12:47:19Z",
+      "last_updated_at": "2026-10-02T09:47:03Z"
+    },
+    {
+      "competitor_slug": "block-square-payments",
+      "display_name": "Block / Square (payments)",
+      "first_tracked_at": "2026-09-26T12:47:19Z",
+      "last_updated_at": "2026-10-02T09:47:03Z"
+    },
+    {
+      "competitor_slug": "elavon-u-s-bank",
+      "display_name": "Elavon (U.S. Bank)",
+      "first_tracked_at": "2026-09-26T12:47:19Z",
+      "last_updated_at": "2026-10-02T09:47:03Z"
+    },
+    {
+      "competitor_slug": "jpmorgan-payments",
+      "display_name": "JPMorgan Payments",
+      "first_tracked_at": "2026-09-26T12:47:19Z",
+      "last_updated_at": "2026-10-02T09:47:03Z"
+    },
+    {
+      "competitor_slug": "cardfree",
+      "display_name": "CardFree",
+      "first_tracked_at": "2026-09-26T12:47:20Z",
+      "last_updated_at": "2026-10-02T09:47:03Z"
+    },
+    {
+      "competitor_slug": "nuvei",
+      "display_name": "Nuvei",
+      "first_tracked_at": "2026-09-26T12:47:20Z",
+      "last_updated_at": "2026-10-02T09:47:03Z"
+    },
+    {
+      "competitor_slug": "yumpingo",
+      "display_name": "Yumpingo",
+      "first_tracked_at": "2026-09-26T12:47:20Z",
+      "last_updated_at": "2026-10-02T09:47:03Z"
+    },
+    {
+      "competitor_slug": "preferred-patron",
+      "display_name": "Preferred Patron",
+      "first_tracked_at": "2026-09-26T12:47:20Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "craver",
+      "display_name": "Craver",
+      "first_tracked_at": "2026-09-26T12:47:20Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "adyen-talon-one",
+      "display_name": "Adyen / Talon.One",
+      "first_tracked_at": "2026-09-26T12:47:21Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "presto-presto-voice",
+      "display_name": "Presto (Presto Voice)",
+      "first_tracked_at": "2026-09-26T12:47:21Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "omilia",
+      "display_name": "Omilia",
+      "first_tracked_at": "2026-09-26T12:47:21Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "delaget",
+      "display_name": "Delaget",
+      "first_tracked_at": "2026-09-26T12:47:21Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "jolt",
+      "display_name": "Jolt",
+      "first_tracked_at": "2026-09-26T12:47:21Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "meazureup",
+      "display_name": "MeazureUp",
+      "first_tracked_at": "2026-09-26T12:47:21Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "wand-digital",
+      "display_name": "WAND Digital",
+      "first_tracked_at": "2026-09-26T12:47:21Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "grubbrr",
+      "display_name": "GRUBBRR",
+      "first_tracked_at": "2026-09-26T12:47:22Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "samsung-vxt-commercial-displays",
+      "display_name": "Samsung (VXT + commercial displays)",
+      "first_tracked_at": "2026-09-26T12:47:22Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "marketman-meal-ticket-psg",
+      "display_name": "MarketMan (Meal Ticket / PSG)",
+      "first_tracked_at": "2026-09-26T12:47:22Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "tenzo",
+      "display_name": "Tenzo",
+      "first_tracked_at": "2026-09-26T12:47:22Z",
+      "last_updated_at": "2026-10-02T09:47:04Z"
+    },
+    {
+      "competitor_slug": "compeat",
+      "display_name": "Compeat",
+      "first_tracked_at": "2026-09-28T13:11:39Z",
+      "last_updated_at": "2026-10-02T09:47:05Z"
+    },
+    {
+      "competitor_slug": "presto",
+      "display_name": "Presto",
+      "first_tracked_at": "2026-09-28T20:14:09Z",
+      "last_updated_at": "2026-10-02T09:47:05Z"
+    },
+    {
+      "competitor_slug": "nova",
+      "display_name": "Nova",
+      "first_tracked_at": "2026-09-30T12:59:02Z",
+      "last_updated_at": "2026-10-02T09:47:05Z"
+    },
+    {
+      "competitor_slug": "doordash-dashos",
+      "display_name": "DoorDash / DashOS",
+      "first_tracked_at": "2026-09-30T13:51:10Z",
+      "last_updated_at": "2026-10-02T09:47:05Z"
+    }
+  ]
+}

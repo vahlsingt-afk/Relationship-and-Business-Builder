@@ -1,0 +1,60 @@
+{
+  "records": [
+    {
+      "vendor": "Genius",
+      "vendor_ticker": "GPN",
+      "brand": "A&W",
+      "category": "POS Software",
+      "vendor_role": "unknown",
+      "deployment_status": "enterprise_wide_deployment",
+      "confidence": "High",
+      "confidence_rationale": "Global Payments' own official investor press release announcing the Genius for Enterprise POS launch, directly naming A&W and quoting Nasiem Patel (senior director of technology, A&W) by name and title, with a specific, attributed scale figure (1,000+ restaurants scaled in under three years). Primary-source vendor announcement, not secondary reporting.",
+      "source_type": "press_release",
+      "source_url": "https://investors.globalpayments.com/news-events/press-releases/detail/486/global-payments-announces-the-launch-of-its-genius-for",
+      "source_date": "2025-09-10",
+      "notes": "Quote: \"Scaling over 1,000+ restaurants in under three years was no small feat. Genius gave us the flexibility and partnership we needed to make it happen -- from supporting our franchisee needs to navigating unique regional requirements.\" -- Nasiem Patel, senior director of technology, A&W."
+    },
+    {
+      "vendor": "Genius",
+      "vendor_ticker": "GPN",
+      "brand": "Subway",
+      "category": "KDS",
+      "vendor_role": "unknown",
+      "deployment_status": "active_rollout",
+      "confidence": "Medium-High",
+      "confidence_rationale": "Named in credible trade-press coverage (Payments Dive) of Global Payments' Q1 2026 earnings commentary, with a specific, sourced location count for the kitchen-management deployment specifically (not just Subway's total footprint). Future/rollout-tense language (\"will deploy\") -- not yet confirmed as a completed, fully-realized deployment.",
+      "source_type": "trade_press",
+      "source_url": "https://www.paymentsdive.com/news/global-payments-touts-genius-gains/819560/",
+      "source_date": "2026-05-07",
+      "notes": "Article: Subway will deploy Genius's kitchen management system across approximately 2,500 locations."
+    },
+    {
+      "vendor": "Genius",
+      "vendor_ticker": "GPN",
+      "brand": "Bojangles",
+      "category": "POS Software",
+      "vendor_role": "unknown",
+      "deployment_status": "contracted_deployment_pending",
+      "confidence": "Medium",
+      "confidence_rationale": "Named in the same credible trade-press coverage as a new customer signed during the quarter. No Genius-specific deployment scope or location count given -- the 17-states figure describes Bojangles' own existing footprint, not confirmed Genius rollout scope, so this is recorded as contracted/early rather than an active or completed deployment.",
+      "source_type": "trade_press",
+      "source_url": "https://www.paymentsdive.com/news/global-payments-touts-genius-gains/819560/",
+      "source_date": "2026-05-07",
+      "notes": "Article: Bojangles (quick-service chain with locations across 17 states) signed on as a new Genius customer during the quarter."
+    },
+    {
+      "vendor": "Genius",
+      "vendor_ticker": "GPN",
+      "brand": "Checkers & Rally's",
+      "category": "Back Office",
+      "vendor_role": "unknown",
+      "deployment_status": "deployed_scope_not_publicly_disclosed",
+      "confidence": "Medium",
+      "confidence_rationale": "Real, already-filled field-research entry in Todd's team's shared canonical tech-stack workbook (Restaurant_Tech_Coverage_Operational_2026-08-28.xlsx, Canonical Tech Stack sheet, Checkers row, Back Office column = 'Xenial'). Recorded under the vendor's current name (Genius), not the workbook's literal cell text, because Xenial is Genius's own pre-2025-rebrand product name for this exact line (SICOM Systems, acquired by Global Payments 2018, ~$415M -> rebranded Xenial -> 2025 rebrand to Genius by Global Payments -- confirmed via Global Payments' own 2025 brand-identity press release). No public source URL for this specific relationship; provenance is the team's internal field research, not an external announcement.",
+      "source_type": "internal_field_research",
+      "source_url": null,
+      "source_date": "2026-08-28",
+      "notes": "Workbook cell literally reads 'Xenial' -- same real vendor as Genius, pre-rebrand name. See vendor-genius entity's aliases/notes for the SICOM -> Xenial -> Genius lineage."
+    }
+  ]
+}

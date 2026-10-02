@@ -1,0 +1,132 @@
+P	Normal	PRODUCT PORTFOLIO MAP
+P	Normal	Genius restaurant
+technology
+P	Normal	McDonald’s routing reference
+P	Heading 2	Positioning guardrails
+P	List Bullet	This is a portfolio and routing map, not a proposal to replace NEWPOS or an assertion that McDonald’s has opened a formal second-source process.
+P	List Bullet	CosMc’s is prior-fit evidence. It is not represented here as a McDonald’s system approval or a production entitlement.
+P	List Bullet	Hardware ownership, design and manufacturing must be confirmed; public pages establish Genius-branded countertop and handheld options, not the manufacturer-of-record.
+P	List Bullet	Roadmap concepts discussed on the JPR call are excluded from the supported-capability column until Product confirms availability.
+P	Normal	REVIEW FIRST
+P	Heading 1	Ryan’s confirmation agenda
+P	Heading 2	How the map is organized
+P	List Bullet	Publicly grounded: the capability is supported by current Global Payments or Xenial materials.
+P	List Bullet	Internal claim — verify: useful JPR or account context that cannot yet be repeated externally as fact.
+P	List Bullet	Lineage: a working translation between today’s Genius language and labels Jeff may know from Xenial, RTI or CosMc’s.
+P	Normal	PRODUCT MAP 1 OF 3
+P	Heading 1	Core commerce and in-store hardware
+P	Normal	Genius Enterprise POS  
+P	Normal	Genius hardware   CONFIRM BEFORE EXTERNAL USE
+P	Normal	Genius Kiosk   PUBLICLY GROUNDED
+P	Normal	PRODUCT MAP 2 OF 3
+P	Heading 1	Kitchen, back office and payments
+P	Normal	Genius Kitchen   PUBLICLY GROUNDED
+P	Normal	Genius Back Office   CONFIRM BEFORE EXTERNAL USE
+P	Normal	Payments and gateway   CONFIRM BEFORE EXTERNAL USE
+P	Normal	PRODUCT MAP 3 OF 3
+P	Heading 1	Digital experience and drive-thru
+P	Normal	Genius Digital Displays   PUBLICLY GROUNDED
+P	Normal	Genius Drive Thru   PUBLICLY GROUNDED
+P	Heading 2	Recommended routing sequence for Jeff
+P	Normal	1. Validate the map with Ryan and identify one accountable owner per category.
+P	Normal	2. Convert this review draft into a two-page external routing sheet—current names, one-sentence capability, proven deployment and McDonald’s relevance.
+P	Normal	3. Send Jeff the approved sheet and ask him to route Digital Displays/Drive Thru first, then Payments and the broader platform only where there is a defined owner or initiative.
+P	Normal	4. Use any Justine Power introduction as a discovery path; keep CosMc’s evidence precise and avoid implying system approval.
+P	Normal	REFERENCE
+P	Heading 1	Source notes and claim boundaries
+P	Heading 2	Internal inputs requiring confirmation
+P	List Bullet	August 11 JPR discussion with Jeff Coffland, including the requested product-lineage map and CosMc’s context.
+P	List Bullet	Internal account intelligence: CosMc’s product footprint, hardware ownership/manufacturing, road-map concepts, customer references and named internal owners.
+P	Heading 2	Approval record
+TABLE 0
+ | DRAFT FOR RYAN HILDEBRAND CONFIRMATION — NOT FOR EXTERNAL DISTRIBUTION / This map translates public Genius capabilities and former Xenial/RTI labels into a practical routing aid for Jeff Coffland. Items labeled “Ryan to confirm” must be resolved before Todd sends an external version.
+TABLE 1
+Prepared for | Ryan Hildebrand — product and delivery confirmation
+Intended next recipient | Jeff Coffland — internal McDonald’s routing
+As of | August 11, 2026
+Basis | Official Global Payments/Xenial materials + August 11 JPR discussion
+TABLE 2
+ | The fastest useful review / Resolve the decisions below first. Once these are answered, the external map can be simplified to current names, proven capabilities, deployment context and the right internal owner for Jeff.
+TABLE 3
+# | Decision needed | Ryan response / owner
+1 | Genius hardware: exact sellable models/SKUs; Global Payments design ownership; manufacturer/OEM; supported operating systems; payment certifications; availability by country; lifecycle and field replacement model. | 
+2 | Current naming: confirm the external label and former Xenial/RTI lineage for Enterprise POS, Kiosk, Kitchen, Digital Displays, Drive Thru and Back Office. | 
+3 | CosMc’s footprint: identify exactly which products, hardware, integrations and support model were deployed, and what may be named externally. | 
+4 | Product versus roadmap: confirm which drive-thru camera/timer, OCU, reporting and display configurations are commercially available today. | 
+5 | Customer proof: approve any usable references, metrics and brand names—especially A&W Canada and Yoshinoya—and identify stronger McDonald’s-relevant references. | 
+6 | Delivery coverage: confirm installation, monitoring, help desk, depot/field service, international support and internal owner for each category. | 
+7 | Payments: identify the McDonald’s-relevant Global Payments/Worldpay components, gateway/acquiring roles, devices, tokenization and market coverage. | 
+TABLE 4
+Lineage | Working lineage: Xenial enterprise POS / Xenial Ordering. Global Payments investment into the Genius Cloud platform.
+What is supported | API First, Native cloud enterprise POS with centralized management, real-time synchronization and offline operation. Support across iOS, Android, Windows and Linux, with counter, kiosk, curbside and drive-thru use cases and customer-owned or Global Payments-supplied hardware.
+McDonald’s relevance | Relevant as an integration and restaurant-commerce platform reference. 
+Proof point | CosMc’s, A&W Canada across 1,032+ restaurants, Dutch Brothers across 1100+ locations, 7Brews rolled out 530+ locations in 9 weeks, Gloval 
+TABLE 5
+Current label | Genius countertop and Genius handheld hardware (public category labels; model names not established)
+Lineage | Working lineage: Xenial POS hardware / portable tablets / rugged terminals. Hardware identity may differ by Genius edition and geography.
+What is supported | Public Genius restaurant pages describe durable countertop devices and compact handhelds with POS and secure payment capability. Enterprise materials also state “your hardware or ours” and describe rugged terminals and lightweight tablets.
+McDonald’s relevance | Potentially important for store-standard discussions, but only after the hardware bill of materials, payment components, certifications, service model and deployment ownership are clear.
+Proof point | Public pages establish Genius-branded device categories—not the designer, OEM or manufacturer-of-record.
+Ryan to confirm | Exact models/SKUs; who designs and owns the hardware specification; OEM/manufacturer; OS and processor options; payment device/certification; peripherals; country availability; lifecycle; spares/depot/field service; CosMc’s hardware configuration.
+TABLE 6
+Current label | Genius Kiosk / enterprise self-service ordering
+Lineage | Former public label: Xenial Kiosk hardware and software / Xenial Ordering Kiosk.
+What is supported | Self-service ordering software with indoor/outdoor and multiple mounting options described in Xenial materials; peripherals can include printers, scanners, PIN pads/payment devices, cameras and Wi-Fi. The enterprise platform supports kiosk as an order channel.
+McDonald’s relevance | Relevant where McDonald’s wants modular self-service or integration options, subject to global store standards and accessibility requirements.
+Proof point | Xenial public materials describe hardware plus software and an SDK path for mixed-vendor kiosk/POS environments.
+Ryan to confirm | Current external name and sellable configurations; enclosure/hardware vendors; accessibility and security certifications; supported payments; CosMc’s use; international install/service coverage.
+TABLE 7
+Current label | Genius Kitchen / Kitchen Display System (KDS)
+Lineage | Former/current documentation labels include Xenial Kitchen Management (XKM), Kitchen Management and Order Management System (OMS). Confirm portfolio boundaries.
+What is supported | Kitchen displays route items to configured production stations, support destination-specific views such as drive-thru, and can provide order-ready status. Public documentation describes touchscreen and bump-bar interaction plus configurable ticket views.
+McDonald’s relevance | Relevant to end-to-end order flow, throughput and integration conversations—not as an assumed replacement for McDonald’s kitchen production systems.
+Proof point | Current Xenial documentation shows active Genius Kitchen product documentation and Xenial Kitchen release notes.
+Ryan to confirm | Which KDS/OMS components are current, their external names, integration interfaces, hardware requirements, enterprise deployments and any CosMc’s footprint.
+TABLE 8
+Current label | Working label: Genius Back Office / enterprise reporting
+Lineage | Historical labels visible in Xenial support materials: The Portal RTI, RTI Financial Accounting, Back Office and enterprise reporting.
+What is supported | Public Xenial portfolio materials establish back-office and enterprise-reporting capabilities, while support materials show continuing RTI-related product families. Detailed current scope is not sufficiently clear for an external claim in this draft.
+McDonald’s relevance | Potentially relevant to store operations, inventory, labor, financial and enterprise reporting discussions once the current module map is confirmed.
+Proof point | Xenial’s current support directory still routes customers for The Portal RTI, RTI Financial Accounting and Back Office.
+Ryan to confirm | Current product names and module boundaries; RTI lineage; supported functions and integrations; customer references; roadmap/status; owner and delivery coverage.
+TABLE 9
+Current label | Global Payments / Worldpay restaurant payments and gateway capabilities; not treated here as one Genius SKU
+Lineage | Multiple payment, gateway and acquiring components may sit alongside Genius. The correct McDonald’s map requires Payments confirmation.
+What is supported | Public restaurant materials establish integrated payment processing and contactless/mobile acceptance. The precise gateway, acquiring, device and tokenization components relevant to McDonald’s are not identified in this draft.
+McDonald’s relevance | This is likely the broadest enterprise relationship area, but the map must distinguish software, gateway, acquiring/processing, device and market responsibilities.
+Proof point | Global Payments publicly positions Genius as connecting POS and payments; product-level McDonald’s relevance remains to be mapped.
+Ryan to confirm | Product names; Global Payments versus Worldpay roles; gateway/acquiring scope; devices and certifications; tokenization; markets; CosMc’s configuration; internal owners.
+TABLE 10
+Current label | Working current label: Genius digital menu technology / digital menu screens
+Lineage | Former label: Xenial Digital Displays; indoor and outdoor digital menu boards, order confirmation and order status.
+What is supported | Public materials describe centralized/remote content management, scheduled dayparts, local and corporate control, indoor/outdoor menus, order-confirmation boards and operations monitoring. Architecture can vary by deployment.
+McDonald’s relevance | A credible alternative architecture to evaluate for targeted needs. Do not characterize McDonald’s as replacing an incumbent or running a formal second-source process.
+Proof point | Xenial reports deployment at 106 Yoshinoya locations; 34 drive-thrus combined digital menu boards and a timer, with a reported 35% service-time reduction.
+Ryan to confirm | Current external name; CMS/monitoring model; supported playerless versus media-controller configurations; display/hardware partners; service coverage; CosMc’s footprint; permission to use Yoshinoya details.
+TABLE 11
+Current label | Genius Drive Thru; current documentation includes Drive Thru Director and Vision
+Lineage | Former label: Xenial Drive-thru Director / Xenial drive-thru timer and camera-based timer.
+What is supported | Current documentation describes lane event capture from loop detectors, camera systems and intelligent order-confirmation units; real-time vehicle visualization; single/dual-lane workflows; gamification; and reporting/API capabilities. Public Xenial materials also describe camera-based timing.
+McDonald’s relevance | Strongest near-term proof area if Product confirms what is commercially available, what was used at CosMc’s and which integration/service commitments are supportable.
+Proof point | Yoshinoya is the public proof point. The JPR discussion also identified CosMc’s as an important internal reference, but exact scope and disclosure permission remain unverified.
+Ryan to confirm | Current sellable components versus roadmap; supported sensor/camera/OCU architecture; reporting/API; AI claims; CosMc’s requirements and deployed scope; customer references; install/field-service ownership.
+ | Hold from the external version unless Ryan confirms / Claims that the system reuses existing security-camera feeds; Wi-Fi camera deployment; employee movement tracking; player-free DMB as a universal architecture; or a camera timer developed specifically for CosMc’s. These may be valuable hypotheses, but they are not treated as verified capabilities here. | Hold from the external version unless Ryan confirms / Claims that the system reuses existing security-camera feeds; Wi-Fi camera deployment; employee movement tracking; player-free DMB as a universal architecture; or a camera timer developed specifically for CosMc’s. These may be valuable hypotheses, but they are not treated as verified capabilities here.
+TABLE 12
+ | Evidence standard / Publicly grounded does not mean customer-approved for reuse. Ryan should still confirm current availability, product naming, reference permissions and the operational delivery model before external circulation.
+TABLE 13
+Source | URL | Used for
+Genius overview | https://www.globalpayments.com/genius | Suite categories, restaurant workflow and general hardware language.
+Genius Enterprise POS | https://www.globalpayments.com/point-of-sale/enterprise/enterprise-pos | Enterprise architecture, operating systems, hardware flexibility, order channels and A&W Canada reference.
+Genius QSR | https://www.globalpayments.com/en-gb/point-of-sale/restaurant/quick-service | Countertop and handheld category descriptions.
+Genius launch announcement | https://investors.globalpayments.com/news-events/press-releases/detail/473/global-payments-launches-new-genius-pos-platform | Unified Genius positioning and enterprise launch context.
+Xenial product portfolio | https://www.xenial.com/products/ | Legacy/current portfolio taxonomy across POS, kiosk, kitchen, displays, back office and drive-thru.
+Genius Kitchen documentation | https://www.xenial.com/product-documentation/en/genius-kitchen/kitchen-management-interface/kitchen-displays.html | Kitchen routing, ticket views, notifications and order-ready display.
+Xenial kiosk | https://www.xenial.com/products/kiosk-hardware-software/ | Kiosk hardware/software options, peripherals and SDK positioning.
+Genius Drive Thru documentation | https://www.xenial.com/developer-resources/en/genius-drive-thru.html | Drive Thru Director, Vision, lane inputs, visualization and reporting/API.
+Yoshinoya case study | https://www.xenial.com/case-studies/yoshinoya-menu-board/ | Public DMB/timer deployment and reported outcome.
+Xenial Digital Displays | https://www.xenial.com/pdfs/Xenial-Restaurant-Digital-Displays.pdf | Indoor/outdoor display use cases, control and operations support.
+Xenial support directory | https://www.xenial.com/support/ | Visible legacy support families including RTI and Back Office.
+TABLE 14
+Reviewer | Disposition | Date / notes
+Ryan Hildebrand | Approve / revise | 
+Todd Vahlsing | Approve / revise | 

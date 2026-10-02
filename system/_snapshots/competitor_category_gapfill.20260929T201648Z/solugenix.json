@@ -1,0 +1,50 @@
+{
+  "competitor_id": "comp-solugenix",
+  "competitor_slug": "solugenix",
+  "display_name": "Solugenix",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:07Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:36Z",
+  "latest_cos_commentary": {
+    "headline": "Solugenix is an outsourced IT help-desk and technology-support provider for multi-unit restaurant brands, with a published case study showing call-volume and refund-cost reductions for a 130+ unit chain (Pollo Tropical).",
+    "genius_exposure": "Does not compete with Genius's POS or payments software directly; competes for the IT support/help-desk services layer around POS and restaurant technology deployments, which can influence which POS vendor's support model an operator prefers.",
+    "competitive_timing": "No recent funding, ownership, or leadership news identified in this research pass.",
+    "sales_response": "Relevant mainly when an account is evaluating outsourced IT support/help-desk services rather than POS or payments platforms; not a direct product competitor to Genius.",
+    "risk_and_uncertainty": "Only one named customer case study (Pollo Tropical) was found with specific figures; do not assume similar results apply broadly across Solugenix's client base.",
+    "priority": "P3",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 87
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 87,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 2,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "leadership/CEO",
+        "financial health",
+        "additional named restaurant customers"
+      ]
+    }
+  }
+}

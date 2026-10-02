@@ -1,0 +1,69 @@
+{
+  "subject_id": "subject-drive_thru_ai",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-09-25T16:12:19Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/drive_thru_ai/current/Drive-Thru-AI_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 2,
+      "generated_at": "2026-09-27T09:18:39Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/drive_thru_ai/current/Drive-Thru-AI_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 3,
+      "generated_at": "2026-09-28T09:24:41Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/drive_thru_ai/current/Drive-Thru-AI_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-09-29T09:19:13Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/drive_thru_ai/current/Drive-Thru-AI_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 5,
+      "generated_at": "2026-09-29T10:51:20Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/drive_thru_ai/current/Drive-Thru-AI_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 6,
+      "generated_at": "2026-09-29T14:57:14Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/drive_thru_ai/current/Drive-Thru-AI_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 7,
+      "generated_at": "2026-10-01T10:43:20Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/drive_thru_ai/current/Drive-Thru-AI_Battle-Card.md",
+      "superseded": true
+    },
+    {
+      "version": 8,
+      "generated_at": "2026-10-02T09:47:06Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive battle card",
+      "path": "system/artifact_vault/battle_cards/drive_thru_ai/current/Drive-Thru-AI_Battle-Card.md",
+      "superseded": false
+    }
+  ]
+}

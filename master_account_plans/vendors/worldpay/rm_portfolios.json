@@ -1,0 +1,94 @@
+[
+  {
+    "rm_name": "Avery Churchwell",
+    "opportunity_accounts_count": 11,
+    "p1_accounts_count": 1,
+    "average_score": 57.1,
+    "top_ranked_accounts": [
+      "FIVE GUYS",
+      "Red Robin",
+      "EAT'N PARK",
+      "MILLER'S ALE HOUSE",
+      "BLACK BEAR"
+    ],
+    "trigger_summary": "Five Guys outreach governance/FSTEC opening | Slim Chickens RDS-led FSTEC contact | Little Caesars follow-up stall | Red Robin reassessment",
+    "workshop_focus": "Centralize Five Guys outreach with Avery/Todd; coordinate Slim Chickens and Freddy's through RDS; recover Little Caesars follow-ups; qualify Red Robin timing.",
+    "required_output": "Named owner and coordinated contact plan for each account; FSTEC connection plan; verified buying trigger, renewal dates and dated next action.",
+    "extra_fields": {}
+  },
+  {
+    "rm_name": "Brian Wood",
+    "opportunity_accounts_count": 8,
+    "p1_accounts_count": 1,
+    "average_score": 59.6,
+    "top_ranked_accounts": [
+      "GoTo Foods",
+      "CHOICE HOTELS",
+      "PAPA JOHN'S",
+      "CRACKER BARREL",
+      "BOB EVANS"
+    ],
+    "trigger_summary": "GoTo platform/payment defense | Choice RFP refresh | Papa Johns rollout watch",
+    "workshop_focus": "GoTo DMB map; Choice status refresh; Papa Johns adjacency and implementation monitoring",
+    "required_output": "Named account owner, current scope, decision dates, buying-center map and warm introduction.",
+    "extra_fields": {}
+  },
+  {
+    "rm_name": "Maggie Lenhart",
+    "opportunity_accounts_count": 6,
+    "p1_accounts_count": 1,
+    "average_score": 65.2,
+    "top_ranked_accounts": [
+      "DEL TACO",
+      "STEAK N SHAKE",
+      "CHURCH'S",
+      "LAROSA'S",
+      "GOLDEN CORRAL"
+    ],
+    "trigger_summary": "Del Taco extension/Yadav event | Steak 'n Shake remediation | Church's decision unresolved",
+    "workshop_focus": "Complete Del Taco extension and lead consolidation; establish dated kiosk remediation",
+    "required_output": "Verified buying event, owner map, technical issue owners and customer introduction.",
+    "extra_fields": {}
+  },
+  {
+    "rm_name": "Stacie Davis",
+    "opportunity_accounts_count": 3,
+    "p1_accounts_count": 1,
+    "average_score": 63.0,
+    "top_ranked_accounts": [
+      "SUBWAY",
+      "STARBUCKS",
+      "DOMINO'S"
+    ],
+    "trigger_summary": "Subway KDS scope conflict | Starbucks share recovery | Domino's reference posture",
+    "workshop_focus": "Resolve Subway product/sites/owner before any new positioning",
+    "required_output": "Confirmed Genius KDS scope, customer sponsor, commitments and next relationship.",
+    "extra_fields": {}
+  },
+  {
+    "rm_name": "RDS / Darren Heinze",
+    "opportunity_accounts_count": 1,
+    "p1_accounts_count": 0,
+    "average_score": 74.0,
+    "top_ranked_accounts": [
+      "RDS FIVE-UNIT REBRAND PILOT"
+    ],
+    "trigger_summary": "Clean-slate pilot; protected-account operating model",
+    "workshop_focus": "Document entity, scope, economics, support, protections and case-study rights",
+    "required_output": "Qualified customer facts, signed engagement rules and a dated pilot plan.",
+    "extra_fields": {}
+  },
+  {
+    "rm_name": "Unassigned / Worldpay",
+    "opportunity_accounts_count": 1,
+    "p1_accounts_count": 0,
+    "average_score": 72.0,
+    "top_ranked_accounts": [
+      "POLLO CAMPERO"
+    ],
+    "trigger_summary": "Potential RFI; Oracle migration; split payment stack",
+    "workshop_focus": "Assign owner, obtain NDA/RFI and apply bid/no-bid gates",
+    "required_output": "Named owner, procurement documents, timeline, country scope and decision openness.",
+    "extra_fields": {}
+  }
+]

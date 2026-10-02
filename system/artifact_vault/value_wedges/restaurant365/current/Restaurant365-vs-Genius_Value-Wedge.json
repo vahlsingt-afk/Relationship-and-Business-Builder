@@ -1,0 +1,15 @@
+{
+  "competitor_slug": "restaurant365",
+  "vendor_display_name": "Restaurant365",
+  "brand_id": null,
+  "brand_name": null,
+  "category": null,
+  "competes_on": [],
+  "circle1_genius_strengths": [],
+  "circle2_customer_needs": [],
+  "circle3_competitor_weaknesses": [
+    {
+      "point": "Heavy C-suite churn in 18 months (see below)"
+    }
+  ]
+}

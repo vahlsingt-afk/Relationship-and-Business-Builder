@@ -1,0 +1,54 @@
+{
+  "competitor_id": "comp-vibes",
+  "competitor_slug": "vibes",
+  "display_name": "Vibes",
+  "aliases": [],
+  "vendor_entity_id": null,
+  "primary_category": null,
+  "competes_on": [],
+  "positioning_summary": "",
+  "todds_pov": "",
+  "vs_genius": {
+    "genius_advantages": [],
+    "competitor_advantages": []
+  },
+  "category_battle_cards": {},
+  "last_evidence_date": "2026-09-29",
+  "last_synced_at": "2026-09-29T14:57:09Z",
+  "template_version": "competitor-intelligence-v1",
+  "updated_at": "2026-09-29T15:45:37Z",
+  "latest_cos_commentary": {
+    "headline": "Vibes is a Tier 1 SMS/RCS/mobile-wallet engagement platform with named restaurant customers (Chipotle, KFC, Arby's) used primarily for loyalty and promotional messaging rather than transaction processing.",
+    "genius_exposure": "Adjacent competitor to Genius's loyalty_engagement line via mobile messaging/loyalty delivery; no overlap with core pos or payments.",
+    "competitive_timing": "No dated 2025-2026 news was found in this pass.",
+    "sales_response": "Position as a messaging/loyalty-delivery specialist rather than a POS or payments competitor; relevant when a prospect's loyalty program relies on SMS/RCS outreach.",
+    "risk_and_uncertainty": "No leadership, funding, or current relationship-status details were verified; the Chipotle quote is undated.",
+    "priority": "P2",
+    "status": "source-backed first-pass",
+    "as_of_date": "2026-09-29",
+    "pack_order": 107
+  },
+  "latest_research_pack_status": {
+    "as_of_date": "2026-09-29",
+    "pack_order": 107,
+    "pack_claim_count": 2,
+    "pack_claims_with_url": 2,
+    "pack_claims_inherited_url": 0,
+    "pack_claims_with_structured_source_date": 0,
+    "research_complete": false,
+    "gap_audit": {
+      "missing_pack_dimensions": [
+        "C-Suite & Leadership",
+        "Financial / Market Health",
+        "Pricing signals"
+      ],
+      "unlinked_pack_claims": 0,
+      "legacy_claims_need_date_and_current_status_check": 0,
+      "verification_needed": [
+        "Current CEO/leadership",
+        "Ownership/funding history",
+        "Current status of the Chipotle/KFC/Arby's relationships"
+      ]
+    }
+  }
+}

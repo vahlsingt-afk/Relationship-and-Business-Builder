@@ -1,0 +1,18 @@
+# Fiserv — Competitive Brief
+
+## Bottom line
+*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+
+## Where we're competing against them right now
+*No current tech-stack relationship on file for this vendor.*
+
+## What's new (last 60 days)
+- (2026-09-30) Food On Demand independently described Clover as a cloud POS used by nearly 200,000 restaurants when the BentoBox transaction was announced in 2021. — *Food On Demand*
+- (2026-09-30) The reviewed corpus did not support a well-corroborated recurring restaurant-specific weakness for Clover or BentoBox. — *G2*
+- (2026-09-29) Panagiotis (Takis) Georgakopoulos was appointed Fiserv's Chief Executive Officer and a Board member effective immediately, per an SEC 8-K filed June 15, 2026; he previously served as Co-President leading Technology and Merchant Solutions (which includes Clover) after joining Fiserv in late 2024. Outgoing CEO Mike Lyons stepped down to become CEO of Truist Financial Corporation. — *https://www.sec.gov/Archives/edgar/data/0000798354/000119312526270336/d153349dex991.htm*
+- (2026-09-29) Fiserv launched Clover Reserve powered by Tabit, an exclusive partnership expanding Clover's restaurant POS portfolio into fine-dining and operationally complex hospitality segments, following the 2025 launch of Clover Hospitality by BentoBox. — *https://www.globenewswire.com/news-release/2026/05/12/3292836/0/en/Fiserv-Expands-Clover-s-Restaurant-Portfolio-with-New-Fine-Dining-Solution-Clover-Reserve-Powered-by-Tabit.html*
+- (2026-09-29) Clover markets a connected restaurant offering spanning POS, operations management, and guest engagement, positioning it as a direct competitor to Genius across pos, payments, and the broader restaurant_os_platform category. — *https://restauranttechnologynews.com/2026/07/clover-gives-restaurants-a-more-connected-way-to-manage-pos-operations-and-guest-engagement/*
+- (2026-09-29) Fiserv's Merchant Solutions segment, which includes Clover, is now led directly by CEO Takis Georgakopoulos following his promotion, consolidating merchant/POS strategy under the top executive rather than a separate segment president. — *https://www.sec.gov/Archives/edgar/data/0000798354/000119312526270336/d153349dex991.htm*
+- (2026-09-11) Fiserv CEO Takis Georgakopoulos reportedly used his 2026-09-10 Goldman Sachs appearance to reinforce a 'One Fiserv' operating model, moving away from a siloed Merchant Solutions/Financial Solutions structure and prioritizing customer service, client focus, platform stability, and Clover execution. — *Todd-supplied competitive watch summarizing September 10, 2026 Goldman Sachs Communacopia management remarks; underlying transcripts were not attached.*
+- (2026-09-11) Fiserv's explicit emphasis on improving platform stability and customer retention suggests management considers execution and reliability material enough to be CEO-level priorities. This is a displacement opening in accounts experiencing service or stability problems, but it does not by itself prove the prevalence or severity of those problems. — *Todd-supplied competitive watch summarizing September 10, 2026 Goldman Sachs Communacopia management remarks; underlying transcripts were not attached.*
+- (2026-09-11) If Fiserv improves service and stability while integrating Clover more tightly with broader Fiserv infrastructure, its merchant acquiring plus Clover combination becomes a stronger platform-and-payments consolidation competitor to Genius/Worldpay. — *Todd-supplied competitive watch summarizing September 10, 2026 Goldman Sachs Communacopia management remarks; underlying transcripts were not attached.*

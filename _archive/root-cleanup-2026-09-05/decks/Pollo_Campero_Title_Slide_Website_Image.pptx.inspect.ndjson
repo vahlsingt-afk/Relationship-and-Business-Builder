@@ -1,0 +1,15 @@
+{"kind":"deck","id":"pr/o5gtjt","name":"Deck"}
+{"kind":"layout","layoutId":"9cdcd826-42df-4827-856e-2fe70e1ba18e","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"0b7c4a97-0f7b-457e-8f6f-d3ef1b8fa295","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/6h2xpk","slide":1,"title":"globalpayments","textShapes":4}
+{"kind":"shape","id":"sh/i14jids7","slide":1,"name":"global-payments-blue-panel-rounded-end","bbox":[280,84,382,554]}
+{"kind":"shape","id":"sh/j2dkrits","slide":1,"name":"global-payments-blue-panel-base","bbox":[14,84,410,554]}
+{"kind":"shape","id":"sh/s761ona9","slide":1,"name":"global-payments-mark","bbox":[70,137,34,34]}
+{"kind":"shape","id":"sh/t8f2xsbu","slide":1,"name":"global-payments-mark-dot","bbox":[82,146,10,10]}
+{"kind":"textbox","id":"sh/654jmxs3","slide":1,"name":"global-payments-wordmark","text":"globalpayments","textPreview":"globalpayments","textChars":14,"textLines":1,"bbox":[103,134,270,42]}
+{"kind":"textbox","id":"sh/r6dkvito","slide":1,"name":"welcome-title","text":"Welcome","textPreview":"Welcome","textChars":7,"textLines":1,"bbox":[72,286,500,106]}
+{"kind":"textbox","id":"sh/8b21c3u5","slide":1,"name":"customer-subtitle","text":"Genius for Pollo Campero","textPreview":"Genius for Pollo Campero","textChars":24,"textLines":1,"bbox":[86,392,410,46]}
+{"kind":"shape","id":"sh/9cbil8ba","slide":1,"name":"pollo-campero-brand-badge","bbox":[87,472,222,76]}
+{"kind":"textbox","id":"sh/58bapwn2","slide":1,"name":"pollo-campero-brand-text","text":"POLLO\nCAMPERO","textPreview":"POLLO | CAMPERO","textChars":13,"textLines":2,"bbox":[100,484,196,52]}
+{"kind":"image","id":"im/s3yx43uh","slide":1,"name":"","alt":"Pollo Campero website food spread with fried chicken, sandwich, sides, tortillas, and empanadas","bbox":[14,38,1252,644]}
+{"kind":"notes","id":"nt/6h2xpk","slide":1,"text":"[Sources]\n- Background image: user-provided screenshot captured from the Pollo Campero website.\n- Visual reference: user-provided Title Slide.pdf.\n- Pollo Campero brand context: https://us.campero.com/our-story\n[/Sources]"}

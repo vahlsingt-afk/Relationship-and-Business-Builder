@@ -1,0 +1,32 @@
+{
+  "default_state": "dormant",
+  "graph_id": "micro_ecosystem:mcdonalds_us_ops",
+  "load_policy": "Load graph.json only for matching query intent or active-thread evidence. Otherwise keep dormant.",
+  "primary_terms": [
+    "mcdonalds",
+    "mcdonald's",
+    "nsn",
+    "storetech",
+    "store tech",
+    "field office",
+    "coop",
+    "co-op",
+    "rfm",
+    "otm",
+    "stim",
+    "fbp",
+    "otp",
+    "site id",
+    "store code"
+  ],
+  "query_intents": [
+    "store lookup",
+    "field support routing",
+    "market mapping",
+    "operational accountability",
+    "deployment topology",
+    "role coverage",
+    "finance business partner mapping"
+  ],
+  "version": 1
+}

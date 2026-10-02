@@ -1,0 +1,444 @@
+{
+  "version": 1,
+  "last_updated": "2026-05-23",
+  "description": "Operating settings for the Relationship & Business Builder (RB) system. Read this file at the start of every Claude session, alongside 00_TODD_PROFILE.md, README.md, and ARCHITECTURE.md.",
+  "operating_calendar": {
+    "week_ends_on": "Friday",
+    "week_end_boundary": "close_of_business",
+    "week_end_time_local": "17:00",
+    "timezone": "America/Chicago",
+    "interpretation": "For planning, commitments, and phrases such as end of week or by the end of the week, RB means Friday close of business. Do not use Sunday or a rolling seven-day window unless Todd explicitly asks for that horizon."
+  },
+  "verbosity": {
+    "mode": "normal",
+    "options": ["verbose", "normal", "quiet"],
+    "definitions": {
+      "verbose": "Full reasoning trail. Show alternatives considered, evidence cited inline, what was rejected and why. Use when Todd is debugging a recommendation or wants the full analytical chain. Long.",
+      "normal": "Three-part output shape per ARCHITECTURE.md: (1) report what was found, (2) interpret in CoS voice, (3) recommend specific named next steps. Default.",
+      "quiet": "Minimum viable response. Just the recommendation or answer. Stats and source citations still required (per Tenet 2 — stats=trust), but no editorial commentary. Short."
+    },
+    "change_via": "Edit `verbosity.mode` here, or tell the assistant: \"set verbosity to verbose|normal|quiet\""
+  },
+  "email_overlay": {
+    "suppressed_sent_followup_thread_ids": [
+      "19f1a7491f807b4c",
+      "19f903af4a749ae9",
+      "1a0440ce48f72257"
+    ],
+    "suppression_notes": {
+      "19f1a7491f807b4c": "Todd closed the Samzats loop on 2026-07-23; no follow-up needed.",
+      "19f903af4a749ae9": "Ed Garner scheduled a first-week-of-August meeting with Todd; suppress awaiting-response recommendation for the sent Catch-Up with Todd thread.",
+      "1a0440ce48f72257": "Nick Neylon is a personal friend and should not be tracked as a relationship/action follow-up."
+    }
+  },
+  "daily_briefing": {
+    "enabled": true,
+    "time_of_day_local": "05:00",
+    "timezone": "America/Chicago",
+    "scheduled_task_id": "rb-daily-briefing",
+    "description": "Daily morning pipeline. Default on. The brief should be ready before the user starts the day: generated at 5:00 AM local time and followed by a short completion email.",
+    "behavior": "When enabled, RB refreshes available sources, runs relationship signal detection, regenerates today.md and MANIFEST.md, publishes the daily brief artifact, makes the full brief available through the RB ChatGPT cockpit, and sends a short completion email. The email should not dump the full brief; it should say the brief is ready, include the top priorities / signal-health snapshot, and direct the user into ChatGPT.",
+    "meeting_prep_suppression": {
+      "suppressed_events": [
+        {
+          "title": "Catch-Up with Todd",
+          "attendee": "Ed Garner",
+          "date": "2026-08-05",
+          "reason": "Todd confirmed on 2026-08-03 that no meeting prep is needed for the Ed meeting."
+        }
+      ]
+    },
+    "source_refresh_contract": {
+      "default_command": "python3 system/scripts/daily_brief.py --refresh-sources",
+      "principle": "The morning brief should refresh every source RB can reach before it computes. Stale-source reporting is a fallback, not the normal operating mode.",
+      "refresh_without_user": [
+        "calendar",
+        "email",
+        "sms_messages",
+        "phone_logs",
+        "linkedin_public_posts_when_captured",
+        "linkedin_own_post_engagement_when_captured",
+        "uploaded_ri_events",
+        "open_loops",
+        "industry_watchlist",
+        "restaurant_tech_workbook"
+      ],
+      "user_refresh_required": [
+        "linkedin_data_export"
+      ],
+      "industry_sources": [
+        "RTN",
+        "Hospitality Technology",
+        "Restaurant Business",
+        "RestaurantNews.com / RestaurantData",
+        "Nation's Restaurant News",
+        "Restaurant Dive",
+        "QSR Magazine",
+        "Fast Casual",
+        "operator/vendor LinkedIn posts",
+        "earnings calls",
+        "SEC filings",
+        "investor decks",
+        "press releases",
+        "product blogs",
+        "job postings",
+        "conference/session signals"
+      ],
+      "strategic_operator_intelligence": {
+        "enabled": true,
+        "description": "Strategic intelligence and relationship-prioritization layer for the CoS engine. This is not a news enhancement.",
+        "target_entity_types": [
+          "strategic_franchise_operators",
+          "multi_brand_franchise_groups",
+          "pe_backed_restaurant_operators",
+          "large_regional_operators",
+          "high_influence_franchisee_groups",
+          "operator_holding_companies"
+        ],
+        "watchlists": [
+          "Strategic Operators",
+          "Multi-Brand Operators",
+          "Expansion Leaders",
+          "High-Influence Franchisees",
+          "PE-Backed Groups"
+        ],
+        "interpretation_lenses": [
+          "influence",
+          "relationship_value",
+          "operational_pressure",
+          "ecosystem_impact",
+          "likely_future_opportunity"
+        ],
+        "governance": "Never merely summarize articles. Interpret, prioritize, contextualize, operationalize, and connect operator events to relationship strategy."
+      },
+      "restaurant_tech_workbook": {
+        "enabled": true,
+        "path": "/Users/toddvahlsing/Documents/Genius Info/Restaurant_Tech_Coverage_2026-08-31_v2.xlsx",
+        "role": "Current working Restaurant Technology Coverage workbook. This is the version Todd uses operationally and the version RB should ingest during the daily intelligence scan.",
+        "daily_scan_action": "ingest_evidence_ledger_to_ecosystem_graph",
+        "write_policy": "Do not silently overwrite this workbook during the daily scan. Ingest workbook evidence into RB; produce a reviewed/generated workbook copy for workbook backfill or formatting changes unless Todd explicitly authorizes in-place overwrite."
+      }
+    },
+    "strategic_operators": {
+      "enabled": true,
+      "watchlist_path": "system/strategic_operators.yaml",
+      "rubric_path": "system/scoring/strategic_operator_rubric.md",
+      "cache_path": "system/.cache/strategic_operators.json",
+      "recent_days": 90,
+      "daily_brief_section": "strategic_operator_movements",
+      "movement_rendering_rule": "Render persisted recent movements and source-backed feeder matches. Do not elevate proximity-only watchlist rows as daily actions without a recent movement, direct relationship, active thread, or stronger evidence.",
+      "proximity_thresholds": {
+        "direct": "baseline executive/contact ID on the operator record resolves to RC/LKI/LMI",
+        "one_hop": "portfolio-company or company-text overlap with RC/LKI/LMI; treat as candidate proximity until confirmed",
+        "two_hop": "active thread mentions the operator or portfolio",
+        "none": "no known path",
+        "unknown": "operator record has insufficient relationship data"
+      },
+      "bucket_overrides": {}
+    },
+    "delivery": {
+      "email_enabled": true,
+      "recipient": "vahlsingt@gmail.com",
+      "send_after_success": false,
+      "chatgpt_push_enabled": true,
+      "chatgpt_push_time_of_day_local": "05:05",
+      "chatgpt_push_surface": "Native ChatGPT Task result message plus push/email notification",
+      "chatgpt_push_message": "RB Daily Brief is ready. Open RBB (the Relationship & Business Builder cockpit Project) and ask: Show today's RB Daily Brief. If RBB can't retrieve the full text on its own, open Relationship Bridge 9.0 separately and ask there.",
+      "chatgpt_push_note": "RB-DEFECT-2026-08-20: this block previously pointed at the RB Custom GPT directly -- that predated the RBB Project and its Drive-linked cockpit context, and is now the wrong destination. RBB is the primary cockpit surface for reading/reviewing. Tried making the RB Custom GPT (Relationship Bridge 9.0) reachable via @-mention from inside an RBB-homed chat instead of opening it separately -- confirmed broken 2026-08-20 (pinning the GPT did not fix it either), matches a known open OpenAI bug (@ mention picker stopped surfacing Custom GPTs after a June 2026 UI update). Until OpenAI fixes that, Action-backed retrieval/writes require opening Relationship Bridge 9.0 as its own separate chat -- re-test the @-mention path periodically in case OpenAI ships a fix. Preferred UX is a native ChatGPT Task email/push with a View message button that opens the generated task result inside ChatGPT. Until native task retrieval is wired, use external email as backup and tell Todd to open RBB and ask for today's brief.",
+      "chatgpt_task_delivery_mode": "target_native_task_result_message",
+      "chatgpt_task_retrieval_requirement": "The native ChatGPT Task must be able to retrieve today's RB Daily Brief -- from RBB's context.json projection where possible, or via the RB Custom GPT's action by opening Relationship Bridge 9.0 separately when full text is needed (the @-mention-from-inside-RBB path is currently broken, see chatgpt_push_note); otherwise it can only act as a doorway notification.",
+      "content_mode": "short_summary_plus_link",
+      "subject_template": "RB Daily Brief backup is ready - {weekday}, {date}",
+      "destination_type": "chatgpt_daily_brief",
+      "destination_requirement": "Chat is the operational UX. As of 2026-08-26 Todd consolidated the 'RBB' ChatGPT Project and the 'Relationship Bridge 9.0' ChatGPT Project into a single Project named 'Relationship and Business Builder' -- this Project is the primary cockpit destination for reading and reviewing. IMPORTANT naming collision: the Custom GPT is ALSO named 'Relationship and Business Builder' (renamed 2026-08-26 from 'Relationship Bridge 9.0') -- same name, two different platform objects. ChatGPT Projects cannot have Actions (hard OpenAI platform limit, unaffected by this consolidation), so the full daily brief should be reachable from the Project's context.json projection where possible; any Action-backed retrieval or write still requires opening the Custom GPT 'Relationship and Business Builder' as its own chat, not the Project (the @-mention-into-Project path is broken as of 2026-08-20, a known OpenAI bug, not a config issue here). The email CTA must open the Project; it must not point the user to Codex, Claude, local project files, implementation scaffolding, or a separate dashboard as the primary surface.",
+      "chatgpt_brief_url": "https://chatgpt.com/g/g-p-6a8f25eaacb4819187665661021c51c6-relationship-and-business-builder/project",
+      "chatgpt_brief_url_note": "Updated 2026-08-26 to the new consolidated Project URL (Todd-provided) after he merged the 'RBB' and 'Relationship Bridge 9.0' Projects into one Project named 'Relationship and Business Builder' -- the prior RBB Project URL (g-p-6a85bdf0734c8191bd5bc989a090373b) is stale/superseded, not the same Project renamed. The env var RB_CHATGPT_BRIEF_URL overrides this at runtime. While null, publish.py reports cta_status=pending_destination and refuses to fabricate a ChatGPT link.",
+      "sender_status": "wired",
+      "sender_note": "SMTP transport wired 2026-09-15: RB_SMTP_HOST/USER/PASS are in secrets.env (loaded by run_with_secrets.py), email_enabled flipped true the same day, and send_brief_email.py/publish.py both now check email_enabled before attempting SMTP (previously send_brief_email.py did not, so a deliberately-disabled channel surfaced as a daily no_smtp pipeline failure)."
+    },
+    "social_scan": {
+      "enabled": true,
+      "linkedin_public_posts": true,
+      "linkedin_messaging": true,
+      "scope": "Where permissioned data is available, scan LinkedIn public posts, reactions/comments/engagement, and LinkedIn messaging/interactions for relationship intelligence, industry movement, market signals, and opportunity triggers.",
+      "constraints": "Do not imply live LinkedIn access when no export, connector, browser capture, or other permissioned feed is available. Report stale, missing, or manual-only social sources in Daily Prep Summary and Data Health.",
+      "primary_outputs": [
+        "relationship_signals",
+        "market_movement_and_strategic_implications",
+        "opportunity_detection",
+        "loop_creation_candidates"
+      ]
+    },
+    "calendar_prep": {
+      "enabled": true,
+      "scan_window": "today_and_next_7_days",
+      "scope": "Scan calendar events for meeting prep needs, important deliverables, known relationship attendees, unknown attendees, active-thread/company ties, and timing risk.",
+      "canonical_behavior": "Daily Brief should surface meeting prep and deliverable priorities. Smart task list / loop creation should offer to create meeting prep briefs for review and open tracked prep loops when useful.",
+      "loop_fields": [
+        "meeting",
+        "relationship_or_entity",
+        "source_event",
+        "prep_deliverable",
+        "due_before_meeting",
+        "verification_method",
+        "closure_criteria"
+      ]
+    },
+    "operational_layer": {
+      "enabled": true,
+      "philosophy": "Users do not need another dashboard. RB should identify what matters, recommend what to do, and make the next step easy. The system should make the user better.",
+      "morning_command_center": true,
+      "action_affordances": [
+        "create_loop",
+        "draft_next_action",
+        "create_meeting_prep",
+        "create_waiting_loop",
+        "defer",
+        "mark_done",
+        "mark_irrelevant",
+        "monitor"
+      ],
+      "smart_waiting_state": true,
+      "smart_ignore_state": true,
+      "publication_path": "system/published/daily/",
+      "public_url_base": "https://rb-api.bridgepointops.org",
+      "public_url_base_note": "Set to the hosted base URL of the RB operational layer (e.g., 'https://rb.example.com'). publish.py composes the CTA URL as <base>/daily/latest.html. The env var RB_PUBLIC_URL_BASE overrides this at runtime. While null, compose_email reports cta_status=pending_destination — it refuses to fabricate a URL.",
+      "end_of_day_closeout": {
+        "enabled": true,
+        "target_time_local": "16:30",
+        "scope": "Review what closed, what slipped, what is waiting, what passive evidence resolved, and what should roll to tomorrow."
+      }
+    },
+    "change_via": "Edit `daily_briefing.enabled` or `daily_briefing.time_of_day_local` here, or tell the assistant: \"turn off the daily briefing\" / \"turn on the daily briefing\" / \"change the daily brief time\""
+  },
+  "capture_sources": {
+    "description": "Intelligence Capture System (ICS) — source adapters. Each source defines where transcript files live and how they arrive. The morning pipeline sweeps all enabled sources for new files and queues them in system/captures/pending/ for GPT processing.",
+    "transcription_modes": {
+      "pre_transcribed": "Source produces a .txt file alongside the audio — no transcription step needed (e.g. JPR with native transcription on).",
+      "whisper_local": "RB transcribes the audio locally using openai-whisper. Free but requires install and is slower.",
+      "whisper_api": "RB transcribes via OpenAI Whisper API. Fast, accurate, costs ~$0.006/min. Requires OPENAI_API_KEY.",
+      "none": "Audio only — skip transcription. File is queued with a note that transcript is missing."
+    },
+    "metadata_mode": {
+      "description": "RB Phase 1 Metadata-First Connector convention (see system/scripts/source_permission.py). Every source declares content_access; default is metadata_only for all sources, existing and future, unless explicitly elevated. All current sources below are personal capture adapters (Todd's own voice notes/meeting recordings) whose entire function is transcribing full content, so they are accurately declared content_access=persistent rather than forced into metadata_only. This field matters most for future enterprise connectors (e.g. Outlook) where the default must stay metadata_only.",
+      "levels": {
+        "metadata_only": "Sender/recipient/timestamp/subject/folder/flags/attachment-metadata only. Default. Reference implementation: system/scripts/fetch_apple_messages.py default mode.",
+        "on_demand": "Content may be read transiently for a single request; never persisted.",
+        "persistent": "Content may be persisted; requires an active employer profile (system/employers/<id>/profile.yaml) soft-check plus explicit confirmation."
+      },
+      "default_content_access": "metadata_only",
+      "enforced_by": "system/scripts/source_permission.py"
+    },
+    "sources": [
+      {
+        "id": "just_press_record",
+        "enabled": true,
+        "label": "Just Press Record",
+        "description": "Apple Watch / iPhone one-tap recorder. Syncs to iCloud automatically.",
+        "folder": "~/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents",
+        "patterns": ["**/*.m4a"],
+        "transcription": "whisper_local",
+        "transcription_note": "JPR stores transcripts in its internal database (CloudKit), not as .txt files. RB transcribes the .m4a audio locally via openai-whisper. Free, no API key required.",
+        "capture_type_hints": {
+          "voice_note_triggers": ["rb note", "rb,", "note to self", "quick note", "reminder"],
+          "walking_triggers": ["driving", "walking", "in the car", "on my way"]
+        },
+        "content_access": "persistent",
+        "permission_profile": {
+          "relationship_graph": true,
+          "task_extraction": true,
+          "calendar_correlation": true,
+          "automatic_body_reading": true,
+          "automatic_attachment_reading": false,
+          "long_term_content_storage": true,
+          "publish_outside_workspace": false
+        }
+      },
+      {
+        "id": "fathom",
+        "enabled": false,
+        "label": "Fathom",
+        "description": "AI meeting notetaker for Zoom, Meet, Teams. Exports transcripts to a local folder.",
+        "folder": "~/Movies/Fathom",
+        "patterns": ["**/*.txt", "**/*.md"],
+        "transcription": "pre_transcribed",
+        "transcription_note": "In Fathom settings, enable 'Save transcripts locally' and point to ~/Documents/Fathom or update folder above.",
+        "content_access": "persistent",
+        "permission_profile": {
+          "relationship_graph": true,
+          "task_extraction": true,
+          "calendar_correlation": true,
+          "automatic_body_reading": true,
+          "automatic_attachment_reading": false,
+          "long_term_content_storage": true,
+          "publish_outside_workspace": false
+        }
+      },
+      {
+        "id": "otter",
+        "enabled": false,
+        "label": "Otter.ai",
+        "description": "AI meeting transcription. Export transcripts as .txt to a watched folder.",
+        "folder": "~/Documents/Otter",
+        "patterns": ["**/*.txt"],
+        "transcription": "pre_transcribed",
+        "transcription_note": "In Otter, use Export → Text and save to ~/Documents/Otter, or update folder above.",
+        "content_access": "persistent",
+        "permission_profile": {
+          "relationship_graph": true,
+          "task_extraction": true,
+          "calendar_correlation": true,
+          "automatic_body_reading": true,
+          "automatic_attachment_reading": false,
+          "long_term_content_storage": true,
+          "publish_outside_workspace": false
+        }
+      },
+      {
+        "id": "zoom_local",
+        "enabled": false,
+        "label": "Zoom Local Recordings",
+        "description": "Zoom saves recordings and transcripts locally when cloud recording is off.",
+        "folder": "~/Documents/Zoom",
+        "patterns": ["**/*.vtt", "**/*.txt"],
+        "transcription": "pre_transcribed",
+        "transcription_note": "Zoom writes transcript.vtt alongside the recording. RB reads .vtt as plain text.",
+        "content_access": "persistent",
+        "permission_profile": {
+          "relationship_graph": true,
+          "task_extraction": true,
+          "calendar_correlation": true,
+          "automatic_body_reading": true,
+          "automatic_attachment_reading": false,
+          "long_term_content_storage": true,
+          "publish_outside_workspace": false
+        }
+      },
+      {
+        "id": "voice_memos",
+        "enabled": false,
+        "label": "Voice Memos",
+        "description": "Apple Voice Memos. Requires manual export or Shortcuts automation to a watched folder.",
+        "folder": "~/Documents/VoiceMemos",
+        "patterns": ["**/*.m4a"],
+        "transcription": "whisper_local",
+        "transcription_note": "Voice Memos does not auto-export. Use a Shortcut to copy new memos to ~/Documents/VoiceMemos, then RB transcribes via Whisper.",
+        "content_access": "persistent",
+        "permission_profile": {
+          "relationship_graph": true,
+          "task_extraction": true,
+          "calendar_correlation": true,
+          "automatic_body_reading": true,
+          "automatic_attachment_reading": false,
+          "long_term_content_storage": true,
+          "publish_outside_workspace": false
+        }
+      },
+      {
+        "id": "custom",
+        "enabled": true,
+        "label": "RB Captures Drop Folder",
+        "description": "Catch-all drop folder. PLAUD transcripts land here via Apple Shortcut. Also accepts manual .txt drops.",
+        "folder": "~/Documents/RB-Captures",
+        "patterns": ["**/*.txt", "**/*.md"],
+        "transcription": "pre_transcribed",
+        "transcription_note": "Files written here by Apple Shortcut or manually. RB reads .txt/.md as plain text — no transcription needed.",
+        "content_access": "persistent",
+        "permission_profile": {
+          "relationship_graph": true,
+          "task_extraction": true,
+          "calendar_correlation": true,
+          "automatic_body_reading": true,
+          "automatic_attachment_reading": false,
+          "long_term_content_storage": true,
+          "publish_outside_workspace": false
+        }
+      },
+      {
+        "id": "chatgpt_intelligence_drop",
+        "enabled": true,
+        "label": "ChatGPT Intelligence Drop",
+        "description": "In-repository holding folder for real source material saved by ChatGPT-capable local clients for processing on the next morning sweep.",
+        "folder": "system/inbox/chatgpt_intelligence_drop",
+        "patterns": ["**/*.txt", "**/*.md"],
+        "transcription": "pre_transcribed",
+        "capture_type": "deep_research",
+        "transcription_note": "Local clients may save real user-provided or fetched source text here. The hosted Custom GPT cannot write the filesystem and must use queueCaptureText instead.",
+        "content_access": "persistent",
+        "permission_profile": {
+          "relationship_graph": true,
+          "task_extraction": true,
+          "calendar_correlation": true,
+          "automatic_body_reading": true,
+          "automatic_attachment_reading": false,
+          "long_term_content_storage": true,
+          "publish_outside_workspace": false
+        }
+      },
+      {
+        "id": "icloud_screenshots",
+        "enabled": true,
+        "label": "iCloud Drive Screenshots & Documents",
+        "description": "RB-2026-09-20: drop a screenshot, PDF, Word doc, or Excel file from iPhone's Files app / share sheet into iCloud Drive > RB Captures instead of relaying it live through rbb-chat's /upload endpoint -- extracted via a cheap vision-model call (images) or mechanical parsing (documents) at the next morning sweep instead of paid for immediately.",
+        "folder": "~/Library/Mobile Documents/com~apple~CloudDocs/RB Captures",
+        "patterns": ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.webp", "**/*.gif", "**/*.pdf", "**/*.docx", "**/*.xlsx", "**/*.xlsm"],
+        "transcription": "pre_transcribed",
+        "transcription_note": "Images are OCR'd (capture_ingest.py's _ocr_image()) and PDF/Word/Excel files are mechanically extracted (_extract_document_text()) regardless of this field -- dispatch is by file suffix, not the transcription mode. Kept as pre_transcribed only for schema consistency with other sources.",
+        "content_access": "persistent",
+        "permission_profile": {
+          "relationship_graph": true,
+          "task_extraction": true,
+          "calendar_correlation": true,
+          "automatic_body_reading": true,
+          "automatic_attachment_reading": false,
+          "long_term_content_storage": true,
+          "publish_outside_workspace": false
+        }
+      }
+    ],
+    "processing": {
+      "sweep_window_hours": 24,
+      "description": "How far back the morning sweep looks for new files. Default 24h covers everything from yesterday.",
+      "pending_dir": "system/captures/pending",
+      "processed_dir": "system/captures/processed",
+      "registry_path": "system/captures/.registry.json",
+      "on_demand_trigger": "User says 'RB, process my [person] meeting' or 'RB, process the transcript' — GPT finds the most recent pending capture matching the person or time and submits it to /captures/{id}/submit."
+    }
+  },
+  "structured_ingest": {
+    "_note": "RB-DEFECT-064 Phase 1: generalized structured-dataset classification (system/scripts/dataset_classifier.py). A dataset scoring at or above confidence_threshold auto-runs its matching ingest pipeline (e.g. hubspot_ingest.py) with no operator instruction required; below threshold, the classifier's best guess is surfaced for confirmation instead.",
+    "confidence_threshold": 0.85
+  },
+  "future_settings": {
+    "_note": "Reserved for additional preferences as the system evolves. Intended additions include: notification surface (chat-only / push / email), warming-cooling sensitivity (conservative / standard / aggressive), tier-specific dormancy threshold overrides, operator experience level, user task intake, and opt-in whole-life relationship balance.",
+    "operator_experience_level": {
+      "status": "planned",
+      "default": "intermediate",
+      "options": ["expert", "intermediate", "beginner"],
+      "definitions": {
+        "expert": "Just the facts: terse CoS answer, proof points, next move, minimal explanation.",
+        "intermediate": "Some explanation: concise CoS answer plus brief reasoning and source confidence.",
+        "beginner": "More explanation and trust-building: explains what RB checked, why the answer follows, what is uncertain, and how the system is working on the user's behalf."
+      },
+      "relationship_to_verbosity": "Separate from verbosity. Verbosity controls length; operator_experience_level controls how much scaffolding and trust-building the assistant includes."
+    },
+    "user_task_intake": {
+      "status": "planned",
+      "description": "User-entered to-dos are treated as high-signal inputs, classified, prioritized, and tracked when they affect relationships, opportunities, trust, preparation, wellbeing, or user-stated priorities. Generic task noise should not overwhelm RB."
+    },
+    "whole_life_relationship_balance": {
+      "status": "planned",
+      "enabled_default": false,
+      "description": "Opt-in CoS prompts for non-business relationships and life-balance commitments, including family, close friends, service, church or community activity, recreation, vacation, and user-defined wellbeing practices.",
+      "domains": ["family", "friends", "service", "church_or_community", "health_wellbeing", "recreation", "vacation"],
+      "guardrails": [
+        "opt-in only",
+        "user controls domains and cadence",
+        "non-judgmental language",
+        "do not infer sensitive family or health obligations without explicit user input",
+        "support balance and follow-through without providing medical, clinical, or therapy advice",
+        "recommend gentle prompts, not guilt, surveillance, or moral scoring"
+      ]
+    }
+  }
+}

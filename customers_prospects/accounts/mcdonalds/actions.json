@@ -1,0 +1,186 @@
+{
+  "account_id": "acct-mcdonalds",
+  "parent_rbb_loop_id": null,
+  "actions": [
+    {
+      "action_id": "act-mcdonalds-0001",
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "type": "dependency",
+      "issue": "DMB second-source ownership",
+      "description": "Confirm who owns U.S. DMB supplier-risk and second-source evaluation",
+      "owner": "Todd Vahlsing",
+      "target": "Week 2",
+      "status": "open",
+      "blocker": "No confirmed internal coach yet",
+      "evidence_ids": [
+        "ev-mcdonalds-0001"
+      ],
+      "rbb_loop_id": null
+    },
+    {
+      "action_id": "act-mcdonalds-0002",
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "type": "dependency",
+      "issue": "POS hardware dissatisfaction validation",
+      "description": "Validate whether NCR/PAR dissatisfaction is material enough to justify another approved hardware source",
+      "owner": "Todd Vahlsing",
+      "target": "Week 2",
+      "status": "open",
+      "blocker": null,
+      "evidence_ids": [
+        "ev-mcdonalds-0001"
+      ],
+      "rbb_loop_id": null
+    },
+    {
+      "action_id": "act-mcdonalds-0003",
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "type": "dependency",
+      "issue": "Drive-thru timing pain validation",
+      "description": "Determine current loop-detector pain (accuracy, maintenance, installation, analytics) and whether McDonald's would evaluate a camera-based option",
+      "owner": "Todd Vahlsing",
+      "target": "Days 31-90",
+      "status": "open",
+      "blocker": "No confirmed technical reviewer yet",
+      "evidence_ids": [
+        "ev-mcdonalds-0001"
+      ],
+      "rbb_loop_id": null
+    },
+    {
+      "action_id": "act-mcdonalds-0004",
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "type": "decision",
+      "issue": "CosMc's proof package",
+      "description": "Assemble contracted scope, deployment evidence, uptime/incident history, and camera-timer production performance before any broader McDonald's meeting",
+      "owner": "Todd Vahlsing",
+      "target": "Aug-Sep 2026",
+      "status": "open",
+      "blocker": null,
+      "evidence_ids": [
+        "ev-mcdonalds-0001"
+      ],
+      "rbb_loop_id": null
+    },
+    {
+      "action_id": "act-mcdonalds-0005",
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "type": "relationship",
+      "issue": "Reactivate Jeff Coffland",
+      "description": "Send the product-lineage package; receive Justine Power contact/introduction",
+      "owner": "Todd Vahlsing",
+      "target": "Week 2",
+      "status": "open",
+      "blocker": "Awaiting package delivery",
+      "evidence_ids": [
+        "ev-mcdonalds-0007"
+      ],
+      "rbb_loop_id": null
+    },
+    {
+      "action_id": "act-mcdonalds-0006",
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "type": "relationship",
+      "issue": "Pressure-test with Bruce Sellnow",
+      "description": "Privately review the thesis; identify where it's naive and who the right first sponsor is",
+      "owner": "Todd Vahlsing",
+      "target": "Week 1",
+      "status": "open",
+      "blocker": null,
+      "evidence_ids": [
+        "ev-mcdonalds-0001"
+      ],
+      "rbb_loop_id": null
+    },
+    {
+      "action_id": "act-mcdonalds-0007",
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "type": "relationship",
+      "issue": "Internal enablement with David Lee",
+      "description": "Review the camera-timer story and Worldpay RM enablement brief before external outreach",
+      "owner": "Todd Vahlsing",
+      "target": "Week 1",
+      "status": "open",
+      "blocker": null,
+      "evidence_ids": [
+        "ev-mcdonalds-0001"
+      ],
+      "rbb_loop_id": null
+    },
+    {
+      "action_id": "act-mcdonalds-0008",
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "type": "decision",
+      "issue": "Territory/ownership sign-off",
+      "description": "Confirm which internal Genius executive owns DMB/hardware/timer proof before broader outreach",
+      "owner": "Todd Vahlsing",
+      "target": "Week 2",
+      "status": "open",
+      "blocker": null,
+      "evidence_ids": [
+        "ev-mcdonalds-0001"
+      ],
+      "rbb_loop_id": null
+    },
+    {
+      "action_id": "act-mcdonalds-0009",
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "type": "dependency",
+      "issue": "MAPS deployment relevance",
+      "description": "Decide whether MAPS is a relevant deployment/service path -- only after Genius earns a McDonald's DMB, timer, or hardware entry point",
+      "owner": "Todd Vahlsing",
+      "target": "Days 31-90",
+      "status": "open",
+      "blocker": "Dependent on wedge selection",
+      "evidence_ids": [
+        "ev-mcdonalds-0001"
+      ],
+      "rbb_loop_id": null
+    },
+    {
+      "action_id": "act-mcdonalds-0010",
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "type": "risk",
+      "issue": "Sales-claim / narrative discipline",
+      "description": "Preserve the exact public CosMc's claim (Global Payments selected as single supplier); verify which Genius products/legal entities delivered each component before repeating externally",
+      "owner": "Todd Vahlsing",
+      "target": "Ongoing",
+      "status": "open",
+      "blocker": null,
+      "evidence_ids": [
+        "ev-mcdonalds-0001"
+      ],
+      "rbb_loop_id": null
+    },
+    {
+      "action_id": "act-mcdonalds-0011",
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "type": "dependency",
+      "issue": "HP global hardware approval",
+      "description": "Clarify how HP's global hardware approval affects any Genius hardware motion, domestically or globally",
+      "owner": "Todd Vahlsing",
+      "target": "Days 31-90",
+      "status": "open",
+      "blocker": "Not yet understood",
+      "evidence_ids": [
+        "ev-mcdonalds-0001"
+      ],
+      "rbb_loop_id": null
+    },
+    {
+      "action_id": "act-mcdonalds-0012",
+      "opportunity_id": "opp-mcdonalds-dmb-hardware-timer",
+      "type": "decision",
+      "issue": "Franchisee/capital-efficiency framing",
+      "description": "Given real NOA-reported franchisee cash-flow pressure ahead of the 2027-2028 remodel cycle, frame any wedge on capital efficiency and lifecycle cost, not capability alone",
+      "owner": "Todd Vahlsing",
+      "target": "Before McDonald's-facing conversation",
+      "status": "open",
+      "blocker": null,
+      "evidence_ids": [
+        "ev-mcdonalds-0006"
+      ],
+      "rbb_loop_id": null
+    }
+  ]
+}
