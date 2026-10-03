@@ -11,6 +11,8 @@
     "rb.ownership_funding_ma.v1": {"collection": "records", "required_item_fields": ["target_key"]},
     "rb.supplier_ecosystem_map.v1": {"collection": "records", "required_item_fields": ["target_key"]},
     "rb.hunter_change_monitor.v1": {"collection": "records", "required_item_fields": ["target_key"]},
-    "rb.hunter_industry_theme.v1": {"collection": "patterns", "required_item_fields": ["theme", "target_keys"]}
+    "rb.hunter_industry_theme.v1": {"collection": "patterns", "required_item_fields": ["theme", "target_keys"]},
+    "rb.franchisee_discovery.v1": {"collection": "discovered_organizations", "required_item_fields": ["proposed_name", "discovered_from_brand"]},
+    "rb.franchisee_organization_profile.v1": {"collection": "findings", "required_item_fields": []}
   }
 }

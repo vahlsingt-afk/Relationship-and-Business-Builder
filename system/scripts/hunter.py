@@ -269,6 +269,13 @@ def prepare_cycle(
         "gap_manifest": manifest,
         "prior_context": build_context(selected_keys, cycle_plan["required_modules"]),
         "packet_requirements": {
+            "response_contract": {
+                "content": "one_inline_json_object",
+                "transport": "utf8_text",
+                "accepted_artifact_extensions": [".txt", ".md", ".json"],
+                "downloadable_attachment_required": False,
+                "canonical_format_after_validation": "json",
+            },
             "prior_state_as_of": manifest["generated_at"],
             "known_gap_ids": known_gap_ids,
             "discovery_domains": discovery_domains,
@@ -331,6 +338,26 @@ def validate_packet(packet: dict) -> dict:
     for error in Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(packet):
         path = "/".join(map(str, error.absolute_path)) or "<root>"
         errors.append({"code": "schema", "path": path, "message": error.message})
+
+    # Semantic checks assume the canonical container types. Model output is an
+    # untrusted boundary, so return schema diagnostics instead of crashing on
+    # malformed arrays or objects.
+    expected_types = {
+        "cycle": dict, "targets": list, "research_modules": list,
+        "source_ledger": list, "findings": list, "gap_outcomes": list,
+        "change_events": list, "mutation_proposals": list, "cos_handoffs": list,
+        "quality": dict, "resource_usage": dict, "payload": dict,
+    }
+    unsafe = [key for key, kind in expected_types.items() if key in packet and not isinstance(packet.get(key), kind)]
+    object_arrays = ("targets", "research_modules", "source_ledger", "findings", "gap_outcomes", "change_events", "mutation_proposals", "cos_handoffs")
+    unsafe.extend(key for key in object_arrays if isinstance(packet.get(key), list) and any(not isinstance(item, dict) for item in packet[key]))
+    if unsafe:
+        return {
+            "valid": False,
+            "errors": errors + [{"code": "unsafe_packet_shape", "path": key, "message": "cannot run semantic validation on malformed container"} for key in sorted(set(unsafe))],
+            "scores": {},
+            "citation_verification": {"valid": False, "errors": [], "checked_findings": 0, "checked_sources": 0},
+        }
 
     sources = packet.get("source_ledger") or []
     source_ids = [s.get("source_id") for s in sources]
@@ -554,7 +581,7 @@ def main() -> int:
     p_prepare = subs.add_parser("prepare")
     p_prepare.add_argument("playbook")
     p_prepare.add_argument("--depth")
-    p_prepare.add_argument("--universe", choices=["all", "brands", "competitors"], default="all")
+    p_prepare.add_argument("--universe", choices=["all", "brands", "competitors", "franchisees"], default="all")
     p_prepare.add_argument("--target", action="append", dest="targets")
     p_prepare.add_argument("--limit", type=int)
     p_prepare.add_argument("--output")

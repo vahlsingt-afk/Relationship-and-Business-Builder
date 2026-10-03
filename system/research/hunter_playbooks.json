@@ -74,9 +74,9 @@
       "target_types": ["restaurant_technology_company", "startup", "supplier", "competitor", "genius"],
       "default_depth": "deep",
       "payload_schema": "rb.competitor_platform_research.v1",
-      "required_modules": ["products", "market_position", "customers", "strength_evidence", "weakness_evidence", "pricing_economics", "restaurant_fit", "news_signals"],
+      "required_modules": ["products", "features", "market_position", "value_statement", "customers", "customer_feedback_testimonials", "strength_evidence", "weakness_evidence", "pricing_economics", "restaurant_fit", "news_signals"],
       "preferred_sources": ["customer_joint", "restaurant_or_operator", "public_filing", "trade_press", "analyst_or_research", "vendor"],
-      "exit_criteria": ["Vendor claims labeled", "Strengths independently supported", "Weaknesses evidence-based", "Commercial relevance stated"]
+      "exit_criteria": ["Vendor claims labeled", "Strengths independently supported", "Weaknesses evidence-based", "Commercial relevance stated", "Features distinguished from products at the claim level", "Customer feedback or testimonials independently sourced, not vendor-selected quotes presented as representative"]
     },
     "supplier_ecosystem_map": {
       "target_types": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "startup", "supplier", "competitor"],
@@ -125,6 +125,22 @@
       "required_modules": ["franchise_disclosure", "required_systems", "fees", "approved_vendors", "replacement_obligations"],
       "preferred_sources": ["government_or_regulator", "public_filing", "restaurant_or_operator", "trade_press"],
       "exit_criteria": ["Mandates tied to dated disclosure", "Required and optional systems separated", "Fees and replacement obligations captured"]
+    },
+    "franchisee_discovery": {
+      "target_types": ["restaurant_brand"],
+      "default_depth": "deep",
+      "payload_schema": "rb.franchisee_discovery.v1",
+      "required_modules": ["known_franchisees", "fdd_item20_disclosure", "unit_counts_by_franchisee", "discovery_confidence"],
+      "preferred_sources": ["public_filing", "government_or_regulator", "restaurant_or_operator", "trade_press", "public_directory", "public_job_posting"],
+      "exit_criteria": ["Each discovered organization named with its own source and confidence", "Unit counts attributed to the specific franchisee, not the brand total", "Franchisee lists are genuinely hard to get -- an honest partial result with preserved uncertainty is required over a forced-complete list"]
+    },
+    "franchisee_organization_profile": {
+      "target_types": ["franchisee_organization"],
+      "default_depth": "deep",
+      "payload_schema": "rb.franchisee_organization_profile.v1",
+      "required_modules": ["legal_entities", "brand_portfolio", "headquarters", "ownership", "leadership_contacts", "sales_growth", "operating_geography", "technology_notes"],
+      "preferred_sources": ["public_filing", "government_or_regulator", "restaurant_or_operator", "trade_press", "public_directory", "public_job_posting", "public_social_or_event"],
+      "exit_criteria": ["Headquarters and registered/legal address separated", "Each brand relationship has its own unit count and confidence, not a copied brand-wide figure", "Public business contact information only -- no private personal information", "Confidence preserved per assertion, never forced to a single record-level score"]
     },
     "restaurant_ai_pilots": {
       "target_types": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "startup", "supplier"],
