@@ -184,14 +184,98 @@ def _rank_franchisees(graph: dict, by_id: dict) -> list[dict]:
     return rows
 
 
+_COVERAGE_BUCKETS = ("restaurant_brand", "restaurant_technology_company", "franchisee")
+
+# 2026-10-03 (CLAUDE_HANDOFF_RB_HUNTER_GATHERER_END_TO_END_DEFECTS, Defect
+# 4): confirmed live -- one global sort put restaurant brands at ranks
+# 1-7, franchisee organizations/discovery at ranks 8-15, and the first
+# competitor (of several with real open gaps) at rank 16, starving
+# competitor research for many cycles under a top-to-bottom consumer.
+# A franchisee-discovery row's own entity_type is "restaurant_brand"
+# (the target IS the brand, per _rank_franchisees above), but the
+# handoff doc groups "franchisee discovery or franchisee-organization
+# profiles" as one bucket distinct from brand research -- so bucketing
+# here keys off suggested_playbook, not raw entity_type.
+_PLAYBOOK_TO_BUCKET = {
+    "enterprise_account_profile": "restaurant_brand",
+    "technology_stack_reconstruction": "restaurant_brand",
+    "competitive_positioning": "restaurant_technology_company",
+    "franchisee_discovery": "franchisee",
+    "franchisee_organization_profile": "franchisee",
+}
+
+# Reserve this many of the EARLIEST queue slots, round-robin across the
+# three buckets, before falling back to the plain global sort for
+# everything else -- guarantees every enabled family appears within the
+# first few ranks instead of being pushed down an arbitrary number of
+# places by raw strategic_value. Explicit and auditable (allocation_
+# policy below), not a silent reshuffle of the underlying ranking: within
+# each bucket, rows keep the exact same relative order the global sort
+# would have given them.
+_RESERVED_WINDOW_PER_BUCKET = 3
+
+
+def _coverage_bucket(row: dict) -> str:
+    return _PLAYBOOK_TO_BUCKET.get(row["suggested_playbook"], "restaurant_brand")
+
+
+def _global_sort_key(row: dict):
+    return (
+        -row["strategic_value"], -row["gap_count"],
+        -(row["context"].get("top10_category_count") or 0), row["display_name"].casefold(),
+    )
+
+
+def _allocate_coverage(rows: list[dict]) -> list[dict]:
+    """Guarantee each bucket's top _RESERVED_WINDOW_PER_BUCKET rows (by its
+    own strategic_value order) a seat in the reserved window, then sort
+    that whole reserved set by the normal global key -- so a trivial pool
+    (e.g. one brand, one competitor) still ranks purely by strategic_value
+    exactly as before (nothing to balance, nothing changes), while a large
+    pool where many brands/franchisees outrank every competitor still
+    guarantees up to _RESERVED_WINDOW_PER_BUCKET competitors land inside
+    the window instead of being pushed down behind all of them. Everyone
+    else falls back to the plain global sort, unchanged from before this
+    policy existed. No persisted state is needed -- unlike deep_research_
+    coverage.py's cumulative cross-run allocator, this queue is
+    regenerated fresh from the full candidate pool on every run rather
+    than incrementally consumed across days, so a purely positional
+    reservation within a single build() call is sufficient."""
+    by_bucket: dict[str, list[dict]] = {b: [] for b in _COVERAGE_BUCKETS}
+    for row in rows:
+        by_bucket[_coverage_bucket(row)].append(row)
+    for bucket_rows in by_bucket.values():
+        bucket_rows.sort(key=_global_sort_key)
+
+    reserved: list[dict] = []
+    reserved_keys: set[str] = set()
+    for bucket in _COVERAGE_BUCKETS:
+        for row in by_bucket[bucket][:_RESERVED_WINDOW_PER_BUCKET]:
+            row = dict(row)
+            row["coverage_bucket"] = bucket
+            row["coverage_allocation"] = "reserved"
+            reserved.append(row)
+            reserved_keys.add(row["target_key"])
+    reserved.sort(key=_global_sort_key)
+
+    remainder = []
+    for bucket in _COVERAGE_BUCKETS:
+        for row in by_bucket[bucket]:
+            if row["target_key"] in reserved_keys:
+                continue
+            row = dict(row)
+            row["coverage_bucket"] = bucket
+            row["coverage_allocation"] = "ranked"
+            remainder.append(row)
+    remainder.sort(key=_global_sort_key)
+    return reserved + remainder
+
+
 def build(*, limit: int = 100) -> dict:
     graph = ei._read_graph()
     by_id = ei._index_by_id(graph.get("entities") or [])
     rows = _rank_brands(graph, by_id) + _rank_competitors(graph, by_id) + _rank_franchisees(graph, by_id)
-    rows.sort(key=lambda r: (
-        -r["strategic_value"], -r["gap_count"],
-        -(r["context"].get("top10_category_count") or 0), r["display_name"].casefold(),
-    ))
+    rows = _allocate_coverage(rows)
     for i, row in enumerate(rows, start=1):
         row["rank"] = i
     limited = rows[:max(0, limit)]
@@ -206,8 +290,29 @@ def build(*, limit: int = 100) -> dict:
             "bonus) for brands/competitors/franchise-discovery targets (the target IS a real "
             "brand entity in every case), and a parallel total-identified-units/multi-brand-"
             "operator-bonus proxy (_franchisee_org_strategic_value()) for franchisee_organization "
-            "profile targets, which have no ecosystem_intelligence.json entity of their own."
+            "profile targets, which have no ecosystem_intelligence.json entity of their own. "
+            "Within each coverage bucket this ordering is authoritative and untouched -- see "
+            "allocation_policy for how the three buckets are then interleaved."
         ),
+        "allocation_policy": {
+            "reserved_window_per_bucket": _RESERVED_WINDOW_PER_BUCKET,
+            "buckets": list(_COVERAGE_BUCKETS),
+            "bucket_definition": (
+                "restaurant_brand = enterprise_account_profile/technology_stack_reconstruction; "
+                "restaurant_technology_company = competitive_positioning; "
+                "franchisee = franchisee_discovery or franchisee_organization_profile"
+            ),
+            "note": (
+                "Each bucket's own top reserved_window_per_bucket rows (by strategic_value) are "
+                "guaranteed a seat in the reserved window, then that whole reserved set is sorted "
+                "by strategic_value together -- a small/balanced pool ranks exactly as before "
+                "(nothing to guarantee), while a large pool where many brands/franchisees outrank "
+                "every competitor still guarantees up to reserved_window_per_bucket competitors "
+                "land inside the window instead of being starved behind all of them. Every "
+                "remaining position falls back to the plain global strategic_value sort across "
+                "all buckets, unchanged from before this policy existed."
+            ),
+        },
         "candidate_pool_count": len(rows),
         "limit": limit,
         "queue": limited,

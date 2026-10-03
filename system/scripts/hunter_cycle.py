@@ -11,6 +11,8 @@ import argparse
 import json
 import re
 import sys
+import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
@@ -41,6 +43,18 @@ PACKETS_INBOX_DIR = SCRIPTS_DIR.parent / "inbox" / "hunter_packets"
 PROCESSED_JOBS_DIR = PENDING_JOBS_DIR / "processed"
 PROCESSED_PACKETS_DIR = PACKETS_INBOX_DIR / "processed"
 
+# 2026-10-03 (CLAUDE_HANDOFF_RB_HUNTER_GATHERER_END_TO_END_DEFECTS):
+# confirmed live -- 9 jobs sat pending with zero completions while the
+# hourly automation kept queueing more, because queue_prepare() refused
+# only a *duplicate* target, never a ceiling across *different* targets.
+# "Recommended initial ceiling: three total pending jobs, or one pending
+# job per enabled research family, whichever is smaller" -- enforced as
+# two independent caps in queue_prepare() below; either tripping refuses
+# the write.
+QUARANTINED_JOBS_DIR = PENDING_JOBS_DIR / "quarantined"
+PENDING_JOB_CEILING_TOTAL = 3
+PENDING_JOB_CEILING_PER_FAMILY = 1
+
 # 2026-10-03: real runs (Tim Hortons, then KFC) confirmed Codex does not
 # reliably save a returned packet into PACKETS_INBOX_DIR as instructed --
 # both landed instead in the pre-existing, well-known system/inbox/
@@ -62,22 +76,61 @@ def _target_slug(target_key: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", target_key.lower()).strip("-") or "target"
 
 
+def _target_family(target_key: str) -> str:
+    """The research family a target belongs to, derived from its key
+    prefix (e.g. "company:brand-kfc" -> "company"). Used only for the
+    per-family pending-job ceiling -- never persisted as a new taxonomy
+    elsewhere, since no such concept exists anywhere else in this
+    codebase (confirmed 2026-10-03)."""
+    prefix, sep, _ = target_key.partition(":")
+    return prefix if sep else "unknown"
+
+
+def _pending_job_files() -> list[Path]:
+    """Every top-level pending-job file -- excludes processed/ and
+    quarantined/ subdirectories, which is what makes those two actually
+    free up ceiling room once a job leaves this count."""
+    if not PENDING_JOBS_DIR.is_dir():
+        return []
+    return [p for p in PENDING_JOBS_DIR.iterdir() if p.is_file() and p.suffix == ".json"]
+
+
 def queue_prepare(playbook: str, **kwargs) -> dict:
     """Same as prepare(), but persists the job to PENDING_JOBS_DIR keyed
     by its first selected target, instead of (or in addition to) an
     --output path the caller may also give. One pending job per target --
     a target already queued is left untouched rather than silently
     overwritten, so a human hasn't lost work by re-running prepare before
-    submitting the first one."""
+    submitting the first one.
+
+    Also enforces PENDING_JOB_CEILING_TOTAL and PENDING_JOB_CEILING_PER_
+    FAMILY (2026-10-03, Defect 2) -- counted fresh per target so that
+    preparing N targets in one call can partially succeed (fills
+    remaining ceiling room, then reports the rest as ceiling_reached)
+    rather than all-or-nothing."""
     job = prepare(playbook, **kwargs)
     selected = (job.get("directive", {}).get("packet_requirements", {}) or {}).get("target_keys") or []
     PENDING_JOBS_DIR.mkdir(parents=True, exist_ok=True)
     queued_paths = []
     skipped_existing = []
+    skipped_ceiling = []
     for target_key in selected:
         path = PENDING_JOBS_DIR / f"{_target_slug(target_key)}.json"
         if path.exists():
             skipped_existing.append(target_key)
+            continue
+        pending = _pending_job_files()
+        family = _target_family(target_key)
+        family_count = sum(1 for p in pending if _target_family_of_file(p) == family)
+        if len(pending) >= PENDING_JOB_CEILING_TOTAL or family_count >= PENDING_JOB_CEILING_PER_FAMILY:
+            skipped_ceiling.append({
+                "target_key": target_key,
+                "family": family,
+                "pending_total": len(pending),
+                "pending_total_ceiling": PENDING_JOB_CEILING_TOTAL,
+                "pending_family": family_count,
+                "pending_family_ceiling": PENDING_JOB_CEILING_PER_FAMILY,
+            })
             continue
         path.write_text(json.dumps(job, indent=2, sort_keys=True) + "\n", encoding="utf-8")
         queued_paths.append(str(path))
@@ -86,6 +139,8 @@ def queue_prepare(playbook: str, **kwargs) -> dict:
         "target_keys": selected,
         "queued_paths": queued_paths,
         "skipped_existing_targets": skipped_existing,
+        "skipped_ceiling": skipped_ceiling,
+        "ceiling_reached": bool(skipped_ceiling),
         "submission_note": (
             "Browser hand-off to ChatGPT Deep Research is structurally blocked (2026-10-02) -- "
             "a human or Codex (never ChatGPT's own file-save) must save the single returned JSON "
@@ -98,16 +153,66 @@ def queue_prepare(playbook: str, **kwargs) -> dict:
     }
 
 
-def sweep(*, confirm: bool = False) -> dict:
+def _target_family_of_file(path: Path) -> str:
+    """Recover a pending job file's target family from its own stored
+    directive, falling back to the filename if the directive can't be
+    read -- so a malformed file never crashes the ceiling check."""
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        keys = (data.get("directive", {}).get("packet_requirements", {}) or {}).get("target_keys") or []
+        if keys:
+            return _target_family(keys[0])
+    except (OSError, ValueError):
+        pass
+    return "unknown"
+
+
+def quarantine_stale_jobs(*, max_age_hours: int = 48) -> list[dict]:
+    """Move a pending job older than max_age_hours into QUARANTINED_JOBS_
+    DIR (2026-10-03, Defect 1, scoped). sweep() already moves a job to
+    processed/ on ANY finalize call, success or validation-failure -- so
+    a job only ever sits pending forever in exactly one case: no packet
+    ever arrived at all (a true transport failure, not a validation
+    retry). This is the bounded, visible fate for that case: never
+    deleted, never silently retried forever, and freed from the pending-
+    job ceiling count so the automation can queue its next real target."""
+    QUARANTINED_JOBS_DIR.mkdir(parents=True, exist_ok=True)
+    cutoff = time.time() - (max_age_hours * 3600)
+    quarantined = []
+    for path in _pending_job_files():
+        mtime = path.stat().st_mtime
+        if mtime > cutoff:
+            continue
+        age_hours = (time.time() - mtime) / 3600
+        dest = QUARANTINED_JOBS_DIR / path.name
+        note_path = QUARANTINED_JOBS_DIR / f"{path.stem}.quarantine.json"
+        note_path.write_text(json.dumps({
+            "quarantined_at": datetime.now(timezone.utc).isoformat(),
+            "reason": "transport_blocked_stale",
+            "age_hours": round(age_hours, 1),
+            "max_age_hours": max_age_hours,
+        }, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        path.rename(dest)
+        quarantined.append({"path": str(dest), "age_hours": round(age_hours, 1)})
+    return quarantined
+
+
+def sweep(*, confirm: bool = False, quarantine_max_age_hours: int = 48) -> dict:
     """Matches every packet file across PACKETS_INBOX_DIR and the legacy
     LEGACY_PACKETS_INBOX_DIR to its queued job in PENDING_JOBS_DIR by
     target key, finalizes matched pairs, and archives both files under
     their respective processed/ subfolders. A packet with no matching
     queued job is left in place (never guessed at or discarded) and
     reported as unmatched -- true for every file in the legacy folder
-    that isn't actually a Hunter packet, which is most of them."""
+    that isn't actually a Hunter packet, which is most of them.
+
+    Runs quarantine_stale_jobs() first (2026-10-03, Defect 1/2) so a job
+    that never received a packet at all ages out of the pending-job
+    ceiling count on every sweep, not just when someone remembers to run
+    it separately."""
     PENDING_JOBS_DIR.mkdir(parents=True, exist_ok=True)
     PROCESSED_JOBS_DIR.mkdir(parents=True, exist_ok=True)
+    quarantined = quarantine_stale_jobs(max_age_hours=quarantine_max_age_hours)
 
     # Built here, not as a module-level constant, so a caller (or a test)
     # that reassigns PACKETS_INBOX_DIR/LEGACY_PACKETS_INBOX_DIR etc. on
@@ -158,7 +263,7 @@ def sweep(*, confirm: bool = False) -> dict:
             results.append({"packet_path": str(packet_path), "job_path": str(job_path), "receipt": receipt})
             job_path.rename(PROCESSED_JOBS_DIR / job_path.name)
             packet_path.rename(processed_dir / packet_path.name)
-    return {"schema": "rb.hunter_sweep_result.v1", "confirmed": confirm, "processed": results, "unmatched": unmatched}
+    return {"schema": "rb.hunter_sweep_result.v1", "confirmed": confirm, "processed": results, "unmatched": unmatched, "quarantined": quarantined}
 
 
 def load_packet_artifact(path: str | Path) -> dict:
@@ -282,6 +387,9 @@ def main() -> int:
     swp = sub.add_parser("sweep", help=f"Match returned packets in {PACKETS_INBOX_DIR} to queued jobs in {PENDING_JOBS_DIR} and finalize")
     swp.add_argument("--confirm", action="store_true")
     swp.add_argument("--output")
+    swp.add_argument("--quarantine-max-age-hours", type=int, default=48,
+                      help="Move a pending job with no returned packet older than this into "
+                           f"{QUARANTINED_JOBS_DIR} before matching (default: 48)")
     args = parser.parse_args()
     if args.command == "prepare":
         if not args.output and not args.queue:
@@ -298,7 +406,7 @@ def main() -> int:
         result = prepare_gatherer_escalation(queue_path=Path(args.queue), change_id=args.change_id)
         Path(args.output).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     elif args.command == "sweep":
-        result = sweep(confirm=args.confirm)
+        result = sweep(confirm=args.confirm, quarantine_max_age_hours=args.quarantine_max_age_hours)
         if args.output:
             Path(args.output).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     else:

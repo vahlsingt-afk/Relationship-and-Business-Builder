@@ -797,7 +797,8 @@ def run_assessment(*, today: date | None = None) -> dict:
 
     try:
         import gatherer
-        p_gatherer = gatherer.build_packet(p1)
+        gatherer_prior = _load_json(gatherer.CACHE_PATH)
+        p_gatherer = gatherer.build_packet(p1, prior_packet=gatherer_prior if isinstance(gatherer_prior, dict) else None)
         gatherer.write_packet(p_gatherer)
     except Exception as exc:  # noqa: BLE001
         p_gatherer = {"contract": "rb.gatherer_daily_change_packet.v1", "status": "error", "error": str(exc),
@@ -834,6 +835,28 @@ def run_assessment(*, today: date | None = None) -> dict:
         "assessment_date": assessment_date,
         "generated_at": _now_iso(),
         "contract": CONTRACT,
+        "primary_daily_intelligence": {
+            "engine": "Gatherer",
+            "contract": p_gatherer.get("contract"),
+            "packet_id": p_gatherer.get("packet_id"),
+            # 2026-10-03 (Defect 5): also require receipt_consistent (when
+            # the field is present -- older cached packets predate it) so
+            # a schema-valid-but-self-contradictory packet (the real
+            # observed incident: tracked_entities_total 0, all sources
+            # failed, input_status "ok", yet real input_items/changes
+            # present) is correctly marked degraded, not current.
+            "status": (
+                "current"
+                if p_gatherer.get("packet_id")
+                and p_gatherer.get("run_receipt", {}).get("schema_validation") == "valid"
+                and p_gatherer.get("run_receipt", {}).get("receipt_consistent", True)
+                else "degraded"
+            ),
+            "changes": len(p_gatherer.get("changes") or []),
+            "hunter_escalations": len(p_gatherer.get("hunter_escalations") or []),
+            "source_checks": (p_gatherer.get("coverage") or {}).get("source_checks") or {},
+            "boundary": "Raw feeds are inputs; Gatherer is the authoritative daily change layer; Hunter verifies escalations.",
+        },
         "trust_stats": trust_stats,
         "phase_1_web": p1,
         "phase_2_gatherer": p_gatherer,
@@ -849,12 +872,25 @@ def run_assessment(*, today: date | None = None) -> dict:
 
 
 def is_fresh(today: date | None = None) -> bool:
-    """Return True if today's assessment cache already exists."""
+    """Return True if today's assessment cache already exists AND
+    succeeded. 2026-10-03 (CLAUDE_HANDOFF_RB_HUNTER_GATHERER_END_TO_END_
+    DEFECTS, Defect 5): this used to check only assessment_date == today,
+    with no notion of whether that day's run actually worked -- a single
+    transient failure (e.g. a race against another writer of ecosystem_
+    intelligence.json) got "frozen" as today's cached answer and was
+    never retried for the rest of the day, while --cache's whole purpose
+    is to skip re-running on an already-successful day. Now also
+    requires no run_errors and a "current" (not "degraded") primary
+    daily-intelligence status."""
     if not CACHE_PATH.exists():
         return False
     try:
         data = json.loads(CACHE_PATH.read_text(encoding="utf-8"))
-        return data.get("assessment_date") == (today or date.today()).isoformat()
+        if data.get("assessment_date") != (today or date.today()).isoformat():
+            return False
+        if data.get("run_errors"):
+            return False
+        return (data.get("primary_daily_intelligence") or {}).get("status") == "current"
     except Exception:
         return False
 
@@ -900,6 +936,7 @@ def main() -> int:
         print(json.dumps({
             "ok": ok,
             "assessment_date": result["assessment_date"],
+            "primary_daily_intelligence": result.get("primary_daily_intelligence"),
             "trust_stats": ts,
             "proposals_count": (result.get("phase_4_proposals") or {}).get("proposals_count", 0),
             "run_errors": result.get("run_errors"),
