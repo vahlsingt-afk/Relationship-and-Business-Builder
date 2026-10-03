@@ -3,7 +3,7 @@
   "title": "RBB Gatherer Daily Change Packet",
   "type": "object",
   "additionalProperties": false,
-  "required": ["contract", "packet_id", "generated_at", "window", "coverage", "changes", "hunter_escalations", "stats"],
+  "required": ["contract", "packet_id", "generated_at", "window", "coverage", "source_ledger", "changes", "hunter_escalations", "run_receipt", "stats"],
   "properties": {
     "contract": {"const": "rb.gatherer_daily_change_packet.v1"},
     "packet_id": {"type": "string"},
@@ -21,12 +21,27 @@
     "coverage": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["tracked_entities_total", "tracked_entities_observed", "sources_observed", "domains_observed", "limitations"],
+      "required": ["tracked_entities_total", "tracked_entities_observed", "sources_observed", "domains_observed", "source_checks", "limitations"],
       "properties": {
         "tracked_entities_total": {"type": "integer", "minimum": 0},
+        "tracked_entities_error": {
+          "type": ["string", "null"],
+          "description": "2026-10-03 (Defect 5): set when _tracked_entities() failed to read/parse the ecosystem graph, so tracked_entities_total: 0 is never silently indistinguishable from a legitimately empty graph. null on a successful read."
+        },
         "tracked_entities_observed": {"type": "array", "items": {"type": "string"}},
         "sources_observed": {"type": "array", "items": {"type": "string"}},
-        "domains_observed": {"type": "array", "items": {"type": "string"}},
+          "domains_observed": {"type": "array", "items": {"type": "string"}},
+          "source_checks": {
+            "type": "object", "additionalProperties": false,
+            "required": ["expected_sources", "successful_sources", "failed_sources", "coverage_pct", "status"],
+            "properties": {
+              "expected_sources": {"type": "integer", "minimum": 0},
+              "successful_sources": {"type": "integer", "minimum": 0},
+              "failed_sources": {"type": "array", "items": {"type": "string"}},
+              "coverage_pct": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+              "status": {"enum": ["complete", "partial", "unmeasured"]}
+            }
+          },
         "limitations": {"type": "array", "items": {"type": "string"}}
       }
     },
@@ -35,20 +50,30 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["change_id", "title", "summary", "observed_at", "date_precision", "entities", "signal_type", "domain", "source", "source_url", "confidence", "materiality", "verification_state"],
+        "required": ["change_id", "title", "summary", "observed_at", "date_precision", "temporal", "entities", "target_keys", "signal_type", "domain", "source", "source_url", "source_owner", "confidence", "materiality", "fingerprint", "novelty", "rbb_comparison", "corroboration", "scores", "verification_state"],
         "properties": {
           "change_id": {"type": "string"},
           "title": {"type": "string"},
           "summary": {"type": "string"},
           "observed_at": {"type": "string"},
           "date_precision": {"enum": ["time", "day"]},
+          "temporal": {"type": "object"},
           "entities": {"type": "array", "items": {"type": "string"}},
+          "target_keys": {"type": "array", "items": {"type": "string"}},
           "signal_type": {"type": "string"},
           "domain": {"type": "string"},
           "source": {"type": "string"},
           "source_url": {"type": "string"},
+          "source_owner": {"type": "string"},
           "confidence": {"enum": ["low", "medium", "high"]},
           "materiality": {"type": "integer", "minimum": 0, "maximum": 100},
+          "fingerprint": {"type": "string"},
+          "novelty": {"type": "object"},
+          "rbb_comparison": {"type": "object"},
+          "corroboration": {"type": "object"},
+          "scores": {"type": "object"},
+          "supporting_sources": {"type": "array"},
+          "clustered_headlines": {"type": "array", "items": {"type": "string"}},
           "verification_state": {"const": "candidate"}
         }
       }
@@ -58,17 +83,43 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["change_id", "target_names", "recommended_playbook", "reason", "priority"],
+        "required": ["change_id", "target_names", "target_keys", "recommended_playbook", "reason", "priority", "verification_questions", "source_urls", "dedupe_key", "status", "hunter_job"],
         "properties": {
           "change_id": {"type": "string"},
           "target_names": {"type": "array", "items": {"type": "string"}},
+          "target_keys": {"type": "array", "items": {"type": "string"}},
           "recommended_playbook": {"type": "string"},
           "reason": {"type": "string"},
-          "priority": {"enum": ["low", "medium", "high"]}
+          "priority": {"enum": ["low", "medium", "high"]},
+          "verification_questions": {"type": "array", "items": {"type": "string"}},
+          "source_urls": {"type": "array", "items": {"type": "string"}}
+          ,"dedupe_key": {"type": "string"}
+          ,"status": {"enum": ["ready_for_hunter_preparation", "needs_entity_resolution"]}
+          ,"hunter_job": {"type": "object"}
         }
+      }
+    },
+    "source_ledger": {"type": "array", "items": {"type": "object"}},
+    "run_receipt": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "input_status", "collection_errors", "canonical_state_compared", "schema_validation"],
+      "properties": {
+        "status": {"enum": ["complete", "partial"]},
+        "input_status": {"type": "string"},
+        "collection_errors": {"type": "array"},
+        "canonical_state_compared": {
+          "type": "boolean",
+          "description": "2026-10-03 (Defect 5): was hardcoded {\"const\": true} -- the field could never actually report a failed canonical read, which is exactly the kind of fake-success encoding this whole defect pass exists to remove. Now reflects whether _tracked_entities() actually succeeded."
+        },
+        "schema_validation": {"enum": ["pending_write_gate", "valid"]},
+        "hunter_jobs_queued": {"type": "integer", "minimum": 0},
+        "receipt_consistent": {
+          "type": "boolean",
+          "description": "2026-10-03 (Defect 5, Gate E): false when the semantic consistency check finds a self-contradictory receipt (e.g. input_status 'ok' with real input_items but every configured source reported failed). JSON Schema validity alone does not catch this."
+        },
+        "receipt_consistency_reasons": {"type": "array", "items": {"type": "string"}}
       }
     },
     "stats": {"type": "object"}
   }
 }
-

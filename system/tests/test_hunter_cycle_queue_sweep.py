@@ -64,6 +64,8 @@ class _IsolatedQueueMixin(unittest.TestCase):
             # system/inbox/chatgpt_intelligence_drop/ on every run.
             patch.object(hc, "LEGACY_PACKETS_INBOX_DIR", tmp / "legacy_inbox"),
             patch.object(hc, "LEGACY_PROCESSED_PACKETS_DIR", tmp / "legacy_inbox" / "processed"),
+            # 2026-10-03 (Defect 1/2 fix): isolate the new quarantine dir too.
+            patch.object(hc, "QUARANTINED_JOBS_DIR", tmp / "pending" / "quarantined"),
         ]
         for p in self._patches:
             p.start()
@@ -253,6 +255,93 @@ class TestSweepLegacyFolder(_IsolatedQueueMixin):
             json.dumps(_fake_packet("company:brand-never-queued")), encoding="utf-8")
         result = hc.sweep(confirm=False)
         self.assertEqual(len(result["unmatched"]), 1)
+
+
+class TestPendingJobCeiling(_IsolatedQueueMixin):
+    """2026-10-03 (CLAUDE_HANDOFF_RB_HUNTER_GATHERER_END_TO_END_DEFECTS):
+    confirmed live -- 9 jobs piled up pending with zero completions
+    because queue_prepare() enforced no ceiling across different targets.
+    """
+
+    def _queue(self, target_key: str, *, universe: str = "brands"):
+        with patch.object(hc, "prepare", return_value=_fake_job(target_key)):
+            return hc.queue_prepare("enterprise_account_profile", universe=universe, target_keys=[target_key])
+
+    def test_refuses_a_fourth_total_pending_job(self):
+        self._queue("company:brand-one")
+        self._queue("competitor:two")
+        self._queue("franchisee:three")
+        result = self._queue("company:brand-four")
+        self.assertEqual(result["queued_paths"], [])
+        self.assertTrue(result["ceiling_reached"])
+        self.assertEqual(result["skipped_ceiling"][0]["target_key"], "company:brand-four")
+        self.assertEqual(result["skipped_ceiling"][0]["pending_total"], 3)
+        self.assertFalse((hc.PENDING_JOBS_DIR / "company-brand-four.json").exists())
+
+    def test_refuses_a_second_job_in_the_same_family_even_under_the_total_ceiling(self):
+        self._queue("company:brand-one")
+        result = self._queue("company:brand-two")
+        self.assertEqual(result["queued_paths"], [])
+        self.assertTrue(result["ceiling_reached"])
+        self.assertEqual(result["skipped_ceiling"][0]["family"], "company")
+        self.assertEqual(result["skipped_ceiling"][0]["pending_family"], 1)
+        # Total ceiling (3) is not yet reached -- a DIFFERENT family can still queue.
+        other = self._queue("competitor:one")
+        self.assertEqual(len(other["queued_paths"]), 1)
+
+    def test_multi_target_prepare_partially_succeeds_up_to_the_ceiling(self):
+        self._queue("company:brand-one")
+        self._queue("competitor:one")
+        with patch.object(hc, "prepare", return_value={
+            "schema": "rb.hunter_cycle_job.v1",
+            "directive": {"packet_requirements": {"target_keys": ["franchisee:one", "franchisee:two"]}},
+            "before_snapshot": {},
+        }):
+            result = hc.queue_prepare("franchisee_organization_profile", universe="franchisees",
+                                       target_keys=["franchisee:one", "franchisee:two"])
+        # Only one more slot is free (2 pending so far, ceiling 3) -- first
+        # target fills it, second is reported ceiling_reached, not silently dropped.
+        self.assertEqual(len(result["queued_paths"]), 1)
+        self.assertEqual(len(result["skipped_ceiling"]), 1)
+        self.assertEqual(result["skipped_ceiling"][0]["target_key"], "franchisee:two")
+
+
+class TestQuarantineStaleJobs(_IsolatedQueueMixin):
+    def _write_job(self, target_key: str, *, age_hours: float = 0):
+        hc.PENDING_JOBS_DIR.mkdir(parents=True, exist_ok=True)
+        path = hc.PENDING_JOBS_DIR / f"{hc._target_slug(target_key)}.json"
+        path.write_text(json.dumps(_fake_job(target_key)), encoding="utf-8")
+        if age_hours:
+            old_time = time.time() - age_hours * 3600
+            os.utime(path, (old_time, old_time))
+        return path
+
+    def test_moves_a_job_older_than_max_age_into_quarantine(self):
+        old_path = self._write_job("company:brand-stale", age_hours=72)
+        quarantined = hc.quarantine_stale_jobs(max_age_hours=48)
+        self.assertEqual(len(quarantined), 1)
+        self.assertFalse(old_path.exists())
+        self.assertTrue((hc.QUARANTINED_JOBS_DIR / old_path.name).exists())
+        note = json.loads((hc.QUARANTINED_JOBS_DIR / f"{old_path.stem}.quarantine.json").read_text())
+        self.assertEqual(note["reason"], "transport_blocked_stale")
+
+    def test_leaves_a_recent_job_in_place(self):
+        recent_path = self._write_job("company:brand-fresh", age_hours=1)
+        quarantined = hc.quarantine_stale_jobs(max_age_hours=48)
+        self.assertEqual(quarantined, [])
+        self.assertTrue(recent_path.exists())
+
+    def test_sweep_quarantines_stale_jobs_before_matching_and_frees_ceiling_room(self):
+        self._write_job("company:brand-stale", age_hours=72)
+        self._write_job("competitor:one", age_hours=72)
+        self._write_job("franchisee:one", age_hours=72)
+        result = hc.sweep(confirm=False, quarantine_max_age_hours=48)
+        self.assertEqual(len(result["quarantined"]), 3)
+        self.assertEqual(len(hc._pending_job_files()), 0)
+        # Ceiling room is freed -- a new target can now be queued.
+        with patch.object(hc, "prepare", return_value=_fake_job("company:brand-new")):
+            queued = hc.queue_prepare("enterprise_account_profile", universe="brands", target_keys=["company:brand-new"])
+        self.assertEqual(len(queued["queued_paths"]), 1)
 
 
 if __name__ == "__main__":
