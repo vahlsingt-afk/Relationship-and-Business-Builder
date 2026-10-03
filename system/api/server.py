@@ -11102,29 +11102,7 @@ def get_franchisee_organizations_list(
     brand_count/total_identified_units is a real, already-computed summary,
     not re-derived on this call."""
     _auth(x_api_key)
-    reg = ff_common.load_registry()
-    orgs = []
-    for row in reg.get("registry", []):
-        slug = row.get("org_slug") or ""
-        try:
-            org = ff_common.load_organization(slug)["organization"]
-        except FileNotFoundError:
-            continue
-        brand_count = len(org.get("brand_relationships") or [])
-        total_units = org.get("total_identified_units") or 0
-        if multi_brand_only and brand_count < 2:
-            continue
-        if min_units is not None and total_units < min_units:
-            continue
-        orgs.append({
-            "org_slug": slug,
-            "display_name": org.get("display_name"),
-            "brand_count": brand_count,
-            "total_identified_units": total_units,
-            "headquarters": (org.get("headquarters") or {}).get("value"),
-            "overall_profile_quality": (org.get("research_status") or {}).get("overall_profile_quality"),
-        })
-    orgs.sort(key=lambda o: o["total_identified_units"], reverse=True)
+    orgs = ff_common.list_organizations(min_units=min_units, multi_brand_only=multi_brand_only)
     return {"contract": "rb_franchisee_organization_list_v1", "organization_count": len(orgs), "organizations": orgs}
 
 
@@ -11159,24 +11137,7 @@ def get_franchisees_by_brand(brand_name: str, x_api_key: Optional[str] = Header(
     real, honest answer, not an error. Call listFranchiseeOrganizations
     first if you want to browse by organization instead of by brand."""
     _auth(x_api_key)
-    needle = brand_name.strip().casefold()
-    reg = ff_common.load_registry()
-    matches = []
-    for row in reg.get("registry", []):
-        slug = row.get("org_slug") or ""
-        try:
-            org = ff_common.load_organization(slug)["organization"]
-        except FileNotFoundError:
-            continue
-        for rel in org.get("brand_relationships") or []:
-            if (rel.get("brand_name") or "").strip().casefold() == needle:
-                matches.append({
-                    "org_slug": slug,
-                    "display_name": org.get("display_name"),
-                    "brand_relationship": rel,
-                })
-                break
-    matches.sort(key=lambda m: (m["brand_relationship"]["unit_count"]["value"] or -1), reverse=True)
+    matches = ff_common.find_organizations_by_brand(brand_name)
     return {"contract": "rb_franchisee_by_brand_v1", "brand_name": brand_name, "match_count": len(matches), "organizations": matches}
 
 

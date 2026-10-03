@@ -4,7 +4,9 @@
 
 ---
 
-### Franchisee Finder — not yet surfaced in the Team Portal (scoped, not started — 2026-10-02)
+### ~~Franchisee Finder — not yet surfaced in the Team Portal~~ (DONE — 2026-10-03)
+
+Built as scoped below: shared `list_organizations()`/`find_organizations_by_brand()` moved into `franchisee_finder_common.py` (server.py's three operations now delegate to them instead of duplicating the logic), new `team_franchisee_finder.py` compute module, two new member-authed `team_portal_api.py` routes (`GET /api/franchisees/search`, `GET /api/franchisees/{org_slug}`), and a new "Franchisee Finder" top-nav section in `team_portal_ui.html` (search + result table + profile drill-down with honest "Not yet researched" states for Ownership/Legal Entities/Leadership/Geographic Footprint). Exactly the slice scoped below, nothing more. 32 new/updated tests, all passing alongside the full existing Team Portal + Franchisee Finder suites (214 tests).
 
 Todd asked where Franchisee Finder stood with Team Portal inclusion. Checked `team_portal_api.py` and `team_portal_ui.html` directly: zero wiring — no import of `franchisee_finder_common`, no API route, no UI section. Franchisee Finder Phase 1 (storage domain, seed import, 3 read-only operations on `server.py`) is real and complete, but it is a Trusted-Chat-Client/Custom-GPT-only surface today. `FRANCHISEE_FINDER_SPEC.md` §12 describes a full Team Portal feature; this scopes a Phase-1-honest slice of it, not the whole spec.
 

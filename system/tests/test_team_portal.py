@@ -1574,5 +1574,89 @@ class TestFddGovernanceProfileRoute(unittest.TestCase):
         self.assertEqual(resp.json()["fdd_sources"][0]["fdd_id"], "fdd-acme-2026")
 
 
+class TestFranchiseeFinderRoutes(unittest.TestCase):
+    """Franchisee Finder Team Portal slice (ROADMAP.md, 2026-10-02/03) --
+    GET /api/franchisees/search and GET /api/franchisees/{org_slug}. Same
+    auth-fixture pattern as TestFddGovernanceProfileRoute, plus isolation
+    of franchisee_finder_common.py's own storage ROOT (same discipline as
+    test_franchisee_finder_api.py's _IsolatedRootMixin)."""
+
+    def setUp(self):
+        import tempfile
+        import hashlib
+        self.tmpdir = tempfile.TemporaryDirectory()
+        tmp = Path(self.tmpdir.name)
+
+        self.token = "test-token-ff-route"
+        self.creds_path = tmp / "creds.json"
+        self.creds_path.write_text(json.dumps({
+            "jsmith": {"token_hash": hashlib.sha256(self.token.encode()).hexdigest(),
+                       "created_at": "2026-10-03T00:00:00+00:00", "revoked_at": None},
+        }))
+        self.manifest_path = tmp / "manifest.yaml"
+        import yaml
+        self.manifest_path.write_text(yaml.safe_dump({
+            "members": [{"id": "jsmith", "name": "Jane Smith", "added_at": "2026-10-03T00:00:00+00:00", "revoked_at": None}],
+        }))
+        self._manifest_patch = patch.object(team_portal_api, "MANIFEST_PATH", self.manifest_path)
+        self._creds_patch = patch.object(team_portal_api, "CREDENTIALS_PATH", self.creds_path)
+        self._manifest_patch.start()
+        self._creds_patch.start()
+
+        self._ffc_root_orig = team_portal_api.tff.ffc.ROOT
+        team_portal_api.tff.ffc.ROOT = tmp / "franchisee_finder"
+
+        ffc = team_portal_api.tff.ffc
+        ffc.create_organization_shell("flynn-group", "Flynn Group")
+        org = ffc.load_organization("flynn-group")["organization"]
+        org["brand_relationships"] = [ffc.brand_relationship("Pizza Hut", 1321, confidence_pct=80, status="confirmed")]
+        org["total_identified_units"] = 1321
+        org["headquarters"] = ffc.assertion_field("San Francisco, CA", confidence_pct=90, status="confirmed")
+        ffc.save_organization("flynn-group", org)
+        ffc.register_organization("flynn-group", "Flynn Group")
+
+        self.client = TestClient(team_portal_api.app)
+
+    def tearDown(self):
+        self._manifest_patch.stop()
+        self._creds_patch.stop()
+        team_portal_api.tff.ffc.ROOT = self._ffc_root_orig
+        self.tmpdir.cleanup()
+
+    def _auth(self) -> dict:
+        return {"Authorization": f"Bearer {self.token}"}
+
+    def test_search_requires_auth(self):
+        resp = self.client.get("/api/franchisees/search?q=flynn")
+        self.assertEqual(resp.status_code, 401)
+
+    def test_search_matches_org_name(self):
+        resp = self.client.get("/api/franchisees/search?q=flynn", headers=self._auth())
+        self.assertEqual(resp.status_code, 200)
+        orgs = resp.json()["organizations"]
+        self.assertEqual([o["org_slug"] for o in orgs], ["flynn-group"])
+
+    def test_search_matches_brand_name(self):
+        resp = self.client.get("/api/franchisees/search?q=pizza+hut", headers=self._auth())
+        self.assertEqual(resp.status_code, 200)
+        self.assertEqual([o["org_slug"] for o in resp.json()["organizations"]], ["flynn-group"])
+
+    def test_search_min_units_filters(self):
+        resp = self.client.get("/api/franchisees/search?q=flynn&min_units=5000", headers=self._auth())
+        self.assertEqual(resp.status_code, 200)
+        self.assertEqual(resp.json()["organizations"], [])
+
+    def test_profile_route_returns_full_record(self):
+        resp = self.client.get("/api/franchisees/flynn-group", headers=self._auth())
+        self.assertEqual(resp.status_code, 200)
+        body = resp.json()
+        self.assertEqual(body["organization"]["display_name"], "Flynn Group")
+        self.assertIn("evidence", body)
+
+    def test_profile_route_unknown_org_404(self):
+        resp = self.client.get("/api/franchisees/does-not-exist", headers=self._auth())
+        self.assertEqual(resp.status_code, 404)
+
+
 if __name__ == "__main__":
     unittest.main()

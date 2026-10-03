@@ -147,6 +147,7 @@
       <button id="nav-market-intel">Market Intelligence</button>
       <button id="nav-companies" class="active">Companies</button>
       <button id="nav-sales-tools">Sales Tools</button>
+      <button id="nav-franchisee-finder">Franchisee Finder</button>
     </div>
     <div id="global-error" class="error hidden"></div>
 
@@ -203,6 +204,35 @@
         <table id="st-results-table"><tbody id="st-results-body"></tbody></table>
       </div>
       <div id="st-tools-container"></div>
+    </div>
+
+    <div id="section-franchisee-finder" class="hidden">
+      <div id="ff-search-view">
+        <div class="card">
+          <h2>Franchisee Finder</h2>
+          <p class="muted">Restaurant franchisee organizations on file -- their brand portfolios, unit counts, and headquarters, each with its own confidence and evidence. Search by franchisee/operator name or by brand (e.g. "Flynn Group" or "Taco Bell").</p>
+          <div class="row">
+            <input type="search" id="ff-search-input" placeholder="Search franchisee, operator, or brand...">
+          </div>
+          <div class="filter-row">
+            <input type="number" id="ff-min-units" placeholder="Min. units" min="0" style="width:110px;">
+            <label style="display:flex;align-items:center;gap:6px;font-size:13px;">
+              <input type="checkbox" id="ff-multi-brand-only"> Multi-brand operators only
+            </label>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table id="ff-results-table">
+            <thead><tr><th>Organization</th><th>Brands</th><th>Total identified units</th><th>Headquarters</th><th>Profile quality</th></tr></thead>
+            <tbody id="ff-results-body"></tbody>
+          </table>
+        </div>
+        <p id="ff-results-empty" class="muted hidden">Type a name above, or set a filter, to search.</p>
+      </div>
+      <div id="ff-detail-view" class="hidden">
+        <button id="ff-back-btn" class="secondary">&larr; Back to search</button>
+        <div id="ff-detail-content"></div>
+      </div>
     </div>
 
     <div id="section-companies">
@@ -1432,20 +1462,153 @@ function wireGreenSheetForm(brandId) {
   });
 }
 
+// ---- Franchisee Finder (ROADMAP.md, 2026-10-02/03 Team Portal slice) ----
+
+function ffRunSearch() {
+  const q = document.getElementById('ff-search-input').value.trim();
+  const minUnitsRaw = document.getElementById('ff-min-units').value.trim();
+  const multiBrandOnly = document.getElementById('ff-multi-brand-only').checked;
+  const empty = document.getElementById('ff-results-empty');
+  if (!q && !minUnitsRaw && !multiBrandOnly) {
+    // Same reasoning as the Companies search: never dump the full roster
+    // unfiltered -- only useful once someone's looking for something.
+    document.getElementById('ff-results-body').innerHTML = '';
+    empty.textContent = 'Type a name above, or set a filter, to search.';
+    empty.classList.remove('hidden');
+    return;
+  }
+  let qs = 'q=' + encodeURIComponent(q);
+  if (minUnitsRaw) qs += '&min_units=' + encodeURIComponent(minUnitsRaw);
+  if (multiBrandOnly) qs += '&multi_brand_only=true';
+  api('/api/franchisees/search?' + qs).then((data) => {
+    setError(null);
+    empty.textContent = 'No matches.';
+    ffRenderResults(data.organizations);
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+function ffRenderResults(orgs) {
+  const body = document.getElementById('ff-results-body');
+  const empty = document.getElementById('ff-results-empty');
+  body.innerHTML = '';
+  orgs.forEach((o) => {
+    const tr = document.createElement('tr');
+    tr.className = 'clickable';
+    tr.innerHTML = `<td>${esc(o.display_name)}</td><td>${o.brand_count}</td>`
+      + `<td>${o.total_identified_units}</td><td>${esc(o.headquarters || '')}</td>`
+      + `<td>${esc(o.overall_profile_quality || 'unresearched')}</td>`;
+    tr.addEventListener('click', () => openFranchiseeOrg(o.org_slug));
+    body.appendChild(tr);
+  });
+  empty.classList.toggle('hidden', orgs.length > 0);
+}
+
+let ffSearchTimer = null;
+document.getElementById('ff-search-input').addEventListener('input', () => {
+  clearTimeout(ffSearchTimer);
+  ffSearchTimer = setTimeout(ffRunSearch, 250);
+});
+document.getElementById('ff-min-units').addEventListener('input', () => {
+  clearTimeout(ffSearchTimer);
+  ffSearchTimer = setTimeout(ffRunSearch, 250);
+});
+document.getElementById('ff-multi-brand-only').addEventListener('change', ffRunSearch);
+
+function ffBrandRelationshipRows(rels) {
+  if (!rels || !rels.length) return '<tr><td colspan="4" class="muted">No brand relationships on file yet.</td></tr>';
+  return rels.map((r) => {
+    const uc = r.unit_count || {};
+    const conf = uc.confidence_pct != null ? uc.confidence_pct + '%' : 'not yet assessed';
+    return `<tr><td>${esc(r.brand_name)}</td><td>${uc.value ?? ''}</td><td>${esc(conf)}</td><td>${esc(uc.status || 'unresolved')}${sourceLinkHtml(uc.source_url)}</td></tr>`;
+  }).join('');
+}
+
+// Franchisee Finder's assertion_field() shape uses confidence_pct (an int
+// 0-100), not the `confidence` string label the shared fieldHtml() above
+// expects (brand_profile_common.py's shape) -- reusing fieldHtml directly
+// would silently drop confidence display instead of showing it, which
+// spec section 6 explicitly requires ("UI must make clear that confidence
+// varies between individual assertions").
+function ffFieldHtml(f, label) {
+  if (!f || f.value == null) {
+    return `<dt>${esc(label)}</dt><dd class="muted">Not yet researched</dd>`;
+  }
+  const asOf = f.as_of ? `as of ${esc(f.as_of)}` : '';
+  const conf = f.confidence_pct != null ? `, ${f.confidence_pct}% confidence` : '';
+  return `<dt>${esc(label)}</dt><dd>${esc(f.value)}<div class="field-as-of">${asOf}${conf}${sourceLinkHtml(f.source_url)}</div></dd>`;
+}
+
+// Ownership/legal_entities/geographic_footprint/people are empty on every
+// seeded record today (FRANCHISEE_FINDER_SPEC.md section 16, Phase 2+
+// fields) -- render that honestly rather than hiding the section, so it's
+// clear this is "not yet researched," not "doesn't apply."
+function ffEmptyOrList(items, renderItem) {
+  if (!items || !items.length) return '<p class="muted">Not yet researched.</p>';
+  return `<ul class="field-list">${items.map(renderItem).join('')}</ul>`;
+}
+
+function openFranchiseeOrg(orgSlug) {
+  document.getElementById('ff-search-view').classList.add('hidden');
+  document.getElementById('ff-detail-view').classList.remove('hidden');
+  const content = document.getElementById('ff-detail-content');
+  content.innerHTML = '<p class="muted">Loading...</p>';
+  api(`/api/franchisees/${orgSlug}`).then((data) => {
+    const org = data.organization || {};
+    const hq = org.headquarters;
+    const ownership = org.ownership || {};
+    const researchStatus = org.research_status || {};
+    content.innerHTML = `<h2>${esc(org.display_name)}</h2>
+      <div class="card">
+        <dl class="profile-grid">
+          ${ffFieldHtml(hq, 'Headquarters')}
+          ${ffFieldHtml(ownership.structure, 'Ownership structure')}
+        </dl>
+        <p class="muted">Total identified restaurants: ${org.total_identified_units ?? 0} &middot; Research status: ${esc(researchStatus.overall_profile_quality || 'unresearched')}</p>
+      </div>
+      <div class="card">
+        <h2>Brand Portfolio</h2>
+        <div class="table-scroll"><table><thead><tr><th>Brand</th><th>Units</th><th>Confidence</th><th>Status</th></tr></thead>
+          <tbody>${ffBrandRelationshipRows(org.brand_relationships)}</tbody></table></div>
+      </div>
+      <div class="card">
+        <h2>Ownership &amp; Legal Entities</h2>
+        ${ffEmptyOrList(org.legal_entities, (le) => `<li>${esc(le.name)}${le.relationship_type ? ' (' + esc(le.relationship_type) + ')' : ''}</li>`)}
+      </div>
+      <div class="card">
+        <h2>Leadership</h2>
+        ${ffEmptyOrList(org.people, (p) => `<li>${esc(p.title || '')} &mdash; ${esc(p.name)}</li>`)}
+      </div>
+      <div class="card">
+        <h2>Geographic Footprint</h2>
+        ${ffEmptyOrList(org.geographic_footprint, (f) => `<li>${esc(f.value)}</li>`)}
+      </div>`;
+  }).catch((e) => {
+    if (e.message !== 'unauthorized') content.innerHTML = `<p class="error">${esc(e.message)}</p>`;
+  });
+}
+
+document.getElementById('ff-back-btn').addEventListener('click', () => {
+  document.getElementById('ff-detail-view').classList.add('hidden');
+  document.getElementById('ff-search-view').classList.remove('hidden');
+});
+
 // ---- Top-level section nav ----
 
 function setSection(name) {
   document.getElementById('nav-market-intel').classList.toggle('active', name === 'market-intel');
   document.getElementById('nav-companies').classList.toggle('active', name === 'companies');
   document.getElementById('nav-sales-tools').classList.toggle('active', name === 'sales-tools');
+  document.getElementById('nav-franchisee-finder').classList.toggle('active', name === 'franchisee-finder');
   document.getElementById('section-market-intel').classList.toggle('hidden', name !== 'market-intel');
   document.getElementById('section-companies').classList.toggle('hidden', name !== 'companies');
   document.getElementById('section-sales-tools').classList.toggle('hidden', name !== 'sales-tools');
+  document.getElementById('section-franchisee-finder').classList.toggle('hidden', name !== 'franchisee-finder');
   if (name === 'market-intel') loadMarketIntelOnce();
 }
 document.getElementById('nav-market-intel').addEventListener('click', () => setSection('market-intel'));
 document.getElementById('nav-companies').addEventListener('click', () => setSection('companies'));
 document.getElementById('nav-sales-tools').addEventListener('click', () => setSection('sales-tools'));
+document.getElementById('nav-franchisee-finder').addEventListener('click', () => setSection('franchisee-finder'));
 
 // ---- Init ----
 

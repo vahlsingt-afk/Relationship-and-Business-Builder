@@ -138,5 +138,98 @@ class TestBrandRelationship(unittest.TestCase):
         self.assertEqual(len(rel["history"]), 1)
 
 
+def _seed_org(slug: str, display_name: str, *, brands=None, headquarters=None, aliases=None):
+    ffc.create_organization_shell(slug, display_name)
+    org = ffc.load_organization(slug)["organization"]
+    org["brand_relationships"] = []
+    for bname, unit_count, confidence_pct in (brands or []):
+        org["brand_relationships"].append(
+            ffc.brand_relationship(bname, unit_count, confidence_pct=confidence_pct, status="confirmed")
+        )
+    org["total_identified_units"] = sum((b[1] or 0) for b in (brands or []))
+    if headquarters:
+        org["headquarters"] = ffc.assertion_field(headquarters, confidence_pct=90, status="confirmed")
+    if aliases:
+        org["aliases"] = aliases
+    ffc.save_organization(slug, org)
+    ffc.register_organization(slug, display_name)
+
+
+class TestListOrganizations(_IsolatedRootMixin, unittest.TestCase):
+    """Shared query logic (moved out of server.py so the Team Portal and
+    server.py's listFranchiseeOrganizations call one implementation, not
+    two that can drift -- see ROADMAP.md's Franchisee Finder Team Portal
+    scoping entry, 2026-10-02/03)."""
+
+    def setUp(self):
+        super().setUp()
+        _seed_org("flynn-group", "Flynn Group", brands=[("Pizza Hut", 1321, 80), ("Arby's", 358, 65)],
+                  headquarters="San Francisco, CA", aliases=["Flynn Restaurant Group"])
+        _seed_org("solo-group", "Solo Group", brands=[("Subway", 12, 65)])
+
+    def test_lists_all_by_default(self):
+        orgs = ffc.list_organizations()
+        self.assertEqual(len(orgs), 2)
+        self.assertEqual({o["org_slug"] for o in orgs}, {"flynn-group", "solo-group"})
+
+    def test_multi_brand_only_filters(self):
+        orgs = ffc.list_organizations(multi_brand_only=True)
+        self.assertEqual([o["org_slug"] for o in orgs], ["flynn-group"])
+
+    def test_min_units_filters(self):
+        orgs = ffc.list_organizations(min_units=100)
+        self.assertEqual([o["org_slug"] for o in orgs], ["flynn-group"])
+
+    def test_sorted_by_total_units_descending(self):
+        orgs = ffc.list_organizations()
+        totals = [o["total_identified_units"] for o in orgs]
+        self.assertEqual(totals, sorted(totals, reverse=True))
+
+    def test_q_matches_display_name(self):
+        orgs = ffc.list_organizations(q="flynn")
+        self.assertEqual([o["org_slug"] for o in orgs], ["flynn-group"])
+
+    def test_q_matches_alias_case_insensitive(self):
+        orgs = ffc.list_organizations(q="FLYNN RESTAURANT")
+        self.assertEqual([o["org_slug"] for o in orgs], ["flynn-group"])
+
+    def test_q_matches_brand_name(self):
+        orgs = ffc.list_organizations(q="subway")
+        self.assertEqual([o["org_slug"] for o in orgs], ["solo-group"])
+
+    def test_q_no_match_returns_empty(self):
+        self.assertEqual(ffc.list_organizations(q="nonexistent brand"), [])
+
+    def test_q_combines_with_other_filters(self):
+        # Matches the brand "Pizza Hut" but flynn-group fails the min_units
+        # filter at a higher threshold -- both conditions must hold.
+        orgs = ffc.list_organizations(q="pizza hut", min_units=10000)
+        self.assertEqual(orgs, [])
+
+
+class TestFindOrganizationsByBrand(_IsolatedRootMixin, unittest.TestCase):
+    def setUp(self):
+        super().setUp()
+        _seed_org("flynn-group", "Flynn Group", brands=[("Taco Bell", 307, 65), ("Pizza Hut", 1321, 80)])
+        _seed_org("sun-holdings", "Sun Holdings", brands=[("Taco Bell", 50, 65)])
+        _seed_org("no-taco-bell-group", "No Taco Bell Group", brands=[("Subway", 12, 65)])
+
+    def test_finds_all_matching_organizations(self):
+        matches = ffc.find_organizations_by_brand("Taco Bell")
+        self.assertEqual({m["org_slug"] for m in matches}, {"flynn-group", "sun-holdings"})
+
+    def test_case_insensitive(self):
+        matches = ffc.find_organizations_by_brand("taco bell")
+        self.assertEqual(len(matches), 2)
+
+    def test_no_match_returns_empty_not_error(self):
+        self.assertEqual(ffc.find_organizations_by_brand("Nonexistent Brand"), [])
+
+    def test_sorted_by_unit_count_descending(self):
+        matches = ffc.find_organizations_by_brand("Taco Bell")
+        units = [m["brand_relationship"]["unit_count"]["value"] for m in matches]
+        self.assertEqual(units, sorted(units, reverse=True))
+
+
 if __name__ == "__main__":
     unittest.main()

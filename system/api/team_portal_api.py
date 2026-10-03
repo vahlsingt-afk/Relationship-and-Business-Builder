@@ -51,6 +51,7 @@ import team_market_intelligence as tmi  # noqa: E402
 import restaurant_tech_trends as rtt  # noqa: E402
 import team_portal_admin as tpa  # noqa: E402
 import team_portal_usage_log as tpul  # noqa: E402
+import team_franchisee_finder as tff  # noqa: E402
 
 CREDENTIALS_PATH = (
     Path.home() / "Library" / "Application Support" / "Relationship Builder"
@@ -304,6 +305,33 @@ def get_partners_search(
 @app.get("/api/partners/categories")
 def get_partners_categories(member: dict = Depends(get_current_member)):
     return {"categories": tts.get_partner_categories()}
+
+
+@app.get("/api/franchisees/search")
+def get_franchisees_search(
+    q: str = "", min_units: Optional[int] = Query(None, ge=0), multi_brand_only: bool = False,
+    member: dict = Depends(get_current_member),
+):
+    """Franchisee Finder's Team Portal search (ROADMAP.md, 2026-10-02/03):
+    one box covering both brand->franchisee and franchisee->portfolio
+    directions -- q matches org display_name/aliases or any brand it
+    operates. No is_owner branch: this is public-source business
+    information (FRANCHISEE_FINDER_SPEC.md section 11), not Todd's private
+    judgment, so every teammate sees the same thing."""
+    orgs = tff.search_organizations(q, min_units=min_units, multi_brand_only=multi_brand_only)
+    return {"organizations": orgs}
+
+
+@app.get("/api/franchisees/{org_slug}")
+def get_franchisee_profile_route(org_slug: str, member: dict = Depends(get_current_member)):
+    """Full profile: organization record + evidence ledger. Ownership,
+    legal_entities, geographic_footprint, and people are empty on every
+    seeded record today (Phase 2+ fields) -- the UI renders an explicit
+    "not yet researched" state for those, it does not hide them."""
+    try:
+        return tff.get_organization_profile(org_slug)
+    except tff.NotFoundError as exc:
+        raise _not_found_to_404(exc)
 
 
 @app.get("/api/brands/{brand_id}/tech-stack")

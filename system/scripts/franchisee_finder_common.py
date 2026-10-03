@@ -298,6 +298,82 @@ def add_evidence(slug: str, evidence: dict) -> dict:
     return evidence
 
 
+def list_organizations(*, min_units: int | None = None, multi_brand_only: bool = False,
+                       q: str | None = None) -> list[dict]:
+    """Summary row per organization: org_slug, display_name, brand_count,
+    total_identified_units, headquarters, overall_profile_quality. Sorted by
+    total_identified_units descending. The read logic server.py's
+    listFranchiseeOrganizations and the Team Portal's franchisee search both
+    call -- one implementation, not two that can drift.
+
+    `q`, when given, matches (case-insensitive substring) against the
+    organization's display_name/aliases or any brand_relationships[]
+    brand_name -- the single search box FRANCHISEE_FINDER_SPEC.md section 12
+    asks for ("Search franchisee, brand, operator..."), covering both
+    brand->franchisee and franchisee->portfolio directions through one
+    query. Person->organization search is not possible yet: `people` is
+    empty on every seeded record (Phase 2+ field)."""
+    reg = load_registry()
+    needle = (q or "").strip().casefold()
+    orgs = []
+    for row in reg.get("registry", []):
+        slug = row.get("org_slug") or ""
+        try:
+            org = load_organization(slug)["organization"]
+        except FileNotFoundError:
+            continue
+        brand_relationships = org.get("brand_relationships") or []
+        brand_count = len(brand_relationships)
+        total_units = org.get("total_identified_units") or 0
+        if multi_brand_only and brand_count < 2:
+            continue
+        if min_units is not None and total_units < min_units:
+            continue
+        if needle:
+            haystack = {str(org.get("display_name") or "").casefold()}
+            haystack.update(str(a).casefold() for a in (org.get("aliases") or []))
+            haystack.update(str(rel.get("brand_name") or "").casefold() for rel in brand_relationships)
+            if not any(needle in h for h in haystack):
+                continue
+        orgs.append({
+            "org_slug": slug,
+            "display_name": org.get("display_name"),
+            "brand_count": brand_count,
+            "total_identified_units": total_units,
+            "headquarters": (org.get("headquarters") or {}).get("value"),
+            "overall_profile_quality": (org.get("research_status") or {}).get("overall_profile_quality"),
+        })
+    orgs.sort(key=lambda o: o["total_identified_units"], reverse=True)
+    return orgs
+
+
+def find_organizations_by_brand(brand_name: str) -> list[dict]:
+    """Every organization with a brand_relationships entry matching
+    brand_name (case-insensitive exact match against the brand's name as
+    recorded), each with that specific relationship. Sorted by that
+    relationship's unit count descending. Empty list (not an error) when
+    the brand is tracked but no franchisee relationship is on file yet."""
+    needle = brand_name.strip().casefold()
+    reg = load_registry()
+    matches = []
+    for row in reg.get("registry", []):
+        slug = row.get("org_slug") or ""
+        try:
+            org = load_organization(slug)["organization"]
+        except FileNotFoundError:
+            continue
+        for rel in org.get("brand_relationships") or []:
+            if (rel.get("brand_name") or "").strip().casefold() == needle:
+                matches.append({
+                    "org_slug": slug,
+                    "display_name": org.get("display_name"),
+                    "brand_relationship": rel,
+                })
+                break
+    matches.sort(key=lambda m: (m["brand_relationship"]["unit_count"]["value"] or -1), reverse=True)
+    return matches
+
+
 def registry_path() -> Path:
     return ROOT / "_portfolio" / "franchisee_registry.json"
 
