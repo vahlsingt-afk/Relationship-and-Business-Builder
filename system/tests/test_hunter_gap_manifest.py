@@ -210,6 +210,13 @@ def test_prepare_cycle_combines_plan_manifest_and_context(monkeypatch):
     )
     assert directive["packet_requirements"]["known_gap_ids"] == ["gap:company:brand-example:leadership"]
     assert directive["packet_requirements"]["target_keys"] == ["company:brand-example"]
+    assert directive["packet_requirements"]["response_contract"] == {
+        "content": "one_inline_json_object",
+        "transport": "utf8_text",
+        "accepted_artifact_extensions": [".txt", ".md", ".json"],
+        "downloadable_attachment_required": False,
+        "canonical_format_after_validation": "json",
+    }
     assert directive["prior_context"] == {"keys": ["company:brand-example"]}
     assert directive["resource_plan"]["status"] == "authorized"
     assert directive["resource_plan"]["preferred_execution_tier"] == "chatgpt_deep_research_economy"

@@ -47,6 +47,16 @@ _FIELD_QUESTIONS = {
     "geographic_footprint": "Which states/regions does this organization actually operate in?",
     "unit_count_verification": "What current, dated, sourced unit count exists for this organization's brand relationships, beyond a single revenue-ranked publication's figure?",
     "fdd_governance_economics": "What does this brand's current (and, where available, prior-year) FDD disclose about required/approved technology systems, franchisor change authority, and technology-related fees?",
+    "features": "What specific, granular product features and capabilities does the company publicly claim, at what currentness, and which are independently confirmed rather than vendor-stated?",
+    "customer_feedback_testimonials": "What verified customer feedback, reviews, case studies, or testimonials exist for this company's product, and from which independent (non-vendor-controlled) source?",
+    "value_statement": "What is the vendor's own current public value proposition or pitch, stated in its own words and dated, separate from RBB's independent positioning assessment?",
+    "known_franchisees": "Which franchisee/operator organizations are publicly documented as operating this brand, per FDD Item 20, franchisor/franchisee disclosures, and credible franchise trade reporting -- with each organization's own name, approximate unit count for THIS brand specifically (not the brand's system-wide total), and source?",
+    "franchisee_headquarters": "Where is this franchisee organization headquartered (operating HQ, not necessarily its registered/legal address), per a current, dated public source?",
+    "franchisee_ownership": "Is this franchisee organization publicly held, privately held, PE-backed, or otherwise -- and who owns or controls it, per public filings or credible reporting?",
+    "franchisee_legal_entities": "What legal entities (LLCs, corporations, subsidiaries) are publicly associated with this franchisee organization, per state corporate/business records or FDD disclosures?",
+    "operating_geography": "In which states or regions does this franchisee organization publicly operate restaurants?",
+    "sales_estimate": "What credible public revenue or sales estimate exists for this franchisee organization, and on what basis (reported vs. estimated)?",
+    "total_identified_units": "What is the current, dated, publicly supported total restaurant unit count for this franchisee organization across all its brands?",
 }
 
 
@@ -55,9 +65,19 @@ def _slug(value: str) -> str:
 
 
 def _importance(field: str) -> str:
-    if field in {"technology_stack", "key_customers", "reference_customer", "franchise_disclosure", "unit_count_verification", "fdd_governance_economics"}:
+    if field in {
+        "technology_stack", "key_customers", "reference_customer", "franchise_disclosure",
+        "unit_count_verification", "fdd_governance_economics",
+        "features", "customer_feedback_testimonials", "value_statement",
+        "known_franchisees", "total_identified_units",
+    }:
         return "high"
-    if field in {"leadership", "scale", "products", "strengths", "positioning", "recent_news", "headquarters", "ownership", "legal_entities"}:
+    if field in {
+        "leadership", "scale", "products", "strengths", "positioning", "recent_news",
+        "headquarters", "ownership", "legal_entities",
+        "operating_geography", "sales_estimate",
+        "franchisee_headquarters", "franchisee_ownership", "franchisee_legal_entities",
+    }:
         return "medium"
     return "low"
 
@@ -190,6 +210,40 @@ def normalize_competitor_snapshots(research_snapshot: dict, vendor_snapshot: dic
         if target.get("coverage") == "cycle_covered":
             target["coverage"] = row.get("coverage") or target["coverage"]
     return list(combined.values())
+
+
+def normalize_franchisee_snapshot(snapshot: dict) -> list[dict]:
+    """Two real target kinds from export_franchisee_research_gaps.py:
+    discovery (a brand with no franchisee on record yet -- entity_type
+    restaurant_brand, so it shares Hunter's normal brand target_type) and
+    profile (a known franchisee organization with missing core fields --
+    entity_type franchisee_organization, its own new Hunter target type)."""
+    out = []
+    for row in snapshot.get("discovery_gaps") or []:
+        target_key = row["target_key"]
+        out.append({
+            "target_key": target_key,
+            "display_name": row["brand_name"],
+            "entity_type": "restaurant_brand",
+            "priority": "enterprise_primary" if (row.get("rank") or 9999) <= 200 else "secondary",
+            "coverage": "no_franchisee_on_record",
+            "current_state": {"brand_entity_id": row["brand_entity_id"], "rank": row.get("rank")},
+            "gaps": [_gap(target_key, "known_franchisees", "missing", FRANCHISEE_SOURCE)],
+            "discovery_domains": ["FDD Item 20 disclosures", "franchisor/franchisee announcements", "franchise trade reporting", "state corporate records"],
+        })
+    for row in snapshot.get("profile_gaps") or []:
+        target_key = row["target_key"]
+        out.append({
+            "target_key": target_key,
+            "display_name": row["display_name"],
+            "entity_type": "franchisee_organization",
+            "priority": "explicit",
+            "coverage": row.get("confidence_tier") or "low",
+            "current_state": {"confidence_tier": row.get("confidence_tier")},
+            "gaps": [_gap(target_key, field, "missing", FRANCHISEE_SOURCE) for field in row.get("missing_fields") or []],
+            "discovery_domains": ["FDD Item 20 disclosures", "franchisor/franchisee websites", "state corporate records", "franchise trade reporting", "public executive profiles"],
+        })
+    return out
 
 
 def build_manifest(*, universe: str = "all", target_keys: list[str] | None = None, limit: int | None = None) -> dict:

@@ -12,9 +12,11 @@ SCRIPTS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS_DIR))
 import brand_profile_common as bpc  # noqa: E402
 import hunter  # noqa: E402
+import import_brand_company_profile_research as brand_importer  # noqa: E402
 import import_competitor_platform_research as competitor_importer  # noqa: E402
 import import_technology_lifecycle_research as tech_lifecycle_importer  # noqa: E402
 import import_fdd_research as fdd_importer  # noqa: E402
+import import_franchisee_research as franchisee_importer  # noqa: E402
 import mutation_policy  # noqa: E402
 
 
@@ -101,6 +103,21 @@ def dispatch(packet: dict, *, dry_run: bool = True) -> dict:
     # pattern, for the fdd_governance_economics playbook's payload.
     if packet.get("payload_schema") == "rb.fdd_governance_economics_research.v1":
         imported = fdd_importer.import_findings(packet, packet_id=packet["packet_id"], dry_run=dry_run)
+        summary["payload_import"] = imported
+        summary["canonical_applied"] += imported.get("applied", 0)
+
+    if packet.get("payload_schema") == "rb.brand_company_profile.v1":
+        imported = brand_importer.import_records(packet, dry_run=dry_run)
+        summary["payload_import"] = imported
+        summary["canonical_applied"] += imported.get("applied", 0)
+
+    if packet.get("payload_schema") == "rb.franchisee_organization_profile.v1":
+        imported = franchisee_importer.import_profile_findings(packet, dry_run=dry_run)
+        summary["payload_import"] = imported
+        summary["canonical_applied"] += imported.get("applied", 0)
+
+    if packet.get("payload_schema") == "rb.franchisee_discovery.v1":
+        imported = franchisee_importer.import_discovery_findings(packet, dry_run=dry_run)
         summary["payload_import"] = imported
         summary["canonical_applied"] += imported.get("applied", 0)
 

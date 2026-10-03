@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import copy
+import json
 import sys
 from pathlib import Path
 
@@ -72,3 +73,23 @@ def test_cycle_finalize_defaults_to_dry_run():
 def test_theme_playbook_is_registered():
     result = hunter.plan("restaurant_ai_pilots")
     assert result["payload_schema"] == "rb.hunter_industry_theme.v1"
+
+
+def test_gatherer_escalation_becomes_hunter_job(monkeypatch, tmp_path):
+    queue = tmp_path / "queue.jsonl"
+    queue.write_text(json.dumps({
+        "status": "ready_for_hunter_preparation",
+        "change_id": "gchg-one",
+        "verification_questions": ["Verify it"],
+        "hunter_job": {
+            "playbook": "change_monitor", "depth": "monitor",
+            "target_keys": ["company:brand-a"], "objective": "Verify change",
+            "known_source_urls": ["https://example.com/a"], "prior_state_hint": {"state": "new_to_rbb_candidate"},
+        },
+    }) + "\n")
+    monkeypatch.setattr(hunter_cycle, "prepare", lambda *args, **kwargs: {
+        "directive": {"packet_requirements": {"target_keys": ["company:brand-a"]}}
+    })
+    job = hunter_cycle.prepare_gatherer_escalation(queue_path=queue)
+    assert job["directive"]["gatherer_context"]["change_id"] == "gchg-one"
+    assert job["gatherer_escalation"]["hunter_job"]["playbook"] == "change_monitor"
