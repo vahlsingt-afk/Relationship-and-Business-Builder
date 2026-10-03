@@ -240,6 +240,36 @@ def _redact_markdown_section(markdown: str, heading: str) -> str:
     return markdown[:idx].rstrip() + "\n" + rest[next_idx:].lstrip("\n")
 
 
+# Matches competitor_intelligence.py::render_profile()'s evidence-citation
+# bullets, "- (date) <claim> — *<source>*" -- the ONE place that function
+# renders a `source`, so this is the single reliable anchor for it.
+_SOURCE_CITATION_RE = re.compile(r"— \*([^*\n]+)\*\s*$", re.MULTILINE)
+
+
+def _redact_internal_sources(markdown: str) -> str:
+    """Real 2026-10-02 finding: render_profile() cites every evidence
+    record's raw `source` field verbatim ("Todd Vahlsing, 2026-09-12",
+    "Ryan Hildebrand and Todd Vahlsing Teams conversation, 2026-09-12",
+    "Todd-supplied PAR update summarizing..."), and the existing Todd's-
+    POV-section-only redaction (_redact_markdown_section above) never
+    touched these -- they appear under Reference customers, Strengths,
+    Weaknesses, Positioning notes, every category, not just a "POV"
+    section. A blocklist on one section was never going to catch this;
+    see that function's own docstring for the same lesson learned once
+    already for the Background Brief. An external citation (a real URL)
+    is safe and left untouched -- anything else is necessarily an
+    internal/human-supplied attribution (Todd's own assessment, a
+    colleague's name, an internal conversation) and gets a generic label
+    instead. The underlying claim text is never touched, only who/what
+    is cited as having said it."""
+    def _sub(m: re.Match) -> str:
+        source = m.group(1).strip()
+        if source.startswith("http://") or source.startswith("https://"):
+            return m.group(0)
+        return "— *Internal RBB research*"
+    return _SOURCE_CITATION_RE.sub(_sub, markdown)
+
+
 # ---------------------------------------------------------------------------
 # Search / read
 # ---------------------------------------------------------------------------
@@ -1100,6 +1130,7 @@ def get_vendor_competitor_profile(vendor_id: str, *, member_id: str) -> dict:
 
     result = compintel.generate_profile(entity["name"])
     redacted = _redact_markdown_section(result["markdown"], _COMPETITOR_POV_SECTION_HEADING)
+    redacted = _redact_internal_sources(redacted)
     return {"vendor_id": vendor_id, "competitor_slug": result["competitor_slug"], "markdown": redacted}
 
 
@@ -1361,6 +1392,7 @@ def get_competitive_brief_view(vendor_id: str, *, is_owner: bool, requested_by: 
         return {"vendor_id": vendor_id, "competitor_slug": slug, "markdown": None,
                 "version": None, "is_full_canonical": False}
     redacted = _redact_markdown_section(current["content"], _COMPETITOR_POV_SECTION_HEADING)
+    redacted = _redact_internal_sources(redacted)
     return {"vendor_id": vendor_id, "competitor_slug": slug, "markdown": redacted,
             "version": current.get("version"), "is_full_canonical": False}
 

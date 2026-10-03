@@ -74,12 +74,18 @@ class TestLatestNewsFirewall(unittest.TestCase):
         self.earnings_signals_path = tmp / "market_signals_earnings.jsonl"
         self.earnings_signals_path.write_text("", encoding="utf-8")
 
+        self.feed_signals_path = tmp / "market_signals_feed.jsonl"
+        self.feed_signals_path.write_text("", encoding="utf-8")
+
         self._signals_patch = patch.object(tmi, "MARKET_SIGNALS_PATH", self.signals_path)
         self._earnings_signals_patch = patch.object(tmi, "MARKET_SIGNALS_EARNINGS_PATH", self.earnings_signals_path)
+        self._feed_signals_patch = patch.object(tmi, "MARKET_SIGNALS_FEED_PATH", self.feed_signals_path)
         self._signals_patch.start()
         self._earnings_signals_patch.start()
+        self._feed_signals_patch.start()
         self.addCleanup(self._signals_patch.stop)
         self.addCleanup(self._earnings_signals_patch.stop)
+        self.addCleanup(self._feed_signals_patch.stop)
 
     def test_news_item_never_contains_todd_private_content(self):
         result = tmi.get_latest_news(days=30)
@@ -128,6 +134,117 @@ class TestLatestNewsFirewall(unittest.TestCase):
         result = tmi.get_latest_news(days=30)
         self.assertIn("Press Releases", result["sections"])
         self.assertEqual(len(result["sections"]["Press Releases"]), 1)
+
+
+def _fixture_feed_row(**overrides) -> dict:
+    """Real market_source_feeds.py row shape (see that module's
+    _build_row) -- used to prove its already-fetched, already-scheduled
+    trade-press content actually reaches Latest News/Top 5 Trends now."""
+    row = {
+        "title": "Toast launches AI-powered labor forecasting for multi-unit operators",
+        "url": "https://www.restaurantdive.com/news/toast-ai-labor-forecasting",
+        "source_name": "Restaurant Dive", "source_type": "vertical_trade", "source_slug": "restaurant_dive",
+        "published_at": "2026-09-25", "fetched_at": "2026-09-25T00:00:00Z",
+        "company": "Toast", "side": "vendor_supply", "category": "labor",
+        "signal_type": "product_launch",
+        "pain_point_or_priority": "AI labor forecasting reduces scheduling errors and overtime costs.",
+        "strategic_relevance": "medium", "confidence": "medium",
+        "ai_application": "labor_optimization", "deployment_stage_hint": None,
+        "feeder": "market_source_feeds",
+    }
+    row.update(overrides)
+    return row
+
+
+class TestMarketSignalsFeedWiring(unittest.TestCase):
+    """Real 2026-10-02 feedback: Latest News' "Restaurant Technology"
+    section showed nothing once stock-price noise was correctly hidden.
+    Root cause: market_source_feeds.py's real, already-scheduled
+    trade-press RSS output (market_signals_feed.jsonl) was never read by
+    this module at all. These confirm it now is."""
+
+    def setUp(self):
+        self.tmpdir = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmpdir.cleanup)
+        tmp = Path(self.tmpdir.name)
+
+        self.signals_path = tmp / "market_signals.json"
+        self.signals_path.write_text(json.dumps({"items": []}), encoding="utf-8")
+        self.earnings_signals_path = tmp / "market_signals_earnings.jsonl"
+        self.earnings_signals_path.write_text("", encoding="utf-8")
+        self.feed_signals_path = tmp / "market_signals_feed.jsonl"
+
+        for name, path in (
+            ("MARKET_SIGNALS_PATH", self.signals_path),
+            ("MARKET_SIGNALS_EARNINGS_PATH", self.earnings_signals_path),
+            ("MARKET_SIGNALS_FEED_PATH", self.feed_signals_path),
+        ):
+            p = patch.object(tmi, name, path)
+            p.start()
+            self.addCleanup(p.stop)
+
+    def _write_feed_rows(self, rows: list[dict]) -> None:
+        self.feed_signals_path.write_text(
+            "\n".join(json.dumps(r) for r in rows) + "\n", encoding="utf-8",
+        )
+
+    def test_missing_feed_file_returns_empty_not_an_error(self):
+        self.assertEqual(tmi._load_market_signals_feed_jsonl(), [])
+
+    def test_feed_row_reaches_latest_news(self):
+        self._write_feed_rows([_fixture_feed_row()])
+        result = tmi.get_latest_news(days=30)
+        self.assertEqual(len(result["items"]), 1)
+        self.assertEqual(result["items"][0]["headline"], _fixture_feed_row()["title"])
+
+    def test_feed_row_lands_in_restaurant_technology_section(self):
+        self._write_feed_rows([_fixture_feed_row(side="vendor_supply")])
+        result = tmi.get_latest_news(days=30)
+        self.assertEqual(len(result["sections"].get("Restaurant Technology", [])), 1)
+
+    def test_unit_growth_category_normalized_to_operator_expansion(self):
+        self._write_feed_rows([_fixture_feed_row(category="unit_growth")])
+        items = tmi._load_market_signals_feed_jsonl()
+        self.assertEqual(items[0]["category"], "operator_expansion")
+
+    def test_m_and_a_category_normalized_and_routed_to_ma_section(self):
+        """Real 2026-10-02 finding: even this module's OWN "ma_pe_activity"
+        category value never matched _section_for()'s old M&A substring
+        check -- the branch was dead code for every real category this
+        taxonomy produces, not just the new feed's "m_and_a" value."""
+        self._write_feed_rows([_fixture_feed_row(
+            category="m_and_a", signal_type="merger_acquisition",
+            title="Vendor X acquires Vendor Y",
+        )])
+        items = tmi._load_market_signals_feed_jsonl()
+        self.assertEqual(items[0]["category"], "ma_pe_activity")
+        result = tmi.get_latest_news(days=30)
+        self.assertEqual(len(result["sections"].get("M&A and Funding", [])), 1)
+
+    def test_price_move_noise_from_feed_hideable_like_earnings_feed(self):
+        """market_source_feeds.py rows carry signal_type too -- is_noise_item
+        must treat a noise-classified feed row identically to one from the
+        earnings-monitor feed."""
+        self._write_feed_rows([_fixture_feed_row(
+            signal_type="price_move", title="[PRICE MOVE] Toast (TOST) ↓3.1%",
+        )])
+        result = tmi.get_latest_news(days=30, hide_noise=True)
+        self.assertEqual(result["items"], [])
+
+    def test_feed_row_never_fabricates_why_it_matters(self):
+        """market_source_feeds.py doesn't generate restaurant_tech_vendor_
+        implication -- must stay null, never silently defaulted to
+        something invented."""
+        self._write_feed_rows([_fixture_feed_row()])
+        result = tmi.get_latest_news(days=30)
+        self.assertIsNone(result["items"][0]["why_it_matters_to_gp"])
+
+    def test_malformed_feed_line_skipped_without_blocking_rest(self):
+        self.feed_signals_path.write_text(
+            "not valid json\n" + json.dumps(_fixture_feed_row()) + "\n", encoding="utf-8",
+        )
+        items = tmi._load_market_signals_feed_jsonl()
+        self.assertEqual(len(items), 1)
 
 
 class TestEarningsCenter(unittest.TestCase):

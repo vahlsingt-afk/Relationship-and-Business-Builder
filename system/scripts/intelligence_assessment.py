@@ -804,6 +804,34 @@ def run_assessment(*, today: date | None = None) -> dict:
                       "changes": [], "hunter_escalations": []}
         errors.append(f"gatherer: {exc}")
 
+    # History/escalation persistence is separate from packet construction above:
+    # a durable-store write failure must never discard an otherwise-good packet,
+    # and the cache-only packet must still be usable even if this fails.
+    new_hunter_escalations: list[dict] = []
+    try:
+        import gatherer
+        gatherer.write_history(p_gatherer)
+        new_hunter_escalations = gatherer.append_hunter_escalations(p_gatherer)
+    except Exception as exc:  # noqa: BLE001
+        errors.append(f"gatherer_persist: {exc}")
+
+    # primary_daily_intelligence summarizes Gatherer's run for quick status checks.
+    # It is purely additive: phase_1_web (world/national, industry, and technology
+    # headlines) and phase_2_gatherer below are both still written in full, so
+    # nothing that already consumed them loses coverage.
+    primary_daily_intelligence = {
+        "engine": "gatherer",
+        "status": p_gatherer.get("status", "unknown"),
+        "packet_id": p_gatherer.get("packet_id"),
+        "counts": {
+            "changes": len(p_gatherer.get("changes") or []),
+            "hunter_escalations": len(p_gatherer.get("hunter_escalations") or []),
+            "new_hunter_escalations": len(new_hunter_escalations),
+        },
+        "coverage": p_gatherer.get("coverage") or {},
+        "source_health": p_gatherer.get("source_health") or {},
+    }
+
     try:
         p2 = phase2_email_classification()
     except Exception as exc:  # noqa: BLE001
@@ -835,6 +863,7 @@ def run_assessment(*, today: date | None = None) -> dict:
         "generated_at": _now_iso(),
         "contract": CONTRACT,
         "trust_stats": trust_stats,
+        "primary_daily_intelligence": primary_daily_intelligence,
         "phase_1_web": p1,
         "phase_2_gatherer": p_gatherer,
         "phase_2_email": p2,

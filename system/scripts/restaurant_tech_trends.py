@@ -147,7 +147,11 @@ def _confidence_for(recent_count: int) -> str:
 
 
 def compute_top_trends(*, window_days: int = _DEFAULT_WINDOW_DAYS, top_n: int = _DEFAULT_TOP_N) -> dict:
-    all_items = tmi._load_market_signals_json() + tmi._load_market_signals_earnings_jsonl()
+    all_items = (
+        tmi._load_market_signals_json()
+        + tmi._load_market_signals_earnings_jsonl()
+        + tmi._load_market_signals_feed_jsonl()
+    )
     today = date.today()
     recent_cutoff = (today - timedelta(days=window_days)).isoformat()
     prior_cutoff = (today - timedelta(days=2 * window_days)).isoformat()
@@ -259,24 +263,28 @@ def write_trends(result: dict) -> Path:
     return OUTPUT_PATH
 
 
-def get_current_trends(*, hide_noise: bool = False) -> dict:
+def get_current_trends() -> dict:
     """What the Team Portal reads -- the persisted snapshot from the most
     recent weekly run, not a live recomputation on every page load.
 
-    hide_noise strips bare price-move/volume-spike/52-week AND bare
-    SEC-filing-title evidence citations from each trend's evidence list
-    (tmi.is_noise_item -- same definition Latest News uses) without
-    touching recent_count/prior_count/direction/confidence -- those stay
-    computed from all evidence, consistent with the "blend all evidence"
-    methodology above; only the citations shown to a teammate change."""
+    Bare price-move/volume-spike/52-week AND bare SEC-filing-title
+    evidence citations (tmi.is_noise_item -- same definition Latest News
+    uses) are always stripped from each trend's evidence list -- real
+    2026-10-02 feedback: showing this as a toggle ("hide stock price/
+    volume noise") implied raw price moves were ever legitimate evidence
+    for a *named technology trend*, which they aren't; a "Top 5
+    Restaurant Technology Trends" citation should never be a bare price
+    move regardless of a checkbox's state. recent_count/prior_count/
+    direction/confidence are untouched -- those stay computed from all
+    evidence, consistent with the "blend all evidence" methodology above;
+    only the citations shown to a teammate are filtered."""
     if not OUTPUT_PATH.exists():
         return {"generated_at": None, "window_days": _DEFAULT_WINDOW_DAYS, "trends": []}
     data = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
-    if hide_noise:
-        for trend in data.get("trends", []):
-            trend["evidence"] = [
-                e for e in trend.get("evidence", []) if not tmi.is_noise_item(e)
-            ]
+    for trend in data.get("trends", []):
+        trend["evidence"] = [
+            e for e in trend.get("evidence", []) if not tmi.is_noise_item(e)
+        ]
     return data
 
 

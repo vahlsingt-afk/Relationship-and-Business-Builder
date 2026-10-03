@@ -38,9 +38,10 @@
         "category": "back_office"
       },
       {
-        "point": "Genius already owns its own payment processing, so it can offer one combined bill for software and payments. PAR does not process payments itself yet, so it has to team up with other companies to offer that.",
-        "evidence_id": "doc-2026-08-28-par-genius-oracle-competitive-positioning-recovered",
-        "added_at": "2026-08-28T17:44:31Z"
+        "point": "PAR does have its own payments and gateway (PAR Pay/PAR Payments), built on Vantiv's rails -- but it was bolted on after the fact, not built payments-first. Genius is payments-native from the ground up, so it still offers a more unified combined software-and-payments story than PAR's layered-on approach.",
+        "evidence_id": "note-0064",
+        "added_at": "2026-08-28T17:44:31Z",
+        "corrected_at": "2026-10-02T18:24:02Z"
       },
       {
         "point": "PAR lost $16.9 million in the second quarter of 2026, using standard accounting rules. The company is not yet profitable.",
@@ -106,10 +107,10 @@
       }
     ]
   },
-  "last_evidence_date": "2026-09-29",
-  "last_synced_at": "2026-10-02T09:46:54Z",
+  "last_evidence_date": "2026-10-02",
+  "last_synced_at": "2026-10-02T18:24:05Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:46:54Z",
+  "updated_at": "2026-10-02T18:24:05Z",
   "category_battle_cards": {
     "pos": {
       "status": "source_backed",

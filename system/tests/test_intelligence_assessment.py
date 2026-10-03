@@ -33,6 +33,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "system" / "scripts"))
 
 import intelligence_assessment as ia
+import gatherer
 from intelligence_db import IntelligenceDB
 
 
@@ -587,11 +588,22 @@ class TestINTA5_Integration(unittest.TestCase):
         # added. Isolate the same way TestINTA3d_WatchlistAutoApply does.
         self._orig_eco_path = ia.core.ECOSYSTEM_INTELLIGENCE_PATH
         ia.core.ECOSYSTEM_INTELLIGENCE_PATH = self.tmp_dir / "ecosystem_intelligence.json"
+        # run_assessment now also calls gatherer.write_history/append_hunter_escalations
+        # against these module-level paths (both tracked files under system/research/,
+        # unlike the gitignored gatherer.CACHE_PATH) -- isolate them the same way, or
+        # running this suite would write real rows into the production history/
+        # escalations logs.
+        self._orig_gatherer_history = gatherer.HISTORY_PATH
+        self._orig_gatherer_escalations = gatherer.ESCALATIONS_PATH
+        gatherer.HISTORY_PATH = self.tmp_dir / "gatherer_history.jsonl"
+        gatherer.ESCALATIONS_PATH = self.tmp_dir / "gatherer_hunter_escalations.jsonl"
 
     def tearDown(self):
         ia.CACHE_PATH = self._orig_cache
         ia.PASSIVE_EMAIL_CACHE = self._orig_pei
         ia.core.ECOSYSTEM_INTELLIGENCE_PATH = self._orig_eco_path
+        gatherer.HISTORY_PATH = self._orig_gatherer_history
+        gatherer.ESCALATIONS_PATH = self._orig_gatherer_escalations
 
     def test_INTA5a_run_assessment_writes_valid_cache(self):
         """run_assessment writes a valid intelligence_assessment.json with all required keys."""

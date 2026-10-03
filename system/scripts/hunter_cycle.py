@@ -30,6 +30,19 @@ def prepare(playbook: str, **kwargs) -> dict:
     }
 
 
+def prepare_gatherer(playbook: str, **kwargs) -> dict:
+    """Same job shape as prepare(), sourced from Gatherer's escalations rather
+    than a hunter_gap_manifest universe -- see hunter.prepare_gatherer_cycle()."""
+    directive = hunter.prepare_gatherer_cycle(playbook, **kwargs)
+    snapshot = hunter_snapshot.from_directive(directive)
+    return {
+        "schema": "rb.hunter_cycle_job.v1",
+        "execution_boundary": "Submit directive to ChatGPT Deep Research; return JSON packet for finalization.",
+        "directive": directive,
+        "before_snapshot": snapshot,
+    }
+
+
 def finalize(job: dict, packet: dict, *, confirm: bool = False) -> dict:
     validation = hunter.validate_packet(packet)
     comparison = hunter_snapshot.compare(job.get("before_snapshot") or {}, packet)
@@ -58,6 +71,12 @@ def main() -> int:
     prep.add_argument("--target", action="append", dest="target_keys")
     prep.add_argument("--limit", type=int)
     prep.add_argument("--output", required=True)
+    prep_g = sub.add_parser("prepare-gatherer")
+    prep_g.add_argument("playbook")
+    prep_g.add_argument("--depth")
+    prep_g.add_argument("--packet", type=Path, help="Gatherer packet to read; defaults to gatherer.CACHE_PATH")
+    prep_g.add_argument("--limit", type=int)
+    prep_g.add_argument("--output", required=True)
     fin = sub.add_parser("finalize")
     fin.add_argument("job")
     fin.add_argument("packet")
@@ -67,6 +86,10 @@ def main() -> int:
     if args.command == "prepare":
         result = prepare(args.playbook, depth=args.depth, universe=args.universe,
                          target_keys=args.target_keys, limit=args.limit)
+        Path(args.output).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    elif args.command == "prepare-gatherer":
+        packet = json.loads(args.packet.read_text(encoding="utf-8")) if args.packet else None
+        result = prepare_gatherer(args.playbook, depth=args.depth, packet=packet, limit=args.limit)
         Path(args.output).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     else:
         job = json.loads(Path(args.job).read_text(encoding="utf-8"))

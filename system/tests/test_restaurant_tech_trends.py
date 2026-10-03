@@ -145,6 +145,30 @@ class TestComputeTopTrends(unittest.TestCase):
                 result = rtt.get_current_trends()
         self.assertEqual(result["trends"], [])
 
+    def test_get_current_trends_always_strips_noise_evidence(self):
+        """Real 2026-10-02 feedback: showing raw price-move/volume-spike/
+        52-week evidence as citations for a named technology trend was
+        wrong regardless of any UI toggle -- get_current_trends() must
+        never pass noise evidence through, with no argument needed."""
+        noise = _item(
+            category="pos", published_at="2026-09-27", title="[\U0001F4C8 PRICE MOVE] Fixture Co. ↓3.4%",
+            signal_type="price_move",
+        )
+        real = _item(
+            category="pos", published_at="2026-09-20", title="Fixture Co. launches new POS terminal",
+            signal_type="vendor_expansion",
+        )
+        self._write_items([noise, real])
+        with tempfile.TemporaryDirectory() as out_tmp:
+            out_path = Path(out_tmp) / "restaurant_tech_trends.json"
+            with patch.object(rtt, "OUTPUT_PATH", out_path):
+                computed = rtt.compute_top_trends(window_days=30, top_n=5)
+                rtt.write_trends(computed)
+                read_back = rtt.get_current_trends()
+        headlines = [e["headline"] for e in read_back["trends"][0]["evidence"]]
+        self.assertIn("Fixture Co. launches new POS terminal", headlines)
+        self.assertNotIn("[\U0001F4C8 PRICE MOVE] Fixture Co. ↓3.4%", headlines)
+
 
 if __name__ == "__main__":
     unittest.main()
