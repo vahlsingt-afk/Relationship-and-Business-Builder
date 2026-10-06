@@ -769,6 +769,29 @@ def run_pipeline(
                 "--ingest-new",
                 "--confirm",
             ], required=False),
+            # Import ChatGPT's completed Hunter packet from the private,
+            # Drive-Desktop-synced RBB Hunter Cycle Inbox. The importer is
+            # idempotent, ignores outgoing assignment files, and leaves
+            # invalid/unmatched files in Drive for review. This must run
+            # immediately before the governed local sweep.
+            _step("hunter_drive_inbox_sync", [
+                py,
+                str(SCRIPTS_DIR / "hunter_drive_inbox_sync.py"),
+            ], required=False),
+            # Dry-run validation and governed-dispatch preview only; never
+            # canonical writes from the morning pipeline.
+            _step("hunter_packet_sweep", [
+                py,
+                str(SCRIPTS_DIR / "hunter_cycle.py"),
+                "sweep",
+            ], required=False),
+            # Persist a per-batch status/quality report after every morning
+            # inbox sync and sweep. Best-effort so reporting never blocks the brief.
+            _step("hunter_batch_report", [
+                py,
+                str(SCRIPTS_DIR / "hunter_batch.py"),
+                "report",
+            ], required=False),
             # LinkedIn exports are ingested after refresh_all writes source
             # health. Recompute health from the now-current normalized files
             # so a successfully processed export is not reported as stale in
@@ -1104,6 +1127,18 @@ def run_pipeline(
             # searches. Read-only with respect to canonical intelligence.
             _step("intelligence_coverage_matrix", [
                 py, str(SCRIPTS_DIR / "intelligence_coverage_matrix.py"), *date_args,
+            ], required=False),
+            # 2026-10-02: the judgment/execution split Todd asked for --
+            # RBB decides which companies matter most (reusing the same
+            # baseline_research_gate._strategic_value signal
+            # intelligence_coverage_matrix.py's own pursuit/radar lanes use,
+            # but over the full brand+competitor gap universe, not just
+            # already-watched entities) and leaves that stack-ranked order
+            # in system/.cache/hunter_priority_queue.json. The Hunter
+            # automations read this file for their next target instead of
+            # each re-deriving their own narrower priority ad hoc.
+            _step("hunter_research_priority_queue", [
+                py, str(SCRIPTS_DIR / "hunter_research_priority_queue.py"),
             ], required=False),
             # Convert verified vulnerability signals plus incumbent exposure
             # into review-first buying-window hypotheses and retain outcome
