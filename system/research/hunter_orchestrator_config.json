@@ -6,15 +6,16 @@
   "engines": {
     "chatgpt_deep_research": {
       "admitted": true,
-      "enabled": true,
+      "enabled": false,
       "preference": 1,
       "capacity_model": "local_execution_ledger",
       "remaining_allowance": "unknown_unless_observed",
-      "reserve_applies": false
+      "reserve_applies": false,
+      "blocked_note": "ChatGPT Deep Research rate limit reached (2026-10-06). Re-enable when the limit resets."
     },
     "chatgpt_work": {
       "admitted": true,
-      "enabled": false,
+      "enabled": true,
       "preference": 2,
       "capacity_model": "usage_snapshot",
       "capacity_source": "Settings > Usage (5-hour and weekly remaining %, reset times), recorded via `hunter_orchestrator.py capacity-record`",
