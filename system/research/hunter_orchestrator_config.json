@@ -80,9 +80,10 @@
     "stale_behavior": "normal"
   },
   "lease": {
-    "ttl_minutes": 240,
+    "not_started_ttl_minutes": 240,
+    "running_ttl_minutes": 720,
     "max_attempts": 3,
-    "capacity_blocked_counts_as_attempt": false
+    "rule": "A lease is a hold, not an attempt. An unstarted lease expires back to queued without counting. An attempt begins only at `start` (Deep Research actually kicked off) and counts when it expires or is released."
   },
   "routing": {
     "ordering": "Queue rank is authoritative. Within a rank, engines are tried in preference order and only if they pass their reserve floor.",
