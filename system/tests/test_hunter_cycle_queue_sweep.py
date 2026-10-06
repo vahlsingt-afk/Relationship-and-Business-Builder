@@ -32,10 +32,10 @@ sys.path.insert(0, str(ROOT / "system" / "scripts"))
 import hunter_cycle as hc  # noqa: E402
 
 
-def _fake_job(target_key: str) -> dict:
+def _fake_job(target_key: str, *, research_authorized: bool = True) -> dict:
     return {
         "schema": "rb.hunter_cycle_job.v1",
-        "directive": {"packet_requirements": {"target_keys": [target_key]}},
+        "directive": {"packet_requirements": {"target_keys": [target_key], "research_authorized": research_authorized}},
         "before_snapshot": {},
     }
 
@@ -294,7 +294,7 @@ class TestPendingJobCeiling(_IsolatedQueueMixin):
         self._queue("competitor:one")
         with patch.object(hc, "prepare", return_value={
             "schema": "rb.hunter_cycle_job.v1",
-            "directive": {"packet_requirements": {"target_keys": ["franchisee:one", "franchisee:two"]}},
+            "directive": {"packet_requirements": {"target_keys": ["franchisee:one", "franchisee:two"], "research_authorized": True}},
             "before_snapshot": {},
         }):
             result = hc.queue_prepare("franchisee_organization_profile", universe="franchisees",
@@ -342,6 +342,34 @@ class TestQuarantineStaleJobs(_IsolatedQueueMixin):
         with patch.object(hc, "prepare", return_value=_fake_job("company:brand-new")):
             queued = hc.queue_prepare("enterprise_account_profile", universe="brands", target_keys=["company:brand-new"])
         self.assertEqual(len(queued["queued_paths"]), 1)
+
+
+class TestTransportGate(_IsolatedQueueMixin):
+    """2026-10-06: queue_prepare refuses to persist any job unless Deep
+    Research transport is confirmed available (research_authorized), so
+    the hourly automation can't pile up assignments it can't execute."""
+
+    def test_unauthorized_prepare_queues_nothing(self):
+        with patch.object(hc, "prepare", return_value=_fake_job("company:brand-one", research_authorized=False)):
+            result = hc.queue_prepare("enterprise_account_profile", universe="brands", target_keys=["company:brand-one"])
+        self.assertTrue(result["transport_blocked"])
+        self.assertEqual(result["queued_paths"], [])
+        self.assertFalse((hc.PENDING_JOBS_DIR / "company-brand-one.json").exists())
+
+
+class TestBundleCountsTowardCeiling(_IsolatedQueueMixin):
+    """2026-10-06: a single pending file holding several subjobs must count
+    per target, or a multi-target bundle silently bypasses the ceiling."""
+
+    def test_three_target_bundle_fills_the_ceiling(self):
+        hc.PENDING_JOBS_DIR.mkdir(parents=True, exist_ok=True)
+        bundle = {"schema": "rb.hunter_priority_assignment.v1", "target_keys": ["company:a", "company:b", "company:c"],
+                  "subjobs": [{"target_key": k, "job": {}} for k in ["company:a", "company:b", "company:c"]]}
+        (hc.PENDING_JOBS_DIR / "bundle.json").write_text(json.dumps(bundle), encoding="utf-8")
+        with patch.object(hc, "prepare", return_value=_fake_job("competitor:one")):
+            result = hc.queue_prepare("competitive_positioning", universe="competitors", target_keys=["competitor:one"])
+        self.assertEqual(result["queued_paths"], [])
+        self.assertTrue(result["ceiling_reached"])
 
 
 if __name__ == "__main__":

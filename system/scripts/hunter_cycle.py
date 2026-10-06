@@ -12,7 +12,7 @@ import json
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
@@ -24,20 +24,10 @@ import hunter_snapshot  # noqa: E402
 GATHERER_QUEUE_PATH = SCRIPTS_DIR.parent / ".cache" / "gatherer_hunter_escalations.jsonl"
 import hunter_packet_normalize  # noqa: E402
 
-# 2026-10-02: Computer Use's browser-safety guardrail categorically
-# refuses to carry a locally-prepared directive's content into a ChatGPT
-# web session -- both a direct file-attach and a pasted-text fallback
-# were rejected on a real run (RB Hunter 90+ Unit Gap Cycle, 2026-10-02
-# ~14:50 Central). That refusal is correct (reading a local file and
-# injecting its content into a remote page is exactly the shape of
-# exfiltration a safety classifier should block) and is not something to
-# route around. The real fix: automations stop trying to submit the
-# directive themselves. `queue_prepare()` persists a prepared job
-# durably (not /tmp, which an hourly cron would silently lose between
-# runs) so a human can submit it manually; `sweep()` later matches a
-# manually-returned packet (dropped in PACKETS_INBOX_DIR) back to its
-# queued job and finalizes it the same way a single prepare/finalize
-# pair always did.
+# Deep Research is the only research engine for Hunter. Browser safety must
+# not be bypassed to inject local job contents into a remote page. Codex owns
+# deterministic preparation, validation, and intake; `sweep()` consumes only
+# a packet returned through a supported safe transport.
 PENDING_JOBS_DIR = SCRIPTS_DIR.parent / ".cache" / "hunter_pending_jobs"
 PACKETS_INBOX_DIR = SCRIPTS_DIR.parent / "inbox" / "hunter_packets"
 PROCESSED_JOBS_DIR = PENDING_JOBS_DIR / "processed"
@@ -70,6 +60,8 @@ PENDING_JOB_CEILING_PER_FAMILY = 1
 # PACKETS_INBOX_DIR sweep already followed.
 LEGACY_PACKETS_INBOX_DIR = SCRIPTS_DIR.parent / "inbox" / "chatgpt_intelligence_drop"
 LEGACY_PROCESSED_PACKETS_DIR = LEGACY_PACKETS_INBOX_DIR / "processed"
+QUEUE_PATH = SCRIPTS_DIR.parent / ".cache" / "hunter_priority_queue.json"
+BUNDLE_SCHEMA = "rb.hunter_research_bundle_response.v1"
 
 
 def _target_slug(target_key: str) -> str:
@@ -95,6 +87,172 @@ def _pending_job_files() -> list[Path]:
     return [p for p in PENDING_JOBS_DIR.iterdir() if p.is_file() and p.suffix == ".json"]
 
 
+def _read_queue() -> dict:
+    try:
+        return json.loads(QUEUE_PATH.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def _queue_completed_targets(queue: dict) -> set[str]:
+    """Targets completed through a valid DR packet after this queue snapshot."""
+    generated = queue.get("generated_at")
+    if not generated or not PROCESSED_PACKETS_DIR.is_dir():
+        return set()
+    completed = set()
+    for path in PROCESSED_PACKETS_DIR.iterdir():
+        if not path.is_file() or path.suffix.lower() not in {".json", ".md", ".txt"}:
+            continue
+        receipt_path = path.with_name(path.name + ".receipt.json")
+        try:
+            packet = load_packet_artifact(path)
+            receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if packet.get("schema") == BUNDLE_SCHEMA and receipt.get("ok"):
+            successful_children = {row.get("target_key") for row in receipt.get("child_receipts") or [] if (row.get("receipt") or {}).get("ok")}
+            for child in packet.get("packets") or []:
+                child_targets = {t.get("target_key") for t in child.get("targets") or [] if isinstance(t, dict) and t.get("target_key")}
+                tier = (child.get("resource_usage") or {}).get("selected_execution_tier")
+                when = child.get("completed_at") or ""
+                if child_targets & successful_children and tier in {"chatgpt_deep_research_economy", "deep_public_source_research"} and when >= generated:
+                    completed.update(child_targets)
+        else:
+            tier = (packet.get("resource_usage") or {}).get("selected_execution_tier")
+            when = packet.get("completed_at") or ""
+            if receipt.get("ok") and tier in {"chatgpt_deep_research_economy", "deep_public_source_research"} and when >= generated:
+                completed.update(t.get("target_key") for t in packet.get("targets") or [] if isinstance(t, dict) and t.get("target_key"))
+    return completed
+
+
+def _pending_target_keys() -> set[str]:
+    keys = set()
+    for path in _pending_job_files():
+        try:
+            job = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        keys.update((job.get("directive", {}).get("packet_requirements", {}) or {}).get("target_keys") or [])
+        for subjob in job.get("subjobs") or []:
+            if subjob.get("target_key"):
+                keys.add(subjob["target_key"])
+    return keys
+
+
+def prepare_priority_bundle(*, queue: dict | None = None, transport_available: bool = False) -> dict:
+    """Prepare the first eligible CoS row, pairing a brand with its discovery row."""
+    queue = queue or _read_queue()
+    rows = queue.get("queue") or []
+    if not rows:
+        raise ValueError("CoS Hunter priority queue is missing or empty; regenerate it through the RBB pipeline")
+    generated = queue.get("generated_at")
+    try:
+        generated_dt = datetime.fromisoformat(str(generated).replace("Z", "+00:00"))
+    except ValueError as error:
+        raise ValueError("CoS Hunter priority queue has no valid generated_at timestamp") from error
+    if generated_dt.tzinfo is None:
+        generated_dt = generated_dt.replace(tzinfo=timezone.utc)
+    if datetime.now(timezone.utc) - generated_dt > timedelta(hours=48):
+        raise ValueError("CoS Hunter priority queue is older than 48 hours; regenerate it through the RBB pipeline")
+    pending = _pending_target_keys()
+    completed = _queue_completed_targets(queue)
+    consumed: set[str] = set()
+    brand_by_slug = {}
+    discovery_by_slug = {}
+    for row in rows:
+        key = row.get("target_key", "")
+        if key.startswith("company:"):
+            brand_by_slug[key.split(":", 1)[1]] = row
+        elif key.startswith("franchise-discovery:"):
+            discovery_by_slug[key.split(":", 1)[1]] = row
+
+    selected = None
+    companion = None
+    for row in rows:
+        key = row.get("target_key")
+        if not key or key in consumed:
+            continue
+        if key in pending or key in completed:
+            consumed.add(key)
+            continue
+        if key.startswith("company:"):
+            slug = key.split(":", 1)[1]
+            possible = discovery_by_slug.get(slug)
+            selected = row
+            if possible and possible.get("target_key") not in pending | completed:
+                companion = possible
+            break
+        elif key.startswith("franchise-discovery:"):
+            slug = key.split(":", 1)[1]
+            possible = brand_by_slug.get(slug)
+            selected = row
+            if possible and possible.get("target_key") not in pending | completed:
+                companion = possible
+            break
+        else:
+            selected = row
+            break
+    if not selected:
+        return {"schema": "rb.hunter_priority_assignment.v1", "status": "no_eligible_target", "queue_generated_at": queue.get("generated_at"), "pending_job_count": len(_pending_job_files()), "completed_targets": sorted(completed)}
+
+    if companion:
+        targets = [selected["target_key"], companion["target_key"]]
+        assignment_id = "priority-" + _target_slug("-".join(targets))
+        subjobs = []
+        for row in (selected, companion):
+            job = prepare(row["suggested_playbook"], universe="all", target_keys=[row["target_key"]], limit=1, deep_research_available=transport_available)
+            subjobs.append({"target_key": row["target_key"], "rank": row.get("rank"), "suggested_playbook": row.get("suggested_playbook"), "job": job})
+        return {
+            "schema": "rb.hunter_priority_assignment.v1", "status": "prepared_local_assignment",
+            "queue_generated_at": queue.get("generated_at"), "queue_ranks": [selected.get("rank"), companion.get("rank")],
+            "target_keys": targets, "display_name": selected.get("display_name"),
+            "bundle_schema": BUNDLE_SCHEMA, "assignment_id": assignment_id, "subjobs": subjobs,
+            "pending_job_count": len(_pending_job_files()),
+            "transport_required": True, "research_authorized": transport_available,
+            "submission_note": "One ChatGPT Deep Research request must research both subjobs as one brand work unit. Return one outer bundle response with one ordinary Hunter packet per subjob. No packet is active until safely returned and swept locally."
+        }
+    job = prepare(selected["suggested_playbook"], target_keys=[selected["target_key"]], limit=1, deep_research_available=transport_available)
+    return {
+        "schema": "rb.hunter_priority_assignment.v1", "status": "prepared_local_assignment",
+        "queue_generated_at": queue.get("generated_at"), "queue_ranks": [selected.get("rank")],
+        "target_keys": [selected["target_key"]], "display_name": selected.get("display_name"),
+        "bundle_schema": None, "subjobs": [{"target_key": selected["target_key"], "rank": selected.get("rank"), "suggested_playbook": selected.get("suggested_playbook"), "job": job}],
+        "pending_job_count": len(_pending_job_files()), "transport_required": True, "research_authorized": transport_available,
+        "submission_note": "Run the single suggested ChatGPT Deep Research request and return its ordinary Hunter packet through supported safe transport. No packet is active until safely returned and swept locally."
+    }
+
+
+def _write_job(job: dict, target_key: str, *, overwrite: bool = False) -> Path | None:
+    PENDING_JOBS_DIR.mkdir(parents=True, exist_ok=True)
+    path = PENDING_JOBS_DIR / f"{_target_slug(target_key)}.json"
+    if path.exists() and not overwrite:
+        return None
+    path.write_text(json.dumps(job, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return path
+
+
+def _is_bundle_response(value: dict) -> bool:
+    return value.get("schema") == BUNDLE_SCHEMA and isinstance(value.get("packets"), list)
+
+
+def _finalize_bundle(assignment: dict, response: dict, *, confirm: bool = False) -> dict:
+    packets = response.get("packets") or []
+    subjobs = assignment.get("subjobs") or []
+    by_target = {row.get("target_key"): row for row in subjobs}
+    receipts = []
+    seen_targets = set()
+    for child in packets:
+        targets = child.get("targets") or []
+        keys = [t.get("target_key") if isinstance(t, dict) else t for t in targets]
+        if len(keys) != 1 or keys[0] not in by_target or keys[0] in seen_targets:
+            return {"schema": "rb.hunter_cycle_receipt.v1", "packet_id": response.get("bundle_id"), "ok": False, "confirmed": confirm, "bundle_error": f"unexpected or duplicate child packet target(s): {keys}"}
+        seen_targets.add(keys[0])
+        receipt = finalize(by_target[keys[0]]["job"], child, confirm=confirm)
+        receipts.append({"target_key": keys[0], "receipt": receipt})
+    missing = set(by_target) - {row["target_key"] for row in receipts}
+    return {"schema": "rb.hunter_cycle_receipt.v1", "packet_id": response.get("bundle_id"), "ok": not missing and bool(receipts) and all(row["receipt"].get("ok") for row in receipts), "confirmed": confirm, "bundle": True, "missing_targets": sorted(missing), "child_receipts": receipts}
+
+
 def queue_prepare(playbook: str, **kwargs) -> dict:
     """Same as prepare(), but persists the job to PENDING_JOBS_DIR keyed
     by its first selected target, instead of (or in addition to) an
@@ -110,6 +268,18 @@ def queue_prepare(playbook: str, **kwargs) -> dict:
     rather than all-or-nothing."""
     job = prepare(playbook, **kwargs)
     selected = (job.get("directive", {}).get("packet_requirements", {}) or {}).get("target_keys") or []
+    research_authorized = (job.get("directive", {}).get("packet_requirements", {}) or {}).get("research_authorized") is True
+    if not research_authorized:
+        return {
+            "job": job,
+            "target_keys": selected,
+            "queued_paths": [],
+            "skipped_existing_targets": [],
+            "skipped_ceiling": [],
+            "ceiling_reached": False,
+            "transport_blocked": True,
+            "submission_note": "ChatGPT Deep Research transport is unavailable; no target was queued. Run sweep, report pending-job count and the concrete blocker, and stop.",
+        }
     PENDING_JOBS_DIR.mkdir(parents=True, exist_ok=True)
     queued_paths = []
     skipped_existing = []
@@ -120,13 +290,14 @@ def queue_prepare(playbook: str, **kwargs) -> dict:
             skipped_existing.append(target_key)
             continue
         pending = _pending_job_files()
+        pending_targets = len(_pending_target_keys())
         family = _target_family(target_key)
         family_count = sum(1 for p in pending if _target_family_of_file(p) == family)
-        if len(pending) >= PENDING_JOB_CEILING_TOTAL or family_count >= PENDING_JOB_CEILING_PER_FAMILY:
+        if pending_targets >= PENDING_JOB_CEILING_TOTAL or family_count >= PENDING_JOB_CEILING_PER_FAMILY:
             skipped_ceiling.append({
                 "target_key": target_key,
                 "family": family,
-                "pending_total": len(pending),
+                "pending_total": pending_targets,
                 "pending_total_ceiling": PENDING_JOB_CEILING_TOTAL,
                 "pending_family": family_count,
                 "pending_family_ceiling": PENDING_JOB_CEILING_PER_FAMILY,
@@ -141,14 +312,14 @@ def queue_prepare(playbook: str, **kwargs) -> dict:
         "skipped_existing_targets": skipped_existing,
         "skipped_ceiling": skipped_ceiling,
         "ceiling_reached": bool(skipped_ceiling),
+        "transport_blocked": False,
         "submission_note": (
-            "Browser hand-off to ChatGPT Deep Research is structurally blocked (2026-10-02) -- "
-            "a human or Codex (never ChatGPT's own file-save) must save the single returned JSON "
-            f"packet verbatim into {PACKETS_INBOX_DIR} (preferred) or {LEGACY_PACKETS_INBOX_DIR} "
-            "(also watched, since real runs keep landing there instead) for `hunter_cycle.py sweep` "
-            "to finalize. sweep() only matches a packet to a job queued before that packet's own "
-            "file timestamp -- never backdate or touch an older unrelated file's modified time to "
-            "force a match."
+            "Submit the approved research request in the Relationship & Business Builder ChatGPT project. "
+            "ChatGPT Deep Research must use the CoS-ranked queue and project files, then return its "
+            "evidence-native response through a supported safe transport. Do not transmit raw local "
+            "job contents into a browser page or bypass a safety refusal. Save the returned packet "
+            f"locally into {PACKETS_INBOX_DIR} and run `sweep()`. If safe submission or local capture "
+            "is unavailable, stop without queuing another target."
         ),
     }
 
@@ -238,9 +409,17 @@ def sweep(*, confirm: bool = False, quarantine_max_age_hours: int = 48) -> dict:
                 if extensions is None:  # the dedicated inbox: every file here is meant to be a packet
                     unmatched.append({"packet_path": str(packet_path), "error": str(error)})
                 continue  # the legacy drop: most files genuinely aren't packets -- not an error, just skip
-            targets = packet.get("targets") or []
+            is_bundle = _is_bundle_response(packet)
+            targets = packet.get("target_keys") or [] if is_bundle else packet.get("targets") or []
+            if not is_bundle:
+                targets = [t.get("target_key") if isinstance(t, dict) else t for t in targets]
             job_path = None
-            for target_key in targets:
+            if is_bundle:
+                assignment_id = packet.get("assignment_id")
+                candidate = PENDING_JOBS_DIR / f"bundle-{_target_slug(assignment_id or '')}.json"
+                if candidate.exists() and candidate.stat().st_mtime <= packet_path.stat().st_mtime:
+                    job_path = candidate
+            for target_key in targets if job_path is None else []:
                 candidate = PENDING_JOBS_DIR / f"{_target_slug(target_key)}.json"
                 # RB live incident, 2026-10-03: a years-old, wholly
                 # unrelated "candidate-validation" file sitting in the
@@ -259,10 +438,13 @@ def sweep(*, confirm: bool = False, quarantine_max_age_hours: int = 48) -> dict:
                     unmatched.append({"packet_path": str(packet_path), "targets": targets, "error": "no queued job matches these targets (or the only match is older than this file, so can't be its answer)"})
                 continue
             job = json.loads(job_path.read_text(encoding="utf-8"))
-            receipt = finalize(job, packet, confirm=confirm)
+            receipt = _finalize_bundle(job, packet, confirm=confirm) if is_bundle else finalize(job, packet, confirm=confirm)
             results.append({"packet_path": str(packet_path), "job_path": str(job_path), "receipt": receipt})
+            archived_packet = processed_dir / packet_path.name
+            archived_receipt = archived_packet.with_name(archived_packet.name + ".receipt.json")
+            archived_receipt.write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")
             job_path.rename(PROCESSED_JOBS_DIR / job_path.name)
-            packet_path.rename(processed_dir / packet_path.name)
+            packet_path.rename(archived_packet)
     return {"schema": "rb.hunter_sweep_result.v1", "confirmed": confirm, "processed": results, "unmatched": unmatched, "quarantined": quarantined}
 
 
@@ -304,9 +486,10 @@ def load_packet_artifact(path: str | Path) -> dict:
 def prepare(playbook: str, **kwargs) -> dict:
     directive = hunter.prepare_cycle(playbook, **kwargs)
     snapshot = hunter_snapshot.from_directive(directive)
+    boundary = "ChatGPT Deep Research performs all public-source research in the Relationship & Business Builder project and returns one evidence-native JSON object through supported safe local transport; Codex performs deterministic local preparation, validation, and intake only."
     return {
         "schema": "rb.hunter_cycle_job.v1",
-        "execution_boundary": "Submit directive to ChatGPT Deep Research; capture its single inline JSON object as UTF-8 text (.txt, .md, or .json) for local finalization.",
+        "execution_boundary": boundary,
         "directive": directive,
         "before_snapshot": snapshot,
     }
@@ -375,6 +558,10 @@ def main() -> int:
     prep.add_argument("--limit", type=int)
     prep.add_argument("--output")
     prep.add_argument("--queue", action="store_true", help=f"Also persist the job to {PENDING_JOBS_DIR} for manual submission + later `sweep`")
+    priority = sub.add_parser("prepare-priority", help="Prepare a local assignment from the existing CoS-ranked queue without changing its rank or score")
+    priority.add_argument("--queue", action="store_true", help="Persist the assignment only when transport availability is explicitly confirmed")
+    priority.add_argument("--transport-available", action="store_true", help="Assert that safe ChatGPT submission and local response capture are available")
+    priority.add_argument("--output")
     fin = sub.add_parser("finalize")
     fin.add_argument("job")
     fin.add_argument("packet")
@@ -391,7 +578,35 @@ def main() -> int:
                       help="Move a pending job with no returned packet older than this into "
                            f"{QUARANTINED_JOBS_DIR} before matching (default: 48)")
     args = parser.parse_args()
-    if args.command == "prepare":
+    if args.command == "prepare-priority":
+        result = prepare_priority_bundle(transport_available=args.transport_available)
+        if args.queue:
+            if not args.transport_available:
+                result["status"] = "transport_blocked"
+                result["transport_blocker"] = "No supported safe transport has been confirmed; assignment was not queued."
+            elif result.get("status") == "prepared_local_assignment":
+                if len(_pending_job_files()) >= PENDING_JOB_CEILING_TOTAL:
+                    result["status"] = "pending_ceiling_reached"
+                elif result.get("bundle_schema"):
+                    bundle_id = result.get("assignment_id") or ("priority-" + _target_slug("-".join(result.get("target_keys") or [])))
+                    result["assignment_id"] = bundle_id
+                    assignment_path = PENDING_JOBS_DIR / f"bundle-{_target_slug(bundle_id)}.json"
+                    if assignment_path.exists() or set(result.get("target_keys") or []).intersection(_pending_target_keys()):
+                        result["status"] = "already_pending"
+                    else:
+                        assignment_path.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+                        result["queued_path"] = str(assignment_path)
+                else:
+                    subjob = result["subjobs"][0]
+                    path = _write_job(subjob["job"], subjob["target_key"])
+                    result["queued_path"] = str(path) if path else None
+                    if not path:
+                        result["status"] = "already_pending"
+        if args.output:
+            Path(args.output).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+    elif args.command == "prepare":
         if not args.output and not args.queue:
             parser.error("prepare requires --output, --queue, or both")
         if args.queue:
