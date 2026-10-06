@@ -64,83 +64,28 @@ def registry() -> dict:
 def resource_plan(
     depth: str,
     *,
-    five_hour_used_pct: float | None,
-    weekly_used_pct: float | None,
-    hours_to_weekly_reset: float | None,
     deep_research_available: bool = True,
 ) -> dict:
     policy = _load_json(RESOURCE_POLICY_PATH, {})
-    gate = policy.get("codex_work_capacity_gate") or {}
-    snapshot = {
-        "captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "five_hour_used_pct": five_hour_used_pct,
-        "weekly_used_pct": weekly_used_pct,
-        "hours_to_weekly_reset": hours_to_weekly_reset,
-    }
     recommended = int((policy.get("recommended_batch_sizes") or {}).get(depth, 1))
-    codex_status = "blocked"
-    codex_reason = "live Codex/Work usage snapshot unavailable"
-    ceiling = 0.0
-    weekly_reserve = None
-    five_reserve = None
-    if not any(value is None for value in (five_hour_used_pct, weekly_used_pct, hours_to_weekly_reset)):
-        five_used = max(0.0, min(100.0, float(five_hour_used_pct)))
-        weekly_used = max(0.0, min(100.0, float(weekly_used_pct)))
-        hours = max(0.0, float(hours_to_weekly_reset))
-        if hours > 48:
-            weekly_reserve, five_reserve = 30.0, 40.0
-        elif hours > 12:
-            weekly_reserve, five_reserve = 15.0, 30.0
-        else:
-            weekly_reserve, five_reserve = 5.0, 20.0
-        five_remaining = 100.0 - five_used
-        weekly_remaining = 100.0 - weekly_used
-        over_gate = (
-            five_used > float(gate.get("block_if_five_hour_used_pct_above", 75))
-            or weekly_used > float(gate.get("block_if_weekly_used_pct_above", 75))
-        )
-        reserve_violation = five_remaining < five_reserve or weekly_remaining < weekly_reserve
-        if over_gate:
-            codex_reason = "Codex/Work five-hour or weekly usage is above the 75% gate"
-        elif reserve_violation:
-            codex_reason = "Codex/Work use would violate the time-to-reset reserve"
-        else:
-            codex_status = "authorized"
-            codex_reason = "Codex/Work usage permits bounded support if required"
-            ceiling = min(
-                five_remaining * float(gate.get("max_share_of_remaining_five_hour_capacity_pct", 50)) / 100.0,
-                five_remaining - five_reserve,
-            )
-
-    if deep_research_available:
-        return {
-            "status": "authorized",
-            "reason": "ChatGPT Deep Research is available and is not governed by Codex/Work limits",
-            "chat_research_status": "authorized",
-            "codex_work_status": codex_status,
-            "codex_work_reason": codex_reason,
-            "capacity_snapshot": snapshot,
-            "preferred_execution_tier": "chatgpt_deep_research_economy",
-            "max_targets": None,
-            "recommended_batch_targets": recommended,
-            "five_hour_capacity_ceiling_pct": round(max(0.0, ceiling), 2),
-            "weekly_reserve_pct": weekly_reserve,
-            "five_hour_reserve_pct": five_reserve,
-            "reset_credit_allowed": False,
-        }
     return {
-        "status": codex_status,
-        "reason": codex_reason,
-        "chat_research_status": "unavailable",
-        "codex_work_status": codex_status,
-        "codex_work_reason": codex_reason,
-        "capacity_snapshot": snapshot,
-        "preferred_execution_tier": "codex_standard_reasoning",
-        "max_targets": recommended if codex_status == "authorized" else 0,
+        "status": "authorized" if deep_research_available else "blocked",
+        "reason": "ChatGPT Deep Research is available" if deep_research_available else "ChatGPT Deep Research transport is unavailable",
+        "chat_research_status": "authorized" if deep_research_available else "unavailable",
+        "codex_work_status": "blocked",
+        "codex_work_reason": "Codex is not a Hunter research engine",
+        "capacity_snapshot": {
+            "captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "five_hour_used_pct": None,
+            "weekly_used_pct": None,
+            "hours_to_weekly_reset": None,
+        },
+        "preferred_execution_tier": "chatgpt_deep_research_economy",
+        "max_targets": None if deep_research_available else 0,
         "recommended_batch_targets": recommended,
-        "five_hour_capacity_ceiling_pct": round(max(0.0, ceiling), 2),
-        "weekly_reserve_pct": weekly_reserve,
-        "five_hour_reserve_pct": five_reserve,
+        "five_hour_capacity_ceiling_pct": 0.0,
+        "weekly_reserve_pct": None,
+        "five_hour_reserve_pct": None,
         "reset_credit_allowed": False,
     }
 
@@ -222,9 +167,6 @@ def prepare_cycle(
     universe: str = "all",
     target_keys: list[str] | None = None,
     limit: int | None = None,
-    five_hour_used_pct: float | None = None,
-    weekly_used_pct: float | None = None,
-    hours_to_weekly_reset: float | None = None,
     deep_research_available: bool = True,
 ) -> dict:
     """Create a research-ready cycle directive from live RBB gap state."""
@@ -233,9 +175,6 @@ def prepare_cycle(
     cycle_plan = plan(playbook, depth)
     capacity = resource_plan(
         cycle_plan["depth"],
-        five_hour_used_pct=five_hour_used_pct,
-        weekly_used_pct=weekly_used_pct,
-        hours_to_weekly_reset=hours_to_weekly_reset,
         deep_research_available=deep_research_available,
     )
     effective_limit = limit
@@ -585,16 +524,10 @@ def main() -> int:
     p_prepare.add_argument("--target", action="append", dest="targets")
     p_prepare.add_argument("--limit", type=int)
     p_prepare.add_argument("--output")
-    p_prepare.add_argument("--five-hour-used-pct", type=float)
-    p_prepare.add_argument("--weekly-used-pct", type=float)
-    p_prepare.add_argument("--hours-to-weekly-reset", type=float)
-    p_prepare.add_argument("--deep-research-unavailable", action="store_true")
+    p_prepare.add_argument("--deep-research-unavailable", action="store_true", help="Block research authorization when ChatGPT Deep Research transport is unavailable")
     p_resource = subs.add_parser("resource-plan")
     p_resource.add_argument("--depth", choices=["scan", "standard", "deep", "forensic", "monitor"], required=True)
-    p_resource.add_argument("--five-hour-used-pct", type=float)
-    p_resource.add_argument("--weekly-used-pct", type=float)
-    p_resource.add_argument("--hours-to-weekly-reset", type=float)
-    p_resource.add_argument("--deep-research-unavailable", action="store_true")
+    p_resource.add_argument("--deep-research-unavailable", action="store_true", help="Block research authorization when ChatGPT Deep Research transport is unavailable")
     p_validate = subs.add_parser("validate")
     p_validate.add_argument("packet")
     p_feedback = subs.add_parser("feedback")
@@ -617,9 +550,6 @@ def main() -> int:
                 universe=args.universe,
                 target_keys=args.targets,
                 limit=args.limit,
-                five_hour_used_pct=args.five_hour_used_pct,
-                weekly_used_pct=args.weekly_used_pct,
-                hours_to_weekly_reset=args.hours_to_weekly_reset,
                 deep_research_available=not args.deep_research_unavailable,
             )
             if args.output:
@@ -627,9 +557,6 @@ def main() -> int:
         elif args.command == "resource-plan":
             result = resource_plan(
                 args.depth,
-                five_hour_used_pct=args.five_hour_used_pct,
-                weekly_used_pct=args.weekly_used_pct,
-                hours_to_weekly_reset=args.hours_to_weekly_reset,
                 deep_research_available=not args.deep_research_unavailable,
             )
         elif args.command == "validate":

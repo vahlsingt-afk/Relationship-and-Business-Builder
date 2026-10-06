@@ -82,12 +82,16 @@ def field(
     as_of: str | None = None,
     scope: str = "brand",
     last_reviewed_by: str = "system:brand_profile_common",
+    source_url: str | None = None,
 ) -> dict:
     """status: "confirmed" | "reported" | "not_yet_researched". Matches
     customers_prospects/accounts/*/brand_profile.json's real field shape
     exactly, so a team-submitted-then-confirmed fact and a deep-research-
-    sourced one are indistinguishable in storage."""
-    return {
+    sourced one are indistinguishable in storage. source_url (2026-10-03,
+    added for import_brand_company_profile_research.py) is included only
+    when given, same optional-key convention as competitor_intelligence_
+    common.py's extended_field()."""
+    leaf = {
         "value": value,
         "status": status,
         "evidence_ids": evidence_ids or [],
@@ -96,6 +100,9 @@ def field(
         "scope": scope,
         "last_reviewed_by": last_reviewed_by,
     }
+    if source_url:
+        leaf["source_url"] = source_url
+    return leaf
 
 
 def unresearched_field(*, scope: str = "brand") -> dict:
@@ -363,6 +370,11 @@ def empty_profile(brand_id: str, brand_name: str) -> dict:
             "parent_ownership": unresearched_field(),
             "hq_city_state": unresearched_field(),
             "founded_year": unresearched_field(),
+            # 2026-10-03: the legal franchisor entity (e.g. "Gosh
+            # Enterprises, Inc." for Charleys) -- distinct from
+            # parent_ownership, which is the ownership STRUCTURE/owner,
+            # not the contracting legal entity itself.
+            "legal_entity": unresearched_field(),
         },
         "synopsis": unresearched_field(),
         "leadership": {"confirmed": [], "reported_unverified": []},
@@ -374,10 +386,65 @@ def empty_profile(brand_id: str, brand_name: str) -> dict:
         },
         "recent_signals": [],
         "pain_points": [],
+        # 2026-10-03: added to give Hunter's enterprise_account_profile
+        # playbook (required_modules: franchise_disclosure, financial_
+        # operating_health) a real home -- previously these two modules'
+        # findings had nowhere to land, so hunter_change_dispatch.py's
+        # generic mutation_proposals loop always reported them unhandled
+        # (RB live incident, 2026-10-03: Charleys' FDD/financial findings
+        # stuck in review forever). Each is a single synthesized
+        # field()-shaped leaf whose `value` is a structured dict (an FDD
+        # snapshot / a financial snapshot is one cohesive disclosure, not
+        # a list of independent string facts the way products/leadership
+        # are) -- replaced wholesale on a newer-dated update, same
+        # conflict discipline as every other scalar field in this module.
+        "franchise_disclosure": unresearched_field(),
+        "financial_operating_health": unresearched_field(),
         "template_version": "brand-profile-v1",
         "created_at": now,
         "updated_at": now,
     }
+
+
+def _backfill_missing_fields(profile: dict) -> dict:
+    """Read-time backward-compat for real, pre-existing brand_profile.json
+    files on disk that predate legal_entity/franchise_disclosure/
+    financial_operating_health -- never KeyErrors a reader, never
+    overwrites a field that already has content. Mutates and returns
+    `profile` in place (callers already treat get_profile()'s return as
+    the live object to pass to save_profile())."""
+    identity = profile.setdefault("identity", {})
+    identity.setdefault("legal_entity", unresearched_field())
+    profile.setdefault("franchise_disclosure", unresearched_field())
+    profile.setdefault("financial_operating_health", unresearched_field())
+    return profile
+
+
+def add_leadership_person(profile: dict, *, name: str, title: str, verified: bool,
+                           dedupe: bool = True, **field_kwargs) -> bool:
+    """Appends to profile["leadership"]["confirmed"] when verified (an
+    independently_verified Hunter finding, or a human submission) or
+    "reported_unverified" otherwise (vendor_stated/marketplace_reported) --
+    the same confirmed-vs-reported split get_profile()'s own schema has
+    carried since empty_profile() was first written, just never had a
+    writer. dedupe=True (default) skips a name already present in EITHER
+    bucket (a name promoted from reported_unverified to confirmed by a
+    stronger later source should move buckets explicitly, not duplicate).
+    Mutates `profile` in place; returns True if a new entry was actually
+    added, False if skipped as a duplicate -- a caller gating its own
+    "applied" count on mutation_policy's is_set_member auto-apply (always
+    true for a set addition) needs this to avoid over-counting a dedupe
+    as a real write."""
+    entry = field(f"{name} -- {title}", **field_kwargs)
+    entry["name"] = name
+    entry["title"] = title
+    leadership = profile.setdefault("leadership", {"confirmed": [], "reported_unverified": []})
+    existing_names = {p.get("name") for p in leadership.get("confirmed", []) + leadership.get("reported_unverified", [])}
+    if dedupe and name in existing_names:
+        return False
+    bucket = "confirmed" if verified else "reported_unverified"
+    leadership.setdefault(bucket, []).append(entry)
+    return True
 
 
 # ---------------------------------------------------------------------------
@@ -439,6 +506,7 @@ def get_profile(brand_id: str, *, persist: bool = False, graph: dict | None = No
     profile = load_profile(brand_id) or empty_profile(brand_id, entity.get("name") or brand_id)
     profile["trajectory"] = compute_trajectory(entity)
     _refresh_footprint(profile, entity)
+    _backfill_missing_fields(profile)
     if persist:
         save_profile(brand_id, profile)
     return profile

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Normalize evidence-native ChatGPT output into Hunter's canonical envelope.
+"""Normalize evidence-native research output into Hunter's canonical envelope.
 
 The research model owns evidence collection. This module owns deterministic
 envelope fields, stable identifiers, and harmless structural aliases. It does
@@ -12,7 +12,7 @@ import re
 from datetime import datetime, timezone
 
 
-TARGET_KEY_RE = re.compile(r"^(company|competitor|vendor|operator|genius):.+$")
+TARGET_KEY_RE = re.compile(r"^(company|competitor|vendor|operator|genius|franchisee|franchise-discovery):.+$")
 
 
 def _slug(value: object) -> str:

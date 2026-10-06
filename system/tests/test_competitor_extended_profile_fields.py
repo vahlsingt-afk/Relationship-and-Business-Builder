@@ -1,10 +1,13 @@
 """
 test_competitor_extended_profile_fields.py — Ecosystem Lookup Tool,
-Competitors tab (Phase B). Covers the 6 new fields added to
-competitor.json's schema (products, strengths, weaknesses, vulnerabilities,
-key_customers, recent_news, trends) — none of these existed before this
-project (confirmed by reading all 153 real competitor.json files during
-scoping: zero had any of these fields).
+Competitors tab (Phase B). Covers the extended fields added to
+competitor.json's schema: originally products, strengths, weaknesses,
+vulnerabilities, key_customers, recent_news, trends (none of these
+existed before this project -- confirmed by reading all 153 real
+competitor.json files during scoping, zero had any of these fields);
+vendor_claims/product_lineage added RB-DEFECT-073 (2026-09-28); features/
+customer_feedback_testimonials/value_statement added 2026-10-02 for the
+top-10-per-category competitor Hunter cycle.
 """
 from __future__ import annotations
 
@@ -16,12 +19,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import competitor_intelligence_common as cic  # noqa: E402
 
 
-def test_new_shell_has_all_six_fields_empty():
+def test_new_shell_has_all_extended_fields_empty():
     shell = cic._empty_competitor_json("test-vendor", "Test Vendor", None)
     for f in cic.EXTENDED_PROFILE_FIELDS:
         assert shell[f] == []
-    assert shell["trends"]["status"] == "not_yet_researched"
-    assert shell["trends"]["value"] is None
+    for f in cic.EXTENDED_SCALAR_FIELDS:
+        assert shell[f]["status"] == "not_yet_researched"
+        assert shell[f]["value"] is None
 
 
 def test_extended_field_shape_matches_provenance_convention():
@@ -43,7 +47,7 @@ def test_real_existing_competitor_files_are_missing_the_new_fields(tmp_path):
     project) competitor.json has none of these fields. A reader must
     tolerate this -- see get_extended_profile below."""
     shell = cic._empty_competitor_json("legacy-vendor", "Legacy Vendor", None)
-    for f in cic.EXTENDED_PROFILE_FIELDS + ("trends",):
+    for f in cic.EXTENDED_PROFILE_FIELDS + cic.EXTENDED_SCALAR_FIELDS:
         del shell[f]
     # Confirms the fixture genuinely mimics a pre-project record.
     for f in cic.EXTENDED_PROFILE_FIELDS:
@@ -52,7 +56,7 @@ def test_real_existing_competitor_files_are_missing_the_new_fields(tmp_path):
 
 def test_get_extended_profile_backfills_missing_fields_on_legacy_record():
     legacy = cic._empty_competitor_json("legacy-vendor", "Legacy Vendor", None)
-    for f in cic.EXTENDED_PROFILE_FIELDS + ("trends",):
+    for f in cic.EXTENDED_PROFILE_FIELDS + cic.EXTENDED_SCALAR_FIELDS:
         del legacy[f]
     filled = cic.get_extended_profile(legacy)
     for f in cic.EXTENDED_PROFILE_FIELDS:
@@ -95,7 +99,7 @@ def test_shareable_extended_view_backfills_a_legacy_record_first():
     """Must not KeyError on a real, pre-project competitor.json missing
     every new field."""
     legacy = cic._empty_competitor_json("legacy-vendor", "Legacy Vendor", None)
-    for f in cic.EXTENDED_PROFILE_FIELDS + ("trends",):
+    for f in cic.EXTENDED_PROFILE_FIELDS + cic.EXTENDED_SCALAR_FIELDS:
         del legacy[f]
     view = cic.shareable_extended_view(legacy)
     assert view["strengths"] == []

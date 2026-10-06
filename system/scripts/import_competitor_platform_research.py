@@ -26,16 +26,17 @@ Per-finding routing:
     promoted into "strengths" regardless of confidence (acceptance
     criterion #2 of the defect).
   - field in {strengths, weaknesses, vulnerabilities, key_customers,
-    product_lineage} (competitor target) -> routed through
-    mutation_policy.decide() (net-new list member vs. exact duplicate,
-    handled by add_extended_profile_finding()'s own dedupe) then applied
-    via competitor_intelligence.add_extended_profile_finding(). Every
+    product_lineage, features, customer_feedback_testimonials}
+    (competitor target) -> routed through mutation_policy.decide()
+    (net-new list member vs. exact duplicate, handled by
+    add_extended_profile_finding()'s own dedupe) then applied via
+    competitor_intelligence.add_extended_profile_finding(). Every
     decision gets a durable mutation_policy receipt, whether or not it
     was actually written -- these reconcile into morning_pipeline.py's
     existing mutation_policy_reconciliation report for free.
-  - field "trends" (competitor target) -> scalar; conflicting values
-    without a resolving date route to confirmation, never a silent
-    overwrite.
+  - field in {trends, value_statement} (competitor target) -> scalar;
+    conflicting values without a resolving date route to confirmation,
+    never a silent overwrite.
   - field "marketplace_signals"  -> competitor_intelligence.add_competitive_
     note(category="other") / genius_capabilities.add_evidence(category=
     "other").
@@ -107,14 +108,23 @@ SIDECAR_MANIFEST_PATH = core.SYSTEM_DIR / "research" / "competitor_platform_rese
 IMPORT_RECEIPTS_PATH = core.CACHE_DIR / "competitor_platform_research_import_receipts.json"
 
 # List-shaped competitor fields this importer can write to, via
-# add_extended_profile_finding(). "trends" is handled separately (scalar).
-# "recent_news" and "products" are deliberately NOT accepted here -- this
-# importer's payload schema (§ finding fields below) doesn't model either
-# one; a future extension can add them the same way vendor_extended_
+# add_extended_profile_finding(). "trends"/"value_statement" are handled
+# separately (scalar). "recent_news" is deliberately NOT accepted here --
+# this importer's payload schema (§ finding fields below) doesn't model
+# it; a future extension can add it the same way vendor_extended_
 # profile_ingest.py already covers "products"/"recent_news" through its
 # own, narrower import path.
-_COMPETITOR_LIST_FIELDS = {"products", "vendor_claims", "strengths", "weaknesses", "vulnerabilities", "key_customers", "product_lineage"}
-_COMPETITOR_SCALAR_FIELDS = {"trends"}
+#
+# "features" and "customer_feedback_testimonials" (2026-10-02, top-10-
+# per-category competitor Hunter cycle) are the granular-capability and
+# customer-quote/review counterparts to "products" and "key_customers" --
+# see competitor_intelligence_common.py's EXTENDED_PROFILE_FIELDS comment
+# for the full distinction.
+_COMPETITOR_LIST_FIELDS = {
+    "products", "vendor_claims", "strengths", "weaknesses", "vulnerabilities",
+    "key_customers", "product_lineage", "features", "customer_feedback_testimonials",
+}
+_COMPETITOR_SCALAR_FIELDS = {"trends", "value_statement"}
 _MARKETPLACE_SIGNAL_FIELD = "marketplace_signals"
 VALID_FIELDS = _COMPETITOR_LIST_FIELDS | _COMPETITOR_SCALAR_FIELDS | {_MARKETPLACE_SIGNAL_FIELD}
 
@@ -135,6 +145,9 @@ _GENIUS_FIELD_TO_EVIDENCE_CATEGORY = {
     "product_lineage": "other",
     "marketplace_signals": "other",
     "trends": "other",
+    "features": "other",
+    "customer_feedback_testimonials": "reference_customer",
+    "value_statement": "positioning",
 }
 
 _CAPABILITY_MIN_CONFIDENCE = {"high", "critical"}
@@ -421,11 +434,19 @@ def _apply_competitor_list_finding(slug: str, finding: dict, *, dry_run: bool) -
     return {"status": decision.status, "applied": applied, "deduped": deduped}
 
 
-def _apply_competitor_trends(slug: str, finding: dict, *, dry_run: bool) -> dict:
+def _apply_competitor_scalar_finding(slug: str, finding: dict, *, dry_run: bool) -> dict:
+    """Handles every field in _COMPETITOR_SCALAR_FIELDS (trends,
+    value_statement) generically -- each is a single synthesized-prose
+    value, replaced (not appended to) on a dated, conflict-checked basis.
+    Generalized from the original trends-only _apply_competitor_trends
+    (2026-10-02) when value_statement was added alongside it; the field
+    name now drives both the competitor.json key and the mutation_policy
+    field_name, instead of "trends" being hardcoded."""
+    field = finding["field"]
     value = str(finding["value"]).strip()
     comp = cic.load_competitor(slug)["competitor"]
-    existing = (comp.get("trends") or {}).get("value")
-    existing_date = (comp.get("trends") or {}).get("as_of")
+    existing = (comp.get(field) or {}).get("value")
+    existing_date = (comp.get(field) or {}).get("as_of")
     decision = mutation_policy.decide(
         source=SOURCE_TAG,
         new_value=value,
@@ -435,13 +456,13 @@ def _apply_competitor_trends(slug: str, finding: dict, *, dry_run: bool) -> dict
         is_replacement=True,
         observed_at=finding.get("observed_at"),
         confidence=finding.get("confidence"),
-        field_name="trends",
+        field_name=field,
         entity_id=slug,
     )
     applied = False
     if not dry_run and decision.auto_apply:
         compintel.add_extended_profile_finding(
-            slug, "trends", value,
+            slug, field, value,
             confidence=finding.get("confidence", "medium"),
             source_url=finding.get("source_url"),
             as_of=finding.get("observed_at"),
@@ -600,7 +621,7 @@ def import_findings(sidecar: dict, *, packet_id: str | None = None, dry_run: boo
             if field in _COMPETITOR_LIST_FIELDS:
                 outcome = _apply_competitor_list_finding(resolved_key, finding, dry_run=dry_run)
             elif field in _COMPETITOR_SCALAR_FIELDS:
-                outcome = _apply_competitor_trends(resolved_key, finding, dry_run=dry_run)
+                outcome = _apply_competitor_scalar_finding(resolved_key, finding, dry_run=dry_run)
             else:
                 outcome = _apply_competitor_marketplace_signal(resolved_key, finding, dry_run=dry_run)
         else:

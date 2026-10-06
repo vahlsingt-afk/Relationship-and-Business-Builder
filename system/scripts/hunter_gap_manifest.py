@@ -15,6 +15,7 @@ import export_research_gaps as brand_exporter  # noqa: E402
 import export_competitor_research_gaps as competitor_exporter  # noqa: E402
 import export_vendor_extended_profile_gaps as vendor_exporter  # noqa: E402
 import export_franchisee_research_gaps as franchisee_exporter  # noqa: E402
+import export_franchisee_discovery_gaps as discovery_exporter  # noqa: E402
 import export_fdd_target_population as fdd_exporter  # noqa: E402
 
 
@@ -23,6 +24,7 @@ BRAND_SOURCE = "system/scripts/export_research_gaps.py"
 COMPETITOR_SOURCE = "system/scripts/export_competitor_research_gaps.py"
 VENDOR_SOURCE = "system/scripts/export_vendor_extended_profile_gaps.py"
 FRANCHISEE_SOURCE = "system/scripts/export_franchisee_research_gaps.py"
+FRANCHISEE_DISCOVERY_SOURCE = "system/scripts/export_franchisee_discovery_gaps.py"
 FDD_SOURCE = "system/scripts/export_fdd_target_population.py"
 
 _FIELD_QUESTIONS = {
@@ -212,8 +214,8 @@ def normalize_competitor_snapshots(research_snapshot: dict, vendor_snapshot: dic
     return list(combined.values())
 
 
-def normalize_franchisee_snapshot(snapshot: dict) -> list[dict]:
-    """Two real target kinds from export_franchisee_research_gaps.py:
+def normalize_franchisee_discovery_snapshot(snapshot: dict) -> list[dict]:
+    """Two real target kinds from export_franchisee_discovery_gaps.py:
     discovery (a brand with no franchisee on record yet -- entity_type
     restaurant_brand, so it shares Hunter's normal brand target_type) and
     profile (a known franchisee organization with missing core fields --
@@ -228,7 +230,7 @@ def normalize_franchisee_snapshot(snapshot: dict) -> list[dict]:
             "priority": "enterprise_primary" if (row.get("rank") or 9999) <= 200 else "secondary",
             "coverage": "no_franchisee_on_record",
             "current_state": {"brand_entity_id": row["brand_entity_id"], "rank": row.get("rank")},
-            "gaps": [_gap(target_key, "known_franchisees", "missing", FRANCHISEE_SOURCE)],
+            "gaps": [_gap(target_key, "known_franchisees", "missing", FRANCHISEE_DISCOVERY_SOURCE)],
             "discovery_domains": ["FDD Item 20 disclosures", "franchisor/franchisee announcements", "franchise trade reporting", "state corporate records"],
         })
     for row in snapshot.get("profile_gaps") or []:
@@ -240,7 +242,7 @@ def normalize_franchisee_snapshot(snapshot: dict) -> list[dict]:
             "priority": "explicit",
             "coverage": row.get("confidence_tier") or "low",
             "current_state": {"confidence_tier": row.get("confidence_tier")},
-            "gaps": [_gap(target_key, field, "missing", FRANCHISEE_SOURCE) for field in row.get("missing_fields") or []],
+            "gaps": [_gap(target_key, field, "missing", FRANCHISEE_DISCOVERY_SOURCE) for field in row.get("missing_fields") or []],
             "discovery_domains": ["FDD Item 20 disclosures", "franchisor/franchisee websites", "state corporate records", "franchise trade reporting", "public executive profiles"],
         })
     return out
@@ -263,6 +265,11 @@ def build_manifest(*, universe: str = "all", target_keys: list[str] | None = Non
             franchisee_exporter.export_franchisee_research_gaps(only_gaps=True)
         ))
         sources.append(FRANCHISEE_SOURCE)
+    if universe in {"all", "franchisee_discovery"}:
+        targets.extend(normalize_franchisee_discovery_snapshot(
+            discovery_exporter.export_franchisee_discovery_gaps(only_gaps=True)
+        ))
+        sources.append(FRANCHISEE_DISCOVERY_SOURCE)
     if universe in {"all", "fdd"}:
         targets.extend(normalize_fdd_snapshot(
             fdd_exporter.export_fdd_target_population(only_gaps=True)
@@ -286,7 +293,7 @@ def build_manifest(*, universe: str = "all", target_keys: list[str] | None = Non
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build Hunter gap manifest from live RBB state")
-    parser.add_argument("--universe", choices=["all", "brands", "competitors", "franchisees", "fdd"], default="all")
+    parser.add_argument("--universe", choices=["all", "brands", "competitors", "franchisees", "franchisee_discovery", "fdd"], default="all")
     parser.add_argument("--target", action="append", dest="targets")
     parser.add_argument("--limit", type=int)
     parser.add_argument("--output")
