@@ -25,57 +25,36 @@ def test_playbook_plan_resolves_depth_budget_and_payload():
     assert "deployment_phasing" in result["required_modules"]
 
 
-def test_resource_plan_allows_chat_when_codex_usage_is_unavailable():
-    result = hunter.resource_plan(
-        "standard", five_hour_used_pct=None, weekly_used_pct=None,
-        hours_to_weekly_reset=None,
-    )
+def test_resource_plan_authorizes_chat_research_without_capacity_inputs():
+    result = hunter.resource_plan("standard")
     assert result["status"] == "authorized"
     assert result["chat_research_status"] == "authorized"
-    assert result["codex_work_status"] == "blocked"
+    assert result["codex_work_status"] == "governed_by_orchestrator"
     assert result["max_targets"] is None
 
 
-def test_codex_limit_does_not_block_chat_research():
-    result = hunter.resource_plan(
-        "standard", five_hour_used_pct=76, weekly_used_pct=20,
-        hours_to_weekly_reset=72,
-    )
+def test_orchestrator_reserves_do_not_block_chat_research():
+    # Work/Claude reserves are enforced by hunter_orchestrator.py. The plan must
+    # not gate Deep Research on them.
+    result = hunter.resource_plan("standard", deep_research_available=True)
     assert result["status"] == "authorized"
     assert result["chat_research_status"] == "authorized"
-    assert result["codex_work_status"] == "blocked"
 
 
 def test_resource_plan_prefers_cheap_deep_research_and_bounds_batch():
-    result = hunter.resource_plan(
-        "deep", five_hour_used_pct=20, weekly_used_pct=25,
-        hours_to_weekly_reset=72, deep_research_available=True,
-    )
+    result = hunter.resource_plan("deep")
     assert result["status"] == "authorized"
     assert result["preferred_execution_tier"] == "chatgpt_deep_research_economy"
     assert result["max_targets"] is None
     assert result["recommended_batch_targets"] == 2
-    assert result["five_hour_capacity_ceiling_pct"] <= 40
     assert result["reset_credit_allowed"] is False
 
 
-def test_codex_reserve_violation_does_not_block_chat_research():
-    result = hunter.resource_plan(
-        "standard", five_hour_used_pct=65, weekly_used_pct=20,
-        hours_to_weekly_reset=72,
-    )
-    assert result["status"] == "authorized"
-    assert result["codex_work_status"] == "blocked"
-
-
-def test_no_chat_path_requires_codex_capacity():
-    result = hunter.resource_plan(
-        "standard", five_hour_used_pct=None, weekly_used_pct=None,
-        hours_to_weekly_reset=None, deep_research_available=False,
-    )
+def test_deep_research_unavailable_blocks_chat_path():
+    result = hunter.resource_plan("standard", deep_research_available=False)
     assert result["status"] == "blocked"
     assert result["chat_research_status"] == "unavailable"
-    assert result["codex_work_status"] == "blocked"
+    assert result["max_targets"] == 0
 
 
 def test_valid_packet_passes_semantic_gate():

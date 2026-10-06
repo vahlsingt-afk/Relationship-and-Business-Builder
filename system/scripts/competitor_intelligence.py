@@ -409,10 +409,10 @@ def add_extended_profile_finding(
     an optional pass-through to extended_field() -- a caller with richer
     per-finding provenance (a deep-research importer) can record it; every
     pre-existing caller that omits them still works exactly as before."""
-    if field == "trends":
+    if field in cic.EXTENDED_SCALAR_FIELDS:
         pass
     elif field not in cic.EXTENDED_PROFILE_FIELDS:
-        raise ValueError(f"field must be one of {cic.EXTENDED_PROFILE_FIELDS + ('trends',)}, got {field!r}")
+        raise ValueError(f"field must be one of {cic.EXTENDED_PROFILE_FIELDS + cic.EXTENDED_SCALAR_FIELDS}, got {field!r}")
     if not (value or "").strip():
         raise ValueError("value must not be empty")
 
@@ -426,8 +426,8 @@ def add_extended_profile_finding(
         limitations_or_conflicts=limitations_or_conflicts,
     )
 
-    if field == "trends":
-        comp["trends"] = leaf
+    if field in cic.EXTENDED_SCALAR_FIELDS:
+        comp[field] = leaf
     else:
         existing = comp.setdefault(field, [])
         if any(e.get("value") == leaf["value"] for e in existing):

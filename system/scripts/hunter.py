@@ -72,8 +72,8 @@ def resource_plan(
         "status": "authorized" if deep_research_available else "blocked",
         "reason": "ChatGPT Deep Research is available" if deep_research_available else "ChatGPT Deep Research transport is unavailable",
         "chat_research_status": "authorized" if deep_research_available else "unavailable",
-        "codex_work_status": "blocked",
-        "codex_work_reason": "Codex is not a Hunter research engine",
+        "codex_work_status": "governed_by_orchestrator",
+        "codex_work_reason": "ChatGPT Work and Claude Co-Work are admitted Hunter research engines; their reserves are enforced by scripts/hunter_orchestrator.py, not by this plan.",
         "capacity_snapshot": {
             "captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "five_hour_used_pct": None,
