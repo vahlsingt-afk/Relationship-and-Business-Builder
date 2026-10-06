@@ -101,6 +101,9 @@
       "claude_co_work": 5
     },
     "day_share_of_usable_pct": 50,
-    "rule": "Usable = 100 - reserve - used, per period. Half of usable daily capacity is paced across the day window (now to 18:00 America/Chicago). The rest, and any excess before a daily reset, is scheduled into the after-hours window before the reset. Weekly usable caps the total. Planned slots run in queue rank order and dispatch honors their run_after time."
+    "rule": "Usable = 100 - reserve - used, per period. Half of usable daily capacity is paced across the day window (now to 18:00 America/Chicago). The rest, and any excess before a daily reset, is scheduled into the after-hours window before the reset. Weekly usable caps the total. Planned slots run in queue rank order and dispatch honors their run_after time.",
+    "unreserved_engine_daily_slots": {
+      "chatgpt_deep_research": 3
+    }
   }
 }

@@ -329,3 +329,17 @@ def test_no_snapshot_means_no_slots(env):
     plan = ho.build_daily_plan(now=dt(2026, 10, 6, 19, 0, tzinfo=timezone.utc))
     assert plan["engines"]["chatgpt_work"] == {"status": "no_snapshot"}
     assert plan["planned"] == []
+
+
+def test_deep_research_gets_planned_slots_without_a_reserve(env):
+    from datetime import datetime as dt
+    # Work/Claude disabled: Deep Research is the only engine. It has no reserve,
+    # so it must still get planned slots, or dispatch would never lease its jobs.
+    _write_job(env, "a", "priority-a", ["company:a"])
+    now = dt(2026, 10, 6, 17, 0, tzinfo=timezone.utc)
+    plan = ho.build_daily_plan(now=now)
+    assert plan["unassigned_queued_jobs"] == 0
+    assert plan["planned"][0]["engine"] == "chatgpt_deep_research"
+    assert plan["planned"][0]["window"] == "day"
+    jid = ho.job_id_for(json.loads((env["jobs"] / "a.json").read_text()))
+    assert ho.plan_slot_for(jid, now=dt.fromisoformat(plan["planned"][0]["run_after"]) + timedelta(seconds=1))
