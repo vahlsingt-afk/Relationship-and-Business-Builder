@@ -434,7 +434,17 @@ def cmd_dispatch(args) -> dict:
             capacity_at_dispatch=latest_capacity(engine), reserve_at_dispatch=effective_reserve(engine),
             job_path=j["path"],
         )
-        results.append({"job_id": j["job_id"], "engine": engine, "action": "leased", "at": event["at"]})
+        result = {"job_id": j["job_id"], "engine": engine, "action": "leased", "at": event["at"]}
+        if cfg["engines"][engine].get("automatic"):
+            # No browser step for this engine: run it now rather than waiting on a human
+            # to start it. A failure here is contained to this job -- it's surfaced in the
+            # result, never raised, so one bad run doesn't stop the rest of the dispatch.
+            try:
+                import hunter_claude_transport  # deferred: that module imports this one
+                result["transport"] = hunter_claude_transport.cmd_run(argparse.Namespace(job_id=j["job_id"], dry_run=False))
+            except Exception as exc:  # noqa: BLE001
+                result["transport_error"] = str(exc)
+        results.append(result)
     return {"mode": mode_reason, "dry_run": not args.confirm, "results": results}
 
 

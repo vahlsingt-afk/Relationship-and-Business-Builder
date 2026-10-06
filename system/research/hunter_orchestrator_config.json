@@ -25,11 +25,23 @@
     "claude_co_work": {
       "admitted": true,
       "enabled": false,
-      "preference": 3,
+      "preference": 4,
       "capacity_model": "usage_snapshot",
       "capacity_source": "Unverified. No supported live-usage read or dispatch mechanism has been confirmed. Snapshots are recorded manually until one is verified.",
       "reserve_applies": true,
       "enable_when": "A supported capacity signal and dispatch path are documented and verified."
+    },
+    "claude_code_headless": {
+      "admitted": true,
+      "enabled": false,
+      "automatic": true,
+      "preference": 3,
+      "capacity_model": "usage_snapshot",
+      "capacity_source": "claude.ai Settings > Usage (session/weekly), recorded via `hunter_orchestrator.py capacity-record`",
+      "reserve_applies": true,
+      "transport": "scripts/hunter_claude_transport.py",
+      "note": "Verified 2026-10-06: a non-interactive `claude -p` call, run from this repo with Read/Glob/Grep/WebSearch allowed, returns a well-formed packet and draws from the Pro session/weekly limits (confirmed against claude.ai Settings > Usage before and after two test calls). Unlike chatgpt_work and claude_co_work, dispatch can run this one automatically -- there is no browser step.",
+      "enable_when": "A capacity snapshot has been recorded and reviewed for at least one full weekly reset, same as chatgpt_work."
     }
   },
   "reserve": {
@@ -92,6 +104,7 @@
       "default": [
         "chatgpt_deep_research",
         "chatgpt_work",
+        "claude_code_headless",
         "claude_co_work"
       ]
     }
@@ -100,7 +113,8 @@
     "plan_path": "system/.cache/hunter_orchestrator/daily_plan.json",
     "job_cost_estimate_pct": {
       "chatgpt_work": 5,
-      "claude_co_work": 5
+      "claude_co_work": 5,
+      "claude_code_headless": 5
     },
     "day_share_of_usable_pct": 50,
     "rule": "Usable = 100 - reserve - used, per period. Half of usable daily capacity is paced across the day window (now to 18:00 America/Chicago). The rest, and any excess before a daily reset, is scheduled into the after-hours window before the reset. Weekly usable caps the total. Planned slots run in queue rank order and dispatch honors their run_after time.",

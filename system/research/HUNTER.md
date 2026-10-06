@@ -387,3 +387,9 @@ leases each queued assignment to the first eligible admitted engine:
   drops the job or lowers the research standard.
 - Results from every engine pass the same finalize and validation path before
   reaching existing downstream ingest. Engine identity is telemetry only.
+- `claude_code_headless` (verified 2026-10-06) runs a leased job automatically
+  through a non-interactive `claude -p` call in this repo, since it has no
+  browser step. `scripts/hunter_claude_transport.py` points it at the same
+  HUNTER.md method and packet schema, then feeds its output through the same
+  `hunter_cycle.py sweep`. ChatGPT Work and the Cowork engine still require a
+  human to start the run.
