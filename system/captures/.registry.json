@@ -1134,7 +1134,23 @@
       "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-51d98f84faafb44a.json",
       "status": "processed",
       "processed_at": "2026-10-02T09:46:00+00:00"
+    },
+    "cap-2c4b56ccb6c8343e": {
+      "queued_at": "2026-10-03T09:19:26+00:00",
+      "source_id": "chatgpt_intelligence_drop",
+      "source_file": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/inbox/chatgpt_intelligence_drop/2026-10-02_0503_panda-express_deep-research.md",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-2c4b56ccb6c8343e.json",
+      "status": "processed",
+      "processed_at": "2026-10-03T09:19:40+00:00"
+    },
+    "cap-5cf1b589193716e5": {
+      "queued_at": "2026-10-06T09:19:50+00:00",
+      "source_id": "just_press_record",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-10-05/15-57-21.m4a",
+      "pending_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/captures/pending/cap-5cf1b589193716e5.json",
+      "status": "processed",
+      "processed_at": "2026-10-06T09:21:21+00:00"
     }
   },
-  "last_scan": "2026-10-02T09:19:56+00:00"
+  "last_scan": "2026-10-06T14:16:43+00:00"
 }

@@ -41,9 +41,9 @@
     "last_reviewed_by": null
   },
   "last_evidence_date": "2026-09-28",
-  "last_synced_at": "2026-10-02T09:47:02Z",
+  "last_synced_at": "2026-10-06T09:22:10Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:47:02Z",
+  "updated_at": "2026-10-06T09:22:10Z",
   "latest_cos_commentary": {
     "headline": "Signage and content services may defend installed menu boards at smaller chains.",
     "genius_exposure": "Signage and content services may defend installed menu boards at smaller chains.",
@@ -75,5 +75,15 @@
         "Operator ROI evidence"
       ]
     }
+  },
+  "synthesis": {
+    "bottom_line": "Currently, there are no confirmed accounts of Spectrio in place, indicating a low immediate competitive threat. However, their scale through acquisitions and focus on digital signage could pose a future risk, so the team should monitor their developments closely.",
+    "themes": [
+      "Spectrio has not established a confirmed presence in the restaurant sector, which currently limits their competitive threat.",
+      "Their recent focus on centrally managed menu-board content and QSR signage indicates a potential shift towards the restaurant industry that could impact future competition.",
+      "The company's strategy of scaling through acquisitions may enhance their capabilities and market reach, warranting ongoing observation.",
+      "Genius holds an advantage over Spectrio due to the latter's lack of specialization in QSR drive-thru, which is a critical area for many restaurant operations."
+    ],
+    "generated_at": "2026-10-02T21:11:43Z"
   }
 }

@@ -11256,7 +11256,7 @@ def _compute_intelligence_assessment_summary(report: dict) -> list[dict]:
     gap_text = f" Gaps: {'; '.join(gaps[:2])}." if gaps else ""
     items.append(_canonical_item(
         title=(
-            f"Intelligence Assessment — {sources_accepted}/{sources_assessed} sources · "
+            f"Gatherer Daily Intelligence — {sources_accepted}/{sources_assessed} sources · "
             f"{items_fetched} items · {len(gatherer_changes)} 24h changes · "
             f"{convergences} patterns · {proposals_count} proposals"
         ),
@@ -11270,8 +11270,8 @@ def _compute_intelligence_assessment_summary(report: dict) -> list[dict]:
             f"Confidence: {confidence}.{gap_text}"
         ),
         why_it_matters=(
-            "This is the autonomous intelligence harvest — what RB found and assessed "
-            "before you arrived. Trust stats tell you what was evaluated, accepted, "
+            "Gatherer is RBB's authoritative daily change-intelligence layer. This is "
+            "what it detected and routed before you arrived. Trust stats tell you what was evaluated, accepted, "
             "and proposed. Absence of proposals is itself signal: today's intelligence "
             "is non-convergent."
         ),
@@ -11307,7 +11307,10 @@ def _compute_intelligence_assessment_summary(report: dict) -> list[dict]:
                 f"Gatherer detected a {change.get('signal_type') or 'general'} signal involving "
                 f"{entity_text}. Source: {change.get('source') or 'unknown'}; "
                 f"observed: {change.get('observed_at') or 'unknown'}; "
-                f"materiality: {change.get('materiality', 0)}/100."
+                f"materiality: {change.get('materiality', 0)}/100; "
+                f"priority: {(change.get('scores') or {}).get('priority', change.get('materiality', 0))}/100; "
+                f"corroboration: {(change.get('corroboration') or {}).get('state', 'unknown')}; "
+                f"novelty: {(change.get('novelty') or {}).get('state', 'unknown')}."
             ),
             why_it_matters=(
                 "This is a recent ecosystem-change candidate, not a verified fact. "
@@ -11437,7 +11440,7 @@ def _compute_intelligence_assessment_summary(report: dict) -> list[dict]:
             disposition="act_today" if prop_confidence == "high" else "monitor",
             grounding="system_detected",
             freshness="fresh",
-            source_refs=["intelligence_assessment"],
+            source_refs=["gatherer_daily_change", "intelligence_assessment"],
             confidence=prop_confidence,
             extras={
                 "proposal_type": ptype,

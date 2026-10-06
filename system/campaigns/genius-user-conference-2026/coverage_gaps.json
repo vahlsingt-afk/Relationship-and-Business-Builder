@@ -33,7 +33,7 @@
     "door_opener": "Lucie Tuan",
     "door_opener_score": 46,
     "recommended_introducer": "Lucie Tuan",
-    "introducer_reason": "LMI (DRR 59.4); works at Wingstop Restaurants Inc.; domain expertise: domain match: hospitality_foodservice.",
+    "introducer_reason": "LMI (DRR 59.1); works at Wingstop Restaurants Inc.; domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "low"
   },
   {
@@ -44,8 +44,8 @@
     ],
     "door_opener": "Robert Wood",
     "door_opener_score": 39,
-    "recommended_introducer": "Carter Witt",
-    "introducer_reason": "LMI (DRR 30.3); works at Levy Restaurants.",
+    "recommended_introducer": "Aaron Rheinecker",
+    "introducer_reason": "LMI (DRR 30.0); works at Levy Restaurants.",
     "estimated_effort": "low"
   },
   {
@@ -68,8 +68,8 @@
     ],
     "door_opener": "Brooks Speirs, CFE",
     "door_opener_score": 37,
-    "recommended_introducer": "Corey Callaway",
-    "introducer_reason": "LMI (DRR 30.1); works at Bojangles' Restaurants, Inc.; domain expertise: domain match: hospitality_foodservice.",
+    "recommended_introducer": "Brooks Speirs, CFE",
+    "introducer_reason": "LMI (DRR 30.0); works at Bojangles' Restaurants, Inc.; domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "low"
   },
   {
@@ -105,7 +105,7 @@
     "door_opener": "\ud83d\udc27Patrick Bobrukiewicz",
     "door_opener_score": 45,
     "recommended_introducer": "\ud83d\udc27Patrick Bobrukiewicz",
-    "introducer_reason": "LKI (DRR 44.8); works at Thrive Restaurant Group; domain expertise: domain match: hospitality_foodservice, recruiting_hr.",
+    "introducer_reason": "LKI (DRR 44.5); works at Thrive Restaurant Group; domain expertise: domain match: hospitality_foodservice, recruiting_hr.",
     "estimated_effort": "low"
   },
   {
@@ -128,8 +128,8 @@
     ],
     "door_opener": "Ben LaTour",
     "door_opener_score": 37,
-    "recommended_introducer": "Dustin Turner",
-    "introducer_reason": "LMI (DRR 30.3); works at Raising Cane's Chicken Fingers; domain expertise: domain match: hospitality_foodservice.",
+    "recommended_introducer": "Ben LaTour",
+    "introducer_reason": "LMI (DRR 30.0); works at Raising Cane's Chicken Fingers; domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "low"
   },
   {
@@ -177,7 +177,7 @@
     "door_opener": "Shawn Walchef",
     "door_opener_score": 37,
     "recommended_introducer": "Dean LaBay \ud83e\udd54",
-    "introducer_reason": "LMI (DRR 30.2); works at Cali BBQ Media.",
+    "introducer_reason": "LMI (DRR 30.0); works at Cali BBQ Media.",
     "estimated_effort": "low"
   },
   {
@@ -189,7 +189,7 @@
     "door_opener": "Erick Coreas",
     "door_opener_score": 34,
     "recommended_introducer": "Erick Coreas",
-    "introducer_reason": "LMI (DRR 30.1); works at Vibe Restaurants.",
+    "introducer_reason": "LMI (DRR 30.0); works at Vibe Restaurants.",
     "estimated_effort": "low"
   },
   {
@@ -201,7 +201,7 @@
     "door_opener": "Jordan Allen",
     "door_opener_score": 34,
     "recommended_introducer": "Dave Crowley  CFE",
-    "introducer_reason": "LMI (DRR 30.6); works at A&W Restaurants, Inc..",
+    "introducer_reason": "LMI (DRR 30.2); works at A&W Restaurants, Inc..",
     "estimated_effort": "low"
   },
   {
@@ -225,7 +225,7 @@
     "door_opener": "Todd Stewart",
     "door_opener_score": 39,
     "recommended_introducer": "Todd Stewart",
-    "introducer_reason": "LKI (DRR 54.4); works at A&W Restaurants.",
+    "introducer_reason": "LKI (DRR 54.1); works at A&W Restaurants.",
     "estimated_effort": "low"
   },
   {
@@ -237,7 +237,7 @@
     "door_opener": "Tyler Schrameck",
     "door_opener_score": 32,
     "recommended_introducer": "Tyler Schrameck",
-    "introducer_reason": "LKI (DRR 50.9); works at Dutch Bros Coffee; domain expertise: domain match: hospitality_foodservice.",
+    "introducer_reason": "LKI (DRR 50.6); works at Dutch Bros Coffee; domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "low"
   },
   {
@@ -249,7 +249,7 @@
     "door_opener": "Sabra Mauldin",
     "door_opener_score": 29,
     "recommended_introducer": "Sabra Mauldin",
-    "introducer_reason": "LMI (DRR 41.9); works at TRIS | The Restaurant Intelligence Solution.",
+    "introducer_reason": "LMI (DRR 41.6); works at TRIS | The Restaurant Intelligence Solution.",
     "estimated_effort": "low"
   },
   {
@@ -261,7 +261,7 @@
     "door_opener": "Scott Ford",
     "door_opener_score": 29,
     "recommended_introducer": "Amy Spytko",
-    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "introducer_reason": "inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "moderate"
   },
   {
@@ -285,7 +285,7 @@
     "door_opener": "Mark Graff",
     "door_opener_score": 27,
     "recommended_introducer": "Amy Spytko",
-    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "introducer_reason": "inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "moderate"
   },
   {
@@ -297,7 +297,7 @@
     "door_opener": "Corbin Gass",
     "door_opener_score": 24,
     "recommended_introducer": "Corbin Gass",
-    "introducer_reason": "LMI (DRR 30.1); works at Chuy's Restaurants; domain expertise: domain match: hospitality_foodservice.",
+    "introducer_reason": "LMI (DRR 30.0); works at Chuy's Restaurants; domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "low"
   },
   {
@@ -309,7 +309,7 @@
     "door_opener": "Jake Rossman",
     "door_opener_score": 24,
     "recommended_introducer": "Jake Rossman",
-    "introducer_reason": "LMI (DRR 30.1); works at CCL Hospitality Group; domain expertise: domain match: hospitality_foodservice.",
+    "introducer_reason": "LMI (DRR 30.0); works at CCL Hospitality Group; domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "low"
   },
   {
@@ -429,7 +429,7 @@
     "door_opener": "Andrew Kraus",
     "door_opener_score": 18,
     "recommended_introducer": "Amy Spytko",
-    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "introducer_reason": "inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "moderate"
   },
   {
@@ -441,7 +441,7 @@
     "door_opener": "Brittany Maroney",
     "door_opener_score": 18,
     "recommended_introducer": "Amy Spytko",
-    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "introducer_reason": "inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "moderate"
   },
   {
@@ -453,7 +453,7 @@
     "door_opener": "Brock Davis",
     "door_opener_score": 18,
     "recommended_introducer": "Amy Spytko",
-    "introducer_reason": "inner-tier RC (DRR 96.3).",
+    "introducer_reason": "inner-tier RC (DRR 96.0).",
     "estimated_effort": "moderate"
   },
   {
@@ -465,7 +465,7 @@
     "door_opener": "Elizabeth Wickham",
     "door_opener_score": 18,
     "recommended_introducer": "Sam Benson",
-    "introducer_reason": "LMI (DRR 35.8); works at Tenzo - Restaurant PerformanceOps; domain expertise: domain match: restaurant_tech.",
+    "introducer_reason": "LMI (DRR 35.5); works at Tenzo - Restaurant PerformanceOps; domain expertise: domain match: restaurant_tech.",
     "estimated_effort": "low"
   },
   {
@@ -489,7 +489,7 @@
     "door_opener": "Nicole Range, MBA",
     "door_opener_score": 18,
     "recommended_introducer": "Amy Spytko",
-    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "introducer_reason": "inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "moderate"
   },
   {
@@ -501,7 +501,7 @@
     "door_opener": "Rick Loftus",
     "door_opener_score": 18,
     "recommended_introducer": "Amy Spytko",
-    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "introducer_reason": "inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "moderate"
   },
   {
@@ -513,7 +513,7 @@
     "door_opener": "Jodie Cohen",
     "door_opener_score": 18,
     "recommended_introducer": "Amy Spytko",
-    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "introducer_reason": "inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "moderate"
   },
   {
@@ -525,7 +525,7 @@
     "door_opener": "Kathryn Simon",
     "door_opener_score": 18,
     "recommended_introducer": "Amy Spytko",
-    "introducer_reason": "inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.",
+    "introducer_reason": "inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.",
     "estimated_effort": "moderate"
   }
 ]

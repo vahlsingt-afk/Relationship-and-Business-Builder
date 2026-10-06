@@ -1,7 +1,15 @@
 # Adyen — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Adyen presents a moderate competitive threat, particularly with its recent expansion into the U.S. and strong growth metrics. The team should monitor Adyen's partnerships and market movements closely, especially its integration with Toast, while leveraging our own advantages during this transitional period in their leadership.
+
+- Adyen's recent expansion into the U.S. market through its partnership with Toast enhances its competitive positioning in the restaurant technology space.
+- The acquisition of Talon.One and Orb indicates Adyen's strategic move to diversify its offerings beyond payments, potentially impacting our market share in loyalty and billing solutions.
+- Adyen's impressive growth and profitability metrics, including a projected EBITDA margin exceeding 55% by 2028, highlight its strong financial health compared to legacy acquirers.
+- The ongoing CFO transition at Adyen may present an opportunity for us to capitalize on any potential instability or shifts in strategy during this period.
+- Adyen's focus on larger enterprise clients and partnerships with major platforms like Meta and Uber suggests a shift away from SMBs, which could create openings for us to target smaller restaurant operators.
 
 ## Where we're competing against them right now
 3 account(s) on file -- 0 confirmed, broad-scope relationship(s), 3 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

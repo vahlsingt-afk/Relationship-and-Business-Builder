@@ -1,7 +1,13 @@
 # Agilysys — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, Agilysys does not pose a significant competitive threat as there are no confirmed accounts in the restaurant sector, and their recent developments are primarily focused on hospitality and resort operations. The team should monitor Agilysys for any shifts towards standalone restaurant solutions but can prioritize other competitors for now.
+
+- Agilysys has reported strong financial growth, indicating potential future investments in technology that could impact the restaurant sector.
+- Recent deployments of Agilysys products in hospitality settings suggest they are expanding their market presence, but these are not directly relevant to our restaurant focus.
+- The lack of confirmed accounts in the restaurant space means that Agilysys is not currently a direct competitor for our offerings.
 
 ## Where we're competing against them right now
 *No current tech-stack relationship on file for this vendor.*

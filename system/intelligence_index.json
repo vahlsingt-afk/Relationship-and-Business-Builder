@@ -1,6 +1,6 @@
 {
   "contract": "rb_intelligence_index_v1",
-  "generated_at": "2026-10-02T10:00:42Z",
+  "generated_at": "2026-10-06T10:00:34Z",
   "entries": [
     {
       "entity": "Mcdonalds Franchisee Profitability Remodel Cycle",
@@ -39505,6 +39505,23 @@
       "notes": "document_id=6bac595985073b59; call getUploadedDocument to retrieve the full text."
     },
     {
+      "entity": "Qu vs. Genius — Five Guys",
+      "entity_tokens": [
+        "five",
+        "genius",
+        "guys",
+        "qu",
+        "vs"
+      ],
+      "resource_type": "value_wedge",
+      "title": "Value Wedge: Qu vs. Genius — Five Guys",
+      "path": "system/artifact_vault/value_wedges/qu--brand-five-guys/current/Qu-vs-Genius-Five-Guys_Value-Wedge.json",
+      "source_system": "value_wedge",
+      "created_at": "2026-10-02",
+      "registered_at": "2026-10-02T18:38:38Z",
+      "notes": null
+    },
+    {
       "entity": "DoorDash / DashOS",
       "entity_tokens": [
         "dashos",
@@ -39514,8 +39531,8 @@
       "title": "Competitive Brief: DoorDash / DashOS",
       "path": "system/artifact_vault/competitive_briefs/doordash-dashos/current/DoorDash-DashOS_Competitive-Brief.md",
       "source_system": "competitive_brief",
-      "created_at": "2026-10-02",
-      "registered_at": "2026-10-02T09:47:05Z",
+      "created_at": "2026-10-06",
+      "registered_at": "2026-10-06T09:22:12Z",
       "notes": null
     },
     {
@@ -39529,8 +39546,8 @@
       "title": "Value Wedge: Nova vs. Genius",
       "path": "system/artifact_vault/value_wedges/nova/current/Nova-vs-Genius_Value-Wedge.json",
       "source_system": "value_wedge",
-      "created_at": "2026-10-02",
-      "registered_at": "2026-10-02T09:47:08Z",
+      "created_at": "2026-10-06",
+      "registered_at": "2026-10-06T09:22:16Z",
       "notes": null
     },
     {
@@ -39545,8 +39562,8 @@
       "title": "Value Wedge: DoorDash / DashOS vs. Genius",
       "path": "system/artifact_vault/value_wedges/doordash-dashos/current/DoorDash-DashOS-vs-Genius_Value-Wedge.json",
       "source_system": "value_wedge",
-      "created_at": "2026-10-02",
-      "registered_at": "2026-10-02T09:47:08Z",
+      "created_at": "2026-10-06",
+      "registered_at": "2026-10-06T09:22:16Z",
       "notes": null
     },
     {
@@ -39560,8 +39577,8 @@
       "title": "Background Brief: test-fixture-account-background-brief",
       "path": "customers_prospects/accounts/test-fixture-account-background-brief/briefs/current/Background_Brief.md",
       "source_system": "account_research",
-      "created_at": "2026-10-02",
-      "registered_at": "2026-10-02T10:00:42Z",
+      "created_at": "2026-10-06",
+      "registered_at": "2026-10-06T10:00:34Z",
       "notes": null
     }
   ]

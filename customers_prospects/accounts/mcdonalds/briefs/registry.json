@@ -80,6 +80,24 @@
       "purpose": "Account background and discovery preparation",
       "intelligence_verification_date": "2026-10-01",
       "path": "customers_prospects/accounts/mcdonalds/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 10,
+      "generated_at": "2026-10-02T18:01:32Z",
+      "generated_for": "todd",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-10-02",
+      "path": "customers_prospects/accounts/mcdonalds/briefs/current/Background_Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 11,
+      "generated_at": "2026-10-03T09:20:25Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "Account background and discovery preparation",
+      "intelligence_verification_date": "2026-10-03",
+      "path": "customers_prospects/accounts/mcdonalds/briefs/current/Background_Brief.md",
       "superseded": false
     }
   ]

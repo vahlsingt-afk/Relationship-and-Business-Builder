@@ -1,7 +1,15 @@
 # Oracle Food & Beverage (Simphony / MICROS) — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Oracle Food & Beverage presents a moderate competitive threat, particularly due to its deep hospitality install base and recent advancements in AI technology. The team should monitor Oracle's developments closely, especially their focus on stadiums, which overlaps with our market, while leveraging our advantages in AI infrastructure and perceived lack of restaurant focus by competitors.
+
+- Oracle's deep hospitality install base, especially in stadiums, poses a direct competitive threat to Genius in overlapping markets.
+- The introduction of the GenAI Smart Assistant in multiple languages enhances Oracle's appeal, potentially attracting a broader customer base.
+- Recent layoffs and restructuring at Oracle may indicate a lack of focus on the Food & Beverage sector, which could be an opportunity for Genius to capitalize on.
+- The confirmed account with Big Boy Restaurant Group highlights Oracle's established presence in the market, necessitating a strategic response from Genius.
+- The recent loss of Burger King POS to PAR suggests vulnerabilities in Oracle's competitive positioning that Genius can exploit.
 
 ## Where we're competing against them right now
 2 account(s) on file -- 1 confirmed, broad-scope relationship(s), 1 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

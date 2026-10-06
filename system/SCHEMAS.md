@@ -1221,6 +1221,13 @@ The packet contains:
 - run `stats` for input volume, exclusions, duplicates, changes, and
   escalations.
 
+The packet also records configured source-check coverage, temporal separation
+between discovery/publication/event dates, comparison with canonical public RBB
+state, event-level corroboration clusters, an atomic-write receipt, and
+Hunter-ready escalation jobs. Valid packets are retained in the Gatherer
+history directory; ready escalations are appended to the deduplicated Hunter
+escalation queue.
+
 Gatherer output is monitoring evidence, not a canonical fact store. A candidate
 headline cannot directly establish a customer relationship, deployment,
 leadership change, transaction, or product state.

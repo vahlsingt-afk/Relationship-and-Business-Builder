@@ -1,7 +1,14 @@
 # Tenzo — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, Tenzo poses a limited competitive threat as there are no confirmed accounts of their deployment in the market. However, their recent funding and claims of significant productivity improvements warrant monitoring, particularly as they expand in the US.
+
+- Tenzo's recent funding and growth plans indicate potential for future market impact, despite no confirmed deployments.
+- The reported trial with Bill's at ten sites suggests they are actively seeking to establish a foothold in the restaurant technology space.
+- Tenzo's claims of improved labor productivity and reduced food waste could attract attention from potential customers, making them a competitor to watch.
+- Their existing customer base, including notable US logos, highlights their credibility and potential influence in the market.
 
 ## Where we're competing against them right now
 *No current tech-stack relationship on file for this vendor.*

@@ -1,7 +1,15 @@
 # SevenRooms — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, SevenRooms poses a moderate competitive threat primarily due to its acquisition by DoorDash, which enhances its distribution and advertising capabilities. However, the lack of confirmed accounts and limited scope of operations suggests that immediate action may not be necessary, but monitoring their growth and market presence is advisable.
+
+- SevenRooms' acquisition by DoorDash significantly boosts its distribution and advertising capabilities, creating a stronger competitive position.
+- The reported 100% year-over-year growth in new venue signings indicates a rapidly expanding footprint, which could threaten our market share if not addressed.
+- SevenRooms' focus on full-service and hospitality venues contrasts with Genius's QSR base, highlighting a different competitive landscape that may require tailored strategies.
+- Concerns among operators about sharing guest data with a delivery marketplace owner could present an opportunity for Genius to position itself as a more trustworthy alternative.
+- The limited confirmed accounts for SevenRooms suggest that while they are growing, their current market penetration may not yet be substantial enough to warrant immediate concern.
 
 ## Where we're competing against them right now
 2 account(s) on file -- 0 confirmed, broad-scope relationship(s), 2 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

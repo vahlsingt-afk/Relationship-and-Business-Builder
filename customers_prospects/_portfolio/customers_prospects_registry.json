@@ -74,7 +74,7 @@
       "portfolio_dashboard_state": "Missing Blue Sheet",
       "dashboard_state_reason": "No dedicated source material identified yet; account.json shell only.",
       "engagement_tier": "active_engagement",
-      "latest_background_brief_date": "2026-09-25",
+      "latest_background_brief_date": "2026-10-03",
       "data_owner_id": "todd"
     },
     {
@@ -88,7 +88,8 @@
       "last_review_date": "2026-09-04",
       "latest_background_brief_date": "2026-10-01",
       "engagement_tier": "pre_engagement",
-      "data_owner_id": "todd"
+      "data_owner_id": "todd",
+      "last_evidence_date": "2020-01-06"
     },
     {
       "account_id": "acct-mcdonalds",
@@ -110,7 +111,7 @@
       "activation_note": "Created 2026-08-27 at Todd's explicit direction, from the real system/account_intelligence/ McDonald's corpus, following the Pollo Campero Blue Sheet as the structural reference.",
       "status": "active",
       "engagement_tier": "active_engagement",
-      "latest_background_brief_date": "2026-10-01",
+      "latest_background_brief_date": "2026-10-03",
       "data_owner_id": "todd"
     },
     {
@@ -200,7 +201,7 @@
       "engagement_tier": "active_engagement",
       "last_review_date": "2026-09-15",
       "latest_background_brief_date": "2026-09-29",
-      "last_evidence_date": "2026-09-30",
+      "last_evidence_date": "2026-10-02",
       "opportunity_ids": [
         "opp-subway-na-connected-restaurant-rfp"
       ],

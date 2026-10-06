@@ -106,9 +106,9 @@
     ]
   },
   "last_evidence_date": "2026-09-29",
-  "last_synced_at": "2026-10-02T09:46:54Z",
+  "last_synced_at": "2026-10-06T09:22:04Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:46:54Z",
+  "updated_at": "2026-10-06T09:22:04Z",
   "latest_cos_commentary": {
     "headline": "Large integrated POS, payments and AI competitor with rising enterprise investment.",
     "genius_exposure": "Large integrated POS, payments and AI competitor with rising enterprise investment.",
@@ -350,5 +350,16 @@
   "weaknesses": [],
   "key_customers": [],
   "recent_news": [],
-  "product_lineage": []
+  "product_lineage": [],
+  "synthesis": {
+    "bottom_line": "Toast currently poses a significant competitive threat with its extensive customer base of ~180,000 locations and strong financial performance, including a record 9,500 net location adds in Q2 2026. The team should focus on enhancing our enterprise capabilities and addressing the gaps in our competitive positioning, particularly in loyalty and drive-thru technology, to better compete against Toast's momentum.",
+    "themes": [
+      "Toast's rapid growth and profitability, highlighted by a record 9,500 net location adds in Q2 2026, demonstrate its strong market presence and operational efficiency.",
+      "The competitor's all-in-one platform, which includes POS, payments, and marketing, is gaining traction, particularly in the SMB sector, and is now pushing into enterprise markets, posing a direct challenge to Genius.",
+      "Toast's loyalty program data indicates that returning guests significantly outperform new customers, emphasizing the importance of effective customer retention strategies that Genius must enhance.",
+      "Recent developments reveal Toast's focus on expanding into new territories like drive-thru, which could directly impact Genius's market share if not addressed promptly.",
+      "Toast's enterprise momentum with major brands like Applebee's and Firehouse Subs showcases its ability to secure large accounts, which Genius needs to counteract with its own enterprise solutions."
+    ],
+    "generated_at": "2026-10-02T21:10:14Z"
+  }
 }

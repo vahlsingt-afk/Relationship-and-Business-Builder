@@ -1,7 +1,13 @@
 # Fresh KDS — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Fresh KDS currently poses a limited competitive threat due to its focus on small to medium-sized businesses and the lack of confirmed broad-scope deployments. The team should monitor their developments but prioritize efforts on larger enterprise opportunities where Genius has a stronger foothold.
+
+- Fresh KDS targets the SMB market with low-cost solutions, which could attract independent restaurants and small chains away from Genius.
+- The competitor's integration capabilities with popular POS and ordering systems enhance its appeal, particularly for smaller operations.
+- Limited confirmed accounts suggest that Fresh KDS has not yet established a significant presence in larger chains, reducing immediate competitive pressure on Genius.
 
 ## Where we're competing against them right now
 3 account(s) on file -- 0 confirmed, broad-scope relationship(s), 3 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

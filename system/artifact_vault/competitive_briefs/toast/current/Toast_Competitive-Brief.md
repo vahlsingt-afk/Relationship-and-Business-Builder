@@ -1,7 +1,15 @@
 # Toast — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Toast currently poses a significant competitive threat with its extensive customer base of ~180,000 locations and strong financial performance, including a record 9,500 net location adds in Q2 2026. The team should focus on enhancing our enterprise capabilities and addressing the gaps in our competitive positioning, particularly in loyalty and drive-thru technology, to better compete against Toast's momentum.
+
+- Toast's rapid growth and profitability, highlighted by a record 9,500 net location adds in Q2 2026, demonstrate its strong market presence and operational efficiency.
+- The competitor's all-in-one platform, which includes POS, payments, and marketing, is gaining traction, particularly in the SMB sector, and is now pushing into enterprise markets, posing a direct challenge to Genius.
+- Toast's loyalty program data indicates that returning guests significantly outperform new customers, emphasizing the importance of effective customer retention strategies that Genius must enhance.
+- Recent developments reveal Toast's focus on expanding into new territories like drive-thru, which could directly impact Genius's market share if not addressed promptly.
+- Toast's enterprise momentum with major brands like Applebee's and Firehouse Subs showcases its ability to secure large accounts, which Genius needs to counteract with its own enterprise solutions.
 
 ## Where we're competing against them right now
 7 account(s) on file -- 4 confirmed, broad-scope relationship(s), 3 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

@@ -1,7 +1,15 @@
 # Fiserv — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, there are no confirmed accounts of Fiserv's Clover being in place at any restaurants, indicating a limited immediate competitive threat. However, recent developments suggest that Fiserv is actively enhancing its offerings and consolidating its strategy, which could pose a future risk if they successfully improve service and stability.
+
+- Fiserv's Clover is positioned as a direct competitor to Genius, particularly in the POS and restaurant operations space, which could impact our market share if they gain traction.
+- The recent leadership changes and strategic focus on customer service and platform stability at Fiserv indicate a potential shift that could enhance their competitive edge.
+- The launch of Clover Reserve and its expansion into fine-dining and complex hospitality segments suggests Fiserv is targeting higher-value markets, which may attract more sophisticated restaurant clients.
+- While there are no confirmed accounts of Fiserv's presence, their emphasis on integration and execution could lead to stronger offerings that challenge Genius in the future.
+- The lack of corroborated weaknesses for Clover or BentoBox suggests that Fiserv may not face significant hurdles in its restaurant-specific strategy, making it a competitor to watch closely.
 
 ## Where we're competing against them right now
 *No current tech-stack relationship on file for this vendor.*

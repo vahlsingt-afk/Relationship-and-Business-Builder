@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-05T04:02:03-05:00",
+  "account_id": "global-payments",
+  "source": "outlook_computer_use",
+  "window_days": 7,
+  "inbox": [
+    {
+      "counterpart_name": "noreply",
+      "counterpart_email": null,
+      "subject": "Your password will expire today",
+      "received_at": "2026-10-05T00:01:00-05:00",
+      "unread": true
+    },
+    {
+      "counterpart_name": "Morgan Petty",
+      "counterpart_email": null,
+      "subject": "Canopy <> Subway <> Global Payments",
+      "received_at": "2026-10-04",
+      "unread": true
+    },
+    {
+      "counterpart_name": "noreply",
+      "counterpart_email": null,
+      "subject": "Your password will expire in 1 days.",
+      "received_at": "2026-10-04",
+      "unread": true
+    }
+  ],
+  "sent": [],
+  "calendar": [
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Monday)",
+      "date": "2026-10-05",
+      "start": "2026-10-05T11:00:00-05:00",
+      "end": "2026-10-05T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Sylvia Brummitt",
+      "date": "2026-10-05",
+      "start": "2026-10-05T11:30:00-05:00",
+      "end": "2026-10-05T12:00:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Connect with Jeff Coffland - McDonalds",
+      "date": "2026-10-05",
+      "start": "2026-10-05T15:30:00-05:00",
+      "end": "2026-10-05T16:00:00-05:00",
+      "location": null
+    },
+    {
+      "title": "WP BackBook Sales/Marketing Weekly Sync",
+      "date": "2026-10-06",
+      "start": "2026-10-06T14:00:00-05:00",
+      "end": "2026-10-06T14:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Canopy <> Subway <> Global Payments",
+      "date": "2026-10-07",
+      "start": "2026-10-07T09:00:00-05:00",
+      "end": "2026-10-07T09:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Josh/Todd connect - DMB/DTD",
+      "date": "2026-10-07",
+      "start": "2026-10-07T10:00:00-05:00",
+      "end": "2026-10-07T10:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Thursday)",
+      "date": "2026-10-08",
+      "start": "2026-10-08T09:30:00-05:00",
+      "end": "2026-10-08T10:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "A Little Friday - Sales Town Hall Series ",
+      "date": "2026-10-08",
+      "start": "2026-10-08T10:30:00-05:00",
+      "end": "2026-10-08T11:30:00-05:00",
+      "location": "https://us-1506.join.gong.io/global-payments-us/jerry.gallimore/6575986815786887444"
+    },
+    {
+      "title": "Regroup - WP BackBook ICP Review",
+      "date": "2026-10-08",
+      "start": "2026-10-08T11:00:00-05:00",
+      "end": "2026-10-08T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Learning from Your Previous Experiences",
+      "date": "2026-10-09",
+      "start": "2026-10-09T13:30:00-05:00",
+      "end": "2026-10-09T14:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Global Payments Genius User Conference 2026 — Account-First Recommendations
 
-_Generated 2026-10-02T10:14:14+00:00_
+_Generated 2026-10-06T10:14:18+00:00_
 
 120 accounts classified (Tier 1 = confirmed existing Genius/Worldpay customer; Tier 3 = restaurant operator). Every row is a real, matched contact in your network — no row is invented from a source-spreadsheet name RB has never actually connected to you.
 

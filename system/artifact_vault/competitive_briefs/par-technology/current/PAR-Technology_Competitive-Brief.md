@@ -1,15 +1,15 @@
 # PAR Technology — Competitive Brief
 
 ## Bottom line
-*AI-synthesized from the evidence below, generated 2026-10-01 -- verify against the citations below before acting.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
 
-PAR Technology poses a significant competitive threat with a strong presence in major restaurant chains and a growing ARR of $338M. The team should closely monitor PAR's developments, particularly their exclusive agreements and product integrations, while leveraging Genius's advantages in back-office tools and payment processing to differentiate our offerings.
+PAR Technology poses a significant competitive threat with a strong presence in major restaurant chains and a growing market share, particularly with their exclusive agreement with Burger King. The team should closely monitor PAR's developments and consider strategic adjustments to enhance our competitive positioning, especially in areas where we have clear advantages.
 
-- PAR's extensive deployment in major chains like Burger King and Papa Johns highlights their market penetration and potential to capture more market share.
-- Recent financial improvements and a focus on multi-product adoption suggest PAR is gaining momentum, making them a formidable competitor in the restaurant technology space.
-- Genius's advantages in integrated payment processing and proven back-office tools provide a clear differentiation point against PAR's newer and less established offerings.
-- PAR's strategy of leveraging AI and cloud-native solutions may appeal to modern restaurant operators, necessitating Genius to enhance its technological narrative.
-- The concentration of PAR's business in a few large accounts poses a risk, but also an opportunity for Genius to target smaller chains that may prefer a more integrated and proven solution.
+- PAR's extensive deployment in major chains like Burger King and Papa Johns highlights their strong market presence and potential to capture more market share.
+- Recent financial improvements and a focus on multi-product adoption suggest PAR is gaining momentum, which could challenge our growth if not addressed.
+- PAR's perceived modernity and open integration strategy may attract new clients, emphasizing the need for Genius to enhance its integration capabilities and market narrative.
+- The ongoing research gaps in PAR's offerings indicate potential vulnerabilities that Genius can exploit to differentiate its products and services.
+- Genius's established advantages in payment processing and back-office tools provide a solid foundation to counter PAR's growth, but proactive strategies are necessary to maintain this edge.
 
 ## Where we're competing against them right now
 17 account(s) on file -- 8 confirmed, broad-scope relationship(s), 9 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

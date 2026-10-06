@@ -1,7 +1,15 @@
 # Qu — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Qu presents a significant competitive threat with a strong presence in the market, confirmed by multiple broad-scope accounts and recent developments, including the launch of Qu Pay and a rapid rollout to Jack in the Box. The team should closely monitor Qu's advancements and consider strategic adjustments to our offerings, particularly in payment integration and operational resilience.
+
+- Qu has established a broad customer base, including major brands like Jack in the Box and Shake Shack, indicating strong market penetration.
+- The recent launch of Qu Pay and its integration into their platform presents a direct challenge to our Genius+Worldpay bundle, necessitating a reevaluation of our payment solutions.
+- Qu's claims of high uptime and low order failure rates, while requiring verification, could enhance their appeal to potential clients, emphasizing the need for us to bolster our reliability metrics.
+- The rapid growth of Qu, with a reported 150% increase in location count year-over-year, suggests they are gaining traction and could disrupt the market further if not addressed.
+- Qu's focus on AI and operational efficiency, as highlighted in their recent research, aligns with industry trends and could position them favorably among tech-savvy restaurant operators.
 
 ## Where we're competing against them right now
 24 account(s) on file -- 11 confirmed, broad-scope relationship(s), 13 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

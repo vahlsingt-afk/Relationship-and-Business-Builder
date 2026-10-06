@@ -35,9 +35,9 @@
     "last_reviewed_by": null
   },
   "last_evidence_date": "2026-09-28",
-  "last_synced_at": "2026-10-02T09:47:01Z",
+  "last_synced_at": "2026-10-06T09:22:09Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:47:01Z",
+  "updated_at": "2026-10-06T09:22:09Z",
   "latest_cos_commentary": {
     "headline": "DoorDash-owned guest relationship platform has a distribution advantage in reservations and commerce.",
     "genius_exposure": "DoorDash-owned guest relationship platform has a distribution advantage in reservations and commerce.",
@@ -69,5 +69,16 @@
         "Operator ROI evidence"
       ]
     }
+  },
+  "synthesis": {
+    "bottom_line": "Currently, SevenRooms poses a moderate competitive threat primarily due to its acquisition by DoorDash, which enhances its distribution and advertising capabilities. However, the lack of confirmed accounts and limited scope of operations suggests that immediate action may not be necessary, but monitoring their growth and market presence is advisable.",
+    "themes": [
+      "SevenRooms' acquisition by DoorDash significantly boosts its distribution and advertising capabilities, creating a stronger competitive position.",
+      "The reported 100% year-over-year growth in new venue signings indicates a rapidly expanding footprint, which could threaten our market share if not addressed.",
+      "SevenRooms' focus on full-service and hospitality venues contrasts with Genius's QSR base, highlighting a different competitive landscape that may require tailored strategies.",
+      "Concerns among operators about sharing guest data with a delivery marketplace owner could present an opportunity for Genius to position itself as a more trustworthy alternative.",
+      "The limited confirmed accounts for SevenRooms suggest that while they are growing, their current market penetration may not yet be substantial enough to warrant immediate concern."
+    ],
+    "generated_at": "2026-10-02T21:11:31Z"
   }
 }

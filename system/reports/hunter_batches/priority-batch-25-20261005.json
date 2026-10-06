@@ -1,0 +1,775 @@
+{
+  "assignment_file": "hunter-assignment-priority-batch-25-20261005.json",
+  "assignment_path": "/Users/toddvahlsing/Documents/Claude/Projects/Relationship & Business Builder/system/.cache/hunter_pending_jobs/bundle-priority-batch-25-20261005.json",
+  "batch_id": "priority-batch-25-20261005",
+  "confirmed": false,
+  "generated_at": "2026-10-06T12:53:09+00:00",
+  "queue_generated_at": "2026-10-05T09:19:44+00:00",
+  "queue_ranks": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "receipt_ok": null,
+  "response_artifact": null,
+  "response_file": "hunter-response-priority-batch-25-20261005.json",
+  "schema": "rb.hunter_batch_report.v1",
+  "status": "awaiting_deep_research_response",
+  "subjobs": [
+    {
+      "canonical_writes": 0,
+      "display_name": "company:brand-chipotle-mexican-grill",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "enterprise_account_profile",
+      "rank": 2,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "company:brand-chipotle-mexican-grill",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 1
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchise-discovery:brand-chipotle-mexican-grill",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_discovery",
+      "rank": 3,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchise-discovery:brand-chipotle-mexican-grill",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 1
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "company:brand-kfc",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "enterprise_account_profile",
+      "rank": 4,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "company:brand-kfc",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 2
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchise-discovery:brand-mcdonald-s",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_discovery",
+      "rank": 5,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchise-discovery:brand-mcdonald-s",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 3
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchisee:haza-group",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_organization_profile",
+      "rank": 6,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchisee:haza-group",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 4
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "competitor:revel-systems",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "competitive_positioning",
+      "rank": 7,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "competitor:revel-systems",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 5
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "competitor:restaurant365",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "competitive_positioning",
+      "rank": 8,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "competitor:restaurant365",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 6
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "competitor:qu",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "competitive_positioning",
+      "rank": 9,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "competitor:qu",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 7
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "company:brand-pizza-hut",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "enterprise_account_profile",
+      "rank": 10,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "company:brand-pizza-hut",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 8
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "company:brand-starbucks",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "enterprise_account_profile",
+      "rank": 11,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "company:brand-starbucks",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 9
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchisee:the-dhanani-group",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_organization_profile",
+      "rank": 12,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchisee:the-dhanani-group",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 10
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchisee:flynn-group",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_organization_profile",
+      "rank": 13,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchisee:flynn-group",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 11
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchisee:kbp-brands",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_organization_profile",
+      "rank": 14,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchisee:kbp-brands",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 12
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchisee:sizzling-platter",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_organization_profile",
+      "rank": 15,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchisee:sizzling-platter",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 13
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchisee:sun-holdings",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_organization_profile",
+      "rank": 16,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchisee:sun-holdings",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 14
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "company:brand-salad-and-go",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "enterprise_account_profile",
+      "rank": 17,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "company:brand-salad-and-go",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 15
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchise-discovery:brand-salad-and-go",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_discovery",
+      "rank": 18,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchise-discovery:brand-salad-and-go",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 15
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "competitor:toast",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "competitive_positioning",
+      "rank": 19,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "competitor:toast",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 16
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "competitor:nory",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "competitive_positioning",
+      "rank": 20,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "competitor:nory",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 17
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "competitor:oracle-food-beverage-simphony-micros",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "competitive_positioning",
+      "rank": 21,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "competitor:oracle-food-beverage-simphony-micros",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 18
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "competitor:par-technology",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "competitive_positioning",
+      "rank": 22,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "competitor:par-technology",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 19
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchisee:afc-brands",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_organization_profile",
+      "rank": 23,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchisee:afc-brands",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 20
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchisee:alvarado-restaurant-nation",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_organization_profile",
+      "rank": 24,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchisee:alvarado-restaurant-nation",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 21
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchisee:ambrosia-qsr",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_organization_profile",
+      "rank": 25,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchisee:ambrosia-qsr",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 22
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchisee:ars-brands",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_organization_profile",
+      "rank": 26,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchisee:ars-brands",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 23
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchisee:beshay-enterprises",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_organization_profile",
+      "rank": 27,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchisee:beshay-enterprises",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 24
+    },
+    {
+      "canonical_writes": 0,
+      "display_name": "franchisee:bluegrass-restaurant-holdings",
+      "findings": 0,
+      "gap_outcomes": 0,
+      "packet_id": null,
+      "payload_records_malformed": 0,
+      "payload_records_rejected": 0,
+      "playbook": "franchisee_organization_profile",
+      "rank": 28,
+      "sources": 0,
+      "status": "awaiting_deep_research_response",
+      "target_key": "franchisee:bluegrass-restaurant-holdings",
+      "unanswered_questions": 0,
+      "validation_errors": 0,
+      "work_unit": 25
+    }
+  ],
+  "summary": {
+    "awaiting_response": 27,
+    "canonical_writes": 0,
+    "findings": 0,
+    "gap_outcomes": 0,
+    "missing_from_bundle": 0,
+    "packets_returned": 0,
+    "payload_records_rejected": 0,
+    "returned_awaiting_sweep": 0,
+    "sources": 0,
+    "subjobs": 27,
+    "validated_dry_run": 0,
+    "validation_errors": 0,
+    "validation_failed": 0,
+    "work_units": 25
+  },
+  "work_units": [
+    {
+      "queue_ranks": [
+        2,
+        3
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "company:brand-chipotle-mexican-grill",
+        "franchise-discovery:brand-chipotle-mexican-grill"
+      ],
+      "work_unit": 1
+    },
+    {
+      "queue_ranks": [
+        4
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "company:brand-kfc"
+      ],
+      "work_unit": 2
+    },
+    {
+      "queue_ranks": [
+        5
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchise-discovery:brand-mcdonald-s"
+      ],
+      "work_unit": 3
+    },
+    {
+      "queue_ranks": [
+        6
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchisee:haza-group"
+      ],
+      "work_unit": 4
+    },
+    {
+      "queue_ranks": [
+        7
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "competitor:revel-systems"
+      ],
+      "work_unit": 5
+    },
+    {
+      "queue_ranks": [
+        8
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "competitor:restaurant365"
+      ],
+      "work_unit": 6
+    },
+    {
+      "queue_ranks": [
+        9
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "competitor:qu"
+      ],
+      "work_unit": 7
+    },
+    {
+      "queue_ranks": [
+        10
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "company:brand-pizza-hut"
+      ],
+      "work_unit": 8
+    },
+    {
+      "queue_ranks": [
+        11
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "company:brand-starbucks"
+      ],
+      "work_unit": 9
+    },
+    {
+      "queue_ranks": [
+        12
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchisee:the-dhanani-group"
+      ],
+      "work_unit": 10
+    },
+    {
+      "queue_ranks": [
+        13
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchisee:flynn-group"
+      ],
+      "work_unit": 11
+    },
+    {
+      "queue_ranks": [
+        14
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchisee:kbp-brands"
+      ],
+      "work_unit": 12
+    },
+    {
+      "queue_ranks": [
+        15
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchisee:sizzling-platter"
+      ],
+      "work_unit": 13
+    },
+    {
+      "queue_ranks": [
+        16
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchisee:sun-holdings"
+      ],
+      "work_unit": 14
+    },
+    {
+      "queue_ranks": [
+        17,
+        18
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "company:brand-salad-and-go",
+        "franchise-discovery:brand-salad-and-go"
+      ],
+      "work_unit": 15
+    },
+    {
+      "queue_ranks": [
+        19
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "competitor:toast"
+      ],
+      "work_unit": 16
+    },
+    {
+      "queue_ranks": [
+        20
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "competitor:nory"
+      ],
+      "work_unit": 17
+    },
+    {
+      "queue_ranks": [
+        21
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "competitor:oracle-food-beverage-simphony-micros"
+      ],
+      "work_unit": 18
+    },
+    {
+      "queue_ranks": [
+        22
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "competitor:par-technology"
+      ],
+      "work_unit": 19
+    },
+    {
+      "queue_ranks": [
+        23
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchisee:afc-brands"
+      ],
+      "work_unit": 20
+    },
+    {
+      "queue_ranks": [
+        24
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchisee:alvarado-restaurant-nation"
+      ],
+      "work_unit": 21
+    },
+    {
+      "queue_ranks": [
+        25
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchisee:ambrosia-qsr"
+      ],
+      "work_unit": 22
+    },
+    {
+      "queue_ranks": [
+        26
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchisee:ars-brands"
+      ],
+      "work_unit": 23
+    },
+    {
+      "queue_ranks": [
+        27
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchisee:beshay-enterprises"
+      ],
+      "work_unit": 24
+    },
+    {
+      "queue_ranks": [
+        28
+      ],
+      "status": "awaiting_deep_research_response",
+      "targets": [
+        "franchisee:bluegrass-restaurant-holdings"
+      ],
+      "work_unit": 25
+    }
+  ]
+}

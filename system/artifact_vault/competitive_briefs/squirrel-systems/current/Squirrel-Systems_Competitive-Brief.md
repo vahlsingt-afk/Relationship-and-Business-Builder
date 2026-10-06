@@ -1,7 +1,15 @@
 # Squirrel Systems — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, Squirrel Systems presents a limited competitive threat due to the lack of confirmed accounts and recent developments that do not indicate significant growth or innovation. The team should monitor their activities closely but can focus on strengthening our own offerings without immediate concern.
+
+- Squirrel Systems has a long-established presence in the hospitality and casino sectors, which could pose a threat if they leverage this base effectively.
+- Recent developments indicate a lack of significant product innovation or expansion, suggesting they may not be a strong competitor in the near term.
+- Their integration with Shift4 payments in Canada could enhance their offering, but it does not confirm a strong foothold in the U.S. market.
+- The acquisition by Volaris Group may limit their reinvestment in product development, potentially hindering their competitive edge.
+- The absence of confirmed deployment scopes for key accounts like Cactus Club Cafe and SIR Corp indicates uncertainty about their market penetration.
 
 ## Where we're competing against them right now
 2 account(s) on file -- 0 confirmed, broad-scope relationship(s), 2 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

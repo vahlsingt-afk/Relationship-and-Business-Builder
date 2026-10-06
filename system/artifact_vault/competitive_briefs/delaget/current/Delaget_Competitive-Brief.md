@@ -1,7 +1,13 @@
 # Delaget — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Delaget currently poses a moderate competitive threat due to its recent acquisition by PAR Technology, which enhances its market presence with over 30,000 locations. However, the lack of confirmed brand-wide relationships and limited scope of existing accounts suggests that immediate action may not be necessary, but monitoring developments closely is advised.
+
+- Delaget's acquisition by PAR Technology significantly expands its reach, potentially impacting market dynamics.
+- The confirmed presence of Delaget in franchisee-level relationships with major brands like Taco Bell and Long John Silver's indicates a foothold that could grow if brand-wide adoption occurs.
+- Genius has a competitive edge in overlapping back-office solutions for Yum and RBI systems, which could be leveraged to maintain market position against Delaget's expansion.
 
 ## Where we're competing against them right now
 2 account(s) on file -- 0 confirmed, broad-scope relationship(s), 2 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

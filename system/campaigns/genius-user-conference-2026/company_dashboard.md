@@ -1,6 +1,6 @@
 # Global Payments Genius User Conference 2026 — Company Dashboard
 
-_Generated 2026-10-02T10:13:27+00:00_
+_Generated 2026-10-06T10:13:34+00:00_
 
 | Company | # Contacts | Best Contact | Top Tier | Status Summary |
 |---|---|---|---|---|

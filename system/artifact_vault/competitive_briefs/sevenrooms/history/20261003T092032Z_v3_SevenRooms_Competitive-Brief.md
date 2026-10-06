@@ -1,0 +1,25 @@
+# SevenRooms — Competitive Brief
+
+## Bottom line
+*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+
+## Where we're competing against them right now
+2 account(s) on file -- 0 confirmed, broad-scope relationship(s), 2 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).
+
+**Limited scope or unconfirmed -- do not treat as a clean win:**
+- Marriott International (in-hotel restaurants) (Loyalty) -- vendor role not confirmed; deployment scope not publicly disclosed
+- ThinkFoodGroup (Jose Andres) (Loyalty) -- vendor role not confirmed
+
+## What's new (last 60 days)
+- (2026-09-28) DoorDash completed the SevenRooms acquisition in June 2025; its announcement describes CRM, reservations, marketing and more than 13,000 hospitality venues globally. (Scope note: Venue count includes hotel food and beverage, nightlife and entertainment; this older announcement needs current footprint confirmation.) — *https://about.doordash.com/en-us/news/doordash-completes-acquisition-of-sevenrooms*
+- (2026-09-28) DoorDash said new SevenRooms venue signings grew more than 100% year over year in Q2 2026. (Scope note: Growth rate for newly signed venues is not revenue, installed base, or standalone profit.) — *https://ir.doordash.com/news/news-details/2026/DoorDash-Releases-Second-Quarter-2026-Financial-Results/default.aspx*
+- (2026-09-26) HQ / ownership: New York; acquired by DoorDash for ~$1.2B (all cash), announced May 6, 2025, completed mid-2025 — *https://ir.doordash.com/news/news-details/2025/DoorDash-Announces-Agreement-to-Acquire-SevenRooms-to-Enhance-Commerce-Platform-Offerings/default.aspx*
+- (2026-09-26) Reservations, guest CRM and marketing for full-service/hospitality, now part of DoorDash Commerce Platform to boost in-store business — "delivery, pickup, reservations, or in-person hospitality" (Parisa Sadrzadeh, VP Strategy & Ops, DoorDash) — *https://www.restaurantbusinessonline.com/technology/doordash-completes-acquisition-reservations-platform-sevenrooms*
+- (2026-09-26) DoorDash distribution and ad business ($1B run-rate cited) behind it — *https://www.restaurantbusinessonline.com/technology/doordash-completes-acquisition-reservations-platform-sevenrooms*
+- (2026-09-26) Strong in full-service & hotels (different sweet spot from Genius's QSR/venue base) — *system:genius_competitive_research_2026-09*
+- (2026-09-26) Some operators wary of sharing guest data with a delivery marketplace owner — *system:genius_competitive_research_2026-09*
+- (2026-09-26) Limited QSR relevance — *system:genius_competitive_research_2026-09*
+- (2026-09-26) Joel Montaniel — co-founder/CEO at time of deal (commented on acquisition); post-close role not confirmed — *https://www.delimarketnews.com/culture/doordash-announces-agreement-acquire-sevenrooms-enhance-commerce-platform-offerings-parisa-sadrzadeh-and-joel-montaniel-comment/deli-staff/wed-05072025-0839/19470*
+
+## Why this matters for the team
+- **SevenRooms wins:** DoorDash distribution and ad business ($1B run-rate cited) behind it

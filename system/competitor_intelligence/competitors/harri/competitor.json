@@ -20,9 +20,9 @@
   },
   "category_battle_cards": {},
   "last_evidence_date": "2026-09-28",
-  "last_synced_at": "2026-10-02T09:47:01Z",
+  "last_synced_at": "2026-10-06T09:22:09Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:47:01Z",
+  "updated_at": "2026-10-06T09:22:09Z",
   "latest_cos_commentary": {
     "headline": "Enterprise workforce incumbent limits the near-term labor wedge at Jack in the Box.",
     "genius_exposure": "Enterprise workforce incumbent limits the near-term labor wedge at Jack in the Box.",
@@ -54,5 +54,16 @@
         "Operator ROI evidence"
       ]
     }
+  },
+  "synthesis": {
+    "bottom_line": "Currently, there are no confirmed customer accounts for Harri, but their recent rollout at Jack in the Box across all 2,112 locations poses a potential competitive threat, particularly in labor scheduling and compliance. The team should monitor Harri's developments closely and consider strategies to differentiate Genius in these areas.",
+    "themes": [
+      "Harri's successful rollout at Jack in the Box demonstrates their capability to implement solutions at scale, which could attract other large clients.",
+      "The integration of Harri with established platforms like Qu, R365, and DnA enhances their value proposition, making it easier for clients to adopt their services.",
+      "Direct overlap with Genius in labor scheduling and compliance indicates a competitive threat that could impact our market share if not addressed.",
+      "The absence of confirmed accounts for Harri suggests that while they are making strides, their market presence is not yet fully established, providing an opportunity for Genius to strengthen its position.",
+      "Harri's focus on a mobile-first enterprise platform aligns with current industry trends, which could resonate well with potential customers seeking modern solutions."
+    ],
+    "generated_at": "2026-10-02T21:11:24Z"
   }
 }

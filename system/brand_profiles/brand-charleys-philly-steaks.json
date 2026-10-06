@@ -3,26 +3,24 @@
   "brand_name": "Charleys Philly Steaks",
   "identity": {
     "parent_ownership": {
-      "value": "GOSH Enterprises, Inc. / Charley Shin",
-      "status": "reported",
-      "evidence_ids": [
-        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
-      ],
+      "value": "private; Charley Shin",
+      "status": "confirmed",
+      "evidence_ids": [],
       "confidence": "high",
-      "as_of": "2026-09-29",
+      "as_of": "2026-10-03",
       "scope": "brand",
-      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+      "last_reviewed_by": "system:brand_company_profile_research_2026-10",
+      "source_url": "https://charleysfranchise.com/wp-content/uploads/2023/03/Charleys-2022-FDD-7-13-22.pdf"
     },
     "hq_city_state": {
-      "value": "Columbus, Ohio, USA",
-      "status": "reported",
-      "evidence_ids": [
-        "top500-profile-gapfill::2026-09-29-merged-batches01-14"
-      ],
+      "value": "5000 Arlington Centre Blvd., Suite 5300, Columbus, Ohio 43220",
+      "status": "confirmed",
+      "evidence_ids": [],
       "confidence": "high",
-      "as_of": "2026-09-29",
+      "as_of": "2026-10-03",
       "scope": "brand",
-      "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+      "last_reviewed_by": "system:brand_company_profile_research_2026-10",
+      "source_url": "https://charleysfranchise.com/wp-content/uploads/2023/03/Charleys-2022-FDD-7-13-22.pdf"
     },
     "founded_year": {
       "value": "1986",
@@ -67,6 +65,16 @@
       "as_of": "2026-09-29",
       "scope": "brand",
       "last_reviewed_by": "system:top500_profile_gapfill_ingest"
+    },
+    "legal_entity": {
+      "value": "Gosh Enterprises, Inc.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "high",
+      "as_of": "2026-10-03",
+      "scope": "brand",
+      "last_reviewed_by": "system:brand_company_profile_research_2026-10",
+      "source_url": "https://charleysfranchise.com/wp-content/uploads/2023/03/Charleys-2022-FDD-7-13-22.pdf"
     }
   },
   "synopsis": {
@@ -82,7 +90,80 @@
   },
   "leadership": {
     "confirmed": [],
-    "reported_unverified": []
+    "reported_unverified": [
+      {
+        "value": "Charley M. Shin -- Founder, Chief Executive Officer and Chairman",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "medium",
+        "as_of": "2026-04-28",
+        "scope": "brand",
+        "last_reviewed_by": "system:brand_company_profile_research_2026-10",
+        "source_url": "https://charleysfranchise.com/wp-content/uploads/2023/03/Charleys-2022-FDD-7-13-22.pdf",
+        "name": "Charley M. Shin",
+        "title": "Founder, Chief Executive Officer and Chairman"
+      },
+      {
+        "value": "Howard Fickel -- Chief Financial Officer",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "medium",
+        "as_of": "2026-04-28",
+        "scope": "brand",
+        "last_reviewed_by": "system:brand_company_profile_research_2026-10",
+        "source_url": "https://charleysfranchise.com/wp-content/uploads/2023/03/Charleys-2022-FDD-7-13-22.pdf",
+        "name": "Howard Fickel",
+        "title": "Chief Financial Officer"
+      },
+      {
+        "value": "Candra Alisiswanto -- Executive Vice President",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "medium",
+        "as_of": "2026-04-28",
+        "scope": "brand",
+        "last_reviewed_by": "system:brand_company_profile_research_2026-10",
+        "source_url": "https://charleysfranchise.com/wp-content/uploads/2023/03/Charleys-2022-FDD-7-13-22.pdf",
+        "name": "Candra Alisiswanto",
+        "title": "Executive Vice President"
+      },
+      {
+        "value": "John Woo -- Vice President of Development",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "medium",
+        "as_of": "2026-04-28",
+        "scope": "brand",
+        "last_reviewed_by": "system:brand_company_profile_research_2026-10",
+        "source_url": "https://charleysfranchise.com/wp-content/uploads/2023/03/Charleys-2022-FDD-7-13-22.pdf",
+        "name": "John Woo",
+        "title": "Vice President of Development"
+      },
+      {
+        "value": "Bruce Kim -- Vice President of Franchise Development",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "medium",
+        "as_of": "2026-04-28",
+        "scope": "brand",
+        "last_reviewed_by": "system:brand_company_profile_research_2026-10",
+        "source_url": "https://charleysfranchise.com/wp-content/uploads/2023/03/Charleys-2022-FDD-7-13-22.pdf",
+        "name": "Bruce Kim",
+        "title": "Vice President of Franchise Development"
+      },
+      {
+        "value": "Gregory Wold -- Vice President of Marketing",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "medium",
+        "as_of": "2026-04-28",
+        "scope": "brand",
+        "last_reviewed_by": "system:brand_company_profile_research_2026-10",
+        "source_url": "https://charleysfranchise.com/wp-content/uploads/2023/03/Charleys-2022-FDD-7-13-22.pdf",
+        "name": "Gregory Wold",
+        "title": "Vice President of Marketing"
+      }
+    ]
   },
   "footprint": {
     "total_units": {
@@ -90,7 +171,7 @@
       "status": "confirmed",
       "evidence_ids": [],
       "confidence": "high",
-      "as_of": "2026-09-29",
+      "as_of": "2026-10-03",
       "scope": "brand",
       "last_reviewed_by": "system:technomic_ingest"
     },
@@ -99,7 +180,7 @@
       "status": "confirmed",
       "evidence_ids": [],
       "confidence": "high",
-      "as_of": "2026-09-29",
+      "as_of": "2026-10-03",
       "scope": "brand",
       "last_reviewed_by": "system:technomic_ingest"
     },
@@ -108,7 +189,7 @@
       "status": "confirmed",
       "evidence_ids": [],
       "confidence": "high",
-      "as_of": "2026-09-29",
+      "as_of": "2026-10-03",
       "scope": "brand",
       "last_reviewed_by": "system:technomic_ingest"
     },
@@ -126,7 +207,7 @@
   "pain_points": [],
   "template_version": "brand-profile-v1",
   "created_at": "2026-09-29T10:38:37Z",
-  "updated_at": "2026-09-29T10:39:32Z",
+  "updated_at": "2026-10-03T09:32:51Z",
   "trajectory": {
     "badge": "Growing",
     "metric_used": "unit_delta_pct",
@@ -140,5 +221,74 @@
       "auv_usd": 900000.0
     },
     "rule": "Technomic net-unit-change YoY (sales-delta fallback when unit data is missing): > +3% Growing, -3% to +3% Flat, < -3% Contracting."
+  },
+  "franchise_disclosure": {
+    "value": {
+      "issuance_date": "2026-04-28",
+      "franchisor": "Gosh Enterprises, Inc.",
+      "technology_mandates": [
+        "Approved/designated POS required",
+        "Brink POS currently approved",
+        "At least one Bite ordering kiosk required",
+        "PAR Brink support contract required",
+        "POS must remain accessible to franchisor for data retrieval",
+        "Franchisor-directed technology upgrades/replacements required at franchisee expense",
+        "MoodMedia currently approved for CPSW in-restaurant media equipment"
+      ],
+      "technology_fees": [
+        {
+          "item": "Brink support",
+          "amount": "$160/month for up to two POS terminals and two kitchen video displays; $270/month for four POS terminals and six kitchen video displays"
+        },
+        {
+          "item": "Kiosk software service",
+          "amount": "$120/month"
+        },
+        {
+          "item": "Walmart technology fee",
+          "amount": "$6.50/month"
+        },
+        {
+          "item": "Walmart digital menu board support",
+          "amount": "$27.50/week"
+        }
+      ],
+      "governance": "HQ-approved suppliers and designated installation vendors; alternative suppliers require written approval; franchisor may change approved brands and suppliers.",
+      "replacement_obligation": "Franchisees must promptly install directed upgrades, additions, changes, modifications, substitutions and replacements to technology and connectivity systems at their expense."
+    },
+    "status": "confirmed",
+    "evidence_ids": [],
+    "confidence": "high",
+    "as_of": "2026-04-28",
+    "scope": "brand",
+    "last_reviewed_by": "system:brand_company_profile_research_2026-10",
+    "source_url": "https://charleysfranchise.com/wp-content/uploads/2023/03/Charleys-2022-FDD-7-13-22.pdf"
+  },
+  "financial_operating_health": {
+    "value": {
+      "as_of": "2025-12-31",
+      "franchisor_financials": {
+        "revenue": 53047475,
+        "net_income": 18000523,
+        "operating_cash_flow": 15017662,
+        "assets": 57243878,
+        "liabilities": 19227760,
+        "shareholder_equity": 38016118
+      },
+      "franchised_restaurant_item19": {
+        "cohort_units": 713,
+        "average_gross_sales": 845372,
+        "median_gross_sales": 743169,
+        "minimum_gross_sales": 194646,
+        "maximum_gross_sales": 2910878
+      }
+    },
+    "status": "confirmed",
+    "evidence_ids": [],
+    "confidence": "high",
+    "as_of": "2025-12-31",
+    "scope": "brand",
+    "last_reviewed_by": "system:brand_company_profile_research_2026-10",
+    "source_url": "https://charleysfranchise.com/wp-content/uploads/2023/03/Charleys-2022-FDD-7-13-22.pdf"
   }
 }

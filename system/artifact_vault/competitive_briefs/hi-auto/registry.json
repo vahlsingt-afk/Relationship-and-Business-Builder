@@ -47,6 +47,14 @@
       "generated_for": "system:daily_refresh",
       "purpose": "competitive brief",
       "path": "system/artifact_vault/competitive_briefs/hi-auto/current/Hi-Auto_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 7,
+      "generated_at": "2026-10-03T09:20:29Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/hi-auto/current/Hi-Auto_Competitive-Brief.md",
       "superseded": false
     }
   ]

@@ -1,7 +1,15 @@
 # 7shifts — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+7shifts presents a moderate competitive threat, particularly with its recent expansion into larger restaurant groups and a significant customer base of over 55,000 restaurants. However, their recent layoffs indicate potential instability, which could be an opportunity for Genius to capitalize on by targeting their dissatisfied customers.
+
+- 7shifts is expanding its market presence by moving upmarket, securing relationships with notable brands like IHOP and Boston Pizza Franchise Group.
+- The company claims a large customer base of over 55,000 restaurants, which could pose a significant competitive threat if they maintain customer satisfaction.
+- Recent layoffs at 7shifts suggest potential operational challenges, which Genius could leverage to attract their customers.
+- 7shifts' recognition in the Deloitte Technology Fast 500 indicates a level of credibility and growth that could enhance their competitive position.
+- The lack of confirmed brand-wide relationships for 7shifts suggests that their market penetration may not be as robust as it appears, providing an opening for Genius.
 
 ## Where we're competing against them right now
 8 account(s) on file -- 0 confirmed, broad-scope relationship(s), 8 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

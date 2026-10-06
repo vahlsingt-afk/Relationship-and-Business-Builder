@@ -1,7 +1,13 @@
 # Craver — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Craver currently poses a limited competitive threat due to its unconfirmed accounts and lack of enterprise-level integrations. The team should monitor Craver's developments closely but prioritize efforts on competitors with stronger market presence and confirmed deployments.
+
+- Craver's current market presence is limited, with only one unconfirmed account, indicating a weak foothold in the industry.
+- Recent product offerings focus on SMBs and lack enterprise-level integrations, which may limit their appeal to larger restaurant chains.
+- Customer feedback highlights concerns about support and integration issues, suggesting potential weaknesses in their service delivery.
 
 ## Where we're competing against them right now
 1 account(s) on file -- 0 confirmed, broad-scope relationship(s), 1 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

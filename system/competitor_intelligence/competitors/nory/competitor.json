@@ -27,9 +27,9 @@
     ]
   },
   "last_evidence_date": "2026-09-29",
-  "last_synced_at": "2026-10-02T09:46:55Z",
+  "last_synced_at": "2026-10-06T09:22:05Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:46:55Z",
+  "updated_at": "2026-10-06T09:22:05Z",
   "vendor_claims": [
     {
       "value": "AI-centered restaurant operating system rather than a core POS platform.",
@@ -186,5 +186,16 @@
         "detailed financial health beyond funding round"
       ]
     }
+  },
+  "synthesis": {
+    "bottom_line": "Nory currently presents a moderate competitive threat, primarily due to its recent funding and reported operational efficiencies. However, the lack of confirmed customer accounts and independent validation of its claims suggests that the immediate risk is manageable, but the team should monitor Nory's developments closely as they expand into the US market.",
+    "themes": [
+      "Nory has secured significant funding and is expanding into the US, indicating potential for rapid growth and increased competition.",
+      "The company claims substantial operational efficiencies for its users, which could attract new customers if validated.",
+      "Nory's focus on AI-forecasting explainability differentiates it from competitors like Toast and Restaurant365, potentially appealing to tech-savvy restaurant operators.",
+      "Despite its claims, Nory's customer accounts remain largely unconfirmed, which raises questions about the reliability of its reported performance metrics.",
+      "The competitive landscape is evolving, and Nory's advancements in back-office automation could influence market expectations and customer preferences."
+    ],
+    "generated_at": "2026-10-02T21:10:20Z"
   }
 }

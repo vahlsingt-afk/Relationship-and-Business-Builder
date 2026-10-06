@@ -1,7 +1,13 @@
 # Elo — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Elo presents a moderate competitive threat due to its established presence with major brands like KFC and Taco Bell, and its recent partnership with Toast to enhance its hardware offerings. The team should monitor Elo's developments closely, especially their integration with various software platforms, but no immediate action is required as there are no direct head-to-head advantages noted.
+
+- Elo's acquisition by Zebra Technologies enhances its market position and resources, potentially increasing its competitive capabilities.
+- The partnership with Toast allows Elo to penetrate the restaurant market more effectively, offering integrated hardware solutions that could attract new customers.
+- Elo's OS-agnostic hardware strategy positions it favorably against competitors that may lock customers into specific platforms, appealing to a broader range of restaurant operators.
 
 ## Where we're competing against them right now
 2 account(s) on file -- 2 confirmed, broad-scope relationship(s), 0 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

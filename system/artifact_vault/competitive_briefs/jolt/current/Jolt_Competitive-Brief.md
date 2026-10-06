@@ -1,7 +1,15 @@
 # Jolt — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, Jolt poses a limited competitive threat due to its unconfirmed accounts and narrow scope of operations primarily focused on kitchen management rather than direct competition with Genius. The team should monitor Jolt's developments closely, especially following its acquisition by Digi International, but immediate action is not necessary.
+
+- Jolt's recent acquisition by Digi International could enhance its capabilities and market reach, warranting close observation.
+- The confirmed accounts for Jolt are limited to franchisee-level relationships, indicating a lack of widespread adoption that reduces immediate competitive pressure.
+- Jolt's focus on kitchen operations and compliance tools suggests a different market segment than Genius, which may allow for differentiated strategies.
+- The digitization of food-safety checklists and logs indicates Jolt's commitment to operational efficiency, which could appeal to certain restaurant segments.
+- The low overlap with Genius's Drive Thru Director suggests that while Jolt is a player in the restaurant tech space, it may not directly compete with Genius's core offerings.
 
 ## Where we're competing against them right now
 6 account(s) on file -- 0 confirmed, broad-scope relationship(s), 6 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

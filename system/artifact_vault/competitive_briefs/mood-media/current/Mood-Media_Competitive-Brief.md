@@ -1,7 +1,15 @@
 # Mood Media — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Mood Media currently poses a moderate competitive threat due to its extensive commercial footprint and established brand relationships, particularly with major clients like McDonald's. However, their limited confirmed accounts and recent bankruptcy history suggest vulnerabilities that Genius can leverage. The team should monitor Mood Media's developments closely while emphasizing Genius's stability and advantages in marketing efforts.
+
+- Mood Media has a significant commercial footprint with 500,000 locations globally, which enhances its market presence and potential influence.
+- Despite its scale, Mood Media's confirmed accounts are limited, indicating potential weaknesses in its market penetration and reliability as a system of record.
+- The recent bankruptcy history of Mood Media may present an opportunity for Genius to position itself as a more stable and reliable partner for restaurants.
+- Mood Media's focus on digital menu boards is secondary to its primary offerings in music and audio, suggesting that their commitment to this segment may not be as strong as Genius's.
+- The competitive landscape includes Mood Media as a contender for key contracts, such as Pollo Campero's RFP, highlighting the need for Genius to remain vigilant and proactive.
 
 ## Where we're competing against them right now
 6 account(s) on file -- 0 confirmed, broad-scope relationship(s), 6 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

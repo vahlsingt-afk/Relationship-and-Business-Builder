@@ -1,6 +1,6 @@
 # Global Payments Genius User Conference 2026 — Priority Invite List
 
-_Generated 2026-10-02T10:14:14+00:00_
+_Generated 2026-10-06T10:14:18+00:00_
 
 149 people ranked by relationship-first score (40% relationship graph / 25% executive buying authority / 20% strategic brand value / 10% recent engagement / 5% existing invite status). Registered contacts are excluded from this list entirely; invited-but-not-registered contacts are kept and annotated, not removed. No 'Units' (store/location count) column — that data doesn't exist anywhere in this system; Segment is the real scoring tier, not an invented size category.
 

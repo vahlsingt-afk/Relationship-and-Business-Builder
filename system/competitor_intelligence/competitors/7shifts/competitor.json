@@ -31,9 +31,9 @@
   },
   "category_battle_cards": {},
   "last_evidence_date": "2026-09-29",
-  "last_synced_at": "2026-10-02T09:46:58Z",
+  "last_synced_at": "2026-10-06T09:22:07Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:46:58Z",
+  "updated_at": "2026-10-06T09:22:07Z",
   "latest_cos_commentary": {
     "headline": "Restaurant workforce specialist may defend labor scheduling at franchisee and enterprise levels.",
     "genius_exposure": "Restaurant workforce specialist may defend labor scheduling at franchisee and enterprise levels.",
@@ -65,5 +65,16 @@
         "Operator ROI evidence"
       ]
     }
+  },
+  "synthesis": {
+    "bottom_line": "7shifts presents a moderate competitive threat, particularly with its recent expansion into larger restaurant groups and a significant customer base of over 55,000 restaurants. However, their recent layoffs indicate potential instability, which could be an opportunity for Genius to capitalize on by targeting their dissatisfied customers.",
+    "themes": [
+      "7shifts is expanding its market presence by moving upmarket, securing relationships with notable brands like IHOP and Boston Pizza Franchise Group.",
+      "The company claims a large customer base of over 55,000 restaurants, which could pose a significant competitive threat if they maintain customer satisfaction.",
+      "Recent layoffs at 7shifts suggest potential operational challenges, which Genius could leverage to attract their customers.",
+      "7shifts' recognition in the Deloitte Technology Fast 500 indicates a level of credibility and growth that could enhance their competitive position.",
+      "The lack of confirmed brand-wide relationships for 7shifts suggests that their market penetration may not be as robust as it appears, providing an opening for Genius."
+    ],
+    "generated_at": "2026-10-02T21:10:58Z"
   }
 }

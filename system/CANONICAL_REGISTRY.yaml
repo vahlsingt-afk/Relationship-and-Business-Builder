@@ -844,6 +844,46 @@ domains:
       typo'd slug now creates a new shell rather than failing loudly.
     legacy_status: not_applicable_new_domain
 
+  franchisee_finder:
+    authority_status: operational_phase_1
+    note: >-
+      2026-10-02: new canonical domain, per system/design/FRANCHISEE_FINDER_SPEC.md
+      ("franchisee lists are hard to get" -- Todd). Phase 1 only (artifact/
+      schema, Hunter research integration, seed import) -- Team Portal
+      search UI, the full listFranchiseeOrganizations/getFranchiseeProfile/
+      submitFranchiseeCorrection API surface, and the quarterly/monthly
+      differential-refresh scheduler from spec sections 8/12 are NOT built
+      yet (Phase 2/3). Seeded at creation from two real, previously-
+      unconsolidated sources: 47 multi_brand_franchisee_operator entities
+      already in ecosystem_intelligence.json (277 real sourced `operates`
+      relationships, FRANdata-via-Multi-Unit-Franchisee, confidence
+      scores attached) at their real confidence, plus the static
+      Franchise Times "2026 Restaurant 200" extract (system/
+      franchisee_hierarchy.json) at LOW confidence per the spec's own
+      instruction to treat it as "a candidate seed/import, not the schema
+      to build on." Matched by franchisee_intelligence.find_similar_
+      franchisees() so the same real organization in both sources gets
+      one record, never two silently duplicate shells.
+    authoritative_store: system/franchisee_finder/organizations/*/{organization.json,evidence.jsonl}
+    projections:
+      - system/franchisee_finder/_portfolio/franchisee_registry.json
+    schemas:
+      - system/scripts/franchisee_intelligence_common.py (the shape; no separate JSON schema file -- same convention as competitor_intelligence)
+    mutation_owner:
+      - system/scripts/franchisee_intelligence.py (create_franchisee, add_extended_profile_finding, add_franchisee_evidence, set_hierarchy_level, set_confidence_tier)
+      - system/scripts/franchisee_intelligence_common.py
+      - system/scripts/import_franchisee_research.py (review-first Hunter packet intake -- rb.franchisee_discovery.v1 and rb.franchisee_organization_profile.v1, wired into hunter_change_dispatch.py)
+      - system/scripts/franchisee_finder_seed_import.py (one-time/idempotent seed from the two sources above)
+    hunter_integration:
+      - system/scripts/export_franchisee_research_gaps.py (discovery gaps -- tracked brands with no franchisee on record; profile gaps -- known organizations missing core Phase 1 fields)
+      - system/scripts/hunter_gap_manifest.py (universe="franchisees", also included in universe="all")
+      - system/research/hunter_playbooks.json (franchisee_discovery, franchisee_organization_profile)
+      - system/scripts/hunter_research_priority_queue.py (franchisee targets ranked alongside brands/competitors in the one CoS-ranked order)
+    validation: not_yet_built
+    freshness_policy: not_yet_declared (spec section 8's quarterly-high-confidence/monthly-low-confidence differential refresh is not implemented -- Phase 1 relies on the gap-manifest-driven Hunter priority queue only)
+    conflict_policy: not_yet_declared (mutation_policy.decide()'s standard conflicting-undated-value-requires-review gate applies to every write; no franchisee-specific conflict handling beyond that yet)
+    legacy_status: not_applicable_new_domain
+
   watchlist:
     authority_status: operational
     note: >-

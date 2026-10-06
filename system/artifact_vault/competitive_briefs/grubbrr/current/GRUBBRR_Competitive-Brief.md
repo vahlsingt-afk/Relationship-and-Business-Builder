@@ -1,7 +1,15 @@
 # GRUBBRR — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+GRUBBRR currently poses a moderate competitive threat, primarily due to its partnerships and claims of significant ROI, but its limited confirmed deployments suggest it is not yet a widespread threat. The team should monitor GRUBBRR's developments closely, especially regarding its partnership with Samsung and the potential impact on our existing customers.
+
+- GRUBBRR's partnership with Samsung enhances its market presence and offers a compelling 'results or clients don't pay' guarantee, which could attract new clients.
+- The claims of a +25% average ticket increase and $75K+ annual ROI per location make GRUBBRR's offerings appealing to potential customers, raising the stakes for our value proposition.
+- The coexistence with Genius at Bojangles highlights a potential displacement risk, necessitating proactive engagement with our clients to reinforce loyalty.
+- Despite its advantages, GRUBBRR's current deployments are limited to hardware vendor roles, indicating that it has not yet achieved full system integration in major chains.
+- The focus on kiosks and digital menu boards aligns with industry trends, making GRUBBRR a relevant player to watch as the market evolves.
 
 ## Where we're competing against them right now
 4 account(s) on file -- 0 confirmed, broad-scope relationship(s), 4 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

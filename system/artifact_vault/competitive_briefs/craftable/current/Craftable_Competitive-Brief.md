@@ -1,7 +1,14 @@
 # Craftable — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Craftable currently poses a limited competitive threat due to its focus on upscale hospitality, which has low overlap with Genius's QSR/venue base. However, the recent strategic growth investment and their AI-powered suite could enhance their capabilities, warranting continued monitoring of their developments and customer acquisitions.
+
+- Craftable's focus on upscale hospitality positions them uniquely, but their low overlap with Genius's QSR market reduces immediate competitive pressure.
+- Recent strategic investments and a growing user base indicate potential for Craftable to scale and enhance their offerings, which could impact future competition.
+- The presence of notable hospitality logos like Tao Group and Kimpton suggests Craftable is establishing a strong brand presence in its niche, which could attract more customers.
+- Their AI-powered suite, while not yet confirmed in customer rollouts, indicates a forward-looking approach that could lead to significant operational efficiencies for their clients.
 
 ## Where we're competing against them right now
 1 account(s) on file -- 0 confirmed, broad-scope relationship(s), 1 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

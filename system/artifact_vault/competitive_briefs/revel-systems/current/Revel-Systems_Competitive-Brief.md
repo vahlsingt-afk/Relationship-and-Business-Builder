@@ -1,7 +1,15 @@
 # Revel Systems — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Revel Systems poses a moderate competitive threat due to its recent acquisition by Shift4, which has expanded its merchant base significantly. However, the potential for churn among Revel's existing customers due to forced payment processing presents an opportunity for Genius to capitalize on dissatisfaction in the market.
+
+- Revel's acquisition by Shift4 has expanded its reach to approximately 18,000 merchant locations, increasing its competitive presence.
+- Shift4's strategy to integrate Revel into its own product line may lead to customer dissatisfaction and churn, particularly among those resistant to forced payment processing.
+- The potential for Revel's existing customers to seek alternatives due to changes in payment processing creates an opening for Genius to attract new clients.
+- Revel's previous oversight of payment solutions indicates a gap that Genius can exploit by emphasizing its comprehensive offerings.
+- The integration of Revel into Shift4 may streamline operations but also risks alienating a segment of its customer base, which could benefit Genius.
 
 ## Where we're competing against them right now
 1 account(s) on file -- 1 confirmed, broad-scope relationship(s), 0 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

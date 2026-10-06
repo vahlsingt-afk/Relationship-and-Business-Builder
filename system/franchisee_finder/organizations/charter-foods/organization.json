@@ -1,0 +1,201 @@
+{
+  "franchisee_id": "fran-charter-foods",
+  "franchisee_slug": "charter-foods",
+  "display_name": "Charter Foods",
+  "aliases": [],
+  "hierarchy_level": "multi_brand_franchisee_group",
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "value": "Taco Bell -- confirmed operator (unit count not captured by this source; see franchisee_organization_profile gaps)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-27",
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "source_url": "https://www.franchising.com/articles/20260606_2026_multibrand_50_scale_evolves_into_strategy.html",
+      "finding_type": "independently_verified",
+      "limitations_or_conflicts": "Source: FRANdata 2026 Multi-Brand 50 via Multi-Unit Franchisee"
+    },
+    {
+      "value": "Long John Silver's -- confirmed operator (unit count not captured by this source; see franchisee_organization_profile gaps)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-27",
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "source_url": "https://www.franchising.com/articles/20260606_2026_multibrand_50_scale_evolves_into_strategy.html",
+      "finding_type": "independently_verified",
+      "limitations_or_conflicts": "Source: FRANdata 2026 Multi-Brand 50 via Multi-Unit Franchisee"
+    },
+    {
+      "value": "KFC -- confirmed operator (unit count not captured by this source; see franchisee_organization_profile gaps)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-27",
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "source_url": "https://www.franchising.com/articles/20260606_2026_multibrand_50_scale_evolves_into_strategy.html",
+      "finding_type": "independently_verified",
+      "limitations_or_conflicts": "Source: FRANdata 2026 Multi-Brand 50 via Multi-Unit Franchisee"
+    },
+    {
+      "value": "Pizza Hut -- confirmed operator (unit count not captured by this source; see franchisee_organization_profile gaps)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-27",
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "source_url": "https://www.franchising.com/articles/20260606_2026_multibrand_50_scale_evolves_into_strategy.html",
+      "finding_type": "independently_verified",
+      "limitations_or_conflicts": "Source: FRANdata 2026 Multi-Brand 50 via Multi-Unit Franchisee"
+    },
+    {
+      "value": "Taco Bell -- 357 units (Franchise Times 2026 Restaurant 200, unverified)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": null,
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Franchise Times 2026 Restaurant 200",
+      "source_type": "trade_press_ranking"
+    },
+    {
+      "value": "YUM! Multi -- 36 units (Franchise Times 2026 Restaurant 200, unverified)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": null,
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Franchise Times 2026 Restaurant 200",
+      "source_type": "trade_press_ranking"
+    },
+    {
+      "value": "Long John Silver’s -- 31 units (Franchise Times 2026 Restaurant 200, unverified)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": null,
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Franchise Times 2026 Restaurant 200",
+      "source_type": "trade_press_ranking"
+    },
+    {
+      "value": "KFC -- 6 units (Franchise Times 2026 Restaurant 200, unverified)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": null,
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Franchise Times 2026 Restaurant 200",
+      "source_type": "trade_press_ranking"
+    },
+    {
+      "value": "Pizza Hut Express -- 6 units (Franchise Times 2026 Restaurant 200, unverified)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": null,
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Franchise Times 2026 Restaurant 200",
+      "source_type": "trade_press_ranking"
+    }
+  ],
+  "leadership": [
+    {
+      "value": "John Rankin -- Senior Director",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "critical",
+      "as_of": "2026-09-27",
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "source_url": "https://partech.com/news-coverage/how-a-big-taco-bell-franchisee-is-and-isnt-using-ai/",
+      "finding_type": "independently_verified"
+    }
+  ],
+  "operating_geography": [],
+  "growth_notes": [],
+  "technology_relationships": [],
+  "headquarters": {
+    "value": "Morristown, TN",
+    "status": "confirmed",
+    "evidence_ids": [],
+    "confidence": "low",
+    "as_of": null,
+    "scope": "franchisee_organization",
+    "last_reviewed_by": "system:franchisee_intelligence_common",
+    "finding_type": "marketplace_reported",
+    "source_owner": "Franchise Times 2026 Restaurant 200",
+    "source_type": "trade_press_ranking"
+  },
+  "registered_address": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "franchisee_organization",
+    "last_reviewed_by": null
+  },
+  "ownership": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "franchisee_organization",
+    "last_reviewed_by": null
+  },
+  "sales_estimate": {
+    "value": "$600,000,000 (estimated, Franchise Times 2026 Restaurant 200, rank 19)",
+    "status": "confirmed",
+    "evidence_ids": [],
+    "confidence": "low",
+    "as_of": null,
+    "scope": "franchisee_organization",
+    "last_reviewed_by": "system:franchisee_intelligence_common",
+    "finding_type": "marketplace_reported",
+    "source_owner": "Franchise Times 2026 Restaurant 200",
+    "source_type": "trade_press_ranking"
+  },
+  "total_identified_units": {
+    "value": "436",
+    "status": "confirmed",
+    "evidence_ids": [],
+    "confidence": "low",
+    "as_of": null,
+    "scope": "franchisee_organization",
+    "last_reviewed_by": "system:franchisee_intelligence_common",
+    "finding_type": "marketplace_reported",
+    "source_owner": "Franchise Times 2026 Restaurant 200",
+    "source_type": "trade_press_ranking"
+  },
+  "source_discovery": {
+    "method": null,
+    "discovered_from_brand": null,
+    "confidence": "unknown",
+    "as_of": null,
+    "source_url": null
+  },
+  "last_evidence_date": "2026-10-02",
+  "last_researched": "2026-10-02",
+  "next_scheduled_review": null,
+  "confidence_tier": "low",
+  "template_version": "franchisee-intelligence-v1",
+  "updated_at": "2026-10-03T01:40:58Z"
+}

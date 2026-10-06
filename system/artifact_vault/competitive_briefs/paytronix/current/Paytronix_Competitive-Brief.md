@@ -1,7 +1,14 @@
 # Paytronix — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Paytronix currently presents a moderate competitive threat, primarily due to its strong presence in the convenience store vertical and backing from a deep-pocketed owner. However, the lack of confirmed broad-scope deployments in the restaurant sector suggests that immediate action may not be necessary, but monitoring their developments closely is advisable.
+
+- Paytronix has a significant presence in the convenience store sector, which could pose a threat to our market share if they expand into restaurants.
+- The backing of Access Hospitality provides Paytronix with substantial financial resources, enhancing their ability to innovate and market their services.
+- Recent developments indicate a potential shift in Paytronix's identity and priorities following its acquisition, which could impact its competitive strategy.
+- The lack of confirmed broad-scope deployments in the restaurant sector suggests that while Paytronix is a competitor, their immediate impact may be limited.
 
 ## Where we're competing against them right now
 13 account(s) on file -- 0 confirmed, broad-scope relationship(s), 13 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

@@ -14,9 +14,9 @@
   },
   "category_battle_cards": {},
   "last_evidence_date": "2026-09-29",
-  "last_synced_at": "2026-10-02T09:46:57Z",
+  "last_synced_at": "2026-10-06T09:22:06Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:46:57Z",
+  "updated_at": "2026-10-06T09:22:06Z",
   "latest_cos_commentary": {
     "headline": "Otter is a multichannel order-aggregation and POS platform (founded 2020) with published tiered pricing ($79-$278/month) and named restaurant relationships spanning independents through recognizable multi-unit brands (Wingstop, Jack in the Box, Denny's).",
     "genius_exposure": "Direct competitor to Genius across pos and online-ordering/aggregation, with published pricing that undercuts typical enterprise POS deals for smaller locations; its order-aggregation-first origin gives it a distinct wedge into accounts already using multiple delivery channels.",
@@ -53,5 +53,15 @@
         "verified scope of named enterprise customer deployments"
       ]
     }
+  },
+  "synthesis": {
+    "bottom_line": "Currently, Otter presents a limited competitive threat due to the lack of confirmed broad-scope accounts and the uncertainty surrounding their relationships with major brands. The team should monitor Otter's developments closely but can prioritize other competitors for immediate strategic focus.",
+    "themes": [
+      "Otter's multichannel platform aggregates orders from over 100 channels, which could appeal to restaurants looking for comprehensive solutions.",
+      "Their tiered pricing structure may attract smaller restaurants, potentially increasing their market penetration.",
+      "The presence of notable brands like Wingstop and Denny's on their marketing site suggests they are gaining traction, but the scope of these relationships remains unverified.",
+      "Limited confirmed accounts indicate that while Otter is growing, they have not yet established a strong foothold in the market."
+    ],
+    "generated_at": "2026-10-02T21:10:51Z"
   }
 }

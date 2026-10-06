@@ -1,7 +1,15 @@
 # NCR Voyix — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+NCR Voyix presents a moderate competitive threat due to its significant installed base and claims of market leadership in new restaurant deployments. However, their recent revenue decline and operational challenges suggest vulnerabilities that Genius can exploit. The team should monitor NCR Voyix closely while emphasizing our strengths in revenue stability and hardware management.
+
+- NCR Voyix's claims of being the largest POS software supplier and leader in new restaurant deployments highlight its competitive positioning, but these claims lack independent verification.
+- The competitor's substantial installed base and recent expansion with Pei Wei indicate ongoing market presence, yet their shrinking revenue and operational issues present opportunities for Genius.
+- NCR Voyix's outsourcing of hardware production may lead to potential service delays, which Genius can leverage to highlight our superior support and installation capabilities.
+- The reported customer complaints about slow response times and installation problems suggest weaknesses in NCR Voyix's service delivery that Genius can capitalize on.
+- Despite NCR Voyix's growth in remaining contract value, their overall financial performance is declining, indicating potential instability that could affect their market position.
 
 ## Where we're competing against them right now
 6 account(s) on file -- 3 confirmed, broad-scope relationship(s), 3 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

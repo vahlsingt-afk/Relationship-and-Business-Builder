@@ -1,0 +1,1405 @@
+{
+  "change_comparison": {
+    "errors": [],
+    "reviewed_change_event_ids": [
+      "chg-ce001",
+      "chg-ce002",
+      "chg-ce003",
+      "chg-ce004"
+    ],
+    "schema": "rb.hunter_change_comparison.v1",
+    "snapshot_hash": "5378ed26a36e1b09634ca51beb445964bd70a5264741a7a124ae91995e3669a4",
+    "valid": true
+  },
+  "confirmed": false,
+  "dispatch": null,
+  "normalization": {
+    "applied": true,
+    "changes": [
+      "source_id:S001->src-s001",
+      "source_id:S002->src-s002",
+      "source_id:S003->src-s003",
+      "source_id:S004->src-s004",
+      "source_id:S005->src-s005",
+      "source_id:S006->src-s006",
+      "source_id:S007->src-s007",
+      "source_id:S008->src-s008",
+      "source_id:S009->src-s009",
+      "source_id:S010->src-s010",
+      "source_id:S011->src-s011",
+      "source_id:S012->src-s012",
+      "source_id:S013->src-s013",
+      "source_id:S014->src-s014",
+      "source_id:S015->src-s015",
+      "source_id:S016->src-s016",
+      "source_id:S017->src-s017",
+      "source_id:S018->src-s018",
+      "finding_id:F001->f-f001",
+      "finding_id:F002->f-f002",
+      "finding_id:F003->f-f003",
+      "finding_id:F004->f-f004",
+      "finding_id:F005->f-f005",
+      "finding_id:F006->f-f006",
+      "finding_id:F007->f-f007",
+      "finding_id:F008->f-f008",
+      "finding_id:F009->f-f009",
+      "finding_id:F010->f-f010",
+      "finding_id:F011->f-f011",
+      "finding_id:F012->f-f012",
+      "finding_id:F013->f-f013",
+      "finding_id:F014->f-f014",
+      "finding_id:F015->f-f015",
+      "finding_id:F016->f-f016",
+      "finding_id:F017->f-f017",
+      "finding_id:F018->f-f018",
+      "finding_id:F019->f-f019",
+      "change_id:CE001->chg-ce001",
+      "change_id:CE002->chg-ce002",
+      "change_id:CE003->chg-ce003",
+      "change_id:CE004->chg-ce004",
+      "research_modules:rebuilt_from_playbook"
+    ]
+  },
+  "ok": false,
+  "packet_id": "hunter-20261005-company-brand-tim-hortons-01",
+  "schema": "rb.hunter_cycle_receipt.v1",
+  "validation": {
+    "citation_verification": {
+      "errors": [],
+      "live_content_checked": false,
+      "mode": "offline_integrity",
+      "schema": "rb.hunter_citation_verification.v1",
+      "valid": true,
+      "warnings": [
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s003"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s006"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s008"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s009"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s010"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s011"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s012"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s013"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s014"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s018"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/0"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/1"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/2"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/3"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/4"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/5"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/6"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/7"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/8"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/9"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/10"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/11"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/12"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/13"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/14"
+      },
+      {
+        "code": "schema",
+        "message": "'2026' is not a 'date'",
+        "path": "source_ledger/14/published_at"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/15"
+      },
+      {
+        "code": "schema",
+        "message": "'2026' is not a 'date'",
+        "path": "source_ledger/15/published_at"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/16"
+      },
+      {
+        "code": "schema",
+        "message": "'2026' is not a 'date'",
+        "path": "source_ledger/16/published_at"
+      },
+      {
+        "code": "schema",
+        "message": "'evidence_chain_id' is a required property",
+        "path": "source_ledger/17"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/0"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/0"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/0"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/1"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/1"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/1"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/2"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/2"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/2"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/3"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/3"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/3"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/4"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/4"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/4"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/5"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/5"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/5"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/6"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/6"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/6"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/7"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/7"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/7"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/8"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/8"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/8"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/9"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/9"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/9"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/10"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/10"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/10"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/11"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/11"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/11"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/12"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/12"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/12"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/13"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/13"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/13"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/14"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/14"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/14"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/15"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/15"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/15"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/16"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/16"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/16"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/17"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/17"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/17"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/18"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/18"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/18"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('result_summary' was unexpected)",
+        "path": "query_ledger/19"
+      },
+      {
+        "code": "schema",
+        "message": "'executed_at' is a required property",
+        "path": "query_ledger/19"
+      },
+      {
+        "code": "schema",
+        "message": "'productive' is a required property",
+        "path": "query_ledger/19"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/0"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/0"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/0"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/0"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/0"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/0"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/1"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/1"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/1"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/1"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/1"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/1"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/2"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/2"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/2"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/2"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/2"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/2"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/3"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/3"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/3"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/3"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/3"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/3"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/4"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/4"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/4"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/4"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/4"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/4"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/5"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/5"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/5"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/5"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/5"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/5"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/6"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/6"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/6"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/6"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/6"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/6"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/7"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/7"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/7"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/7"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/7"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/7"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/8"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/8"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/8"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/8"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/8"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/8"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/9"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/9"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/9"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/9"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/9"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/9"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/10"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/10"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/10"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/10"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/10"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/10"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/11"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/11"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/11"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/11"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/11"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/11"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/12"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/12"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/12"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/12"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/12"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/12"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/13"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/13"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/13"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/13"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/13"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/13"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/14"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/14"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/14"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/14"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/14"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/14"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/15"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/15"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/15"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/15"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/15"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/15"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/16"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/16"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/16"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/16"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/16"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/16"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/17"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/17"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/17"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/17"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/17"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/17"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('claim_date' was unexpected)",
+        "path": "findings/18"
+      },
+      {
+        "code": "schema",
+        "message": "'gap_ids' is a required property",
+        "path": "findings/18"
+      },
+      {
+        "code": "schema",
+        "message": "'novelty_rationale' is a required property",
+        "path": "findings/18"
+      },
+      {
+        "code": "schema",
+        "message": "'observed_at' is a required property",
+        "path": "findings/18"
+      },
+      {
+        "code": "schema",
+        "message": "'is_vendor_claim' is a required property",
+        "path": "findings/18"
+      },
+      {
+        "code": "schema",
+        "message": "'is_inference' is a required property",
+        "path": "findings/18"
+      },
+      {
+        "code": "schema",
+        "message": "'resolved_partial_vendor_specific' is not one of ['filled', 'partially_filled', 'not_found_publicly', 'blocked', 'not_applicable']",
+        "path": "gap_outcomes/0/status"
+      },
+      {
+        "code": "schema",
+        "message": "'resolved_with_document_access_limitation' is not one of ['filled', 'partially_filled', 'not_found_publicly', 'blocked', 'not_applicable']",
+        "path": "gap_outcomes/1/status"
+      },
+      {
+        "code": "schema",
+        "message": "'summary' is a required property",
+        "path": "change_events/0"
+      },
+      {
+        "code": "schema",
+        "message": "'materiality' is a required property",
+        "path": "change_events/0"
+      },
+      {
+        "code": "schema",
+        "message": "'summary' is a required property",
+        "path": "change_events/1"
+      },
+      {
+        "code": "schema",
+        "message": "'materiality' is a required property",
+        "path": "change_events/1"
+      },
+      {
+        "code": "schema",
+        "message": "'summary' is a required property",
+        "path": "change_events/2"
+      },
+      {
+        "code": "schema",
+        "message": "'materiality' is a required property",
+        "path": "change_events/2"
+      },
+      {
+        "code": "schema",
+        "message": "'summary' is a required property",
+        "path": "change_events/3"
+      },
+      {
+        "code": "schema",
+        "message": "'materiality' is a required property",
+        "path": "change_events/3"
+      },
+      {
+        "code": "schema",
+        "message": "'set_current_scale' is not one of ['add', 'append_event', 'update', 'supersede']",
+        "path": "mutation_proposals/0/operation"
+      },
+      {
+        "code": "schema",
+        "message": "'append_technology_relationship' is not one of ['add', 'append_event', 'update', 'supersede']",
+        "path": "mutation_proposals/1/operation"
+      },
+      {
+        "code": "schema",
+        "message": "'append_technology_relationship' is not one of ['add', 'append_event', 'update', 'supersede']",
+        "path": "mutation_proposals/2/operation"
+      },
+      {
+        "code": "schema",
+        "message": "'append_technology_relationship' is not one of ['add', 'append_event', 'update', 'supersede']",
+        "path": "mutation_proposals/3/operation"
+      },
+      {
+        "code": "schema",
+        "message": "'set_franchise_disclosure' is not one of ['add', 'append_event', 'update', 'supersede']",
+        "path": "mutation_proposals/4/operation"
+      },
+      {
+        "code": "schema",
+        "message": "'2026' is not a 'date'",
+        "path": "mutation_proposals/4/effective_at"
+      },
+      {
+        "code": "schema",
+        "message": "'near_term' is not one of ['immediate', 'days_to_weeks', 'months', 'long_term', 'unknown']",
+        "path": "cos_handoffs/0/time_horizon"
+      },
+      {
+        "code": "schema",
+        "message": "'near_term' is not one of ['immediate', 'days_to_weeks', 'months', 'long_term', 'unknown']",
+        "path": "cos_handoffs/1/time_horizon"
+      },
+      {
+        "code": "schema",
+        "message": "'medium_term' is not one of ['immediate', 'days_to_weeks', 'months', 'long_term', 'unknown']",
+        "path": "cos_handoffs/2/time_horizon"
+      },
+      {
+        "code": "schema",
+        "message": "'near_term' is not one of ['immediate', 'days_to_weeks', 'months', 'long_term', 'unknown']",
+        "path": "cos_handoffs/3/time_horizon"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('conflict_id' was unexpected)",
+        "path": "conflicts/0"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('conflict_id' was unexpected)",
+        "path": "conflicts/1"
+      },
+      {
+        "code": "schema",
+        "message": "Additional properties are not allowed ('conflict_id' was unexpected)",
+        "path": "conflicts/2"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/0"
+      },
+      {
+        "code": "current_without_as_of",
+        "message": "current_verified requires as_of",
+        "path": "findings/0"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/1"
+      },
+      {
+        "code": "current_without_as_of",
+        "message": "current_verified requires as_of",
+        "path": "findings/1"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/2"
+      },
+      {
+        "code": "current_without_as_of",
+        "message": "current_verified requires as_of",
+        "path": "findings/2"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/3"
+      },
+      {
+        "code": "current_without_as_of",
+        "message": "current_verified requires as_of",
+        "path": "findings/3"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/4"
+      },
+      {
+        "code": "current_without_as_of",
+        "message": "current_verified requires as_of",
+        "path": "findings/4"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/5"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/6"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/7"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/8"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/9"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/10"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/11"
+      },
+      {
+        "code": "current_without_as_of",
+        "message": "current_verified requires as_of",
+        "path": "findings/11"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/12"
+      },
+      {
+        "code": "current_without_as_of",
+        "message": "current_verified requires as_of",
+        "path": "findings/12"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/13"
+      },
+      {
+        "code": "current_without_as_of",
+        "message": "current_verified requires as_of",
+        "path": "findings/13"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/14"
+      },
+      {
+        "code": "current_without_as_of",
+        "message": "current_verified requires as_of",
+        "path": "findings/14"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/15"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/16"
+      },
+      {
+        "code": "current_without_as_of",
+        "message": "current_verified requires as_of",
+        "path": "findings/16"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/17"
+      },
+      {
+        "code": "new_data_without_novelty",
+        "message": "new_data_point requires novelty_rationale against prior RBB state",
+        "path": "findings/18"
+      },
+      {
+        "code": "current_without_as_of",
+        "message": "current_verified requires as_of",
+        "path": "findings/18"
+      },
+      {
+        "code": "false_complete",
+        "message": "required modules incomplete: ['identity', 'ownership', 'footprint', 'leadership', 'strategy', 'financial_operating_health', 'technology_stack', 'news_signals']",
+        "path": "status"
+      },
+      {
+        "code": "false_complete_quality",
+        "message": "complete packet must mark required modules complete",
+        "path": "quality/required_modules_complete"
+      }
+    ],
+    "scores": {
+      "finding_quality_scores": {
+        "f-f001": 83,
+        "f-f002": 83,
+        "f-f003": 83,
+        "f-f004": 83,
+        "f-f005": 83,
+        "f-f006": 81,
+        "f-f007": 70,
+        "f-f008": 56,
+        "f-f009": 56,
+        "f-f010": 56,
+        "f-f011": 56,
+        "f-f012": 85,
+        "f-f013": 57,
+        "f-f014": 57,
+        "f-f015": 57,
+        "f-f016": 55,
+        "f-f017": 80,
+        "f-f018": 70,
+        "f-f019": 83
+      },
+      "independent_evidence_chains": 12,
+      "module_completeness": {
+        "financial_operating_health": 0.708,
+        "footprint": 0.708,
+        "identity": 0.708,
+        "leadership": 0.708,
+        "news_signals": 0.708,
+        "ownership": 0.358,
+        "strategy": 0.708,
+        "technology_stack": 0.708
+      },
+      "overall_completeness_pct": 66
+    },
+    "valid": false
+  }
+}

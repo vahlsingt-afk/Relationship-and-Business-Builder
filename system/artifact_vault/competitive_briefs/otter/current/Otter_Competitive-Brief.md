@@ -1,7 +1,14 @@
 # Otter — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, Otter presents a limited competitive threat due to the lack of confirmed broad-scope accounts and the uncertainty surrounding their relationships with major brands. The team should monitor Otter's developments closely but can prioritize other competitors for immediate strategic focus.
+
+- Otter's multichannel platform aggregates orders from over 100 channels, which could appeal to restaurants looking for comprehensive solutions.
+- Their tiered pricing structure may attract smaller restaurants, potentially increasing their market penetration.
+- The presence of notable brands like Wingstop and Denny's on their marketing site suggests they are gaining traction, but the scope of these relationships remains unverified.
+- Limited confirmed accounts indicate that while Otter is growing, they have not yet established a strong foothold in the market.
 
 ## Where we're competing against them right now
 3 account(s) on file -- 0 confirmed, broad-scope relationship(s), 3 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

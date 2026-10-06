@@ -200,7 +200,10 @@
       "active": true,
       "unit_count": 2505.0,
       "unit_delta": 4.028239202657807,
-      "emerging": false
+      "emerging": false,
+      "productive_pages": 0,
+      "unproductive_pages": 24,
+      "last_outcome_packet": "dr-20261002-0503-panda-express"
     },
     "company:brand-pizza-hut": {
       "kind": "company",
@@ -24510,7 +24513,7 @@
       "active": true
     }
   },
-  "updated_at": "2026-10-02T10:41:31+00:00",
+  "updated_at": "2026-10-03T09:19:40+00:00",
   "sources": {
     "coatesgroup.com": {
       "checked": 8,
@@ -24543,10 +24546,10 @@
       "last_checked_at": "2026-09-22T12:10:52+00:00"
     },
     "crunchtime.com": {
-      "checked": 10,
+      "checked": 11,
       "productive": 5,
-      "unproductive": 5,
-      "last_checked_at": "2026-09-22T03:09:24+00:00"
+      "unproductive": 6,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
     },
     "7shifts.com": {
       "checked": 4,
@@ -24657,10 +24660,10 @@
       "last_checked_at": "2026-09-29T09:18:35+00:00"
     },
     "xenial.com": {
-      "checked": 2,
+      "checked": 3,
       "productive": 2,
-      "unproductive": 0,
-      "last_checked_at": "2026-09-29T09:18:35+00:00"
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
     },
     "bangor.com": {
       "checked": 1,
@@ -24675,16 +24678,16 @@
       "last_checked_at": "2026-09-30T09:20:51+00:00"
     },
     "punchh.com": {
-      "checked": 2,
-      "productive": 2,
+      "checked": 3,
+      "productive": 3,
       "unproductive": 0,
-      "last_checked_at": "2026-09-29T09:18:35+00:00"
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
     },
     "apps.apple.com": {
-      "checked": 10,
+      "checked": 11,
       "productive": 10,
-      "unproductive": 0,
-      "last_checked_at": "2026-10-01T10:42:36+00:00"
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
     },
     "nory.ai": {
       "checked": 4,
@@ -24771,10 +24774,10 @@
       "last_checked_at": "2026-09-29T21:08:52+00:00"
     },
     "sec.gov": {
-      "checked": 2,
+      "checked": 3,
       "productive": 2,
-      "unproductive": 0,
-      "last_checked_at": "2026-10-01T10:42:36+00:00"
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
     },
     "foodondemand.com": {
       "checked": 1,
@@ -24933,10 +24936,10 @@
       "last_checked_at": "2026-09-30T00:09:59+00:00"
     },
     "hospitalitytech.com": {
-      "checked": 2,
+      "checked": 3,
       "productive": 0,
-      "unproductive": 2,
-      "last_checked_at": "2026-10-02T09:46:10+00:00"
+      "unproductive": 3,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
     },
     "s19.a2zinc.net": {
       "checked": 1,
@@ -25017,16 +25020,16 @@
       "last_checked_at": "2026-10-01T10:42:36+00:00"
     },
     "prnewswire.com": {
-      "checked": 2,
+      "checked": 3,
       "productive": 2,
-      "unproductive": 0,
-      "last_checked_at": "2026-09-30T09:20:51+00:00"
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
     },
     "nrn.com": {
-      "checked": 1,
+      "checked": 2,
       "productive": 1,
-      "unproductive": 0,
-      "last_checked_at": "2026-09-30T09:20:51+00:00"
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
     },
     "businesswire.com": {
       "checked": 2,
@@ -25225,6 +25228,126 @@
       "productive": 2,
       "unproductive": 0,
       "last_checked_at": "2026-10-02T09:46:10+00:00"
+    },
+    "pandarg.com": {
+      "checked": 1,
+      "productive": 0,
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "pandaexpress.com": {
+      "checked": 3,
+      "productive": 0,
+      "unproductive": 3,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "wwt.com": {
+      "checked": 1,
+      "productive": 0,
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "novadine.net": {
+      "checked": 1,
+      "productive": 0,
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "foodservicecentral.com": {
+      "checked": 1,
+      "productive": 0,
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "fastcasual.com": {
+      "checked": 1,
+      "productive": 0,
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "globalpayments.com": {
+      "checked": 1,
+      "productive": 0,
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "pandacareers.com": {
+      "checked": 2,
+      "productive": 0,
+      "unproductive": 2,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "restauranttechnologynews.com": {
+      "checked": 1,
+      "productive": 0,
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "olo.com": {
+      "checked": 2,
+      "productive": 0,
+      "unproductive": 2,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "inc.com": {
+      "checked": 1,
+      "productive": 0,
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "qsrmagazine.com": {
+      "checked": 1,
+      "productive": 0,
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "about.doordash.com": {
+      "checked": 1,
+      "productive": 0,
+      "unproductive": 1,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "charleysfranchise.com": {
+      "checked": 2,
+      "productive": 2,
+      "unproductive": 0,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "apps.dfi.wi.gov": {
+      "checked": 1,
+      "productive": 1,
+      "unproductive": 0,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "charleys.com": {
+      "checked": 3,
+      "productive": 3,
+      "unproductive": 0,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "itbusinessnet.com": {
+      "checked": 1,
+      "productive": 1,
+      "unproductive": 0,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "go.heartlandpaymentsystems.com": {
+      "checked": 1,
+      "productive": 1,
+      "unproductive": 0,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "getbite.zendesk.com": {
+      "checked": 2,
+      "productive": 2,
+      "unproductive": 0,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
+    },
+    "howardcompany.com": {
+      "checked": 1,
+      "productive": 1,
+      "unproductive": 0,
+      "last_checked_at": "2026-10-03T09:19:40+00:00"
     }
   }
 }

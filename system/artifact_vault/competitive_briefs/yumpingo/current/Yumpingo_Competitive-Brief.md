@@ -1,7 +1,13 @@
 # Yumpingo — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, Yumpingo presents a low competitive threat due to limited confirmed accounts and unclear operational scope. The team should monitor their developments, particularly their integration with Black Box Intelligence, but immediate action is not necessary.
+
+- Yumpingo's recent acquisition by Black Box Intelligence could enhance their market presence and capabilities, warranting close observation.
+- Their focus on dish-level guest surveys and real-time feedback may appeal to restaurants seeking to improve operations, but overlaps with Genius are limited.
+- The lack of confirmed customer accounts suggests that Yumpingo's market penetration is still uncertain, reducing immediate competitive pressure.
 
 ## Where we're competing against them right now
 1 account(s) on file -- 0 confirmed, broad-scope relationship(s), 1 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

@@ -1,7 +1,15 @@
 # Restaurant365 — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Restaurant365 poses a moderate competitive threat, particularly with recent wins at Jack in the Box and Hungry Howie's, but the lack of confirmed broad-scope deployments and ongoing C-suite volatility may present opportunities for Genius to capitalize on. The team should monitor R365's developments closely and consider strategies to leverage their instability while promoting Genius's strengths.
+
+- Recent wins at Jack in the Box and Hungry Howie's indicate Restaurant365's growing influence in the market, which could impact our customer acquisition efforts.
+- The confirmed selection of R365 as the sole back-office inventory platform for Jack in the Box highlights their capability to deliver unified visibility into operations, a key selling point.
+- Despite their growth, Restaurant365 is experiencing significant C-suite turnover and employee dissatisfaction, which may affect their long-term stability and performance.
+- The lack of confirmed broad-scope deployments for many of their accounts suggests that their market presence may not be as strong as it appears, providing an opening for Genius.
+- Restaurant365's recent developments, including the introduction of R365 AI, indicate a focus on innovation, which we must counter with our own advancements.
 
 ## Where we're competing against them right now
 27 account(s) on file -- 0 confirmed, broad-scope relationship(s), 27 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-03T04:02:51-05:00",
+  "account_id": "global-payments",
+  "source": "outlook_computer_use",
+  "window_days": 7,
+  "inbox": [
+    {
+      "counterpart_name": "noreply",
+      "counterpart_email": null,
+      "subject": "Your password will expire in 2 days.",
+      "received_at": "2026-10-03T00:01:00-05:00",
+      "unread": true
+    },
+    {
+      "counterpart_name": "Katherine Celeste Urbina Barillas",
+      "counterpart_email": null,
+      "subject": "RE: Global Payments / Genius RFP Amended Response \u2013 Pollo Campero Digital Menu Boards",
+      "received_at": "2026-10-02",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Katherine Celeste Urbina Barillas",
+      "counterpart_email": null,
+      "subject": "RE: Global Payments / Genius RFP Amended Response \u2013 Pollo Campero Digital Menu Boards",
+      "received_at": "2026-10-02",
+      "unread": false
+    },
+    {
+      "counterpart_name": "vahlsingt@gmail.com",
+      "counterpart_email": "vahlsingt@gmail.com",
+      "subject": "FW: Todd Vahlsing and Anna Ludwinowski",
+      "received_at": "2026-10-02",
+      "unread": false
+    },
+    {
+      "counterpart_name": "Ryan Hildebrand",
+      "counterpart_email": null,
+      "subject": "Accepted: Pollo Campero Pricing Part 3",
+      "received_at": "2026-10-02",
+      "unread": false
+    }
+  ],
+  "sent": [
+    {
+      "counterpart_name": "Katherine Celeste Urbina Barillas",
+      "counterpart_email": null,
+      "subject": "Re: Global Payments / Genius RFP Amended Response \u2013 Pollo Campero Digital Menu Boards",
+      "sent_at": "2026-10-02"
+    },
+    {
+      "counterpart_name": "Michael Estabrooks",
+      "counterpart_email": null,
+      "subject": "Accepted: Learning from Your Previous Experiences",
+      "sent_at": "2026-10-02"
+    },
+    {
+      "counterpart_name": "Katherine Urbina",
+      "counterpart_email": null,
+      "subject": "Global Payments / Genius RFP Amended Response \u2013 Pollo Campero Digital Menu Boards",
+      "sent_at": "2026-10-02"
+    },
+    {
+      "counterpart_name": "jcaplan@churchs.com",
+      "counterpart_email": "jcaplan@churchs.com",
+      "subject": "Re: Following up on DMB at FS/Tec",
+      "sent_at": "2026-10-02"
+    },
+    {
+      "counterpart_name": "Michael Estabrooks",
+      "counterpart_email": null,
+      "subject": "Todd Vahlsing shared \"Pollo_Campero_5_Year_Cost_Model\" with you",
+      "sent_at": "2026-10-02"
+    }
+  ],
+  "calendar": [
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Monday)",
+      "date": "2026-10-05",
+      "start": "2026-10-05T11:00:00-05:00",
+      "end": "2026-10-05T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Sylvia Brummitt",
+      "date": "2026-10-05",
+      "start": "2026-10-05T11:30:00-05:00",
+      "end": "2026-10-05T12:00:00-05:00",
+      "location": null
+    },
+    {
+      "title": "Connect with Jeff Coffland - McDonalds",
+      "date": "2026-10-05",
+      "start": "2026-10-05T15:30:00-05:00",
+      "end": "2026-10-05T16:00:00-05:00",
+      "location": null
+    },
+    {
+      "title": "WP BackBook Sales/Marketing Weekly Sync",
+      "date": "2026-10-06",
+      "start": "2026-10-06T14:00:00-05:00",
+      "end": "2026-10-06T14:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Josh/Todd connect - DMB/DTD",
+      "date": "2026-10-07",
+      "start": "2026-10-07T10:00:00-05:00",
+      "end": "2026-10-07T10:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Genius Restaurant Team - Bookings Review (Thursday)",
+      "date": "2026-10-08",
+      "start": "2026-10-08T09:30:00-05:00",
+      "end": "2026-10-08T10:00:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "A Little Friday - Sales Town Hall Series ",
+      "date": "2026-10-08",
+      "start": "2026-10-08T10:30:00-05:00",
+      "end": "2026-10-08T11:30:00-05:00",
+      "location": "https://us-1506.join.gong.io/global-payments-us/jerry.gallimore/6575986815786887444"
+    },
+    {
+      "title": "Regroup - WP BackBook ICP Review",
+      "date": "2026-10-08",
+      "start": "2026-10-08T11:00:00-05:00",
+      "end": "2026-10-08T11:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    },
+    {
+      "title": "Learning from Your Previous Experiences",
+      "date": "2026-10-09",
+      "start": "2026-10-09T13:30:00-05:00",
+      "end": "2026-10-09T14:30:00-05:00",
+      "location": "Microsoft Teams Meeting"
+    }
+  ]
+}

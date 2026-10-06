@@ -35,9 +35,9 @@
     "last_reviewed_by": null
   },
   "last_evidence_date": "2026-09-28",
-  "last_synced_at": "2026-10-02T09:47:04Z",
+  "last_synced_at": "2026-10-06T09:22:12Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:47:04Z",
+  "updated_at": "2026-10-06T09:22:12Z",
   "latest_cos_commentary": {
     "headline": "Delaget is a PAR product lineage and should be assessed with PAR OPS, not counted as a separate vendor.",
     "genius_exposure": "Delaget is a PAR product lineage and should be assessed with PAR OPS, not counted as a separate vendor.",
@@ -74,5 +74,14 @@
         "Operator ROI evidence"
       ]
     }
+  },
+  "synthesis": {
+    "bottom_line": "Delaget currently poses a moderate competitive threat due to its recent acquisition by PAR Technology, which enhances its market presence with over 30,000 locations. However, the lack of confirmed brand-wide relationships and limited scope of existing accounts suggests that immediate action may not be necessary, but monitoring developments closely is advised.",
+    "themes": [
+      "Delaget's acquisition by PAR Technology significantly expands its reach, potentially impacting market dynamics.",
+      "The confirmed presence of Delaget in franchisee-level relationships with major brands like Taco Bell and Long John Silver's indicates a foothold that could grow if brand-wide adoption occurs.",
+      "Genius has a competitive edge in overlapping back-office solutions for Yum and RBI systems, which could be leveraged to maintain market position against Delaget's expansion."
+    ],
+    "generated_at": "2026-10-02T21:12:04Z"
   }
 }

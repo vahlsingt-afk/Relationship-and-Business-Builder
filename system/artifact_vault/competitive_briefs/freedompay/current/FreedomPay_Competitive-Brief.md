@@ -1,7 +1,15 @@
 # FreedomPay — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+FreedomPay currently poses a moderate competitive threat, particularly due to its partnerships with major brands like Subway and its deep integrations in the hospitality sector. The team should monitor FreedomPay's developments closely and consider strategies to enhance our own partnerships and integrations to maintain competitiveness.
+
+- FreedomPay's partnerships with major brands like Subway and Olo enhance its market presence and credibility in the restaurant technology space.
+- The absence of confirmed recent deployments suggests that while FreedomPay is active, its immediate impact on new restaurant accounts may be limited.
+- FreedomPay's focus on payment orchestration without acquiring could create opportunities for Genius to leverage its own acquirer partnerships more effectively.
+- The lack of identified shortcomings in FreedomPay's offerings indicates a stable competitive position, necessitating proactive measures from Genius to differentiate.
+- FreedomPay's extensive integrations with hospitality ISVs position it well for growth in the food service sector, which could challenge Genius's market share.
 
 ## Where we're competing against them right now
 2 account(s) on file -- 2 confirmed, broad-scope relationship(s), 0 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

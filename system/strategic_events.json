@@ -1,13 +1,13 @@
 {
   "schema": "rb_strategic_events_v1",
-  "updated_at": "2026-10-02T10:15:32+00:00",
+  "updated_at": "2026-10-06T10:14:38+00:00",
   "events": [
     {
       "event_id": "sev_1f0262884bd5b8",
       "event_key": "restaurant-ai:operational-ai-implementation-risk",
       "title": "Operational AI implementation risk in restaurants",
       "created_at": "2026-05-27T10:00:39+00:00",
-      "last_seen_at": "2026-09-30T12:22:12+00:00",
+      "last_seen_at": "2026-10-06T09:05:00+00:00",
       "evidence": [
         {
           "evidence_id": "ev_4acefe5e858723",
@@ -3689,6 +3689,35 @@
           },
           "manual": false,
           "stale": false
+        },
+        {
+          "evidence_id": "ev_657f8da5ad826d",
+          "event_key": "restaurant-ai:operational-ai-implementation-risk",
+          "title": "8-K  - Current report",
+          "source_name": "SEC EDGAR (None)",
+          "source_channel": "enterprise_restaurant_technology_news",
+          "source_type": "sec_edgar_8k",
+          "url": "https://www.sec.gov/Archives/edgar/data/1643953/000121390026106812/0001213900-26-106812-index.htm",
+          "published_at": "2026-10-05",
+          "captured_at": "2026-10-06T09:05:00+00:00",
+          "text_excerpt": "8-K - Current report 8-K - Current report. Material event filed with SEC. Review for vendor impact, leadership changes, or strategic shifts. Olo is a tracked entity in RB. Material Event signals affect network positioning and deal timing. Operators may adjust budget, rollout timing, vendor scrutiny, or operating priorities if this signal persists. Olo material event \u2014 monitor for vendor relationship impact. Olo",
+          "entities": {
+            "companies": [
+              "Olo"
+            ],
+            "people": []
+          },
+          "themes": [
+            "operational_ai_trust",
+            "friday_night_survivability"
+          ],
+          "classification": {
+            "signal_type": "material_event",
+            "strategic_relevance": "high",
+            "confidence": "high"
+          },
+          "manual": false,
+          "stale": false
         }
       ],
       "source_channels": [
@@ -3795,9 +3824,9 @@
       ],
       "source_freshness_gate": "open",
       "proof_stats": {
-        "evidence_count": 123,
+        "evidence_count": 124,
         "channels_distinct": 4,
-        "last_fresh_evidence_at": "2026-09-30T12:22:12+00:00"
+        "last_fresh_evidence_at": "2026-10-06T09:05:00+00:00"
       }
     },
     {

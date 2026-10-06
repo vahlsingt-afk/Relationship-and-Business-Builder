@@ -4,6 +4,13 @@ RB has two separate public-intelligence engines. Hunter owns deep,
 target-specific research. Gatherer owns broad daily change detection. They must
 never be combined in reporting, scheduling, or proof-of-work.
 
+Gatherer is RBB's authoritative daily change-intelligence layer. Raw feeds,
+source refreshes, email-derived public headlines, and scanners are Gatherer
+inputs—not competing daily intelligence products. Downstream briefs and CoS
+work should use Gatherer's normalized candidates, source coverage, RBB-state
+comparison, and Hunter escalations as the primary daily view. Hunter remains
+the verification and gap-resolution layer.
+
 ## 1. Routine research (baseline construction)
 
 Purpose: establish and periodically refresh the durable background knowledge

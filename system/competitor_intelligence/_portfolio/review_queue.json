@@ -1187,6 +1187,28 @@
       "current_status": null,
       "status": "pending",
       "queued_at": "2026-10-02T09:46:12Z"
+    },
+    {
+      "review_id": "rev-par-technology-0026",
+      "competitor_slug": "par-technology",
+      "category": null,
+      "evidence_id": "capture-INT-2026-10-06T09:19:50+00:00-003",
+      "kind": "capture_signal_review",
+      "reason": "Captured intelligence (2026-10-06T09:19:50+00:00): Entity-scoped data detected for existing artifact 'micro_graph:par_technology' (matched term: 'par'). Topology terms present — enrichment candidate.",
+      "current_status": null,
+      "status": "pending",
+      "queued_at": "2026-10-06T09:21:23Z"
+    },
+    {
+      "review_id": "rev-ncr-0017",
+      "competitor_slug": "ncr",
+      "category": null,
+      "evidence_id": "capture-INT-2026-10-06T09:19:50+00:00-005",
+      "kind": "capture_signal_review",
+      "reason": "Captured intelligence (2026-10-06T09:19:50+00:00): Entity-scoped topology data detected for 'Ncr Voyix' — no registered artifact exists. This input is a candidate for a new micro graph artifact.",
+      "current_status": null,
+      "status": "pending",
+      "queued_at": "2026-10-06T09:21:23Z"
     }
   ]
 }

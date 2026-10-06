@@ -36,9 +36,9 @@
   },
   "category_battle_cards": {},
   "last_evidence_date": "2026-09-28",
-  "last_synced_at": "2026-10-02T09:46:56Z",
+  "last_synced_at": "2026-10-06T09:22:06Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:46:56Z",
+  "updated_at": "2026-10-06T09:22:06Z",
   "latest_cos_commentary": {
     "headline": "A direct payment infrastructure rival is strengthening an integrated restaurant platform.",
     "genius_exposure": "A direct payment infrastructure rival is strengthening an integrated restaurant platform.",
@@ -70,5 +70,16 @@
         "Operator ROI evidence"
       ]
     }
+  },
+  "synthesis": {
+    "bottom_line": "Adyen presents a moderate competitive threat, particularly with its recent expansion into the U.S. and strong growth metrics. The team should monitor Adyen's partnerships and market movements closely, especially its integration with Toast, while leveraging our own advantages during this transitional period in their leadership.",
+    "themes": [
+      "Adyen's recent expansion into the U.S. market through its partnership with Toast enhances its competitive positioning in the restaurant technology space.",
+      "The acquisition of Talon.One and Orb indicates Adyen's strategic move to diversify its offerings beyond payments, potentially impacting our market share in loyalty and billing solutions.",
+      "Adyen's impressive growth and profitability metrics, including a projected EBITDA margin exceeding 55% by 2028, highlight its strong financial health compared to legacy acquirers.",
+      "The ongoing CFO transition at Adyen may present an opportunity for us to capitalize on any potential instability or shifts in strategy during this period.",
+      "Adyen's focus on larger enterprise clients and partnerships with major platforms like Meta and Uber suggests a shift away from SMBs, which could create openings for us to target smaller restaurant operators."
+    ],
+    "generated_at": "2026-10-02T21:10:44Z"
   }
 }

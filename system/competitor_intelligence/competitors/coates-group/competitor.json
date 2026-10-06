@@ -40,9 +40,9 @@
     "last_reviewed_by": null
   },
   "last_evidence_date": "2026-09-28",
-  "last_synced_at": "2026-10-02T09:47:01Z",
+  "last_synced_at": "2026-10-06T09:22:10Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:47:01Z",
+  "updated_at": "2026-10-06T09:22:10Z",
   "latest_cos_commentary": {
     "headline": "A relevant McDonald’s DMB incumbent and direct Genius DMB positioning benchmark.",
     "genius_exposure": "A relevant McDonald’s DMB incumbent and direct Genius DMB positioning benchmark.",
@@ -74,5 +74,16 @@
         "Operator ROI evidence"
       ]
     }
+  },
+  "synthesis": {
+    "bottom_line": "Coates Group poses a moderate competitive threat primarily due to its entrenched relationship with McDonald's and its role as a global digital-menu-board CMS provider. The team should monitor developments closely, especially regarding any potential contract renewals or expansions in their scope with McDonald's.",
+    "themes": [
+      "Coates Group's long-standing 50-year relationship with McDonald's solidifies its position as a key player in the digital menu board space, making it a formidable competitor.",
+      "The recent 5-year CMS deal with McDonald's highlights Coates Group's capability to meet global digital CMS needs, which could limit opportunities for Genius in this market.",
+      "Recognition as a top supplier by McDonald's China indicates Coates Group's strong performance and reliability, enhancing its reputation and competitive edge.",
+      "The lack of confirmed accounts for other clients suggests that Coates Group's strength is heavily reliant on its relationship with McDonald's, which could be a vulnerability if that partnership changes.",
+      "Recent developments indicate that Coates Group is actively involved in the QSR market, particularly with digital solutions, which aligns with current industry trends."
+    ],
+    "generated_at": "2026-10-02T21:11:34Z"
   }
 }

@@ -1,0 +1,13 @@
+{
+  "subject_id": "subject-qu--brand-five-guys",
+  "versions": [
+    {
+      "version": 1,
+      "generated_at": "2026-10-02T18:38:38Z",
+      "generated_for": "todd",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/qu--brand-five-guys/current/Qu-vs-Genius-Five-Guys_Value-Wedge.json",
+      "superseded": false
+    }
+  ]
+}

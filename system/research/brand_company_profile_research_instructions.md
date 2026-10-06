@@ -22,6 +22,17 @@ Submit the job's `directive` to the signed-in ChatGPT Deep Research surface
 with `system/prompts/hunter_research_bot.md`. Require exactly one Hunter JSON
 packet. Do not ask for a standalone dataset or Markdown research narrative.
 
+For `rb.brand_company_profile.v1`, `payload.records` is consumed by typed,
+review-first importers. Each record must include the exact `target_key` and a
+`record_type`; do not return one untyped aggregate company profile row. Use
+only these record types: `company_identity`, `footprint_snapshot`,
+`leadership_snapshot`, `franchise_disclosure`,
+`financial_operating_snapshot`, `technology_relationship`, and
+`technology_observation`. Keep each record to one type, attach its supporting
+`source_ids` and `finding_ids`, and preserve the source's actual scope and
+dates. If a fact does not fit one of these structures, retain it in packet
+findings and payload context rather than forcing it into a different type.
+
 Chat research is not governed by Codex or Work usage limits. Consult those
 limits only if the cycle actually needs Codex/Work for recovery or synthesis.
 

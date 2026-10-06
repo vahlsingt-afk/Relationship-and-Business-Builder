@@ -102,12 +102,12 @@
       "id": "neon",
       "company": "NEON",
       "role": "Head of Sales & Customer Success",
-      "stage": "applied",
-      "status_narrative": "CONFIDENTIAL SEPARATION RULE: NEON is a passive personal career opportunity and must remain entirely separate from Todd\u2019s Global Payments/Genius employment, accounts, customer intelligence, contacts, resources, work product, and daily operating priorities. Do not merge the records or use GP information to advance NEON. Status: applied September 11, 2026 for Head of Sales & Customer Success. Todd spoke with founder/CEO Eli Chmouni a few times, mostly in fall 2025, and sees this as a leadership ro",
+      "stage": "closed",
+      "status_narrative": "Close the NEON Head of Sales & Customer Success opportunity. Todd never heard back after applying, so remove it from the active opportunity list. Preserve the confidential separation from Global Payments/Genius.",
       "candidate_position": null,
       "key_dates": [],
       "created_at": "2026-09-11",
-      "last_updated": "2026-09-11",
+      "last_updated": "2026-10-05",
       "history": [
         {
           "date": "2026-09-11",
@@ -126,9 +126,18 @@
           "candidate_position": null,
           "key_dates": [],
           "source_type": "conversation"
+        },
+        {
+          "date": "2026-10-05",
+          "recorded_at": "2026-10-05T15:23:24.121920+00:00",
+          "stage": "closed",
+          "narrative": "Close the NEON Head of Sales & Customer Success opportunity. Todd never heard back after applying, so remove it from the active opportunity list. Preserve the confidential separation from Global Payments/Genius.",
+          "candidate_position": null,
+          "key_dates": [],
+          "source_type": "conversation"
         }
       ]
     }
   ],
-  "_last_updated": "2026-09-11T20:47:39.967974+00:00"
+  "_last_updated": "2026-10-05T15:23:24.123022+00:00"
 }

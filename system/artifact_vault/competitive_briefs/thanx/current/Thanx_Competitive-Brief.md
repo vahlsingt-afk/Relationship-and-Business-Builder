@@ -1,7 +1,15 @@
 # Thanx — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Thanx currently poses a moderate competitive threat, primarily due to its claims of significant customer growth in digital sales and its expanding partner ecosystem. However, the lack of confirmed deployments and the limited scope of its accounts suggest that its market presence is not yet robust enough to warrant immediate strategic changes from our team.
+
+- Thanx claims a high success rate with 90% of customers reportedly growing first-party digital sales in their first year, indicating a strong value proposition for potential clients.
+- The recent expansion of Thanx's ordering integration footprint and partnerships with platforms like Klaviyo and Deliverect could enhance its service offerings and market reach.
+- Despite its advantages, Thanx remains a standalone point solution in a market increasingly favoring bundled services, which may limit its long-term competitiveness.
+- Thanx's financial position is relatively weak compared to larger, consolidated rivals, which could hinder its ability to scale effectively.
+- The unconfirmed nature of many of Thanx's customer accounts raises questions about the reliability of its reported successes and overall market penetration.
 
 ## Where we're competing against them right now
 17 account(s) on file -- 0 confirmed, broad-scope relationship(s), 17 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

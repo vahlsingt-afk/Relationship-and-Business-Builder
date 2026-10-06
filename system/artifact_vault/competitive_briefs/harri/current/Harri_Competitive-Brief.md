@@ -1,7 +1,15 @@
 # Harri — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, there are no confirmed customer accounts for Harri, but their recent rollout at Jack in the Box across all 2,112 locations poses a potential competitive threat, particularly in labor scheduling and compliance. The team should monitor Harri's developments closely and consider strategies to differentiate Genius in these areas.
+
+- Harri's successful rollout at Jack in the Box demonstrates their capability to implement solutions at scale, which could attract other large clients.
+- The integration of Harri with established platforms like Qu, R365, and DnA enhances their value proposition, making it easier for clients to adopt their services.
+- Direct overlap with Genius in labor scheduling and compliance indicates a competitive threat that could impact our market share if not addressed.
+- The absence of confirmed accounts for Harri suggests that while they are making strides, their market presence is not yet fully established, providing an opportunity for Genius to strengthen its position.
+- Harri's focus on a mobile-first enterprise platform aligns with current industry trends, which could resonate well with potential customers seeking modern solutions.
 
 ## Where we're competing against them right now
 *No current tech-stack relationship on file for this vendor.*

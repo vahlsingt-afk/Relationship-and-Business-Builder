@@ -1,0 +1,230 @@
+{
+  "change_comparison": {
+    "errors": [],
+    "reviewed_change_event_ids": [
+      "chg-ce001",
+      "chg-ce002",
+      "chg-ce003",
+      "chg-ce004"
+    ],
+    "schema": "rb.hunter_change_comparison.v1",
+    "snapshot_hash": "5378ed26a36e1b09634ca51beb445964bd70a5264741a7a124ae91995e3669a4",
+    "valid": true
+  },
+  "confirmed": false,
+  "dispatch": {
+    "canonical_applied": 0,
+    "cos_handoffs_recorded": 4,
+    "dry_run": true,
+    "mutation_results": [
+      {
+        "applied": false,
+        "artifact": null,
+        "decision": "confirmation_required_overwrite",
+        "handler_recognized": false,
+        "proposal_id": "mut-mp001"
+      },
+      {
+        "applied": false,
+        "artifact": null,
+        "decision": "auto_added_net_new",
+        "handler_recognized": false,
+        "proposal_id": "mut-mp002"
+      },
+      {
+        "applied": false,
+        "artifact": null,
+        "decision": "auto_added_net_new",
+        "handler_recognized": false,
+        "proposal_id": "mut-mp003"
+      },
+      {
+        "applied": false,
+        "artifact": null,
+        "decision": "auto_added_net_new",
+        "handler_recognized": false,
+        "proposal_id": "mut-mp004"
+      },
+      {
+        "applied": false,
+        "artifact": null,
+        "decision": "auto_added_net_new",
+        "handler_recognized": false,
+        "proposal_id": "mut-mp005"
+      }
+    ],
+    "ok": true,
+    "packet_id": "hunter-20261005-company-brand-tim-hortons-01",
+    "payload_import": {
+      "applied": 0,
+      "by_record_type": {},
+      "identity_unresolved": 0,
+      "malformed_errors": [
+        {
+          "error": "record_type must be one of ['company_identity', 'financial_operating_snapshot', 'footprint_snapshot', 'franchise_disclosure', 'leadership_snapshot', 'technology_observation', 'technology_relationship'], got None",
+          "index": 0
+        }
+      ],
+      "queued_for_review": 0,
+      "records_malformed": 1,
+      "records_received": 1,
+      "records_rejected": 1
+    },
+    "queued_for_review_or_unhandled": 5,
+    "rejected": 0
+  },
+  "normalization": {
+    "applied": true,
+    "changes": [
+      "source_id:S001->src-s001",
+      "source_id:S002->src-s002",
+      "source_id:S003->src-s003",
+      "source_id:S004->src-s004",
+      "source_id:S005->src-s005",
+      "source_id:S006->src-s006",
+      "source_id:S007->src-s007",
+      "source_id:S008->src-s008",
+      "source_id:S009->src-s009",
+      "source_id:S010->src-s010",
+      "source_id:S011->src-s011",
+      "source_id:S012->src-s012",
+      "source_id:S013->src-s013",
+      "source_id:S014->src-s014",
+      "source_id:S015->src-s015",
+      "source_id:S016->src-s016",
+      "source_id:S017->src-s017",
+      "source_id:S018->src-s018",
+      "finding_id:F001->f-f001",
+      "finding_id:F002->f-f002",
+      "finding_id:F003->f-f003",
+      "finding_id:F004->f-f004",
+      "finding_id:F005->f-f005",
+      "finding_id:F006->f-f006",
+      "finding_id:F007->f-f007",
+      "finding_id:F008->f-f008",
+      "finding_id:F009->f-f009",
+      "finding_id:F010->f-f010",
+      "finding_id:F011->f-f011",
+      "finding_id:F012->f-f012",
+      "finding_id:F013->f-f013",
+      "finding_id:F014->f-f014",
+      "finding_id:F015->f-f015",
+      "finding_id:F016->f-f016",
+      "finding_id:F017->f-f017",
+      "finding_id:F018->f-f018",
+      "finding_id:F019->f-f019",
+      "change_id:CE001->chg-ce001",
+      "change_id:CE002->chg-ce002",
+      "change_id:CE003->chg-ce003",
+      "change_id:CE004->chg-ce004",
+      "research_modules:rebuilt_from_playbook"
+    ]
+  },
+  "ok": true,
+  "packet_id": "hunter-20261005-company-brand-tim-hortons-01",
+  "schema": "rb.hunter_cycle_receipt.v1",
+  "validation": {
+    "citation_verification": {
+      "errors": [],
+      "live_content_checked": false,
+      "mode": "offline_integrity",
+      "schema": "rb.hunter_citation_verification.v1",
+      "valid": true,
+      "warnings": [
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s001"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s003"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s006"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s008"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s009"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s010"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s011"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s012"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s013"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s014"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s015"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s016"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s017"
+        },
+        {
+          "code": "citation_date_missing",
+          "source_id": "src-s018"
+        }
+      ]
+    },
+    "errors": [],
+    "scores": {
+      "finding_quality_scores": {
+        "f-f001": 83,
+        "f-f002": 83,
+        "f-f003": 83,
+        "f-f004": 83,
+        "f-f005": 94,
+        "f-f006": 81,
+        "f-f007": 70,
+        "f-f008": 67,
+        "f-f009": 67,
+        "f-f010": 56,
+        "f-f011": 56,
+        "f-f012": 85,
+        "f-f013": 57,
+        "f-f014": 57,
+        "f-f015": 57,
+        "f-f016": 55,
+        "f-f017": 80,
+        "f-f018": 70,
+        "f-f019": 83
+      },
+      "independent_evidence_chains": 18,
+      "module_completeness": {
+        "financial_operating_health": 0.708,
+        "footprint": 0.708,
+        "identity": 0.708,
+        "leadership": 0.708,
+        "news_signals": 0.708,
+        "ownership": 0.358,
+        "strategy": 0.708,
+        "technology_stack": 0.708
+      },
+      "overall_completeness_pct": 66
+    },
+    "valid": true
+  }
+}

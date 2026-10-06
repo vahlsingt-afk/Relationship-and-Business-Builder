@@ -16,9 +16,9 @@
   },
   "category_battle_cards": {},
   "last_evidence_date": "2026-09-29",
-  "last_synced_at": "2026-10-02T09:46:59Z",
+  "last_synced_at": "2026-10-06T09:22:08Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:46:59Z",
+  "updated_at": "2026-10-06T09:22:08Z",
   "latest_cos_commentary": {
     "headline": "Crunchtime is a major restaurant back-office/operations-management platform (inventory, scheduling, food safety, compliance) used by large chains including Chipotle, Culver's, Domino's, Dunkin', Five Guys and P.F. Chang's across 150,000+ locations, led by CEO John Raguin.",
     "genius_exposure": "Directly competes on back_office and labor_workforce (inventory, scheduling, compliance, food safety) — a significant incumbent in enterprise restaurant back-office software.",
@@ -47,5 +47,16 @@
         "current ownership/investor structure"
       ]
     }
+  },
+  "synthesis": {
+    "bottom_line": "Crunchtime currently poses a moderate competitive threat due to its extensive customer base and recent advancements in AI capabilities, despite the lack of confirmed vendor roles in specific accounts. The team should monitor Crunchtime's developments closely and consider enhancing our own offerings to maintain a competitive edge.",
+    "themes": [
+      "Crunchtime's operations-management software is utilized across 150,000+ locations, indicating a significant market presence that could impact our customer acquisition efforts.",
+      "The recent introduction of AI capabilities enhances Crunchtime's product offering, potentially attracting new customers and increasing retention among existing ones.",
+      "The lack of confirmed vendor roles in specific accounts suggests that while Crunchtime is a player in the market, its actual penetration may not be as deep as it appears, warranting cautious observation.",
+      "Crunchtime's leadership change with John Raguin as CEO could signal strategic shifts that may affect competitive dynamics in the near future.",
+      "The competitor's relationships with well-known brands like Chipotle and Dunkin' highlight its credibility and could influence potential customers' perceptions of our solutions."
+    ],
+    "generated_at": "2026-10-02T21:11:06Z"
   }
 }

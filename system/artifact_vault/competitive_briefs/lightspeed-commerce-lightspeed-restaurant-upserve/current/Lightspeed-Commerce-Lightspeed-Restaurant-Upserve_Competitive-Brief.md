@@ -1,7 +1,14 @@
 # Lightspeed Commerce (Lightspeed Restaurant / Upserve) — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Lightspeed Commerce currently poses a low competitive threat in the U.S. restaurant market due to its recent exit from this sector, which has weakened its position against Genius. The team should focus on leveraging this opportunity to strengthen our market presence while monitoring Lightspeed's developments in European hospitality.
+
+- Lightspeed's exit from the U.S. restaurant market significantly reduces its competitive threat to Genius.
+- Despite strong revenue growth and customer locations, Lightspeed's ongoing GAAP losses indicate financial instability.
+- Lightspeed's focus on European hospitality could pose a future threat, but it is currently not a competitor in the U.S. market.
+- The divestiture of Upserve allows Genius to capitalize on Lightspeed's weakened position in the U.S. restaurant sector.
 
 ## Where we're competing against them right now
 1 account(s) on file -- 0 confirmed, broad-scope relationship(s), 1 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

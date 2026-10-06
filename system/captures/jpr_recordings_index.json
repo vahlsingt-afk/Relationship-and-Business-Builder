@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-02T10:00:30+00:00",
+  "generated_at": "2026-10-06T10:00:25+00:00",
   "source_id": "just_press_record",
-  "total_recordings": 104,
+  "total_recordings": 105,
   "by_status": {
-    "processed": 103,
+    "processed": 104,
     "raw_only_unqueued": 1
   },
   "recordings": [
@@ -1562,6 +1562,21 @@
       "transcript_available": true,
       "word_count": 15908,
       "persisted_count": 8,
+      "exec_mutations": 0,
+      "structured_import_applied": null,
+      "canonical_mutation_statement": "executive_declaration_mutations=0; no structured deep-research sidecar findings to reconcile for this capture.",
+      "noise_only": false
+    },
+    {
+      "file_id": "cap-5cf1b589193716e5",
+      "source_file": "/Users/toddvahlsing/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2026-10-05/15-57-21.m4a",
+      "on_disk": true,
+      "size_bytes": 19466321,
+      "status": "processed",
+      "queued_at": "2026-10-06T09:19:50+00:00",
+      "transcript_available": true,
+      "word_count": 4594,
+      "persisted_count": 7,
       "exec_mutations": 0,
       "structured_import_applied": null,
       "canonical_mutation_statement": "executive_declaration_mutations=0; no structured deep-research sidecar findings to reconcile for this capture.",

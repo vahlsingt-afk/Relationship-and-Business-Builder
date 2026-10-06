@@ -1,7 +1,15 @@
 # Hi Auto — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Hi Auto presents a moderate competitive threat with its drive-thru AI technology, particularly due to its reported high order completion and accuracy rates. However, the lack of confirmed broad-scope accounts and the reliance on self-reported metrics suggest that their impact may be limited for now. The team should monitor Hi Auto's developments closely, especially their expansion into operations analytics, which overlaps with our offerings.
+
+- Hi Auto's drive-thru specialization and reported high performance metrics could attract interest from potential clients, making them a notable competitor.
+- The introduction of Spanish-language capabilities positions Hi Auto to capture a diverse customer base, which could enhance their market appeal.
+- Their movement into operations analytics overlaps with Genius's offerings, indicating a potential area of competition that requires strategic attention.
+- The limited scope of confirmed accounts suggests that while Hi Auto is making strides, their actual market penetration may not be as extensive as claimed.
+- Leadership changes and new product announcements indicate that Hi Auto is actively seeking to enhance its market position, warranting ongoing observation.
 
 ## Where we're competing against them right now
 4 account(s) on file -- 0 confirmed, broad-scope relationship(s), 4 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

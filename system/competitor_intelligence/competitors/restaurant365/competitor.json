@@ -33,9 +33,9 @@
     ]
   },
   "last_evidence_date": "2026-09-30",
-  "last_synced_at": "2026-10-02T09:46:55Z",
+  "last_synced_at": "2026-10-06T09:22:05Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:46:55Z",
+  "updated_at": "2026-10-06T09:22:05Z",
   "latest_cos_commentary": {
     "headline": "Accounting plus inventory integration is a sticky Genius Back Office rival at Jack in the Box.",
     "genius_exposure": "Accounting plus inventory integration is a sticky Genius Back Office rival at Jack in the Box.",
@@ -199,5 +199,16 @@
       "is_inference": false,
       "limitations_or_conflicts": "One quote only; bundle, negotiation and contract terms are unknown and the amount is not a list-price benchmark."
     }
-  ]
+  ],
+  "synthesis": {
+    "bottom_line": "Restaurant365 poses a moderate competitive threat, particularly with recent wins at Jack in the Box and Hungry Howie's, but the lack of confirmed broad-scope deployments and ongoing C-suite volatility may present opportunities for Genius to capitalize on. The team should monitor R365's developments closely and consider strategies to leverage their instability while promoting Genius's strengths.",
+    "themes": [
+      "Recent wins at Jack in the Box and Hungry Howie's indicate Restaurant365's growing influence in the market, which could impact our customer acquisition efforts.",
+      "The confirmed selection of R365 as the sole back-office inventory platform for Jack in the Box highlights their capability to deliver unified visibility into operations, a key selling point.",
+      "Despite their growth, Restaurant365 is experiencing significant C-suite turnover and employee dissatisfaction, which may affect their long-term stability and performance.",
+      "The lack of confirmed broad-scope deployments for many of their accounts suggests that their market presence may not be as strong as it appears, providing an opening for Genius.",
+      "Restaurant365's recent developments, including the introduction of R365 AI, indicate a focus on innovation, which we must counter with our own advancements."
+    ],
+    "generated_at": "2026-10-02T21:10:28Z"
+  }
 }

@@ -1,7 +1,15 @@
 # Bikky — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Bikky currently poses a moderate competitive threat, primarily due to its integration capabilities and reported success with select customers. The team should monitor Bikky's developments closely and consider enhancing our integration offerings and case study visibility to counteract their claims.
+
+- Bikky's integration with major platforms like Fiserv, PAR POS, OpenTable, Uber Eats, and DoorDash enhances its appeal to restaurants seeking comprehensive data solutions.
+- The reported success of Bikky's clients, such as Eggs Up Grill and Groucho's, suggests that their platform may effectively drive sales and customer engagement, which could attract more restaurant clients.
+- Bikky's positioning as a restaurant customer data platform highlights a growing trend in the industry towards data-driven decision-making, making it essential for competitors to adapt.
+- Despite its advantages, Bikky is still in the seed-stage funding phase, indicating potential limitations in scaling and resource availability compared to more established competitors.
+- The lack of confirmed broad-scope deployments for Bikky suggests that its current impact may be limited, providing an opportunity for Genius to strengthen its market position.
 
 ## Where we're competing against them right now
 2 account(s) on file -- 0 confirmed, broad-scope relationship(s), 2 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

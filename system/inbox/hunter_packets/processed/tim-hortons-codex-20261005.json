@@ -1,0 +1,967 @@
+{
+  "schema": "rb.hunter_research_packet.v1",
+  "packet_id": "hunter-tim-hortons-codex-20261005",
+  "research_agent": "Hunter",
+  "cycle": {
+    "cycle_type": "enterprise_account_profile",
+    "playbook": "enterprise_account_profile",
+    "depth": "standard",
+    "objective": "Fill the two supplied Tim Hortons technology-stack and franchise-disclosure gaps, then add material dated public signals.",
+    "requested_by": "RB Hunter Priority Queue Cycle",
+    "prior_state_as_of": "2026-10-05T13:03:50+00:00",
+    "known_gap_ids": [
+      "gap:company:brand-tim-hortons:technology-stack",
+      "gap:company:brand-tim-hortons:franchise-disclosure"
+    ],
+    "discovery_domains": [
+      "ownership and leadership changes",
+      "restaurant footprint and financial health",
+      "technology stack and lifecycle",
+      "franchise governance",
+      "new restaurant-industry signals"
+    ],
+    "resource_plan": {
+      "capacity_snapshot": {
+        "captured_at": "2026-10-05T13:03:49+00:00",
+        "five_hour_used_pct": 2.0,
+        "hours_to_weekly_reset": 2.81,
+        "weekly_used_pct": 7.0
+      },
+      "chat_research_status": "unavailable",
+      "codex_work_reason": "Codex/Work usage permits bounded support if required",
+      "codex_work_status": "authorized",
+      "five_hour_capacity_ceiling_pct": 49.0,
+      "five_hour_reserve_pct": 20.0,
+      "max_targets": 3,
+      "preferred_execution_tier": "codex_standard_reasoning",
+      "reason": "Codex/Work usage permits bounded support if required",
+      "recommended_batch_targets": 3,
+      "reset_credit_allowed": false,
+      "status": "authorized",
+      "weekly_reserve_pct": 5.0
+    },
+    "budget": {
+      "description": "Complete current profile across required modules.",
+      "max_pages": 25,
+      "minimum_independent_chains": 2,
+      "target_minutes": 45
+    },
+    "exit_criteria": [
+      "Current identity and ownership resolved",
+      "Enterprise footprint dated",
+      "Leadership currentness checked",
+      "Technology claims scoped",
+      "Material gaps and conflicts recorded"
+    ]
+  },
+  "targets": [
+    "company:brand-tim-hortons"
+  ],
+  "started_at": "2026-10-05T13:03:50Z",
+  "completed_at": "2026-10-05T13:10:34Z",
+  "status": "partial",
+  "public_sources_only": true,
+  "research_modules": [
+    {
+      "name": "identity",
+      "required": true,
+      "status": "complete",
+      "notes": "Resolved target as Tim Hortons brand; linked RBI parent in SEC public filing."
+    },
+    {
+      "name": "ownership",
+      "required": true,
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "name": "footprint",
+      "required": true,
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "name": "leadership",
+      "required": true,
+      "status": "partial",
+      "notes": null
+    },
+    {
+      "name": "strategy",
+      "required": true,
+      "status": "partial",
+      "notes": null
+    },
+    {
+      "name": "financial_operating_health",
+      "required": true,
+      "status": "partial",
+      "notes": null
+    },
+    {
+      "name": "technology_stack",
+      "required": true,
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "name": "news_signals",
+      "required": true,
+      "status": "partial",
+      "notes": null
+    }
+  ],
+  "questions": [
+    "Which restaurant-technology products and vendors are currently selected, piloted, rolling out, or live, at what scope?",
+    "What do current public franchise disclosures say about required technology, approved vendors, fees, replacement obligations, and governance?"
+  ],
+  "source_ledger": [
+    {
+      "source_id": "src-sec-2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1618756/000161875626000017/qsr-20251231.htm",
+      "canonical_url": "https://www.sec.gov/Archives/edgar/data/1618756/000161875626000017/qsr-20251231.htm",
+      "title": "Restaurant Brands International 2025 Form 10-K",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "public_filing",
+      "source_owner": "government_or_regulator",
+      "access_tier": "free_public",
+      "directness": "direct",
+      "evidence_chain_id": "chain-sec-2025",
+      "published_at": "2026-02-20",
+      "accessed_at": "2026-10-05T13:10:34Z",
+      "access_status": "accessible",
+      "productive": true,
+      "archive_url": null,
+      "notes": "RBI consolidated filing; approved POS vendors and digital architecture are described at parent scope, not as named Tim Hortons-specific vendors."
+    },
+    {
+      "source_id": "src-tims-2026-priorities",
+      "url": "https://www.news.timhortons.ca/en/articles/what-s-brewing-for-2026--five-tim-hortons-priorities-for-serving",
+      "canonical_url": "https://www.news.timhortons.ca/en/articles/what-s-brewing-for-2026--five-tim-hortons-priorities-for-serving",
+      "title": "What’s brewing for 2026: Five Tim Hortons priorities for serving Canadian neighbourhoods",
+      "publisher": "Tim Hortons Newsroom",
+      "source_type": "operator_announcement",
+      "source_owner": "restaurant_or_operator",
+      "access_tier": "free_public",
+      "directness": "direct",
+      "evidence_chain_id": "chain-tims-2026-priorities",
+      "published_at": "2026-02-18",
+      "accessed_at": "2026-10-05T13:10:34Z",
+      "access_status": "accessible",
+      "productive": true,
+      "archive_url": null,
+      "notes": "Operator statement: over 800 Canadian restaurants have new digital kiosks; Rewards has over 7 million active Canadian members."
+    },
+    {
+      "source_id": "src-tims-2026-investment",
+      "url": "https://www.news.timhortons.ca/en/articles/tim-hortons-and-its-restaurant-owners-invest--400-million-to-bui",
+      "canonical_url": "https://www.news.timhortons.ca/en/articles/tim-hortons-and-its-restaurant-owners-invest--400-million-to-bui",
+      "title": "Tim Hortons and its Restaurant Owners Invest $400 million to Build 80 New Restaurants and Renovate 400 Existing Restaurants in 2026",
+      "publisher": "Tim Hortons Newsroom",
+      "source_type": "operator_announcement",
+      "source_owner": "restaurant_or_operator",
+      "access_tier": "free_public",
+      "directness": "direct",
+      "evidence_chain_id": "chain-tims-2026-investment",
+      "published_at": "2026-05-01",
+      "accessed_at": "2026-10-05T13:10:34Z",
+      "access_status": "accessible",
+      "productive": true,
+      "archive_url": null,
+      "notes": "Operator says 2026 Canadian renovation investment improves digital ordering and pickup; table totals are explicitly estimates as of May 2026."
+    },
+    {
+      "source_id": "src-tims-help-pos-exceptions",
+      "url": "https://help.timhortons.ca/hc/en-ca/articles/33045711167515-Why-can-t-I-earn-points-at-hospitals-universities-or-airports",
+      "canonical_url": "https://help.timhortons.ca/hc/en-ca/articles/33045711167515-Why-can-t-I-earn-points-at-hospitals-universities-or-airports",
+      "title": "Why can’t I earn points at hospitals, universities, or airports?",
+      "publisher": "Tim Hortons Help Centre",
+      "source_type": "operator_support_documentation",
+      "source_owner": "restaurant_or_operator",
+      "access_tier": "free_public",
+      "directness": "direct",
+      "evidence_chain_id": "chain-tims-help-pos-exceptions",
+      "published_at": "2025-04-02",
+      "accessed_at": "2026-10-05T13:10:34Z",
+      "access_status": "accessible",
+      "productive": true,
+      "archive_url": null,
+      "notes": "Operator says some institutional Canadian locations have POS devices/software that do not support mobile ordering or Rewards."
+    },
+    {
+      "source_id": "src-us-fdd-2024",
+      "url": "https://www.franchimp.com/pdfjs/read.php?f=107471_2023.pdf",
+      "canonical_url": "https://www.franchimp.com/pdfjs/read.php?f=107471_2023.pdf",
+      "title": "Tim Hortons USA Inc. Franchise Disclosure Document (03/2024)",
+      "publisher": "Tim Hortons USA Inc. (copy hosted by FranChimp)",
+      "source_type": "franchise_disclosure_document",
+      "source_owner": "restaurant_or_operator",
+      "access_tier": "free_public",
+      "directness": "direct",
+      "evidence_chain_id": "chain-us-fdd-2024",
+      "published_at": "2024-03-01",
+      "accessed_at": "2026-10-05T13:10:34Z",
+      "access_status": "accessible",
+      "productive": true,
+      "archive_url": null,
+      "notes": "Underlying public FDD, 03/2024; use only Tim Hortons U.S. Item 8 and Item 11 passages, not Cold Stone exhibits/addenda. It is not the 2026 FDD."
+    },
+    {
+      "source_id": "src-wi-dfi-current-status",
+      "url": "https://apps.dfi.wi.gov/apps/franchiseefiling/activeFilings.aspx",
+      "canonical_url": "https://apps.dfi.wi.gov/apps/franchiseefiling/activeFilings.aspx",
+      "title": "Active Franchise Registrations",
+      "publisher": "Wisconsin Department of Financial Institutions",
+      "source_type": "government_registry",
+      "source_owner": "government_or_regulator",
+      "access_tier": "free_public",
+      "directness": "direct",
+      "evidence_chain_id": "chain-wi-dfi-current-status",
+      "published_at": "2026-10-05",
+      "accessed_at": "2026-10-05T13:10:34Z",
+      "access_status": "accessible",
+      "productive": true,
+      "archive_url": null,
+      "notes": "Lists TIM HORTONS USA INC. registered through 2027-03-13; status only, not the disclosure document itself."
+    },
+    {
+      "source_id": "src-wi-dfi-faq",
+      "url": "https://dfi.wi.gov/Pages/Securities/Filings/FranchiseFAQ.aspx",
+      "canonical_url": "https://dfi.wi.gov/Pages/Securities/Filings/FranchiseFAQ.aspx",
+      "title": "Franchise Frequently Asked Questions",
+      "publisher": "Wisconsin Department of Financial Institutions",
+      "source_type": "government_guidance",
+      "source_owner": "government_or_regulator",
+      "access_tier": "free_public",
+      "directness": "direct",
+      "evidence_chain_id": "chain-wi-dfi-faq",
+      "published_at": "2026-10-05",
+      "accessed_at": "2026-10-05T13:10:34Z",
+      "access_status": "accessible",
+      "productive": true,
+      "archive_url": null,
+      "notes": "Wisconsin general disclosure rule: FDD due 14 calendar days before agreement execution or consideration, whichever occurs first."
+    },
+    {
+      "source_id": "src-fddindex-2026",
+      "url": "https://fddindex.com/brand/tim-hortons/",
+      "canonical_url": "https://fddindex.com/brand/tim-hortons/",
+      "title": "Tim Hortons franchise cost 2026: fees, Item 19 revenue, closures",
+      "publisher": "FDD Index",
+      "source_type": "secondary_fdd_extraction",
+      "source_owner": "public_review_or_directory",
+      "access_tier": "free_public",
+      "directness": "derived",
+      "evidence_chain_id": "chain-fddindex-2026",
+      "published_at": "2026-03-13",
+      "accessed_at": "2026-10-05T13:10:34Z",
+      "access_status": "accessible",
+      "productive": true,
+      "archive_url": null,
+      "notes": "Independent extracted summary cites Wisconsin filing 640330 effective 2026-03-13; reports monthly technology fee range $450–$1,400; not the underlying FDD."
+    },
+    {
+      "source_id": "src-franchiseoverview-2026",
+      "url": "https://franchiseoverview.com/company/tim-hortons",
+      "canonical_url": "https://franchiseoverview.com/company/tim-hortons",
+      "title": "Tim Hortons Franchise — FDD, Fees & Cost (2026)",
+      "publisher": "FranchiseOverview",
+      "source_type": "secondary_fdd_extraction",
+      "source_owner": "public_review_or_directory",
+      "access_tier": "free_public",
+      "directness": "discovery_only",
+      "evidence_chain_id": "chain-franchiseoverview-2026",
+      "published_at": "2026-03-13",
+      "accessed_at": "2026-10-05T13:10:34Z",
+      "access_status": "accessible",
+      "productive": false,
+      "archive_url": null,
+      "notes": "Conflicting secondary summary reports $450–$1,050/month technology fee. Its count and other figures conflict with the FDD Index; not treated as evidence."
+    },
+    {
+      "source_id": "src-franchisefillings-2026",
+      "url": "https://www.franchisefillings.com/brands/tim-hortons-usa",
+      "canonical_url": "https://www.franchisefillings.com/brands/tim-hortons-usa",
+      "title": "Tim Hortons — FDD figures",
+      "publisher": "Franchise Fillings",
+      "source_type": "secondary_fdd_extraction",
+      "source_owner": "public_review_or_directory",
+      "access_tier": "free_public",
+      "directness": "derived",
+      "evidence_chain_id": "chain-franchisefillings-2026",
+      "published_at": "2026-03-13",
+      "accessed_at": "2026-10-05T13:10:34Z",
+      "access_status": "accessible",
+      "productive": true,
+      "archive_url": null,
+      "notes": "Summary cites Wisconsin filing pages; reports 669 franchised and 24 company-owned outlets at end 2025, while not exposing the full Item 6 schedule."
+    },
+    {
+      "source_id": "src-sec-china-2021-pos",
+      "url": "https://www.sec.gov/Archives/edgar/data/1877333/000110465921118784/tm2125996d3_ex10-7.htm",
+      "canonical_url": "https://www.sec.gov/Archives/edgar/data/1877333/000110465921118784/tm2125996d3_ex10-7.htm",
+      "title": "Exhibit 10.7: China Master Franchise Agreement",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "public_filing_exhibit",
+      "source_owner": "government_or_regulator",
+      "access_tier": "free_public",
+      "directness": "direct",
+      "evidence_chain_id": "chain-sec-china-2021-pos",
+      "published_at": "2021-11-18",
+      "accessed_at": "2026-10-05T13:10:34Z",
+      "access_status": "accessible",
+      "productive": true,
+      "archive_url": null,
+      "notes": "Historical Mainland China agreement only: THRI approval/control of POS and updates, data capture/reporting; not generalizable to U.S./Canada."
+    },
+    {
+      "source_id": "src-sec-china-2021-equipment",
+      "url": "https://www.sec.gov/Archives/edgar/data/1877333/000110465921118784/tm2125996d3_ex10-8.htm",
+      "canonical_url": "https://www.sec.gov/Archives/edgar/data/1877333/000110465921118784/tm2125996d3_ex10-8.htm",
+      "title": "Exhibit 10.8: Company Franchise Agreement",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "public_filing_exhibit",
+      "source_owner": "government_or_regulator",
+      "access_tier": "free_public",
+      "directness": "direct",
+      "evidence_chain_id": "chain-sec-china-2021-equipment",
+      "published_at": "2021-11-18",
+      "accessed_at": "2026-10-05T13:10:34Z",
+      "access_status": "accessible",
+      "productive": true,
+      "archive_url": null,
+      "notes": "Historical China agreement: equipment approval and replacement obligations; not generalizable to U.S./Canada."
+    }
+  ],
+  "query_ledger": [
+    {
+      "query": "RBI 2025 Form 10-K Tim Hortons POS technology digital ordering vendors",
+      "purpose": "Resolve current operator architecture and approved POS vendors at parent / brand scope.",
+      "executed_at": "2026-10-05T13:04:10Z",
+      "productive": true,
+      "notes": "Opened SEC 2025 10-K. It identifies approved third-party POS software, broad ordering architecture, but not named Tim Hortons vendors."
+    },
+    {
+      "query": "site:news.timhortons.ca 2026 Tim Hortons digital kiosks restaurant technology",
+      "purpose": "Find operator-controlled current deployments and scope.",
+      "executed_at": "2026-10-05T13:05:00Z",
+      "productive": true,
+      "notes": "Opened Feb 2026 operator story reporting more than 800 Canadian restaurants with kiosks."
+    },
+    {
+      "query": "Tim Hortons current 2026 franchise disclosure technology POS Smart Store Item 8 Item 11",
+      "purpose": "Find a public FDD and extract technology, vendor, fee, maintenance, update and replacement obligations.",
+      "executed_at": "2026-10-05T13:06:00Z",
+      "productive": true,
+      "notes": "Opened free public 03/2024 U.S. FDD copy; 2026 FDD summaries and WI registry. Full current 2026 PDF was not opened."
+    },
+    {
+      "query": "site:sec.gov Tim Hortons China agreement POS replacement equipment technology",
+      "purpose": "Check whether public cross-market terms show separate international technology governance.",
+      "executed_at": "2026-10-05T13:07:00Z",
+      "productive": true,
+      "notes": "Opened two SEC-filed 2021 China contract exhibits; treated as territory-specific historical terms."
+    },
+    {
+      "query": "Tim Hortons FDD 2026 technology fee $450 $1400 $1050",
+      "purpose": "Corroborate the current FDD monthly technology fee.",
+      "executed_at": "2026-10-05T13:08:00Z",
+      "productive": false,
+      "notes": "Two secondary summaries conflict; current filing p.30 not inspected. Exact fee remains unresolved."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-pos-approved",
+      "target_key": "company:brand-tim-hortons",
+      "module": "technology_stack",
+      "claim": "RBI reports that its restaurants use POS software from approved third-party vendors. The 2025 filing does not name those vendors or identify a Tim Hortons-specific installed POS product.",
+      "contribution_type": "fills_known_gap",
+      "gap_ids": [
+        "gap:company:brand-tim-hortons:technology-stack"
+      ],
+      "novelty_rationale": null,
+      "evidence_status": "reported",
+      "confidence_pct": 88,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2025-12-31",
+      "temporal_status": "current_probable",
+      "scope": "RBI group-wide; POS vendor approval is disclosed at parent level, without a Tim Hortons vendor or deployment mapping.",
+      "commercial_relevance": "sales_relevance",
+      "source_ids": [
+        "src-sec-2025"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": "Current filing is parent-level and does not establish which approved supplier or software is selected at Tim Hortons or each market.",
+      "recommended_follow_up": null
+    },
+    {
+      "finding_id": "f-digital-architecture",
+      "target_key": "company:brand-tim-hortons",
+      "module": "technology_stack",
+      "claim": "RBI says a customizable application architecture supporting mobile/web ordering and kiosks is deployed in the U.S., Canada, and several international markets; third-party and white-label delivery is available at many restaurants.",
+      "contribution_type": "fills_known_gap",
+      "gap_ids": [
+        "gap:company:brand-tim-hortons:technology-stack"
+      ],
+      "novelty_rationale": null,
+      "evidence_status": "reported",
+      "confidence_pct": 91,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2025-12-31",
+      "temporal_status": "current_probable",
+      "scope": "RBI group architecture; country and “many restaurants” scope are stated, but Tim Hortons-specific vendors and exact unit coverage are not.",
+      "commercial_relevance": "sales_relevance",
+      "source_ids": [
+        "src-sec-2025"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": "RBI parent-level disclosure does not list third-party integration vendors or Tim Hortons-specific market deployments.",
+      "recommended_follow_up": null
+    },
+    {
+      "finding_id": "f-kiosk-800",
+      "target_key": "company:brand-tim-hortons",
+      "module": "technology_stack",
+      "claim": "Tim Hortons reported that new digital kiosks had been installed in more than 800 Canadian restaurants by its February 2026 update, with more planned.",
+      "contribution_type": "fills_known_gap",
+      "gap_ids": [
+        "gap:company:brand-tim-hortons:technology-stack"
+      ],
+      "novelty_rationale": null,
+      "evidence_status": "reported",
+      "confidence_pct": 95,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2026-02-18",
+      "temporal_status": "current_verified",
+      "scope": "Canada; more than 800 restaurant locations at operator-reported date; subsequent rollout extent not specified.",
+      "commercial_relevance": "sales_relevance",
+      "source_ids": [
+        "src-tims-2026-priorities"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": null,
+      "recommended_follow_up": null
+    },
+    {
+      "finding_id": "f-rewards-7m",
+      "target_key": "company:brand-tim-hortons",
+      "module": "technology_stack",
+      "claim": "Tim Hortons reported over 7 million active Tims Rewards members in Canada in February 2026 and said millions use Rewards weekly.",
+      "contribution_type": "new_data_point",
+      "gap_ids": [],
+      "novelty_rationale": "Adds a dated first-party scale indicator for the digital loyalty program absent from the supplied RBB context.",
+      "evidence_status": "reported",
+      "confidence_pct": 93,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2026-02-18",
+      "temporal_status": "current_verified",
+      "scope": "Canadian consumer Rewards program, member and usage scale as reported by Tim Hortons.",
+      "commercial_relevance": "sales_relevance",
+      "source_ids": [
+        "src-tims-2026-priorities"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": null,
+      "recommended_follow_up": null
+    },
+    {
+      "finding_id": "f-pos-exceptions",
+      "target_key": "company:brand-tim-hortons",
+      "module": "technology_stack",
+      "claim": "Tim Hortons says some Canadian restaurants in hospitals, airports, and universities use different POS devices/software that do not support mobile ordering or Tims Rewards.",
+      "contribution_type": "fills_known_gap",
+      "gap_ids": [
+        "gap:company:brand-tim-hortons:technology-stack"
+      ],
+      "novelty_rationale": null,
+      "evidence_status": "reported",
+      "confidence_pct": 97,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2025-04-02",
+      "temporal_status": "current_probable",
+      "scope": "Some Canadian institutional locations; specific count, product/vendor names, and remediation plan not stated.",
+      "commercial_relevance": "account_risk",
+      "source_ids": [
+        "src-tims-help-pos-exceptions"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": "This is an explicit exception set, not evidence that all restaurants have the same POS limitation.",
+      "recommended_follow_up": null
+    },
+    {
+      "finding_id": "f-fdd-smartstore",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "The March 2024 U.S. FDD describes Tim Hortons’ “Smart Store” technology strategy as an integrated bundle including POS, computer equipment, computer/digital-menu-board software, internet/Wi-Fi, card-processing and stored-value-gift-card equipment; franchisees/operators must obtain the programs and designated maintenance/support vendors.",
+      "contribution_type": "fills_known_gap",
+      "gap_ids": [
+        "gap:company:brand-tim-hortons:franchise-disclosure"
+      ],
+      "novelty_rationale": null,
+      "evidence_status": "reported",
+      "confidence_pct": 93,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2024-03-01",
+      "temporal_status": "historical",
+      "scope": "U.S. Tim Hortons franchise disclosure (FDD dated 03/2024); not Canada or international terms, and not necessarily the current 2026 contract.",
+      "commercial_relevance": "sales_relevance",
+      "source_ids": [
+        "src-us-fdd-2024"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": "FDD copy hosted by a third party; document includes Cold Stone addenda. Claim is restricted to Tim Hortons Items 8/11 and is historical until checked against 2026 full filing.",
+      "recommended_follow_up": null
+    },
+    {
+      "finding_id": "f-fdd-required-current-pos",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "The March 2024 U.S. FDD says new Tim Hortons Shops must use the then-current POS system required by the franchisor; the system may be bought from an authorized vendor and is subject to a maintenance contract. All restaurants must support approved Digital Ordering, Digital Payments, and Customer Loyalty programs.",
+      "contribution_type": "fills_known_gap",
+      "gap_ids": [
+        "gap:company:brand-tim-hortons:franchise-disclosure"
+      ],
+      "novelty_rationale": null,
+      "evidence_status": "reported",
+      "confidence_pct": 94,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2024-03-01",
+      "temporal_status": "historical",
+      "scope": "U.S. Tim Hortons shops under 03/2024 FDD; required current POS and digital program support.",
+      "commercial_relevance": "replacement_opportunity",
+      "source_ids": [
+        "src-us-fdd-2024"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": "Names no POS product/vendor; 2024 FDD, not confirmed against current 2026 FDD.",
+      "recommended_follow_up": null
+    },
+    {
+      "finding_id": "f-fdd-update-control",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "The March 2024 U.S. FDD requires franchisees, at their expense, to maintain specified technology systems and promptly install franchisor-directed additions, modifications, substitutions, or replacements; system changes require prior approval, and the FDD describes franchisor access to system data.",
+      "contribution_type": "fills_known_gap",
+      "gap_ids": [
+        "gap:company:brand-tim-hortons:franchise-disclosure"
+      ],
+      "novelty_rationale": null,
+      "evidence_status": "reported",
+      "confidence_pct": 94,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2024-03-01",
+      "temporal_status": "historical",
+      "scope": "U.S. Tim Hortons franchise terms disclosed in the 03/2024 FDD.",
+      "commercial_relevance": "replacement_opportunity",
+      "source_ids": [
+        "src-us-fdd-2024"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": "Historical disclosure; current 2026 wording and market applicability remain to be checked.",
+      "recommended_follow_up": null
+    },
+    {
+      "finding_id": "f-fdd-tech-fee",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "A secondary transcription of Wisconsin Tim Hortons USA Inc. 2026 FDD filing 640330 reports a monthly technology fee of $450–$1,400 (page 30); a separate free summary reports $450–$1,050, so the exact current Item 6 amount is conflicted pending inspection of the underlying filing.",
+      "contribution_type": "fills_known_gap",
+      "gap_ids": [
+        "gap:company:brand-tim-hortons:franchise-disclosure"
+      ],
+      "novelty_rationale": null,
+      "evidence_status": "conflicted",
+      "confidence_pct": 72,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2026-03-13",
+      "temporal_status": "currentness_unknown",
+      "scope": "U.S. 2026 FDD fee schedule for Tim Hortons USA Inc.; secondary extraction only.",
+      "commercial_relevance": "account_risk",
+      "source_ids": [
+        "src-fddindex-2026",
+        "src-franchiseoverview-2026"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": "Conflicting secondary summaries: FDD Index says $450–$1,400/month; FranchiseOverview says $450–$1,050/month. Validate against the full current Item 6 before relying on the range.",
+      "recommended_follow_up": "Retrieve WI filing 640330 and inspect p.30 Item 6 directly; confirm whether range varies by shop type or option."
+    },
+    {
+      "finding_id": "f-wi-registration",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "Wisconsin’s active registration list shows TIM HORTONS USA INC. registration through March 13, 2027; the state FAQ says an FDD must be furnished 14 calendar days before agreement execution or payment, whichever happens first.",
+      "contribution_type": "new_data_point",
+      "gap_ids": [],
+      "novelty_rationale": "Adds the state filing currency and statutory disclosure timing for the U.S. franchise context, absent from supplied RBB context.",
+      "evidence_status": "verified",
+      "confidence_pct": 98,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2026-10-05",
+      "temporal_status": "current_verified",
+      "scope": "Wisconsin registration for Tim Hortons USA Inc.; DFI FAQ describes Wisconsin disclosure timing generally.",
+      "commercial_relevance": "no_immediate_relevance",
+      "source_ids": [
+        "src-wi-dfi-current-status",
+        "src-wi-dfi-faq"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": null,
+      "recommended_follow_up": null
+    },
+    {
+      "finding_id": "f-us-outlets-2025",
+      "target_key": "company:brand-tim-hortons",
+      "module": "footprint",
+      "claim": "Secondary transcription of Tim Hortons USA Inc. 2026 FDD reports 669 franchised U.S. outlets and 24 company-owned outlets at year-end 2025.",
+      "contribution_type": "updates_existing_fact",
+      "gap_ids": [],
+      "novelty_rationale": null,
+      "evidence_status": "reported",
+      "confidence_pct": 84,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2025-12-31",
+      "temporal_status": "historical",
+      "scope": "U.S. FDD operating table for the 2025 calendar year.",
+      "commercial_relevance": "no_immediate_relevance",
+      "source_ids": [
+        "src-franchisefillings-2026"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": "Independent summary cites the filing pages but the full underlying table was not inspected in this run.",
+      "recommended_follow_up": null
+    },
+    {
+      "finding_id": "f-ca-invest-2026",
+      "target_key": "company:brand-tim-hortons",
+      "module": "strategy",
+      "claim": "Tim Hortons and its restaurant owners announced a planned C$400 million Canadian investment for 2026 to build 80 restaurants and renovate 400; the brand said digital ordering and pickup are features of renovations and many guests use the app or kiosk.",
+      "contribution_type": "new_data_point",
+      "gap_ids": [],
+      "novelty_rationale": "Adds current 2026 Canadian growth and digital-ordering investment signal not represented in the supplied gap baseline.",
+      "evidence_status": "reported",
+      "confidence_pct": 95,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2026-05-01",
+      "temporal_status": "current_verified",
+      "scope": "Canada; plans and estimates as of May 2026.",
+      "commercial_relevance": "timing_signal",
+      "source_ids": [
+        "src-tims-2026-investment"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": "The release labels the provincial table as current estimate as of May 2026; this is planned/announced scope, not verified completion.",
+      "recommended_follow_up": null
+    },
+    {
+      "finding_id": "f-china-contract",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "A 2021 SEC-filed Tim Hortons China master-franchise agreement gives THRI/affiliates approval control over POS hardware/software and updates after consultation with the master franchisee, and defines sales, transaction, product, employee and related data sent to THRI.",
+      "contribution_type": "new_data_point",
+      "gap_ids": [],
+      "novelty_rationale": "Adds a public example of international master-franchise technology governance and data requirements not present in the supplied target context.",
+      "evidence_status": "reported",
+      "confidence_pct": 95,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2021-11-18",
+      "temporal_status": "historical",
+      "scope": "Specific historical Mainland China master-franchise agreement only.",
+      "commercial_relevance": "competitive_relevance",
+      "source_ids": [
+        "src-sec-china-2021-pos"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": "Contract-specific and historical; do not generalize to Canada/U.S. or claim this agreement is still in force.",
+      "recommended_follow_up": null
+    },
+    {
+      "finding_id": "f-china-replacement",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "A separate 2021 SEC-filed Tim Hortons China company-franchise agreement requires equipment to meet standards and obsolete or inoperable equipment to be replaced with equipment approved for new Tim Hortons restaurants.",
+      "contribution_type": "new_data_point",
+      "gap_ids": [],
+      "novelty_rationale": "Adds a public example of explicit international replacement controls.",
+      "evidence_status": "reported",
+      "confidence_pct": 94,
+      "observed_at": "2026-10-05T13:10:34Z",
+      "as_of": "2021-11-18",
+      "temporal_status": "historical",
+      "scope": "Specific historical Mainland China company-franchise agreement.",
+      "commercial_relevance": "replacement_opportunity",
+      "source_ids": [
+        "src-sec-china-2021-equipment"
+      ],
+      "is_vendor_claim": false,
+      "is_inference": false,
+      "limitations": "Not a U.S./Canadian franchise term and not evidence of current agreement status.",
+      "recommended_follow_up": null
+    }
+  ],
+  "gap_outcomes": [
+    {
+      "gap_id": "gap:company:brand-tim-hortons:technology-stack",
+      "status": "partially_filled",
+      "finding_ids": [
+        "f-pos-approved",
+        "f-digital-architecture",
+        "f-kiosk-800",
+        "f-pos-exceptions"
+      ],
+      "reason": "Public sources clarify parent-approved POS software, broad digital architecture, >800 Canadian kiosk locations, and known institutional POS exceptions, but do not identify POS/app/kiosk vendors or the complete Tim Hortons deployment map."
+    },
+    {
+      "gap_id": "gap:company:brand-tim-hortons:franchise-disclosure",
+      "status": "partially_filled",
+      "finding_ids": [
+        "f-fdd-smartstore",
+        "f-fdd-required-current-pos",
+        "f-fdd-update-control",
+        "f-fdd-tech-fee"
+      ],
+      "reason": "A public 2024 U.S. FDD establishes required technology/vendor/maintenance/update controls; current 2026 WI registration is active, but the full 2026 Item 6 and technology clause text were not inspected. Secondary fee summaries conflict."
+    }
+  ],
+  "change_events": [
+    {
+      "change_event_id": "chg-tims-kiosk-expansion",
+      "target_key": "company:brand-tim-hortons",
+      "change_type": "technology_stack",
+      "summary": "Tim Hortons publicly reported digital kiosks installed in more than 800 Canadian restaurants by February 2026; additional kiosks were planned.",
+      "prior_state": {
+        "known_active_tech_stack_relationships": [],
+        "kiosk_count": "not in supplied RBB context"
+      },
+      "new_state": {
+        "kiosks_installed": "more than 800",
+        "market": "Canada",
+        "as_of": "2026-02-18",
+        "future_rollout": "more planned"
+      },
+      "effective_at": "2026-02-18",
+      "observed_at": "2026-10-05T13:10:34Z",
+      "materiality": "medium",
+      "finding_ids": [
+        "f-kiosk-800"
+      ],
+      "source_ids": [
+        "src-tims-2026-priorities"
+      ],
+      "confidence_pct": 95
+    },
+    {
+      "change_event_id": "chg-tims-2026-investment",
+      "target_key": "company:brand-tim-hortons",
+      "change_type": "expansion",
+      "summary": "Tim Hortons and restaurant owners announced 2026 Canada plans for 80 new restaurants and 400 renovations; digital ordering and pickup are among renovation experience investments.",
+      "prior_state": {
+        "2026 Canada new-build and renovation plan": "not in supplied RBB context"
+      },
+      "new_state": {
+        "planned_new_restaurants": 80,
+        "planned_renovations": 400,
+        "announced_investment_cad": 400000000,
+        "market": "Canada"
+      },
+      "effective_at": "2026-05-01",
+      "observed_at": "2026-10-05T13:10:34Z",
+      "materiality": "medium",
+      "finding_ids": [
+        "f-ca-invest-2026"
+      ],
+      "source_ids": [
+        "src-tims-2026-investment"
+      ],
+      "confidence_pct": 95
+    }
+  ],
+  "mutation_proposals": [],
+  "cos_handoffs": [
+    {
+      "handoff_id": "cos-tims-digital-ops",
+      "headline": "Kiosk expansion coexists with disclosed POS fragmentation at some Canadian institutional restaurants",
+      "connected_target_keys": [
+        "company:brand-tim-hortons"
+      ],
+      "change_event_ids": [
+        "chg-tims-kiosk-expansion"
+      ],
+      "finding_ids": [
+        "f-kiosk-800",
+        "f-pos-exceptions"
+      ],
+      "connection": "Tim Hortons reports kiosks installed in more than 800 Canadian restaurants, while its support center confirms some hospital, airport, and university locations use different POS setups that cannot support mobile ordering or Rewards.",
+      "why_it_matters": "This suggests rollout and integration coverage may vary by location format; a technology opportunity should distinguish broad digital expansion from exceptions requiring POS compatibility or modernization. This is an inference from operator disclosures, not proof that the same technology vendor owns either condition.",
+      "is_inference": true,
+      "confidence_pct": 85,
+      "time_horizon": "months"
+    }
+  ],
+  "paid_source_recommendations": [],
+  "negative_findings": [
+    {
+      "question_or_claim": "Named POS/software/kiosk vendors currently selected, piloted, rolling out, or live across Tim Hortons",
+      "search_scope": "RBI 2025 10-K, Tim Hortons public newsroom and help center, U.S. franchise disclosure materials opened in this run.",
+      "result": "No public source opened in this run named the current POS vendor or mapped it to Tim Hortons locations; operator and parent sources refer to approved third-party vendors or systems generically.",
+      "source_ids": [
+        "src-sec-2025",
+        "src-tims-2026-priorities",
+        "src-tims-help-pos-exceptions",
+        "src-us-fdd-2024"
+      ]
+    },
+    {
+      "question_or_claim": "Full 2026 Wisconsin FDD Item 8 / Item 11 technology language and definitive Item 6 technology fee",
+      "search_scope": "Wisconsin DFI active-registration record plus public filing summaries and a public 2024 FDD copy.",
+      "result": "Current WI registration and filing number are verified through a secondary filing index, but the full 2026 document was not opened; summaries conflict on the monthly technology fee.",
+      "source_ids": [
+        "src-wi-dfi-current-status",
+        "src-fddindex-2026",
+        "src-franchiseoverview-2026"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Monthly technology fee in the 2026 Tim Hortons U.S. FDD",
+      "source_ids": [
+        "src-fddindex-2026",
+        "src-franchiseoverview-2026"
+      ],
+      "analysis": "FDD Index reports $450–$1,400/month while FranchiseOverview reports $450–$1,050/month. Both are secondary extractions. The current filing p.30 was not inspected during this run, so the exact range cannot be resolved from the accessible evidence collected.",
+      "resolution_status": "unresolved"
+    }
+  ],
+  "unanswered_questions": [
+    "What current POS, ordering, kiosk and payments products/vendors are specifically selected or live at Tim Hortons, by region and store format?",
+    "What does the full 2026 Wisconsin FDD filing 640330 Item 6 p.30 state for the exact technology fee and its conditions?",
+    "Do the full 2026 FDD Item 8 and franchise-agreement exhibits materially change the 2024 U.S. Smart Store, approved-vendor, support, update, replacement and data-access terms?",
+    "What is the current store count and deployment scope for digital kiosks, mobile ordering, and loyalty in U.S. and international Tim Hortons locations?"
+  ],
+  "method_feedback": {
+    "productive_patterns": [
+      "RBI annual filing and Tim Hortons-controlled newsroom/help pages jointly provide broad architecture, dated deployment counts, and acknowledged exceptions.",
+      "A public 2024 U.S. FDD copy provides exact historical franchise terms when secondary 2026 summaries do not expose technology clauses.",
+      "State registry confirms filing status; secondary filing summaries can locate page-numbered fee/outlet data but need verification against the filing."
+    ],
+    "unproductive_patterns": [
+      "The full current 2026 FDD was not available in the public material opened in this pass; current fee summaries conflict.",
+      "A Tim Hortons FDD summary page mixing Cold Stone material was excluded from factual evidence due apparent document contamination."
+    ],
+    "proposed_method_changes": [
+      "Prefer direct inspection of the current Wisconsin DFI filing 640330 and use FDD summaries only as a locator.",
+      "Record brand/market scope separately from RBI parent-level architecture and contract-specific China evidence."
+    ],
+    "next_cycle_recommendations": [
+      "Open current filing 640330, especially Item 6 p.30 and Item 8 / Item 11 contract exhibits; reconcile the technology fee and verify any changes from 03/2024.",
+      "Seek vendor or product identifiers in public procurement, implementation, partner, and franchise-system materials; corroborate any vendor-authored deployment claims."
+    ]
+  },
+  "quality": {
+    "pages_opened": 12,
+    "productive_pages": 11,
+    "primary_source_pages": 9,
+    "findings_count": 14,
+    "findings_with_sources": 14,
+    "required_modules_complete": false
+  },
+  "resource_usage": {
+    "selected_execution_tier": "codex_standard_reasoning",
+    "chatgpt_deep_research_calls": 0,
+    "codex_model_calls": 1,
+    "premium_reasoning_calls": 0,
+    "targets_attempted": 1,
+    "targets_completed": 1,
+    "budget_outcome": "within_budget",
+    "escalation_reasons": []
+  },
+  "payload_schema": "rb.brand_company_profile.v1",
+  "payload": {
+    "records": [
+      {
+        "target_key": "company:brand-tim-hortons",
+        "record_type": "technology_observation",
+        "source_ids": [
+          "src-sec-2025",
+          "src-tims-2026-priorities",
+          "src-tims-help-pos-exceptions"
+        ],
+        "finding_ids": [
+          "f-pos-approved",
+          "f-digital-architecture",
+          "f-kiosk-800",
+          "f-pos-exceptions"
+        ],
+        "as_of": "2026-02-18",
+        "technology_observations": [
+          {
+            "product": "POS platform",
+            "vendor": null,
+            "selection_status": "approved third-party vendors; operator product/vendor not named",
+            "scope": "RBI group disclosure; exact Tim Hortons market mapping unavailable",
+            "finding_id": "f-pos-approved"
+          },
+          {
+            "product": "customizable digital ordering/application and kiosk architecture",
+            "vendor": null,
+            "selection_status": "reported deployed; third-party integrations",
+            "scope": "RBI reports U.S., Canada, several international markets; many restaurants, exact Tim Hortons units unspecified",
+            "finding_id": "f-digital-architecture"
+          },
+          {
+            "product": "digital ordering kiosks",
+            "vendor": null,
+            "selection_status": "installed",
+            "scope": "more than 800 Canadian Tim Hortons restaurants as of 2026-02-18",
+            "finding_id": "f-kiosk-800"
+          },
+          {
+            "product": "POS devices/software at some institutional locations",
+            "vendor": null,
+            "selection_status": "live, functionally limited",
+            "scope": "some Canadian hospital, university and airport restaurants; do not support mobile ordering or Rewards",
+            "finding_id": "f-pos-exceptions"
+          }
+        ]
+      },
+      {
+        "target_key": "company:brand-tim-hortons",
+        "record_type": "franchise_disclosure",
+        "source_ids": [
+          "src-us-fdd-2024",
+          "src-fddindex-2026",
+          "src-franchiseoverview-2026",
+          "src-wi-dfi-current-status",
+          "src-wi-dfi-faq",
+          "src-sec-china-2021-pos",
+          "src-sec-china-2021-equipment"
+        ],
+        "finding_ids": [
+          "f-fdd-smartstore",
+          "f-fdd-required-current-pos",
+          "f-fdd-update-control",
+          "f-fdd-tech-fee",
+          "f-wi-registration",
+          "f-china-contract",
+          "f-china-replacement"
+        ],
+        "as_of": "2026-10-05",
+        "disclosure_summary": "Historical U.S. 03/2024 FDD describes required Smart Store systems, a franchisor-required current POS for new shops, authorized vendor/maintenance, approved digital program support and franchisee-funded franchisor-directed updates/replacements. Current U.S. 2026 filing is active in Wisconsin through 2027-03-13. Two secondary summaries conflict on the monthly technology fee ($450–$1,400 vs. $450–$1,050); verify Item 6 p.30 in filing 640330 before relying on the amount. Separate 2021 China agreements show territory-specific POS/data and equipment replacement controls; not generalizable to North America."
+      }
+    ]
+  }
+}

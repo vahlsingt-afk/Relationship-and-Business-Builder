@@ -36,9 +36,9 @@
   },
   "category_battle_cards": {},
   "last_evidence_date": "2026-09-30",
-  "last_synced_at": "2026-10-02T09:46:56Z",
+  "last_synced_at": "2026-10-06T09:22:06Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:46:56Z",
+  "updated_at": "2026-10-06T09:22:06Z",
   "latest_cos_commentary": {
     "headline": "Payment orchestration can sit alongside other processors, including an existing Worldpay relationship.",
     "genius_exposure": "Payment orchestration can sit alongside other processors, including an existing Worldpay relationship.",
@@ -146,5 +146,16 @@
       "is_inference": false,
       "limitations_or_conflicts": "Confirms interoperability only; does not establish implementation quality or uptime."
     }
-  ]
+  ],
+  "synthesis": {
+    "bottom_line": "FreedomPay currently poses a moderate competitive threat, particularly due to its partnerships with major brands like Subway and its deep integrations in the hospitality sector. The team should monitor FreedomPay's developments closely and consider strategies to enhance our own partnerships and integrations to maintain competitiveness.",
+    "themes": [
+      "FreedomPay's partnerships with major brands like Subway and Olo enhance its market presence and credibility in the restaurant technology space.",
+      "The absence of confirmed recent deployments suggests that while FreedomPay is active, its immediate impact on new restaurant accounts may be limited.",
+      "FreedomPay's focus on payment orchestration without acquiring could create opportunities for Genius to leverage its own acquirer partnerships more effectively.",
+      "The lack of identified shortcomings in FreedomPay's offerings indicates a stable competitive position, necessitating proactive measures from Genius to differentiate.",
+      "FreedomPay's extensive integrations with hospitality ISVs position it well for growth in the food service sector, which could challenge Genius's market share."
+    ],
+    "generated_at": "2026-10-02T21:10:41Z"
+  }
 }

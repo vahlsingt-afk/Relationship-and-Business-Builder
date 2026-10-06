@@ -1,6 +1,6 @@
 # Global Payments Genius User Conference 2026 — Coverage Gap Analysis
 
-_Generated 2026-10-02T10:14:13+00:00_
+_Generated 2026-10-06T10:14:18+00:00_
 
 44 companies flagged. Account-planning view: where the relationship graph is weak, not where it's strong.
 
@@ -22,14 +22,14 @@ _Generated 2026-10-02T10:14:13+00:00_
 
 - **Gap type(s):** registration_missing_despite_relationships
 - **Door opener today:** Lucie Tuan (score 46)
-- **Recommended introducer:** Lucie Tuan — LMI (DRR 59.4); works at Wingstop Restaurants Inc.; domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Lucie Tuan — LMI (DRR 59.1); works at Wingstop Restaurants Inc.; domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** low
 
 ## Levy Restaurants (3 contact(s))
 
 - **Gap type(s):** registration_missing_despite_relationships
 - **Door opener today:** Robert Wood (score 39)
-- **Recommended introducer:** Carter Witt — LMI (DRR 30.3); works at Levy Restaurants.
+- **Recommended introducer:** Aaron Rheinecker — LMI (DRR 30.0); works at Levy Restaurants.
 - **Estimated effort:** low
 
 ## Meritage Hospitality Group (3 contact(s))
@@ -43,7 +43,7 @@ _Generated 2026-10-02T10:14:13+00:00_
 
 - **Gap type(s):** registration_missing_despite_relationships
 - **Door opener today:** Brooks Speirs, CFE (score 37)
-- **Recommended introducer:** Corey Callaway — LMI (DRR 30.1); works at Bojangles' Restaurants, Inc.; domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Brooks Speirs, CFE — LMI (DRR 30.0); works at Bojangles' Restaurants, Inc.; domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** low
 
 ## Popeyes Louisiana Kitchen (3 contact(s))
@@ -64,7 +64,7 @@ _Generated 2026-10-02T10:14:13+00:00_
 
 - **Gap type(s):** registration_missing_despite_relationships
 - **Door opener today:** 🐧Patrick Bobrukiewicz (score 45)
-- **Recommended introducer:** 🐧Patrick Bobrukiewicz — LKI (DRR 44.8); works at Thrive Restaurant Group; domain expertise: domain match: hospitality_foodservice, recruiting_hr.
+- **Recommended introducer:** 🐧Patrick Bobrukiewicz — LKI (DRR 44.5); works at Thrive Restaurant Group; domain expertise: domain match: hospitality_foodservice, recruiting_hr.
 - **Estimated effort:** low
 
 ## Cafe Rio Fresh Modern Mexican (2 contact(s))
@@ -78,7 +78,7 @@ _Generated 2026-10-02T10:14:13+00:00_
 
 - **Gap type(s):** registration_missing_despite_relationships
 - **Door opener today:** Ben LaTour (score 37)
-- **Recommended introducer:** Dustin Turner — LMI (DRR 30.3); works at Raising Cane's Chicken Fingers; domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Ben LaTour — LMI (DRR 30.0); works at Raising Cane's Chicken Fingers; domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** low
 
 ## JAI Restaurant Group (2 contact(s))
@@ -106,21 +106,21 @@ _Generated 2026-10-02T10:14:13+00:00_
 
 - **Gap type(s):** registration_missing_despite_relationships
 - **Door opener today:** Shawn Walchef (score 37)
-- **Recommended introducer:** Dean LaBay 🥔 — LMI (DRR 30.2); works at Cali BBQ Media.
+- **Recommended introducer:** Dean LaBay 🥔 — LMI (DRR 30.0); works at Cali BBQ Media.
 - **Estimated effort:** low
 
 ## Vibe Restaurants (2 contact(s))
 
 - **Gap type(s):** registration_missing_despite_relationships
 - **Door opener today:** Erick Coreas (score 34)
-- **Recommended introducer:** Erick Coreas — LMI (DRR 30.1); works at Vibe Restaurants.
+- **Recommended introducer:** Erick Coreas — LMI (DRR 30.0); works at Vibe Restaurants.
 - **Estimated effort:** low
 
 ## A&W Restaurants, Inc. (2 contact(s))
 
 - **Gap type(s):** registration_missing_despite_relationships
 - **Door opener today:** Jordan Allen (score 34)
-- **Recommended introducer:** Dave Crowley  CFE — LMI (DRR 30.6); works at A&W Restaurants, Inc..
+- **Recommended introducer:** Dave Crowley  CFE — LMI (DRR 30.2); works at A&W Restaurants, Inc..
 - **Estimated effort:** low
 
 ## Upward Projects Restaurant Group | Postino WineCafe | Joyride Taco House | Windsor | Federal Pizza (2 contact(s))
@@ -134,28 +134,28 @@ _Generated 2026-10-02T10:14:13+00:00_
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Todd Stewart (score 39)
-- **Recommended introducer:** Todd Stewart — LKI (DRR 54.4); works at A&W Restaurants.
+- **Recommended introducer:** Todd Stewart — LKI (DRR 54.1); works at A&W Restaurants.
 - **Estimated effort:** low
 
 ## Dutch Bros Coffee (1 contact(s))
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Tyler Schrameck (score 32)
-- **Recommended introducer:** Tyler Schrameck — LKI (DRR 50.9); works at Dutch Bros Coffee; domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Tyler Schrameck — LKI (DRR 50.6); works at Dutch Bros Coffee; domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** low
 
 ## TRIS | The Restaurant Intelligence Solution (1 contact(s))
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Sabra Mauldin (score 29)
-- **Recommended introducer:** Sabra Mauldin — LMI (DRR 41.9); works at TRIS | The Restaurant Intelligence Solution.
+- **Recommended introducer:** Sabra Mauldin — LMI (DRR 41.6); works at TRIS | The Restaurant Intelligence Solution.
 - **Estimated effort:** low
 
 ## Hawaiian Bros Island Grill (1 contact(s))
 
 - **Gap type(s):** existing_contacts_inactive
 - **Door opener today:** Scott Ford (score 29)
-- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** moderate
 
 ## JJC Family Restaurants (1 contact(s))
@@ -169,21 +169,21 @@ _Generated 2026-10-02T10:14:13+00:00_
 
 - **Gap type(s):** existing_contacts_inactive
 - **Door opener today:** Mark Graff (score 27)
-- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** moderate
 
 ## Chuy's Restaurants (1 contact(s))
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Corbin Gass (score 24)
-- **Recommended introducer:** Corbin Gass — LMI (DRR 30.1); works at Chuy's Restaurants; domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Corbin Gass — LMI (DRR 30.0); works at Chuy's Restaurants; domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** low
 
 ## CCL Hospitality Group (1 contact(s))
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Jake Rossman (score 24)
-- **Recommended introducer:** Jake Rossman — LMI (DRR 30.1); works at CCL Hospitality Group; domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Jake Rossman — LMI (DRR 30.0); works at CCL Hospitality Group; domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** low
 
 ## Palermo's Pizza (1 contact(s))
@@ -253,28 +253,28 @@ _Generated 2026-10-02T10:14:13+00:00_
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Andrew Kraus (score 18)
-- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** moderate
 
 ## True Food Kitchen (1 contact(s))
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Brittany Maroney (score 18)
-- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** moderate
 
 ## Good Times Restaurants Inc. (1 contact(s))
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Brock Davis (score 18)
-- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.3).
+- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.0).
 - **Estimated effort:** moderate
 
 ## Tenzo - Restaurant PerformanceOps (1 contact(s))
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Elizabeth Wickham (score 18)
-- **Recommended introducer:** Sam Benson — LMI (DRR 35.8); works at Tenzo - Restaurant PerformanceOps; domain expertise: domain match: restaurant_tech.
+- **Recommended introducer:** Sam Benson — LMI (DRR 35.5); works at Tenzo - Restaurant PerformanceOps; domain expertise: domain match: restaurant_tech.
 - **Estimated effort:** low
 
 ## Peet's Coffee (1 contact(s))
@@ -288,26 +288,26 @@ _Generated 2026-10-02T10:14:13+00:00_
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Nicole Range, MBA (score 18)
-- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** moderate
 
 ## Olga's Kitchen (1 contact(s))
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Rick Loftus (score 18)
-- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** moderate
 
 ## Informa Connect Foodservice (1 contact(s))
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Jodie Cohen (score 18)
-- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** moderate
 
 ## Chick-fil-A Restaurants (1 contact(s))
 
 - **Gap type(s):** no_executive_relationship
 - **Door opener today:** Kathryn Simon (score 18)
-- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.3); domain expertise: domain match: hospitality_foodservice.
+- **Recommended introducer:** Amy Spytko — inner-tier RC (DRR 96.0); domain expertise: domain match: hospitality_foodservice.
 - **Estimated effort:** moderate

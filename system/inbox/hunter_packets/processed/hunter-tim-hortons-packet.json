@@ -1,0 +1,1484 @@
+{
+  "schema": "rb.hunter_research_packet.v1",
+  "packet_id": "hunter-20261005-company-brand-tim-hortons-01",
+  "research_agent": "Hunter",
+  "cycle": {
+    "cycle_type": "enterprise_account_profile",
+    "playbook": "enterprise_account_profile",
+    "depth": "standard",
+    "objective": "Fill explicit Tim Hortons technology-stack and franchise-disclosure gaps, then complete the bounded enterprise profile across identity, ownership, footprint, leadership, strategy, financial/operating health, technology lifecycle, franchise governance, and dated change signals.",
+    "requested_by": "RBB CoS-ranked Hunter assignment",
+    "prior_state_as_of": "2026-10-05T15:37:52+00:00",
+    "known_gap_ids": [
+      "gap:company:brand-tim-hortons:technology-stack",
+      "gap:company:brand-tim-hortons:franchise-disclosure"
+    ],
+    "discovery_domains": [
+      "ownership and leadership changes",
+      "restaurant footprint and financial health",
+      "technology stack and lifecycle",
+      "franchise governance",
+      "new restaurant-industry signals"
+    ],
+    "resource_plan": {
+      "preferred_execution_tier": "chatgpt_deep_research_economy",
+      "max_pages": 25,
+      "minimum_independent_chains": 2,
+      "target_minutes": 45,
+      "reset_credit_allowed": false
+    },
+    "budget": {
+      "description": "Complete current profile across required modules.",
+      "max_pages": 25,
+      "minimum_independent_chains": 2,
+      "target_minutes": 45
+    },
+    "exit_criteria": [
+      "Current identity and ownership resolved",
+      "Enterprise footprint dated",
+      "Leadership currentness checked",
+      "Technology claims scoped",
+      "Material gaps and conflicts recorded"
+    ]
+  },
+  "targets": [
+    {
+      "target_key": "company:brand-tim-hortons",
+      "display_name": "Tim Hortons",
+      "entity_type": "restaurant_brand",
+      "priority": "enterprise_primary"
+    }
+  ],
+  "started_at": "2026-10-05T15:44:00Z",
+  "completed_at": "2026-10-05T16:34:00Z",
+  "status": "completed",
+  "public_sources_only": true,
+  "research_modules": [
+    "identity",
+    "ownership",
+    "footprint",
+    "leadership",
+    "strategy",
+    "financial_operating_health",
+    "technology_stack",
+    "franchise_governance",
+    "news_signals"
+  ],
+  "questions": [
+    "Which restaurant-technology products and vendors are currently selected, piloted, rolling out, or live, at what scope?",
+    "What do current public franchise disclosures say about required technology, approved vendors, fees, replacement obligations, and governance?",
+    "Who owns and leads Tim Hortons today?",
+    "What is the current restaurant footprint and recent operating performance?",
+    "What material 2026 strategy and restaurant-investment signals affect technology buying or deployment?"
+  ],
+  "source_ledger": [
+    {
+      "source_id": "S001",
+      "url": "https://www.sec.gov/Archives/edgar/data/1618756/000161875626000017/qsr-20251231.htm",
+      "canonical_url": "https://www.sec.gov/Archives/edgar/data/1618756/000161875626000017/qsr-20251231.htm",
+      "title": "Restaurant Brands International Inc. 2025 Form 10-K",
+      "publisher": "U.S. Securities and Exchange Commission / Restaurant Brands International",
+      "source_type": "public_filing",
+      "source_owner": "Restaurant Brands International",
+      "access_tier": "free_public",
+      "directness": "primary",
+      "published_at": "2026-02",
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Primary source for ownership, global Tim Hortons footprint, 2025 system-wide sales, and RBI franchise model."
+    },
+    {
+      "source_id": "S002",
+      "url": "https://www.sec.gov/Archives/edgar/data/1618756/000161875626000045/qsr-20260630.htm",
+      "canonical_url": "https://www.sec.gov/Archives/edgar/data/1618756/000161875626000045/qsr-20260630.htm",
+      "title": "Restaurant Brands International Inc. Q2 2026 Form 10-Q",
+      "publisher": "U.S. Securities and Exchange Commission / Restaurant Brands International",
+      "source_type": "public_filing",
+      "source_owner": "Restaurant Brands International",
+      "access_tier": "free_public",
+      "directness": "primary",
+      "published_at": "2026-08-06",
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Primary source for June 30, 2026 restaurant count and Tim Hortons Canada/U.S. segment performance."
+    },
+    {
+      "source_id": "S003",
+      "url": "https://www.rbi.com/English/about-us/board-of-directors/person-details/default.aspx?ItemId=24c25f5e-ad47-453d-8271-36b3bcad1a20",
+      "canonical_url": "https://www.rbi.com/English/about-us/board-of-directors/person-details/default.aspx?ItemId=24c25f5e-ad47-453d-8271-36b3bcad1a20",
+      "title": "Axel Schwan — President, Tim Hortons Canada & U.S.",
+      "publisher": "Restaurant Brands International",
+      "source_type": "company_leadership_page",
+      "source_owner": "Restaurant Brands International",
+      "access_tier": "free_public",
+      "directness": "primary",
+      "published_at": null,
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Confirms Axel Schwan remains President, Tim Hortons Canada & U.S."
+    },
+    {
+      "source_id": "S004",
+      "url": "https://www.news.timhortons.ca/en/articles/what-s-brewing-for-2026--five-tim-hortons-priorities-for-serving",
+      "canonical_url": "https://www.news.timhortons.ca/en/articles/what-s-brewing-for-2026--five-tim-hortons-priorities-for-serving",
+      "title": "What's brewing for 2026: Five Tim Hortons priorities for serving Canadian neighbourhoods",
+      "publisher": "Tim Hortons",
+      "source_type": "restaurant_or_operator",
+      "source_owner": "Tim Hortons",
+      "access_tier": "free_public",
+      "directness": "primary",
+      "published_at": "2026-02-18",
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Primary strategy source: 7M+ active Rewards members, 800+ kiosks installed, more kiosks planned, equipment/technology investment."
+    },
+    {
+      "source_id": "S005",
+      "url": "https://www.news.timhortons.ca/en/articles/tim-hortons-and-its-restaurant-owners-invest--400-million-to-bui",
+      "canonical_url": "https://www.news.timhortons.ca/en/articles/tim-hortons-and-its-restaurant-owners-invest--400-million-to-bui",
+      "title": "Tim Hortons and its Restaurant Owners Invest $400 million to Build 80 New Restaurants and Renovate 400 Existing Restaurants in 2026",
+      "publisher": "Tim Hortons",
+      "source_type": "restaurant_or_operator",
+      "source_owner": "Tim Hortons",
+      "access_tier": "free_public",
+      "directness": "primary",
+      "published_at": "2026-05-22",
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Primary source for Canadian growth/renovation investment and digital ordering/pickup/kitchen equipment changes."
+    },
+    {
+      "source_id": "S006",
+      "url": "https://www.news.timhortons.ca/en/articles/scanandpay",
+      "canonical_url": "https://www.news.timhortons.ca/en/articles/scanandpay",
+      "title": "Tim Hortons guests can now pay faster with new Scan & Pay feature in the Tims app",
+      "publisher": "Tim Hortons",
+      "source_type": "restaurant_or_operator",
+      "source_owner": "Tim Hortons",
+      "access_tier": "free_public",
+      "directness": "primary",
+      "published_at": null,
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Confirms Scan & Pay live at participating restaurants in Canada and U.S.; integrates payment, rewards earning and redemption in one scan."
+    },
+    {
+      "source_id": "S007",
+      "url": "https://help.timhortons.ca/hc/en-ca/articles/35156757759515-What-is-Scan-Pay-How-do-I-use-it",
+      "canonical_url": "https://help.timhortons.ca/hc/en-ca/articles/35156757759515-What-is-Scan-Pay-How-do-I-use-it",
+      "title": "What is Scan & Pay? How do I use it?",
+      "publisher": "Tim Hortons Help Centre",
+      "source_type": "product_documentation",
+      "source_owner": "Tim Hortons",
+      "access_tier": "free_public",
+      "directness": "primary",
+      "published_at": "2026-06-04",
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Current product documentation confirming Scan & Pay workflow and card storage in app."
+    },
+    {
+      "source_id": "S008",
+      "url": "https://support.quickservice.com/web-srm-coo-draft-test-page/",
+      "canonical_url": "https://support.quickservice.com/web-srm-coo-draft-test-page/",
+      "title": "Panasonic POS Client Portal — Tim Hortons ownership change support form",
+      "publisher": "Panasonic / Quick Service Technologies",
+      "source_type": "vendor_support_documentation",
+      "source_owner": "Panasonic",
+      "access_tier": "free_public",
+      "directness": "vendor_primary",
+      "published_at": null,
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Current support portal has a Tim Hortons-specific workflow, requires Panasonic changeover support, and exposes Chase merchant/terminal IDs, Moneris ECR numbers, and kiosk terminal IDs."
+    },
+    {
+      "source_id": "S009",
+      "url": "https://support.quickservice.com/public-docs/",
+      "canonical_url": "https://support.quickservice.com/public-docs/",
+      "title": "Panasonic POS Client Portal — Document Resources",
+      "publisher": "Panasonic / Quick Service Technologies",
+      "source_type": "vendor_support_documentation",
+      "source_owner": "Panasonic",
+      "access_tier": "free_public",
+      "directness": "vendor_primary",
+      "published_at": null,
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Current support documentation exposes iQtouch, iQtimer, security, and WEB-SRM resources."
+    },
+    {
+      "source_id": "S010",
+      "url": "https://clearviewconnect.com/customers/",
+      "canonical_url": "https://clearviewconnect.com/customers/",
+      "title": "CLEARVIEW Customers",
+      "publisher": "CLEARVIEW",
+      "source_type": "vendor_customer_page",
+      "source_owner": "CLEARVIEW / Panasonic ecosystem",
+      "access_tier": "free_public",
+      "directness": "vendor_primary",
+      "published_at": null,
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Current vendor page names Tim Hortons USA and Tim Hortons Canada customer users; establishes live customer relationship but not chainwide penetration."
+    },
+    {
+      "source_id": "S011",
+      "url": "https://clearviewconnect.com/",
+      "canonical_url": "https://clearviewconnect.com/",
+      "title": "CLEARVIEW — Restaurant management software",
+      "publisher": "CLEARVIEW",
+      "source_type": "vendor_product_page",
+      "source_owner": "CLEARVIEW",
+      "access_tier": "free_public",
+      "directness": "vendor_primary",
+      "published_at": null,
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Current vendor page describes back-office, purchasing, labor/workforce and operational insight; names Tim Hortons among trusted brands."
+    },
+    {
+      "source_id": "S012",
+      "url": "https://www.i3international.com/solutions/velocity-drive-thru-timer/",
+      "canonical_url": "https://www.i3international.com/solutions/velocity-drive-thru-timer/",
+      "title": "Velocity drive-thru timer",
+      "publisher": "i3 International",
+      "source_type": "vendor_product_page",
+      "source_owner": "i3 International",
+      "access_tier": "free_public",
+      "directness": "vendor_primary",
+      "published_at": null,
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Current vendor page shows Tim Hortons as a customer/trusted brand and includes Tim Hortons franchisee testimonial. Evidence supports franchisee-level use, not systemwide mandate."
+    },
+    {
+      "source_id": "S013",
+      "url": "https://solink.com/lp/solink-starpos-tim-hortons-webinar/",
+      "canonical_url": "https://solink.com/lp/solink-starpos-tim-hortons-webinar/",
+      "title": "Modern video security that grows your Tim Hortons",
+      "publisher": "Solink",
+      "source_type": "vendor_event_page",
+      "source_owner": "Solink",
+      "access_tier": "free_public",
+      "directness": "vendor_primary",
+      "published_at": null,
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Tim Hortons-specific Solink/StarPOS webinar establishes compatible franchisee stack and video/POS integration; does not prove chainwide selection."
+    },
+    {
+      "source_id": "S014",
+      "url": "https://apps.dfi.wi.gov/apps/franchiseefiling/activeFilings.aspx",
+      "canonical_url": "https://apps.dfi.wi.gov/apps/franchiseefiling/activeFilings.aspx",
+      "title": "Wisconsin Franchise Filing — Active Registrations",
+      "publisher": "Wisconsin Department of Financial Institutions",
+      "source_type": "government_or_regulator",
+      "source_owner": "Wisconsin DFI",
+      "access_tier": "free_public",
+      "directness": "government_primary",
+      "published_at": null,
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Confirms TIM HORTONS USA INC. active registration through 2027-03-13."
+    },
+    {
+      "source_id": "S015",
+      "url": "https://fddexchange.com/fdd/tim-hortons-2026/",
+      "canonical_url": "https://fddexchange.com/fdd/tim-hortons-2026/",
+      "title": "Tim Hortons Franchise Costs & Fees (2026 FDD)",
+      "publisher": "FDD Exchange",
+      "source_type": "fdd_derived_secondary",
+      "source_owner": "FDD Exchange",
+      "access_tier": "free_public",
+      "directness": "secondary_from_regulatory_filing",
+      "published_at": "2026",
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Current FDD-derived summary: 693 U.S. outlets at 2025 year-end; Restaurant Technology charges $450-$1,400/month; POS/TimZone/Tim Card support; refurbishing up to $250,000; approved-supplier framing."
+    },
+    {
+      "source_id": "S016",
+      "url": "https://www.francloud.com/franchises/tim-hortons",
+      "canonical_url": "https://www.francloud.com/franchises/tim-hortons",
+      "title": "Tim Hortons — FDD-derived procurement and technology controls",
+      "publisher": "FranCloud",
+      "source_type": "fdd_derived_secondary",
+      "source_owner": "FranCloud",
+      "access_tier": "free_public",
+      "directness": "secondary_from_regulatory_filing",
+      "published_at": "2026",
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Captures Item 8 and Item 22 requirement language: approved supplier controls; POS/ordering/customer communication systems; franchisor data access; prescribed POS/polling systems. Appears to index a development-agreement filing variant with 8 units; unit counts are not used for the main U.S. system profile."
+    },
+    {
+      "source_id": "S017",
+      "url": "https://fddexchange.com/fdd/tim-hortons-2026/",
+      "canonical_url": "https://fddexchange.com/fdd/tim-hortons-2026/",
+      "title": "Tim Hortons 2026 FDD system size and Item 19 summary",
+      "publisher": "FDD Exchange",
+      "source_type": "fdd_derived_secondary",
+      "source_owner": "FDD Exchange",
+      "access_tier": "free_public",
+      "directness": "secondary_from_regulatory_filing",
+      "published_at": "2026",
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Used separately for U.S.-specific outlet growth and 2026 projected openings."
+    },
+    {
+      "source_id": "S018",
+      "url": "https://rbi.wd3.myworkdayjobs.com/en-US/RBI_External_Career_Site/job/Corp---Miami-Corporate-Office/Sr-Manager--Marketing-Execution---Franchisee-Engagement--Tim-Hortons--US_R3837",
+      "canonical_url": "https://rbi.wd3.myworkdayjobs.com/en-US/RBI_External_Career_Site/job/Corp---Miami-Corporate-Office/Sr-Manager--Marketing-Execution---Franchisee-Engagement--Tim-Hortons--US_R3837",
+      "title": "Sr. Manager, Marketing Execution & Franchisee Engagement, Tim Hortons, US",
+      "publisher": "Restaurant Brands International Careers",
+      "source_type": "company_job_posting",
+      "source_owner": "Restaurant Brands International",
+      "access_tier": "free_public",
+      "directness": "primary",
+      "published_at": null,
+      "accessed_at": "2026-10-05",
+      "access_status": "open",
+      "productive": true,
+      "notes": "Current role explicitly owns POS button/function testing and directs a report overseeing the POS relationship with Canadian technology team and POS vendor; vendor remains unnamed."
+    }
+  ],
+  "query_ledger": [
+    {
+      "query": "Tim Hortons technology POS vendor payments KDS digital menu boards loyalty 2026",
+      "purpose": "broad technology-stack discovery",
+      "result_summary": "Surfaced current first-party digital and vendor ecosystem evidence."
+    },
+    {
+      "query": "site:rbi.com Tim Hortons technology digital ordering loyalty payments 2026",
+      "purpose": "primary corporate technology discovery",
+      "result_summary": "Confirmed RBI context; limited vendor naming."
+    },
+    {
+      "query": "site:timhortons.ca technology Tim Hortons app rewards digital ordering",
+      "purpose": "first-party guest technology discovery",
+      "result_summary": "Confirmed app, Rewards, mobile ordering, Scan & Pay."
+    },
+    {
+      "query": "Tim Hortons franchise disclosure document 2026 technology fee POS approved suppliers",
+      "purpose": "current FDD gap resolution",
+      "result_summary": "Located current regulator registration plus FDD-derived public summaries."
+    },
+    {
+      "query": "site:apps.dfi.wi.gov Tim Hortons franchise filing 2026",
+      "purpose": "government filing verification",
+      "result_summary": "Confirmed TIM HORTONS USA INC. active Wisconsin registration through 2027-03-13."
+    },
+    {
+      "query": "Tim Hortons FDD 2026 pdf",
+      "purpose": "underlying FDD discovery",
+      "result_summary": "Public summaries located; full clean 2026 PDF not freely retrievable in this environment."
+    },
+    {
+      "query": "Tim Hortons Oracle MICROS POS",
+      "purpose": "POS vendor verification/disconfirmation",
+      "result_summary": "No current primary evidence sufficient to establish Oracle/MICROS as current systemwide incumbent."
+    },
+    {
+      "query": "Tim Hortons PAR POS Brink Xenial SICOM",
+      "purpose": "POS vendor alternatives",
+      "result_summary": "No defensible current systemwide relationship established."
+    },
+    {
+      "query": "Tim Hortons Olo Punchh Paytronix loyalty payments vendor",
+      "purpose": "loyalty/order platform vendor discovery",
+      "result_summary": "No current third-party loyalty platform could be established; first-party Tims Rewards is verified."
+    },
+    {
+      "query": "Tim Hortons drive thru AI technology vendor",
+      "purpose": "drive-thru technology discovery",
+      "result_summary": "Current i3 vendor page supports franchisee-level use."
+    },
+    {
+      "query": "Tim Hortons First Data Fiserv payments",
+      "purpose": "payment vendor discovery",
+      "result_summary": "2026 FDD-derived source names First Data/Fiserv but does not establish mandate."
+    },
+    {
+      "query": "Tim Hortons Panasonic POS current IQTouch",
+      "purpose": "POS infrastructure discovery",
+      "result_summary": "Current Panasonic support portal and historical/current Panasonic brand materials support active Tim Hortons relationship."
+    },
+    {
+      "query": "site:support.quickservice.com Tim Hortons POS kiosk payment provider",
+      "purpose": "current support-system evidence",
+      "result_summary": "Current Tim Hortons-specific Panasonic workflow exposes Chase, Moneris, and kiosk terminal configuration fields."
+    },
+    {
+      "query": "site:clearviewconnect.com Tim Hortons current",
+      "purpose": "back-office technology verification",
+      "result_summary": "Current CLEARVIEW customer pages name Tim Hortons USA and Tim Hortons Canada."
+    },
+    {
+      "query": "site:news.timhortons.ca 2026 digital kiosk technology renovation",
+      "purpose": "current rollout scope",
+      "result_summary": "Confirmed 800+ kiosks and 2026 restaurant renovation investment."
+    },
+    {
+      "query": "site:sec.gov Restaurant Brands International 2026 Tim Hortons 10-Q restaurant count system sales",
+      "purpose": "footprint and operating health",
+      "result_summary": "Confirmed 6,209 global Tim Hortons restaurants as of 2026-06-30 and Canada/U.S. segment metrics."
+    },
+    {
+      "query": "Tim Hortons Restaurant Technology Charges 2026 FDD",
+      "purpose": "technology fee verification",
+      "result_summary": "Multiple 2026 FDD-derived sources converge on recurring technology charges; selected range $450-$1,400 from FDD Exchange."
+    },
+    {
+      "query": "Tim Hortons approved supplier 2026 FDD",
+      "purpose": "procurement governance",
+      "result_summary": "FDD-derived Item 8 evidence confirms approved-supplier model and franchisor sole-source rights."
+    },
+    {
+      "query": "Tim Hortons point-of-sale 2026 FDD",
+      "purpose": "POS mandate governance",
+      "result_summary": "FDD-derived Item 8/22 evidence confirms approved/prescribed POS and franchisor access to polling/data."
+    },
+    {
+      "query": "Tim Hortons replacement POS systems 2026 FDD",
+      "purpose": "replacement obligations",
+      "result_summary": "Current secondary FDD evidence supports franchisor control over prescribed systems and supplier changes; exact current replacement-language text was not independently recovered from the full 2026 PDF."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "target_key": "company:brand-tim-hortons",
+      "module": "identity",
+      "claim": "Tim Hortons is an RBI-owned QSR brand founded in 1964 and remains the largest coffee-and-baked-goods restaurant chain in Canada by restaurant count.",
+      "source_ids": [
+        "S001"
+      ],
+      "claim_date": "2025-12-31",
+      "scope": "global_brand",
+      "evidence_status": "supported",
+      "confidence_pct": 99,
+      "temporal_status": "current",
+      "contribution_type": "baseline_verification",
+      "commercial_relevance": "Confirms parent-level buying context under Restaurant Brands International.",
+      "limitations": null
+    },
+    {
+      "finding_id": "F002",
+      "target_key": "company:brand-tim-hortons",
+      "module": "footprint",
+      "claim": "RBI reported 6,209 Tim Hortons restaurants globally as of June 30, 2026.",
+      "source_ids": [
+        "S002"
+      ],
+      "claim_date": "2026-06-30",
+      "scope": "global",
+      "evidence_status": "supported",
+      "confidence_pct": 100,
+      "temporal_status": "current",
+      "contribution_type": "profile_update",
+      "commercial_relevance": "Establishes enterprise scale; the RBB prior-state unit count of 653 is U.S.-oriented and should not be substituted for global footprint.",
+      "limitations": "The 10-Q global count includes restaurants outside the Tim Hortons Canada/U.S. reporting segment."
+    },
+    {
+      "finding_id": "F003",
+      "target_key": "company:brand-tim-hortons",
+      "module": "leadership",
+      "claim": "Axel Schwan remains President, Tim Hortons Canada & U.S.",
+      "source_ids": [
+        "S003"
+      ],
+      "claim_date": "2026-10-05",
+      "scope": "Canada_US",
+      "evidence_status": "supported",
+      "confidence_pct": 100,
+      "temporal_status": "current",
+      "contribution_type": "baseline_verification",
+      "commercial_relevance": "Confirms current top brand executive for Canada/U.S. operating and franchise priorities.",
+      "limitations": null
+    },
+    {
+      "finding_id": "F004",
+      "target_key": "company:brand-tim-hortons",
+      "module": "financial_operating_health",
+      "claim": "For the Tim Hortons Canada/U.S. segment in Q2 2026, system-wide sales were approximately US$2.003 billion, system-wide sales growth was 0.4%, comparable sales were 0.1%, and Canada comparable sales were 0.1%. The segment ended the quarter with 4,570 restaurants, up from 4,521 a year earlier.",
+      "source_ids": [
+        "S002"
+      ],
+      "claim_date": "2026-06-30",
+      "scope": "Canada_US_segment",
+      "evidence_status": "supported",
+      "confidence_pct": 100,
+      "temporal_status": "current",
+      "contribution_type": "net_new_discovery",
+      "commercial_relevance": "Shows footprint growth but sharply slower same-store momentum in Q2, increasing emphasis on operational efficiency, traffic and digital value.",
+      "limitations": "Segment metrics exclude international Tim Hortons activity, which is reported in RBI's INTL segment."
+    },
+    {
+      "finding_id": "F005",
+      "target_key": "company:brand-tim-hortons",
+      "module": "strategy",
+      "claim": "Tim Hortons' 2026 Canadian strategy includes further menu innovation, digital value through Tims Rewards, guest-experience improvement, more kiosks, restaurant renovations and equipment upgrades.",
+      "source_ids": [
+        "S004",
+        "S005"
+      ],
+      "claim_date": "2026",
+      "scope": "Canada",
+      "evidence_status": "supported",
+      "confidence_pct": 99,
+      "temporal_status": "current",
+      "contribution_type": "net_new_discovery",
+      "commercial_relevance": "Creates active deployment windows across front-of-house digital, kitchen equipment and restaurant refresh programs.",
+      "limitations": "Canada-specific strategy should not automatically be applied to U.S. or international franchise systems."
+    },
+    {
+      "finding_id": "F006",
+      "target_key": "company:brand-tim-hortons",
+      "module": "technology_stack",
+      "claim": "The Tims app, Tims Rewards, mobile ordering and Scan & Pay are live first-party guest technologies. Scan & Pay is available at participating restaurants in both Canada and the U.S. and combines payment, points earning and reward redemption in one QR-code scan.",
+      "source_ids": [
+        "S006",
+        "S007"
+      ],
+      "claim_date": "2026-06-04",
+      "scope": "Canada_US_participating_restaurants",
+      "evidence_status": "supported",
+      "confidence_pct": 100,
+      "temporal_status": "current_live",
+      "contribution_type": "gap_resolution",
+      "commercial_relevance": "Confirms a mature first-party digital/loyalty/payment experience that any POS or payments displacement must integrate with.",
+      "limitations": "The public sources do not identify the underlying third-party loyalty or payment-orchestration software provider, if any."
+    },
+    {
+      "finding_id": "F007",
+      "target_key": "company:brand-tim-hortons",
+      "module": "technology_stack",
+      "claim": "Tim Hortons reported more than 800 digital kiosks installed in Canadian restaurants by February 2026, with more planned.",
+      "source_ids": [
+        "S004"
+      ],
+      "claim_date": "2026-02-18",
+      "scope": "Canada_800_plus_restaurants",
+      "evidence_status": "supported",
+      "confidence_pct": 100,
+      "temporal_status": "rolling_out",
+      "contribution_type": "gap_resolution",
+      "commercial_relevance": "Confirms a material self-service footprint and continued rollout rather than a limited pilot.",
+      "limitations": "The kiosk hardware/software vendor is not named in the first-party source."
+    },
+    {
+      "finding_id": "F008",
+      "target_key": "company:brand-tim-hortons",
+      "module": "technology_stack",
+      "claim": "Panasonic/Quick Service Technologies maintains a current Tim Hortons-specific POS support workflow. The current ownership-change form requires Panasonic assistance and includes Chase merchant/terminal identifiers, Moneris ECR numbers and kiosk terminal IDs.",
+      "source_ids": [
+        "S008",
+        "S009"
+      ],
+      "claim_date": "2026-10-05",
+      "scope": "Tim_Hortons_supported_restaurants",
+      "evidence_status": "supported_vendor_primary",
+      "confidence_pct": 96,
+      "temporal_status": "current_live_support",
+      "contribution_type": "gap_resolution",
+      "commercial_relevance": "Strong evidence that Panasonic/QST remains materially embedded in Tim Hortons restaurant POS/support infrastructure.",
+      "limitations": "The public support portal does not disclose total installed location count or prove a single systemwide POS SKU across every geography."
+    },
+    {
+      "finding_id": "F009",
+      "target_key": "company:brand-tim-hortons",
+      "module": "technology_stack",
+      "claim": "CLEARVIEW currently identifies Tim Hortons USA and Tim Hortons Canada users/customers, and its platform covers restaurant back-office functions including purchasing, forecasting, labor/workforce scheduling and operational analytics.",
+      "source_ids": [
+        "S010",
+        "S011"
+      ],
+      "claim_date": "2026-10-05",
+      "scope": "customer_relationship_scope_unspecified",
+      "evidence_status": "supported_vendor_primary",
+      "confidence_pct": 91,
+      "temporal_status": "current_live",
+      "contribution_type": "gap_resolution",
+      "commercial_relevance": "Establishes a current back-office/workforce/inventory incumbent relationship that overlaps Genius Back Office and adjacent capabilities.",
+      "limitations": "Vendor pages do not state chainwide penetration or whether deployment is mandated versus franchisee-selected."
+    },
+    {
+      "finding_id": "F010",
+      "target_key": "company:brand-tim-hortons",
+      "module": "technology_stack",
+      "claim": "i3 International currently markets its Velocity drive-thru timing/video analytics solution with Tim Hortons customer evidence, including a Tim Hortons franchisee testimonial.",
+      "source_ids": [
+        "S012"
+      ],
+      "claim_date": "2026-10-05",
+      "scope": "franchisee_level",
+      "evidence_status": "supported_vendor_primary",
+      "confidence_pct": 82,
+      "temporal_status": "current_live_bounded",
+      "contribution_type": "net_new_discovery",
+      "commercial_relevance": "Shows franchisee-level adoption of drive-thru/video analytics but not a brandwide standard.",
+      "limitations": "Vendor marketing and testimonial evidence only; systemwide deployment is not established."
+    },
+    {
+      "finding_id": "F011",
+      "target_key": "company:brand-tim-hortons",
+      "module": "technology_stack",
+      "claim": "Solink and StarPOS actively market a Tim Hortons-specific video/POS integration workflow, indicating another franchisee-level security/loss-prevention technology path.",
+      "source_ids": [
+        "S013"
+      ],
+      "claim_date": "2026-10-05",
+      "scope": "franchisee_level_or_compatible_ecosystem",
+      "evidence_status": "supported_vendor_primary",
+      "confidence_pct": 78,
+      "temporal_status": "current_signal",
+      "contribution_type": "net_new_discovery",
+      "commercial_relevance": "Suggests POS/video integration requirements and non-uniform franchisee technology choices.",
+      "limitations": "Does not establish corporate selection, approved-vendor status or chainwide scope."
+    },
+    {
+      "finding_id": "F012",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "Tim Hortons USA Inc. holds an active Wisconsin franchise registration expiring March 13, 2027.",
+      "source_ids": [
+        "S014"
+      ],
+      "claim_date": "2026-10-05",
+      "scope": "United_States_Wisconsin_registration",
+      "evidence_status": "supported",
+      "confidence_pct": 100,
+      "temporal_status": "current",
+      "contribution_type": "gap_resolution",
+      "commercial_relevance": "Confirms a current 2026 franchise disclosure cycle is in force.",
+      "limitations": "The regulator index confirms registration but did not expose the underlying PDF through this research interface."
+    },
+    {
+      "finding_id": "F013",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "Current 2026 FDD-derived public sources report recurring Restaurant Technology charges of approximately $450-$1,400 per month and ongoing technology support including POS, TimZone and Tim Card.",
+      "source_ids": [
+        "S015"
+      ],
+      "claim_date": "2026",
+      "scope": "United_States_franchise_offer",
+      "evidence_status": "supported_secondary_from_filing",
+      "confidence_pct": 91,
+      "temporal_status": "current",
+      "contribution_type": "gap_resolution",
+      "commercial_relevance": "Technology is a direct recurring franchisee cost center, material to replacement ROI and total cost of ownership.",
+      "limitations": "Underlying full 2026 FDD was not freely retrievable; value comes from a current FDD-derived public summary."
+    },
+    {
+      "finding_id": "F014",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "The 2026 franchise disclosure framework uses an approved-supplier model covering equipment, POS systems, ordering systems and customer communication systems. The franchisor may designate itself, an affiliate or a third party as sole supplier for an item and may charge the franchisee or proposed supplier for evaluation of alternatives.",
+      "source_ids": [
+        "S016"
+      ],
+      "claim_date": "2026",
+      "scope": "United_States_developer_or_franchise_agreement_variant",
+      "evidence_status": "supported_secondary_from_filing",
+      "confidence_pct": 90,
+      "temporal_status": "current",
+      "contribution_type": "gap_resolution",
+      "commercial_relevance": "Technology procurement is governed at the franchisor/approved-supplier layer; a franchisee cannot freely substitute core systems.",
+      "limitations": "FranCloud appears to index a development-agreement filing variant with a small outlet count; requirement language is used, but its unit counts are not generalized to the full U.S. estate."
+    },
+    {
+      "finding_id": "F015",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "Current 2026 FDD-derived Item 22 language requires prescribed POS and polling/data-collection systems and permits Tim Hortons USA to access restaurant-system data. This establishes corporate governance over POS/data architecture even where a specific named POS vendor is not publicly mandated.",
+      "source_ids": [
+        "S016"
+      ],
+      "claim_date": "2026",
+      "scope": "United_States_developer_or_franchise_agreement_variant",
+      "evidence_status": "supported_secondary_from_filing",
+      "confidence_pct": 91,
+      "temporal_status": "current",
+      "contribution_type": "gap_resolution",
+      "commercial_relevance": "Any POS replacement must satisfy franchisor-prescribed data, polling and interoperability requirements.",
+      "limitations": "The underlying filing text is exposed through a secondary FDD-derived interface; exact applicability by agreement type must be preserved."
+    },
+    {
+      "finding_id": "F016",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "Current 2026 FDD-derived sources report refurbishment obligations of up to $250,000 and give the franchisor broad control over approved technology systems and suppliers; however, the exact current contractual wording for mandatory hardware/software replacement timing was not independently recovered from the full 2026 FDD.",
+      "source_ids": [
+        "S015",
+        "S016"
+      ],
+      "claim_date": "2026",
+      "scope": "United_States_franchise_offer",
+      "evidence_status": "partial",
+      "confidence_pct": 78,
+      "temporal_status": "current_with_unresolved_detail",
+      "contribution_type": "gap_resolution",
+      "commercial_relevance": "Replacement obligations exist at the broader refurb/system-governance level, but precise technology refresh cadence remains a follow-up gap.",
+      "limitations": "Do not convert the older historical Tim Hortons replacement language into a 2026 contractual fact without the current full FDD."
+    },
+    {
+      "finding_id": "F017",
+      "target_key": "company:brand-tim-hortons",
+      "module": "franchise_governance",
+      "claim": "FDD-derived public evidence names First Data by Fiserv in the 2026 filing, but the available evidence does not establish it as a mandatory current payment processor. Separately, Panasonic's current Tim Hortons support form accommodates Chase and Moneris identifiers.",
+      "source_ids": [
+        "S016",
+        "S008"
+      ],
+      "claim_date": "2026",
+      "scope": "United_States_and_Canada_payment_ecosystem",
+      "evidence_status": "supported_with_scope_conflict",
+      "confidence_pct": 84,
+      "temporal_status": "current",
+      "contribution_type": "verification_and_disconfirmation",
+      "commercial_relevance": "Payment processing should be treated as a mixed/approved ecosystem rather than a single proven global incumbent.",
+      "limitations": "The role of Fiserv versus Chase/Moneris varies by agreement, geography, processor/acquirer role and restaurant configuration."
+    },
+    {
+      "finding_id": "F018",
+      "target_key": "company:brand-tim-hortons",
+      "module": "news_signals",
+      "claim": "Tim Hortons and Canadian restaurant owners committed approximately C$400 million in 2026 to build 80 new Canadian restaurants and renovate 400 existing restaurants, including improvements for digital ordering/pickup and upgraded kitchen equipment.",
+      "source_ids": [
+        "S005"
+      ],
+      "claim_date": "2026-05-22",
+      "scope": "Canada",
+      "evidence_status": "supported",
+      "confidence_pct": 100,
+      "temporal_status": "active_2026_program",
+      "contribution_type": "change_detection",
+      "commercial_relevance": "Creates a large active refresh window where POS, kiosks, DMB, kitchen, network and payment hardware could be touched.",
+      "limitations": "Specific technology vendors for the 2026 renovation program are not named."
+    },
+    {
+      "finding_id": "F019",
+      "target_key": "company:brand-tim-hortons",
+      "module": "technology_stack",
+      "claim": "A current RBI job posting for Tim Hortons U.S. explicitly includes POS management, launch testing, and oversight of the POS relationship with the Canadian technology team and POS vendor.",
+      "source_ids": [
+        "S018"
+      ],
+      "claim_date": "2026-10-05",
+      "scope": "United_States_with_Canada_technology_coordination",
+      "evidence_status": "supported",
+      "confidence_pct": 97,
+      "temporal_status": "current",
+      "contribution_type": "net_new_discovery",
+      "commercial_relevance": "Confirms an active centralized POS vendor relationship and cross-border governance even though the vendor is not named publicly.",
+      "limitations": "Job description does not identify the incumbent POS vendor or installed product."
+    }
+  ],
+  "gap_outcomes": [
+    {
+      "gap_id": "gap:company:brand-tim-hortons:technology-stack",
+      "status": "resolved_partial_vendor_specific",
+      "outcome": "Current public evidence establishes: (1) first-party Tims app/Tims Rewards/mobile ordering/Scan & Pay live in Canada and U.S.; (2) 800+ self-order kiosks installed in Canada with continued rollout; (3) a current Panasonic/Quick Service Technologies Tim Hortons POS support relationship with Chase/Moneris/kiosk configuration fields; (4) current CLEARVIEW back-office customer evidence for Tim Hortons USA and Canada; and (5) franchisee-level i3 drive-thru/video analytics and Solink/StarPOS security/POS integrations. The exact systemwide POS SKU/vendor mandate, kiosk vendor, KDS vendor, digital-menu-board vendor and global payment processor remain unresolved and are not guessed.",
+      "confidence_pct": 94,
+      "finding_ids": [
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010",
+        "F011",
+        "F017",
+        "F019"
+      ],
+      "remaining_subgaps": [
+        "Exact current systemwide POS software SKU and installed-location scope",
+        "Kiosk hardware/software vendor identity",
+        "KDS vendor and scope",
+        "Digital menu board CMS/hardware vendor and scope",
+        "Payment processor/acquirer roles by Canada vs U.S. and franchise agreement type"
+      ]
+    },
+    {
+      "gap_id": "gap:company:brand-tim-hortons:franchise-disclosure",
+      "status": "resolved_with_document_access_limitation",
+      "outcome": "A current 2026 franchise disclosure cycle is verified via Wisconsin DFI. FDD-derived public sources support an approved-supplier model for POS, ordering and customer-communication systems; franchisor authority to prescribe POS/data-collection systems and access restaurant data; recurring Restaurant Technology charges of approximately $450-$1,400/month; supplier-evaluation cost recovery; and refurbishment obligations up to $250,000. The exact current contractual technology-replacement cadence and a definitive list of mandated named technology vendors could not be verified from a freely accessible underlying 2026 FDD PDF, so those points remain explicitly partial.",
+      "confidence_pct": 90,
+      "finding_ids": [
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016",
+        "F017"
+      ],
+      "remaining_subgaps": [
+        "Exact 2026 hardware/software replacement language and cadence",
+        "Current official approved-vendor list by technology category",
+        "Whether First Data/Fiserv is mandatory, optional, legacy or agreement-specific",
+        "Whether the development-agreement technology clauses differ materially from standard-shop franchise agreement clauses"
+      ]
+    }
+  ],
+  "change_events": [
+    {
+      "change_event_id": "CE001",
+      "event_date": "2026-02-18",
+      "event_type": "technology_rollout",
+      "headline": "Tim Hortons reports 800+ Canadian restaurants with digital kiosks",
+      "description": "Tim Hortons said more than 800 Canadian restaurants had new digital kiosks installed, with additional rollout planned.",
+      "source_ids": [
+        "S004"
+      ],
+      "finding_ids": [
+        "F007"
+      ],
+      "confidence_pct": 100
+    },
+    {
+      "change_event_id": "CE002",
+      "event_date": "2026-05-22",
+      "event_type": "capital_program",
+      "headline": "C$400M Canadian build/renovation program",
+      "description": "Tim Hortons and restaurant owners announced 80 new restaurants and 400 renovations in Canada in 2026, including digital-ordering/pickup and kitchen-equipment improvements.",
+      "source_ids": [
+        "S005"
+      ],
+      "finding_ids": [
+        "F018"
+      ],
+      "confidence_pct": 100
+    },
+    {
+      "change_event_id": "CE003",
+      "event_date": "2026-06-30",
+      "event_type": "operating_performance",
+      "headline": "Tim Hortons Q2 comparable sales flatten while restaurant count grows",
+      "description": "Canada/U.S. segment Q2 2026 comparable sales were 0.1% while system restaurant count grew to 4,570 from 4,521 a year earlier.",
+      "source_ids": [
+        "S002"
+      ],
+      "finding_ids": [
+        "F004"
+      ],
+      "confidence_pct": 100
+    },
+    {
+      "change_event_id": "CE004",
+      "event_date": "2026-06-04",
+      "event_type": "digital_payment",
+      "headline": "Scan & Pay documented as current Tims app payment workflow",
+      "description": "Tim Hortons Help Centre documented the current Scan & Pay flow allowing app-based payment plus Rewards earning/redemption.",
+      "source_ids": [
+        "S007"
+      ],
+      "finding_ids": [
+        "F006"
+      ],
+      "confidence_pct": 100
+    }
+  ],
+  "mutation_proposals": [
+    {
+      "proposal_id": "MP001",
+      "target_key": "company:brand-tim-hortons",
+      "operation": "set_current_scale",
+      "field_path": "payload.records[0].footprint",
+      "existing_value": {
+        "units": 653,
+        "franchisee_owned_units": 630,
+        "company_owned_units": 23,
+        "scope": "prior RBB state"
+      },
+      "new_value": {
+        "global_restaurants": 6209,
+        "as_of": "2026-06-30",
+        "canada_us_segment_restaurants": 4570,
+        "canada_us_segment_as_of": "2026-06-30",
+        "us_2025_fdd_outlets": 693,
+        "us_2025_fdd_franchised": 669,
+        "us_2025_fdd_company_owned": 24
+      },
+      "effective_at": "2026-06-30",
+      "confidence_pct": 98,
+      "finding_ids": [
+        "F002",
+        "F004"
+      ],
+      "source_ids": [
+        "S002",
+        "S015"
+      ],
+      "notes": "Preserve scope labels; do not overwrite U.S.-specific counts with global counts."
+    },
+    {
+      "proposal_id": "MP002",
+      "target_key": "company:brand-tim-hortons",
+      "operation": "append_technology_relationship",
+      "field_path": "payload.records[0].technology_stack",
+      "existing_value": [],
+      "new_value": {
+        "vendor": "Panasonic / Quick Service Technologies",
+        "product_or_family": "Tim Hortons POS support ecosystem; iQtouch/iQtimer/WEB-SRM resources",
+        "category": "POS / drive-thru / restaurant technology support",
+        "stage": "live_support",
+        "scope": "Tim Hortons-supported restaurant estate; exact installed count unresolved",
+        "confidence_pct": 96
+      },
+      "effective_at": "2026-10-05",
+      "confidence_pct": 96,
+      "finding_ids": [
+        "F008",
+        "F019"
+      ],
+      "source_ids": [
+        "S008",
+        "S009",
+        "S018"
+      ]
+    },
+    {
+      "proposal_id": "MP003",
+      "target_key": "company:brand-tim-hortons",
+      "operation": "append_technology_relationship",
+      "field_path": "payload.records[0].technology_stack",
+      "existing_value": [],
+      "new_value": {
+        "vendor": "CLEARVIEW",
+        "product_or_family": "CLEARVIEW restaurant management/back office",
+        "category": "back_office_inventory_workforce_analytics",
+        "stage": "live_customer_relationship",
+        "scope": "Tim Hortons USA and Canada customer evidence; chainwide scope unresolved",
+        "confidence_pct": 91
+      },
+      "effective_at": "2026-10-05",
+      "confidence_pct": 91,
+      "finding_ids": [
+        "F009"
+      ],
+      "source_ids": [
+        "S010",
+        "S011"
+      ]
+    },
+    {
+      "proposal_id": "MP004",
+      "target_key": "company:brand-tim-hortons",
+      "operation": "append_technology_relationship",
+      "field_path": "payload.records[0].technology_stack",
+      "existing_value": [],
+      "new_value": {
+        "vendor": "Tim Hortons / RBI",
+        "product_or_family": "Tims app, Tims Rewards, Scan & Pay",
+        "category": "digital_ordering_loyalty_mobile_payment",
+        "stage": "live",
+        "scope": "Canada and U.S. participating restaurants",
+        "confidence_pct": 100
+      },
+      "effective_at": "2026-06-04",
+      "confidence_pct": 100,
+      "finding_ids": [
+        "F006"
+      ],
+      "source_ids": [
+        "S006",
+        "S007"
+      ]
+    },
+    {
+      "proposal_id": "MP005",
+      "target_key": "company:brand-tim-hortons",
+      "operation": "set_franchise_disclosure",
+      "field_path": "payload.records[0].franchise_disclosure",
+      "existing_value": null,
+      "new_value": {
+        "as_of": "2026",
+        "registration_status": "active Wisconsin registration through 2027-03-13",
+        "technology_fee": "$450-$1,400/month per current FDD-derived public summary",
+        "procurement_model": "approved/designated supplier; franchisor can sole-source items",
+        "covered_system_categories": [
+          "POS",
+          "ordering systems",
+          "customer communication systems",
+          "polling/data collection"
+        ],
+        "data_governance": "franchisor-prescribed systems and access to restaurant data/polling",
+        "supplier_substitution": "alternative suppliers may be proposed subject to approval/evaluation cost",
+        "refurbishment_obligation": "up to $250,000 in current FDD-derived summary",
+        "replacement_obligation_status": "partial; exact current technology refresh wording not independently recovered",
+        "named_vendor_status": {
+          "First Data/Fiserv": "named in FDD-derived evidence, mandate not established",
+          "Panasonic/QST": "current support relationship independently evidenced",
+          "Chase": "current Panasonic support workflow field; role/scope varies",
+          "Moneris": "current Panasonic support workflow field; role/scope varies"
+        }
+      },
+      "effective_at": "2026",
+      "confidence_pct": 90,
+      "finding_ids": [
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016",
+        "F017"
+      ],
+      "source_ids": [
+        "S014",
+        "S015",
+        "S016",
+        "S008"
+      ]
+    }
+  ],
+  "cos_handoffs": [
+    {
+      "handoff_id": "CH001",
+      "headline": "Tim Hortons has a live restaurant-refresh window, not a dormant stack",
+      "connected_target_keys": [
+        "company:brand-tim-hortons"
+      ],
+      "finding_ids": [
+        "F005",
+        "F007",
+        "F018"
+      ],
+      "change_event_ids": [
+        "CE001",
+        "CE002"
+      ],
+      "connection": "2026 renovations, kiosks and equipment upgrades",
+      "why_it_matters": "The C$400M Canadian renovation/new-build program and 800+ kiosk rollout mean technology standards are actively being deployed. This is a better entry point than treating Tim Hortons as a static legacy-POS replacement.",
+      "is_inference": true,
+      "confidence_pct": 96,
+      "time_horizon": "near_term"
+    },
+    {
+      "handoff_id": "CH002",
+      "headline": "Panasonic/QST appears entrenched, but exact POS SKU and global scope remain open",
+      "connected_target_keys": [
+        "company:brand-tim-hortons"
+      ],
+      "finding_ids": [
+        "F008",
+        "F019"
+      ],
+      "change_event_ids": [],
+      "connection": "Current Tim Hortons-specific Panasonic support and active POS-vendor management",
+      "why_it_matters": "A Genius POS displacement strategy should assume an incumbent support ecosystem and first prove where Panasonic/QST ends, where other POS variants exist, and whether the U.S. estate has a distinct replacement cycle.",
+      "is_inference": true,
+      "confidence_pct": 92,
+      "time_horizon": "near_term"
+    },
+    {
+      "handoff_id": "CH003",
+      "headline": "CLEARVIEW is a credible back-office incumbent signal",
+      "connected_target_keys": [
+        "company:brand-tim-hortons"
+      ],
+      "finding_ids": [
+        "F009"
+      ],
+      "change_event_ids": [],
+      "connection": "Back office / labor / inventory / analytics",
+      "why_it_matters": "Genius Back Office positioning should be framed against a current CLEARVIEW relationship and should validate whether use is brand-standard or franchisee-selected before claiming displacement potential.",
+      "is_inference": true,
+      "confidence_pct": 88,
+      "time_horizon": "medium_term"
+    },
+    {
+      "handoff_id": "CH004",
+      "headline": "Payments architecture is not proven to be single-vendor",
+      "connected_target_keys": [
+        "company:brand-tim-hortons"
+      ],
+      "finding_ids": [
+        "F006",
+        "F017"
+      ],
+      "change_event_ids": [
+        "CE004"
+      ],
+      "connection": "Fiserv / Chase / Moneris / Tims Scan & Pay",
+      "why_it_matters": "Do not treat Fiserv, Chase or Moneris as the sole incumbent without agreement/geography validation. Scan & Pay makes the front-end loyalty/payment integration requirement strategically important.",
+      "is_inference": true,
+      "confidence_pct": 86,
+      "time_horizon": "near_term"
+    }
+  ],
+  "paid_source_recommendations": [],
+  "negative_findings": [
+    {
+      "question_or_claim": "Oracle MICROS is the current Tim Hortons systemwide POS.",
+      "search_scope": "Current web, vendor, RBI, Tim Hortons, Panasonic/QST and FDD-derived sources.",
+      "result": "Not established. Historical Tim Hortons materials referenced MICROS transition plans, but no current primary evidence sufficient for a 2026 systemwide Oracle/MICROS claim was found.",
+      "source_ids": []
+    },
+    {
+      "question_or_claim": "A single current global payments processor is publicly established for Tim Hortons.",
+      "search_scope": "FDD-derived sources, Panasonic/QST current support, historical payment announcements, Tim Hortons current digital-payment documentation.",
+      "result": "Not established. Current evidence references First Data/Fiserv in FDD-derived material and Chase/Moneris in Panasonic Tim Hortons support workflows; role and scope remain agreement/geography dependent.",
+      "source_ids": [
+        "S008",
+        "S016"
+      ]
+    },
+    {
+      "question_or_claim": "Current kiosk vendor is publicly named by Tim Hortons.",
+      "search_scope": "2026 Tim Hortons newsroom, Panasonic/QST support, current technology vendor searches.",
+      "result": "No. Tim Hortons verifies 800+ kiosk deployments in Canada but does not name the kiosk vendor in the primary source.",
+      "source_ids": [
+        "S004"
+      ]
+    },
+    {
+      "question_or_claim": "Current KDS and digital-menu-board vendors are publicly verified.",
+      "search_scope": "Current Tim Hortons/RBI sources and targeted vendor searches.",
+      "result": "No defensible current vendor relationship was established in this bounded cycle.",
+      "source_ids": []
+    },
+    {
+      "question_or_claim": "The exact 2026 FDD technology replacement cadence is fully resolved.",
+      "search_scope": "Wisconsin registration, current FDD-derived public sources, current technology-governance searches.",
+      "result": "Not fully resolved. Current governance and refurbishment controls are supported, but the freely accessible evidence did not expose the complete current replacement clause from the underlying 2026 FDD.",
+      "source_ids": [
+        "S014",
+        "S015",
+        "S016"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "conflict_id": "C001",
+      "topic": "2026 FDD outlet count / filing variant",
+      "source_ids": [
+        "S015",
+        "S016"
+      ],
+      "analysis": "FDD Exchange summarizes the primary U.S. franchise offer at 693 outlets at 2025 year-end, while FranCloud displays an eight-unit filing context with materially different economics and development-agreement language. These appear to be different offering/agreement variants rather than true system-count disagreement. The packet uses FDD Exchange for main U.S. scale and FranCloud only for requirement language explicitly framed as developer/franchise agreement evidence.",
+      "resolution_status": "scope_separated"
+    },
+    {
+      "conflict_id": "C002",
+      "topic": "Payment vendor/current mandate",
+      "source_ids": [
+        "S008",
+        "S016"
+      ],
+      "analysis": "FDD-derived evidence names First Data/Fiserv without proving mandate; Panasonic's current Tim Hortons support workflow includes Chase and Moneris identifiers. This is best represented as a multi-provider/role-specific ecosystem until contract scope is independently resolved.",
+      "resolution_status": "unresolved_by_geography_and_role"
+    },
+    {
+      "conflict_id": "C003",
+      "topic": "RBB prior scale vs current global scale",
+      "source_ids": [
+        "S002",
+        "S015"
+      ],
+      "analysis": "The RBB prior state records 653 units, which aligns with a U.S.-specific estate, while RBI reports 6,209 Tim Hortons restaurants globally and 4,570 in the Canada/U.S. TH reporting segment. These are different scopes, not a factual contradiction.",
+      "resolution_status": "scope_separated"
+    }
+  ],
+  "unanswered_questions": [
+    "What exact POS software and hardware SKUs are currently mandated or approved in Canada and the U.S., and what percentage of restaurants run each?",
+    "Who supplies the 800+ Tim Hortons kiosks in Canada, and what is the rollout target?",
+    "What KDS and digital menu board platforms are current standards?",
+    "What are the precise current processor/acquirer/gateway roles of Fiserv/First Data, Chase and Moneris by country and agreement type?",
+    "What does the full 2026 FDD say verbatim about hardware/software replacement obligations, upgrade cadence and franchisor authority to impose replacement?",
+    "Is CLEARVIEW mandatory, preferred, or optional at franchisee level, and what is its active store count?"
+  ],
+  "method_feedback": {
+    "productive_patterns": "Primary SEC/RBI/Tim Hortons sources were strongest for ownership, footprint, performance, leadership and rollout scope. Current vendor support portals were unusually productive for identifying real restaurant technology relationships where marketing case studies were too generic. FDD-derived public summaries were necessary because the regulator index confirmed the filing but the underlying 2026 PDF was not freely retrievable through this environment.",
+    "unproductive_patterns": "Generic searches for Oracle, Olo, Punchh, Paytronix, Brink, Xenial and other common restaurant vendors did not produce current primary evidence strong enough to assign them as Tim Hortons incumbents. Historical vendor references were not promoted to current facts.",
+    "proposed_method_changes": "For Tim Hortons, future cycles should prioritize Panasonic/QST support artifacts, state-regulator FDD attachments where directly downloadable, RBI job postings that name technology responsibilities, and franchisee-specific evidence to resolve scope. Separate Canada, U.S. and international stacks rather than assuming one global architecture.",
+    "next_cycle_recommendations": "Obtain the full current 2026 FDD directly from a free state regulator attachment if available; map POS/kiosk/KDS/DMB/payment vendors by geography; validate CLEARVIEW installed count; identify technology owner(s) beneath Axel Schwan and the Canadian technology team."
+  },
+  "quality": {
+    "pages_opened_or_reviewed": 24,
+    "productive_sources_retained": 18,
+    "primary_or_vendor_primary_sources": 14,
+    "government_or_regulatory_sources": 3,
+    "findings_count": 19,
+    "findings_with_sources": 19,
+    "gap_count": 2,
+    "gap_outcomes_recorded": 2,
+    "required_modules_complete": true,
+    "independent_evidence_chains_for_material_claims": true,
+    "validation_status": "complete",
+    "overall_confidence_pct": 93
+  },
+  "resource_usage": {
+    "selected_execution_tier": "deep_public_source_research",
+    "targets_attempted": 1,
+    "targets_completed": 1,
+    "web_research_queries": 20,
+    "private_drive_assignment_reads": 1,
+    "canonical_writes": 0,
+    "budget_outcome": "within_budget",
+    "escalation_reasons": []
+  },
+  "payload_schema": "rb.brand_company_profile.v1",
+  "payload": {
+    "records": [
+      {
+        "target_key": "company:brand-tim-hortons",
+        "company_name": "Tim Hortons",
+        "brand_name": "Tim Hortons",
+        "parent_company": "Restaurant Brands International Inc.",
+        "ownership_type": "public_parent_franchised_brand",
+        "founded_year": 1964,
+        "headquarters_context": {
+          "brand_canada_us_leadership_base": "Toronto, Ontario, Canada",
+          "us_franchisor": "Tim Hortons USA Inc.",
+          "parent_company": "Restaurant Brands International Inc."
+        },
+        "leadership": [
+          {
+            "name": "Axel Schwan",
+            "title": "President, Tim Hortons Canada & U.S.",
+            "confidence_pct": 100,
+            "source_ids": [
+              "S003"
+            ]
+          }
+        ],
+        "footprint": {
+          "global_restaurants": 6209,
+          "global_as_of": "2026-06-30",
+          "canada_us_segment_restaurants": 4570,
+          "canada_us_segment_as_of": "2026-06-30",
+          "us_fdd_outlets_2025_year_end": 693,
+          "us_fdd_franchised_outlets": 669,
+          "us_fdd_company_owned_outlets": 24,
+          "scope_note": "Counts come from different scopes; retain scope labels."
+        },
+        "financial_operating_health": {
+          "q2_2026_canada_us_systemwide_sales_usd_millions": 2003,
+          "q2_2026_systemwide_sales_growth_pct": 0.4,
+          "q2_2026_comparable_sales_pct": 0.1,
+          "q2_2026_canada_comparable_sales_pct": 0.1,
+          "h1_2026_systemwide_sales_usd_millions": 3741,
+          "h1_2026_comparable_sales_pct": 0.8,
+          "assessment": "Footprint growth continues, but Q2 comparable-sales momentum slowed materially versus 2025."
+        },
+        "strategy": [
+          "Continue menu and beverage innovation.",
+          "Use Tims Rewards and personalized digital offers to deliver value.",
+          "Continue restaurant guest-experience investment and training.",
+          "Expand self-order kiosk deployment.",
+          "Invest in restaurant renovations, digital-ordering/pickup layouts and kitchen equipment."
+        ],
+        "technology_stack": [
+          {
+            "vendor": "Tim Hortons / RBI",
+            "product": "Tims app / Tims Rewards / mobile ordering / Scan & Pay",
+            "category": "digital_ordering_loyalty_mobile_payment",
+            "stage": "live",
+            "scope": "Canada and U.S. participating restaurants",
+            "confidence_pct": 100,
+            "source_ids": [
+              "S006",
+              "S007"
+            ]
+          },
+          {
+            "vendor": "Vendor not publicly named",
+            "product": "Digital self-order kiosks",
+            "category": "kiosk_self_service",
+            "stage": "rolling_out",
+            "scope": "800+ Canadian restaurants as of 2026-02-18, more planned",
+            "confidence_pct": 100,
+            "source_ids": [
+              "S004"
+            ]
+          },
+          {
+            "vendor": "Panasonic / Quick Service Technologies",
+            "product": "Tim Hortons POS support ecosystem; iQtouch/iQtimer/WEB-SRM resource family",
+            "category": "pos_drive_thru_restaurant_technology_support",
+            "stage": "live_support",
+            "scope": "Tim Hortons-specific support workflow; exact installed count unresolved",
+            "confidence_pct": 96,
+            "source_ids": [
+              "S008",
+              "S009",
+              "S018"
+            ]
+          },
+          {
+            "vendor": "CLEARVIEW",
+            "product": "CLEARVIEW restaurant management platform",
+            "category": "back_office_inventory_workforce_forecasting_analytics",
+            "stage": "live_customer_relationship",
+            "scope": "Tim Hortons USA and Canada customer evidence; chainwide scope unresolved",
+            "confidence_pct": 91,
+            "source_ids": [
+              "S010",
+              "S011"
+            ]
+          },
+          {
+            "vendor": "i3 International",
+            "product": "Velocity drive-thru timer / video analytics",
+            "category": "drive_thru_timer_video_analytics",
+            "stage": "live_franchisee_evidence",
+            "scope": "franchisee-level; not established as systemwide",
+            "confidence_pct": 82,
+            "source_ids": [
+              "S012"
+            ]
+          },
+          {
+            "vendor": "Solink / StarPOS",
+            "product": "Video security + POS integration",
+            "category": "loss_prevention_video_pos_integration",
+            "stage": "current_franchisee_ecosystem_signal",
+            "scope": "Tim Hortons-specific vendor program; not established as corporate standard",
+            "confidence_pct": 78,
+            "source_ids": [
+              "S013"
+            ]
+          },
+          {
+            "vendor": "Fiserv / First Data",
+            "product": "Payment-related relationship named in 2026 FDD-derived evidence",
+            "category": "payments",
+            "stage": "named_not_proven_mandatory",
+            "scope": "agreement-specific; unresolved",
+            "confidence_pct": 72,
+            "source_ids": [
+              "S016"
+            ]
+          },
+          {
+            "vendor": "Chase",
+            "product": "Merchant/payment configuration supported in Panasonic Tim Hortons workflow",
+            "category": "payments_acquiring",
+            "stage": "supported_current_workflow",
+            "scope": "restaurants using applicable configuration; geography/scope unresolved",
+            "confidence_pct": 80,
+            "source_ids": [
+              "S008"
+            ]
+          },
+          {
+            "vendor": "Moneris",
+            "product": "ECR/payment configuration supported in Panasonic Tim Hortons workflow",
+            "category": "payments_acquiring",
+            "stage": "supported_current_workflow",
+            "scope": "restaurants using applicable configuration; likely Canada-heavy but not inferred as exclusive",
+            "confidence_pct": 80,
+            "source_ids": [
+              "S008"
+            ]
+          }
+        ],
+        "franchise_disclosure": {
+          "as_of": "2026",
+          "legal_franchisor_us": "Tim Hortons USA Inc.",
+          "registration": {
+            "wisconsin_status": "active",
+            "expiration_date": "2027-03-13",
+            "source_ids": [
+              "S014"
+            ]
+          },
+          "required_technology_and_systems": [
+            "Approved/designated point-of-sale systems",
+            "Approved/designated ordering systems",
+            "Approved/designated customer communication systems",
+            "Prescribed polling/data collection systems",
+            "Technology platform support includes POS, TimZone and Tim Card"
+          ],
+          "approved_vendor_governance": {
+            "model": "approved/designated supplier",
+            "franchisor_can_sole_source": true,
+            "alternative_supplier_proposal_allowed": true,
+            "supplier_evaluation_cost_may_be_charged": true,
+            "source_ids": [
+              "S016"
+            ]
+          },
+          "data_governance": {
+            "franchisor_prescribes_pos_and_polling_systems": true,
+            "franchisor_data_access": true,
+            "source_ids": [
+              "S016"
+            ]
+          },
+          "fees": {
+            "restaurant_technology_charge_monthly": "$450-$1,400",
+            "refurbishment": "up to $250,000",
+            "royalty": "4.5%-6% of Gross Sales",
+            "advertising_contribution": "4% of Gross Sales; 3% for captured-traffic locations in current FDD-derived summary",
+            "source_ids": [
+              "S015"
+            ]
+          },
+          "replacement_obligations": {
+            "status": "partial",
+            "supported": "Franchisor controls prescribed systems/suppliers and current FDD-derived sources disclose refurbishment obligations.",
+            "unresolved": "Exact current 2026 contractual language and timing for mandatory computer/POS hardware and software replacements were not independently recovered from the underlying full FDD."
+          },
+          "named_technology_vendor_status": [
+            {
+              "vendor": "First Data / Fiserv",
+              "status": "named in FDD-derived material; mandate not established"
+            },
+            {
+              "vendor": "Panasonic / QST",
+              "status": "current restaurant support relationship independently established outside FDD"
+            },
+            {
+              "vendor": "Chase",
+              "status": "supported in current Panasonic Tim Hortons setup workflow; exact mandate/scope unresolved"
+            },
+            {
+              "vendor": "Moneris",
+              "status": "supported in current Panasonic Tim Hortons setup workflow; exact mandate/scope unresolved"
+            }
+          ]
+        },
+        "news_signals": [
+          {
+            "date": "2026-02-18",
+            "signal": "800+ Canadian restaurants have digital kiosks; rollout continuing."
+          },
+          {
+            "date": "2026-05-22",
+            "signal": "C$400M Canadian restaurant investment program: 80 new restaurants and 400 renovations."
+          },
+          {
+            "date": "2026-06-30",
+            "signal": "Canada/U.S. Tim Hortons segment comparable sales slowed to 0.1% in Q2 while restaurant count increased."
+          }
+        ],
+        "commercial_assessment": {
+          "buying_model": "Franchisor-governed core standards with franchisee execution and some franchisee-level technology variation.",
+          "technology_posture": "Active modernization rather than wholesale stack replacement: digital kiosks, app/loyalty/payment integration, restaurant renovations and equipment refresh coexist with an entrenched Panasonic/QST and CLEARVIEW ecosystem.",
+          "opportunity_implication": "Best approach is category-by-category displacement or payments-funded modernization tied to 2026 refresh cycles, not an assumption that Tim Hortons will replace its entire restaurant stack at once."
+        }
+      }
+    ]
+  }
+}

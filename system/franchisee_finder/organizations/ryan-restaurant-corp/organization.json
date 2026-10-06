@@ -1,0 +1,114 @@
+{
+  "franchisee_id": "fran-ryan-restaurant-corp",
+  "franchisee_slug": "ryan-restaurant-corp",
+  "display_name": "Ryan Restaurant Corp.",
+  "aliases": [],
+  "hierarchy_level": "multi_brand_franchisee_group",
+  "legal_entities": [],
+  "brand_relationships": [
+    {
+      "value": "Applebee’s -- 7 units (Franchise Times 2026 Restaurant 200, unverified)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": null,
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Franchise Times 2026 Restaurant 200",
+      "source_type": "trade_press_ranking"
+    },
+    {
+      "value": "Famous Dave’s -- 5 units (Franchise Times 2026 Restaurant 200, unverified)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": null,
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Franchise Times 2026 Restaurant 200",
+      "source_type": "trade_press_ranking"
+    },
+    {
+      "value": "Panera Bread -- 4 units (Franchise Times 2026 Restaurant 200, unverified)",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "low",
+      "as_of": null,
+      "scope": "franchisee_organization",
+      "last_reviewed_by": "system:franchisee_intelligence_common",
+      "finding_type": "marketplace_reported",
+      "source_owner": "Franchise Times 2026 Restaurant 200",
+      "source_type": "trade_press_ranking"
+    }
+  ],
+  "leadership": [],
+  "operating_geography": [],
+  "growth_notes": [],
+  "technology_relationships": [],
+  "headquarters": {
+    "value": "Missoula, MT",
+    "status": "confirmed",
+    "evidence_ids": [],
+    "confidence": "low",
+    "as_of": null,
+    "scope": "franchisee_organization",
+    "last_reviewed_by": "system:franchisee_intelligence_common",
+    "finding_type": "marketplace_reported",
+    "source_owner": "Franchise Times 2026 Restaurant 200",
+    "source_type": "trade_press_ranking"
+  },
+  "registered_address": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "franchisee_organization",
+    "last_reviewed_by": null
+  },
+  "ownership": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "franchisee_organization",
+    "last_reviewed_by": null
+  },
+  "sales_estimate": {
+    "value": null,
+    "status": "not_yet_researched",
+    "evidence_ids": [],
+    "confidence": "unknown",
+    "as_of": null,
+    "scope": "franchisee_organization",
+    "last_reviewed_by": null
+  },
+  "total_identified_units": {
+    "value": "16",
+    "status": "confirmed",
+    "evidence_ids": [],
+    "confidence": "low",
+    "as_of": null,
+    "scope": "franchisee_organization",
+    "last_reviewed_by": "system:franchisee_intelligence_common",
+    "finding_type": "marketplace_reported",
+    "source_owner": "Franchise Times 2026 Restaurant 200",
+    "source_type": "trade_press_ranking"
+  },
+  "source_discovery": {
+    "method": null,
+    "discovered_from_brand": null,
+    "confidence": "unknown",
+    "as_of": null,
+    "source_url": null
+  },
+  "last_evidence_date": "2026-10-02",
+  "last_researched": "2026-10-02",
+  "next_scheduled_review": null,
+  "confidence_tier": "low",
+  "template_version": "franchisee-intelligence-v1",
+  "updated_at": "2026-10-03T01:41:03Z"
+}

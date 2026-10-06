@@ -1,7 +1,15 @@
 # STRATACACHE — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, STRATACACHE presents a moderate competitive threat due to its large install base in the QSR sector, but recent layoffs and asset sales indicate significant operational distress. The team should consider targeting STRATACACHE's QSR customers for potential replacement opportunities, as they may be looking for more stable solutions.
+
+- STRATACACHE's claims of a large install base in QSRs highlight its market presence, but operational challenges may weaken its competitive position.
+- Recent layoffs and asset sales suggest STRATACACHE is facing significant financial difficulties, which could lead to customer dissatisfaction and opportunities for Genius.
+- The potential for STRATACACHE's QSR customers to seek alternatives presents a strategic opening for Genius to capture market share.
+- The ongoing challenges with tariffs and supply chain issues further complicate STRATACACHE's ability to maintain its service levels and product offerings.
+- Despite its current advantages in outdoor/drive-thru installations, STRATACACHE's shrinking operations may limit its future growth and stability.
 
 ## Where we're competing against them right now
 *No current tech-stack relationship on file for this vendor.*

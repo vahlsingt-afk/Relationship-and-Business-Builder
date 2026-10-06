@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "week_of": "2026-09-28",
-  "created_at": "2026-09-28T12:24:01.798700Z",
+  "week_of": "2026-10-05",
+  "created_at": "2026-10-05T10:11:11.704080Z",
   "operating_mode_calendar": {
     "monday": "weekly_planning",
     "tuesday": "execution",
@@ -15,12 +15,24 @@
     {
       "id": "outcome-loop-stability",
       "title": "Close out overdue and due-today loops",
-      "success_criteria": "Carried over from week of 2026-09-21, still not resolved: Resolve all 1 overdue/due-today loop(s) \u2014 close, re-date with reason, or explicitly defer with a new target.",
+      "success_criteria": "Carried over from week of 2026-09-28, still not resolved: Carried over from week of 2026-09-21, still not resolved: Resolve all 1 overdue/due-today loop(s) \u2014 close, re-date with reason, or explicitly defer with a new target.",
       "linked_opportunity_ids": [],
       "linked_loop_ids": [
         "L-2026-08-31-001"
       ],
-      "portfolio_allocation_pct": 50.0,
+      "portfolio_allocation_pct": 34.0,
+      "status": "active"
+    },
+    {
+      "id": "outcome-loop-stability",
+      "title": "Close out overdue and due-today loops",
+      "success_criteria": "Carried over from week of 2026-09-28, still not resolved: Resolve all 2 overdue/due-today loop(s) \u2014 close, re-date with reason, or explicitly defer with a new target.",
+      "linked_opportunity_ids": [],
+      "linked_loop_ids": [
+        "L-2026-08-28-001",
+        "L-2026-09-21-001"
+      ],
+      "portfolio_allocation_pct": 33.0,
       "status": "active"
     },
     {
@@ -29,19 +41,19 @@
       "success_criteria": "Resolve all 2 overdue/due-today loop(s) \u2014 close, re-date with reason, or explicitly defer with a new target.",
       "linked_opportunity_ids": [],
       "linked_loop_ids": [
-        "L-2026-08-28-001",
-        "L-2026-09-21-001"
+        "L-2026-08-11-001",
+        "L-2026-08-10-002"
       ],
-      "portfolio_allocation_pct": 50.0,
+      "portfolio_allocation_pct": 33.0,
       "status": "active"
     }
   ],
   "portfolio_allocation": {
-    "outcome-loop-stability": 50.0
+    "outcome-loop-stability": 33.0
   },
   "risks": [],
   "forcing_functions": [],
   "status": "confirmed",
-  "generated_at": "2026-09-28T12:24:01.798954Z",
-  "confirmed_at": "2026-09-29T01:00:06.056707Z"
+  "generated_at": "2026-10-05T10:11:11.704388Z",
+  "confirmed_at": "2026-10-06T01:00:01.796737Z"
 }

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "contract": "rb_ecosystem_intelligence_v1",
-  "last_updated": "2026-10-02",
+  "last_updated": "2026-10-06",
   "description": "Industry-agnostic ecosystem intelligence graph. Restaurants are the first domain pack; the core artifact stores entities, relationships, deployments, signals, assessments, sources, user relevance, and strategic recommendations without hardcoding one vertical.",
   "domain_packs": [
     "restaurants"
@@ -414185,6 +414185,501 @@
       "narrative_classification": "strategic_weak_signal",
       "graph_mutation_eligibility": "canonical_fact",
       "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2021-03-30-brand-jinya-ramen-bar-general-market-context",
+      "event_at": "2021-03-30",
+      "captured_at": "2026-10-03T09:13:37.534483Z",
+      "signal_type": "general_market_context",
+      "summary": "JINYA Ramen Bar Elevates Customer Experience Using Innovative NCR Aloha Technology - Business Wire. JINYA Ramen Bar Elevates Customer Experience Using Innovative NCR Aloha Technology - Business Wire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-jinya-ramen-bar"
+      ],
+      "sources": [
+        "src-press-wire-2021-03-30"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: general_market_context. Recommended action: ignore.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 0.9,
+      "corroboration_count": 26,
+      "corroboration_sources": [
+        "sig-2022-11-02-brand-lazy-dog-restaurant-bar-general-market-context",
+        "sig-2025-01-14-brand-joe-the-juice-general-market-context",
+        "sig-2021-05-28-brand-city-winery-general-market-context",
+        "sig-2024-03-19-brand-puttshack-general-market-context",
+        "sig-2026-07-17-brand-puttshack-funding-event"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-03",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2025-07-31-brand-eggs-up-grill-general-market-context",
+      "event_at": "2025-07-31",
+      "captured_at": "2026-10-03T09:14:44.695003Z",
+      "signal_type": "general_market_context",
+      "summary": "Eggs Up Grill Names Julie Krupa Vice President of Real Estate Development - PR Newswire. Eggs Up Grill Names Julie Krupa Vice President of Real Estate Development - PR Newswire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-eggs-up-grill"
+      ],
+      "sources": [
+        "src-press-wire-2025-07-31"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: general_market_context. Recommended action: ignore.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 1.0,
+      "corroboration_count": 32,
+      "corroboration_sources": [
+        "sig-2026-05-26-brand-church-s-texas-chicken-general-market-context",
+        "sig-2024-01-23-brand-hooters-general-market-context",
+        "sig-2014-01-07-brand-bonefish-grill-general-market-context",
+        "sig-2024-05-16-brand-sbarro-general-market-context",
+        "sig-2014-10-16-brand-mugshots-grill-bar-leadership-change"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-03",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2026-09-30-brand-savvy-sliders-general-market-context",
+      "event_at": "2026-09-30",
+      "captured_at": "2026-10-03T09:16:22.753239Z",
+      "signal_type": "general_market_context",
+      "summary": "Savvy Sliders and 5-hour ENERGY\u00ae Introduce Two All-New Drinks Just in Time for Fall - GlobeNewswire. Savvy Sliders and 5-hour ENERGY\u00ae Introduce Two All-New Drinks Just in Time for Fall - GlobeNewswire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-savvy-sliders"
+      ],
+      "sources": [
+        "src-press-wire-2026-09-30"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: general_market_context. Recommended action: ignore.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 0.9,
+      "corroboration_count": 24,
+      "corroboration_sources": [
+        "sig-2024-07-11-brand-del-taco-general-market-context",
+        "sig-2021-06-23-brand-habit-burger-grill-general-market-context",
+        "sig-2021-08-10-brand-jamba-general-market-context",
+        "sig-2024-03-28-brand-walk-on-s-sports-bistreaux-general-market-context",
+        "sig-2024-10-16-brand-oakberry-general-market-context"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-03",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2024-04-15-brand-rita-s-ice-vendor-relationship-formed",
+      "event_at": "2024-04-15",
+      "captured_at": "2026-10-04T09:12:16.201051Z",
+      "signal_type": "vendor_relationship_formed",
+      "summary": "Rita's Partners with OREO\u00ae to Expand Cold Brew Frozen Coffee Line and Offers $3 Small Frozen Coffee to Rita's Ice App Users - PR Newswire. Rita's Partners with OREO\u00ae to Expand Cold Brew Frozen Coffee Line and Offers $3 Small Frozen Coffee to Rita's Ice App Users - PR Newswire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-rita-s-ice"
+      ],
+      "sources": [
+        "src-press-wire-2024-04-15"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: vendor_relationship_formed. Recommended action: monitor.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 1.0,
+      "corroboration_count": 27,
+      "corroboration_sources": [
+        "sig-2026-05-11-brand-p-f-chang-s-general-market-context",
+        "sig-2017-10-28-brand-baskin-robbins-leadership-change",
+        "sig-2016-06-13-brand-baskin-robbins-general-market-context",
+        "sig-2015-04-20-brand-caribou-coffee-general-market-context",
+        "sig-2025-08-28-brand-peet-s-coffee-general-market-context"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-04",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2026-09-28-brand-dig-leadership-change",
+      "event_at": "2026-09-28",
+      "captured_at": "2026-10-04T09:13:47.184035Z",
+      "signal_type": "leadership_change",
+      "summary": "DIG INN NAMES DYLAN MENDELSOHN AS CULINARY DIRECTOR, WITH NEW MENU DEBUTING THIS FALL - PR Newswire. DIG INN NAMES DYLAN MENDELSOHN AS CULINARY DIRECTOR, WITH NEW MENU DEBUTING THIS FALL - PR Newswire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-dig"
+      ],
+      "sources": [
+        "src-press-wire-2026-09-28"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: leadership_change. Recommended action: act_today.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 1.0,
+      "corroboration_count": 107,
+      "corroboration_sources": [
+        "sig-2025-05-01-brand-hardee-s-general-market-context",
+        "sig-2026-07-27-brand-p-f-chang-s-leadership-change",
+        "sig-2023-07-21-brand-nothing-bundt-cakes-leadership-change",
+        "sig-2024-09-05-brand-nothing-bundt-cakes-general-market-context",
+        "sig-2017-10-17-brand-carrabba-s-italian-grill-general-market-context"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-04",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2023-03-09-brand-habit-burger-grill-general-market-context",
+      "event_at": "2023-03-09",
+      "captured_at": "2026-10-05T09:13:06.568886Z",
+      "signal_type": "general_market_context",
+      "summary": "The Habit Burger Grill Welcomes Jack Hinchliffe as Its New Global Chief Marketing Officer - GlobeNewswire. The Habit Burger Grill Welcomes Jack Hinchliffe as Its New Global Chief Marketing Officer - GlobeNewswire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-habit-burger-grill"
+      ],
+      "sources": [
+        "src-press-wire-2023-03-09"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: general_market_context. Recommended action: ignore.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 0.9,
+      "corroboration_count": 45,
+      "corroboration_sources": [
+        "sig-2026-07-07-brand-dairy-queen-leadership-change",
+        "sig-2026-07-01-brand-mcdonald-s-leadership-change",
+        "sig-2024-10-23-brand-red-lobster-general-market-context",
+        "sig-2021-05-06-brand-freddy-s-frozen-custard-steakburgers-general-market-co",
+        "sig-2024-11-13-brand-nothing-bundt-cakes-general-market-context"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-05",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2026-10-01-brand-wildfire-funding-event",
+      "event_at": "2026-10-01",
+      "captured_at": "2026-10-05T09:15:06.219948Z",
+      "signal_type": "funding_event",
+      "summary": "Magnolia Oil & Gas Provides Interim Financial and Operations Update After Closing the Acquisition of WildFire Energy - Business Wire. Magnolia Oil & Gas Provides Interim Financial and Operations Update After Closing the Acquisition of WildFire Energy - Business Wire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-wildfire"
+      ],
+      "sources": [
+        "src-press-wire-2026-10-01"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: funding_event. Recommended action: monitor.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 0.9,
+      "corroboration_count": 20,
+      "corroboration_sources": [
+        "sig-2025-12-22-brand-del-taco-funding-event",
+        "sig-2026-03-11-brand-carrabba-s-italian-grill-funding-event",
+        "sig-2024-11-01-brand-miller-s-ale-house-funding-event",
+        "sig-2024-05-01-brand-benihana-funding-event",
+        "sig-2022-03-08-brand-del-taco-funding-event"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-05",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2026-09-24-brand-wildfire-vendor-relationship-formed",
+      "event_at": "2026-09-24",
+      "captured_at": "2026-10-05T09:15:06.220153Z",
+      "signal_type": "vendor_relationship_formed",
+      "summary": "Butte County, CA Selects Genasys Protect\u00ae to Strengthen Its Wildfire Preparedness and Emergency Management - Business Wire. Butte County, CA Selects Genasys Protect\u00ae to Strengthen Its Wildfire Preparedness and Emergency Management - Business Wire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-wildfire"
+      ],
+      "sources": [
+        "src-press-wire-2026-09-24"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: vendor_relationship_formed. Recommended action: monitor.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 0.9,
+      "corroboration_count": 33,
+      "corroboration_sources": [
+        "sig-2024-12-04-brand-crumbl-leadership-change",
+        "sig-2022-03-29-brand-firebirds-wood-fired-grill-general-market-context",
+        "sig-2022-02-14-brand-firebirds-wood-fired-grill-general-market-context",
+        "sig-2025-09-17-brand-mendocino-farms-general-market-context",
+        "sig-2026-03-05-brand-cinnaholic-general-market-context"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-05",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2026-09-29-brand-lemonade-general-market-context",
+      "event_at": "2026-09-29",
+      "captured_at": "2026-10-05T09:15:26.416896Z",
+      "signal_type": "general_market_context",
+      "summary": "Lemonade Expands Renters Insurance to Alaska - PR Newswire. Lemonade Expands Renters Insurance to Alaska - PR Newswire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-lemonade"
+      ],
+      "sources": [
+        "src-press-wire-2026-09-29"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: general_market_context. Recommended action: ignore.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 1.0,
+      "corroboration_count": 2,
+      "corroboration_sources": [
+        "sig-2026-05-07-brand-california-dreaming-general-market-context",
+        "sig-2026-09-08-brand-lemonade-general-market-context"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-05",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2026-09-22-brand-lemonade-general-market-context",
+      "event_at": "2026-09-22",
+      "captured_at": "2026-10-05T09:15:26.417060Z",
+      "signal_type": "general_market_context",
+      "summary": "Firebirds Wood Fired Grill Celebrates $5 Million Fundraiser Milestone in Longtime Partnership with Alex's Lemonade Stand Foundation to Fight Childhood Cancer - Business Wire. Firebirds Wood Fired Grill Celebrates $5 Million Fundraiser Milestone in Longtime Partnership with Alex's Lemonade Stand Foun",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-lemonade"
+      ],
+      "sources": [
+        "src-press-wire-2026-09-22"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: general_market_context. Recommended action: ignore.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 1.0,
+      "corroboration_count": 46,
+      "corroboration_sources": [
+        "sig-2025-03-21-brand-dairy-queen-general-market-context",
+        "sig-2026-08-05-brand-auntie-anne-s-general-market-context",
+        "sig-2026-03-11-brand-carrabba-s-italian-grill-funding-event",
+        "sig-2024-11-01-brand-miller-s-ale-house-funding-event",
+        "sig-2023-04-18-brand-mellow-mushroom-general-market-context"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-05",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2026-09-07-brand-lemonade-general-market-context",
+      "event_at": "2026-09-07",
+      "captured_at": "2026-10-05T09:15:26.417226Z",
+      "signal_type": "general_market_context",
+      "summary": "Lemonade CFO to Participate in Upcoming Investor Conferences - PR Newswire. Lemonade CFO to Participate in Upcoming Investor Conferences - PR Newswire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-lemonade"
+      ],
+      "sources": [
+        "src-press-wire-2026-09-07"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: general_market_context. Recommended action: ignore.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 0.74,
+      "corroboration_count": 0,
+      "corroboration_sources": [],
+      "claim_status": "plausible_but_unverified",
+      "verification_timestamp": "2026-10-05",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "weak_signal",
+      "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2022-04-04-brand-friendly-s-leadership-change",
+      "event_at": "2022-04-04",
+      "captured_at": "2026-10-06T09:15:04.370792Z",
+      "signal_type": "leadership_change",
+      "summary": "Friendly's Restaurants Introduces a Dozen Delicious New Menu Items - PR Newswire. Friendly's Restaurants Introduces a Dozen Delicious New Menu Items - PR Newswire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-friendly-s"
+      ],
+      "sources": [
+        "src-press-wire-2022-04-04"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: leadership_change. Recommended action: act_today.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 1.0,
+      "corroboration_count": 158,
+      "corroboration_sources": [
+        "sig-2017-10-18-brand-mcalister-s-deli-general-market-context",
+        "sig-2024-11-12-brand-p-f-chang-s-general-market-context",
+        "sig-2024-07-11-brand-del-taco-general-market-context",
+        "sig-2026-08-18-brand-smoothie-king-leadership-change",
+        "sig-2021-11-02-brand-smoothie-king-general-market-context"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-06",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.3
+    },
+    {
+      "id": "sig-2026-06-02-brand-layne-s-chicken-fingers-general-market-context",
+      "event_at": "2026-06-02",
+      "captured_at": "2026-10-06T09:15:35.681548Z",
+      "signal_type": "general_market_context",
+      "summary": "Layne's Chicken Fingers to Open Landmark 50th Restaurant in Lubbock Amid Rapid Nationwide Expansion - PR Newswire. Layne's Chicken Fingers to Open Landmark 50th Restaurant in Lubbock Amid Rapid Nationwide Expansion - PR Newswire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-layne-s-chicken-fingers"
+      ],
+      "sources": [
+        "src-press-wire-2026-06-02"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: general_market_context. Recommended action: ignore.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 1.0,
+      "corroboration_count": 60,
+      "corroboration_sources": [
+        "sig-2021-10-18-brand-mcalister-s-deli-general-market-context",
+        "sig-2026-04-13-brand-church-s-texas-chicken-general-market-context",
+        "sig-2021-07-27-brand-miller-s-ale-house-general-market-context",
+        "sig-2023-07-25-brand-benihana-general-market-context",
+        "sig-2023-07-17-brand-tgi-fridays-general-market-context"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-06",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.38
+    },
+    {
+      "id": "sig-2025-02-20-brand-milk-bar-general-market-context",
+      "event_at": "2025-02-20",
+      "captured_at": "2026-10-06T09:17:31.045143Z",
+      "signal_type": "general_market_context",
+      "summary": "CUE THE CONFETTI! TACO BELL\u00ae AND MILK BAR\u00ae LAUNCH NEW BIRTHDAY CAKE CHURROS NATIONWIDE - PR Newswire. CUE THE CONFETTI! TACO BELL\u00ae AND MILK BAR\u00ae LAUNCH NEW BIRTHDAY CAKE CHURROS NATIONWIDE - PR Newswire",
+      "domains": [
+        "restaurants"
+      ],
+      "entities": [
+        "brand-milk-bar"
+      ],
+      "sources": [
+        "src-press-wire-2025-02-20"
+      ],
+      "confidence": {
+        "level": "medium"
+      },
+      "interpretation": "Auto-classified from daily brief ecosystem scan. Class: general_market_context. Recommended action: ignore.",
+      "source_type": "credible_reporting",
+      "source_quality": "strong",
+      "confidence_score": 1.0,
+      "corroboration_count": 67,
+      "corroboration_sources": [
+        "sig-2015-12-07-brand-baskin-robbins-general-market-context",
+        "sig-2017-10-28-brand-baskin-robbins-leadership-change",
+        "sig-2016-06-13-brand-baskin-robbins-general-market-context",
+        "sig-2015-09-16-brand-jamba-general-market-context",
+        "sig-2021-02-03-brand-taco-john-s-general-market-context"
+      ],
+      "claim_status": "verified",
+      "verification_timestamp": "2026-10-06",
+      "narrative_classification": "strategic_weak_signal",
+      "graph_mutation_eligibility": "canonical_fact",
+      "strategic_relevance_score": 0.3
     }
   ],
   "assessments": [
@@ -418303,6 +418798,48 @@
         "sig-2022-06-29-brand-slice-factory-leadership_change"
       ],
       "updated_at": "2026-10-02T09:16:26.402361Z"
+    },
+    {
+      "id": "asm-2026-09-28-brand-dig-leadership-change",
+      "entity_id": "brand-dig",
+      "assessment_type": "activation_candidate",
+      "summary": "Leadership Change signal detected at Dig. DIG INN NAMES DYLAN MENDELSOHN AS CULINARY DIRECTOR, WITH NEW MENU DEBUTING THIS FALL - PR Newswire. DIG INN NAMES DYLAN MENDELSOHN AS CULINARY DIRECTOR, WITH NEW MENU DEBUTING THIS FALL - PR Newswire. Recommended action: act_today.",
+      "risk": "yellow",
+      "confidence": {
+        "level": "medium"
+      },
+      "sources": [
+        "sig-2026-09-28-brand-dig-leadership_change"
+      ],
+      "updated_at": "2026-10-04T09:13:47.184073Z"
+    },
+    {
+      "id": "asm-2026-10-01-brand-wildfire-funding-event",
+      "entity_id": "brand-wildfire",
+      "assessment_type": "activation_candidate",
+      "summary": "Funding Event signal detected at Wildfire. Magnolia Oil & Gas Provides Interim Financial and Operations Update After Closing the Acquisition of WildFire Energy - Business Wire. Magnolia Oil & Gas Provides Interim Financial and Operations Updat. Recommended action: monitor.",
+      "risk": "yellow",
+      "confidence": {
+        "level": "medium"
+      },
+      "sources": [
+        "sig-2026-10-01-brand-wildfire-funding_event"
+      ],
+      "updated_at": "2026-10-05T09:15:06.219987Z"
+    },
+    {
+      "id": "asm-2022-04-04-brand-friendly-s-leadership-change",
+      "entity_id": "brand-friendly-s",
+      "assessment_type": "activation_candidate",
+      "summary": "Leadership Change signal detected at Friendly's. Friendly's Restaurants Introduces a Dozen Delicious New Menu Items - PR Newswire. Friendly's Restaurants Introduces a Dozen Delicious New Menu Items - PR Newswire. Recommended action: act_today.",
+      "risk": "yellow",
+      "confidence": {
+        "level": "medium"
+      },
+      "sources": [
+        "sig-2022-04-04-brand-friendly-s-leadership_change"
+      ],
+      "updated_at": "2026-10-06T09:15:04.370828Z"
     }
   ],
   "sources": [
@@ -436338,6 +436875,83 @@
       "path": null,
       "published_at": "2022-06-29",
       "captured_at": "2026-10-02T09:16:26.402323Z",
+      "quality": "medium",
+      "notes": "Signal matched via daily brief ecosystem scan."
+    },
+    {
+      "id": "src-press-wire-2021-03-30",
+      "source_type": "public_company_primary",
+      "title": "Press Wire",
+      "url": null,
+      "path": null,
+      "published_at": "2021-03-30",
+      "captured_at": "2026-10-03T09:13:37.534480Z",
+      "quality": "medium",
+      "notes": "Signal matched via daily brief ecosystem scan."
+    },
+    {
+      "id": "src-press-wire-2026-09-30",
+      "source_type": "public_company_primary",
+      "title": "Press Wire",
+      "url": null,
+      "path": null,
+      "published_at": "2026-09-30",
+      "captured_at": "2026-10-03T09:16:22.753237Z",
+      "quality": "medium",
+      "notes": "Signal matched via daily brief ecosystem scan."
+    },
+    {
+      "id": "src-press-wire-2024-04-15",
+      "source_type": "public_company_primary",
+      "title": "Press Wire",
+      "url": null,
+      "path": null,
+      "published_at": "2024-04-15",
+      "captured_at": "2026-10-04T09:12:16.201047Z",
+      "quality": "medium",
+      "notes": "Signal matched via daily brief ecosystem scan."
+    },
+    {
+      "id": "src-press-wire-2026-09-28",
+      "source_type": "public_company_primary",
+      "title": "Press Wire",
+      "url": null,
+      "path": null,
+      "published_at": "2026-09-28",
+      "captured_at": "2026-10-04T09:13:47.184033Z",
+      "quality": "medium",
+      "notes": "Signal matched via daily brief ecosystem scan."
+    },
+    {
+      "id": "src-press-wire-2026-10-01",
+      "source_type": "public_company_primary",
+      "title": "Press Wire",
+      "url": null,
+      "path": null,
+      "published_at": "2026-10-01",
+      "captured_at": "2026-10-05T09:15:06.219946Z",
+      "quality": "medium",
+      "notes": "Signal matched via daily brief ecosystem scan."
+    },
+    {
+      "id": "src-press-wire-2026-09-29",
+      "source_type": "public_company_primary",
+      "title": "Press Wire",
+      "url": null,
+      "path": null,
+      "published_at": "2026-09-29",
+      "captured_at": "2026-10-05T09:15:26.416894Z",
+      "quality": "medium",
+      "notes": "Signal matched via daily brief ecosystem scan."
+    },
+    {
+      "id": "src-press-wire-2026-09-07",
+      "source_type": "public_company_primary",
+      "title": "Press Wire",
+      "url": null,
+      "path": null,
+      "published_at": "2026-09-07",
+      "captured_at": "2026-10-05T09:15:26.417225Z",
       "quality": "medium",
       "notes": "Signal matched via daily brief ecosystem scan."
     }

@@ -41,9 +41,9 @@
     "last_reviewed_by": null
   },
   "last_evidence_date": "2026-09-28",
-  "last_synced_at": "2026-10-02T09:47:02Z",
+  "last_synced_at": "2026-10-06T09:22:10Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:47:02Z",
+  "updated_at": "2026-10-06T09:22:10Z",
   "latest_cos_commentary": {
     "headline": "New funding may accelerate invoice, inventory and restaurant AI competition with Genius Back Office.",
     "genius_exposure": "New funding may accelerate invoice, inventory and restaurant AI competition with Genius Back Office.",
@@ -75,5 +75,16 @@
         "Operator ROI evidence"
       ]
     }
+  },
+  "synthesis": {
+    "bottom_line": "MarginEdge poses a moderate competitive threat with its recent $80M Series D funding and a significant scale of operations, processing ~$28B in purchasing across 13,000+ restaurants. However, the lack of confirmed customer accounts limits immediate concern; the team should monitor their growth closely and consider strategic responses as they expand.",
+    "themes": [
+      "MarginEdge's recent funding and expansion plans indicate a strong push to enhance their restaurant operations platform, which could attract more customers.",
+      "With over 13,000 restaurants and extensive purchasing data, MarginEdge has a substantial market presence that could challenge our position in the mid-market segment.",
+      "Their focus on invoice automation and AI-driven cost management tools aligns with current industry trends, making them a relevant competitor for tech-savvy restaurant operators.",
+      "The absence of confirmed customer accounts suggests that while they are growing, their immediate impact may be limited, allowing us time to strategize.",
+      "MarginEdge's advantages in fresh capital and data could lead to innovative product developments that we need to be prepared for."
+    ],
+    "generated_at": "2026-10-02T21:11:48Z"
   }
 }

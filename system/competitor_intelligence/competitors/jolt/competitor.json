@@ -29,9 +29,9 @@
     "last_reviewed_by": null
   },
   "last_evidence_date": "2026-09-28",
-  "last_synced_at": "2026-10-02T09:47:04Z",
+  "last_synced_at": "2026-10-06T09:22:12Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:47:04Z",
+  "updated_at": "2026-10-06T09:22:12Z",
   "latest_cos_commentary": {
     "headline": "Operations execution and food safety may occupy the kitchen workflow without replacing KDS.",
     "genius_exposure": "Operations execution and food safety may occupy the kitchen workflow without replacing KDS.",
@@ -68,5 +68,16 @@
         "Operator ROI evidence"
       ]
     }
+  },
+  "synthesis": {
+    "bottom_line": "Currently, Jolt poses a limited competitive threat due to its unconfirmed accounts and narrow scope of operations primarily focused on kitchen management rather than direct competition with Genius. The team should monitor Jolt's developments closely, especially following its acquisition by Digi International, but immediate action is not necessary.",
+    "themes": [
+      "Jolt's recent acquisition by Digi International could enhance its capabilities and market reach, warranting close observation.",
+      "The confirmed accounts for Jolt are limited to franchisee-level relationships, indicating a lack of widespread adoption that reduces immediate competitive pressure.",
+      "Jolt's focus on kitchen operations and compliance tools suggests a different market segment than Genius, which may allow for differentiated strategies.",
+      "The digitization of food-safety checklists and logs indicates Jolt's commitment to operational efficiency, which could appeal to certain restaurant segments.",
+      "The low overlap with Genius's Drive Thru Director suggests that while Jolt is a player in the restaurant tech space, it may not directly compete with Genius's core offerings."
+    ],
+    "generated_at": "2026-10-02T21:12:07Z"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30",
+  "generated_at": "2026-10-02",
   "window_days": 30,
   "trends": [
     {
@@ -9,11 +9,11 @@
       "sector": "restaurant_technology",
       "direction": "Established",
       "confidence": "high",
-      "recent_count": 260,
-      "prior_count": 254,
+      "recent_count": 256,
+      "prior_count": 282,
       "qualitative_evidence_count": 0,
       "note": "This window's volume is entirely public-market price/volume monitoring -- no qualitative news or strategic developments reported for this category in the last 30 days.",
-      "rationale": "260 signal(s) in the last 30 days vs. 254 in the prior 30 days (+2%), which is why this is classified \"Established.\" None of that volume is qualitative news -- every signal behind this count is public-market price/volume monitoring. Treat the direction and confidence above as market-activity-only, not a confirmed strategic trend.",
+      "rationale": "256 signal(s) in the last 30 days vs. 282 in the prior 30 days (-9%), which is why this is classified \"Established.\" None of that volume is qualitative news -- every signal behind this count is public-market price/volume monitoring. Treat the direction and confidence above as market-activity-only, not a confirmed strategic trend.",
       "window_days": 30,
       "companies": [
         "Papa Johns International Inc",
@@ -22,88 +22,88 @@
         "Oracle Corp",
         "Portillo's Inc.",
         "Kura Sushi USA, Inc.",
-        "NCR Voyix",
-        "Sweetgreen, Inc."
+        "Sweetgreen, Inc.",
+        "NCR Voyix"
       ],
       "evidence": [
         {
-          "headline": "[📈 PRICE MOVE] NCR Voyix (VYX) ↓3.1% — possible undisclosed event",
-          "source": "Price Watch (VYX)",
-          "published_date": "2026-09-29",
-          "summary": "NCR Voyix (VYX) moved -3.1% today ($6.83 → $6.62). No confirmed news source — may indicate undisclosed event.",
-          "why_it_matters_to_gp": "NCR Voyix (VYX) moved -3.1% today ($6.83 → $6.62). No confirmed news source — may indicate undisclosed event.",
+          "headline": "8-K  - Current report",
+          "source": "SEC EDGAR (TOST)",
+          "published_date": "2026-10-01",
+          "summary": "8-K  - Current report. Material event filed with SEC. Review for vendor impact, leadership changes, or strategic shifts.",
+          "why_it_matters_to_gp": "Toast material event — monitor for vendor relationship impact.",
           "companies": [
-            "NCR Voyix"
+            "Toast"
           ],
           "category": "pos",
           "side": "vendor_supply",
           "gp_relevance": "high",
-          "source_link": "https://finance.yahoo.com/quote/VYX",
-          "signal_type": "price_move"
+          "source_link": "https://www.sec.gov/Archives/edgar/data/1650164/000165016426000191/0001650164-26-000191-index.htm",
+          "signal_type": "material_event"
         },
         {
-          "headline": "[📊 VOLUME SPIKE] Dine Brands (DIN) 2.7x normal volume — elevated activity",
-          "source": "Price Watch (DIN)",
-          "published_date": "2026-09-29",
-          "summary": "Dine Brands (DIN) trading 2.7x normal volume today ($1,135,700 shares vs 418,535 20-day avg) with -2.5% price move. Elevated activity without confirmed news.",
-          "why_it_matters_to_gp": "Dine Brands (DIN) trading 2.7x normal volume today ($1,135,700 shares vs 418,535 20-day avg) with -2.5% price move. Elevated activity without confirmed news.",
+          "headline": "[📈 PRICE MOVE] PAR Technology (PAR) ↑4.6% — possible undisclosed event",
+          "source": "Price Watch (PAR)",
+          "published_date": "2026-10-01",
+          "summary": "PAR Technology (PAR) moved +4.6% today ($13.76 → $14.39). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "PAR Technology (PAR) moved +4.6% today ($13.76 → $14.39). No confirmed news source — may indicate undisclosed event.",
           "companies": [
-            "Dine Brands"
-          ],
-          "category": "pos",
-          "side": "operator_demand",
-          "gp_relevance": "high",
-          "source_link": "https://finance.yahoo.com/quote/DIN",
-          "signal_type": "volume_spike"
-        },
-        {
-          "headline": "[📈 PRICE MOVE] Oracle Corp (ORCL) ↑3.9% — possible undisclosed event",
-          "source": "Price Watch (ORCL)",
-          "published_date": "2026-09-29",
-          "summary": "Oracle Corp (ORCL) moved +3.9% today ($132.60 → $137.79). No confirmed news source — may indicate undisclosed event.",
-          "why_it_matters_to_gp": "Oracle Corp (ORCL) moved +3.9% today ($132.60 → $137.79). No confirmed news source — may indicate undisclosed event.",
-          "companies": [
-            "Oracle Corp"
+            "PAR Technology"
           ],
           "category": "pos",
           "side": "vendor_supply",
           "gp_relevance": "high",
-          "source_link": "https://finance.yahoo.com/quote/ORCL",
+          "source_link": "https://finance.yahoo.com/quote/PAR",
           "signal_type": "price_move"
         },
         {
-          "headline": "[📈 PRICE MOVE] Domino's Pizza Inc (DPZ) ↑3.3% — possible undisclosed event",
-          "source": "Price Watch (DPZ)",
-          "published_date": "2026-09-29",
-          "summary": "Domino's Pizza Inc (DPZ) moved +3.3% today ($292.27 → $301.81). No confirmed news source — may indicate undisclosed event.",
-          "why_it_matters_to_gp": "Domino's Pizza Inc (DPZ) moved +3.3% today ($292.27 → $301.81). No confirmed news source — may indicate undisclosed event.",
+          "headline": "[🔻 52W LOW] Wendy's Co (WEN) near 52-week low — distress or M&A signal",
+          "source": "Price Watch (WEN)",
+          "published_date": "2026-10-01",
+          "summary": "Wendy's Co (WEN) at $6.25, within 2.2% of 52-week low ($6.12). Possible distress, leadership instability, or acquisition target positioning.",
+          "why_it_matters_to_gp": "Wendy's Co (WEN) at $6.25, within 2.2% of 52-week low ($6.12). Possible distress, leadership instability, or acquisition target positioning.",
           "companies": [
-            "Domino's Pizza Inc"
+            "Wendy's Co"
           ],
           "category": "pos",
           "side": "operator_demand",
           "gp_relevance": "high",
-          "source_link": "https://finance.yahoo.com/quote/DPZ",
-          "signal_type": "price_move"
-        },
-        {
-          "headline": "[🔻 52W LOW] Texas Roadhouse, Inc. (TXRH) near 52-week low — distress or M&A signal",
-          "source": "Price Watch (TXRH)",
-          "published_date": "2026-09-29",
-          "summary": "Texas Roadhouse, Inc. (TXRH) at $157.21, within 1.7% of 52-week low ($154.62). Possible distress, leadership instability, or acquisition target positioning.",
-          "why_it_matters_to_gp": "Texas Roadhouse, Inc. (TXRH) at $157.21, within 1.7% of 52-week low ($154.62). Possible distress, leadership instability, or acquisition target positioning.",
-          "companies": [
-            "Texas Roadhouse, Inc."
-          ],
-          "category": "pos",
-          "side": "operator_demand",
-          "gp_relevance": "high",
-          "source_link": "https://finance.yahoo.com/quote/TXRH",
+          "source_link": "https://finance.yahoo.com/quote/WEN",
           "signal_type": "52w_low"
+        },
+        {
+          "headline": "[📈 PRICE MOVE] Bloomin' Brands, Inc. (BLMN) ↑8.1% — possible undisclosed event",
+          "source": "Price Watch (BLMN)",
+          "published_date": "2026-10-01",
+          "summary": "Bloomin' Brands, Inc. (BLMN) moved +8.1% today ($7.75 → $8.38). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "Bloomin' Brands, Inc. (BLMN) moved +8.1% today ($7.75 → $8.38). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "Bloomin' Brands, Inc."
+          ],
+          "category": "pos",
+          "side": "operator_demand",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/BLMN",
+          "signal_type": "price_move"
+        },
+        {
+          "headline": "[📊 VOLUME SPIKE] Bloomin' Brands, Inc. (BLMN) 2.9x normal volume — elevated activity",
+          "source": "Price Watch (BLMN)",
+          "published_date": "2026-10-01",
+          "summary": "Bloomin' Brands, Inc. (BLMN) trading 2.9x normal volume today ($6,567,200 shares vs 2,293,825 20-day avg) with +8.1% price move. Elevated activity without confirmed news.",
+          "why_it_matters_to_gp": "Bloomin' Brands, Inc. (BLMN) trading 2.9x normal volume today ($6,567,200 shares vs 2,293,825 20-day avg) with +8.1% price move. Elevated activity without confirmed news.",
+          "companies": [
+            "Bloomin' Brands, Inc."
+          ],
+          "category": "pos",
+          "side": "operator_demand",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/BLMN",
+          "signal_type": "volume_spike"
         }
       ],
       "first_observed": "2026-04-15",
-      "last_updated": "2026-09-30"
+      "last_updated": "2026-10-02"
     },
     {
       "trend_id": "trend-restaurant_ai",
@@ -112,11 +112,11 @@
       "sector": "restaurant_technology",
       "direction": "Established",
       "confidence": "high",
-      "recent_count": 48,
-      "prior_count": 48,
+      "recent_count": 50,
+      "prior_count": 51,
       "qualitative_evidence_count": 0,
       "note": "This window's volume is entirely public-market price/volume monitoring -- no qualitative news or strategic developments reported for this category in the last 30 days.",
-      "rationale": "48 signal(s) in the last 30 days vs. 48 in the prior 30 days (+0%), which is why this is classified \"Established.\" None of that volume is qualitative news -- every signal behind this count is public-market price/volume monitoring. Treat the direction and confidence above as market-activity-only, not a confirmed strategic trend.",
+      "rationale": "50 signal(s) in the last 30 days vs. 51 in the prior 30 days (-2%), which is why this is classified \"Established.\" None of that volume is qualitative news -- every signal behind this count is public-market price/volume monitoring. Treat the direction and confidence above as market-activity-only, not a confirmed strategic trend.",
       "window_days": 30,
       "companies": [
         "McDonald's",
@@ -129,9 +129,9 @@
         {
           "headline": "[🔻 52W LOW] McDonald's (MCD) near 52-week low — distress or M&A signal",
           "source": "Price Watch (MCD)",
-          "published_date": "2026-09-29",
-          "summary": "McDonald's (MCD) at $233.98, within 0.2% of 52-week low ($233.60). Possible distress, leadership instability, or acquisition target positioning.",
-          "why_it_matters_to_gp": "McDonald's (MCD) at $233.98, within 0.2% of 52-week low ($233.60). Possible distress, leadership instability, or acquisition target positioning.",
+          "published_date": "2026-10-01",
+          "summary": "McDonald's (MCD) at $231.83, within 0.4% of 52-week low ($230.94). Possible distress, leadership instability, or acquisition target positioning.",
+          "why_it_matters_to_gp": "McDonald's (MCD) at $231.83, within 0.4% of 52-week low ($230.94). Possible distress, leadership instability, or acquisition target positioning.",
           "companies": [
             "McDonald's"
           ],
@@ -144,9 +144,9 @@
         {
           "headline": "[🔻 52W LOW] Yum Brands (YUM) near 52-week low — distress or M&A signal",
           "source": "Price Watch (YUM)",
-          "published_date": "2026-09-29",
-          "summary": "Yum Brands (YUM) at $137.73, within 1.6% of 52-week low ($135.58). Possible distress, leadership instability, or acquisition target positioning.",
-          "why_it_matters_to_gp": "Yum Brands (YUM) at $137.73, within 1.6% of 52-week low ($135.58). Possible distress, leadership instability, or acquisition target positioning.",
+          "published_date": "2026-10-01",
+          "summary": "Yum Brands (YUM) at $136.69, within 0.8% of 52-week low ($135.58). Possible distress, leadership instability, or acquisition target positioning.",
+          "why_it_matters_to_gp": "Yum Brands (YUM) at $136.69, within 0.8% of 52-week low ($135.58). Possible distress, leadership instability, or acquisition target positioning.",
           "companies": [
             "Yum Brands"
           ],
@@ -155,6 +155,21 @@
           "gp_relevance": "high",
           "source_link": "https://finance.yahoo.com/quote/YUM",
           "signal_type": "52w_low"
+        },
+        {
+          "headline": "[📈 PRICE MOVE] Cerence Inc. (CRNC) ↑3.4% — possible undisclosed event",
+          "source": "Price Watch (CRNC)",
+          "published_date": "2026-10-01",
+          "summary": "Cerence Inc. (CRNC) moved +3.4% today ($7.83 → $8.10). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "Cerence Inc. (CRNC) moved +3.4% today ($7.83 → $8.10). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "Cerence Inc."
+          ],
+          "category": "restaurant_ai",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/CRNC",
+          "signal_type": "price_move"
         },
         {
           "headline": "8-K  - Current report",
@@ -185,25 +200,107 @@
           "gp_relevance": "high",
           "source_link": "https://finance.yahoo.com/quote/MCD",
           "signal_type": "price_move"
-        },
-        {
-          "headline": "[📊 VOLUME SPIKE] McDonald's (MCD) 3.3x normal volume — elevated activity",
-          "source": "Price Watch (MCD)",
-          "published_date": "2026-09-23",
-          "summary": "McDonald's (MCD) trading 3.3x normal volume today ($16,576,600 shares vs 4,956,165 20-day avg) with -4.8% price move. Elevated activity without confirmed news.",
-          "why_it_matters_to_gp": "McDonald's (MCD) trading 3.3x normal volume today ($16,576,600 shares vs 4,956,165 20-day avg) with -4.8% price move. Elevated activity without confirmed news.",
-          "companies": [
-            "McDonald's"
-          ],
-          "category": "restaurant_ai",
-          "side": "operator_demand",
-          "gp_relevance": "high",
-          "source_link": "https://finance.yahoo.com/quote/MCD",
-          "signal_type": "volume_spike"
         }
       ],
       "first_observed": "2026-03-31",
-      "last_updated": "2026-09-30"
+      "last_updated": "2026-10-02"
+    },
+    {
+      "trend_id": "trend-online_ordering",
+      "category": "online_ordering",
+      "name": "Online Ordering Evolution",
+      "sector": "restaurant_technology",
+      "direction": "Fading",
+      "confidence": "medium",
+      "recent_count": 11,
+      "prior_count": 16,
+      "qualitative_evidence_count": 0,
+      "note": "This window's volume is entirely public-market price/volume monitoring -- no qualitative news or strategic developments reported for this category in the last 30 days.",
+      "rationale": "11 signal(s) in the last 30 days vs. 16 in the prior 30 days (-31%), which is why this is classified \"Fading.\" None of that volume is qualitative news -- every signal behind this count is public-market price/volume monitoring. Treat the direction and confidence above as market-activity-only, not a confirmed strategic trend.",
+      "window_days": 30,
+      "companies": [
+        "DoorDash, Inc.",
+        "Uber Technologies, Inc."
+      ],
+      "evidence": [
+        {
+          "headline": "[🔻 52W LOW] Uber Technologies, Inc. (UBER) near 52-week low — distress or M&A signal",
+          "source": "Price Watch (UBER)",
+          "published_date": "2026-10-01",
+          "summary": "Uber Technologies, Inc. (UBER) at $67.88, within 2.9% of 52-week low ($65.94). Possible distress, leadership instability, or acquisition target positioning.",
+          "why_it_matters_to_gp": "Uber Technologies, Inc. (UBER) at $67.88, within 2.9% of 52-week low ($65.94). Possible distress, leadership instability, or acquisition target positioning.",
+          "companies": [
+            "Uber Technologies, Inc."
+          ],
+          "category": "online_ordering",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/UBER",
+          "signal_type": "52w_low"
+        },
+        {
+          "headline": "[📈 PRICE MOVE] DoorDash, Inc. (DASH) ↑4.9% — possible undisclosed event",
+          "source": "Price Watch (DASH)",
+          "published_date": "2026-09-29",
+          "summary": "DoorDash, Inc. (DASH) moved +4.9% today ($178.39 → $187.10). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "DoorDash, Inc. (DASH) moved +4.9% today ($178.39 → $187.10). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "DoorDash, Inc."
+          ],
+          "category": "online_ordering",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/DASH",
+          "signal_type": "price_move"
+        },
+        {
+          "headline": "[📈 PRICE MOVE] DoorDash, Inc. (DASH) ↓7.7% — possible undisclosed event",
+          "source": "Price Watch (DASH)",
+          "published_date": "2026-09-28",
+          "summary": "DoorDash, Inc. (DASH) moved -7.7% today ($193.36 → $178.39). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "DoorDash, Inc. (DASH) moved -7.7% today ($193.36 → $178.39). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "DoorDash, Inc."
+          ],
+          "category": "online_ordering",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/DASH",
+          "signal_type": "price_move"
+        },
+        {
+          "headline": "[📊 VOLUME SPIKE] DoorDash, Inc. (DASH) 1.8x normal volume — elevated activity",
+          "source": "Price Watch (DASH)",
+          "published_date": "2026-09-28",
+          "summary": "DoorDash, Inc. (DASH) trading 1.8x normal volume today ($6,847,900 shares vs 3,912,555 20-day avg) with -7.7% price move. Elevated activity without confirmed news.",
+          "why_it_matters_to_gp": "DoorDash, Inc. (DASH) trading 1.8x normal volume today ($6,847,900 shares vs 3,912,555 20-day avg) with -7.7% price move. Elevated activity without confirmed news.",
+          "companies": [
+            "DoorDash, Inc."
+          ],
+          "category": "online_ordering",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/DASH",
+          "signal_type": "volume_spike"
+        },
+        {
+          "headline": "[📈 PRICE MOVE] DoorDash, Inc. (DASH) ↑3.1% — possible undisclosed event",
+          "source": "Price Watch (DASH)",
+          "published_date": "2026-09-25",
+          "summary": "DoorDash, Inc. (DASH) moved +3.1% today ($187.53 → $193.36). No confirmed news source — may indicate undisclosed event.",
+          "why_it_matters_to_gp": "DoorDash, Inc. (DASH) moved +3.1% today ($187.53 → $193.36). No confirmed news source — may indicate undisclosed event.",
+          "companies": [
+            "DoorDash, Inc."
+          ],
+          "category": "online_ordering",
+          "side": "vendor_supply",
+          "gp_relevance": "high",
+          "source_link": "https://finance.yahoo.com/quote/DASH",
+          "signal_type": "price_move"
+        }
+      ],
+      "first_observed": "2026-05-06",
+      "last_updated": "2026-10-02"
     },
     {
       "trend_id": "trend-payments",
@@ -212,11 +309,11 @@
       "sector": "restaurant_technology",
       "direction": "Fading",
       "confidence": "medium",
-      "recent_count": 13,
-      "prior_count": 27,
+      "recent_count": 10,
+      "prior_count": 30,
       "qualitative_evidence_count": 0,
       "note": "This window's volume is entirely public-market price/volume monitoring -- no qualitative news or strategic developments reported for this category in the last 30 days.",
-      "rationale": "13 signal(s) in the last 30 days vs. 27 in the prior 30 days (-52%), which is why this is classified \"Fading.\" None of that volume is qualitative news -- every signal behind this count is public-market price/volume monitoring. Treat the direction and confidence above as market-activity-only, not a confirmed strategic trend.",
+      "rationale": "10 signal(s) in the last 30 days vs. 30 in the prior 30 days (-67%), which is why this is classified \"Fading.\" None of that volume is qualitative news -- every signal behind this count is public-market price/volume monitoring. Treat the direction and confidence above as market-activity-only, not a confirmed strategic trend.",
       "window_days": 30,
       "companies": [
         "Block, Inc.",
@@ -300,104 +397,7 @@
         }
       ],
       "first_observed": "2026-05-04",
-      "last_updated": "2026-09-30"
-    },
-    {
-      "trend_id": "trend-online_ordering",
-      "category": "online_ordering",
-      "name": "Online Ordering Evolution",
-      "sector": "restaurant_technology",
-      "direction": "Fading",
-      "confidence": "medium",
-      "recent_count": 10,
-      "prior_count": 16,
-      "qualitative_evidence_count": 0,
-      "note": "This window's volume is entirely public-market price/volume monitoring -- no qualitative news or strategic developments reported for this category in the last 30 days.",
-      "rationale": "10 signal(s) in the last 30 days vs. 16 in the prior 30 days (-38%), which is why this is classified \"Fading.\" None of that volume is qualitative news -- every signal behind this count is public-market price/volume monitoring. Treat the direction and confidence above as market-activity-only, not a confirmed strategic trend.",
-      "window_days": 30,
-      "companies": [
-        "DoorDash, Inc.",
-        "Uber Technologies, Inc."
-      ],
-      "evidence": [
-        {
-          "headline": "[📈 PRICE MOVE] DoorDash, Inc. (DASH) ↑4.9% — possible undisclosed event",
-          "source": "Price Watch (DASH)",
-          "published_date": "2026-09-29",
-          "summary": "DoorDash, Inc. (DASH) moved +4.9% today ($178.39 → $187.10). No confirmed news source — may indicate undisclosed event.",
-          "why_it_matters_to_gp": "DoorDash, Inc. (DASH) moved +4.9% today ($178.39 → $187.10). No confirmed news source — may indicate undisclosed event.",
-          "companies": [
-            "DoorDash, Inc."
-          ],
-          "category": "online_ordering",
-          "side": "vendor_supply",
-          "gp_relevance": "high",
-          "source_link": "https://finance.yahoo.com/quote/DASH",
-          "signal_type": "price_move"
-        },
-        {
-          "headline": "[📈 PRICE MOVE] DoorDash, Inc. (DASH) ↓7.7% — possible undisclosed event",
-          "source": "Price Watch (DASH)",
-          "published_date": "2026-09-28",
-          "summary": "DoorDash, Inc. (DASH) moved -7.7% today ($193.36 → $178.39). No confirmed news source — may indicate undisclosed event.",
-          "why_it_matters_to_gp": "DoorDash, Inc. (DASH) moved -7.7% today ($193.36 → $178.39). No confirmed news source — may indicate undisclosed event.",
-          "companies": [
-            "DoorDash, Inc."
-          ],
-          "category": "online_ordering",
-          "side": "vendor_supply",
-          "gp_relevance": "high",
-          "source_link": "https://finance.yahoo.com/quote/DASH",
-          "signal_type": "price_move"
-        },
-        {
-          "headline": "[📊 VOLUME SPIKE] DoorDash, Inc. (DASH) 1.8x normal volume — elevated activity",
-          "source": "Price Watch (DASH)",
-          "published_date": "2026-09-28",
-          "summary": "DoorDash, Inc. (DASH) trading 1.8x normal volume today ($6,847,900 shares vs 3,912,555 20-day avg) with -7.7% price move. Elevated activity without confirmed news.",
-          "why_it_matters_to_gp": "DoorDash, Inc. (DASH) trading 1.8x normal volume today ($6,847,900 shares vs 3,912,555 20-day avg) with -7.7% price move. Elevated activity without confirmed news.",
-          "companies": [
-            "DoorDash, Inc."
-          ],
-          "category": "online_ordering",
-          "side": "vendor_supply",
-          "gp_relevance": "high",
-          "source_link": "https://finance.yahoo.com/quote/DASH",
-          "signal_type": "volume_spike"
-        },
-        {
-          "headline": "[📈 PRICE MOVE] DoorDash, Inc. (DASH) ↑3.1% — possible undisclosed event",
-          "source": "Price Watch (DASH)",
-          "published_date": "2026-09-25",
-          "summary": "DoorDash, Inc. (DASH) moved +3.1% today ($187.53 → $193.36). No confirmed news source — may indicate undisclosed event.",
-          "why_it_matters_to_gp": "DoorDash, Inc. (DASH) moved +3.1% today ($187.53 → $193.36). No confirmed news source — may indicate undisclosed event.",
-          "companies": [
-            "DoorDash, Inc."
-          ],
-          "category": "online_ordering",
-          "side": "vendor_supply",
-          "gp_relevance": "high",
-          "source_link": "https://finance.yahoo.com/quote/DASH",
-          "signal_type": "price_move"
-        },
-        {
-          "headline": "[📊 VOLUME SPIKE] Uber Technologies, Inc. (UBER) 2.3x normal volume — elevated activity",
-          "source": "Price Watch (UBER)",
-          "published_date": "2026-09-10",
-          "summary": "Uber Technologies, Inc. (UBER) trading 2.3x normal volume today ($35,320,100 shares vs 15,561,400 20-day avg) with +2.1% price move. Elevated activity without confirmed news.",
-          "why_it_matters_to_gp": "Uber Technologies, Inc. (UBER) trading 2.3x normal volume today ($35,320,100 shares vs 15,561,400 20-day avg) with +2.1% price move. Elevated activity without confirmed news.",
-          "companies": [
-            "Uber Technologies, Inc."
-          ],
-          "category": "online_ordering",
-          "side": "vendor_supply",
-          "gp_relevance": "high",
-          "source_link": "https://finance.yahoo.com/quote/UBER",
-          "signal_type": "volume_spike"
-        }
-      ],
-      "first_observed": "2026-05-06",
-      "last_updated": "2026-09-30"
+      "last_updated": "2026-10-02"
     },
     {
       "trend_id": "trend-operator_expansion",
@@ -433,7 +433,7 @@
         }
       ],
       "first_observed": "2026-07-01",
-      "last_updated": "2026-09-30"
+      "last_updated": "2026-10-02"
     }
   ]
 }

@@ -107,6 +107,8 @@ VALID_EVIDENCE_CATEGORIES = {
     "positioning", "strength", "weakness", "pricing", "market_share",
     "reference_customer", "customer_win", "customer_loss", "pov",
     "ecosystem_signal", "other",
+    # 2026-10-02, top-10-per-category competitor Hunter cycle:
+    "features", "customer_feedback_testimonials", "value_statement",
 }
 
 # Genius's own product lines, per Global Payments' own positioning (POS,
@@ -249,10 +251,29 @@ def render_category_battle_card_body(card: dict) -> list[str]:
 # through the same research pipeline. `product_lineage` (acquisitions,
 # rebrands, prior names) is likewise its own list rather than overloaded
 # onto `products` or `recent_news`.
+#
+# "features" and "customer_feedback_testimonials" (2026-10-02, top-10-per-
+# category competitor Hunter cycle): `products` names what a vendor sells;
+# `features` is the granular, per-capability claim level underneath it
+# (e.g. "real-time kitchen display routing" as a discrete, independently
+# dated finding, not folded into one product-name string). `key_customers`
+# names who uses a product; `customer_feedback_testimonials` is what those
+# customers (or independent reviewers) actually said about it -- a quote
+# or review finding, never a vendor's own marketing copy relabeled as
+# feedback (that stays `vendor_claims`).
 EXTENDED_PROFILE_FIELDS = (
     "products", "strengths", "weaknesses", "vulnerabilities", "key_customers",
-    "recent_news", "vendor_claims", "product_lineage",
+    "recent_news", "vendor_claims", "product_lineage", "features",
+    "customer_feedback_testimonials",
 )
+
+# Scalar (single synthesized-prose value, not a list) extended-profile
+# fields -- parallel to `trends`. "value_statement" (2026-10-02) is the
+# vendor's own current how-they-pitch-themselves summary, distinct from
+# `positioning_summary` (RBB's own synthesis of independent market
+# positioning) the same way `vendor_claims` stays distinct from
+# `strengths`.
+EXTENDED_SCALAR_FIELDS = ("trends", "value_statement")
 
 
 def extended_field(
@@ -338,7 +359,13 @@ def _empty_competitor_json(slug: str, display_name: str, vendor_entity_id: str |
         "recent_news": [],
         "vendor_claims": [],
         "product_lineage": [],
+        "features": [],
+        "customer_feedback_testimonials": [],
         "trends": {
+            "value": None, "status": "not_yet_researched", "evidence_ids": [],
+            "confidence": "unknown", "as_of": None, "scope": "competitor", "last_reviewed_by": None,
+        },
+        "value_statement": {
             "value": None, "status": "not_yet_researched", "evidence_ids": [],
             "confidence": "unknown", "as_of": None, "scope": "competitor", "last_reviewed_by": None,
         },
@@ -359,10 +386,14 @@ def _empty_competitor_json(slug: str, display_name: str, vendor_entity_id: str |
 # public, and pass through. "vendor_claims" (the vendor's own public
 # marketing statements) and "product_lineage" (acquisitions/rebrands/prior
 # names) are the same kind of already-public market fact -- added
-# RB-DEFECT-073, 2026-09-28.
+# RB-DEFECT-073, 2026-09-28. "features", "customer_feedback_testimonials",
+# and "value_statement" (2026-10-02) are likewise already-public market
+# facts (granular capability claims, customer quotes/reviews, and the
+# vendor's own public pitch) and pass through the same way.
 _SHAREABLE_EXTENDED_FIELDS = (
     "products", "strengths", "key_customers", "recent_news", "trends",
-    "vendor_claims", "product_lineage",
+    "vendor_claims", "product_lineage", "features",
+    "customer_feedback_testimonials", "value_statement",
 )
 
 
@@ -379,11 +410,12 @@ def get_extended_profile(competitor: dict) -> dict:
     for f in EXTENDED_PROFILE_FIELDS:
         if f not in result:
             result[f] = []
-    if "trends" not in result:
-        result["trends"] = {
-            "value": None, "status": "not_yet_researched", "evidence_ids": [],
-            "confidence": "unknown", "as_of": None, "scope": "competitor", "last_reviewed_by": None,
-        }
+    for f in EXTENDED_SCALAR_FIELDS:
+        if f not in result:
+            result[f] = {
+                "value": None, "status": "not_yet_researched", "evidence_ids": [],
+                "confidence": "unknown", "as_of": None, "scope": "competitor", "last_reviewed_by": None,
+            }
     return result
 
 

@@ -1,7 +1,15 @@
 # Coates Group — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Coates Group poses a moderate competitive threat primarily due to its entrenched relationship with McDonald's and its role as a global digital-menu-board CMS provider. The team should monitor developments closely, especially regarding any potential contract renewals or expansions in their scope with McDonald's.
+
+- Coates Group's long-standing 50-year relationship with McDonald's solidifies its position as a key player in the digital menu board space, making it a formidable competitor.
+- The recent 5-year CMS deal with McDonald's highlights Coates Group's capability to meet global digital CMS needs, which could limit opportunities for Genius in this market.
+- Recognition as a top supplier by McDonald's China indicates Coates Group's strong performance and reliability, enhancing its reputation and competitive edge.
+- The lack of confirmed accounts for other clients suggests that Coates Group's strength is heavily reliant on its relationship with McDonald's, which could be a vulnerability if that partnership changes.
+- Recent developments indicate that Coates Group is actively involved in the QSR market, particularly with digital solutions, which aligns with current industry trends.
 
 ## Where we're competing against them right now
 2 account(s) on file -- 0 confirmed, broad-scope relationship(s), 2 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

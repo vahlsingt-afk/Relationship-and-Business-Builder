@@ -1,7 +1,14 @@
 # SpotOn — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, there are no confirmed accounts of SpotOn in place, which indicates a limited immediate competitive threat. However, their recent developments, particularly in pricing and service advantages over Toast, suggest they could gain traction in the market, warranting close monitoring and potential strategic responses.
+
+- SpotOn's recent beta access to Profit AI and reported customer momentum could indicate future growth potential, making them a competitor to watch.
+- Their ability to win over Toast customers based on price and service highlights a vulnerability in the market that Genius should address.
+- The acquisition of Appetize expands SpotOn's reach into venues and enterprise, directly overlapping with Genius's offerings in sports and entertainment.
+- Despite a lack of confirmed accounts, the competitive landscape is shifting, and SpotOn's focus on independent and mid-market restaurants could pose a threat to Genius's customer base.
 
 ## Where we're competing against them right now
 *No current tech-stack relationship on file for this vendor.*

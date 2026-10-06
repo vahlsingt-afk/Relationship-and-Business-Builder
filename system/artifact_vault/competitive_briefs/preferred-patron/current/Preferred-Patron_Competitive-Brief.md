@@ -1,7 +1,13 @@
 # Preferred Patron — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Preferred Patron currently poses a limited competitive threat, primarily due to its focus on SMBs and lack of confirmed broad-scale adoption in the restaurant sector. The team should monitor their developments but can prioritize other competitors with stronger market presence.
+
+- Preferred Patron's focus on SMBs and simple pricing may attract smaller restaurant clients, but they lack enterprise-level integrations, limiting their impact on Genius's core market.
+- The recent case study for Veky’s International Cuisine indicates some activity, but one vendor-authored case study does not confirm widespread adoption.
+- Preferred Patron operates in multiple industries, which could diversify their client base, but their current restaurant presence remains unverified and limited.
 
 ## Where we're competing against them right now
 1 account(s) on file -- 0 confirmed, broad-scope relationship(s), 1 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

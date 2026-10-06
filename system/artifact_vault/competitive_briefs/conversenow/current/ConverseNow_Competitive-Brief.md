@@ -1,7 +1,15 @@
 # ConverseNow — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+ConverseNow presents a moderate competitive threat, primarily due to its recent acquisition of Valyant AI and partnerships that enhance its voice ordering capabilities. However, the lack of confirmed broad-scope deployments and the limited evidence of its effectiveness in drive-thru settings suggest that immediate action may not be necessary, but monitoring their developments closely is advisable.
+
+- ConverseNow's acquisition of Valyant AI strengthens its position in the drive-thru voice ordering market, potentially increasing its competitive edge.
+- The partnership with Deliverect enhances ConverseNow's ability to integrate voice orders into a large order management system, which could attract more restaurant clients.
+- Despite claims of being in 'thousands of locations', the actual deployment and effectiveness of ConverseNow's technology in drive-thru settings remain unverified, indicating a potential vulnerability.
+- ConverseNow's focus on phone and pizza ordering suggests a strategic strength, but its drive-thru capabilities are less proven, which may limit its overall impact.
+- The presence of franchisee-level relationships with major brands like Domino's and Jet's Pizza indicates potential growth, but the lack of confirmed brand-wide implementations raises questions about its scalability.
 
 ## Where we're competing against them right now
 5 account(s) on file -- 0 confirmed, broad-scope relationship(s), 5 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

@@ -1,7 +1,15 @@
 # CardFree — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+CardFree poses a significant competitive threat due to its recent acquisition by Fiserv and integration into Clover, enhancing its capabilities in mobile ordering and drive-thru services. The team should closely monitor developments and consider strategic responses to counter this emerging challenge, particularly in the drive-thru and mid-market segments.
+
+- CardFree's integration with Fiserv's Clover platform enhances its offerings, making it a formidable competitor in the mobile ordering and payment space.
+- The acquisition provides CardFree with a drive-thru and multi-location enterprise capability, directly threatening Genius's position in these markets.
+- Limited confirmed deployment accounts suggest that while CardFree is expanding, its current market presence may not be as extensive as it appears, warranting cautious observation.
+- The expertise behind CardFree's technology, stemming from the original Starbucks and Dunkin' apps, adds credibility and potential appeal to restaurant clients.
+- Recent developments indicate a strategic shift in the competitive landscape, necessitating proactive measures from Genius to maintain market share.
 
 ## Where we're competing against them right now
 2 account(s) on file -- 0 confirmed, broad-scope relationship(s), 2 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

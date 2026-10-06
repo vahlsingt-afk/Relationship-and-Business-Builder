@@ -47,9 +47,9 @@
     ]
   },
   "last_evidence_date": "2026-09-30",
-  "last_synced_at": "2026-10-02T09:46:55Z",
+  "last_synced_at": "2026-10-06T09:22:04Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:46:55Z",
+  "updated_at": "2026-10-06T09:22:04Z",
   "latest_cos_commentary": {
     "headline": "NCR Voyix, under CEO James G. Kelly since February 2025, claims global #1 POS software installation share and reclaimed the top spot in new restaurant POS deployments as of December 2025.",
     "genius_exposure": "Direct, large-scale competitor to Genius across pos and payments; NCR Voyix (including its Aloha POS line) is one of the largest-scale incumbents in restaurant POS globally, competing head-to-head for enterprise and multi-unit restaurant accounts.",
@@ -203,5 +203,16 @@
     }
   ],
   "key_customers": [],
-  "recent_news": []
+  "recent_news": [],
+  "synthesis": {
+    "bottom_line": "NCR Voyix presents a moderate competitive threat due to its significant installed base and claims of market leadership in new restaurant deployments. However, their recent revenue decline and operational challenges suggest vulnerabilities that Genius can exploit. The team should monitor NCR Voyix closely while emphasizing our strengths in revenue stability and hardware management.",
+    "themes": [
+      "NCR Voyix's claims of being the largest POS software supplier and leader in new restaurant deployments highlight its competitive positioning, but these claims lack independent verification.",
+      "The competitor's substantial installed base and recent expansion with Pei Wei indicate ongoing market presence, yet their shrinking revenue and operational issues present opportunities for Genius.",
+      "NCR Voyix's outsourcing of hardware production may lead to potential service delays, which Genius can leverage to highlight our superior support and installation capabilities.",
+      "The reported customer complaints about slow response times and installation problems suggest weaknesses in NCR Voyix's service delivery that Genius can capitalize on.",
+      "Despite NCR Voyix's growth in remaining contract value, their overall financial performance is declining, indicating potential instability that could affect their market position."
+    ],
+    "generated_at": "2026-10-02T21:10:17Z"
+  }
 }

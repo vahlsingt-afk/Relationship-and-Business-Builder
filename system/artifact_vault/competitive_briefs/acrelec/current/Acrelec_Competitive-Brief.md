@@ -1,7 +1,14 @@
 # Acrelec — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, there are no confirmed accounts of Acrelec's deployment in the market, which indicates a limited immediate competitive threat. However, their recent approval as a digital menu board provider for McDonald's and their extensive global installations suggest they could become a significant player if they establish a foothold in key accounts.
+
+- Acrelec's approval as a digital menu board provider for McDonald's positions them favorably in the QSR market, potentially increasing their visibility and influence.
+- The company's extensive global presence with over 120,000 installations indicates a strong operational capability that could be leveraged to expand into new markets.
+- Leadership changes at Acrelec may impact their strategic direction, presenting both risks and opportunities for competitors like Genius.
+- The lack of confirmed accounts suggests that while Acrelec has potential, they have not yet established a strong competitive presence in the immediate market.
 
 ## Where we're competing against them right now
 *No current tech-stack relationship on file for this vendor.*

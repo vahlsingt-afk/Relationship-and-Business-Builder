@@ -63,6 +63,14 @@
       "generated_for": "system:daily_refresh",
       "purpose": "competitive brief",
       "path": "system/artifact_vault/competitive_briefs/toast/current/Toast_Competitive-Brief.md",
+      "superseded": true
+    },
+    {
+      "version": 9,
+      "generated_at": "2026-10-03T09:20:26Z",
+      "generated_for": "system:daily_refresh",
+      "purpose": "competitive brief",
+      "path": "system/artifact_vault/competitive_briefs/toast/current/Toast_Competitive-Brief.md",
       "superseded": false
     }
   ]

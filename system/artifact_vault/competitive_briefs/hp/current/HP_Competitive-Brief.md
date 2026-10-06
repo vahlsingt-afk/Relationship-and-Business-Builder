@@ -1,7 +1,13 @@
 # HP — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, HP poses a limited competitive threat as there are no confirmed broad-scope accounts and their presence is primarily hardware-focused. The team should monitor HP's developments closely, particularly their new POS hardware offerings, but immediate action is not necessary given the lack of confirmed deployments.
+
+- HP's recent introduction of new POS hardware indicates a strategic push into the retail and hospitality sectors, which could impact market dynamics.
+- The lack of confirmed broad-scope accounts suggests that HP's current influence is limited, primarily serving as a hardware vendor rather than a comprehensive solutions provider.
+- HP's OS-agnostic approach may appeal to certain customers looking for flexibility, but it does not position them as a direct competitor in software or payment solutions at this time.
 
 ## Where we're competing against them right now
 1 account(s) on file -- 0 confirmed, broad-scope relationship(s), 1 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

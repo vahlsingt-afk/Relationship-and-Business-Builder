@@ -273,6 +273,49 @@ class TestConflictRoutesToReview(_IsolatedFixtureMixin):
         comp = self._toast()
         self.assertEqual(comp["trends"]["value"], "Pulling back from Europe")
 
+    def test_conflicting_undated_value_statement_requires_confirmation_no_overwrite(self):
+        """2026-10-02: value_statement must go through the exact same
+        generalized scalar dispatch as trends (_apply_competitor_scalar_
+        finding) -- this is the regression check that the trends-only
+        hardcoding was fully generalized, not just extended for trends
+        itself."""
+        compintel.add_extended_profile_finding("toast", "value_statement", "The restaurant platform built to grow with you", as_of="2026-09-01")
+        finding = _finding(field="value_statement", value="Just works", observed_at="2026-09-01")
+        result = icpr.import_findings(_sidecar([finding]), dry_run=False)
+        self.assertEqual(result["applied"], 0)
+        self.assertEqual(result["queued_for_review"], 1)
+        comp = self._toast()
+        self.assertEqual(comp["value_statement"]["value"], "The restaurant platform built to grow with you")
+
+    def test_newer_dated_value_statement_auto_applies_as_successor(self):
+        compintel.add_extended_profile_finding("toast", "value_statement", "The restaurant platform built to grow with you", as_of="2026-09-01")
+        finding = _finding(field="value_statement", value="Just works", observed_at="2026-09-20")
+        result = icpr.import_findings(_sidecar([finding]), dry_run=False)
+        self.assertEqual(result["applied"], 1)
+        comp = self._toast()
+        self.assertEqual(comp["value_statement"]["value"], "Just works")
+
+
+class TestNewListFields(_IsolatedFixtureMixin):
+    """2026-10-02: features and customer_feedback_testimonials, the two
+    new list-shaped EXTENDED_PROFILE_FIELDS for the top-10-per-category
+    competitor Hunter cycle, routed through the pre-existing generic
+    _apply_competitor_list_finding path."""
+
+    def test_features_finding_applies_as_net_new(self):
+        finding = _finding(field="features", value="Real-time kitchen display routing", finding_type="vendor_stated")
+        result = icpr.import_findings(_sidecar([finding]), dry_run=False)
+        self.assertEqual(result["applied"], 1)
+        comp = self._toast()
+        self.assertEqual(comp["features"][0]["value"], "Real-time kitchen display routing")
+
+    def test_customer_feedback_testimonial_finding_applies_as_net_new(self):
+        finding = _finding(field="customer_feedback_testimonials", value="G2 reviewer: cut ticket times by 20%")
+        result = icpr.import_findings(_sidecar([finding]), dry_run=False)
+        self.assertEqual(result["applied"], 1)
+        comp = self._toast()
+        self.assertEqual(comp["customer_feedback_testimonials"][0]["value"], "G2 reviewer: cut ticket times by 20%")
+
 
 class TestIdempotency(_IsolatedFixtureMixin):
     def test_sweep_is_idempotent_across_reruns(self):

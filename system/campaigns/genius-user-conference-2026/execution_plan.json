@@ -1,6 +1,6 @@
 {
   "campaign_id": "genius-user-conference-2026",
-  "generated_at": "2026-10-02T10:14:13+00:00",
+  "generated_at": "2026-10-06T10:14:18+00:00",
   "weeks": [
     {
       "week": 1,
@@ -107,12 +107,12 @@
         {
           "company": "Wingstop Restaurants Inc.",
           "introducer": "Lucie Tuan",
-          "reason": "LMI (DRR 59.4); works at Wingstop Restaurants Inc.; domain expertise: domain match: hospitality_foodservice."
+          "reason": "LMI (DRR 59.1); works at Wingstop Restaurants Inc.; domain expertise: domain match: hospitality_foodservice."
         },
         {
           "company": "Levy Restaurants",
-          "introducer": "Carter Witt",
-          "reason": "LMI (DRR 30.3); works at Levy Restaurants."
+          "introducer": "Aaron Rheinecker",
+          "reason": "LMI (DRR 30.0); works at Levy Restaurants."
         },
         {
           "company": "Meritage Hospitality Group",
@@ -121,8 +121,8 @@
         },
         {
           "company": "Bojangles' Restaurants, Inc.",
-          "introducer": "Corey Callaway",
-          "reason": "LMI (DRR 30.1); works at Bojangles' Restaurants, Inc.; domain expertise: domain match: hospitality_foodservice."
+          "introducer": "Brooks Speirs, CFE",
+          "reason": "LMI (DRR 30.0); works at Bojangles' Restaurants, Inc.; domain expertise: domain match: hospitality_foodservice."
         },
         {
           "company": "Popeyes Louisiana Kitchen",
@@ -142,7 +142,7 @@
         {
           "company": "Thrive Restaurant Group",
           "introducer": "\ud83d\udc27Patrick Bobrukiewicz",
-          "reason": "LKI (DRR 44.8); works at Thrive Restaurant Group; domain expertise: domain match: hospitality_foodservice, recruiting_hr."
+          "reason": "LKI (DRR 44.5); works at Thrive Restaurant Group; domain expertise: domain match: hospitality_foodservice, recruiting_hr."
         },
         {
           "company": "Cafe Rio Fresh Modern Mexican",
@@ -151,8 +151,8 @@
         },
         {
           "company": "Raising Cane's Chicken Fingers",
-          "introducer": "Dustin Turner",
-          "reason": "LMI (DRR 30.3); works at Raising Cane's Chicken Fingers; domain expertise: domain match: hospitality_foodservice."
+          "introducer": "Ben LaTour",
+          "reason": "LMI (DRR 30.0); works at Raising Cane's Chicken Fingers; domain expertise: domain match: hospitality_foodservice."
         },
         {
           "company": "JAI Restaurant Group",
@@ -172,7 +172,7 @@
         {
           "company": "Cali BBQ Media",
           "introducer": "Dean LaBay \ud83e\udd54",
-          "reason": "LMI (DRR 30.2); works at Cali BBQ Media."
+          "reason": "LMI (DRR 30.0); works at Cali BBQ Media."
         }
       ]
     },

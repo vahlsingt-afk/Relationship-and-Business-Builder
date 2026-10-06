@@ -1,7 +1,15 @@
 # Olo — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Olo presents a moderate competitive threat due to its extensive digital ordering footprint and recent developments in loyalty integration, despite many of its customer accounts being unconfirmed. The team should monitor Olo's progress closely, particularly its integration of loyalty programs, while leveraging Genius's advantages in loyalty acquisition and financial transparency to differentiate our offerings.
+
+- Olo's dominant enterprise digital-ordering footprint positions it as a significant player in the market, with ~65% of its customers already utilizing loyalty programs.
+- Recent developments, including the launch of Olo Loyalty and the integration of Spendgo, indicate Olo's commitment to enhancing customer engagement through loyalty solutions.
+- Olo's financial performance and growth trajectory, despite its recent take-private status, suggest a strong operational foundation that could pose challenges for competitors.
+- The lack of confirmed vendor roles for many of Olo's accounts highlights potential vulnerabilities in their market presence, which Genius can exploit.
+- Genius's advantages in loyalty acquisition and financial transparency provide a strategic edge that can be emphasized in our competitive positioning against Olo.
 
 ## Where we're competing against them right now
 36 account(s) on file -- 0 confirmed, broad-scope relationship(s), 36 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).

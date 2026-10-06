@@ -1,7 +1,13 @@
 # Stripe — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Currently, there is no confirmed evidence of Stripe being deployed in any restaurant accounts, which indicates a low immediate competitive threat. However, the company's significant scale and partnerships, particularly with Olo, suggest that they could become a more formidable competitor in the restaurant technology space if they expand their focus.
+
+- Stripe's extensive scale and growth, with 90% of Dow Jones and 80% of Nasdaq-100 companies using their services, highlight their strong market presence.
+- The recent collaboration with Olo for enterprise in-store payments indicates potential for Stripe to penetrate the restaurant sector more deeply in the future.
+- Despite their current limited footprint in restaurants, Stripe's robust profitability and innovative payment solutions could pose a threat if they decide to target this market more aggressively.
 
 ## Where we're competing against them right now
 *No current tech-stack relationship on file for this vendor.*

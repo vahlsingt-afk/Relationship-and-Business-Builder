@@ -23,6 +23,14 @@
       "generated_for": "todd",
       "purpose": "value wedge",
       "path": "system/artifact_vault/value_wedges/par-technology--brand-mcdonald-s/current/PAR-Technology-vs-Genius-McDonalds_Value-Wedge.json",
+      "superseded": true
+    },
+    {
+      "version": 4,
+      "generated_at": "2026-10-02T18:01:49Z",
+      "generated_for": "todd",
+      "purpose": "value wedge",
+      "path": "system/artifact_vault/value_wedges/par-technology--brand-mcdonald-s/current/PAR-Technology-vs-Genius-McDonalds_Value-Wedge.json",
       "superseded": false
     }
   ]

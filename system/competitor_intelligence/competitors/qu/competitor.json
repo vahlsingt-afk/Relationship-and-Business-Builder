@@ -35,9 +35,9 @@
     ]
   },
   "last_evidence_date": "2026-09-29",
-  "last_synced_at": "2026-10-02T09:46:55Z",
+  "last_synced_at": "2026-10-06T09:22:05Z",
   "template_version": "competitor-intelligence-v1",
-  "updated_at": "2026-10-02T09:46:55Z",
+  "updated_at": "2026-10-06T09:22:05Z",
   "latest_cos_commentary": {
     "headline": "Qu now competes on the POS-and-payments bundle in addition to ordering and kitchen flows.",
     "genius_exposure": "Qu now competes on the POS-and-payments bundle in addition to ordering and kitchen flows.",
@@ -232,5 +232,16 @@
       "is_inference": false,
       "limitations_or_conflicts": "Recorded incidents do not by themselves disprove the stated uptime percentage."
     }
-  ]
+  ],
+  "synthesis": {
+    "bottom_line": "Qu presents a significant competitive threat with a strong presence in the market, confirmed by multiple broad-scope accounts and recent developments, including the launch of Qu Pay and a rapid rollout to Jack in the Box. The team should closely monitor Qu's advancements and consider strategic adjustments to our offerings, particularly in payment integration and operational resilience.",
+    "themes": [
+      "Qu has established a broad customer base, including major brands like Jack in the Box and Shake Shack, indicating strong market penetration.",
+      "The recent launch of Qu Pay and its integration into their platform presents a direct challenge to our Genius+Worldpay bundle, necessitating a reevaluation of our payment solutions.",
+      "Qu's claims of high uptime and low order failure rates, while requiring verification, could enhance their appeal to potential clients, emphasizing the need for us to bolster our reliability metrics.",
+      "The rapid growth of Qu, with a reported 150% increase in location count year-over-year, suggests they are gaining traction and could disrupt the market further if not addressed.",
+      "Qu's focus on AI and operational efficiency, as highlighted in their recent research, aligns with industry trends and could position them favorably among tech-savvy restaurant operators."
+    ],
+    "generated_at": "2026-10-02T21:10:25Z"
+  }
 }

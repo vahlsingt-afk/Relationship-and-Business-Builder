@@ -1,6 +1,6 @@
 # Global Payments Genius User Conference 2026 — Execution Plan
 
-_Generated 2026-10-02T10:14:13+00:00_
+_Generated 2026-10-06T10:14:18+00:00_
 
 This is a recommended sequence for you to execute manually — nothing here sends automatically.
 

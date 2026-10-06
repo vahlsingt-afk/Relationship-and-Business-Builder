@@ -1,7 +1,15 @@
 # Crunchtime — Competitive Brief
 
 ## Bottom line
-*Not yet generated -- synthesis runs weekly (Friday EOW); check back after the next run, or request an earlier refresh.*
+*AI-synthesized from the evidence below, generated 2026-10-02 -- verify against the citations below before acting.*
+
+Crunchtime currently poses a moderate competitive threat due to its extensive customer base and recent advancements in AI capabilities, despite the lack of confirmed vendor roles in specific accounts. The team should monitor Crunchtime's developments closely and consider enhancing our own offerings to maintain a competitive edge.
+
+- Crunchtime's operations-management software is utilized across 150,000+ locations, indicating a significant market presence that could impact our customer acquisition efforts.
+- The recent introduction of AI capabilities enhances Crunchtime's product offering, potentially attracting new customers and increasing retention among existing ones.
+- The lack of confirmed vendor roles in specific accounts suggests that while Crunchtime is a player in the market, its actual penetration may not be as deep as it appears, warranting cautious observation.
+- Crunchtime's leadership change with John Raguin as CEO could signal strategic shifts that may affect competitive dynamics in the near future.
+- The competitor's relationships with well-known brands like Chipotle and Dunkin' highlight its credibility and could influence potential customers' perceptions of our solutions.
 
 ## Where we're competing against them right now
 19 account(s) on file -- 0 confirmed, broad-scope relationship(s), 19 with a real limitation noted below (franchisee-only, hardware-only, undisclosed scope, or weak evidence).
