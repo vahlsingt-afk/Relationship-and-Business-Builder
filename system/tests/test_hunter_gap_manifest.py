@@ -205,8 +205,7 @@ def test_prepare_cycle_combines_plan_manifest_and_context(monkeypatch):
     monkeypatch.setattr(gaps, "build_manifest", lambda **kwargs: manifest)
     monkeypatch.setattr(hunter, "build_context", lambda keys, modules=None: {"keys": keys})
     directive = hunter.prepare_cycle(
-        "enterprise_account_profile", universe="brands", limit=1,
-        five_hour_used_pct=20, weekly_used_pct=25, hours_to_weekly_reset=72,
+        "enterprise_account_profile",         universe="brands", limit=1,
     )
     assert directive["packet_requirements"]["known_gap_ids"] == ["gap:company:brand-example:leadership"]
     assert directive["packet_requirements"]["target_keys"] == ["company:brand-example"]
@@ -245,6 +244,6 @@ def test_prepare_without_codex_usage_still_authorizes_chat_research(monkeypatch)
     directive = hunter.prepare_cycle("enterprise_account_profile", universe="brands", limit=1)
     assert directive["resource_plan"]["status"] == "authorized"
     assert directive["resource_plan"]["chat_research_status"] == "authorized"
-    assert directive["resource_plan"]["codex_work_status"] == "blocked"
+    assert directive["resource_plan"]["codex_work_status"] == "governed_by_orchestrator"
     assert directive["packet_requirements"]["research_authorized"] is True
     assert directive["packet_requirements"]["target_keys"] == ["company:brand-example"]
