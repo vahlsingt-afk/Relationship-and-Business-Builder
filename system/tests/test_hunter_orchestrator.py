@@ -203,6 +203,7 @@ def test_failure_release_counts_attempts_and_terminates(env):
     ho.CONFIG_PATH.write_text(json.dumps(cfg))
     _write_job(env, "a", "priority-a", ["company:a"])
     jid = ho.cmd_dispatch(_args(confirm=True))["results"][0]["job_id"]
+    ho.cmd_start(_args(job_id=jid, note=""))
     ho.cmd_release(_args(job_id=jid, reason="timeout", not_before=None))
     assert ho.job_states()[jid]["state"] == "terminal_failed"
 
@@ -343,3 +344,48 @@ def test_deep_research_gets_planned_slots_without_a_reserve(env):
     assert plan["planned"][0]["window"] == "day"
     jid = ho.job_id_for(json.loads((env["jobs"] / "a.json").read_text()))
     assert ho.plan_slot_for(jid, now=dt.fromisoformat(plan["planned"][0]["run_after"]) + timedelta(seconds=1))
+
+
+# ---- lease hold vs attempt ----
+
+def _backdate_last(hours):
+    rows = ho._read_jsonl(ho.LEASES_PATH)
+    rows[-1]["at"] = (datetime.now(timezone.utc) - timedelta(hours=hours)).isoformat()
+    ho.LEASES_PATH.write_text("\n".join(json.dumps(r) for r in rows) + "\n")
+
+
+def test_unstarted_lease_never_becomes_terminal(env):
+    _write_job(env, "a", "priority-a", ["company:a"])
+    jid = ho.cmd_dispatch(_args(confirm=True))["results"][0]["job_id"]
+    for _ in range(5):  # more nights than max_attempts
+        _backdate_last(5)
+        ho.expire_stale_leases()
+        assert ho.job_states()[jid]["state"] == "queued"
+        assert ho._attempt_count(jid) == 0
+        ho.cmd_dispatch(_args(confirm=True))
+    assert ho.job_states()[jid]["state"] == "leased"
+
+
+def test_start_is_required_before_an_attempt_counts(env):
+    _write_job(env, "a", "priority-a", ["company:a"])
+    jid = ho.cmd_dispatch(_args(confirm=True))["results"][0]["job_id"]
+    ho.cmd_start(_args(job_id=jid, note="kicked off by hand"))
+    assert ho.job_states()[jid]["state"] == "running"
+    assert ho._attempt_count(jid) == 1
+
+
+def test_start_rejects_unleased_job(env):
+    with pytest.raises(SystemExit):
+        ho.cmd_start(_args(job_id="hj_missing", note=""))
+
+
+def test_running_expiry_counts_and_becomes_terminal_when_exhausted(env):
+    cfg = json.loads(ho.CONFIG_PATH.read_text())
+    cfg["lease"]["max_attempts"] = 1
+    ho.CONFIG_PATH.write_text(json.dumps(cfg))
+    _write_job(env, "a", "priority-a", ["company:a"])
+    jid = ho.cmd_dispatch(_args(confirm=True))["results"][0]["job_id"]
+    ho.cmd_start(_args(job_id=jid, note=""))
+    _backdate_last(13)  # past running_ttl_minutes (720)
+    ho.expire_stale_leases()
+    assert ho.job_states()[jid]["state"] == "terminal_failed"

@@ -295,15 +295,29 @@ def mode_throughput_ok() -> tuple[bool, str]:
 
 
 def expire_stale_leases() -> list[dict]:
-    """Return leases older than the TTL to queued. Attempts already count toward max_attempts."""
-    ttl = load_config()["lease"]["ttl_minutes"]
+    """Unstarted leases return to queued without counting as an attempt. Running attempts that
+    outlive their window count toward max_attempts and become terminal when exhausted."""
+    cfg = load_config()["lease"]
     expired = []
     for jid, row in job_states().items():
-        if row.get("state") == "leased" and _lease_expired(row, ttl):
+        state = row.get("state")
+        if state == "leased" and _lease_expired(row, cfg["not_started_ttl_minutes"]):
+            expired.append(_transition(jid, "queued", reason="lease_not_started", attempts=_attempt_count(jid)))
+        elif state == "running" and _lease_expired(row, cfg["running_ttl_minutes"]):
             attempts = _attempt_count(jid)
-            target = "terminal_failed" if attempts >= load_config()["lease"]["max_attempts"] else "queued"
-            expired.append(_transition(jid, target, reason="lease_expired", attempts=attempts))
+            target = "terminal_failed" if attempts >= cfg["max_attempts"] else "queued"
+            expired.append(_transition(jid, target, reason="run_expired", attempts=attempts))
     return expired
+
+
+def cmd_start(args) -> dict:
+    """Record that Todd has started Deep Research for a leased job. This is the first point an attempt counts."""
+    jid = args.job_id
+    row = job_states().get(jid, {})
+    if row.get("state") != "leased":
+        raise SystemExit(f"job {jid} is not leased (state={row.get('state')})")
+    attempt = _attempt_count(jid) + 1
+    return _transition(jid, "running", attempt=attempt, note=args.note or "")
 
 
 # ---------- queued jobs ----------
@@ -425,7 +439,8 @@ def cmd_dispatch(args) -> dict:
 
 
 def _attempt_count(jid: str) -> int:
-    return sum(1 for r in _read_jsonl(LEASES_PATH) if r.get("job_id") == jid and r.get("state") == "leased")
+    """Attempts are runs that actually started (`start`), not leases that were only held."""
+    return sum(1 for r in _read_jsonl(LEASES_PATH) if r.get("job_id") == jid and r.get("state") == "running")
 
 
 def cmd_release(args) -> dict:
@@ -693,6 +708,10 @@ def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("status").set_defaults(fn=cmd_status)
+    st = sub.add_parser("start", help="Mark a leased job as started (Deep Research kicked off by hand)")
+    st.add_argument("job_id")
+    st.add_argument("--note", default="")
+    st.set_defaults(fn=cmd_start)
     sub.add_parser("plan").set_defaults(fn=cmd_plan)
     d = sub.add_parser("dispatch")
     d.add_argument("--confirm", action="store_true")
