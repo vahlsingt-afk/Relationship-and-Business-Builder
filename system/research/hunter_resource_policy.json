@@ -1,12 +1,55 @@
 {
   "schema": "rb.hunter_resource_policy.v1",
-  "updated_at": "2026-10-02T00:00:00Z",
-  "objective": "Use ChatGPT Deep Research freely for RBB gap closure and discovery while minimizing unnecessary calls; preserve Codex and Work capacity only when those surfaces are actually engaged.",
+  "updated_at": "2026-10-06T00:00:00Z",
+  "objective": "Dispatch one prioritized Hunter queue across ChatGPT Deep Research, ChatGPT Work, and Claude Co-Work/Research as admitted research engines, minimizing unnecessary research calls and protecting Todd's interactive capacity. The engine never changes the research standard, schema, or validation. Routing, reserves, and Capacity Watch pacing are defined in research/hunter_orchestrator_config.json and enforced by scripts/hunter_orchestrator.py.",
   "execution_order": [
-    {"tier": "local_deterministic", "use_for": ["gap export", "prior-context retrieval", "deduplication", "schema validation", "scoring", "packet routing"], "rule": "Always perform before any model or web-research call."},
-    {"tier": "chatgpt_deep_research_economy", "use_for": ["public-web discovery", "source opening", "candidate validation", "bounded corroboration", "net-new industry discovery"], "rule": "Preferred research engine when available; batch related gaps and targets into the fewest bounded calls."},
-    {"tier": "codex_standard_reasoning", "use_for": ["RBB context assembly", "structured packet synthesis", "semantic validation repair"], "rule": "Use only after deterministic work and reuse the deep-research result rather than repeating its searches."},
-    {"tier": "premium_reasoning_escalation", "use_for": ["material unresolved contradiction", "identity collision", "high-impact scope dispute", "schema failure that cheaper tiers cannot repair"], "rule": "Exception only; record the escalation reason and do not repeat work already completed by a cheaper tier."}
+    {
+      "tier": "local_deterministic",
+      "use_for": [
+        "gap export",
+        "prior-context retrieval",
+        "deduplication",
+        "schema validation",
+        "scoring",
+        "packet routing"
+      ],
+      "rule": "Always perform before any model or web-research call."
+    },
+    {
+      "tier": "chatgpt_deep_research",
+      "use_for": [
+        "public-web discovery",
+        "source opening",
+        "candidate validation",
+        "bounded corroboration",
+        "net-new industry discovery"
+      ],
+      "rule": "Admitted and enabled. No reserve applies; remaining allowance is tracked locally and reported as unknown unless observed."
+    },
+    {
+      "tier": "chatgpt_work",
+      "use_for": [
+        "same assignment and packet standard as Deep Research"
+      ],
+      "rule": "Admitted. Enabled only after a capacity snapshot is recorded and reviewed. Dispatch respects its daily, weekly, and short-window reserves."
+    },
+    {
+      "tier": "claude_co_work",
+      "use_for": [
+        "same assignment and packet standard as Deep Research"
+      ],
+      "rule": "Admitted. Enabled only after a supported capacity signal and dispatch path are verified. Dispatch respects its reserves."
+    },
+    {
+      "tier": "premium_reasoning_escalation",
+      "use_for": [
+        "material unresolved contradiction",
+        "identity collision",
+        "high-impact scope dispute",
+        "schema failure that cheaper tiers cannot repair"
+      ],
+      "rule": "Exception only; record the escalation reason and do not repeat work already completed by a cheaper tier."
+    }
   ],
   "call_minimization": {
     "batch_compatible_gaps": true,
@@ -18,22 +61,22 @@
     "never_research_a_covered_field_without_newer_conflicting_or_refresh_need": true
   },
   "capacity_scope": {
-    "chatgpt_deep_research": "No known Chat-specific usage limit is currently observable. Do not apply Codex or Work limits to Chat research cycles.",
-    "codex_or_work": "Apply the capacity gate only when a cycle requires Codex or Work execution.",
-    "future_chat_limit": "If a real Chat-specific limit becomes observable, add a separate gate based only on that limit; do not infer one from Codex or Work."
+    "chatgpt_deep_research": "Local execution ledger only. No reserve. Remaining allowance is unknown unless a real observable signal exists; never infer a count.",
+    "chatgpt_work": "Daily and weekly reserves start at 60% each for Todd's development and day-to-day work; Hunter may use the remainder. The CoS adjusts reserves from observed run-outs and unused capacity, within configured bounds.",
+    "claude_co_work": "Same reserve model as ChatGPT Work. Capacity is recorded manually until a supported signal is verified.",
+    "burn_down": "In the final 24 hours before a reset, reserves drop to the emergency level so expiring capacity is released to queued work. After-hours (18:00 America/Chicago) allows accelerated dispatch while burn-down is active.",
+    "capacity_watch": "A pacing control, not an engine: pause, slow, normal, or accelerate, read from the Capacity Watch signal file."
   },
   "codex_work_capacity_gate": {
-    "block_if_usage_unavailable": true,
-    "block_if_five_hour_used_pct_above": 75,
-    "block_if_weekly_used_pct_above": 75,
-    "max_share_of_remaining_five_hour_capacity_pct": 50,
-    "reserves": [
-      {"hours_before_weekly_reset_min": 48, "weekly_remaining_pct": 30, "five_hour_remaining_pct": 40},
-      {"hours_before_weekly_reset_min": 12, "hours_before_weekly_reset_max": 48, "weekly_remaining_pct": 15, "five_hour_remaining_pct": 30},
-      {"hours_before_weekly_reset_max": 12, "weekly_remaining_pct": 5, "five_hour_remaining_pct": 20}
-    ],
-    "never_consume_reset_credit_automatically": true
+    "status": "superseded_by_orchestrator_config",
+    "note": "The former Codex/Work gate treated Work as a non-engine. Work is now an admitted engine governed by reserves in research/hunter_orchestrator_config.json."
   },
-  "recommended_batch_sizes": {"scan": 5, "standard": 3, "deep": 2, "forensic": 1, "monitor": 5},
+  "recommended_batch_sizes": {
+    "scan": 5,
+    "standard": 3,
+    "deep": 2,
+    "forensic": 1,
+    "monitor": 5
+  },
   "batch_rule": "Calling functions determine Chat research cycle size. Recommended sizes improve focus and call efficiency but are not capacity gates."
 }

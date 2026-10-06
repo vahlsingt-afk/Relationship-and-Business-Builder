@@ -734,6 +734,15 @@ def run_pipeline(
                 "--no-consent",
                 "--json",
             ], required=False),
+            # CoS reserve review and today's engine-slot plan for the Hunter
+            # queue: day-window pacing plus after-hours use of bandwidth that
+            # expires at the next reset. Non-blocking; dispatch only leases
+            # jobs whose planned slot is due.
+            _step("hunter_orchestrator_daily_plan", [
+                py,
+                str(SCRIPTS_DIR / "hunter_orchestrator.py"),
+                "daily-plan",
+            ], required=False),
             _step("refresh_intelligence_caches", refresh_cmd),
             # Sprint D — rebuild contact index so relationship activation in
             # cos_synthesis uses today's loop_ledger + email participants.

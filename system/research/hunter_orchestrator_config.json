@@ -1,0 +1,106 @@
+{
+  "schema": "rb.hunter_orchestrator_config.v1",
+  "updated_at": "2026-10-06T00:00:00Z",
+  "decided_by": "Todd (chat, 2026-10-06)",
+  "objective": "One prioritized Hunter queue dispatched across ChatGPT Deep Research, ChatGPT Work, and Claude Co-Work/Research. The assignment and validation standard never change with the engine. Capacity decides which engine runs and when; it never lowers research requirements.",
+  "engines": {
+    "chatgpt_deep_research": {
+      "admitted": true,
+      "enabled": true,
+      "preference": 1,
+      "capacity_model": "local_execution_ledger",
+      "remaining_allowance": "unknown_unless_observed",
+      "reserve_applies": false
+    },
+    "chatgpt_work": {
+      "admitted": true,
+      "enabled": false,
+      "preference": 2,
+      "capacity_model": "usage_snapshot",
+      "capacity_source": "Settings > Usage (5-hour and weekly remaining %, reset times), recorded via `hunter_orchestrator.py capacity-record`",
+      "reserve_applies": true,
+      "enable_when": "A capacity snapshot has been recorded and reviewed for at least one full weekly reset."
+    },
+    "claude_co_work": {
+      "admitted": true,
+      "enabled": false,
+      "preference": 3,
+      "capacity_model": "usage_snapshot",
+      "capacity_source": "Unverified. No supported live-usage read or dispatch mechanism has been confirmed. Snapshots are recorded manually until one is verified.",
+      "reserve_applies": true,
+      "enable_when": "A supported capacity signal and dispatch path are documented and verified."
+    }
+  },
+  "reserve": {
+    "unit": "percent of each engine's daily total and each engine's weekly total",
+    "meaning": "Share reserved for Todd's development and day-to-day work. Hunter may use only the remaining share.",
+    "starting_daily_pct": 60,
+    "starting_weekly_pct": 60,
+    "min_pct": 20,
+    "max_pct": 85,
+    "adjust_step_pct": 5,
+    "adjust_rule": {
+      "raise_when": "Todd reports running out of bandwidth in the period, or the period's observed interactive usage reached the reserve floor before reset.",
+      "lower_when": "The period ended with at least lower_when_unused_pct of the engine's total unused, with no run-out reported in that period.",
+      "lower_when_unused_pct": 40,
+      "applied_by": "CoS, recorded in the adjustment ledger with the evidence used. Values stay within min_pct and max_pct."
+    }
+  },
+  "burn_down": {
+    "timezone": "America/Chicago",
+    "after_hours_start": "18:00",
+    "after_hours_end": "07:00",
+    "final_window_hours": 24,
+    "emergency_reserve_pct": 10,
+    "rule": "During the final window before a reset, and during after-hours, the reserve for that period drops to emergency_reserve_pct, releasing expiring capacity to queued Hunter work. Expiring capacity has no value after reset, so it is not preserved."
+  },
+  "short_window": {
+    "rule": "A shorter-duration allowance (such as a 5-hour window) is never drained below its reserve, even when weekly capacity remains.",
+    "max_share_of_remaining_pct": 50
+  },
+  "capacity_watch": {
+    "role": "Pacing control, not an engine. It sets a mode that the dispatcher honors: pause, slow, normal, or accelerate.",
+    "signal_file": "system/.cache/hunter_capacity_watch_signal.json",
+    "modes": {
+      "pause": {
+        "dispatch": false
+      },
+      "slow": {
+        "max_leases_per_hour": 1
+      },
+      "normal": {
+        "max_leases_per_hour": 4
+      },
+      "accelerate": {
+        "max_leases_per_hour": 8
+      }
+    },
+    "default_mode": "normal",
+    "stale_after_hours": 6,
+    "stale_behavior": "normal"
+  },
+  "lease": {
+    "ttl_minutes": 240,
+    "max_attempts": 3,
+    "capacity_blocked_counts_as_attempt": false
+  },
+  "routing": {
+    "ordering": "Queue rank is authoritative. Within a rank, engines are tried in preference order and only if they pass their reserve floor.",
+    "task_fit": {
+      "default": [
+        "chatgpt_deep_research",
+        "chatgpt_work",
+        "claude_co_work"
+      ]
+    }
+  },
+  "daily_plan": {
+    "plan_path": "system/.cache/hunter_orchestrator/daily_plan.json",
+    "job_cost_estimate_pct": {
+      "chatgpt_work": 5,
+      "claude_co_work": 5
+    },
+    "day_share_of_usable_pct": 50,
+    "rule": "Usable = 100 - reserve - used, per period. Half of usable daily capacity is paced across the day window (now to 18:00 America/Chicago). The rest, and any excess before a daily reset, is scheduled into the after-hours window before the reset. Weekly usable caps the total. Planned slots run in queue rank order and dispatch honors their run_after time."
+  }
+}

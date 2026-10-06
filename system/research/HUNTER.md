@@ -256,9 +256,10 @@ the same browsing. Premium reasoning is an explicit escalation for material
 identity, contradiction, scope, or validation problems that cheaper paths did
 not resolve.
 
-ChatGPT Deep Research cycles are not governed by Codex or Work usage windows.
-No Chat-specific limit is currently observable, so Chat research remains
-authorized without a Codex usage snapshot. Calling functions determine Chat
+ChatGPT Deep Research has no reserve and is tracked by a local execution
+ledger; its remaining allowance is unknown unless observed. ChatGPT Work and
+Claude Co-Work are admitted research engines whose daily and weekly usage is
+governed by reserves in `research/hunter_orchestrator_config.json`. Calling functions determine Chat
 cycle size; the policy's batch sizes are efficiency recommendations, not usage
 ceilings.
 
@@ -349,3 +350,23 @@ both, and the dispatcher outcome remains distinct from Hunter's proposal,
 and the packet states whether the outcome is `complete`, `partial`, `blocked`,
 or `no_material_findings`. Time or source limits produce `partial`, not a
 confident-looking thin result.
+
+## Multi-engine dispatch
+
+Hunter's queue is CoS-ranked and authoritative. `scripts/hunter_orchestrator.py`
+leases each queued assignment to the first eligible admitted engine:
+
+- Engines and reserves: `research/hunter_orchestrator_config.json`. Reserves
+  start at 60% of each engine's daily and weekly totals for Todd's own work.
+  The CoS raises a reserve after a recorded run-out and lowers it after an
+  unused period, within configured bounds.
+- Burn-down: in the final 24 hours before a reset, reserves drop to the
+  emergency level. After 18:00 America/Chicago, dispatch may accelerate while
+  burn-down is active.
+- Capacity Watch is a pacing control, not an engine. Its signal file sets
+  pause, slow, normal, or accelerate.
+- Leases and attempts are append-only in `system/.cache/hunter_orchestrator/`.
+  Capacity exhaustion re-queues the job with a `not_before` time. It never
+  drops the job or lowers the research standard.
+- Results from every engine pass the same finalize and validation path before
+  reaching existing downstream ingest. Engine identity is telemetry only.
