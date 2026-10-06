@@ -121,17 +121,19 @@ Every cycle follows the same evidence discipline, adapted to its target:
    evidence is not evidence of absence or success.
 12. Run an identity, date, scope, conflict, novelty, and source-access audit before
    returning the packet.
-13. Return one evidence-native JSON object inline containing the complete source and
-    query ledgers, atomized findings, gap outcomes, changes, proposals,
+13. Return one evidence-native JSON object in the ChatGPT Deep Research response
+    containing the complete source and query ledgers, atomized findings, gap outcomes, changes, proposals,
     handoffs, conflicts, negative findings, unanswered questions, and payload.
-    ChatGPT is not responsible for reproducing the full canonical envelope by
-    hand. `hunter_cycle.py finalize` deterministically supplies job-owned
-    envelope fields, normalizes stable identifiers and harmless structural
-    aliases, then validates against `system/schemas/hunter_research_packet.schema.json`
-    and the payload schema named by the calling function. Normalization never
-    invents evidence, upgrades confidence, or repairs unsupported claims.
-    Do not ask ChatGPT to create or attach a downloadable JSON file. Capture
-    the inline response as UTF-8 text and pass that artifact to `finalize`.
+    ChatGPT Deep Research receives the research request and uses its available
+    RBB project files to identify the CoS-ranked target and exact gaps, then
+    returns its inline response through a supported safe local transport. Never
+    paste, attach, or otherwise transmit raw local job-file contents into a
+    browser page, or work around a browser safety refusal. `hunter_cycle.py
+    finalize` deterministically supplies job-owned envelope fields, normalizes stable identifiers and
+    harmless structural aliases, then validates against
+    `system/schemas/hunter_research_packet.schema.json` and the payload schema
+    named by the calling function. Normalization never invents evidence,
+    upgrades confidence, or repairs unsupported claims.
 
 ## Source hierarchy
 
@@ -264,12 +266,52 @@ the most durable gap closure and net-new intelligence per scarce model call
 while preserving capacity for Todd's interactive work.
 
 Use local deterministic code first for gap export, prior-state retrieval,
-deduplication, scoring, validation, and routing. Prefer the lower-cost ChatGPT
-Deep Research execution path for public-web discovery and verification when it
-is available. Use Codex for RBB-aware synthesis and validation, not to repeat
-the same browsing. Premium reasoning is an explicit escalation for material
-identity, contradiction, scope, or validation problems that cheaper paths did
-not resolve.
+deduplication, scoring, validation, and routing. Hunter research engines are
+ChatGPT Deep Research, ChatGPT Work, and Claude Co-Work/Research, all governed
+by the same assignment, packet schema, and validator (see "Multi-engine
+dispatch" below). The engine that runs a given job is chosen by
+`scripts/hunter_orchestrator.py` from the CoS-ranked queue and reserve
+configuration. The selected engine works the CoS-ranked target
+from the correct RBB project files, researches the target using public sources,
+and returns the evidence-native response to the local Hunter inbox through a
+supported safe transport. Codex may prepare the local assignment, maintain
+intake plumbing, validate, and sweep; it must not conduct or supplement the
+cycle's deep research. Codex is not a Hunter research engine. If Deep Research or safe local response capture is
+unavailable, stop after sweep, report pending-job count and the concrete
+transport blocker, and do not queue another target. Never send raw local job
+contents into a browser or bypass a safety refusal.
+
+For the recurring priority cycle, consume `system/.cache/hunter_priority_queue.json` exactly as ranked. Treat a restaurant brand's company profile row and its matching `franchise-discovery:<brand-id>` row as one research work unit whenever both are present and eligible: one Deep Research request, two subjobs using each row's own suggested playbook and exact gap questions, and one returned bundle containing one ordinary Hunter packet per subjob. The bundle does not change queue ranks, scores, or source rows. Never substitute a generic “next N brands” batch. Skip targets already pending or validly completed since the current queue snapshot was generated.
+
+The supported return path is the private Google Drive folder `RBB Hunter Cycle Inbox`, synced locally as `~/My Drive/RBB Hunter Cycle Inbox`. ChatGPT saves its completed response artifact there. The morning pipeline runs `system/scripts/hunter_drive_inbox_sync.py` immediately before `hunter_cycle.py sweep`; the importer copies only schema-valid packet JSON that matches a pending RBB job, ignores outgoing `hunter-assignment-*.json` files, and deduplicates by content digest. Invalid or unmatched Drive files remain in place for review. This folder import is separate from research: only ChatGPT Deep Research performs the research.
+
+For repeatable batches, use `system/scripts/hunter_batch.py`. Check that the
+correct RBB ChatGPT project has an available Deep Research session and that
+Drive/local response capture is working before running `prepare`; the command
+requires explicit `--deep-research-available` and `--transport-available`
+assertions and refuses to queue over an existing pending assignment. Example:
+
+```bash
+python3 system/scripts/hunter_batch.py prepare --work-units 25 --batch-id priority-25-YYYYMMDD --deep-research-available --transport-available
+```
+
+The generated assignment is a local job specification, not evidence that
+research is underway. In the Relationship and Business Builder ChatGPT
+project, invoke Deep Research with the `$ deep-research` trigger, read the
+assignment from Drive, follow every subjob's exact gap questions and suggested
+playbook, and return one complete bundle named
+`hunter-response-<batch-id>.json` to the same Drive folder. A 25-unit batch
+can contain more than 25 child packets when queue rows are paired. Do not
+claim batch completion until the local inbox sync and governed sweep produce
+receipts. Never pass `--confirm`.
+
+Run `python3 system/scripts/hunter_batch.py report` for the latest assignment,
+or add `--batch-id <id>` for a specific batch. It writes JSON and Markdown
+reports under `system/reports/hunter_batches/`; the morning pipeline refreshes
+the latest report after inbox sync and sweep. Reports distinguish awaiting
+research, returned awaiting sweep, incomplete bundles, validation failures,
+dry-run-valid packets, and confirmed imports, and count packet evidence,
+payload rejects, and canonical writes.
 
 ChatGPT Deep Research has no reserve and is tracked by a local execution
 ledger; its remaining allowance is unknown unless observed. ChatGPT Work and
@@ -278,18 +320,12 @@ governed by reserves in `research/hunter_orchestrator_config.json`. Calling func
 cycle size; the policy's batch sizes are efficiency recommendations, not usage
 ceilings.
 
-Only when Hunter needs Codex or Work for synthesis, recovery, or escalation
-must it obtain current five-hour and weekly usage plus the weekly reset horizon.
-If that usage is unavailable, Codex/Work is blocked while Chat research may
-continue. If either Codex/Work window is more than 75% consumed, do not engage
-that surface. The remaining-capacity ceiling and time-to-reset reserves apply
-only to Codex/Work consumption. Never consume a reset credit automatically.
-
 Batch compatible gaps, reuse prior packets and already-opened sources, never
 run the same target through two providers concurrently, and stop after two
 successive unproductive query families. Every packet records the selected
-execution tier, whether Codex/Work was permitted, call counts, escalation
-reasons, and budget outcome.
+execution tier, actual call counts, escalation reasons, and budget outcome.
+Local normalization records ChatGPT Deep Research as the research tier; local
+Codex preparation and validation are not research calls.
 
 ## JSON and provenance standards
 
@@ -387,3 +423,9 @@ leases each queued assignment to the first eligible admitted engine:
   drops the job or lowers the research standard.
 - Results from every engine pass the same finalize and validation path before
   reaching existing downstream ingest. Engine identity is telemetry only.
+- `claude_code_headless` (verified 2026-10-06) runs a leased job automatically
+  through a non-interactive `claude -p` call in this repo, since it has no
+  browser step. `scripts/hunter_claude_transport.py` points it at the same
+  HUNTER.md method and packet schema, then feeds its output through the same
+  `hunter_cycle.py sweep`. ChatGPT Work and the Cowork engine still require a
+  human to start the run.
