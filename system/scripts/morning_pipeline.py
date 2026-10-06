@@ -774,6 +774,14 @@ def run_pipeline(
             # idempotent, ignores outgoing assignment files, and leaves
             # invalid/unmatched files in Drive for review. This must run
             # immediately before the governed local sweep.
+            # Pick up Deep Research packets exported to Downloads and copy only
+            # genuine Hunter envelopes into the private Drive inbox. Runs
+            # immediately before the Drive sync and governed sweep so yesterday's
+            # exports are swept this morning. Non-blocking.
+            _step("hunter_download_watcher", [
+                py,
+                str(SCRIPTS_DIR / "hunter_download_watcher.py"),
+            ], required=False),
             _step("hunter_drive_inbox_sync", [
                 py,
                 str(SCRIPTS_DIR / "hunter_drive_inbox_sync.py"),
