@@ -40,7 +40,11 @@ SCRIPTS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS_DIR))
 import competitor_intelligence_common as cic  # noqa: E402
 
-_EVIDENCE_CATEGORY_SIGNAL = ["positioning", "strength", "weakness", "pricing", "reference_customer", "market_share"]
+_EVIDENCE_CATEGORY_SIGNAL = [
+    "positioning", "strength", "weakness", "pricing", "reference_customer", "market_share",
+    # 2026-10-02, top-10-per-category competitor Hunter cycle:
+    "features", "customer_feedback_testimonials", "value_statement",
+]
 
 _MISSION = (
     "This file is a snapshot of RBB's tracked-competitor (restaurant-tech vendor) intelligence store. Each "

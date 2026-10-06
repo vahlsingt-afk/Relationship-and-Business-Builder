@@ -81,6 +81,14 @@ class TestAddCompetitiveNote(_IsolatedRootMixin, unittest.TestCase):
         with self.assertRaises(ValueError):
             ci.add_competitive_note("acme-pos", "note", category="not_a_real_category")
 
+    def test_new_evidence_categories_accepted(self):
+        """2026-10-02: features/customer_feedback_testimonials/value_statement
+        added to VALID_EVIDENCE_CATEGORIES for the top-10-per-category
+        competitor Hunter cycle."""
+        for category in ("features", "customer_feedback_testimonials", "value_statement"):
+            result = ci.add_competitive_note("acme-pos", f"note for {category}", category=category)
+            self.assertTrue(result["ok"])
+
     def test_empty_note_rejected(self):
         with self.assertRaises(ValueError):
             ci.add_competitive_note("acme-pos", "   ", category="other")
@@ -121,6 +129,24 @@ class TestAddExtendedProfileFinding(_IsolatedRootMixin, unittest.TestCase):
         ci.add_extended_profile_finding("acme-pos", "trends", "Shifting to cloud-native architecture")
         data = cic.load_competitor("acme-pos")["competitor"]
         self.assertEqual(data["trends"]["value"], "Shifting to cloud-native architecture")
+
+    def test_value_statement_is_a_single_field_not_a_list(self):
+        """2026-10-02: value_statement generalized the trends-only scalar
+        special-case to EXTENDED_SCALAR_FIELDS -- this would have silently
+        regressed to a list (or raised) if that generalization missed a
+        spot."""
+        ci.add_extended_profile_finding("acme-pos", "value_statement", "The fastest line at every register.")
+        data = cic.load_competitor("acme-pos")["competitor"]
+        self.assertEqual(data["value_statement"]["value"], "The fastest line at every register.")
+
+    def test_features_and_customer_feedback_testimonials_append_to_list_fields(self):
+        """2026-10-02: the two new EXTENDED_PROFILE_FIELDS added for the
+        top-10-per-category competitor Hunter cycle."""
+        ci.add_extended_profile_finding("acme-pos", "features", "Real-time kitchen display routing")
+        ci.add_extended_profile_finding("acme-pos", "customer_feedback_testimonials", "G2 reviewer: cut ticket times by 20%")
+        data = cic.load_competitor("acme-pos")["competitor"]
+        self.assertEqual(data["features"][0]["value"], "Real-time kitchen display routing")
+        self.assertEqual(data["customer_feedback_testimonials"][0]["value"], "G2 reviewer: cut ticket times by 20%")
 
     def test_dedupes_identical_value_in_list_field(self):
         ci.add_extended_profile_finding("acme-pos", "products", "Acme Kiosk")

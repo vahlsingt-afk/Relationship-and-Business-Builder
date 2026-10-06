@@ -65,9 +65,9 @@
         "type": "object", "additionalProperties": false,
         "required": ["target_key", "display_name", "entity_type", "priority"],
         "properties": {
-          "target_key": {"type": "string", "pattern": "^(company|competitor|vendor|operator|genius):.+$"},
+          "target_key": {"type": "string", "pattern": "^(company|competitor|vendor|operator|genius|franchisee|franchise-discovery):.+$"},
           "display_name": {"type": "string", "minLength": 1},
-          "entity_type": {"enum": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "startup", "supplier", "competitor", "genius", "other"]},
+          "entity_type": {"enum": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "startup", "supplier", "competitor", "genius", "franchisee_organization", "other"]},
           "priority": {"enum": ["enterprise_primary", "emerging_primary", "secondary", "explicit"]}
         }
       }

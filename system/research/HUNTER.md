@@ -3,7 +3,10 @@
 Hunter is RBB's named deep-research agent. Calling functions decide **what**
 cycle to run, which targets are in scope, the budget/deadline, and which
 cycle-specific payload schema is required. Hunter owns **how** public-source
-research is performed and returns one machine-readable JSON packet.
+research is performed and returns one machine-readable JSON object inline.
+The ChatGPT transport artifact is plain UTF-8 text and may be saved as `.txt`,
+`.md`, or `.json`; the extension is not the contract. Only the locally
+normalized, validated packet is the authoritative JSON artifact.
 
 Hunter is not a scheduler, a canonical-data writer, or a decision maker. It
 does not create targets, silently broaden scope, use private/personal data, or
@@ -118,9 +121,17 @@ Every cycle follows the same evidence discipline, adapted to its target:
    evidence is not evidence of absence or success.
 12. Run an identity, date, scope, conflict, novelty, and source-access audit before
    returning the packet.
-13. Return valid JSON only, conforming to
-    `system/schemas/hunter_research_packet.schema.json` plus the payload schema
-    named by the calling function.
+13. Return one evidence-native JSON object inline containing the complete source and
+    query ledgers, atomized findings, gap outcomes, changes, proposals,
+    handoffs, conflicts, negative findings, unanswered questions, and payload.
+    ChatGPT is not responsible for reproducing the full canonical envelope by
+    hand. `hunter_cycle.py finalize` deterministically supplies job-owned
+    envelope fields, normalizes stable identifiers and harmless structural
+    aliases, then validates against `system/schemas/hunter_research_packet.schema.json`
+    and the payload schema named by the calling function. Normalization never
+    invents evidence, upgrades confidence, or repairs unsupported claims.
+    Do not ask ChatGPT to create or attach a downloadable JSON file. Capture
+    the inline response as UTF-8 text and pass that artifact to `finalize`.
 
 ## Source hierarchy
 
@@ -222,12 +233,16 @@ For a complete, receipt-producing workflow, use
 
 ```bash
 python3 system/scripts/hunter_cycle.py prepare enterprise_account_profile --target company:example --output /tmp/hunter-job.json
-python3 system/scripts/hunter_cycle.py finalize /tmp/hunter-job.json /tmp/hunter-packet.json
-python3 system/scripts/hunter_cycle.py finalize /tmp/hunter-job.json /tmp/hunter-packet.json --confirm
+python3 system/scripts/hunter_cycle.py finalize /tmp/hunter-job.json /tmp/hunter-response.txt
+python3 system/scripts/hunter_cycle.py finalize /tmp/hunter-job.json /tmp/hunter-response.txt --confirm
 ```
 
 The job contains the Deep Research directive and a hash-stamped before-state
-snapshot. `finalize` checks the envelope, playbook payload shape, citation
+snapshot. The returned ChatGPT response may be raw JSON text or a Markdown
+JSON fence in a `.txt`, `.md`, or `.json` file; `finalize` extracts exactly one
+JSON object and fails closed when none exists. It then normalizes the
+evidence-native model response into
+the job-owned canonical envelope, then checks the envelope, playbook payload shape, citation
 integrity, and claimed deltas, then defaults to a non-mutating dispatcher dry
 run. `--confirm` is the explicit boundary for policy-authorized registered
 writes and durable review/CoS queues. Preparing a job does not itself invoke a
@@ -256,9 +271,10 @@ the same browsing. Premium reasoning is an explicit escalation for material
 identity, contradiction, scope, or validation problems that cheaper paths did
 not resolve.
 
-ChatGPT Deep Research cycles are not governed by Codex or Work usage windows.
-No Chat-specific limit is currently observable, so Chat research remains
-authorized without a Codex usage snapshot. Calling functions determine Chat
+ChatGPT Deep Research has no reserve and is tracked by a local execution
+ledger; its remaining allowance is unknown unless observed. ChatGPT Work and
+Claude Co-Work are admitted research engines whose daily and weekly usage is
+governed by reserves in `research/hunter_orchestrator_config.json`. Calling functions determine Chat
 cycle size; the policy's batch sizes are efficiency recommendations, not usage
 ceilings.
 
@@ -306,9 +322,11 @@ independent corroboration. Each finding also carries a temporal status
 `currentness_unknown`) and a commercial-relevance classification. Hunter does
 not turn commercial relevance into a recommendation or canonical conclusion.
 
-The JSON packet is the authoritative research output. A calling function may
-render Markdown or another view downstream, but Hunter does not emit a second,
-potentially divergent narrative record.
+The locally normalized and validated JSON packet is the authoritative research
+output. The raw ChatGPT response is only a transport artifact, regardless of
+its filename extension. A calling function may render Markdown or another view
+downstream, but Hunter does not emit a second, potentially divergent narrative
+record.
 
 ## Adaptive learning without self-modifying truth rules
 
@@ -349,3 +367,23 @@ both, and the dispatcher outcome remains distinct from Hunter's proposal,
 and the packet states whether the outcome is `complete`, `partial`, `blocked`,
 or `no_material_findings`. Time or source limits produce `partial`, not a
 confident-looking thin result.
+
+## Multi-engine dispatch
+
+Hunter's queue is CoS-ranked and authoritative. `scripts/hunter_orchestrator.py`
+leases each queued assignment to the first eligible admitted engine:
+
+- Engines and reserves: `research/hunter_orchestrator_config.json`. Reserves
+  start at 60% of each engine's daily and weekly totals for Todd's own work.
+  The CoS raises a reserve after a recorded run-out and lowers it after an
+  unused period, within configured bounds.
+- Burn-down: in the final 24 hours before a reset, reserves drop to the
+  emergency level. After 18:00 America/Chicago, dispatch may accelerate while
+  burn-down is active.
+- Capacity Watch is a pacing control, not an engine. Its signal file sets
+  pause, slow, normal, or accelerate.
+- Leases and attempts are append-only in `system/.cache/hunter_orchestrator/`.
+  Capacity exhaustion re-queues the job with a `not_before` time. It never
+  drops the job or lowers the research standard.
+- Results from every engine pass the same finalize and validation path before
+  reaching existing downstream ingest. Engine identity is telemetry only.

@@ -3,153 +3,643 @@
   "updated_at": "2026-10-02T00:00:00Z",
   "operating_policy": {
     "primary_mission": "Fill explicit gaps in RBB data, then discover material net-new restaurant and restaurant-technology intelligence.",
-    "required_phases": ["baseline_existing_rbb_state", "known_gap_resolution", "net_new_discovery", "change_detection", "verification_and_disconfirmation", "mutation_proposal", "cos_synthesis_handoff", "validation"],
+    "required_phases": [
+      "baseline_existing_rbb_state",
+      "known_gap_resolution",
+      "net_new_discovery",
+      "change_detection",
+      "verification_and_disconfirmation",
+      "mutation_proposal",
+      "cos_synthesis_handoff",
+      "validation"
+    ],
     "completion_rule": "Every supplied gap must have an outcome, the discovery pass must be reported, and every material change must route to a mutation proposal, a CoS handoff, or both."
   },
   "depth_levels": {
-    "scan": {"max_pages": 8, "target_minutes": 15, "minimum_independent_chains": 1, "description": "Recent signals and obvious gaps."},
-    "standard": {"max_pages": 25, "target_minutes": 45, "minimum_independent_chains": 2, "description": "Complete current profile across required modules."},
-    "deep": {"max_pages": 60, "target_minutes": 120, "minimum_independent_chains": 2, "description": "Multi-source present and historical reconstruction."},
-    "forensic": {"max_pages": 100, "target_minutes": 240, "minimum_independent_chains": 3, "description": "Resolve disputed identity, scope, deployment, ownership, or lifecycle claims."},
-    "monitor": {"max_pages": 15, "target_minutes": 30, "minimum_independent_chains": 1, "description": "Research only changes since the prior verified state."}
+    "scan": {
+      "max_pages": 8,
+      "target_minutes": 15,
+      "minimum_independent_chains": 1,
+      "description": "Recent signals and obvious gaps."
+    },
+    "standard": {
+      "max_pages": 25,
+      "target_minutes": 45,
+      "minimum_independent_chains": 2,
+      "description": "Complete current profile across required modules."
+    },
+    "deep": {
+      "max_pages": 60,
+      "target_minutes": 120,
+      "minimum_independent_chains": 2,
+      "description": "Multi-source present and historical reconstruction."
+    },
+    "forensic": {
+      "max_pages": 100,
+      "target_minutes": 240,
+      "minimum_independent_chains": 3,
+      "description": "Resolve disputed identity, scope, deployment, ownership, or lifecycle claims."
+    },
+    "monitor": {
+      "max_pages": 15,
+      "target_minutes": 30,
+      "minimum_independent_chains": 1,
+      "description": "Research only changes since the prior verified state."
+    }
   },
   "playbooks": {
     "enterprise_account_profile": {
-      "target_types": ["restaurant_brand", "restaurant_operator"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator"
+      ],
       "default_depth": "standard",
       "payload_schema": "rb.brand_company_profile.v1",
-      "required_modules": ["identity", "ownership", "footprint", "leadership", "strategy", "financial_operating_health", "technology_stack", "news_signals"],
-      "preferred_sources": ["public_filing", "restaurant_or_operator", "government_or_regulator", "trade_press", "vendor"],
-      "exit_criteria": ["Current identity and ownership resolved", "Enterprise footprint dated", "Leadership currentness checked", "Technology claims scoped", "Material gaps and conflicts recorded"]
+      "required_modules": [
+        "identity",
+        "ownership",
+        "footprint",
+        "leadership",
+        "strategy",
+        "financial_operating_health",
+        "technology_stack",
+        "news_signals"
+      ],
+      "preferred_sources": [
+        "public_filing",
+        "restaurant_or_operator",
+        "government_or_regulator",
+        "trade_press",
+        "vendor"
+      ],
+      "exit_criteria": [
+        "Current identity and ownership resolved",
+        "Enterprise footprint dated",
+        "Leadership currentness checked",
+        "Technology claims scoped",
+        "Material gaps and conflicts recorded"
+      ]
     },
     "technology_stack_reconstruction": {
-      "target_types": ["restaurant_brand", "restaurant_operator"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator"
+      ],
       "default_depth": "deep",
       "payload_schema": "rb.technology_stack_research.v1",
-      "required_modules": ["identity", "technology_stack", "deployment_scope", "integrations", "retained_layers", "currentness"],
-      "preferred_sources": ["restaurant_or_operator", "public_filing", "customer_joint", "vendor", "trade_press", "public_job_posting"],
-      "exit_criteria": ["Brand and operator scope separated", "Selection and live deployment separated", "Currentness classified", "Unknown stack layers retained as unknown"]
+      "required_modules": [
+        "identity",
+        "technology_stack",
+        "deployment_scope",
+        "integrations",
+        "retained_layers",
+        "currentness"
+      ],
+      "preferred_sources": [
+        "restaurant_or_operator",
+        "public_filing",
+        "customer_joint",
+        "vendor",
+        "trade_press",
+        "public_job_posting"
+      ],
+      "exit_criteria": [
+        "Brand and operator scope separated",
+        "Selection and live deployment separated",
+        "Currentness classified",
+        "Unknown stack layers retained as unknown"
+      ]
     },
     "vendor_startup_profile": {
-      "target_types": ["restaurant_technology_company", "startup", "supplier", "competitor"],
+      "target_types": [
+        "restaurant_technology_company",
+        "startup",
+        "supplier",
+        "competitor"
+      ],
       "default_depth": "standard",
       "payload_schema": "rb.vendor_extended_profile.v1",
-      "required_modules": ["identity", "ownership_funding", "leadership", "products", "restaurant_specialization", "customers", "enterprise_readiness", "financial_operating_health", "news_signals"],
-      "preferred_sources": ["government_or_regulator", "public_filing", "customer_joint", "restaurant_or_operator", "vendor", "trade_press"],
-      "exit_criteria": ["Funding and ownership dated", "Named customers distinguished from logos", "Pilot and scaled deployment separated", "Enterprise support and security claims sourced"]
+      "required_modules": [
+        "identity",
+        "ownership_funding",
+        "leadership",
+        "products",
+        "restaurant_specialization",
+        "customers",
+        "enterprise_readiness",
+        "financial_operating_health",
+        "news_signals"
+      ],
+      "preferred_sources": [
+        "government_or_regulator",
+        "public_filing",
+        "customer_joint",
+        "restaurant_or_operator",
+        "vendor",
+        "trade_press"
+      ],
+      "exit_criteria": [
+        "Funding and ownership dated",
+        "Named customers distinguished from logos",
+        "Pilot and scaled deployment separated",
+        "Enterprise support and security claims sourced"
+      ]
     },
     "customer_deployment_validation": {
-      "target_types": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "competitor"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator",
+        "restaurant_technology_company",
+        "competitor"
+      ],
       "default_depth": "forensic",
       "payload_schema": "rb.competitor_platform_research.v1",
-      "required_modules": ["identity", "relationship", "product", "deployment_scope", "currentness", "independent_verification"],
-      "preferred_sources": ["restaurant_or_operator", "customer_joint", "public_filing", "trade_press", "vendor"],
-      "exit_criteria": ["Exact entities resolved", "Relationship type stated", "Announced and live scopes separated", "Independent corroboration sought", "Currentness classified"]
+      "required_modules": [
+        "identity",
+        "relationship",
+        "product",
+        "deployment_scope",
+        "currentness",
+        "independent_verification"
+      ],
+      "preferred_sources": [
+        "restaurant_or_operator",
+        "customer_joint",
+        "public_filing",
+        "trade_press",
+        "vendor"
+      ],
+      "exit_criteria": [
+        "Exact entities resolved",
+        "Relationship type stated",
+        "Announced and live scopes separated",
+        "Independent corroboration sought",
+        "Currentness classified"
+      ]
     },
     "technology_replacement_lifecycle": {
-      "target_types": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "competitor"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator",
+        "restaurant_technology_company",
+        "competitor"
+      ],
       "default_depth": "deep",
       "payload_schema": "rb.technology_lifecycle_research.v1",
-      "required_modules": ["incumbent", "replacement", "decision_timeline", "deployment_phasing", "push_pull_factors", "retained_layers", "migration_burden", "outcomes", "non_switches"],
-      "preferred_sources": ["restaurant_or_operator", "public_filing", "government_or_regulator", "customer_joint", "trade_press", "vendor"],
-      "exit_criteria": ["Incumbent and replacement identified or left unknown", "Intent and deployment timeline separated", "Pre-change and post-change evidence searched", "Non-switch outcome considered"]
+      "required_modules": [
+        "incumbent",
+        "replacement",
+        "decision_timeline",
+        "deployment_phasing",
+        "push_pull_factors",
+        "retained_layers",
+        "migration_burden",
+        "outcomes",
+        "non_switches"
+      ],
+      "preferred_sources": [
+        "restaurant_or_operator",
+        "public_filing",
+        "government_or_regulator",
+        "customer_joint",
+        "trade_press",
+        "vendor"
+      ],
+      "exit_criteria": [
+        "Incumbent and replacement identified or left unknown",
+        "Intent and deployment timeline separated",
+        "Pre-change and post-change evidence searched",
+        "Non-switch outcome considered"
+      ]
     },
     "leadership_decision_map": {
-      "target_types": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "startup", "supplier", "competitor"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator",
+        "restaurant_technology_company",
+        "startup",
+        "supplier",
+        "competitor"
+      ],
       "default_depth": "standard",
       "payload_schema": "rb.leadership_decision_map.v1",
-      "required_modules": ["leadership", "role_scope", "tenure", "public_priorities", "decision_relevance"],
-      "preferred_sources": ["restaurant_or_operator", "public_filing", "government_or_regulator", "trade_press", "public_social_or_event"],
-      "exit_criteria": ["Current role verified", "Role scope distinguished from inferred influence", "Material leadership changes dated"]
+      "required_modules": [
+        "leadership",
+        "role_scope",
+        "tenure",
+        "public_priorities",
+        "decision_relevance"
+      ],
+      "preferred_sources": [
+        "restaurant_or_operator",
+        "public_filing",
+        "government_or_regulator",
+        "trade_press",
+        "public_social_or_event"
+      ],
+      "exit_criteria": [
+        "Current role verified",
+        "Role scope distinguished from inferred influence",
+        "Material leadership changes dated"
+      ]
     },
     "ownership_funding_ma": {
-      "target_types": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "startup", "supplier", "competitor"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator",
+        "restaurant_technology_company",
+        "startup",
+        "supplier",
+        "competitor"
+      ],
       "default_depth": "forensic",
       "payload_schema": "rb.ownership_funding_ma.v1",
-      "required_modules": ["legal_identity", "ownership", "funding", "acquisitions", "subsidiaries", "currentness"],
-      "preferred_sources": ["government_or_regulator", "public_filing", "company_announcement", "investor", "trade_press"],
-      "exit_criteria": ["Legal and operating names reconciled", "Transaction dates and status recorded", "Current owner verified", "Reported valuations labeled"]
+      "required_modules": [
+        "legal_identity",
+        "ownership",
+        "funding",
+        "acquisitions",
+        "subsidiaries",
+        "currentness"
+      ],
+      "preferred_sources": [
+        "government_or_regulator",
+        "public_filing",
+        "company_announcement",
+        "investor",
+        "trade_press"
+      ],
+      "exit_criteria": [
+        "Legal and operating names reconciled",
+        "Transaction dates and status recorded",
+        "Current owner verified",
+        "Reported valuations labeled"
+      ]
     },
     "competitive_positioning": {
-      "target_types": ["restaurant_technology_company", "startup", "supplier", "competitor", "genius"],
+      "target_types": [
+        "restaurant_technology_company",
+        "startup",
+        "supplier",
+        "competitor",
+        "genius"
+      ],
       "default_depth": "deep",
       "payload_schema": "rb.competitor_platform_research.v1",
-      "required_modules": ["products", "market_position", "customers", "strength_evidence", "weakness_evidence", "pricing_economics", "restaurant_fit", "news_signals"],
-      "preferred_sources": ["customer_joint", "restaurant_or_operator", "public_filing", "trade_press", "analyst_or_research", "vendor"],
-      "exit_criteria": ["Vendor claims labeled", "Strengths independently supported", "Weaknesses evidence-based", "Commercial relevance stated"]
+      "required_modules": [
+        "products",
+        "market_position",
+        "customers",
+        "strength_evidence",
+        "weakness_evidence",
+        "pricing_economics",
+        "restaurant_fit",
+        "news_signals",
+        "features",
+        "value_statement",
+        "customer_feedback_testimonials"
+      ],
+      "preferred_sources": [
+        "customer_joint",
+        "restaurant_or_operator",
+        "public_filing",
+        "trade_press",
+        "analyst_or_research",
+        "vendor"
+      ],
+      "exit_criteria": [
+        "Vendor claims labeled",
+        "Strengths independently supported",
+        "Weaknesses evidence-based",
+        "Commercial relevance stated",
+        "Features distinguished from products at the claim level",
+        "Customer feedback or testimonials independently sourced, not vendor-selected quotes presented as representative"
+      ]
     },
     "supplier_ecosystem_map": {
-      "target_types": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "startup", "supplier", "competitor"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator",
+        "restaurant_technology_company",
+        "startup",
+        "supplier",
+        "competitor"
+      ],
       "default_depth": "standard",
       "payload_schema": "rb.supplier_ecosystem_map.v1",
-      "required_modules": ["identity", "partners", "integrations", "resellers", "suppliers", "relationship_scope"],
-      "preferred_sources": ["customer_joint", "restaurant_or_operator", "vendor", "trade_press", "public_directory"],
-      "exit_criteria": ["Relationship type distinguished", "Co-presence not upgraded to partnership", "Integration availability not upgraded to customer use"]
+      "required_modules": [
+        "identity",
+        "partners",
+        "integrations",
+        "resellers",
+        "suppliers",
+        "relationship_scope"
+      ],
+      "preferred_sources": [
+        "customer_joint",
+        "restaurant_or_operator",
+        "vendor",
+        "trade_press",
+        "public_directory"
+      ],
+      "exit_criteria": [
+        "Relationship type distinguished",
+        "Co-presence not upgraded to partnership",
+        "Integration availability not upgraded to customer use"
+      ]
     },
     "change_monitor": {
-      "target_types": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "startup", "supplier", "competitor", "genius"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator",
+        "restaurant_technology_company",
+        "startup",
+        "supplier",
+        "competitor",
+        "genius"
+      ],
       "default_depth": "monitor",
       "payload_schema": "rb.hunter_change_monitor.v1",
-      "required_modules": ["news_signals", "leadership_changes", "ownership_changes", "product_changes", "customer_changes", "deployment_changes"],
-      "preferred_sources": ["government_or_regulator", "public_filing", "restaurant_or_operator", "customer_joint", "vendor", "trade_press"],
-      "exit_criteria": ["Prior verified cutoff applied", "Only new or changed claims returned", "No-change result recorded honestly"]
+      "required_modules": [
+        "news_signals",
+        "leadership_changes",
+        "ownership_changes",
+        "product_changes",
+        "customer_changes",
+        "deployment_changes"
+      ],
+      "preferred_sources": [
+        "government_or_regulator",
+        "public_filing",
+        "restaurant_or_operator",
+        "customer_joint",
+        "vendor",
+        "trade_press"
+      ],
+      "exit_criteria": [
+        "Prior verified cutoff applied",
+        "Only new or changed claims returned",
+        "No-change result recorded honestly"
+      ]
     },
     "industry_change_scan": {
-      "target_types": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "startup", "supplier", "competitor"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator",
+        "restaurant_technology_company",
+        "startup",
+        "supplier",
+        "competitor"
+      ],
       "default_depth": "monitor",
       "payload_schema": "rb.hunter_industry_theme.v1",
-      "required_modules": ["industry_patterns", "company_examples", "counterexamples", "commercial_implications"],
-      "preferred_sources": ["government_or_regulator", "public_filing", "restaurant_or_operator", "customer_joint", "trade_press"],
-      "exit_criteria": ["Pattern supported across multiple independent entities", "Counterexamples searched", "Company-level evidence retained"]
+      "required_modules": [
+        "industry_patterns",
+        "company_examples",
+        "counterexamples",
+        "commercial_implications"
+      ],
+      "preferred_sources": [
+        "government_or_regulator",
+        "public_filing",
+        "restaurant_or_operator",
+        "customer_joint",
+        "trade_press"
+      ],
+      "exit_criteria": [
+        "Pattern supported across multiple independent entities",
+        "Counterexamples searched",
+        "Company-level evidence retained"
+      ]
     },
     "restaurant_distress_technology_effects": {
-      "target_types": ["restaurant_brand", "restaurant_operator"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator"
+      ],
       "default_depth": "deep",
       "payload_schema": "rb.hunter_industry_theme.v1",
-      "required_modules": ["financial_operating_health", "closures_restructuring", "technology_spend", "vendor_effects", "counterexamples"],
-      "preferred_sources": ["government_or_regulator", "public_filing", "restaurant_or_operator", "trade_press", "vendor"],
-      "exit_criteria": ["Distress and technology effects separately evidenced", "Timing established", "Causal inference labeled"]
+      "required_modules": [
+        "financial_operating_health",
+        "closures_restructuring",
+        "technology_spend",
+        "vendor_effects",
+        "counterexamples"
+      ],
+      "preferred_sources": [
+        "government_or_regulator",
+        "public_filing",
+        "restaurant_or_operator",
+        "trade_press",
+        "vendor"
+      ],
+      "exit_criteria": [
+        "Distress and technology effects separately evidenced",
+        "Timing established",
+        "Causal inference labeled"
+      ]
     },
     "enterprise_pos_replacements": {
-      "target_types": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "competitor"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator",
+        "restaurant_technology_company",
+        "competitor"
+      ],
       "default_depth": "deep",
       "payload_schema": "rb.hunter_industry_theme.v1",
-      "required_modules": ["incumbent", "replacement", "selection", "deployment", "retained_layers", "outcomes"],
-      "preferred_sources": ["restaurant_or_operator", "public_filing", "customer_joint", "trade_press", "vendor"],
-      "exit_criteria": ["Selections separated from deployments", "Incumbent and retained layers checked", "Non-switches included"]
+      "required_modules": [
+        "incumbent",
+        "replacement",
+        "selection",
+        "deployment",
+        "retained_layers",
+        "outcomes"
+      ],
+      "preferred_sources": [
+        "restaurant_or_operator",
+        "public_filing",
+        "customer_joint",
+        "trade_press",
+        "vendor"
+      ],
+      "exit_criteria": [
+        "Selections separated from deployments",
+        "Incumbent and retained layers checked",
+        "Non-switches included"
+      ]
     },
     "franchise_technology_mandates": {
-      "target_types": ["restaurant_brand", "restaurant_operator"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator"
+      ],
       "default_depth": "forensic",
       "payload_schema": "rb.hunter_industry_theme.v1",
-      "required_modules": ["franchise_disclosure", "required_systems", "fees", "approved_vendors", "replacement_obligations"],
-      "preferred_sources": ["government_or_regulator", "public_filing", "restaurant_or_operator", "trade_press"],
-      "exit_criteria": ["Mandates tied to dated disclosure", "Required and optional systems separated", "Fees and replacement obligations captured"]
+      "required_modules": [
+        "franchise_disclosure",
+        "required_systems",
+        "fees",
+        "approved_vendors",
+        "replacement_obligations"
+      ],
+      "preferred_sources": [
+        "government_or_regulator",
+        "public_filing",
+        "restaurant_or_operator",
+        "trade_press"
+      ],
+      "exit_criteria": [
+        "Mandates tied to dated disclosure",
+        "Required and optional systems separated",
+        "Fees and replacement obligations captured"
+      ]
     },
     "fdd_governance_economics": {
-      "target_types": ["restaurant_brand"],
+      "target_types": [
+        "restaurant_brand"
+      ],
       "default_depth": "forensic",
       "payload_schema": "rb.fdd_governance_economics_research.v1",
-      "required_modules": ["fdd_source_record", "technology_governance", "technology_economics", "franchisor_change_authority", "historical_fdd_comparison", "permanent_brand_intelligence"],
-      "preferred_sources": ["government_or_regulator", "public_filing", "restaurant_or_operator", "trade_press"],
-      "exit_criteria": ["Current FDD located, dated, and its effective date checked before treating it as current", "Governance separated into authority, requirement, and deployment per category", "Technology-economics fields captured as disclosed ranges, not invented point estimates", "Prior FDD year compared where available; no governance fact silently overwritten", "Research gaps generated for anything not located or not resolvable"],
+      "required_modules": [
+        "fdd_source_record",
+        "technology_governance",
+        "technology_economics",
+        "franchisor_change_authority",
+        "historical_fdd_comparison",
+        "permanent_brand_intelligence"
+      ],
+      "preferred_sources": [
+        "government_or_regulator",
+        "public_filing",
+        "restaurant_or_operator",
+        "trade_press"
+      ],
+      "exit_criteria": [
+        "Current FDD located, dated, and its effective date checked before treating it as current",
+        "Governance separated into authority, requirement, and deployment per category",
+        "Technology-economics fields captured as disclosed ranges, not invented point estimates",
+        "Prior FDD year compared where available; no governance fact silently overwritten",
+        "Research gaps generated for anything not located or not resolvable"
+      ],
       "notes": "system/technology_lifecycle/FDD_GOVERNANCE_ECONOMICS_BRIEF.md is this playbook's full field-level spec. Use `hunter_cycle.py prepare fdd_governance_economics --universe fdd --limit 25` -- export_fdd_target_population.py provides the canonical >90-location brand population locally (no Trusted Chat API call needed; see RBB_PROJECT_CUSTOM_INSTRUCTIONS' Hunter exception)."
     },
     "restaurant_ai_pilots": {
-      "target_types": ["restaurant_brand", "restaurant_operator", "restaurant_technology_company", "startup", "supplier"],
+      "target_types": [
+        "restaurant_brand",
+        "restaurant_operator",
+        "restaurant_technology_company",
+        "startup",
+        "supplier"
+      ],
       "default_depth": "standard",
       "payload_schema": "rb.hunter_industry_theme.v1",
-      "required_modules": ["use_case", "pilot_scope", "deployment_scope", "outcomes", "risks"],
-      "preferred_sources": ["restaurant_or_operator", "customer_joint", "public_filing", "trade_press", "vendor"],
-      "exit_criteria": ["Pilot and scaled deployment separated", "Outcomes independently checked", "Discontinued pilots retained"]
+      "required_modules": [
+        "use_case",
+        "pilot_scope",
+        "deployment_scope",
+        "outcomes",
+        "risks"
+      ],
+      "preferred_sources": [
+        "restaurant_or_operator",
+        "customer_joint",
+        "public_filing",
+        "trade_press",
+        "vendor"
+      ],
+      "exit_criteria": [
+        "Pilot and scaled deployment separated",
+        "Outcomes independently checked",
+        "Discontinued pilots retained"
+      ]
     },
     "vendor_ma_product_discontinuation": {
-      "target_types": ["restaurant_technology_company", "startup", "supplier", "competitor"],
+      "target_types": [
+        "restaurant_technology_company",
+        "startup",
+        "supplier",
+        "competitor"
+      ],
       "default_depth": "monitor",
       "payload_schema": "rb.hunter_industry_theme.v1",
-      "required_modules": ["ownership", "acquisitions", "product_status", "customer_migration", "support_status"],
-      "preferred_sources": ["government_or_regulator", "public_filing", "vendor", "customer_joint", "trade_press"],
-      "exit_criteria": ["Transaction and product status dated", "Discontinuation distinguished from rebranding", "Customer migration implications sourced"]
+      "required_modules": [
+        "ownership",
+        "acquisitions",
+        "product_status",
+        "customer_migration",
+        "support_status"
+      ],
+      "preferred_sources": [
+        "government_or_regulator",
+        "public_filing",
+        "vendor",
+        "customer_joint",
+        "trade_press"
+      ],
+      "exit_criteria": [
+        "Transaction and product status dated",
+        "Discontinuation distinguished from rebranding",
+        "Customer migration implications sourced"
+      ]
+    },
+    "franchisee_discovery": {
+      "target_types": [
+        "restaurant_brand"
+      ],
+      "default_depth": "deep",
+      "payload_schema": "rb.franchisee_discovery.v1",
+      "required_modules": [
+        "known_franchisees",
+        "fdd_item20_disclosure",
+        "unit_counts_by_franchisee",
+        "discovery_confidence"
+      ],
+      "preferred_sources": [
+        "public_filing",
+        "government_or_regulator",
+        "restaurant_or_operator",
+        "trade_press",
+        "public_directory",
+        "public_job_posting"
+      ],
+      "exit_criteria": [
+        "Each discovered organization named with its own source and confidence",
+        "Unit counts attributed to the specific franchisee, not the brand total",
+        "Franchisee lists are genuinely hard to get -- an honest partial result with preserved uncertainty is required over a forced-complete list"
+      ]
+    },
+    "franchisee_organization_profile": {
+      "target_types": [
+        "franchisee_organization"
+      ],
+      "default_depth": "deep",
+      "payload_schema": "rb.franchisee_organization_profile.v1",
+      "required_modules": [
+        "franchisee_legal_entities",
+        "brand_portfolio",
+        "franchisee_headquarters",
+        "franchisee_ownership",
+        "leadership_contacts",
+        "sales_growth",
+        "operating_geography",
+        "technology_notes"
+      ],
+      "preferred_sources": [
+        "public_filing",
+        "government_or_regulator",
+        "restaurant_or_operator",
+        "trade_press",
+        "public_directory",
+        "public_job_posting",
+        "public_social_or_event"
+      ],
+      "exit_criteria": [
+        "Headquarters and registered/legal address separated",
+        "Each brand relationship has its own unit count and confidence, not a copied brand-wide figure",
+        "Public business contact information only -- no private personal information",
+        "Confidence preserved per assertion, never forced to a single record-level score"
+      ]
     }
   }
 }

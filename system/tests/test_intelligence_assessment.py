@@ -28,6 +28,7 @@ import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "system" / "scripts"))
@@ -587,8 +588,16 @@ class TestINTA5_Integration(unittest.TestCase):
         # added. Isolate the same way TestINTA3d_WatchlistAutoApply does.
         self._orig_eco_path = ia.core.ECOSYSTEM_INTELLIGENCE_PATH
         ia.core.ECOSYSTEM_INTELLIGENCE_PATH = self.tmp_dir / "ecosystem_intelligence.json"
+        # 2026-10-06: these integration tests run the real run_assessment(),
+        # which calls gatherer.write_packet() with its import-time default
+        # path -- i.e. the REAL system/.cache/gatherer_daily_change.json.
+        # Confirmed: a test run had overwritten today's production Gatherer
+        # packet with a temp-path-referencing one. Stub the writer.
+        self._gatherer_write_patch = patch("gatherer.write_packet")
+        self._gatherer_write_patch.start()
 
     def tearDown(self):
+        self._gatherer_write_patch.stop()
         ia.CACHE_PATH = self._orig_cache
         ia.PASSIVE_EMAIL_CACHE = self._orig_pei
         ia.core.ECOSYSTEM_INTELLIGENCE_PATH = self._orig_eco_path
@@ -606,10 +615,54 @@ class TestINTA5_Integration(unittest.TestCase):
             self.assertIn(key, on_disk, f"Missing key in assessment output: {key}")
 
     def test_INTA5b_is_fresh_returns_correct_state(self):
-        """is_fresh() returns True after run, False for a different date."""
-        ia.run_assessment(today=date(2026, 6, 1))
+        """is_fresh() returns True after a genuinely healthy run, False
+        for a different date.
+
+        2026-10-03 (Defect 5 fix): is_fresh() now also requires no
+        run_errors and a "current" (not "degraded") primary daily-
+        intelligence status -- previously it only checked the date. This
+        test used to call the REAL phase1_web_intelligence(), so its
+        pass/fail depended on live network/RSS reachability from this
+        sandbox; it in fact reproduced the exact live incident (370 real
+        collected items, all 24 configured sources reported failed,
+        input_status "ok") that made is_fresh() wrong in the first place.
+        Mocking gatherer.build_packet/write_packet here makes this a
+        deterministic test of is_fresh()'s own logic, not of today's
+        network conditions -- and avoids writing a fake packet into the
+        real, unisolated gatherer.CACHE_PATH as a side effect."""
+        ia.core.ECOSYSTEM_INTELLIGENCE_PATH.write_text(json.dumps({"entities": [
+            {"id": "brand-a", "name": "Brand A", "entity_type": "brand", "status": "active"}
+        ]}))
+        healthy_packet = {
+            "contract": "rb.gatherer_daily_change_packet.v1",
+            "packet_id": "gatherer-test-healthy",
+            "changes": [], "hunter_escalations": [],
+            "coverage": {"source_checks": {}},
+            "run_receipt": {"schema_validation": "valid", "receipt_consistent": True},
+        }
+        with patch("gatherer.build_packet", return_value=healthy_packet), \
+             patch("gatherer.write_packet"):
+            ia.run_assessment(today=date(2026, 6, 1))
         self.assertTrue(ia.is_fresh(date(2026, 6, 1)))
         self.assertFalse(ia.is_fresh(date(2026, 6, 2)))
+
+    def test_INTA5c_is_fresh_is_false_after_a_degraded_run(self):
+        """A run with a self-contradictory/degraded Gatherer receipt must
+        not be treated as fresh -- this is the exact bug: a single bad
+        run used to get frozen as today's cached answer and never
+        retried for the rest of the day."""
+        ia.core.ECOSYSTEM_INTELLIGENCE_PATH.write_text(json.dumps({"entities": []}))
+        degraded_packet = {
+            "contract": "rb.gatherer_daily_change_packet.v1",
+            "packet_id": "gatherer-test-degraded",
+            "changes": [], "hunter_escalations": [],
+            "coverage": {"source_checks": {}},
+            "run_receipt": {"schema_validation": "valid", "receipt_consistent": False},
+        }
+        with patch("gatherer.build_packet", return_value=degraded_packet), \
+             patch("gatherer.write_packet"):
+            ia.run_assessment(today=date(2026, 6, 1))
+        self.assertFalse(ia.is_fresh(date(2026, 6, 1)))
 
 
 # ---------------------------------------------------------------------------

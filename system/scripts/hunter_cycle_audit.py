@@ -13,6 +13,8 @@ WORKER_IDS = {
     "rb-two-day-research-burst",
     "rb-weekly-surplus-research",
     "rb-deep-research-usage-experiment",
+    "rb-hunter-90-unit-gap-cycle",
+    "rb-hunter-top10-category-competitor-cycle",
 }
 REPO_FILES = (
     "system/INTELLIGENCE_CYCLES.md",
