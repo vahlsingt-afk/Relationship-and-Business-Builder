@@ -69,11 +69,13 @@ def _strip_fences(text: str) -> str:
 
 
 def build_prompt(subjob: dict) -> str:
+    # hunter_cycle.py's prepare() wraps hunter.prepare_cycle()'s directive under job["directive"].
+    directive = subjob["job"]["directive"]
     target_key = subjob["target_key"]
-    playbook = subjob.get("suggested_playbook") or subjob["job"]["plan"]["payload_schema"]
-    payload_schema = subjob["job"]["plan"]["payload_schema"]
-    known_gap_ids = subjob["job"]["packet_requirements"]["known_gap_ids"]
-    discovery_domains = subjob["job"]["packet_requirements"]["discovery_domains"]
+    playbook = subjob.get("suggested_playbook") or directive["plan"]["payload_schema"]
+    payload_schema = directive["plan"]["payload_schema"]
+    known_gap_ids = directive["packet_requirements"]["known_gap_ids"]
+    discovery_domains = directive["packet_requirements"]["discovery_domains"]
     return f"""You are Hunter, RBB's public-source research agent, running through Claude Code
 as an execution engine rather than ChatGPT Deep Research. The research standard does not
 change with the engine.

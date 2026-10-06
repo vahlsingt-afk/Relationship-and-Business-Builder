@@ -53,8 +53,11 @@ def _priority_assignment(target_key="company:brand-example", playbook="enterpris
         "subjobs": [{
             "target_key": target_key, "rank": 1, "suggested_playbook": playbook,
             "job": {
-                "plan": {"payload_schema": "rb.enterprise_account_profile_research.v1"},
-                "packet_requirements": {"known_gap_ids": [f"gap:{target_key}:leadership"], "discovery_domains": ["technology stack"]},
+                "schema": "rb.hunter_job.v1",
+                "directive": {
+                    "plan": {"payload_schema": "rb.enterprise_account_profile_research.v1"},
+                    "packet_requirements": {"known_gap_ids": [f"gap:{target_key}:leadership"], "discovery_domains": ["technology stack"]},
+                },
             },
         }],
     }
