@@ -25,7 +25,11 @@ def env(tmp_path, monkeypatch):
     jobs = cache / "hunter_pending_jobs"
     jobs.mkdir(parents=True)
     cfg_path = tmp_path / "config.json"
-    cfg_path.write_text((ho.CONFIG_PATH).read_text(encoding="utf-8"), encoding="utf-8")
+    cfg = json.loads(ho.CONFIG_PATH.read_text(encoding="utf-8"))
+    # Tests pin their own engine states, so they don't depend on the live config.
+    cfg["engines"]["chatgpt_deep_research"]["enabled"] = True
+    cfg["engines"]["chatgpt_work"]["enabled"] = False
+    cfg_path.write_text(json.dumps(cfg), encoding="utf-8")
     monkeypatch.setattr(ho, "CONFIG_PATH", cfg_path)
     monkeypatch.setattr(ho, "CACHE_DIR", cache)
     monkeypatch.setattr(ho, "LEDGER_DIR", ledger)
@@ -389,3 +393,20 @@ def test_running_expiry_counts_and_becomes_terminal_when_exhausted(env):
     _backdate_last(13)  # past running_ttl_minutes (720)
     ho.expire_stale_leases()
     assert ho.job_states()[jid]["state"] == "terminal_failed"
+
+
+def test_work_snapshot_without_daily_window_applies_weekly_only(env):
+    from datetime import datetime as dt
+    _enable_work(env)
+    now = dt(2026, 10, 6, 18, 0, tzinfo=timezone.utc)
+    # 5-hour window is not a daily total: no daily used figure, no daily reset.
+    ho.CAPACITY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with ho.CAPACITY_PATH.open("a") as fh:
+        fh.write(json.dumps({"engine": "chatgpt_work", "recorded_at": "2026-10-06T18:00:00+00:00",
+            "daily_used_pct": None, "weekly_used_pct": 12, "five_hour_used_pct": 0,
+            "daily_reset_at": None, "weekly_reset_at": "2026-10-09T21:00:00+00:00",
+            "source": "test", "note": ""}) + "\n")
+    eff = ho.effective_reserve("chatgpt_work", now)
+    assert eff["burn_down"] is False            # no daily reset, so no emergency reserve
+    assert ho.engine_eligibility("chatgpt_work")[0] is True
+    assert ho._usable_pct(ho.latest_capacity("chatgpt_work"), "daily", eff) == float("inf")

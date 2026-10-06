@@ -249,11 +249,11 @@ def engine_eligibility(engine: str) -> tuple[bool, str]:
     if not snap:
         return False, "no capacity snapshot recorded"
     reserve = effective_reserve(engine)
-    if (snap.get("daily_used_pct") or 0) >= 100 - reserve["daily_pct"]:
+    if snap.get("daily_used_pct") is not None and snap["daily_used_pct"] >= 100 - reserve["daily_pct"]:
         return False, f"daily usage at reserve floor ({reserve['daily_pct']}% reserved)"
     if (snap.get("weekly_used_pct") or 0) >= 100 - reserve["weekly_pct"]:
         return False, f"weekly usage at reserve floor ({reserve['weekly_pct']}% reserved)"
-    if (snap.get("five_hour_used_pct") or 0) >= 100 - reserve["daily_pct"]:
+    if snap.get("five_hour_used_pct") is not None and snap["five_hour_used_pct"] >= 100 - reserve["daily_pct"]:
         return False, "short-window allowance at reserve floor"
     return True, "within reserve"
 
@@ -554,7 +554,10 @@ def cmd_signal(args) -> dict:
 
 
 def _usable_pct(snap: dict, period: str, reserve: dict) -> float:
-    """Percent of this period's total Hunter may still spend: 100 - reserve - used."""
+    """Percent of this period's total Hunter may still spend: 100 - reserve - used.
+    A period the engine doesn't expose (no used figure) imposes no limit."""
+    if snap.get(f"{period}_used_pct") is None:
+        return float("inf")
     used = snap.get(f"{period}_used_pct") or 0
     return max(0.0, 100 - reserve[f"{period}_pct"] - used)
 
@@ -611,7 +614,7 @@ def build_daily_plan(now: datetime | None = None) -> dict:
         weekly_usable = _usable_pct(snap, "weekly", reserve)
         daily_reset = _parse_dt(snap.get("daily_reset_at"))
         weekly_reset = _parse_dt(snap.get("weekly_reset_at"))
-        total_slots = int(min(daily_usable, weekly_usable) // cost)
+        total_slots = int(min(daily_usable, weekly_usable) // cost) if daily_usable != float("inf") else int(weekly_usable // cost)
         after_start = max(now, after_hours_start)
         after_end = min(daily_reset, _next_time_of_day(local, cfg["burn_down"]["after_hours_end"])) if daily_reset else None
         after_window_open = bool(after_end and after_end > after_start)
@@ -621,7 +624,8 @@ def build_daily_plan(now: datetime | None = None) -> dict:
         elif reserve["burn_down"]:
             day_slots = 0                        # expiring capacity goes to after-hours
         else:
-            day_slots = min(int((daily_usable * share) // cost), total_slots)
+            day_base = daily_usable if daily_usable != float("inf") else total_slots * cost
+            day_slots = min(int((day_base * share) // cost), total_slots)
         after_slots = total_slots - day_slots
         day_end = min(after_hours_start, daily_reset) if daily_reset else after_hours_start
         day_times = _spread(now, day_end, day_slots)
@@ -631,7 +635,7 @@ def build_daily_plan(now: datetime | None = None) -> dict:
         engine_times = [(t, "day") for t in day_times] + [(t, "after_hours") for t in after_times]
         engine_times.sort(key=lambda x: x[0])
         engines_report[name] = {
-            "daily_usable_pct": round(daily_usable, 1),
+            "daily_usable_pct": None if daily_usable == float("inf") else round(daily_usable, 1),
             "weekly_usable_pct": round(weekly_usable, 1),
             "reserve": reserve,
             "daily_reset_at": daily_reset and _iso(daily_reset),
