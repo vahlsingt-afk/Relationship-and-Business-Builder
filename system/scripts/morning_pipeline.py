@@ -791,6 +791,15 @@ def run_pipeline(
                 str(SCRIPTS_DIR / "hunter_batch.py"),
                 "report",
             ], required=False),
+            # CoS reserve review and today's engine-slot plan for the Hunter
+            # queue: day-window pacing plus after-hours use of bandwidth that
+            # expires at the next reset. Non-blocking; dispatch only leases
+            # jobs whose planned slot is due.
+            _step("hunter_orchestrator_daily_plan", [
+                py,
+                str(SCRIPTS_DIR / "hunter_orchestrator.py"),
+                "daily-plan",
+            ], required=False),
             # LinkedIn exports are ingested after refresh_all writes source
             # health. Recompute health from the now-current normalized files
             # so a successfully processed export is not reported as stale in
