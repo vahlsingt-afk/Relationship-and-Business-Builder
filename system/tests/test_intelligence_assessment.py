@@ -588,8 +588,16 @@ class TestINTA5_Integration(unittest.TestCase):
         # added. Isolate the same way TestINTA3d_WatchlistAutoApply does.
         self._orig_eco_path = ia.core.ECOSYSTEM_INTELLIGENCE_PATH
         ia.core.ECOSYSTEM_INTELLIGENCE_PATH = self.tmp_dir / "ecosystem_intelligence.json"
+        # 2026-10-06: these integration tests run the real run_assessment(),
+        # which calls gatherer.write_packet() with its import-time default
+        # path -- i.e. the REAL system/.cache/gatherer_daily_change.json.
+        # Confirmed: a test run had overwritten today's production Gatherer
+        # packet with a temp-path-referencing one. Stub the writer.
+        self._gatherer_write_patch = patch("gatherer.write_packet")
+        self._gatherer_write_patch.start()
 
     def tearDown(self):
+        self._gatherer_write_patch.stop()
         ia.CACHE_PATH = self._orig_cache
         ia.PASSIVE_EMAIL_CACHE = self._orig_pei
         ia.core.ECOSYSTEM_INTELLIGENCE_PATH = self._orig_eco_path
