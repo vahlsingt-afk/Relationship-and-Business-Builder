@@ -628,6 +628,19 @@ def build_daily_plan(now: datetime | None = None) -> dict:
         }
         for when, window in engine_times:
             slots.append({"engine": name, "run_after": _iso(when), "window": window})
+    # Engines without a reserve (Deep Research) have no bandwidth to protect, so they get
+    # a fixed daily slot count, paced across the day window. Without this the plan would
+    # leave their queued jobs unscheduled and dispatch would never lease them.
+    day_end_unreserved = after_hours_start
+    for name, count in pcfg.get("unreserved_engine_daily_slots", {}).items():
+        ecfg = cfg["engines"].get(name, {})
+        if not (ecfg.get("admitted") and ecfg.get("enabled")) or ecfg.get("reserve_applies"):
+            continue
+        times = _spread(now, day_end_unreserved, int(count))
+        engines_report[name] = {"planned_day_slots": len(times), "planned_after_hours_slots": 0,
+                                "reserve": None, "note": "no reserve; fixed daily slots"}
+        for when in times:
+            slots.append({"engine": name, "run_after": _iso(when), "window": "day"})
     slots.sort(key=lambda x: x["run_after"])
     assigned = []
     for job, slot in zip(queue, slots):
