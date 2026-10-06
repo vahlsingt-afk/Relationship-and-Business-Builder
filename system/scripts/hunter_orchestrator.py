@@ -131,13 +131,16 @@ def job_id_for(job: dict) -> str:
 
 
 def job_states() -> dict[str, dict]:
-    """Latest known record per job ID, derived from the lease ledger."""
-    latest: dict[str, dict] = {}
+    """Current known record per job ID: each event's fields folded over that job's
+    full history, in order, so a static fact set once (engine, job_path) survives a
+    later transition that doesn't repeat it, while a field the later event does set
+    (state, reason, at, not_before, ...) overrides the earlier value as intended."""
+    merged: dict[str, dict] = {}
     for row in _read_jsonl(LEASES_PATH):
         jid = row.get("job_id")
         if jid:
-            latest[jid] = row
-    return latest
+            merged.setdefault(jid, {}).update(row)
+    return merged
 
 
 def _transition(job_id: str, to_state: str, **fields) -> dict:

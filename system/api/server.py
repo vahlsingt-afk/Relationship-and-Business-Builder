@@ -1482,6 +1482,24 @@ def get_custom_gpt_openapi():
     )
 
 
+@app.get("/openapi-hunter.yaml", tags=["meta"], include_in_schema=False)
+def get_hunter_gpt_openapi():
+    """Minimal Action schema (getHunterAssignment + submitHunterPacket) for a
+    ChatGPT-native Task driving one Hunter engine. Import this URL directly
+    into a Task-hosting project's Action config -- it's deliberately separate
+    from /openapi-gpt.yaml so adding Hunter's two ops never competes with
+    that schema's own 30-operation Custom GPT Action cap."""
+    from fastapi.responses import PlainTextResponse
+
+    path = SYSTEM_DIR / "api" / "openapi_hunter_gpt.yaml"
+    if not path.exists():
+        raise HTTPException(status_code=404, detail="Hunter GPT schema not generated")
+    return PlainTextResponse(
+        path.read_text(encoding="utf-8"),
+        media_type="application/yaml",
+    )
+
+
 @app.head("/daily_brief", tags=["compute"], include_in_schema=False)
 def head_daily_brief(x_api_key: Optional[str] = Header(None)):
     """HEAD handler for /daily_brief — ChatGPT sends HEAD to verify endpoint before GET."""
@@ -14015,3 +14033,112 @@ def list_rendered_briefs(
         "briefs": sorted(results.values(), key=lambda x: x["date"], reverse=True),
         "total": len(results),
     }
+
+
+# ---------------------------------------------------------------------------
+# Hunter remote-engine endpoints (2026-10-06)
+#
+# A ChatGPT-native scheduled Task runs on OpenAI's own servers, not on this
+# Mac, and cannot read local files -- confirmed live: the paused "Hunter 90+
+# Gap Cycle" Task's last real run reported "the local RBB control plane files
+# system/research/HUNTER.md and system/scripts/hunter_cycle.py are not
+# mounted here" and correctly refused to guess rather than bypass Hunter's
+# queue logic. These two routes are what let a Task reach the real, live
+# Hunter queue instead, over the same Cloudflare tunnel getDailyBrief already
+# uses. Both are thin wrappers around hunter_remote_assignment.py, which
+# itself reuses hunter_orchestrator.py's existing engine_eligibility/leasing/
+# sweep/complete internals -- not a second implementation of Hunter's
+# governance. See system/research/HUNTER.md's "Multi-engine dispatch"
+# section.
+#
+# Intended setup: one scheduled Task per ChatGPT engine (Deep Research, Work),
+# each in its own project, each calling getHunterAssignment with its own
+# engine value. Because both draw from the one shared queue, a job Deep
+# Research couldn't take (blocked, no capacity) is still there for the next
+# Work Task run to pick up -- the fall-through happens at the queue level,
+# not inside either Task's own prompt.
+# ---------------------------------------------------------------------------
+
+_HUNTER_REMOTE_ENGINES = ("chatgpt_deep_research", "chatgpt_work")
+
+
+@app.get(
+    "/hunter/assignment",
+    tags=["compute"],
+    operation_id="getHunterAssignment",
+    responses={401: {"description": "Missing or invalid x-api-key"}},
+)
+def get_hunter_assignment(
+    engine: Literal["chatgpt_deep_research", "chatgpt_work"] = Query(
+        ..., description="Which ChatGPT engine is asking: chatgpt_deep_research or chatgpt_work. "
+                          "Determines which reserve this call is checked against and which engine "
+                          "the returned job is leased to."),
+    x_api_key: Optional[str] = Header(None),
+):
+    """Call this first, every run, before doing any research. Returns either:
+
+    {"status": "blocked", "reason": "..."} -- no capacity, no eligible job, or
+    the queue is empty. Stop here. Make no further calls this run. A blocked
+    response is not a failure; it means Hunter's own governance decided this
+    engine should not spend capacity right now (e.g. a reserve floor, or
+    nothing left in the queue since the last run already took it).
+
+    {"status": "assigned", "job_id": "...", "assignment": {...}} -- a real,
+    live Hunter assignment, identical in shape to what hunter_cycle.py
+    prepare-priority writes locally: target(s), playbook, known gap IDs,
+    discovery domains, and the payload schema name. Research it following
+    system/research/HUNTER.md's method exactly (uploaded as this project's
+    knowledge) -- the engine never changes the research standard. The job is
+    leased and marked running the moment this call returns: there is no
+    separate "start" step for a remote engine, unlike the local launchd-
+    dispatched path, because this HTTP call is itself the proof the engine is
+    actively working right now.
+
+    job_id is required by submitHunterPacket -- keep it for that call."""
+    _auth(x_api_key)
+    import hunter_remote_assignment as hra
+    return hra.remote_assign(engine)
+
+
+class HunterSubmitIn(BaseModel):
+    job_id: str = Field(..., description="The exact job_id returned by this run's getHunterAssignment call. "
+                                          "Never invent one or reuse one from a different run.")
+    engine: Literal["chatgpt_deep_research", "chatgpt_work"] = Field(
+        ..., description="Must match the engine value this run's getHunterAssignment call used.")
+    packet: dict = Field(..., description="The complete Hunter research packet, or a bundle response for a "
+                                           "two-subjob assignment, exactly as HUNTER.md's packet schema and "
+                                           "response_contract require -- one inline JSON object, never a "
+                                           "downloadable attachment and never prose around the JSON.")
+
+
+@app.post(
+    "/hunter/submit",
+    tags=["write"],
+    operation_id="submitHunterPacket",
+    responses={401: {"description": "Missing or invalid x-api-key"}},
+)
+def post_hunter_submit(body: HunterSubmitIn, x_api_key: Optional[str] = Header(None)):
+    """Call once, after finishing the research getHunterAssignment handed you.
+
+    Runs the packet through the exact same validator every other Hunter
+    engine's output goes through (hunter_cycle.py's sweep/finalize) -- this
+    route does not itself relax or skip that check, and does not write
+    canonical RBB records directly; validated packets still go through the
+    existing, separately reviewed ingest/promotion path.
+
+    Returns {"ok": true, "receipt": {...}} when the packet validated, or
+    {"ok": false, "errors": [...]} otherwise -- a rejection is not silently
+    discarded: the job returns to the queue (or, past the retry limit, is
+    flagged terminal_failed for Todd), it is never marked done on a rejected
+    packet, and it is never claimed "research completed" from this response
+    alone -- "ok": true means the packet passed validation, not that its
+    findings have been promoted to canonical state."""
+    _auth(x_api_key)
+    import hunter_remote_assignment as hra
+    result = hra.remote_submit(body.job_id, body.engine, body.packet)
+    if result.get("ok"):
+        al.log_mutation_executed(f"submitHunterPacket: job_id={body.job_id} engine={body.engine}", source="POST /hunter/submit")
+    else:
+        al.log_mutation_rejected(f"submitHunterPacket: job_id={body.job_id} engine={body.engine}",
+                                  reason=json.dumps(result.get("errors") or result.get("receipt"))[:300])
+    return result

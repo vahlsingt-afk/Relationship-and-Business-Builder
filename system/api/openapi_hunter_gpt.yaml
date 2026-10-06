@@ -1,0 +1,179 @@
+openapi: 3.1.0
+info:
+  title: RBB Hunter Remote Engine API
+  description: Minimal Action schema for a ChatGPT-native scheduled Task driving one Hunter engine (chatgpt_deep_research
+    or chatgpt_work). Backed by the same live server as getDailyBrief -- see system/api/server.py and
+    system/research/HUNTER.md's "Multi-engine dispatch" section.
+  version: 0.1.0
+servers:
+- url: https://rb-api.bridgepointops.org
+  description: RB API tunnel
+paths:
+  /hunter/assignment:
+    get:
+      tags:
+      - compute
+      summary: Get Hunter Assignment
+      description: 'Call this first, every run, before doing any research. Returns either:
+
+
+        {"status": "blocked", "reason": "..."} -- no capacity, no eligible job, or the queue is empty.
+        Stop here. Make no further calls this run. A blocked response is not a failure; it means Hunter''s
+        own governance decided this engine should not spend capacity right now.
+
+
+        {"status": "assigned", "job_id": "...", "assignment": {...}} -- a real, live Hunter assignment:
+        target(s), playbook, known gap IDs, discovery domains, and the payload schema name. Research it
+        following this project''s uploaded HUNTER.md method exactly -- the engine never changes the research
+        standard. The job is leased and marked running the moment this call returns.
+
+
+        job_id is required by submitHunterPacket -- keep it for that call.'
+      operationId: getHunterAssignment
+      parameters:
+      - name: engine
+        in: query
+        required: true
+        schema:
+          enum:
+          - chatgpt_deep_research
+          - chatgpt_work
+          type: string
+          description: 'Which ChatGPT engine is asking: chatgpt_deep_research or chatgpt_work. Determines
+            which reserve this call is checked against and which engine the returned job is leased to.'
+          title: Engine
+        description: 'Which ChatGPT engine is asking: chatgpt_deep_research or chatgpt_work. Determines
+          which reserve this call is checked against and which engine the returned job is leased to.'
+      - name: x-api-key
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: X-Api-Key
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '401':
+          description: Missing or invalid x-api-key
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /hunter/submit:
+    post:
+      tags:
+      - write
+      summary: Post Hunter Submit
+      description: 'Call once, after finishing the research getHunterAssignment handed you.
+
+
+        Runs the packet through the exact same validator every other Hunter engine''s output goes through
+        -- this does not write canonical RBB records directly; validated packets still go through the
+        existing, separately reviewed ingest/promotion path.
+
+
+        Returns {"ok": true, "receipt": {...}} when the packet validated, or {"ok": false, "errors": [...]}
+        otherwise. A rejection is not silently discarded: the job returns to the queue (or, past the retry
+        limit, is flagged terminal_failed for Todd). "ok": true means the packet passed validation, not
+        that its findings have been promoted to canonical state.'
+      operationId: submitHunterPacket
+      parameters:
+      - name: x-api-key
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: X-Api-Key
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HunterSubmitIn'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '401':
+          description: Missing or invalid x-api-key
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    HunterSubmitIn:
+      properties:
+        job_id:
+          type: string
+          title: Job Id
+          description: The exact job_id returned by this run's getHunterAssignment call. Never invent
+            one or reuse one from a different run.
+        engine:
+          type: string
+          enum:
+          - chatgpt_deep_research
+          - chatgpt_work
+          title: Engine
+          description: Must match the engine value this run's getHunterAssignment call used.
+        packet:
+          additionalProperties: true
+          type: object
+          title: Packet
+          description: The complete Hunter research packet, or a bundle response for a two-subjob assignment,
+            exactly as HUNTER.md's packet schema and response_contract require -- one inline JSON object,
+            never a downloadable attachment and never prose around the JSON.
+      type: object
+      required:
+      - job_id
+      - engine
+      - packet
+      title: HunterSubmitIn
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+        input:
+          title: Input
+        ctx:
+          type: object
+          title: Context
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
