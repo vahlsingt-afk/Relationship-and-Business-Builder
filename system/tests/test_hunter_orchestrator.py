@@ -410,3 +410,38 @@ def test_work_snapshot_without_daily_window_applies_weekly_only(env):
     assert eff["burn_down"] is False            # no daily reset, so no emergency reserve
     assert ho.engine_eligibility("chatgpt_work")[0] is True
     assert ho._usable_pct(ho.latest_capacity("chatgpt_work"), "daily", eff) == float("inf")
+
+
+# ---- scoped per-engine dispatch (three independent automations) ----
+
+def test_scoped_dispatch_ignores_shared_plan_and_other_engines(env):
+    _write_job(env, "a", "priority-a", ["company:a"])
+    # A daily plan exists but assigns this job to a different engine entirely --
+    # scoped dispatch should not defer to it at all.
+    ho.DAILY_PLAN_PATH.parent.mkdir(parents=True, exist_ok=True)
+    jid = ho.job_id_for(json.loads((env["jobs"] / "a.json").read_text()))
+    ho.DAILY_PLAN_PATH.write_text(json.dumps({"planned": [{"job_id": jid, "engine": "chatgpt_work", "run_after": "2000-01-01T00:00:00+00:00"}]}))
+    res = ho.cmd_dispatch(_args(confirm=True, engine="chatgpt_deep_research"))
+    assert res["results"][0]["engine"] == "chatgpt_deep_research"
+    assert ho.job_states()[jid]["state"] == "leased"
+
+
+def test_scoped_dispatch_rejects_unknown_engine(env):
+    with pytest.raises(SystemExit):
+        ho.cmd_dispatch(_args(confirm=False, engine="not_a_real_engine"))
+
+
+def test_scoped_dispatch_leaves_job_for_other_engines_when_ineligible(env):
+    _write_job(env, "a", "priority-a", ["company:a"])
+    res = ho.cmd_dispatch(_args(confirm=True, engine="chatgpt_work"))  # disabled by default
+    assert res["results"] == []
+    assert ho.job_states().get(ho.job_id_for(json.loads((env["jobs"] / "a.json").read_text())), {}).get("state") in (None, "queued")
+
+
+def test_two_scoped_engines_do_not_double_claim_the_same_job(env):
+    _write_job(env, "a", "priority-a", ["company:a"])
+    first = ho.cmd_dispatch(_args(confirm=True, engine="chatgpt_deep_research"))
+    jid = first["results"][0]["job_id"]
+    assert ho.job_states()[jid]["state"] == "leased"
+    second = ho.cmd_dispatch(_args(confirm=True, engine="chatgpt_deep_research"))
+    assert second["results"] == []  # queue is now empty; no re-lease of the same job

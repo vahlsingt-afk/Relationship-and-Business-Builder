@@ -401,6 +401,9 @@ def cmd_plan(_args) -> dict:
 
 def cmd_dispatch(args) -> dict:
     cfg = load_config()
+    scoped_engine = getattr(args, "engine", None)
+    if scoped_engine and scoped_engine not in cfg["engines"]:
+        raise SystemExit(f"unknown engine: {scoped_engine}")
     if args.confirm:
         expire_stale_leases()
     ok_mode, mode_reason = mode_throughput_ok()
@@ -410,19 +413,27 @@ def cmd_dispatch(args) -> dict:
     for j in queued_jobs():
         if not _not_before_passed(j["job_id"]):
             continue
-        # Today's plan decides WHEN: a job leases only once its planned slot is due.
-        # Jobs with no plan entry (or a future slot) wait without blocking the queue.
-        slot = plan_slot_for(j["job_id"]) if DAILY_PLAN_PATH.exists() else None
-        if DAILY_PLAN_PATH.exists() and slot is None:
-            results.append({"job_id": j["job_id"], "action": "waiting_for_planned_slot"})
-            continue
-        engine = None
-        preferred = [slot["engine"]] if slot else []
-        order = preferred + [n for n in sorted(cfg["engines"], key=lambda n: cfg["engines"][n]["preference"]) if n not in preferred]
-        for name in order:
-            if name in cfg["routing"]["task_fit"]["default"] and engine_eligibility(name)[0]:
-                engine = name
-                break
+        if scoped_engine:
+            # Three independent automations, one per engine: each paces itself on its own
+            # schedule instead of deferring to one shared plan. No preference order between
+            # engines here -- this run only ever considers the one engine it was scoped to.
+            engine = scoped_engine if (
+                scoped_engine in cfg["routing"]["task_fit"]["default"] and engine_eligibility(scoped_engine)[0]
+            ) else None
+        else:
+            # Today's plan decides WHEN: a job leases only once its planned slot is due.
+            # Jobs with no plan entry (or a future slot) wait without blocking the queue.
+            slot = plan_slot_for(j["job_id"]) if DAILY_PLAN_PATH.exists() else None
+            if DAILY_PLAN_PATH.exists() and slot is None:
+                results.append({"job_id": j["job_id"], "action": "waiting_for_planned_slot"})
+                continue
+            engine = None
+            preferred = [slot["engine"]] if slot else []
+            order = preferred + [n for n in sorted(cfg["engines"], key=lambda n: cfg["engines"][n]["preference"]) if n not in preferred]
+            for name in order:
+                if name in cfg["routing"]["task_fit"]["default"] and engine_eligibility(name)[0]:
+                    engine = name
+                    break
         if engine is None:
             break  # higher-ranked job waits; lower-ranked work must not jump ahead
         if not args.confirm:
@@ -732,6 +743,9 @@ def build_parser() -> argparse.ArgumentParser:
     sub.add_parser("plan").set_defaults(fn=cmd_plan)
     d = sub.add_parser("dispatch")
     d.add_argument("--confirm", action="store_true")
+    d.add_argument("--engine", help="Scope this run to one engine only (e.g. chatgpt_work), ignoring the "
+                                     "shared daily plan and the other engines' preference order -- for three "
+                                     "independent per-engine automations instead of one shared dispatcher.")
     d.set_defaults(fn=cmd_dispatch)
     r = sub.add_parser("release")
     r.add_argument("job_id")
