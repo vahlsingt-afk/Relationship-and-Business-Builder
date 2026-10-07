@@ -203,3 +203,43 @@ def test_dispatch_contains_a_transport_exception_to_one_job(env, monkeypatch):
     assert "transport blew up" in res["results"][0]["transport_error"]
     # dispatch itself did not raise, and the lease is still recorded
     assert ho.job_states()[res["results"][0]["job_id"]]["state"] == "leased"
+
+
+# ---- capacity-blocked handling ----
+
+def test_parse_reset_time_extracts_next_occurrence():
+    iso = hct._parse_reset_time("You've hit your session limit · resets 4pm (America/Chicago)")
+    assert iso is not None
+    parsed = __import__("datetime").datetime.fromisoformat(iso)
+    assert parsed.tzinfo is not None
+
+
+def test_parse_reset_time_returns_none_for_unrecognized_text():
+    assert hct._parse_reset_time("some other error entirely") is None
+
+
+def test_capacity_blocked_releases_without_spending_an_attempt(env, monkeypatch):
+    assignment = _priority_assignment()
+    jid = _lease_one_job(env, assignment)
+
+    def boom(prompt):
+        raise hct.ClaudeCapacityBlocked("You've hit your session limit · resets 4pm (America/Chicago)", None)
+    monkeypatch.setattr(hct, "run_claude", boom)
+
+    out = hct.cmd_run(type("A", (), {"job_id": jid, "dry_run": False})())
+    assert out["ok"] is False
+    assert out["capacity_blocked"] is True
+    assert ho.job_states()[jid]["state"] == "queued"
+    assert any(j["job_id"] == jid for j in ho.queued_jobs())
+
+
+def test_capacity_blocked_with_unparseable_reset_still_requeues(env, monkeypatch):
+    jid = _lease_one_job(env, _priority_assignment())
+
+    def boom(prompt):
+        raise hct.ClaudeCapacityBlocked("rate limit hit, try later", None)
+    monkeypatch.setattr(hct, "run_claude", boom)
+
+    out = hct.cmd_run(type("A", (), {"job_id": jid, "dry_run": False})())
+    assert out["not_before"]  # falls back to a default delay rather than erroring
+    assert ho.job_states()[jid]["state"] == "queued"

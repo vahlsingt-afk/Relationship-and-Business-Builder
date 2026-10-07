@@ -37,8 +37,9 @@ import shutil
 import subprocess
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS_DIR))
@@ -47,7 +48,44 @@ import hunter_cycle  # noqa: E402 -- only for BUNDLE_SCHEMA; sweep() itself runs
 
 ROOT = SCRIPTS_DIR.parent.parent  # repo root: hunter_orchestrator.py's ROOT is system/
 ALLOWED_TOOLS = "Read,Glob,Grep,WebSearch"
-CLAUDE_TIMEOUT_S = 900
+# 2026-10-07: a real Hunter cycle (3 files read, extensive web search, atomized
+# evidence) ran 19 real minutes before hitting a session limit -- it was still
+# working, not stuck. 900s was observed failing on exactly this kind of run.
+CLAUDE_TIMEOUT_S = 2700
+
+
+class ClaudeCapacityBlocked(Exception):
+    """Claude's own session/weekly limit was hit mid-run. Not a failure of this
+    job -- the same assignment should be retried later, with no attempt spent."""
+    def __init__(self, message: str, reset_at: str | None):
+        super().__init__(message)
+        self.reset_at = reset_at
+
+
+_RESET_PATTERN = re.compile(r"resets?\s+(\d{1,2})\s*(am|pm)\s*\(([^)]+)\)", re.IGNORECASE)
+
+
+def _parse_reset_time(text: str) -> str | None:
+    """Pulls a reset time out of a message like 'resets 4pm (America/Chicago)'
+    and returns the next real occurrence as an ISO timestamp, or None if the
+    text doesn't match -- callers fall back to a safe default delay."""
+    match = _RESET_PATTERN.search(text or "")
+    if not match:
+        return None
+    hour, meridiem, tz_name = match.groups()
+    hour = int(hour) % 12 + (12 if meridiem.lower() == "pm" else 0)
+    try:
+        tz = ZoneInfo(tz_name.strip())
+    except Exception:  # noqa: BLE001 -- an unrecognized zone name falls back, never raises
+        return None
+    now = datetime.now(tz)
+    candidate = now.replace(hour=hour, minute=0, second=0, microsecond=0)
+    if candidate <= now:
+        candidate += timedelta(days=1)
+    return candidate.astimezone(timezone.utc).isoformat()
+
+
+_CAPACITY_PHRASES = ("session limit", "rate limit", "usage limit", "hit your limit")
 
 
 def _claude_bin() -> str:
@@ -112,6 +150,11 @@ def run_claude(prompt: str) -> dict:
         raise RuntimeError(f"claude exited {proc.returncode}: {proc.stderr[:500]}")
     envelope = json.loads(proc.stdout)
     if envelope.get("is_error"):
+        result_text = str(envelope.get("result") or "")
+        is_capacity = envelope.get("api_error_status") == 429 or any(
+            phrase in result_text.lower() for phrase in _CAPACITY_PHRASES)
+        if is_capacity:
+            raise ClaudeCapacityBlocked(result_text, _parse_reset_time(result_text))
         raise RuntimeError(f"claude reported an error: {envelope.get('result')}")
     packet = json.loads(_strip_fences(envelope["result"]))
     return {"packet": packet, "envelope": envelope}
@@ -182,6 +225,22 @@ def cmd_run(args) -> dict:
     for subjob in subjobs:
         try:
             results.append(run_claude(build_prompt(subjob)))
+        except ClaudeCapacityBlocked as exc:
+            # Claude's own limit, not this job's fault: release the lease without spending an
+            # attempt, rather than falling through to the generic failure path below. Remaining
+            # subjobs would hit the same limit, so stop here instead of burning more of it.
+            not_before = exc.reset_at or ho._iso(ho._now() + timedelta(hours=1))
+            telemetry = {
+                "engine": "claude_code_headless", "started_at": started_at, "ended_at": ho._iso(ho._now()),
+                "subjob_count": len(subjobs), "errors": [str(exc)], "capacity_blocked": True,
+                "not_before": not_before,
+            }
+            tele_path = ho.LEDGER_DIR / f"claude_transport_{jid}.telemetry.json"
+            tele_path.parent.mkdir(parents=True, exist_ok=True)
+            tele_path.write_text(json.dumps(telemetry, indent=2) + "\n", encoding="utf-8")
+            ho.cmd_release(argparse.Namespace(job_id=jid, reason="capacity_blocked", not_before=not_before))
+            return {"ok": False, "job_id": jid, "capacity_blocked": True, "not_before": not_before,
+                    "errors": [str(exc)], "telemetry": telemetry}
         except Exception as exc:  # noqa: BLE001 -- surfaced in the validation summary, never swallowed
             errors.append(f"{subjob['target_key']}: {exc}")
 
