@@ -14,21 +14,9 @@ paths:
       tags:
       - compute
       summary: Get Hunter Assignment
-      description: 'Call this first, every run, before doing any research. Returns either:
-
-
-        {"status": "blocked", "reason": "..."} -- no capacity, no eligible job, or the queue is empty.
-        Stop here. Make no further calls this run. A blocked response is not a failure; it means Hunter''s
-        own governance decided this engine should not spend capacity right now.
-
-
-        {"status": "assigned", "job_id": "...", "assignment": {...}} -- a real, live Hunter assignment:
-        target(s), playbook, known gap IDs, discovery domains, and the payload schema name. Research it
-        following this project''s uploaded HUNTER.md method exactly -- the engine never changes the research
-        standard. The job is leased and marked running the moment this call returns.
-
-
-        job_id is required by submitHunterPacket -- keep it for that call.'
+      description: Call first, every run. Returns {"status":"blocked","reason":...} (stop, no further
+        calls) or {"status":"assigned","job_id":...,"assignment":{...}} with target(s), gaps, and payload_schema.
+        Research per HUNTER.md, then call submitHunterPacket with the same job_id.
       operationId: getHunterAssignment
       parameters:
       - name: engine
@@ -39,11 +27,9 @@ paths:
           - chatgpt_deep_research
           - chatgpt_work
           type: string
-          description: 'Which ChatGPT engine is asking: chatgpt_deep_research or chatgpt_work. Determines
-            which reserve this call is checked against and which engine the returned job is leased to.'
+          description: 'Which engine is asking: chatgpt_deep_research or chatgpt_work.'
           title: Engine
-        description: 'Which ChatGPT engine is asking: chatgpt_deep_research or chatgpt_work. Determines
-          which reserve this call is checked against and which engine the returned job is leased to.'
+        description: 'Which engine is asking: chatgpt_deep_research or chatgpt_work.'
       - name: x-api-key
         in: header
         required: false
@@ -71,18 +57,9 @@ paths:
       tags:
       - write
       summary: Post Hunter Submit
-      description: 'Call once, after finishing the research getHunterAssignment handed you.
-
-
-        Runs the packet through the exact same validator every other Hunter engine''s output goes through
-        -- this does not write canonical RBB records directly; validated packets still go through the
-        existing, separately reviewed ingest/promotion path.
-
-
-        Returns {"ok": true, "receipt": {...}} when the packet validated, or {"ok": false, "errors": [...]}
-        otherwise. A rejection is not silently discarded: the job returns to the queue (or, past the retry
-        limit, is flagged terminal_failed for Todd). "ok": true means the packet passed validation, not
-        that its findings have been promoted to canonical state.'
+      description: Call once, after finishing the research getHunterAssignment assigned. Submits the packet
+        for validation against HUNTER.md's schema. Returns {"ok":true,"receipt":...} or {"ok":false,"errors":...};
+        a rejection returns the job to the queue automatically.
       operationId: submitHunterPacket
       parameters:
       - name: x-api-key
@@ -129,8 +106,7 @@ components:
         job_id:
           type: string
           title: Job Id
-          description: The exact job_id returned by this run's getHunterAssignment call. Never invent
-            one or reuse one from a different run.
+          description: The job_id returned by this run's getHunterAssignment call.
         engine:
           type: string
           enum:
@@ -143,8 +119,7 @@ components:
           type: object
           title: Packet
           description: The complete Hunter research packet, or a bundle response for a two-subjob assignment,
-            exactly as HUNTER.md's packet schema and response_contract require -- one inline JSON object,
-            never a downloadable attachment and never prose around the JSON.
+            per HUNTER.md's packet schema.
       type: object
       required:
       - job_id
