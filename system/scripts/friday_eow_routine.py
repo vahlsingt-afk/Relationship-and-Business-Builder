@@ -60,6 +60,18 @@ codebase's other hooks).
                                 the week without a human check is exactly the
                                 silent-auto-commit this architecture avoids;
                                 this only surfaces that it's ready and waiting.
+  7. Cross-artifact consistency -- RB defect 2026-09-30 (Five Guys), "Reconciliation
+                                control" recommendation: for every active
+                                engagement, compares Blue Sheet last_review_date,
+                                Background Brief date, evidence-ledger date, and
+                                (when linked) the vendor Master Account Plan's
+                                own refresh date -- flags drift beyond 14 days
+                                between the most-recently-touched artifact and
+                                any lagging one. Date-only, same restraint as
+                                account_background_brief.py's structural
+                                tech-stack conflict check: never compares
+                                document CONTENT, only timestamps already on
+                                record, so it can't fabricate a conflict.
 
 Usage:
     python3 friday_eow_routine.py            # human-readable summary
@@ -81,6 +93,9 @@ import rb_core as core  # noqa: E402
 import eolms  # noqa: E402
 import weekly_planning as wp  # noqa: E402
 
+sys.path.insert(0, str(core.SYSTEM_DIR.parent / "master_account_plans" / "_engine"))
+import mp_common  # noqa: E402
+
 RESULT_PATH = core.SYSTEM_DIR / ".cache" / "friday_closeout_result.json"
 REPORT_PATH = core.SYSTEM_DIR / "friday_closeout.md"
 BACKUPS_DIR = core.SYSTEM_DIR / "_backups"
@@ -100,6 +115,12 @@ CUSTOMERS_PROSPECTS_REGISTRY_PATH = core.SYSTEM_DIR.parent / "customers_prospect
 CUSTOMERS_PROSPECTS_ACCOUNTS_DIR = core.SYSTEM_DIR.parent / "customers_prospects" / "accounts"
 
 FRESHNESS_THRESHOLD_DAYS = 7
+
+# Looser than FRESHNESS_THRESHOLD_DAYS on purpose -- this measures DRIFT
+# between artifacts (e.g. Background Brief regenerates daily, so it's
+# almost always a few days ahead of a hand-reviewed Blue Sheet even in
+# normal, healthy operation), not absolute staleness of any one file.
+ARTIFACT_DRIFT_THRESHOLD_DAYS = 14
 
 # Every review_queue.json in the system -- ambiguous downstream matches
 # that intelligence_cascade.py (and the engines it calls) deliberately
@@ -265,6 +286,101 @@ def check_freshness(*, today: date | None = None) -> list[dict]:
     except (OSError, json.JSONDecodeError) as exc:
         findings.append({"target": "customers_prospects_registry.json", "days_since_updated": None,
                           "stale": True, "reason": f"could not read registry: {exc}"})
+
+    return findings
+
+
+def _map_dates_by_blue_sheet_slug() -> dict[str, str]:
+    """vendor_slug's last_ingested_at date, keyed by every Blue Sheet slug
+    that vendor's ranked_portfolio.json links to via linked_blue_sheet_slug
+    -- e.g. Worldpay's MAP links to both 'del-taco' and 'five-guys'. Best-
+    effort per vendor: one vendor's missing/unreadable portfolio file never
+    blocks reading another's."""
+    dates: dict[str, str] = {}
+    try:
+        registry = mp_common.load_registry()
+    except Exception:  # noqa: BLE001
+        return dates
+    for entry in registry.get("registry", []):
+        vendor_slug = entry.get("vendor_slug")
+        last_ingested = entry.get("last_ingested_at")
+        if not vendor_slug or not last_ingested:
+            continue
+        try:
+            portfolio = mp_common.load_json(mp_common.vendor_dir(vendor_slug) / "ranked_portfolio.json")
+        except Exception:  # noqa: BLE001
+            continue
+        for row in portfolio or []:
+            slug = row.get("linked_blue_sheet_slug")
+            if slug:
+                dates[slug] = last_ingested
+    return dates
+
+
+def check_artifact_consistency(*, today: date | None = None) -> list[dict]:
+    """RB defect 2026-09-30 (Five Guys Blue Sheet refresh gap), "Reconciliation
+    control" recommendation: a weekly cross-artifact consistency check for
+    every active engagement -- Blue Sheet last_review_date, Background Brief
+    date, evidence-ledger date, and (when linked) the vendor Master Account
+    Plan's own last_ingested_at -- flagging drift between them for human
+    review, never synthesizing a judgment about which artifact is "right."
+    This generalizes the one-off Five Guys/Del Taco fix (RB 2026-10-08) into
+    the standing check the original defect doc asked for.
+
+    Deliberately date-only, same restraint as _find_structural_tech_stack_
+    conflicts() in account_background_brief.py: comparing the actual
+    narrative CONTENT of these documents for contradictions is NLP-shaped
+    and false-positive-prone; this only compares timestamps already
+    recorded as structured fields, so it can never fabricate a conflict
+    that isn't really there."""
+    today = today or date.today()
+    findings: list[dict] = []
+    try:
+        registry = json.loads(CUSTOMERS_PROSPECTS_REGISTRY_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        return [{"account_id": None, "error": f"could not read registry: {exc}"}]
+
+    map_dates = _map_dates_by_blue_sheet_slug()
+
+    for entry in registry.get("registry", []):
+        if entry.get("engagement_tier") != "active_engagement":
+            continue
+        account_id = entry.get("account_id", "")
+        slug = account_id.removeprefix("acct-")
+
+        raw_dates = {
+            "blue_sheet_last_review": entry.get("last_review_date"),
+            "background_brief": entry.get("latest_background_brief_date"),
+            "evidence_ledger": entry.get("last_evidence_date"),
+        }
+        if slug in map_dates:
+            raw_dates["master_account_plan"] = map_dates[slug]
+
+        parsed: dict[str, date] = {}
+        for name, raw in raw_dates.items():
+            if not raw:
+                continue
+            try:
+                parsed[name] = date.fromisoformat(raw[:10])
+            except ValueError:
+                continue
+        if len(parsed) < 2:
+            continue  # nothing to compare drift against
+
+        newest_name = max(parsed, key=lambda k: parsed[k])
+        newest_date = parsed[newest_name]
+        lagging = {
+            name: (newest_date - d).days
+            for name, d in parsed.items()
+            if name != newest_name and (newest_date - d).days > ARTIFACT_DRIFT_THRESHOLD_DAYS
+        }
+        if lagging:
+            findings.append({
+                "account_id": account_id,
+                "newest_artifact": newest_name,
+                "newest_date": newest_date.isoformat(),
+                "lagging_artifacts": lagging,
+            })
 
     return findings
 
@@ -435,6 +551,7 @@ def run(*, today: date | None = None) -> dict:
         "weekly_plan": review_weekly_plan(),
         "loops": review_loops(today=today),
         "freshness": check_freshness(today=today),
+        "artifact_consistency": check_artifact_consistency(today=today),
         "review_queues": review_review_queues(today=today),
         "weekly_closeout": weekly_closeout(today=today),
         "backup": backup(today=today),
@@ -489,6 +606,25 @@ def _render_report(result: dict) -> str:
             lines.append(f"- ⚠ **{f['target']}** — {days_str}{reason}")
     else:
         lines.append("Everything checked is within 7 days.")
+    lines.append("")
+
+    lines.append("## Cross-Artifact Consistency (active engagements)\n")
+    artifact_findings = result.get("artifact_consistency") or []
+    real_findings = [f for f in artifact_findings if not f.get("error")]
+    if any(f.get("error") for f in artifact_findings):
+        for f in artifact_findings:
+            if f.get("error"):
+                lines.append(f"*{f['error']}*")
+    if real_findings:
+        for f in real_findings:
+            lagging_str = "; ".join(f"{name} {days}d behind" for name, days in f["lagging_artifacts"].items())
+            lines.append(
+                f"- ⚠ **{f['account_id']}** — newest is {f['newest_artifact']} ({f['newest_date']}); {lagging_str}"
+            )
+    elif not artifact_findings:
+        lines.append("No active engagement with 2+ comparable artifact dates found.")
+    else:
+        lines.append(f"No artifact drift beyond {ARTIFACT_DRIFT_THRESHOLD_DAYS}d across active engagements.")
     lines.append("")
 
     lines.append("## Downstream Review Queues (ambiguous matches awaiting Todd)\n")
