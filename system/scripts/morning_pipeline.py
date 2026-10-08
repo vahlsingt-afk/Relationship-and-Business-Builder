@@ -1148,6 +1148,14 @@ def run_pipeline(
             _step("hunter_research_priority_queue", [
                 py, str(SCRIPTS_DIR / "hunter_research_priority_queue.py"),
             ], required=False),
+            # Lease the next eligible job to each non-automatic ChatGPT engine (Deep
+            # Research, Work) and write it as a flat file into the Drive-Desktop-synced
+            # inbox folder. A scheduled Task reads it via its own Drive skill -- no API
+            # call either direction. Non-blocking; a blocked/empty engine just clears
+            # its stale file rather than failing the pipeline.
+            _step("hunter_drive_assignment_export", [
+                py, str(SCRIPTS_DIR / "hunter_drive_assignment_export.py"), "--confirm",
+            ], required=False),
             # Convert verified vulnerability signals plus incumbent exposure
             # into review-first buying-window hypotheses and retain outcome
             # history for later score calibration.
