@@ -223,9 +223,15 @@ class TestRecurrenceDetection(_IsolatedLedgerMixin, unittest.TestCase):
     _prior_self_audit_recurrences() for full context."""
 
     def _close_open_loop(self, reason: str) -> None:
+        # RB-2026-10-08: cmd_loop_close() now refuses to close a self-audit
+        # loop on an ordinary (unverified-belief) reason -- these tests are
+        # deliberately simulating a human closing one without automated
+        # confirmation, which is exactly the scenario the override prefix
+        # exists for.
         loop_id = sas._find_open_self_audit_loop_id()
-        args = SimpleNamespace(id=loop_id, reason=reason, dry_run=False)
-        mutations.cmd_loop_close(args)
+        args = SimpleNamespace(id=loop_id, reason=f"{mutations.SELF_AUDIT_OVERRIDE_PREFIX} {reason}", dry_run=False)
+        rc = mutations.cmd_loop_close(args)
+        assert rc == 0, f"expected close to succeed with override prefix, got rc={rc}"
 
     def test_no_recurrence_annotation_on_a_genuinely_first_finding(self):
         action = sas.apply_loop_update({"clean": False, "all_findings": ["issue A"]})
@@ -270,6 +276,60 @@ class TestRecurrenceDetection(_IsolatedLedgerMixin, unittest.TestCase):
         sas.apply_loop_update({"clean": False, "all_findings": ["same finding"]})
         text = mutations._read_ledger()
         self.assertIn(first_id, text)
+
+
+class TestSelfAuditCloseGate(_IsolatedLedgerMixin, unittest.TestCase):
+    """RB-2026-10-08: RBB_STRATEGIC_ASSESSMENT_2026-09-19.md Finding 1 --
+    mutations.cmd_loop_close() must refuse to close a self-audit loop on an
+    ordinary (belief-based) reason, and must allow it either via
+    self_audit_sweep's own verified-clean reason string or an explicit
+    human override prefix."""
+
+    def _open_self_audit_loop(self) -> str:
+        sas.apply_loop_update({"clean": False, "all_findings": ["issue A"]})
+        return sas._find_open_self_audit_loop_id()
+
+    def test_ordinary_reason_is_rejected_with_gate_return_code(self):
+        loop_id = self._open_self_audit_loop()
+        args = SimpleNamespace(id=loop_id, reason="I believe this was fixed.", dry_run=False)
+        rc = mutations.cmd_loop_close(args)
+        self.assertEqual(rc, 2)
+        # Loop must still be open -- the close must not have been applied.
+        self.assertEqual(sas._find_open_self_audit_loop_id(), loop_id)
+
+    def test_verified_clean_reason_closes_it(self):
+        loop_id = self._open_self_audit_loop()
+        args = SimpleNamespace(id=loop_id, reason=mutations.SELF_AUDIT_VERIFIED_CLEAN_REASON, dry_run=False)
+        rc = mutations.cmd_loop_close(args)
+        self.assertEqual(rc, 0)
+        self.assertIsNone(sas._find_open_self_audit_loop_id())
+
+    def test_override_prefix_closes_it(self):
+        loop_id = self._open_self_audit_loop()
+        args = SimpleNamespace(
+            id=loop_id, reason=f"{mutations.SELF_AUDIT_OVERRIDE_PREFIX} accepting the risk for now", dry_run=False,
+        )
+        rc = mutations.cmd_loop_close(args)
+        self.assertEqual(rc, 0)
+        self.assertIsNone(sas._find_open_self_audit_loop_id())
+
+    def test_override_prefix_match_is_case_insensitive(self):
+        loop_id = self._open_self_audit_loop()
+        args = SimpleNamespace(id=loop_id, reason="unverified override: accepting the risk", dry_run=False)
+        rc = mutations.cmd_loop_close(args)
+        self.assertEqual(rc, 0)
+
+    def test_ordinary_non_self_audit_loop_is_unaffected(self):
+        args = SimpleNamespace(
+            id=None, opened="2026-10-08", party="Test Contact",
+            description="A normal loop, not self-audit.", target="2026-10-15", dry_run=False,
+        )
+        mutations.cmd_loop_add(args)
+        loops = core.parse_loop_ledger(path=core.LOOP_LEDGER_PATH)
+        loop_id = next(L.id for L in loops if not L.closed)
+        close_args = SimpleNamespace(id=loop_id, reason="Handled on the call today.", dry_run=False)
+        rc = mutations.cmd_loop_close(close_args)
+        self.assertEqual(rc, 0)
 
 
 if __name__ == "__main__":

@@ -64,7 +64,12 @@ TEST_SUITE_TIMEOUT_SECONDS = 900  # well above the ~6-7min observed real runtime
 # closed row and a later open row sharing the same id. Instead this marker
 # string, always the first thing in the description, is how a real (freshly
 # assigned) loop id is found again on a later run.
-DESCRIPTION_MARKER = "Self-audit findings:"
+#
+# RB-2026-10-08: this marker and the "clean" reason string below are now
+# mutations.cmd_loop_close()'s single source of truth for recognizing (and
+# gating the manual close of) a self-audit loop -- imported from there,
+# not redefined here, so the two can never drift apart.
+DESCRIPTION_MARKER = mutations.SELF_AUDIT_DESCRIPTION_MARKER
 MUTATION_RECONCILIATION_CACHE = core.SYSTEM_DIR / ".cache" / "mutation_reconciliation.json"
 
 
@@ -235,7 +240,7 @@ def apply_loop_update(result: dict, *, dry_run: bool = False) -> str:
 
     if result["clean"]:
         if open_id:
-            args = SimpleNamespace(id=open_id, reason="self-audit clean — no findings", dry_run=dry_run)
+            args = SimpleNamespace(id=open_id, reason=mutations.SELF_AUDIT_VERIFIED_CLEAN_REASON, dry_run=dry_run)
             mutations.cmd_loop_close(args)
             return "closed"
         return "no_action_already_clean"

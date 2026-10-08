@@ -186,11 +186,50 @@ def cmd_loop_redate(args) -> int:
     return 0
 
 
+# RB-2026-10-08: RBB_STRATEGIC_ASSESSMENT_2026-09-19.md Finding 1 -- the
+# same self-audit finding (closeThread/refreshSources silently no-op-ing)
+# was closed on 2026-09-04 and again on 2026-09-11 ("Todd believes ... was
+# addressed"), neither time verified against a fresh self_audit_sweep.py
+# run, and the defect was still live both times. Nothing distinguished "I
+# believe this is fixed" from "the automated check confirms this is fixed."
+# self_audit_sweep.py owns the single source of truth for both strings:
+# the exact reason text its own "clean, verified" close uses, and the
+# marker that identifies one of its loops. Defined here (not in
+# self_audit_sweep.py) because that module already imports this one --
+# this is the lower-level, shared root.
+SELF_AUDIT_DESCRIPTION_MARKER = "Self-audit findings:"
+SELF_AUDIT_VERIFIED_CLEAN_REASON = "self-audit clean — no findings"
+SELF_AUDIT_OVERRIDE_PREFIX = "UNVERIFIED OVERRIDE:"
+
+
 def cmd_loop_close(args) -> int:
     text = _read_ledger()
     if args.id not in text:
         print(f"ERROR: loop id {args.id!r} not found in ledger.", file=sys.stderr)
         return 1
+
+    for line in text.splitlines():
+        if not (line.startswith(f"| {args.id} |") and "open" in line.lower()):
+            continue
+        parts = line.split(" | ")
+        description = parts[3].strip() if len(parts) >= 6 else ""
+        if SELF_AUDIT_DESCRIPTION_MARKER not in description:
+            break
+        reason = (args.reason or "").strip()
+        if reason == SELF_AUDIT_VERIFIED_CLEAN_REASON:
+            break  # the automated, verified-clean close path -- always allowed
+        if reason.upper().startswith(SELF_AUDIT_OVERRIDE_PREFIX):
+            break  # explicit human override, knowingly unverified -- allowed
+        print(
+            f"ERROR: {args.id} is a self-audit loop and its finding(s) have not been "
+            "automatically confirmed resolved. Either let self_audit_sweep.py close it "
+            "once a fresh run comes back clean, or close it yourself with a reason "
+            f"starting with {SELF_AUDIT_OVERRIDE_PREFIX!r} to explicitly accept this as "
+            "an unverified, deliberate override (not an asserted fix).",
+            file=sys.stderr,
+        )
+        return 2  # distinct from 1 ("not found"/"already closed") so callers can tell the gate fired
+
     lines = text.splitlines()
     out = []
     changed = False
