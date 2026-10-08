@@ -449,7 +449,8 @@ def cmd_dispatch(args) -> dict:
             job_path=j["path"],
         )
         result = {"job_id": j["job_id"], "engine": engine, "action": "leased", "at": event["at"]}
-        if cfg["engines"][engine].get("automatic"):
+        is_automatic = bool(cfg["engines"][engine].get("automatic"))
+        if is_automatic:
             # No browser step for this engine: run it now rather than waiting on a human
             # to start it. A failure here is contained to this job -- it's surfaced in the
             # result, never raised, so one bad run doesn't stop the rest of the dispatch.
@@ -459,6 +460,22 @@ def cmd_dispatch(args) -> dict:
             except Exception as exc:  # noqa: BLE001
                 result["transport_error"] = str(exc)
         results.append(result)
+        if not is_automatic:
+            # RB-DEFECT-2026-10-08: a non-automatic engine (chatgpt_deep_research,
+            # chatgpt_work) has exactly one delivery path for a lease -- a Drive
+            # export, or a human starting it -- and nothing ever revisits a job
+            # this same dispatch call already leased to it. Before this check,
+            # the loop kept leasing every remaining ready job in the queue to
+            # the same non-automatic engine in one call; hunter_drive_assignment_export.py
+            # only exports the first, so the rest sat "leased" with no way to
+            # ever be researched until their TTL silently expired them back to
+            # queued -- confirmed live in leases.jsonl (Tim Hortons, Chipotle,
+            # Coates Group all leased-then-expired on repeat, 2026-10-06 and
+            # 2026-10-08). An automatic engine has no such gap -- it runs the
+            # transport synchronously right above, so leasing several of its
+            # ready jobs in one dispatch call is real, delivered work, not an
+            # orphan risk, and keeps its original behavior.
+            break
     return {"mode": mode_reason, "dry_run": not args.confirm, "results": results}
 
 
