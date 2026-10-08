@@ -100,6 +100,34 @@ class EcosystemSnapshotsDirIsolationTest(unittest.TestCase):
         isolated_after = set(isolated_dir.glob("ecosystem_intelligence.pre-write-*.json"))
         self.assertEqual(len(isolated_after - isolated_before), 1)
 
+    def test_rapid_successive_writes_never_collide_on_snapshot_filename(self):
+        """RB defect 2026-10-08: the snapshot tag used to be second-
+        resolution (strftime %Y%m%d-%H%M%S) -- two _write_graph() calls
+        landing in the same wall-clock second produced the identical
+        filename, so the second shutil.copy2() silently overwrote the
+        first snapshot instead of adding a new one. Confirmed live: this is
+        exactly what made this test file order-dependent in the full suite
+        (another test's snapshot, written in the same second, occupied the
+        filename this test's own snapshot needed). Deterministic here --
+        write enough times in a tight loop that a second-resolution bug
+        would collide essentially every run, regardless of what else ran
+        before it."""
+        isolated_dir = Path(ei.core.SNAPSHOTS_DIR)
+        before = set(isolated_dir.glob("ecosystem_intelligence.pre-write-*.json")) \
+            if isolated_dir.exists() else set()
+
+        WRITES = 20
+        ei._write_graph(_graph("brand-collision-seed"))  # creates the file; no snapshot yet
+        for i in range(WRITES):
+            ei._write_graph(_graph(f"brand-collision-{i}"))
+
+        after = set(isolated_dir.glob("ecosystem_intelligence.pre-write-*.json"))
+        self.assertEqual(
+            len(after - before), WRITES,
+            "two rapid writes produced the same snapshot filename -- the "
+            "microsecond-resolution tag fix has regressed.",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

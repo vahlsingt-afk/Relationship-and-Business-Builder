@@ -26,6 +26,7 @@ import json
 import sys
 import tempfile
 import unittest
+from datetime import date
 from pathlib import Path
 from unittest.mock import patch
 
@@ -69,12 +70,19 @@ class TestPhase1Routes(unittest.TestCase):
 
         # Isolate Market Intelligence's own file reads too, same fixtures
         # test_team_market_intelligence.py uses.
+        # RB defect 2026-10-08: published_at was hardcoded to "2026-09-29"
+        # instead of relative to "today" -- get_market_news's default
+        # days=7 lookback silently excluded this fixture row once more than
+        # 7 days had actually elapsed, failing this test with no code
+        # change at all (same class of bug as the earnings-monitor bridge
+        # fixture fixed in test_earnings_monitor.py the same day).
+        today_iso = date.today().isoformat()
         signals_path = tmp / "market_signals.json"
         signals_path.write_text(json.dumps({
-            "fetched_at": "2026-09-29T00:00:00Z", "source_note": "fixture", "items": [{
+            "fetched_at": f"{today_iso}T00:00:00Z", "source_note": "fixture", "items": [{
                 "title": "Fixture Co. rolls out new kiosks", "url": "https://example.com/x",
                 "source_name": "Fixture Wire", "source_type": "press_release",
-                "published_at": "2026-09-29", "company": "Fixture Co.", "side": "operator_demand",
+                "published_at": today_iso, "company": "Fixture Co.", "side": "operator_demand",
                 "category": "kiosk", "pain_point_or_priority": "Public summary.",
                 "strategic_relevance": "medium", "restaurant_tech_vendor_implication": "Public GP note.",
                 "why_this_matters_to_todd": "TODD-PRIVATE", "recommended_action": "TODD-PRIVATE",
