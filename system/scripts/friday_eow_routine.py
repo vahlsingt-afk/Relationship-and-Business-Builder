@@ -237,7 +237,18 @@ def check_freshness(*, today: date | None = None) -> list[dict]:
         registry = json.loads(CUSTOMERS_PROSPECTS_REGISTRY_PATH.read_text(encoding="utf-8"))
         for entry in registry.get("registry", []):
             if entry.get("workbook_path") is None:
-                continue  # not activated -- no Blue Sheet content to go stale
+                if entry.get("engagement_tier") == "active_engagement":
+                    # RB defect 2026-09-30 (Five Guys): an active engagement
+                    # with no activated Blue Sheet is a gap to surface, not
+                    # an "unactivated brand" to silently skip -- the two
+                    # states look identical on workbook_path alone.
+                    findings.append({
+                        "target": f"customers_prospects/accounts/{entry.get('account_id', '')} (last_review_date)",
+                        "days_since_updated": None,
+                        "stale": True,
+                        "reason": "active_engagement_missing_blue_sheet",
+                    })
+                continue  # pre-engagement, not activated -- no Blue Sheet content to go stale
             last_review = entry.get("last_review_date")
             days = None
             if last_review:

@@ -3,7 +3,15 @@
   "account_slug": "five-guys",
   "display_name": "Five Guys",
   "aliases": [],
-  "portfolio_status": "active",
+  "portfolio_status": {
+    "value": "On hold -- customer-directed; no active evaluation",
+    "status": "confirmed",
+    "confidence": "high",
+    "as_of": "2026-10-08",
+    "scope": "account",
+    "evidence_ids": [],
+    "last_reviewed_by": "human:Todd Vahlsing"
+  },
   "owners": [
     {
       "name": "Todd Vahlsing",
@@ -11,20 +19,598 @@
     }
   ],
   "brand_profile_ref": "brand_profile.json",
-  "opportunities": [],
-  "buying_influences": [],
-  "technology_stack": [],
+  "opportunities": [
+    {
+      "opportunity_id": "opp-five-guys-account-containment",
+      "name": "Account Containment / Worldpay Relationship Stewardship (no active Genius sales motion)",
+      "workstreams": [],
+      "stage": "On hold -- customer-directed; no active evaluation",
+      "single_sales_objective": {
+        "value": "No active sales objective. On 2026-09-04, MJ Worsham (VP, Restaurant Technology) told Global Payments that Five Guys is already working with Worldpay as a long-term customer and has no interest in evaluating any other Global Payments solutions at this time, and will work through Avery Churchwell and Melissa Douglas if that changes. The correct motion is account containment and Worldpay relationship stewardship -- not prospecting, meeting requests, or a product pitch.",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "opportunity:opp-five-guys-account-containment",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "customer_stated_objective": {
+        "value": "Continue working with Worldpay as the existing long-term payments relationship; no stated interest in evaluating Genius or other Global Payments solutions at this time.",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "opportunity:opp-five-guys-account-containment",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "commercial_hypothesis": {
+        "value": "A capped, per-transaction technology-funding concept is under internal exploration only. It is not approved, priced, or presented to Five Guys and must not be represented as an available commercial offer unless the account is expressly reopened.",
+        "status": "hypothesis",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-09-04",
+        "scope": "opportunity:opp-five-guys-account-containment",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    }
+  ],
+  "buying_influences": [
+    {
+      "name": "MJ Worsham",
+      "title": "Vice President, Restaurant Technology",
+      "location": "unverified",
+      "role_etuc": {
+        "value": "U",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High",
+      "mode": {
+        "value": "Hold / Closed to outreach",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Unknown",
+      "competitive_preference": {
+        "value": "Declined any evaluation",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": -2,
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Key influential relationship and likely operational technology gatekeeper. On 2026-09-04 explicitly declined evaluation of any other Global Payments solutions and directed future contact through Avery Churchwell and Melissa Douglas.",
+      "access": "None -- direct contact declined",
+      "next_step": "No direct contact; wait for Avery/Melissa to reopen.",
+      "owner": "Todd Vahlsing"
+    },
+    {
+      "name": "Avery Churchwell",
+      "title": "Worldpay relationship manager",
+      "location": "internal (Worldpay)",
+      "role_etuc": {
+        "value": "Internal account owner / designated routing path",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High (internal gatekeeper for any future path)",
+      "mode": {
+        "value": "Protective of the relationship",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Not applicable (internal)",
+      "competitive_preference": {
+        "value": "Not applicable (internal)",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 0,
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Internal account owner and the required coordination point for any Five Guys engagement. Raised the contact-fragmentation concern that led to the hold.",
+      "access": "Internal; controls the only authorized path back to Five Guys",
+      "next_step": "Wait for Avery to decide whether and when to reopen the path.",
+      "owner": "Todd Vahlsing"
+    },
+    {
+      "name": "Melissa Douglas",
+      "title": "Internal (Worldpay side)",
+      "location": "internal",
+      "role_etuc": {
+        "value": "Internal escalation owner / designated routing path",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "High (internal gatekeeper for any future path)",
+      "mode": {
+        "value": "Protective of the relationship",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Not applicable (internal)",
+      "competitive_preference": {
+        "value": "Not applicable (internal)",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 0,
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Forwarded MJ's decline to the internal team and escalated the uncoordinated outreach as 'not a great look.' Co-designated, with Avery, as the only route back in.",
+      "access": "Internal; controls the only authorized path back to Five Guys",
+      "next_step": "Wait for Melissa to decide whether and when to reopen the path.",
+      "owner": "Todd Vahlsing"
+    },
+    {
+      "name": "Zerrick Pearson",
+      "title": "Chief Information Officer",
+      "location": "unverified",
+      "role_etuc": {
+        "value": "E? / U?",
+        "status": "hypothesis",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "Likely high (enterprise technology direction); exact role in POS/payments decisions unverified",
+      "mode": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Unknown",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 0,
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Named internally as a priority relationship target and FSTEC invitee alongside MJ Worsham; had not responded to the FSTEC invitation as of 2026-09-04. No direct engagement yet.",
+      "access": "None currently",
+      "next_step": "Treat FSTEC as relationship-only if Five Guys independently accepts; do not use it to reopen the declined evaluation.",
+      "owner": "Todd Vahlsing"
+    }
+  ],
+  "technology_stack": [
+    {
+      "layer": "pos_reporting",
+      "vendor": "PAR Brink",
+      "current_state": "Mature U.S. estate; a 2026 Novatio case study describes Brink POS/reporting as mission-critical with enterprise-wide automated upgrade testing. Store counts, software versions, hardware, and renewal term remain unknown.",
+      "status": "Confirmed",
+      "confidence": "high",
+      "evidence_ids": [],
+      "as_of": "2026-09-04",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "online_ordering",
+      "vendor": "Olo",
+      "current_state": "Longtime digital-ordering and guest-data platform; vendor case study reports 8.1M guest profiles and $16M in online revenue attributed to email-engaged guests.",
+      "status": "Confirmed",
+      "confidence": "high",
+      "evidence_ids": [],
+      "as_of": "2026-09-04",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "back_office_inventory_labor",
+      "vendor": "Crunchtime",
+      "current_state": "Selected for corporate and franchise locations worldwide per Crunchtime's own case materials; scope and performance claims are vendor-reported and unvalidated.",
+      "status": "Confirmed",
+      "confidence": "high",
+      "evidence_ids": [],
+      "as_of": "2026-09-04",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "pos_emea",
+      "vendor": "NCR",
+      "current_state": "Reported in EMEA by internal Worldpay intelligence; no public primary source confirms products, countries, store counts, or contractual scope.",
+      "status": "Reported, unverified",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-09-04",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "payments",
+      "vendor": "Worldpay / Global Payments",
+      "current_state": "Existing long-term relationship confirmed directly by MJ Worsham (2026-09-04); exact products, countries, channels, acquiring entities, and renewal dates remain unconfirmed.",
+      "status": "Confirmed relationship, details unverified",
+      "confidence": "high",
+      "evidence_ids": [],
+      "as_of": "2026-09-04",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "payment_devices",
+      "vendor": "Verifone",
+      "current_state": "Identified in the Worldpay estate; device models, ownership, and geographic scope unverified.",
+      "status": "Reported, unverified",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-09-04",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "delivery_integration",
+      "vendor": "LineTen",
+      "current_state": "Identified by the Worldpay plan; function, deployment, and geography not publicly validated.",
+      "status": "Reported, unverified",
+      "confidence": "low",
+      "evidence_ids": [],
+      "as_of": "2026-09-04",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "franchisee_level_signals_not_brand_standard",
+      "vendor": "Lightspeed Restaurant/Upserve POS, Adyen, Opus Training, Restaurant365",
+      "current_state": "Medium-confidence evidence in individual franchise environments only -- explicitly NOT evidence of a corporate standard or chain-wide deployment.",
+      "status": "Franchisee-level only",
+      "confidence": "medium",
+      "evidence_ids": [],
+      "as_of": "2026-08-05",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    }
+  ],
   "commercial_models": [],
-  "strategic_position": {},
-  "qualification": {},
+  "strategic_position": {
+    "euphoria_panic": {
+      "current_state": {
+        "value": "Declined / Hold",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "opportunity:opp-five-guys-account-containment",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "reason": {
+        "value": "MJ Worsham's direct written response on 2026-09-04 explicitly declined evaluation of any other Global Payments solutions; Melissa Douglas escalated the uncoordinated outreach internally as 'not a great look.' This is direct customer evidence, not an inferred objection.",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "opportunity:opp-five-guys-account-containment",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "timing": {
+        "value": "No confirmed renewal, RFP, or replacement mandate. Worldpay's portfolio score (82, P1/Tier 1, #2 in portfolio) reflects strategic value, not an active buying window.",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "opportunity:opp-five-guys-account-containment",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    },
+    "competition": {
+      "value": "No competitive displacement motion exists; Five Guys' primary payments relationship is already with Worldpay/Global Payments. The broader technology environment (PAR Brink, Olo, Crunchtime, with NCR reported in EMEA) describes the incumbent estate, not an active bidder set.",
+      "status": "confirmed",
+      "evidence_ids": [],
+      "confidence": "medium",
+      "as_of": "2026-09-04",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    "position": {
+      "place_in_funnel": "Contained / Hold (not in active funnel)",
+      "customer_priority": "Declined (explicit, 2026-09-04)",
+      "critical_test": "Will Avery Churchwell or Melissa Douglas affirmatively reopen the Genius path?",
+      "position_vs_competition": {
+        "value": "Not applicable -- no active competitive motion.",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-five-guys-account-containment",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "immediate_move": "No outbound contact to Five Guys. Align internally on one owner, one message, one contact policy, and support the existing Worldpay relationship."
+    },
+    "strengths": [
+      {
+        "value": "Large, growing global footprint -- approaching 2,000 restaurants across 30 countries, with more than 700 additional stores planned over the next 8 years -- gives the account durable long-term strategic value even while direct access is closed.",
+        "possible_action": "Maintain estate and relationship monitoring without customer contact.",
+        "best_action_plan": "Keep research work internal per the canonical research's own recommendation.",
+        "owner": "Todd Vahlsing",
+        "target": "Ongoing",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Existing Worldpay payments relationship (#2 in portfolio, P1/Tier 1, score 82) gives Global Payments a durable foothold to build from once the account reopens.",
+        "possible_action": "Support Worldpay relationship stewardship; do not use it to bypass Avery/Melissa.",
+        "best_action_plan": "Coordinate exclusively through Avery Churchwell and Melissa Douglas.",
+        "owner": "Todd Vahlsing / Avery Churchwell",
+        "target": "Ongoing",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Mature, well-documented technology estate (PAR Brink POS/reporting, Olo ordering/guest data, Crunchtime inventory/labor) with real global-architecture questions (EMEA NCR footprint, international support gaps) that could eventually support a modularity/consistency conversation if the account reopens.",
+        "possible_action": "Build the country-by-country architecture map internally, without customer contact.",
+        "best_action_plan": "Hold this analysis ready for if/when Avery or Melissa reopens the path.",
+        "owner": "Todd Vahlsing",
+        "target": "Internal, ongoing",
+        "status": "reported",
+        "evidence_ids": [],
+        "confidence": "medium",
+        "as_of": "2026-09-04",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    ],
+    "red_flags": [
+      {
+        "value": "MJ Worsham explicitly declined evaluation of any other Global Payments solutions on 2026-09-04; any proactive outreach would directly contradict customer instruction.",
+        "possible_action": "No proactive outreach of any kind to Five Guys.",
+        "best_action_plan": "Enforce the hold until Avery or Melissa explicitly reopens the path.",
+        "owner": "Todd Vahlsing",
+        "target": "Standing",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Melissa Douglas escalated the uncoordinated Genius outreach internally as 'not a great look'; repeating that behavior risks further damage to the Worldpay relationship.",
+        "possible_action": "Align Todd, Bryan Bailey, Brendan Crockett, Avery, Melissa, Mark Brage, and Jazmin Hamilton on one owner, one message, one contact policy.",
+        "best_action_plan": "Confirm the single-contact policy is actually in force across the team.",
+        "owner": "Todd Vahlsing",
+        "target": "Immediate",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "MJ is reportedly resistant to consolidating multiple vendor lines with one supplier; a broad platform-consolidation pitch would likely create resistance if the account ever reopens.",
+        "possible_action": "If reopened, avoid a broad consolidation pitch; favor a narrow, evidence-led entry point.",
+        "best_action_plan": "Hold this positioning guidance for whenever the path reopens.",
+        "owner": "Todd Vahlsing",
+        "target": "Open",
+        "status": "reported",
+        "evidence_ids": [],
+        "confidence": "medium",
+        "as_of": "2026-09-04",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "The transaction-metered funding concept is unapproved and unpriced; referencing it to the customer before internal approval would be a governance violation.",
+        "possible_action": "Model it fully internally (cap, term, volume, approval path) before it enters any customer dialogue.",
+        "best_action_plan": "Do not mention it to Five Guys unless the account is expressly reopened and the concept is approved.",
+        "owner": "Todd Vahlsing",
+        "target": "Open",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    ]
+  },
+  "qualification": {
+    "criteria": [
+      {
+        "criterion": "Sufficient budget exists",
+        "answer": "U",
+        "weight": 20,
+        "points": 0,
+        "current_read": "No budget has been identified or discussed; there is no active evaluation to fund.",
+        "next_step": "Not applicable while the account remains on outreach hold.",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-09-04",
+        "scope": "opportunity:opp-five-guys-account-containment",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "criterion": "We have the access we need",
+        "answer": "N",
+        "weight": 20,
+        "points": 0,
+        "current_read": "Direct access to MJ Worsham is explicitly declined. The only authorized path is through Avery Churchwell and Melissa Douglas, and only if they choose to reopen it.",
+        "next_step": "Wait for Avery or Melissa to reopen the path; do not contact Five Guys directly.",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "opportunity:opp-five-guys-account-containment",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "criterion": "Customer buying process is understood",
+        "answer": "N",
+        "weight": 20,
+        "points": 0,
+        "current_read": "No RFI, RFP, budget, decision calendar, or evaluation team exists. MJ has explicitly declined evaluation.",
+        "next_step": "None while the account is closed to outreach.",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "opportunity:opp-five-guys-account-containment",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "criterion": "Supportive Economic Buying Influence",
+        "answer": "N",
+        "weight": 20,
+        "points": 0,
+        "current_read": "MJ Worsham, the key operational technology gatekeeper, has explicitly declined to evaluate other Global Payments solutions.",
+        "next_step": "None while the account is closed to outreach.",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "opportunity:opp-five-guys-account-containment",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "criterion": "At least one Coach",
+        "answer": "N",
+        "weight": 20,
+        "points": 0,
+        "current_read": "No customer-side coach exists; the account is explicitly closed to proactive Genius outreach.",
+        "next_step": "None while the account is closed to outreach.",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-09-04",
+        "scope": "opportunity:opp-five-guys-account-containment",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    ],
+    "qualification_score": {
+      "value": 0,
+      "max": 100,
+      "formula": "SUM(criteria.points)"
+    }
+  },
   "latest_review": {
     "blue_sheet_owner": "Todd Vahlsing",
-    "last_reviewed": null,
-    "review_status": "Shell only - no dedicated source material found; named in loop L-2026-08-10-005 as part of the first Blue Sheet cohort alongside Pollo Campero and Del Taco.",
-    "next_formal_review": "On first dedicated brief, meeting, or document"
+    "core_contributors": "Avery Churchwell (Worldpay relationship manager); Melissa Douglas",
+    "last_reviewed": "2026-10-08",
+    "review_status": "Blue Sheet activated from the existing research shell. The account is in a customer-directed outreach hold, not an active opportunity.",
+    "next_formal_review": "When Avery Churchwell or Melissa Douglas affirmatively reopens the path",
+    "current_critical_test": "Will Avery Churchwell or Melissa Douglas affirmatively reopen the Genius path?"
   },
-  "template_version": "0.3-seed",
-  "updated_at": "2026-08-21T00:00:00Z",
+  "template_version": "blue-sheet-v1",
+  "updated_at": "2026-10-08T14:36:49Z",
   "note": "Intentionally thin: no dedicated account_intelligence brief or deck exists yet (per 2026-08-21 inventory). Populate from meeting captures and shared cross-account documents as real evidence, not by inference.",
-  "engagement_tier": "active_engagement"
+  "engagement_tier": "active_engagement",
+  "bottom_line": "Five Guys is a high-priority account with a large global footprint and a sophisticated restaurant technology stack, but it is not open for a Genius evaluation now. MJ Worsham's written direction (2026-09-04) is controlling: Five Guys will continue through Avery Churchwell and Melissa Douglas and will use them if its needs change. The near-term win is disciplined account containment -- stop duplicate outreach, protect the Worldpay relationship, keep research internal, and wait for the designated relationship owners to reopen the door. Any future commercial construct (including the internally-explored transaction-metered funding concept) must be approved and bounded before it enters customer dialogue."
 }

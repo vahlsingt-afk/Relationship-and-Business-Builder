@@ -125,6 +125,20 @@ def is_activated(slug_or_account_id: str) -> bool:
     return False
 
 
+def engagement_tier(slug_or_account_id: str) -> str | None:
+    """The registry's engagement_tier for this account, or None if not found.
+
+    RB defect 2026-09-30 (Five Guys): workbook_path alone can't tell apart
+    an ordinary pre-engagement brand (no Blue Sheet expected) from an active
+    engagement that is missing one (a real gap) -- callers that gate on
+    is_activated() need this to tell the two apart."""
+    reg = load_registry()
+    for entry in reg["registry"]:
+        if entry["account_id"] in (slug_or_account_id, f"acct-{slug_or_account_id}"):
+            return entry.get("engagement_tier")
+    return None
+
+
 def entity_id_to_slug(entity_id: str) -> str | None:
     """Crosswalk an ecosystem_intelligence.json entity_id (e.g. 'brand-pollo-campero')
     to a Blue Sheet account slug (e.g. 'pollo-campero'). Returns None for entity

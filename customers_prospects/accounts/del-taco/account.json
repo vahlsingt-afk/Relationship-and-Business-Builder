@@ -5,7 +5,21 @@
   "aliases": [
     "Yadav Enterprises"
   ],
-  "portfolio_status": "active",
+  "portfolio_status": {
+    "value": "Pre-discovery — relationship-building; no RFP, budget, or confirmed buyer yet",
+    "status": "confirmed",
+    "confidence": "high",
+    "as_of": "2026-10-08",
+    "scope": "account",
+    "evidence_ids": [
+      "ev-del-taco-0001",
+      "ev-del-taco-0002",
+      "ev-del-taco-0003",
+      "ev-del-taco-0004",
+      "ev-del-taco-0005"
+    ],
+    "last_reviewed_by": "human:Todd Vahlsing"
+  },
   "owners": [
     {
       "name": "Maggie Lenhart",
@@ -65,74 +79,701 @@
     ]
   },
   "brand_profile_ref": "brand_profile.json",
-  "opportunities": [],
+  "opportunities": [
+    {
+      "opportunity_id": "opp-del-taco-tech-modernization",
+      "name": "Post-Acquisition Technology Modernization (DMB first wedge; payments/POS under parallel qualification)",
+      "workstreams": [
+        "digital_menu_boards",
+        "payments",
+        "pos_hardware",
+        "pos_software"
+      ],
+      "stage": "Pre-discovery — relationship-building; no RFP, budget, or confirmed buyer yet",
+      "single_sales_objective": {
+        "value": "Convert Nick Hulayew's promised introduction to Daniel Mears and Maggie Lenhart's Worldpay access into a qualified discovery meeting; lead with Project Sunrise business outcomes and position Genius hardware reuse (the Pollo Tropical NCR CX-5 retrofit) as a capital-efficient path into the reported comprehensive review of payments, digital menu boards, POS hardware and POS software. Digital menu boards are the likely first wedge while the broader platform opportunity is qualified in parallel.",
+        "status": "confirmed",
+        "evidence_ids": [
+          "ev-del-taco-0003",
+          "ev-del-taco-0004"
+        ],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "customer_stated_objective": {
+        "value": "Nick Hulayew reported (2026-09-08) that Del Taco is conducting a comprehensive review of its technology stack -- payments, digital menu boards, POS hardware and POS software -- as part of Yadav Enterprises' Project Sunrise turnaround. Maggie Lenhart separately reported (2026-09-29) that Del Taco is evaluating Nova as a new POS, and that Worldpay does not yet have a Nova card-present integration for enterprise merchants.",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-del-taco-0003",
+          "ev-del-taco-0008"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "commercial_hypothesis": {
+        "value": "No commercial hypothesis has been priced or proposed. Digital menu boards are judged the likely first wedge per account strategy, but no scope, pricing, or commercial terms exist yet -- this requires direct discovery before any figure can be stated.",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    }
+  ],
   "buying_influences": [
     {
       "name": "Daniel Mears",
-      "role": "Reported IT director within Del Taco technology",
-      "status": "direct relationship through Nick Hulayew; access also reported through Maggie; exact authority requires validation"
+      "title": "Reported IT director within the Del Taco technology organization",
+      "location": "unverified",
+      "role_etuc": {
+        "value": "U? / T?",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-del-taco-0003"
+        ],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "Unknown",
+      "mode": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Unknown",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 0,
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Reported IT director; attended Genius World and met Nick Hulayew there. Maggie Lenhart emailed him directly on 2026-09-15 to introduce Todd. No reply or meeting confirmed yet.",
+      "access": "Direct relationship through Nick Hulayew; access also attempted through Maggie",
+      "next_step": "Confirm exact title, reporting line, budget authority, and role in the comprehensive technology review.",
+      "owner": "Todd / Nick / Maggie"
     },
     {
-      "name": "Dean Kimble",
-      "role": "Reported Yadav CTO",
-      "status": "strong Genius champion and advisory-board member; exact title and decision rights require validation"
-    },
-    {
-      "name": "Dan Fideli",
-      "role": "Relationship path",
-      "status": "internal briefing pending"
-    },
-    {
-      "name": "Rob Stevens",
-      "role": "Historical Del Taco technology contact and prior Genius advocate",
-      "status": "now reported at Jack in the Box; residual Del Taco influence requires validation"
+      "name": "Dean",
+      "title": "Reported Yadav CTO and Daniel Mears' manager",
+      "location": "unverified",
+      "role_etuc": {
+        "value": "E?",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-del-taco-0003"
+        ],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "Unknown",
+      "mode": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Unknown",
+      "competitive_preference": {
+        "value": "Potentially favorable",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-del-taco-0003"
+        ],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 0,
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Reported by Nick Hulayew as Yadav's CTO, a strong Genius advocate, and a Genius customer advisory-board member. Surname spelling, exact title, and decision authority require validation.",
+      "access": "Indirect, via Nick Hulayew",
+      "next_step": "Validate surname spelling, exact title, scope, and decision authority.",
+      "owner": "Todd / Nick"
     },
     {
       "name": "Nick Hulayew",
-      "role": "Internal relationship path to Daniel Mears and Dean",
-      "status": "agreed to reconnect with Daniel, introduce Todd, and support future calls"
+      "title": "Internal relationship path to Daniel Mears and Dean",
+      "location": "internal",
+      "role_etuc": {
+        "value": "Internal referrer, not customer-side",
+        "status": "confirmed",
+        "evidence_ids": [
+          "ev-del-taco-0003"
+        ],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "Not a customer buying influence (internal)",
+      "mode": {
+        "value": "Supportive",
+        "status": "confirmed",
+        "evidence_ids": [
+          "ev-del-taco-0003"
+        ],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Not applicable (internal referrer)",
+      "competitive_preference": {
+        "value": "Not applicable (internal)",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 0,
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Agreed to reconnect with Daniel Mears, continue the Genius World conversation, introduce Todd, and support future calls.",
+      "access": "Internal; not a customer decision-maker",
+      "next_step": "Confirm he has followed through on reconnecting with Daniel Mears.",
+      "owner": "Todd"
+    },
+    {
+      "name": "Maggie Lenhart",
+      "title": "Worldpay relationship owner",
+      "location": "internal (Worldpay)",
+      "role_etuc": {
+        "value": "Internal referrer, not customer-side",
+        "status": "confirmed",
+        "evidence_ids": [
+          "ev-del-taco-0001"
+        ],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "Not a customer buying influence (internal)",
+      "mode": {
+        "value": "Supportive",
+        "status": "confirmed",
+        "evidence_ids": [
+          "ev-del-taco-0001",
+          "ev-del-taco-0004"
+        ],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Strengthen the broader Global Payments relationship and support future cross-sell opportunities.",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-del-taco-0001"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Not applicable (internal referrer)",
+      "competitive_preference": {
+        "value": "Not applicable (internal)",
+        "status": "confirmed",
+        "evidence_ids": [],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 0,
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Manages the Del Taco relationship on the Worldpay side; signed the contract extension 2026-09-03; emailed Daniel Mears directly on 2026-09-15 to introduce Todd; reported on 2026-09-29 that Del Taco is evaluating Nova as a new POS.",
+      "access": "Direct email / formal Worldpay relationship channel",
+      "next_step": "Coordinate next outreach step with Nick and Todd; track Nova integration status.",
+      "owner": "Todd / Maggie"
+    },
+    {
+      "name": "David OCallaghan",
+      "title": "Vice President, Company Operations",
+      "location": "unverified",
+      "role_etuc": {
+        "value": "U?",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-del-taco-0005"
+        ],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "influence": "Unknown",
+      "mode": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "personal_win": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "business_result": "Unknown",
+      "competitive_preference": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "rating": {
+        "value": 0,
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "current_read": "Connected with Todd on LinkedIn and agreed to a meeting, then redirected to Del Taco's Innovation/IT team; that introduction did not produce a scheduled meeting. Todd later followed up directly, copying AE Nicole Payne.",
+      "access": "Weak; prior LinkedIn contact did not convert to a meeting",
+      "next_step": "Follow up on the pending informal operations conversation request.",
+      "owner": "Todd / Nicole Payne"
     }
   ],
   "technology_stack": [
     {
       "layer": "payments",
       "vendor": "Worldpay",
-      "status": "contract extension signed",
+      "current_state": "Contract extension signed 2026-09-03 after an approximately nine-month process.",
+      "status": "Confirmed",
       "confidence": "high",
-      "as_of": "2026-09-03"
+      "evidence_ids": [
+        "ev-del-taco-0001"
+      ],
+      "as_of": "2026-09-03",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
     },
     {
       "layer": "loyalty / digital ordering",
       "vendor": "Olo",
-      "status": "reported; modules require validation",
+      "current_state": "Reported as in use; specific modules require validation.",
+      "status": "Verify",
       "confidence": "medium",
-      "as_of": "2026-09-02"
+      "evidence_ids": [],
+      "as_of": "2026-09-02",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
     },
     {
       "layer": "POS / unified commerce",
       "vendor": "Qu",
-      "status": "won the prior Jack in the Box RFP; Del Taco adoption was not confirmed and current Yadav intent remains unknown",
+      "current_state": "Won the prior Jack in the Box RFP; Del Taco adoption was never confirmed and current Yadav intent is unknown.",
+      "status": "Verify",
       "confidence": "medium",
-      "as_of": "2026-09-08"
+      "evidence_ids": [
+        "ev-del-taco-0002"
+      ],
+      "as_of": "2026-09-08",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    {
+      "layer": "POS / unified commerce (reported new evaluation)",
+      "vendor": "Nova",
+      "current_state": "Maggie Lenhart reported Del Taco is looking into Nova as a new POS; Worldpay does not yet have a Nova card-present integration for enterprise merchants and is actively working on one.",
+      "status": "Reported",
+      "confidence": "high",
+      "evidence_ids": [
+        "ev-del-taco-0008"
+      ],
+      "as_of": "2026-09-29",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
     },
     {
       "layer": "legacy POS / back office",
       "vendor": "NCR Aloha / MenuLink",
-      "status": "historical; internal account history describes a highly legacy menu structure that was difficult to integrate; current footprint requires validation",
+      "current_state": "Historical; internal account history describes a highly legacy menu structure that was difficult to integrate. Current footprint requires validation.",
+      "status": "Historical",
       "confidence": "medium",
-      "as_of": "2026-09-08"
+      "evidence_ids": [
+        "ev-del-taco-0002"
+      ],
+      "as_of": "2026-09-08",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
     },
     {
       "layer": "voice AI",
       "vendor": "Presto",
-      "status": "historical / discontinued",
+      "current_state": "Historical / discontinued.",
+      "status": "Historical",
       "confidence": "high",
-      "as_of": "2023-11-01"
+      "evidence_ids": [],
+      "as_of": "2023-11-01",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
     }
   ],
   "commercial_models": [],
-  "strategic_position": {},
-  "qualification": {},
+  "strategic_position": {
+    "euphoria_panic": {
+      "current_state": {
+        "value": "Active urgency, unconfirmed buyer",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-del-taco-0002",
+          "ev-del-taco-0003"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "reason": {
+        "value": "Yadav's Project Sunrise turnaround (declining same-store sales, transaction counts, and margin inherited at acquisition) creates real modernization pressure, and Nick Hulayew reports an active comprehensive technology review -- but no customer-side buyer, budget, or sourcing process has been confirmed yet, so urgency has not converted to a qualified opportunity.",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-del-taco-0002",
+          "ev-del-taco-0003"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "timing": {
+        "value": "Worldpay's contract extension (signed 2026-09-03) removed a renewal-period coordination constraint and opened a cleaner window for joint discovery.",
+        "status": "confirmed",
+        "evidence_ids": [
+          "ev-del-taco-0001"
+        ],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    },
+    "competition": {
+      "value": "Qu won the prior Jack in the Box RFP for POS, but Del Taco's actual adoption was never confirmed and current Yadav intent is unknown; legacy NCR Aloha/MenuLink is reported as the historical back-office/menu layer; Maggie Lenhart separately reports Del Taco is now evaluating Nova as a new POS, and Worldpay does not yet have a Nova card-present integration for enterprise merchants. Nick Hulayew's unconfirmed belief that Anil Yadav is a silent investor in Qu is reported intelligence only, not established fact.",
+      "status": "reported",
+      "evidence_ids": [
+        "ev-del-taco-0002",
+        "ev-del-taco-0003",
+        "ev-del-taco-0008"
+      ],
+      "confidence": "medium",
+      "as_of": "2026-10-08",
+      "scope": "account",
+      "last_reviewed_by": "human:Todd Vahlsing"
+    },
+    "position": {
+      "place_in_funnel": "Qualify",
+      "customer_priority": "Unconfirmed",
+      "critical_test": "Does direct customer discovery confirm a real, funded modernization event with a credible Genius wedge and an accountable buyer?",
+      "position_vs_competition": {
+        "value": "Unknown",
+        "status": "unknown",
+        "evidence_ids": [],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      "immediate_move": "Convert Nick's promised introduction and Maggie's email into a scheduled discovery call with Daniel Mears."
+    },
+    "strengths": [
+      {
+        "value": "Two coordinated internal paths into the account: Maggie Lenhart's trusted Worldpay relationship (contract extension signed 2026-09-03) and Nick Hulayew's direct relationship with reported IT director Daniel Mears via Genius World.",
+        "possible_action": "Coordinate the two paths into one outreach rather than running them in parallel.",
+        "best_action_plan": "Nick reconnects with Daniel; Maggie's 2026-09-15 email introduction to Daniel is already sent.",
+        "owner": "Todd / Nick / Maggie",
+        "target": "Discovery call scheduled",
+        "status": "confirmed",
+        "evidence_ids": [
+          "ev-del-taco-0001",
+          "ev-del-taco-0003",
+          "ev-del-taco-0004"
+        ],
+        "confidence": "high",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Pollo Tropical's NCR CX-5 Windows-to-Android retrofit running Genius is a real, citable proof point that existing NCR hardware can potentially be reused rather than replaced -- directly relevant to Del Taco's reported capital constraints.",
+        "possible_action": "Prepare the Pollo Tropical retrofit as evidence in the first discovery conversation.",
+        "best_action_plan": "Validate Del Taco's current NCR estate (model, age, condition) before presenting it as a fit.",
+        "owner": "Todd / solution lead",
+        "target": "First discovery conversation",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-del-taco-0003"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Dean (reported Yadav CTO) is described by Nick Hulayew as a strong Genius advocate and Genius customer advisory-board member, though his exact title and decision authority require validation.",
+        "possible_action": "Use Nick's relationship with Dean to seek an internal introduction or endorsement.",
+        "best_action_plan": "Validate Dean's authority before relying on his advocacy in any commercial conversation.",
+        "owner": "Todd / Nick",
+        "target": "Open",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-del-taco-0003"
+        ],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    ],
+    "red_flags": [
+      {
+        "value": "Post-acquisition authority is still being established; Jack in the Box-era contracts and stakeholder assumptions (Rob Stevens, Dana King) may no longer apply under Yadav.",
+        "possible_action": "Treat every pre-acquisition relationship as unverified until confirmed under current Yadav leadership.",
+        "best_action_plan": "Validate current org chart and decision authority before advancing any commercial position.",
+        "owner": "Todd",
+        "target": "Open",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-del-taco-0002"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Qu's prior RFP win and the newly reported Nova POS evaluation mean the POS layer may already be contested or moving toward a different vendor; Worldpay does not yet have a Nova card-present integration for enterprise merchants, which is a real technical gap if Nova is selected.",
+        "possible_action": "Clarify whether DMB can proceed independently of the POS decision, and track the Worldpay/Nova integration status.",
+        "best_action_plan": "Separate the DMB wedge from the POS outcome in any proposal; monitor the Nova integration timeline with Maggie.",
+        "owner": "Todd / Maggie",
+        "target": "Open",
+        "status": "reported",
+        "evidence_ids": [
+          "ev-del-taco-0002",
+          "ev-del-taco-0008"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Several internally reported stakeholder names, titles, and authority levels (Daniel Mears, Dean, Dana King, Rob Stevens) remain unverified and must not be used externally before confirmation.",
+        "possible_action": "Confirm each name, title, and authority level directly before any customer-facing reference.",
+        "best_action_plan": "First discovery conversation should validate the org chart.",
+        "owner": "Todd",
+        "target": "Open",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-del-taco-0002",
+          "ev-del-taco-0003"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "value": "Nick Hulayew's belief that Anil Yadav is a silent investor in Qu, and that this influenced the prior Jack in the Box decision, is unconfirmed competitive intelligence and must never be presented externally as fact.",
+        "possible_action": "Hold this internally as a risk to monitor, not a talking point.",
+        "best_action_plan": "Do not reference the Yadav-Qu relationship in any customer-facing material without independent confirmation.",
+        "owner": "Todd",
+        "target": "Open",
+        "status": "hypothesis",
+        "evidence_ids": [
+          "ev-del-taco-0003"
+        ],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "account",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    ]
+  },
+  "qualification": {
+    "criteria": [
+      {
+        "criterion": "Sufficient budget exists",
+        "answer": "U",
+        "weight": 20,
+        "points": 0,
+        "current_read": "No budget has been confirmed for any workstream; Project Sunrise is a turnaround program but no line item or funding source has been identified.",
+        "next_step": "Confirm budget source, approval path, and whether DMB/payments/POS are funded separately or as one program.",
+        "status": "unknown",
+        "evidence_ids": [
+          "ev-del-taco-0003"
+        ],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "criterion": "We have the access we need",
+        "answer": "U",
+        "weight": 20,
+        "points": 0,
+        "current_read": "Two reported paths: Nick Hulayew's direct relationship with Daniel Mears (introduced via Genius World), and Maggie Lenhart's Worldpay relationship, which also emailed Daniel directly. Neither has yet produced a scheduled discovery meeting.",
+        "next_step": "Convert Nick's promised reconnection and Maggie's email into a scheduled discovery call with Daniel Mears.",
+        "status": "unknown",
+        "evidence_ids": [
+          "ev-del-taco-0003",
+          "ev-del-taco-0004"
+        ],
+        "confidence": "medium",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "criterion": "Customer buying process is understood",
+        "answer": "U",
+        "weight": 20,
+        "points": 0,
+        "current_read": "No RFP, RFI, or formal sourcing event exists. Nick described a comprehensive internal review; Maggie reported a separate Nova POS evaluation. Stage, governance, and decision calendar are unconfirmed.",
+        "next_step": "Use first discovery conversation to confirm scope, stage, governance, budget and timeline of the reported review.",
+        "status": "unknown",
+        "evidence_ids": [
+          "ev-del-taco-0003",
+          "ev-del-taco-0008"
+        ],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "criterion": "Supportive Economic Buying Influence",
+        "answer": "U",
+        "weight": 20,
+        "points": 0,
+        "current_read": "Dean (reported Yadav CTO) is described by Nick Hulayew as a strong Genius champion and advisory-board member, but exact title, surname spelling, and decision authority are unverified.",
+        "next_step": "Validate Dean's exact role and authority; confirm whether he can sponsor or fund this specific opportunity.",
+        "status": "unknown",
+        "evidence_ids": [
+          "ev-del-taco-0003"
+        ],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      },
+      {
+        "criterion": "At least one Coach",
+        "answer": "U",
+        "weight": 20,
+        "points": 0,
+        "current_read": "Nick Hulayew (internal, not customer-side) has offered to support calls and the relationship handoff; no customer-side coach is yet verified.",
+        "next_step": "Test Daniel Mears for coach behavior (access, credibility, guidance) once a direct conversation occurs.",
+        "status": "unknown",
+        "evidence_ids": [
+          "ev-del-taco-0003"
+        ],
+        "confidence": "low",
+        "as_of": "2026-10-08",
+        "scope": "opportunity:opp-del-taco-tech-modernization",
+        "last_reviewed_by": "human:Todd Vahlsing"
+      }
+    ],
+    "qualification_score": {
+      "value": 0,
+      "max": 100,
+      "formula": "SUM(criteria.points)"
+    }
+  },
   "immediate_actions": [
     "Nick Hulayew to reconnect with Daniel Mears, continue the Genius World conversation, and introduce Todd.",
     "Maggie to coordinate the Worldpay route to Daniel Mears and align outreach with Nick and Todd.",
@@ -143,15 +784,17 @@
     "Validate the current DMB requirement, whether the former 32-inch stopgap concept remains relevant, the inherited NCR menu architecture, Del Taco's Qu adoption status, and the Nick the Greek Square/Qu configuration.",
     "Schedule the hardware 201 and P&L walkthrough once the discovery path is confirmed."
   ],
-  "bottom_line": "Del Taco is now a reported full-stack evaluation rather than only a speculative DMB opening. The signed Worldpay extension, Maggie's trusted access, Nick Hulayew's direct relationship with Daniel Mears, Dean's reported advocacy, Yadav's transformation mandate, and the ability to reuse existing NCR hardware create a credible path. The immediate objective is to convert Nick's promised introduction into a qualified discovery meeting, validate decision authority and budget, and determine whether hardware reuse can overcome the reported Qu relationship and capital constraints. DMB remains a plausible first wedge, but payments, POS hardware, and POS software should now be qualified in parallel.",
+  "bottom_line": "Del Taco is now a reported full-stack evaluation rather than only a speculative DMB opening. The signed Worldpay extension, Maggie's trusted access, Nick Hulayew's direct relationship with Daniel Mears, Dean's reported advocacy, Yadav's transformation mandate, and the ability to reuse existing NCR hardware create a credible path. The immediate objective is to convert Nick's promised introduction into a qualified discovery meeting, validate decision authority and budget, and determine whether hardware reuse can overcome the reported Qu/Nova competitive picture and capital constraints. DMB remains a plausible first wedge, but payments, POS hardware, and POS software should now be qualified in parallel.",
   "latest_review": {
     "blue_sheet_owner": "Todd Vahlsing",
-    "last_reviewed": null,
-    "review_status": "Shell only - no dedicated source material found; named in loop L-2026-08-10-005 as part of the first Blue Sheet cohort alongside Pollo Campero and Five Guys. Open RBB loop L-2026-07-23-005 (Del Taco / Yadav Enterprises / Maggie) tracks a related follow-up.",
-    "next_formal_review": "On first dedicated brief, meeting, or document"
+    "core_contributors": "Maggie Lenhart (Worldpay relationship owner); Nick Hulayew (internal relationship path)",
+    "last_reviewed": "2026-10-08",
+    "review_status": "Blue Sheet activated from the existing research shell; pre-discovery, no RFP or confirmed buyer yet.",
+    "next_formal_review": "After the first direct discovery conversation with Daniel Mears",
+    "current_critical_test": "Does direct customer discovery confirm a real, funded modernization event with a credible Genius wedge and an accountable buyer?"
   },
-  "template_version": "0.3-seed",
-  "updated_at": "2026-09-11T15:59:57Z",
+  "template_version": "blue-sheet-v1",
+  "updated_at": "2026-10-08T14:36:31Z",
   "note": "Intentionally thin: no dedicated account_intelligence brief or deck exists yet (per 2026-08-21 inventory). Populate from meeting captures and shared cross-account documents as real evidence, not by inference.",
   "engagement_tier": "active_engagement",
   "account_strategy": "I will pursue Del Taco through one coordinated Worldpay/Genius motion led by Maggie Lenhart's trusted Worldpay relationship and Nick Hulayew's direct path to Daniel Mears; we will not run parallel outreach. The immediate objective is to convert Nick's promised introduction and Maggie's follow-up into a qualified discovery meeting focused on Project Sunrise and the reported comprehensive review of payments, digital menu boards, POS hardware, and POS software. I will lead with business and operating outcomes—execution consistency, faster menu and price changes, reduced capital burden, and practical modernization—not a generic core-POS replacement pitch. I will use the Pollo Tropical NCR CX-5 retrofit as evidence that Genius may reuse existing hardware and reduce near-term capital requirements. DMB is the likely first wedge while I qualify the broader platform opportunity in parallel. Before advancing a commercial position, I need to verify Daniel's and Dean's authority, the review's stage, governance, budget and timetable, the deployed NCR/Qu estate, hardware refresh timing, DMB requirements, menu-data and integration constraints, and the scope of the signed Worldpay extension. I will treat the reported Anil Yadav–Qu investment relationship as unconfirmed competitive intelligence and never present it externally as fact. My next decision gate is whether direct customer discovery confirms a real, funded modernization event with a credible Genius wedge and an accountable buyer; if not, I will narrow, park, or stop the motion.",

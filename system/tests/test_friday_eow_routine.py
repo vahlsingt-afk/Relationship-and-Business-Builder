@@ -181,13 +181,28 @@ class TestCheckFreshness(unittest.TestCase):
             {"account_id": "acct-test", "workbook_path": "accounts/test/current/x.xlsx",
              "last_review_date": (date.today() - timedelta(days=20)).isoformat()},
             {"account_id": "acct-unactivated", "workbook_path": None,
-             "last_review_date": None},
+             "engagement_tier": "pre_engagement", "last_review_date": None},
         ]}))
         findings = fer.check_freshness(today=date.today())
         bs_findings = [f for f in findings if "customers_prospects" in f["target"]]
-        self.assertEqual(len(bs_findings), 1)  # unactivated account correctly skipped
+        self.assertEqual(len(bs_findings), 1)  # pre-engagement, unactivated account correctly skipped
         self.assertTrue(bs_findings[0]["stale"])
         self.assertIn("acct-test", bs_findings[0]["target"])
+
+    def test_active_engagement_missing_blue_sheet_is_flagged_not_skipped(self):
+        """RB defect 2026-09-30 (Five Guys): an active engagement with no
+        activated Blue Sheet must surface in the Friday report, not vanish
+        the way an ordinary unactivated/pre-engagement brand correctly does."""
+        fer.CUSTOMERS_PROSPECTS_REGISTRY_PATH.write_text(json.dumps({"registry": [
+            {"account_id": "acct-five-guys", "workbook_path": None,
+             "engagement_tier": "active_engagement", "last_review_date": None},
+        ]}))
+        findings = fer.check_freshness(today=date.today())
+        bs_findings = [f for f in findings if "customers_prospects" in f["target"]]
+        self.assertEqual(len(bs_findings), 1)
+        self.assertTrue(bs_findings[0]["stale"])
+        self.assertEqual(bs_findings[0]["reason"], "active_engagement_missing_blue_sheet")
+        self.assertIn("acct-five-guys", bs_findings[0]["target"])
 
 
 class TestReviewReviewQueues(unittest.TestCase):

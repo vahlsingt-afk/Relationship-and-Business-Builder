@@ -185,15 +185,24 @@ def _apply_customers_prospects_sync(relationships: list[dict], entities: dict[st
             continue  # not a brand entity -- no Blue Sheet concept applies
 
         if not bs_common.is_activated(slug):
+            tier = bs_common.engagement_tier(slug)
+            # RB defect 2026-09-30 (Five Guys): an active engagement with no
+            # workbook is a real coverage gap, not the ordinary case of a
+            # pre-engagement brand that was never expected to have a Blue
+            # Sheet yet -- tag the two so a downstream consumer (or a future
+            # reconciliation check) can tell them apart instead of both
+            # vanishing into the same undifferentiated gap list.
+            gap_type = "active_engagement_missing_blue_sheet" if tier == "active_engagement" else "pre_engagement_no_blue_sheet"
             try:
                 bs_common.log_coverage_event(
                     entity_id=entity_id, slug=slug, activated=False,
                     mutation_type="daily_cascade_relationship_touch",
-                    detail=f"category={category} posture={posture}",
+                    detail=f"category={category} posture={posture} gap_type={gap_type}",
                 )
             except Exception:  # noqa: BLE001
                 pass
-            coverage_gaps.append({"entity_id": entity_id, "slug": slug, "category": category})
+            coverage_gaps.append({"entity_id": entity_id, "slug": slug, "category": category,
+                                   "engagement_tier": tier, "gap_type": gap_type})
             continue
 
         status = bs_common.POSTURE_TO_STATUS.get(posture) if posture else None
