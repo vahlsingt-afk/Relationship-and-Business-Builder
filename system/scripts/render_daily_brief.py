@@ -2290,7 +2290,8 @@ def _render_proposed_relationship_mutations(sections: dict) -> str:
 # ---------------------------------------------------------------------------
 
 def _render_pending_confirmations(sections: dict) -> str:
-    """Pending Confirmations — relationship-intelligence proposals unconfirmed >12h.
+    """Pending Confirmations — everything in sections["pending_mutations"]
+    still awaiting an explicit confirm/reject/review.
 
     Surfaces interaction_ledger.json proposals (see _compute_pending_mutations
     in daily_brief.py) that require an explicit confirm/reject. Without this,
@@ -2302,33 +2303,64 @@ def _render_pending_confirmations(sections: dict) -> str:
     confirmProposal action (kind="relationship") that replaced the two
     single-purpose confirmIdentityMatch/rejectIdentityMatch ops, freeing a
     slot instead of costing one.
+
+    RB defect 2026-10-08: this used to read only items[0] -- but three
+    separate daily_brief.py functions append to this SAME list
+    (_compute_pending_mutations, _compute_leadership_ownership_same_day,
+    _compute_review_queue_backlog), and _compute_pending_mutations always
+    appends exactly one item first (real finding or a clean placeholder).
+    So items[1:] -- same-day executive-move/ownership candidates, and the
+    strategic-assessment Finding 2 review-queue backlog across all 6
+    promotion queues -- were computed correctly every single day but could
+    never render, regardless of how large or stale the backlog got.
+    Confirmed live: 334 real items, oldest 33 days, silently never surfaced.
+    Now renders every item whose disposition isn't "ignore" (that
+    convention is how each _compute_* function already marks its own
+    "nothing to report" placeholder), not just the first.
     """
     items = sections.get("pending_mutations", [])
     if not items:
         return ""
 
-    item = items[0]
-    title = (item.get("title") or "").strip()
-    if title == "Pending mutations — none overdue":
-        return "## Pending Confirmations\n\n*No relationship-intelligence proposals unconfirmed for more than 12 hours.*"
-
-    extras = item.get("extras") or {}
-    pending_count = extras.get("pending_count", 0)
-    pending_contacts = extras.get("pending_contacts") or []
-    contacts = ", ".join(pending_contacts)
-    oldest = (extras.get("oldest_created_at") or "")[:10]
+    real_items = [i for i in items if i.get("disposition") != "ignore"]
+    if not real_items:
+        return "## Pending Confirmations\n\n*No relationship-intelligence proposals or review-queue items pending.*"
 
     lines = ["## Pending Confirmations\n"]
-    lines.append(
-        f"⚠ {pending_count} relationship-intelligence proposal(s) unconfirmed for >12h: {contacts}."
-        + (f" Oldest since {oldest}." if oldest else "")
-    )
-    # Give each pending proposal a chat-actionable hint instead of the raw
-    # "call confirmProposal (kind=...)" API instruction, matching the "ask
-    # RB ..." convention used for contact cards and other action hints
-    # elsewhere in the brief.
-    for name in pending_contacts:
-        lines.append(f'- {name} · ask RB "confirm my interaction with {name}" (or "reject it")')
+    for item in real_items:
+        source_refs = item.get("source_refs") or []
+        if "interaction_ledger.json" in source_refs:
+            extras = item.get("extras") or {}
+            pending_count = extras.get("pending_count", 0)
+            pending_contacts = extras.get("pending_contacts") or []
+            contacts = ", ".join(pending_contacts)
+            oldest = (extras.get("oldest_created_at") or "")[:10]
+            lines.append(
+                f"⚠ {pending_count} relationship-intelligence proposal(s) unconfirmed for >12h: {contacts}."
+                + (f" Oldest since {oldest}." if oldest else "")
+            )
+            # Give each pending proposal a chat-actionable hint instead of
+            # the raw "call confirmProposal (kind=...)" API instruction,
+            # matching the "ask RB ..." convention used for contact cards
+            # and other action hints elsewhere in the brief.
+            for name in pending_contacts:
+                lines.append(f'- {name} · ask RB "confirm my interaction with {name}" (or "reject it")')
+            continue
+
+        # Generic fallback for every other contributor to this list
+        # (leadership/ownership same-day candidates, the review-queue
+        # backlog, and anything added here in the future) -- render from
+        # the shared _canonical_item shape rather than a per-source format,
+        # so a new contributor doesn't need its own renderer branch to
+        # actually surface.
+        title = (item.get("title") or "").strip()
+        summary = (item.get("summary") or "").strip()
+        recommended = (item.get("recommended_action") or "").strip()
+        lines.append(f"⚠ {title}" if title else "⚠ Pending item")
+        if summary:
+            lines.append(f"  {summary}")
+        if recommended:
+            lines.append(f'  _{recommended}_')
 
     return "\n".join(lines)
 
@@ -3858,6 +3890,17 @@ def render(target_date: date, dry_run: bool = False, force: bool = False) -> str
         if "Coverage incomplete" in relationship_compact:
             relationship_compact = relationship_compact.split("\n**Verified recent activity**", 1)[0].rstrip()
         _add_compact(relationship_compact)
+
+    # 6. RB defect 2026-10-08: pending_mutations (interaction-ledger
+    # proposals, same-day executive-move/ownership candidates, and the
+    # strategic-assessment Finding 2 review-queue backlog across all 6
+    # promotion queues) was computed every day but had no call anywhere in
+    # this compact path -- the only *live* render path this function has
+    # (everything below the early `return markdown` a few lines down is
+    # unreachable). _render_pending_confirmations() already suppresses its
+    # own "nothing pending" case, matching the risks_compact/decision_queue
+    # filtering convention used just above.
+    _add_compact(_render_pending_confirmations(sections))
 
     if compact_parts and compact_parts[-1] == "---":
         compact_parts.pop()
