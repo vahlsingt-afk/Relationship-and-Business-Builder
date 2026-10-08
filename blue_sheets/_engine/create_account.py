@@ -183,7 +183,15 @@ def activate_existing_research_shell(
     slug_safety.assert_safe_slug(slug, label="account_slug")
     acct_dir = common.account_dir(slug)
     current = common.load_json(acct_dir / "account.json")
-    if current.get("opportunities") or current.get("engagement_tier") == "active_engagement":
+    if current.get("opportunities"):
+        # RB defect 2026-09-30 (Five Guys/Del Taco): engagement_tier alone
+        # can't signal "already has an active Blue Sheet" -- an active
+        # engagement missing its Blue Sheet is tagged active_engagement on
+        # the shell itself, which previously made this guard reject the
+        # very accounts it exists to activate. The real "already has an
+        # active canonical workbook" check (registry workbook_path) is
+        # below; this one only needs to catch a shell that already carries
+        # real opportunity content.
         raise ValueError(f"'{slug}' already has active Blue Sheet content; refusing to overwrite it.")
     if not account_data.get("opportunities") or not (account_data.get("bottom_line") or "").strip():
         raise ValueError("Activation requires a sourced opportunity and substantive bottom_line.")
@@ -203,8 +211,14 @@ def activate_existing_research_shell(
         "template_version": "blue-sheet-v1",
     })
     ledger = common.load_jsonl(acct_dir / "evidence.jsonl")
+    # RB defect 2026-10-08: this used to hardcode "active competitive RFP"
+    # for every activation regardless of real content -- wrong for e.g. Five
+    # Guys, which has no RFP and is on an explicit outreach hold. Derive it
+    # from the opportunity's own real stage text instead of a fixed label.
+    opportunities = new_account.get("opportunities") or []
+    portfolio_status_value = (opportunities[0].get("stage") if opportunities else None) or "active engagement"
     new_account["portfolio_status"] = {
-        "value": "active competitive RFP", "status": "confirmed", "confidence": "high",
+        "value": portfolio_status_value, "status": "confirmed", "confidence": "high",
         "as_of": common.today(), "scope": "account",
         "evidence_ids": [e.get("evidence_id") for e in ledger if e.get("evidence_id")][:5],
         "last_reviewed_by": f"human:{authorized_by}",

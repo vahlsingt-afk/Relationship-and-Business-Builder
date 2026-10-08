@@ -114,6 +114,58 @@ class TestEmptyContentGuard(unittest.TestCase):
             pass
 
 
+class TestActivateResearchShellEngagementTierGuard(unittest.TestCase):
+    """RB defect 2026-09-30 (Five Guys/Del Taco): activate_existing_research_
+    shell()'s first guard used to reject on `engagement_tier == "active_
+    engagement"` alone -- but that is exactly the tag an active engagement
+    missing its Blue Sheet already carries on its own shell (the same
+    conflated signal behind the Five Guys staleness defect), so the guard
+    rejected the very accounts this endpoint exists to activate. The real
+    "already has an active canonical workbook" check (registry workbook_path
+    + engagement_tier, further down) is unaffected and still fires."""
+
+    def setUp(self):
+        self._tmpdir = tempfile.TemporaryDirectory()
+        tmp_root = Path(self._tmpdir.name)
+        self._orig_root = create_account.common.CUSTOMERS_PROSPECTS_ROOT
+        create_account.common.CUSTOMERS_PROSPECTS_ROOT = tmp_root
+        self.tmp_root = tmp_root
+        (tmp_root / "_portfolio").mkdir(parents=True)
+
+        self.slug = "test-active-engagement-shell"
+        self.acct_dir = tmp_root / "accounts" / self.slug
+        self.acct_dir.mkdir(parents=True)
+        (self.acct_dir / "account.json").write_text(json.dumps({
+            "account_id": f"acct-{self.slug}", "account_slug": self.slug,
+            "opportunities": [], "engagement_tier": "active_engagement",
+        }), encoding="utf-8")
+        (self.acct_dir / "brand_profile.json").write_text(json.dumps({
+            "account_id": f"acct-{self.slug}",
+        }), encoding="utf-8")
+        (tmp_root / "_portfolio" / "customers_prospects_registry.json").write_text(json.dumps({
+            "registry": [{
+                "account_id": f"acct-{self.slug}", "workbook_path": None,
+                "engagement_tier": "active_engagement",
+            }],
+        }), encoding="utf-8")
+
+    def tearDown(self):
+        create_account.common.CUSTOMERS_PROSPECTS_ROOT = self._orig_root
+        self._tmpdir.cleanup()
+
+    def test_active_engagement_with_no_workbook_is_not_rejected_as_already_active(self):
+        try:
+            create_account.activate_existing_research_shell(
+                self.slug, "Test Active Engagement Shell",
+                account_data={"opportunities": [{"opportunity_id": "opp-1"}], "bottom_line": "Real assessment text."},
+                brand_profile_data={},
+            )
+        except ValueError as exc:
+            self.assertNotIn("already has active Blue Sheet content", str(exc))
+        except Exception:
+            pass  # render.py may still fail on this minimal shape -- not this guard's concern
+
+
 class TestAuthorizationQuoteRequiredInToolSchema(unittest.TestCase):
     def test_user_authorization_quote_is_a_required_tool_parameter(self):
         import rbb_chat_tools as tools

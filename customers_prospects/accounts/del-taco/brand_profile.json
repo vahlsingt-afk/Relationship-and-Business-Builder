@@ -1,34 +1,124 @@
 {
   "account_id": "acct-del-taco",
-  "founded": {"value": "1964"},
-  "headquarters": {"value": "Lake Forest, California"},
-  "segment": {"value": "Mexican quick-service restaurant"},
-  "footprint": {"value": "576 restaurants at FY2025 year-end: 132 company-operated and 444 franchised"},
-  "ownership": {"value": "Yadav Enterprises; acquisition closed December 22, 2025"},
-  "geography": {"value": "United States; current live store count requires reconciliation"},
-  "differentiation": {"value": "Mexican QSR combining drive-thru convenience, value positioning, and a predominantly franchised operating model"},
-  "competitive_set": {"value": "Taco Bell, Taco John's, Qdoba, Chipotle, and regional Mexican QSR concepts"},
-  "identity_ownership_footprint": [],
-  "leadership": [],
-  "technology_payment_landscape": {"ref": "See technology_stack in account.json.", "highlights": []},
+  "founded": {
+    "value": "1964"
+  },
+  "headquarters": {
+    "value": "Lake Forest, California"
+  },
+  "segment": {
+    "value": "Mexican quick-service restaurant"
+  },
+  "footprint": {
+    "value": "576 restaurants at FY2025 year-end: 132 company-operated and 444 franchised"
+  },
+  "ownership": {
+    "value": "Yadav Enterprises; acquisition closed December 22, 2025"
+  },
+  "geography": {
+    "value": "United States; current live store count requires reconciliation"
+  },
+  "differentiation": {
+    "value": "Mexican QSR combining drive-thru convenience, value positioning, and a predominantly franchised operating model"
+  },
+  "competitive_set": {
+    "value": "Taco Bell, Taco John's, Qdoba, Chipotle, and regional Mexican QSR concepts"
+  },
+  "identity_ownership_footprint": [
+    {
+      "category": "identity_heritage",
+      "value": "Mexican quick-service restaurant, founded 1964, headquartered in Lake Forest, California.",
+      "strategic_implication": "Long-established regional brand now under new ownership and a named turnaround program.",
+      "confidence": "high",
+      "as_of": "2026-09-08"
+    },
+    {
+      "category": "ownership",
+      "value": "Acquired by Yadav Enterprises from Jack in the Box, closed 2025-12-22, for approximately $119 million after customary adjustments.",
+      "strategic_implication": "Post-acquisition authority is still being established; pre-acquisition relationships and contracts require revalidation.",
+      "confidence": "high",
+      "as_of": "2026-09-08"
+    },
+    {
+      "category": "us_footprint",
+      "value": "576 restaurants at FY2025 year-end: 132 company-operated, 444 franchised. Fiscal 2025 systemwide sales of $918.8 million.",
+      "strategic_implication": "A majority-franchised estate means technology decisions likely require brand-standard mandates to reach most units.",
+      "confidence": "high",
+      "as_of": "2026-09-08"
+    },
+    {
+      "category": "current_pursuit",
+      "value": "Executing an 18-month post-acquisition turnaround, 'Project Sunrise,' centered on food quality, operational simplification, value, guest trust, menu innovation, catering expansion, and loyalty.",
+      "strategic_implication": "Turnaround programs create real modernization pressure but also budget scrutiny; any pitch should tie directly to Project Sunrise's own stated outcomes.",
+      "confidence": "high",
+      "as_of": "2026-09-08"
+    }
+  ],
+  "leadership": [
+    {
+      "category": "us_leadership",
+      "value": "Anil Yadav, CEO, Yadav Enterprises.",
+      "strategic_implication": "Senior owner-executive publicly accountable for the turnaround and scalability.",
+      "confidence": "high",
+      "as_of": "2026-09-08"
+    },
+    {
+      "category": "us_leadership",
+      "value": "Ulyses Camacho, Chief Transformation Officer, Del Taco / Yadav Enterprises.",
+      "strategic_implication": "Leads unit execution, cost optimization, and systems modernization -- a likely internal sponsor for any technology initiative tied to Project Sunrise.",
+      "confidence": "high",
+      "as_of": "2026-09-08"
+    },
+    {
+      "category": "us_leadership",
+      "value": "Noah Chillingworth, Chief Marketing Officer, Del Taco.",
+      "strategic_implication": "Owns brand strategy, digital and loyalty platforms, and guest insight -- relevant to any digital menu board or loyalty-adjacent pitch.",
+      "confidence": "high",
+      "as_of": "2026-09-08"
+    }
+  ],
+  "technology_payment_landscape": {
+    "ref": "See technology_stack in account.json.",
+    "highlights": []
+  },
   "brand_digital_cx_strategy": [],
-  "account_economics_scale": [],
-  "relationship_history": [],
-  "opportunities": {"active": [], "historical": [], "parked": []},
+  "account_economics_scale": [
+    {
+      "category": "economics_scale",
+      "value": "Fiscal 2025: system same-store sales declined 3.7%, company-store transactions declined 6.9%, and restaurant-level margin was 11.1%. 14 restaurants opened, 32 closed.",
+      "strategic_implication": "The inherited operating baseline was pressured, which is the explicit driver behind Project Sunrise and a credible reason for a modernization conversation.",
+      "confidence": "high",
+      "as_of": "2026-09-08"
+    }
+  ],
+  "relationship_history": [
+    {
+      "category": "relationship_history",
+      "value": "Del Taco previously evaluated Genius for digital menu boards under Jack in the Box ownership; the effort went quiet around the divestiture when the desired system-on-chip approach did not align cleanly with the Genius solution at the time.",
+      "strategic_implication": "There is real prior-cycle context and relationship history to draw on, but it is retrospective and must be revalidated under current Yadav leadership, not presented as still-active interest.",
+      "confidence": "medium",
+      "as_of": "2026-09-08"
+    }
+  ],
+  "opportunities": {
+    "active": [],
+    "historical": [],
+    "parked": []
+  },
   "known_contradictions": [],
   "open_questions": [],
-  "freshness": {"last_updated": "2026-09-08", "next_scheduled_review": "After first customer discovery meeting"},
+  "freshness": {
+    "last_updated": "2026-09-30",
+    "next_scheduled_review": "After first customer discovery meeting"
+  },
   "risks_and_cautions": [
     "Post-acquisition authority is still being established; Jack in the Box-era contracts and stakeholder assumptions may no longer apply under Yadav.",
     "Qu announced a broad platform modernization in 2024, but deployment status, store coverage, contractual commitments, and Yadav's intent remain unconfirmed.",
-    "Legacy NCR/Aloha evidence is historical and should not be presented as the complete current estate without store-level validation.",
-    "Presto voice AI is historical/discontinued and must not be represented as a current deployment without new evidence.",
+    "Del Taco is separately reported to be evaluating Nova as a new POS; Worldpay does not yet have a Nova card-present integration for enterprise merchants.",
     "Several internally reported stakeholder names, titles, and authority levels remain unverified and require confirmation before external use.",
-    "The Nick the Greek Square relationship and Qu-related pilot are internal reported intelligence; exact modules, ownership, and status remain unknown.",
-    "The September 8 account-history call is retrospective and largely reflects the former Jack in the Box ownership period. The prior 32-inch DMB concept, Rob Stevens' influence, NCR menu complexity, and Del Taco's Qu adoption must be revalidated with current Yadav leadership.",
-    "Nick Hulayew reported that Anil Yadav is a silent investor in Qu and believes that relationship influenced the prior Jack in the Box decision. This is unconfirmed competitive intelligence and must not be presented as fact without independent validation."
+    "Nick Hulayew's belief that Anil Yadav is a silent investor in Qu is unconfirmed competitive intelligence and must not be presented externally as fact."
   ],
-  "recommended_approach": "Coordinate Nick Hulayew's direct relationship with Daniel Mears and Maggie Lenhart's trusted Worldpay access rather than running parallel outreach. Use Nick's promised introduction to qualify the reported comprehensive review across payments, digital menu boards, POS hardware, and POS software. Lead with Project Sunrise outcomes and a capital-efficient modernization story: validate whether existing NCR hardware can be reused, and use the Pollo Tropical NCR CX-5 retrofit as proof of practical conversion. Keep digital menu boards as a likely first wedge while qualifying the broader platform opportunity in parallel. Treat the reported Anil Yadav–Qu investment relationship as an unconfirmed competitive risk and do not present it externally as fact.",
+  "recommended_approach": "Coordinate Nick Hulayew's direct relationship with Daniel Mears and Maggie Lenhart's trusted Worldpay access rather than running parallel outreach. Use Nick's promised introduction to qualify the reported comprehensive review across payments, digital menu boards, POS hardware and POS software. Lead with Project Sunrise outcomes and a capital-efficient modernization story: validate whether existing NCR hardware can be reused, and use the Pollo Tropical NCR CX-5 retrofit as proof of practical conversion. Keep digital menu boards as a likely first wedge while qualifying the broader platform opportunity in parallel.",
   "immediate_actions": [
     "Nick Hulayew to reconnect with Daniel Mears, continue the Genius World conversation, and introduce Todd.",
     "Maggie to coordinate the Worldpay route to Daniel Mears and align outreach with Nick and Todd.",

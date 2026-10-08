@@ -1,13 +1,105 @@
 {
   "account_id": "acct-five-guys",
-  "identity_ownership_footprint": [],
-  "leadership": [],
-  "technology_payment_landscape": {"ref": "See technology_stack in account.json.", "highlights": []},
-  "brand_digital_cx_strategy": [],
+  "identity_ownership_footprint": [
+    {
+      "category": "identity_heritage",
+      "value": "Privately held, family-controlled fast-casual restaurant system, founded 1986 by Jerry and Janie Murrell in Arlington, Virginia.",
+      "strategic_implication": "Private, family-controlled ownership means no public financial filings and a tightly controlled brand model -- external estimates of revenue/scale should not be presented as fact.",
+      "confidence": "high",
+      "as_of": "2026-09-04"
+    },
+    {
+      "category": "global_scale",
+      "value": "Approaching 2,000 restaurants across 30 countries; more than 50,000 people across the system; more than 700 additional stores planned over 8 years (as of July 2025 criteria).",
+      "strategic_implication": "Long runway for deployment, support, and cross-border technology requirements.",
+      "confidence": "high",
+      "as_of": "2026-09-04"
+    },
+    {
+      "category": "us_footprint",
+      "value": "North American franchise territories are sold out; selected international markets remain open to franchising.",
+      "strategic_implication": "Domestic growth is now mostly company/franchisee-driven within the existing footprint rather than new-territory expansion.",
+      "confidence": "high",
+      "as_of": "2026-09-04"
+    },
+    {
+      "category": "current_pursuit",
+      "value": "No active Genius pursuit. On 2026-09-04, MJ Worsham declined evaluation of other Global Payments solutions; outreach is on hold pending Avery Churchwell/Melissa Douglas.",
+      "strategic_implication": "Any future engagement must originate from Avery or Melissa, not from Genius-initiated outreach.",
+      "confidence": "high",
+      "as_of": "2026-09-04"
+    }
+  ],
+  "leadership": [
+    {
+      "category": "us_leadership",
+      "value": "Matt Murrell, Chief Executive Officer (2026 executive-directory reporting; family-owned business).",
+      "strategic_implication": "Family ownership suggests centralized strategic decision-making.",
+      "confidence": "medium",
+      "as_of": "2026-09-04"
+    },
+    {
+      "category": "us_leadership",
+      "value": "Zerrick Pearson, Chief Information Officer; named internally as a priority relationship target.",
+      "strategic_implication": "Likely senior authority for enterprise technology direction; exact role in POS/payments decisions requires validation.",
+      "confidence": "medium",
+      "as_of": "2026-09-04"
+    },
+    {
+      "category": "us_leadership",
+      "value": "MJ Worsham, Vice President, Restaurant Technology; identified internally as the key influential contact and operational technology gatekeeper.",
+      "strategic_implication": "Controls the operational technology relationship and has explicitly closed it to Genius outreach.",
+      "confidence": "high",
+      "as_of": "2026-09-04"
+    }
+  ],
+  "technology_payment_landscape": {
+    "ref": "See technology_stack in account.json.",
+    "highlights": []
+  },
+  "brand_digital_cx_strategy": [
+    {
+      "category": "digital_ordering",
+      "value": "No points-based loyalty program (per Five Guys' own FAQ), but sophisticated first-party guest-data activation through Olo (8.1M guest profiles).",
+      "strategic_implication": "Do not imply weak customer engagement due to no loyalty program -- the real signal is strong first-party data activation through a different mechanism.",
+      "confidence": "high",
+      "as_of": "2026-09-04"
+    }
+  ],
   "account_economics_scale": [],
-  "relationship_history": [],
-  "opportunities": {"active": [], "historical": [], "parked": []},
+  "relationship_history": [
+    {
+      "category": "relationship_history",
+      "value": "On 2026-09-03, Mark Brage requested an introductory meeting with MJ Worsham for Sept 15-16; MJ declined on 2026-09-04, and Melissa Douglas escalated the uncoordinated outreach internally.",
+      "strategic_implication": "This exchange is the direct cause of the current outreach hold and defines the next-step governance (route only through Avery/Melissa).",
+      "confidence": "high",
+      "as_of": "2026-09-04"
+    }
+  ],
+  "opportunities": {
+    "active": [],
+    "historical": [],
+    "parked": [
+      {
+        "name": "Transaction-metered technology funding concept",
+        "status": "internal exploration only, not approved or customer-presented"
+      }
+    ]
+  },
   "known_contradictions": [],
   "open_questions": [],
-  "freshness": {"last_updated": null, "next_scheduled_review": "On first dedicated brief, meeting, or document"}
+  "freshness": {
+    "last_updated": "2026-09-04",
+    "next_scheduled_review": "When Avery Churchwell or Melissa Douglas reopens the path"
+  },
+  "risks_and_cautions": [
+    "Do not treat the account as a confirmed opportunity. MJ has explicitly declined evaluation of other Global Payments solutions at this time.",
+    "Do not approach Five Guys directly. Any future path must be reopened through Avery Churchwell or Melissa Douglas.",
+    "Do not send follow-up meeting requests or attempt to overcome MJ's objection.",
+    "Do not lead with enterprise consolidation; MJ reportedly resists putting multiple lines of business with one vendor.",
+    "Do not claim PAR is failing or nearing renewal without evidence.",
+    "Do not present the transaction-metered concept as approved pricing or a customer offer.",
+    "Do not generalize franchisee deployments (Lightspeed, Adyen, Opus Training, Restaurant365) to the brand standard."
+  ],
+  "recommended_approach": "Place a documented hold on all proactive Genius outreach to Five Guys. Align the internal team on one owner, one message, and one contact policy. Let Avery Churchwell and Melissa Douglas determine whether and when the account reopens. Keep research and architecture-mapping work internal in the meantime, and support the existing Worldpay relationship rather than prospecting."
 }

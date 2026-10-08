@@ -42,16 +42,18 @@
       "aliases": [
         "Yadav Enterprises"
       ],
-      "opportunity_ids": [],
+      "opportunity_ids": [
+        "opp-del-taco-tech-modernization"
+      ],
       "owner": "Todd Vahlsing",
-      "workbook_path": null,
-      "template_version": "0.3-seed",
+      "workbook_path": "customers_prospects/accounts/del-taco/current/Del_Taco_Blue_Sheet.xlsx",
+      "template_version": "blue-sheet-v1",
       "last_evidence_date": "2026-09-29",
-      "last_review_date": null,
+      "last_review_date": "2026-10-08",
       "activation_authorized_by": "Todd Vahlsing",
-      "activation_date": "2026-08-21",
-      "activation_note": "Folder shell only, authorized via Todd's 'proceed' on the plan that named this account. No Blue Sheet workbook exists and none should be created without a further, explicit go-ahead per the 2026-08-21 activation_policy in system/CANONICAL_REGISTRY.yaml.",
-      "status": "missing_blue_sheet",
+      "activation_date": "2026-10-08",
+      "activation_note": "Activated research shell via activateBlueSheetResearchShell, 2026-10-08T14:36:31+00:00. User authorization quote: \"go ahead and activate both\"",
+      "status": "active",
       "portfolio_dashboard_state": "Missing Blue Sheet",
       "dashboard_state_reason": "No dedicated source material identified yet; account.json shell only.",
       "engagement_tier": "active_engagement",
@@ -61,16 +63,18 @@
     {
       "account_id": "acct-five-guys",
       "aliases": [],
-      "opportunity_ids": [],
+      "opportunity_ids": [
+        "opp-five-guys-account-containment"
+      ],
       "owner": "Todd Vahlsing",
-      "workbook_path": null,
-      "template_version": "0.3-seed",
+      "workbook_path": "customers_prospects/accounts/five-guys/current/Five_Guys_Blue_Sheet.xlsx",
+      "template_version": "blue-sheet-v1",
       "last_evidence_date": null,
-      "last_review_date": null,
+      "last_review_date": "2026-10-08",
       "activation_authorized_by": "Todd Vahlsing",
-      "activation_date": "2026-08-21",
-      "activation_note": "Folder shell only, authorized via Todd's 'proceed' on the plan that named this account. No Blue Sheet workbook exists and none should be created without a further, explicit go-ahead per the 2026-08-21 activation_policy in system/CANONICAL_REGISTRY.yaml.",
-      "status": "missing_blue_sheet",
+      "activation_date": "2026-10-08",
+      "activation_note": "Activated research shell via activateBlueSheetResearchShell, 2026-10-08T14:36:49+00:00. User authorization quote: \"go ahead and activate both\"",
+      "status": "active",
       "portfolio_dashboard_state": "Missing Blue Sheet",
       "dashboard_state_reason": "No dedicated source material identified yet; account.json shell only.",
       "engagement_tier": "active_engagement",
@@ -103,14 +107,14 @@
       "owner": "Todd Vahlsing",
       "workbook_path": "blue_sheets/accounts/mcdonalds/current/McDonald's_Blue_Sheet.xlsx",
       "template_version": "blue-sheet-v1",
-      "last_evidence_date": "2026-09-23",
+      "last_evidence_date": "2026-10-07",
       "last_review_date": "2026-08-27",
       "activation_authorized_by": "Todd Vahlsing",
       "activation_date": "2026-08-27",
       "activation_note": "Created 2026-08-27 at Todd's explicit direction, from the real system/account_intelligence/ McDonald's corpus, following the Pollo Campero Blue Sheet as the structural reference.",
       "status": "active",
       "engagement_tier": "active_engagement",
-      "latest_background_brief_date": "2026-10-01",
+      "latest_background_brief_date": "2026-10-08",
       "data_owner_id": "todd"
     },
     {
@@ -200,7 +204,7 @@
       "engagement_tier": "active_engagement",
       "last_review_date": "2026-09-15",
       "latest_background_brief_date": "2026-09-29",
-      "last_evidence_date": "2026-09-30",
+      "last_evidence_date": "2026-10-07",
       "opportunity_ids": [
         "opp-subway-na-connected-restaurant-rfp"
       ],
