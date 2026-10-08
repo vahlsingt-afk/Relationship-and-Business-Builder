@@ -786,6 +786,19 @@ def run_pipeline(
                 py,
                 str(SCRIPTS_DIR / "hunter_drive_inbox_sync.py"),
             ], required=False),
+            # Office manager: for each file hunter_drive_inbox_sync just
+            # deposited, record a completion (for the Intelligence Brief's
+            # Hunter Office Manager section) and -- while this multi-engine
+            # automation is still proving itself -- text Todd one line per
+            # completed company. Must run immediately after the sync step,
+            # reading its append-only receipts ledger with its own cursor;
+            # order relative to hunter_packet_sweep below doesn't matter,
+            # this never touches canonical state.
+            _step("hunter_office_manager", [
+                py,
+                str(SCRIPTS_DIR / "hunter_office_manager.py"),
+                "--confirm",
+            ], required=False),
             # Dry-run validation and governed-dispatch preview only; never
             # canonical writes from the morning pipeline.
             _step("hunter_packet_sweep", [

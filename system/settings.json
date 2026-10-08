@@ -156,6 +156,17 @@
       "sender_status": "wired",
       "sender_note": "SMTP transport wired 2026-09-15: RB_SMTP_HOST/USER/PASS are in secrets.env (loaded by run_with_secrets.py), email_enabled flipped true the same day, and send_brief_email.py/publish.py both now check email_enabled before attempting SMTP (previously send_brief_email.py did not, so a deliberately-disabled channel surfaced as a daily no_smtp pipeline failure)."
     },
+    "hunter_office_manager": {
+      "description": "2026-10-08: Todd asked for visibility into each completed Hunter research cycle while the multi-engine automation (ChatGPT Deep Research, ChatGPT Work, Claude headless) is still proving itself -- a per-company text, plus a log the Intelligence Brief's Hunter Office Manager section reads. hunter_office_manager.py runs right after hunter_drive_inbox_sync in the morning pipeline. Temporary by design: Todd said 'for a little while' -- when he has confidence in the automation, turn sms.enabled off (or switch to a daily digest) rather than leaving per-company texts running indefinitely.",
+      "sms": {
+        "enabled": true,
+        "phone": "920-517-5090",
+        "carrier": "spectrum_mobile",
+        "gateway_address": "9205175090@vtext.com",
+        "gateway_note": "Spectrum Mobile is an MVNO riding Verizon's network; vtext.com is Verizon's own SMS gateway and is NOT officially published for Spectrum Mobile numbers specifically -- Todd should confirm the first real text actually arrives. If it doesn't, the likely fix is just changing gateway_address here (no code change) -- Spectrum Mobile doesn't publish its own gateway, so the next thing to try is contacting Spectrum support for their SMS-to-email address, or switching this to email-only delivery.",
+        "transport": "Reuses the same SMTP credentials (RB_SMTP_HOST/USER/PASS) send_brief_email.py already sends the daily briefs through -- the gateway address is just another email recipient, not a new service."
+      }
+    },
     "social_scan": {
       "enabled": true,
       "linkedin_public_posts": true,

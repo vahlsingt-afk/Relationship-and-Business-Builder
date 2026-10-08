@@ -19,6 +19,12 @@ SYSTEM = ROOT / "system"
 PENDING = SYSTEM / ".cache" / "hunter_pending_jobs"
 INBOX = SYSTEM / "inbox" / "hunter_packets"
 STATE = SYSTEM / ".cache" / "hunter_drive_inbox_sync.json"
+# Durable, append-only receipt per copy -- hunter_office_manager.py reads this
+# (cursor-based, independent of STATE's cumulative-hash dedup) to know which
+# targets were freshly deposited in this run, for the brief section and the
+# completion text. Kept separate from STATE so STATE's own dedup contract
+# (never reprocess a hash) isn't touched by a second reader's needs.
+RECEIPTS_PATH = SYSTEM / ".cache" / "hunter_inbox_sync_receipts.jsonl"
 DRIVE_INBOX = Path(os.environ.get("RB_HUNTER_DRIVE_INBOX", str(Path.home() / "My Drive" / "RBB Hunter Cycle Inbox"))).expanduser()
 PACKET_SCHEMA = "rb.hunter_research_packet.v1"
 BUNDLE_SCHEMA = "rb.hunter_research_bundle_response.v1"
@@ -97,11 +103,26 @@ def run() -> dict:
             shutil.copy2(src, temp)
             os.replace(temp, dest)
         copied_hashes.add(sha)
-        out["copied"].append({"file": src.name, "destination": str(dest), "sha256": sha})
+        out["copied"].append({
+            "file": src.name, "destination": str(dest), "sha256": sha,
+            "targets": sorted(packet_keys),
+        })
 
     state.update({"copied_sha256": sorted(copied_hashes), "last_run_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "source": str(DRIVE_INBOX)})
     STATE.parent.mkdir(parents=True, exist_ok=True)
     STATE.write_text(json.dumps(state, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+    if out["copied"]:
+        RECEIPTS_PATH.parent.mkdir(parents=True, exist_ok=True)
+        observed_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        with RECEIPTS_PATH.open("a", encoding="utf-8") as fh:
+            for row in out["copied"]:
+                fh.write(json.dumps({
+                    "observed_at": observed_at, "file": row["file"],
+                    "destination": row["destination"], "sha256": row["sha256"],
+                    "targets": row["targets"],
+                }, sort_keys=True) + "\n")
+
     return out
 
 

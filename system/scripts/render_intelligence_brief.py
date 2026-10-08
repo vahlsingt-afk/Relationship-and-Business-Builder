@@ -52,6 +52,7 @@ PERSONAL_WHY_SYNTH_CACHE_PATH = core.SYSTEM_DIR / ".cache" / "personal_brief_why
 DAILY_BRIEF_CACHE = core.SYSTEM_DIR / ".cache" / "daily_brief.json"
 DEEP_RESEARCH_COVERAGE_PATH = core.SYSTEM_DIR / "research" / "deep_research_coverage.json"
 ADAPTIVE_RESEARCH_RECEIPTS_PATH = core.SYSTEM_DIR / "research" / "adaptive_research_receipts.jsonl"
+HUNTER_OFFICE_MANAGER_LOG_PATH = core.CACHE_DIR / "hunter_office_manager_log.jsonl"
 # Lifecycle entries (career phase, opportunity mutations) are meant to be
 # one-shot forever, but _load_prior_brief_state only scans the last 7 days
 # of rendered briefs — a fact shown once and never repeated within that
@@ -4147,6 +4148,44 @@ def _render_deep_research_baseline_progress(target_date: date) -> str:
     return "\n".join(lines)
 
 
+def _render_hunter_office_manager_log(target_date: date) -> str:
+    """Render yesterday's Hunter completions -- hunter_office_manager.py's
+    append-only log of every packet hunter_drive_inbox_sync.py deposited
+    into the local scan folder, one row per company. 2026-10-08: Todd asked
+    for this visibility while the multi-engine Hunter automation (ChatGPT
+    Deep Research, ChatGPT Work, Claude headless) is still proving itself --
+    same prior-day window _render_deep_research_baseline_progress uses just
+    above, since this runs in the same 4 AM scan as that section's data."""
+    rows: list[dict] = []
+    if HUNTER_OFFICE_MANAGER_LOG_PATH.exists():
+        for raw in HUNTER_OFFICE_MANAGER_LOG_PATH.read_text(encoding="utf-8").splitlines():
+            try:
+                rows.append(json.loads(raw))
+            except (TypeError, ValueError):
+                continue
+
+    prior_day = target_date - timedelta(days=1)
+    todays = [
+        row for row in rows
+        if str(row.get("observed_at") or row.get("recorded_at") or "")[:10] == prior_day.isoformat()
+    ]
+    lines = ["## Hunter Office Manager", ""]
+    if not todays:
+        lines.append(f"No Hunter packets were deposited to the scan folder on {prior_day.strftime('%B %-d')}.")
+        return "\n".join(lines)
+
+    companies = sorted({row.get("company") or row.get("target_key") for row in todays}, key=str.casefold)
+    noun = "company" if len(companies) == 1 else "companies"
+    lines.append(
+        f"**Deposited {prior_day.strftime('%B %-d')}:** {len(companies)} {noun} — "
+        + ", ".join(companies) + ". Ready for today's sweep."
+    )
+    texted = [row for row in todays if ((row.get("sms") or {}).get("sent"))]
+    if texted:
+        lines.append(f"*Texted Todd for {len(texted)} of {len(todays)} — temporary while the automation proves itself.*")
+    return "\n".join(lines)
+
+
 # ---------------------------------------------------------------------------
 # GP/Genius Field Intelligence
 # ---------------------------------------------------------------------------
@@ -5991,6 +6030,8 @@ def render(target_date: date, dry_run: bool = False, force: bool = False,
     md_parts.append(_render_intelligence_cycle_report(sections, target_date))
     md_parts.append("---")
     md_parts.append(_render_deep_research_baseline_progress(target_date))
+    md_parts.append("---")
+    md_parts.append(_render_hunter_office_manager_log(target_date))
     md_parts.append("---")
 
     md_parts.extend([
