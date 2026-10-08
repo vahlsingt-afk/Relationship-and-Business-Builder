@@ -18,6 +18,17 @@ No test previously called render() end-to-end at all -- every existing
 Daily Brief test exercises one _render_* function in isolation. This adds
 minimal but real end-to-end coverage for the section ordering itself,
 which unit tests on individual renderers can't verify.
+
+RB-2026-10-08 (Group B restoration): the 08-25 consolidation excluded
+Technology Radar and the CoS Bottom Line from the compact brief entirely,
+alongside My Priorities/Loops & Obligations -- all four were "repeats and
+inaccuracies" noise at the time. Reviewed after the self-audit closure
+gate, refreshSources reliability fix, and review-queue backlog visibility
+fix all landed (2026-10-08): Technology Radar (material risk/opportunity
+signals) and CoS Bottom Line (closing synthesis -- the compact brief had
+none at all) are directly decision-relevant and restored. My Priorities
+and Loops & Obligations remain excluded -- genuinely routine/cadence
+detail, not something the reconciliation work changes the case for.
 """
 from __future__ import annotations
 
@@ -73,7 +84,7 @@ class TestDailyBriefSectionOrder(unittest.TestCase):
              patch.object(rdb, "_load_weekly_plan_draft", return_value=None):
             return rdb.render(date(2026, 8, 25), dry_run=True)
 
-    def test_concise_contract_keeps_decisions_and_connections_only(self):
+    def test_concise_contract_keeps_decisions_connections_and_group_b_sections(self):
         out = self._render(_minimal_sections())
         idx_decision_queue = out.find("## Decision Queue")
         idx_connect_dots = out.find("## Connect the Dots")
@@ -81,13 +92,23 @@ class TestDailyBriefSectionOrder(unittest.TestCase):
         self.assertGreater(idx_connect_dots, -1)
         self.assertLess(idx_decision_queue, idx_connect_dots,
                          "Decision Queue must lead Connect the Dots")
-        self.assertNotIn("## Technology Radar", out)
+        # Group B restoration (2026-10-08): Technology Radar is back --
+        # the fixture's watchlist_intelligence entry has status_changed,
+        # so it has real content to show, not a placeholder.
+        self.assertIn("## Technology Radar", out)
+        # My Priorities and Loops & Obligations remain deliberately
+        # excluded -- routine/cadence detail, not restored.
         self.assertNotIn("## My Priorities", out)
         self.assertNotIn("## Loops & Obligations", out)
 
-    def test_generic_bottom_line_is_not_padded_onto_concise_brief(self):
+    def test_cos_bottom_line_is_restored_as_the_final_section(self):
         out = self._render(_minimal_sections())
-        self.assertNotIn("## CoS Bottom Line", out)
+        self.assertIn("## CoS Bottom Line", out)
+        # "Always last" per _render_cos_bottom_line's own contract.
+        self.assertGreater(
+            out.rfind("## CoS Bottom Line"),
+            max(out.rfind("## Decision Queue"), out.rfind("## Technology Radar"), out.rfind("## Connect the Dots")),
+        )
 
 
 if __name__ == "__main__":

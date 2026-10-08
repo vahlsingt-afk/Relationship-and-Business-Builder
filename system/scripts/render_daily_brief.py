@@ -3878,10 +3878,32 @@ def render(target_date: date, dry_run: bool = False, force: bool = False) -> str
     gp_dot_rendered = _load_json(GP_DOT_RENDERED_PATH, {})
     _gp_dot_shown_keys: set[str] = set()
     _add_compact(_render_connect_the_dots(sections, target_date, rendered=ctd_rendered))
-    _add_compact(_compact_gp_connections(_render_gp_dot_connections(
+    # Captured raw (pre-compaction) so _render_cos_bottom_line below can
+    # reuse it, same as the dead verbose path this was restored from did.
+    gp_dots = _render_gp_dot_connections(
         sections, target_date, rendered=gp_dot_rendered,
         shown_keys_out=_gp_dot_shown_keys,
-    )))
+    )
+    _add_compact(_compact_gp_connections(gp_dots))
+
+    # RB defect 2026-10-08 (Group B restoration): these four were computed
+    # daily but only ever reached the dead verbose tail below the early
+    # `return markdown` a few lines down -- restored because they're
+    # directly decision-relevant (material risk/opportunity, and proof new
+    # intelligence actually reached downstream artifacts), not the
+    # routine/cadence detail (My Priorities, Loops and Obligations, This
+    # Week/Month, etc.) the "CoS Brief v2" compaction was deliberately
+    # dropping for being repetitive. Each already suppresses its own empty
+    # case internally (renders "" / falsy when nothing to report).
+    tech_radar = _render_technology_radar(sections, target_date)
+    if tech_radar:
+        _add_compact(tech_radar)
+    competitive_watch = _render_competitive_vulnerability_watchlist(sections)
+    if competitive_watch:
+        _add_compact(competitive_watch)
+    cascade = _render_downstream_artifact_cascade(sections)
+    if cascade:
+        _add_compact(cascade)
 
     # 5. Relationship status appears only as a verified action or an explicit
     # coverage exception. Baseline-only decay rankings are withheld upstream.
@@ -3902,8 +3924,34 @@ def render(target_date: date, dry_run: bool = False, force: bool = False) -> str
     # filtering convention used just above.
     _add_compact(_render_pending_confirmations(sections))
 
+    # RB defect 2026-10-08 (Group B restoration): same pending-mutation
+    # cluster as item 6 above -- proposed relationship-graph mutations and
+    # pending graph mutations awaiting confirm/reject. Each already
+    # suppresses its own empty case.
+    proposed_muts = _render_proposed_relationship_mutations(sections)
+    if proposed_muts:
+        _add_compact(proposed_muts)
+    pending_graph_muts = _render_pending_graph_mutations(sections)
+    if pending_graph_muts:
+        _add_compact(pending_graph_muts)
+
+    # 7. Executive Status -- EOLMS roll-up (renders nothing if register is
+    # empty/missing). RB defect 2026-10-08 (Group B restoration).
+    exec_status = _render_executive_status()
+    if exec_status:
+        _add_compact(exec_status)
+
     if compact_parts and compact_parts[-1] == "---":
         compact_parts.pop()
+
+    # 8. CoS Bottom Line -- always last. RB defect 2026-10-08 (Group B
+    # restoration): the compact brief had no closing synthesis at all;
+    # appended directly (not via _add_compact, which would add a trailing
+    # "---" divider after the brief's own final line).
+    bottom_line = _render_cos_bottom_line(sections, target_date, gp_dots_markdown=gp_dots)
+    if bottom_line and bottom_line.strip():
+        compact_parts.append(bottom_line.strip())
+
     markdown = _dedupe_action_tellings("\n\n".join(compact_parts))
     if not dry_run:
         out_md.write_text(markdown, encoding="utf-8")
