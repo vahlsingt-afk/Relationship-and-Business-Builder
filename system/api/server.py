@@ -7392,6 +7392,19 @@ def post_sources_refresh(body: SourceRefreshIn, x_api_key: Optional[str] = Heade
             capture_output=True,
             text=True,
             timeout=600,
+            # RB defect 2026-10-08: self_audit_sweep.py has flagged this
+            # endpoint SILENT since 2026-08-25 -- root-caused to its only
+            # two real calls (2026-09-14T12:22/12:24), both killed with
+            # exit code -15 (SIGTERM) within ~2 minutes, well inside the
+            # 600s timeout. Without start_new_session, this child inherits
+            # the server's process group, so a signal sent to that group
+            # (e.g. the API server itself being restarted, as happens on
+            # every deploy/code change) kills this still-running ~8-15min
+            # pipeline too, even though the request/subprocess itself
+            # never timed out or failed on its own. Giving it its own
+            # session means a server restart no longer takes down an
+            # in-flight full refresh.
+            start_new_session=True,
         )
         pipeline_payload = None
         try:
@@ -7444,6 +7457,7 @@ def post_sources_refresh(body: SourceRefreshIn, x_api_key: Optional[str] = Heade
             capture_output=True,
             text=True,
             timeout=180,
+            start_new_session=True,  # see the full_pipeline branch above for why
         )
         google_fetch_result = _public_google_fetch(google_proc)
 
@@ -7453,6 +7467,7 @@ def post_sources_refresh(body: SourceRefreshIn, x_api_key: Optional[str] = Heade
         capture_output=True,
         text=True,
         timeout=180,
+        start_new_session=True,  # see the full_pipeline branch above for why
     )
     refresh_payload = None
     try:

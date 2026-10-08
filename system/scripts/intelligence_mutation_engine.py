@@ -1541,7 +1541,11 @@ def apply_mutations(mutation_result: dict, *, dry_run: bool = False) -> dict:
             if ecosystem_path.exists():
                 snapshots_dir = core.SYSTEM_DIR / "_snapshots"
                 snapshots_dir.mkdir(parents=True, exist_ok=True)
-                tag = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
+                # RB defect 2026-10-08: same second-resolution collision as
+                # ecosystem_intelligence.py's own _write_graph() -- two
+                # writes in the same wall-clock second silently overwrite
+                # each other's snapshot. Microsecond resolution here too.
+                tag = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S-%f")
                 snapshot_path = snapshots_dir / f"ecosystem_intelligence.pre-write-{tag}.json"
                 shutil.copy2(ecosystem_path, snapshot_path)
             ecosystem["last_updated"] = now

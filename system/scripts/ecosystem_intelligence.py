@@ -659,7 +659,16 @@ def _write_graph(graph: dict, *, dry_run: bool = False) -> None:
         return
     if core.ECOSYSTEM_INTELLIGENCE_PATH.exists():
         core.SNAPSHOTS_DIR.mkdir(parents=True, exist_ok=True)
-        tag = datetime.now().strftime("%Y%m%d-%H%M%S")
+        # RB defect 2026-10-08: second-resolution tag -- two _write_graph()
+        # calls within the same wall-clock second (confirmed live: a fast
+        # test suite sharing one isolated SNAPSHOTS_DIR across many tests)
+        # produce the identical filename, so the second shutil.copy2() here
+        # silently overwrites the first snapshot instead of adding a new
+        # one, defeating the entire point of a pre-write safety copy.
+        # Microsecond resolution makes a same-tick collision effectively
+        # impossible without changing the on-disk naming convention anyone
+        # already relies on (still one file per real write, same prefix).
+        tag = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
         shutil.copy2(
             core.ECOSYSTEM_INTELLIGENCE_PATH,
             core.SNAPSHOTS_DIR / f"ecosystem_intelligence.pre-write-{tag}.json",

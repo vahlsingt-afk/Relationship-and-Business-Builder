@@ -1456,12 +1456,20 @@ class BridgeSignalsToBrandProfilesTest(unittest.TestCase):
         )
 
     def _row(self, **overrides) -> dict:
+        # RB defect 2026-10-08: this was hardcoded to "2026-09-24" -- real,
+        # but not relative to "today," so once more than lookback_days=7
+        # had actually elapsed since that date, get_recent_signals()'s own
+        # cutoff filter silently excluded every row these tests write,
+        # making all 7 tests in this class fail with no code change at all
+        # (confirmed: the function under test is correct; only the fixture
+        # date had gone stale). Tracked as the still-open, no-code-change-
+        # possible half of L-2026-09-21-001's self-audit finding.
         row = {
             "title": "McDonald's reports Q3 same-store sales decline",
             "url": "https://example.com/mcd-q3",
             "source_name": "McDonald's IR",
             "source_type": "earnings_release",
-            "published_at": "2026-09-24",
+            "published_at": date.today().isoformat(),
             "company": "McDonald's",
             "entity_id": "brand-mcdonald-s",
             "side": "operator_demand",
