@@ -6990,7 +6990,21 @@ class CloseoutIn(BaseModel):
 
 class LoopCloseIn(BaseModel):
     id: str = Field(..., description="A LOOP id from getLoops, e.g. 'L-2026-07-23-003' (format L-YYYY-MM-DD-NNN) -- or an 'EL-' prefixed variant from the same listing; both route automatically. NEVER a contact id (slugified names like 'jeff-coffland', belongs to touchContact) or a thread id (format 'T-YYYY-MM-<slug>', belongs to closeThread) -- touchContact and confirmProposal each had real incidents (18/18 and 5/5 failed calls) from exactly this kind of id mix-up.")
-    reason: str
+    reason: str = Field(
+        ...,
+        description=(
+            "Why this loop is closing. RB-2026-10-08: a loop whose description starts with "
+            "'Self-audit findings:' (opened by self_audit_sweep.py) is NOT closeable with an "
+            "ordinary reason like 'believe this was fixed' -- that exact pattern round-tripped "
+            "the same unfixed defect closed-reopened-closed three times (see "
+            "RBB_STRATEGIC_ASSESSMENT_2026-09-19.md Finding 1) because nothing distinguished "
+            "belief from a verified fix. Such a loop is only closeable two ways: (1) let "
+            "self_audit_sweep.py close it itself once a fresh run comes back clean -- do not "
+            "call this yourself to assert a fix is verified; or (2) if Todd explicitly wants to "
+            "accept the risk and close it anyway without verification, the reason must start "
+            "with 'UNVERIFIED OVERRIDE:' -- otherwise this call is rejected (422)."
+        ),
+    )
 
 
 class LoopRedateIn(BaseModel):
@@ -7716,6 +7730,15 @@ def post_loop_close(body: LoopCloseIn, x_api_key: Optional[str] = Header(None)):
         al.log_mutation_executed(f"closeLoop: id={body.id} reason={body.reason}", source="POST /loops/close")
         return {"ok": True, "id": body.id}
     rc = mutations.cmd_loop_close(_ns(id=body.id, reason=body.reason, dry_run=False))
+    if rc == 2:
+        al.log_mutation_rejected(f"closeLoop: id={body.id}", reason="self_audit_gate_unverified_close")
+        raise HTTPException(
+            422,
+            f"'{body.id}' is a self-audit loop and its finding(s) have not been automatically "
+            "confirmed resolved. Either let self_audit_sweep.py close it once a fresh run comes "
+            f"back clean, or resubmit with reason starting with {mutations.SELF_AUDIT_OVERRIDE_PREFIX!r} "
+            "to explicitly accept this as an unverified, deliberate override.",
+        )
     if rc != 0:
         al.log_mutation_rejected(f"closeLoop: id={body.id}", reason="id not found or already closed")
         raise HTTPException(400, "loop-close failed (id not found or already closed)")
