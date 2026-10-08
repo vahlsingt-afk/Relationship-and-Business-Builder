@@ -1,0 +1,22 @@
+{
+  "_comment": "render_reachability_check.py's baseline of acknowledged-unreachable functions -- a function here is confirmed, by human decision, to be intentionally not called from its entry function's live code path (not an undiscovered 'computed, never rendered' defect). Anything unreachable but NOT listed here is reported as an active finding. Review before adding an entry: an unreachable function is the default-suspicious case, not the default-safe one.",
+  "render_daily_brief.py::render": {
+    "_render_capacity_plan": "Group C (2026-10-08, reviewed with Todd): routine/cadence detail, deliberately excluded from the compact Daily Brief -- not an accuracy gap the self-audit closure/refreshSources/review-queue-backlog work changes the case for.",
+    "_render_capture_insights": "Group C (2026-10-08): same as above.",
+    "_render_captures": "Group C (2026-10-08): same as above.",
+    "_render_competitor_battle_card_review": "Group C (2026-10-08): same as above.",
+    "_render_horizon_watch": "Group C (2026-10-08): same as above.",
+    "_render_job_intelligence": "Group C (2026-10-08): same as above.",
+    "_render_last_24h_relationship_signals_p2": "Group C (2026-10-08): same as above.",
+    "_render_learned_patterns": "Group C (2026-10-08): same as above.",
+    "_render_loops_and_obligations": "Group C (2026-10-08): same as above.",
+    "_render_my_priorities": "Group C (2026-10-08): same as above.",
+    "_render_notable_contact_moves": "Group C (2026-10-08): same as above.",
+    "_render_relationship_reactivation_candidates": "Group C (2026-10-08): same as above.",
+    "_render_this_month_priorities": "Group C (2026-10-08): same as above.",
+    "_render_this_week_priorities": "Group C (2026-10-08): same as above.",
+    "_render_upcoming_prep_requirements": "Group C (2026-10-08): same as above.",
+    "_render_weekly_plan_focus": "Group C (2026-10-08): same as above.",
+    "_render_priority_items": "Shared helper called only by _render_this_week_priorities/_render_this_month_priorities (both Group C) -- not an independent section, unreachable purely as a consequence of its only callers being Group C."
+  }
+}
