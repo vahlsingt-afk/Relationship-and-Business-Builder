@@ -51,6 +51,27 @@ class _IsolatedLedgerMixin:
         self._tmpdir.cleanup()
 
 
+class TestReachabilityFindings(unittest.TestCase):
+    """RB-2026-10-08, self-healing check #1: _reachability_findings()
+    delegates to render_reachability_check.run_all_checks() and never lets
+    an exception there take down the whole sweep -- same "best-effort,
+    never silently ignored" discipline the other checks already have."""
+
+    def test_delegates_to_run_all_checks_findings(self):
+        with patch.object(sas.rrc, "run_all_checks", return_value={"findings": ["x unreachable"], "clean": False}):
+            self.assertEqual(sas._reachability_findings(), ["x unreachable"])
+
+    def test_clean_report_yields_no_findings(self):
+        with patch.object(sas.rrc, "run_all_checks", return_value={"findings": [], "clean": True}):
+            self.assertEqual(sas._reachability_findings(), [])
+
+    def test_exception_becomes_a_finding_not_a_crash(self):
+        with patch.object(sas.rrc, "run_all_checks", side_effect=RuntimeError("boom")):
+            findings = sas._reachability_findings()
+        self.assertEqual(len(findings), 1)
+        self.assertIn("could not run", findings[0])
+
+
 class TestCollectFindings(unittest.TestCase):
     # RB-2026-09-15: _test_suite_findings() is always mocked here -- without
     # this, collect_findings() (skip_test_suite defaults to False) would
@@ -60,6 +81,7 @@ class TestCollectFindings(unittest.TestCase):
         with patch.object(sas, "_kb_findings", return_value=[]), \
              patch.object(sas, "_mutation_reconciliation_findings", return_value=[]), \
              patch.object(sas, "_jpr_findings", return_value=[]), \
+             patch.object(sas, "_reachability_findings", return_value=[]), \
              patch.object(sas, "_test_suite_findings", return_value=[]):
             result = sas.collect_findings()
         self.assertTrue(result["clean"])
@@ -69,17 +91,20 @@ class TestCollectFindings(unittest.TestCase):
         with patch.object(sas, "_kb_findings", return_value=["kb issue"]), \
              patch.object(sas, "_mutation_reconciliation_findings", return_value=["silent op issue"]), \
              patch.object(sas, "_jpr_findings", return_value=["jpr issue"]), \
+             patch.object(sas, "_reachability_findings", return_value=["reachability issue"]), \
              patch.object(sas, "_test_suite_findings", return_value=["test suite issue"]):
             result = sas.collect_findings()
         self.assertFalse(result["clean"])
-        self.assertEqual(len(result["all_findings"]), 4)
+        self.assertEqual(len(result["all_findings"]), 5)
         self.assertIn("kb issue", result["all_findings"])
+        self.assertIn("reachability issue", result["all_findings"])
         self.assertIn("test suite issue", result["all_findings"])
 
     def test_skip_test_suite_flag_bypasses_the_real_subprocess(self):
         with patch.object(sas, "_kb_findings", return_value=[]), \
              patch.object(sas, "_mutation_reconciliation_findings", return_value=[]), \
              patch.object(sas, "_jpr_findings", return_value=[]), \
+             patch.object(sas, "_reachability_findings", return_value=[]), \
              patch.object(sas.subprocess, "run") as mock_run:
             result = sas.collect_findings(skip_test_suite=True)
         mock_run.assert_not_called()

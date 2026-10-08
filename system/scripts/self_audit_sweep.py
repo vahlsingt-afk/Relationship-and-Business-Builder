@@ -54,6 +54,7 @@ import rb_core as core  # noqa: E402
 import mutations  # noqa: E402
 import validate_kb_consistency as vkc  # noqa: E402
 import jpr_recordings_index as jpri  # noqa: E402
+import render_reachability_check as rrc  # noqa: E402
 
 TEST_SUITE_TIMEOUT_SECONDS = 900  # well above the ~6-7min observed real runtime
 
@@ -148,11 +149,29 @@ def _test_suite_findings(*, skip: bool = False) -> list[str]:
     return [f"full test suite failing ({summary}){names_part}"]
 
 
+def _reachability_findings() -> list[str]:
+    """Self-healing check #1 (RB-2026-10-08): structural (AST-based) check
+    for the dominant recurring defect class this system has -- a function
+    computes real data but nothing reachable from its entry function's live
+    code path ever calls it. Found by hand three times in one session
+    (pending_mutations, review-queue backlog, the Group B sections) before
+    this check existed. Allowlist-filtered -- only reports functions that
+    are both unreachable AND not a reviewed, acknowledged exclusion in
+    render_reachability_allowlist.json, so this doesn't re-flag Group C's
+    deliberately-excluded routine/cadence sections every single day."""
+    try:
+        report = rrc.run_all_checks()
+    except Exception as exc:  # noqa: BLE001
+        return [f"render_reachability_check could not run: {exc}"]
+    return report["findings"]
+
+
 def collect_findings(*, skip_test_suite: bool = False) -> dict:
     findings = {
         "kb_consistency": _kb_findings(),
         "mutation_reconciliation": _mutation_reconciliation_findings(),
         "jpr_captures": _jpr_findings(),
+        "render_reachability": _reachability_findings(),
         "test_suite": _test_suite_findings(skip=skip_test_suite),
     }
     all_findings = [f for group in findings.values() for f in group]
