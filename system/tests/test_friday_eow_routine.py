@@ -205,6 +205,105 @@ class TestCheckFreshness(unittest.TestCase):
         self.assertIn("acct-five-guys", bs_findings[0]["target"])
 
 
+class TestCheckArtifactConsistency(unittest.TestCase):
+    """RB defect 2026-09-30 (Five Guys), "Reconciliation control"
+    recommendation, generalized 2026-10-08: a weekly cross-artifact
+    consistency check for every active engagement. Isolated against a tmp
+    registry and a mocked mp_common (never touches real Master Account
+    Plan files)."""
+
+    def setUp(self):
+        import tempfile
+        self.tmpdir = tempfile.TemporaryDirectory()
+        self.tmp_root = Path(self.tmpdir.name)
+        self._orig_registry = fer.CUSTOMERS_PROSPECTS_REGISTRY_PATH
+        fer.CUSTOMERS_PROSPECTS_REGISTRY_PATH = self.tmp_root / "registry.json"
+        self._map_dates_patch = patch.object(fer, "_map_dates_by_blue_sheet_slug", return_value={})
+        self._map_dates_patch.start()
+
+    def tearDown(self):
+        fer.CUSTOMERS_PROSPECTS_REGISTRY_PATH = self._orig_registry
+        self._map_dates_patch.stop()
+        self.tmpdir.cleanup()
+
+    def _write_registry(self, entries: list[dict]) -> None:
+        fer.CUSTOMERS_PROSPECTS_REGISTRY_PATH.write_text(json.dumps({"registry": entries}))
+
+    def test_no_drift_when_all_dates_within_threshold(self):
+        self._write_registry([{
+            "account_id": "acct-test", "engagement_tier": "active_engagement",
+            "last_review_date": "2026-10-01", "latest_background_brief_date": "2026-10-05",
+            "last_evidence_date": "2026-10-03",
+        }])
+        findings = fer.check_artifact_consistency(today=date(2026, 10, 8))
+        self.assertEqual(findings, [])
+
+    def test_flags_blue_sheet_lagging_far_behind_background_brief(self):
+        self._write_registry([{
+            "account_id": "acct-mcdonalds", "engagement_tier": "active_engagement",
+            "last_review_date": "2026-08-27", "latest_background_brief_date": "2026-10-08",
+            "last_evidence_date": None,
+        }])
+        findings = fer.check_artifact_consistency(today=date(2026, 10, 8))
+        self.assertEqual(len(findings), 1)
+        f = findings[0]
+        self.assertEqual(f["account_id"], "acct-mcdonalds")
+        self.assertEqual(f["newest_artifact"], "background_brief")
+        self.assertIn("blue_sheet_last_review", f["lagging_artifacts"])
+        self.assertEqual(f["lagging_artifacts"]["blue_sheet_last_review"], 42)
+
+    def test_pre_engagement_accounts_are_skipped(self):
+        self._write_registry([{
+            "account_id": "acct-cafe-rio", "engagement_tier": "pre_engagement",
+            "last_review_date": "2026-01-01", "latest_background_brief_date": "2026-10-08",
+        }])
+        findings = fer.check_artifact_consistency(today=date(2026, 10, 8))
+        self.assertEqual(findings, [])
+
+    def test_fewer_than_two_dated_fields_is_skipped_not_flagged(self):
+        """Nothing to compare drift against -- must not be treated as a
+        (false) perfect-agreement or a (false) missing-data finding."""
+        self._write_registry([{
+            "account_id": "acct-only-one-date", "engagement_tier": "active_engagement",
+            "last_review_date": "2026-01-01", "latest_background_brief_date": None,
+            "last_evidence_date": None,
+        }])
+        findings = fer.check_artifact_consistency(today=date(2026, 10, 8))
+        self.assertEqual(findings, [])
+
+    def test_linked_master_account_plan_date_is_included_when_present(self):
+        self._map_dates_patch.stop()
+        with patch.object(fer, "_map_dates_by_blue_sheet_slug", return_value={"pollo-campero": "2026-09-30"}):
+            self._write_registry([{
+                "account_id": "acct-pollo-campero", "engagement_tier": "active_engagement",
+                "last_review_date": "2026-08-21", "latest_background_brief_date": None,
+                "last_evidence_date": None,
+            }])
+            findings = fer.check_artifact_consistency(today=date(2026, 10, 8))
+        self._map_dates_patch.start()  # restore so tearDown's .stop() doesn't double-stop
+        self.assertEqual(len(findings), 1)
+        f = findings[0]
+        self.assertEqual(f["newest_artifact"], "master_account_plan")
+        self.assertEqual(f["lagging_artifacts"]["blue_sheet_last_review"], 40)
+
+    def test_malformed_date_strings_are_skipped_not_fatal(self):
+        self._write_registry([{
+            "account_id": "acct-bad-dates", "engagement_tier": "active_engagement",
+            "last_review_date": "not-a-date", "latest_background_brief_date": "2026-10-08",
+            "last_evidence_date": "2026-10-05",
+        }])
+        findings = fer.check_artifact_consistency(today=date(2026, 10, 8))
+        # Only 2 valid dated fields remain (brief, evidence) -- 3 days apart,
+        # within threshold -- so no finding, and no crash on the bad string.
+        self.assertEqual(findings, [])
+
+    def test_unreadable_registry_reports_an_error_not_a_crash(self):
+        fer.CUSTOMERS_PROSPECTS_REGISTRY_PATH = self.tmp_root / "does-not-exist.json"
+        findings = fer.check_artifact_consistency(today=date(2026, 10, 8))
+        self.assertEqual(len(findings), 1)
+        self.assertIn("error", findings[0])
+
+
 class TestReviewReviewQueues(unittest.TestCase):
     def setUp(self):
         import tempfile

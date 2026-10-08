@@ -51,6 +51,43 @@ class _IsolatedLedgerMixin:
         self._tmpdir.cleanup()
 
 
+class TestArtifactConsistencyFindings(unittest.TestCase):
+    """RB defect 2026-09-30 (Five Guys), promoted from weekly to daily
+    (Todd, 2026-10-08): _artifact_consistency_findings() delegates to
+    friday_eow_routine.check_artifact_consistency() -- one detection
+    function feeding both the daily sweep and the weekly narrative report,
+    never a second divergent implementation."""
+
+    def test_formats_a_real_drift_finding(self):
+        fixture = [{
+            "account_id": "acct-mcdonalds", "newest_artifact": "background_brief",
+            "newest_date": "2026-10-08", "lagging_artifacts": {"blue_sheet_last_review": 42},
+        }]
+        with patch.object(sas.fer, "check_artifact_consistency", return_value=fixture):
+            findings = sas._artifact_consistency_findings()
+        self.assertEqual(len(findings), 1)
+        self.assertIn("acct-mcdonalds", findings[0])
+        self.assertIn("background_brief", findings[0])
+        self.assertIn("blue_sheet_last_review 42d behind", findings[0])
+
+    def test_no_drift_yields_no_findings(self):
+        with patch.object(sas.fer, "check_artifact_consistency", return_value=[]):
+            self.assertEqual(sas._artifact_consistency_findings(), [])
+
+    def test_registry_error_becomes_a_finding_not_a_crash(self):
+        with patch.object(sas.fer, "check_artifact_consistency",
+                           return_value=[{"account_id": None, "error": "could not read registry: boom"}]):
+            findings = sas._artifact_consistency_findings()
+        self.assertEqual(len(findings), 1)
+        self.assertIn("could not read registry", findings[0])
+
+    def test_exception_becomes_a_finding_not_a_crash(self):
+        with patch.object(sas.fer, "check_artifact_consistency", side_effect=RuntimeError("boom")):
+            findings = sas._artifact_consistency_findings()
+        self.assertEqual(len(findings), 1)
+        self.assertIn("could not run", findings[0])
+
+
 class TestReachabilityFindings(unittest.TestCase):
     """RB-2026-10-08, self-healing check #1: _reachability_findings()
     delegates to render_reachability_check.run_all_checks() and never lets
@@ -82,6 +119,7 @@ class TestCollectFindings(unittest.TestCase):
              patch.object(sas, "_mutation_reconciliation_findings", return_value=[]), \
              patch.object(sas, "_jpr_findings", return_value=[]), \
              patch.object(sas, "_reachability_findings", return_value=[]), \
+             patch.object(sas, "_artifact_consistency_findings", return_value=[]), \
              patch.object(sas, "_test_suite_findings", return_value=[]):
             result = sas.collect_findings()
         self.assertTrue(result["clean"])
@@ -92,12 +130,14 @@ class TestCollectFindings(unittest.TestCase):
              patch.object(sas, "_mutation_reconciliation_findings", return_value=["silent op issue"]), \
              patch.object(sas, "_jpr_findings", return_value=["jpr issue"]), \
              patch.object(sas, "_reachability_findings", return_value=["reachability issue"]), \
+             patch.object(sas, "_artifact_consistency_findings", return_value=["artifact drift issue"]), \
              patch.object(sas, "_test_suite_findings", return_value=["test suite issue"]):
             result = sas.collect_findings()
         self.assertFalse(result["clean"])
-        self.assertEqual(len(result["all_findings"]), 5)
+        self.assertEqual(len(result["all_findings"]), 6)
         self.assertIn("kb issue", result["all_findings"])
         self.assertIn("reachability issue", result["all_findings"])
+        self.assertIn("artifact drift issue", result["all_findings"])
         self.assertIn("test suite issue", result["all_findings"])
 
     def test_skip_test_suite_flag_bypasses_the_real_subprocess(self):
@@ -105,6 +145,7 @@ class TestCollectFindings(unittest.TestCase):
              patch.object(sas, "_mutation_reconciliation_findings", return_value=[]), \
              patch.object(sas, "_jpr_findings", return_value=[]), \
              patch.object(sas, "_reachability_findings", return_value=[]), \
+             patch.object(sas, "_artifact_consistency_findings", return_value=[]), \
              patch.object(sas.subprocess, "run") as mock_run:
             result = sas.collect_findings(skip_test_suite=True)
         mock_run.assert_not_called()

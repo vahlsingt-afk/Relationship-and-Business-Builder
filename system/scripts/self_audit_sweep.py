@@ -55,6 +55,7 @@ import mutations  # noqa: E402
 import validate_kb_consistency as vkc  # noqa: E402
 import jpr_recordings_index as jpri  # noqa: E402
 import render_reachability_check as rrc  # noqa: E402
+import friday_eow_routine as fer  # noqa: E402
 
 TEST_SUITE_TIMEOUT_SECONDS = 900  # well above the ~6-7min observed real runtime
 
@@ -166,12 +167,39 @@ def _reachability_findings() -> list[str]:
     return report["findings"]
 
 
+def _artifact_consistency_findings() -> list[str]:
+    """RB defect 2026-09-30 (Five Guys), "Reconciliation control"
+    recommendation -- promoted from weekly-only (friday_eow_routine.py) to
+    daily (Todd, 2026-10-08): cross-artifact drift between an active
+    engagement's Blue Sheet, Background Brief, evidence ledger, and linked
+    Master Account Plan shouldn't wait up to a week to surface. Reuses
+    friday_eow_routine.check_artifact_consistency() directly -- one
+    detection function, now fed into both the daily sweep and the weekly
+    narrative report, not two divergent implementations."""
+    try:
+        results = fer.check_artifact_consistency()
+    except Exception as exc:  # noqa: BLE001
+        return [f"check_artifact_consistency could not run: {exc}"]
+    findings: list[str] = []
+    for r in results:
+        if r.get("error"):
+            findings.append(f"artifact consistency check error: {r['error']}")
+            continue
+        lagging_str = ", ".join(f"{name} {days}d behind" for name, days in r["lagging_artifacts"].items())
+        findings.append(
+            f"{r['account_id']}: artifact drift -- newest is {r['newest_artifact']} "
+            f"({r['newest_date']}), {lagging_str}"
+        )
+    return findings
+
+
 def collect_findings(*, skip_test_suite: bool = False) -> dict:
     findings = {
         "kb_consistency": _kb_findings(),
         "mutation_reconciliation": _mutation_reconciliation_findings(),
         "jpr_captures": _jpr_findings(),
         "render_reachability": _reachability_findings(),
+        "artifact_consistency": _artifact_consistency_findings(),
         "test_suite": _test_suite_findings(skip=skip_test_suite),
     }
     all_findings = [f for group in findings.values() for f in group]
