@@ -249,6 +249,32 @@ def test_expired_lease_returns_to_queue(env):
     assert ho.job_states()[jid]["state"] == "queued"
 
 
+def test_dispatch_leases_at_most_one_job_per_call_to_a_non_automatic_engine(env):
+    # RB-DEFECT-2026-10-08: confirmed live in leases.jsonl -- a non-automatic
+    # engine (chatgpt_deep_research, chatgpt_work) has no way to ever claim a
+    # second job leased to it in the same dispatch call (hunter_drive_assignment_export.py
+    # only exports the first). Before this fix, dispatch kept leasing every
+    # remaining ready job to it in one call; the extras sat orphaned until
+    # their TTL silently expired them back to queued.
+    _write_job(env, "a", "priority-a", ["company:a"])
+    _write_job(env, "b", "priority-b", ["company:b"])
+    _write_job(env, "c", "priority-c", ["company:c"])
+    res = ho.cmd_dispatch(_args(confirm=True))
+    assert len(res["results"]) == 1
+    assert res["results"][0]["engine"] == "chatgpt_deep_research"
+    leased_states = [v["state"] for v in ho.job_states().values()]
+    assert leased_states.count("leased") == 1
+    assert len(ho.queued_jobs()) == 2  # the other two are still available, not orphaned
+
+
+def test_dispatch_leases_at_most_one_job_per_call_when_engine_scoped(env):
+    _write_job(env, "a", "priority-a", ["company:a"])
+    _write_job(env, "b", "priority-b", ["company:b"])
+    res = ho.cmd_dispatch(_args(confirm=True, engine="chatgpt_deep_research"))
+    assert len(res["results"]) == 1
+    assert len(ho.queued_jobs()) == 1
+
+
 def test_plan_is_read_only(env):
     _write_job(env, "a", "priority-a", ["company:a"])
     out = ho.cmd_plan(_args())
