@@ -127,7 +127,9 @@ def _franchisee_org_strategic_value(org: dict) -> int:
     evidence basis, and conflating the two would make _strategic_value's
     own behavior for brands/vendors harder to reason about."""
     score = 0
-    units_raw = (org.get("total_identified_units") or {}).get("value")
+    units_raw = org.get("total_identified_units")
+    if isinstance(units_raw, dict):
+        units_raw = units_raw.get("value")
     try:
         units = int(str(units_raw).replace(",", "")) if units_raw else 0
     except ValueError:
@@ -169,7 +171,11 @@ def _rank_franchisees(graph: dict, by_id: dict) -> list[dict]:
             suggested_playbook = "franchisee_organization_profile"
             context = {
                 "confidence_tier": target["current_state"].get("confidence_tier"),
-                "total_identified_units": (org.get("total_identified_units") or {}).get("value"),
+                "total_identified_units": (
+                    org.get("total_identified_units").get("value")
+                    if isinstance(org.get("total_identified_units"), dict)
+                    else org.get("total_identified_units")
+                ),
             }
         rows.append({
             "target_key": target["target_key"],

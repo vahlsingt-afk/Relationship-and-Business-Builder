@@ -181,6 +181,21 @@ class TestFranchiseeOrgStrategicValue(unittest.TestCase):
     def test_malformed_unit_count_does_not_crash(self):
         self.assertEqual(hpq._franchisee_org_strategic_value({"total_identified_units": {"value": "not a number"}}), 0)
 
+    def test_plain_int_unit_count_is_the_real_current_schema_and_does_not_crash(self):
+        # franchisee_finder_common.py's own schema default is a plain int (not
+        # {"value": ...}), and every real organization.json on disk uses this
+        # shape -- this must score exactly like the equivalent dict form.
+        low = hpq._franchisee_org_strategic_value({"total_identified_units": 15})
+        high = hpq._franchisee_org_strategic_value({"total_identified_units": 600})
+        self.assertLess(low, high)
+        self.assertEqual(
+            hpq._franchisee_org_strategic_value({"total_identified_units": 50}),
+            hpq._franchisee_org_strategic_value({"total_identified_units": {"value": "50"}}),
+        )
+
+    def test_zero_plain_int_unit_count_does_not_crash(self):
+        self.assertEqual(hpq._franchisee_org_strategic_value({"total_identified_units": 0}), 0)
+
 
 class TestBrandPlaybookSelection(unittest.TestCase):
     def test_pure_technology_stack_gaps_select_tech_stack_reconstruction(self):
