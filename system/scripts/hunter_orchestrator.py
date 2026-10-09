@@ -118,13 +118,36 @@ def _read_jsonl(path: Path) -> list[dict]:
 # ---------- job identity and state ----------
 
 def job_id_for(job: dict) -> str:
-    """Deterministic job ID, identical for any engine that receives the same assignment."""
-    targets = job.get("target_keys") or ([job["target_key"]] if job.get("target_key") else [])
+    """Deterministic job ID, identical for any engine that receives the same assignment.
+
+    RB-DEFECT-2026-10-09: confirmed live -- a single-target assignment with
+    no bundle companion is written by hunter_cycle.py's prepare-priority
+    --queue as the bare rb.hunter_cycle_job.v1 job object itself, not the
+    rb.hunter_priority_assignment.v1 wrapper this originally only read from
+    (assignment_id/target_keys/playbook at the top level). That bare shape
+    has none of those four keys at its top level, so every single-target job
+    -- regardless of company -- hashed to the exact same basis and the exact
+    same job_id, silently merging unrelated companies' lease history onto
+    each other (confirmed: two different real pending jobs, KFC and Tim
+    Hortons, produced the identical hj_3910d3e90ea6bb1b6ec3). Falls back to
+    the directive's own nested fields (the only place this shape carries
+    them) only when the top-level field is genuinely absent, so the existing
+    bundle/synthetic-test shape -- which does carry these at the top level --
+    is read exactly as before."""
+    directive = job.get("directive") or {}
+    packet_requirements = directive.get("packet_requirements") or {}
+    plan = directive.get("plan") or {}
+    targets = job.get("target_keys") or (
+        [job["target_key"]] if job.get("target_key") else packet_requirements.get("target_keys") or []
+    )
     basis = {
         "assignment_id": job.get("assignment_id") or "",
         "target_keys": sorted(targets),
-        "playbook": job.get("playbook") or job.get("playbook_id") or "",
-        "schema_version": job.get("bundle_schema") or job.get("payload_schema") or job.get("schema") or "",
+        "playbook": job.get("playbook") or job.get("playbook_id") or plan.get("playbook") or "",
+        "schema_version": (
+            job.get("bundle_schema") or job.get("payload_schema") or job.get("schema")
+            or plan.get("payload_schema") or packet_requirements.get("payload_schema") or ""
+        ),
     }
     digest = hashlib.sha256(json.dumps(basis, sort_keys=True).encode("utf-8")).hexdigest()
     return "hj_" + digest[:20]
@@ -449,7 +472,8 @@ def cmd_dispatch(args) -> dict:
             job_path=j["path"],
         )
         result = {"job_id": j["job_id"], "engine": engine, "action": "leased", "at": event["at"]}
-        if cfg["engines"][engine].get("automatic"):
+        is_automatic = bool(cfg["engines"][engine].get("automatic"))
+        if is_automatic:
             # No browser step for this engine: run it now rather than waiting on a human
             # to start it. A failure here is contained to this job -- it's surfaced in the
             # result, never raised, so one bad run doesn't stop the rest of the dispatch.
@@ -459,6 +483,22 @@ def cmd_dispatch(args) -> dict:
             except Exception as exc:  # noqa: BLE001
                 result["transport_error"] = str(exc)
         results.append(result)
+        if not is_automatic:
+            # RB-DEFECT-2026-10-08: a non-automatic engine (chatgpt_deep_research,
+            # chatgpt_work) has exactly one delivery path for a lease -- a Drive
+            # export, or a human starting it -- and nothing ever revisits a job
+            # this same dispatch call already leased to it. Before this check,
+            # the loop kept leasing every remaining ready job in the queue to
+            # the same non-automatic engine in one call; hunter_drive_assignment_export.py
+            # only exports the first, so the rest sat "leased" with no way to
+            # ever be researched until their TTL silently expired them back to
+            # queued -- confirmed live in leases.jsonl (Tim Hortons, Chipotle,
+            # Coates Group all leased-then-expired on repeat, 2026-10-06 and
+            # 2026-10-08). An automatic engine has no such gap -- it runs the
+            # transport synchronously right above, so leasing several of its
+            # ready jobs in one dispatch call is real, delivered work, not an
+            # orphan risk, and keeps its original behavior.
+            break
     return {"mode": mode_reason, "dry_run": not args.confirm, "results": results}
 
 

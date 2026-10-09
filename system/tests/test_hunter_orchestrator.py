@@ -76,6 +76,44 @@ def test_job_id_is_deterministic_and_engine_independent():
     assert ho.job_id_for(job) != ho.job_id_for({**job, "assignment_id": "priority-y"})
 
 
+def _bare_single_job(target_key, playbook="enterprise_account_profile", payload_schema="rb.brand_company_profile.v1"):
+    # The real shape hunter_cycle.py's prepare-priority --queue writes for a
+    # single target with no bundle companion: the bare rb.hunter_cycle_job.v1
+    # object itself, with none of assignment_id/target_keys/playbook/schema
+    # at the top level -- only nested under "directive".
+    return {
+        "schema": "rb.hunter_cycle_job.v1",
+        "directive": {
+            "plan": {"playbook": playbook, "payload_schema": payload_schema},
+            "packet_requirements": {"target_keys": [target_key], "payload_schema": payload_schema},
+        },
+    }
+
+
+def test_job_id_for_a_bare_single_job_is_distinct_per_target():
+    # RB-DEFECT-2026-10-09: confirmed live -- before this fix, every bare
+    # single-target job (the common case: no bundle companion available)
+    # hashed to the identical job_id regardless of target, because none of
+    # assignment_id/target_keys/playbook existed at the top level this
+    # function originally read from. Two real pending jobs for different
+    # companies (KFC, Tim Hortons) collided into the same hj_... id live.
+    a = ho.job_id_for(_bare_single_job("company:brand-kfc"))
+    b = ho.job_id_for(_bare_single_job("company:brand-tim-hortons"))
+    assert a != b
+
+
+def test_job_id_for_a_bare_single_job_is_stable_for_the_same_target():
+    a = ho.job_id_for(_bare_single_job("company:brand-kfc"))
+    b = ho.job_id_for(_bare_single_job("company:brand-kfc"))
+    assert a == b
+
+
+def test_job_id_for_a_bare_single_job_differs_from_a_bundle_of_the_same_target():
+    bare = ho.job_id_for(_bare_single_job("company:brand-kfc"))
+    bundle = ho.job_id_for({"assignment_id": "priority-kfc", "target_keys": ["company:brand-kfc"], "playbook": "enterprise_account_profile"})
+    assert bare != bundle
+
+
 # ---- config and reserves ----
 
 def test_starting_reserves_are_sixty_percent(env):
@@ -247,6 +285,32 @@ def test_expired_lease_returns_to_queue(env):
     ho.LEASES_PATH.write_text("\n".join(json.dumps(r) for r in rows) + "\n")
     ho.expire_stale_leases()
     assert ho.job_states()[jid]["state"] == "queued"
+
+
+def test_dispatch_leases_at_most_one_job_per_call_to_a_non_automatic_engine(env):
+    # RB-DEFECT-2026-10-08: confirmed live in leases.jsonl -- a non-automatic
+    # engine (chatgpt_deep_research, chatgpt_work) has no way to ever claim a
+    # second job leased to it in the same dispatch call (hunter_drive_assignment_export.py
+    # only exports the first). Before this fix, dispatch kept leasing every
+    # remaining ready job to it in one call; the extras sat orphaned until
+    # their TTL silently expired them back to queued.
+    _write_job(env, "a", "priority-a", ["company:a"])
+    _write_job(env, "b", "priority-b", ["company:b"])
+    _write_job(env, "c", "priority-c", ["company:c"])
+    res = ho.cmd_dispatch(_args(confirm=True))
+    assert len(res["results"]) == 1
+    assert res["results"][0]["engine"] == "chatgpt_deep_research"
+    leased_states = [v["state"] for v in ho.job_states().values()]
+    assert leased_states.count("leased") == 1
+    assert len(ho.queued_jobs()) == 2  # the other two are still available, not orphaned
+
+
+def test_dispatch_leases_at_most_one_job_per_call_when_engine_scoped(env):
+    _write_job(env, "a", "priority-a", ["company:a"])
+    _write_job(env, "b", "priority-b", ["company:b"])
+    res = ho.cmd_dispatch(_args(confirm=True, engine="chatgpt_deep_research"))
+    assert len(res["results"]) == 1
+    assert len(ho.queued_jobs()) == 1
 
 
 def test_plan_is_read_only(env):

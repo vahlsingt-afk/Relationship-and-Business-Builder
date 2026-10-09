@@ -1,102 +1,108 @@
 {
-  "schema": "rb.hunter_orchestrator_config.v1",
-  "updated_at": "2026-10-06T00:00:00Z",
-  "decided_by": "Todd (chat, 2026-10-06)",
-  "objective": "One prioritized Hunter queue dispatched across ChatGPT Deep Research, ChatGPT Work, and Claude Co-Work/Research. The assignment and validation standard never change with the engine. Capacity decides which engine runs and when; it never lowers research requirements.",
-  "engines": {
-    "chatgpt_deep_research": {
-      "admitted": true,
-      "enabled": false,
-      "preference": 1,
-      "capacity_model": "local_execution_ledger",
-      "remaining_allowance": "unknown_unless_observed",
-      "reserve_applies": false,
-      "blocked_note": "ChatGPT Deep Research rate limit reached (2026-10-06). Re-enable when the limit resets."
-    },
-    "chatgpt_work": {
-      "admitted": true,
-      "enabled": true,
-      "preference": 2,
-      "capacity_model": "usage_snapshot",
-      "capacity_source": "Settings > Usage (5-hour and weekly remaining %, reset times), recorded via `hunter_orchestrator.py capacity-record`",
-      "reserve_applies": true,
-      "enable_when": "A capacity snapshot has been recorded and reviewed for at least one full weekly reset."
-    },
-    "claude_co_work": {
-      "admitted": true,
-      "enabled": false,
-      "preference": 4,
-      "capacity_model": "usage_snapshot",
-      "capacity_source": "Unverified. No supported live-usage read or dispatch mechanism has been confirmed. Snapshots are recorded manually until one is verified.",
-      "reserve_applies": true,
-      "enable_when": "A supported capacity signal and dispatch path are documented and verified."
-    },
-    "claude_code_headless": {
-      "admitted": true,
-      "enabled": false,
-      "automatic": true,
-      "preference": 3,
-      "capacity_model": "usage_snapshot",
-      "capacity_source": "claude.ai Settings > Usage (session/weekly), recorded via `hunter_orchestrator.py capacity-record`",
-      "reserve_applies": true,
-      "transport": "scripts/hunter_claude_transport.py",
-      "note": "Verified 2026-10-06: a non-interactive `claude -p` call, run from this repo with Read/Glob/Grep/WebSearch allowed, returns a well-formed packet and draws from the Pro session/weekly limits (confirmed against claude.ai Settings > Usage before and after two test calls). Unlike chatgpt_work and claude_co_work, dispatch can run this one automatically -- there is no browser step.",
-      "enable_when": "A capacity snapshot has been recorded and reviewed for at least one full weekly reset, same as chatgpt_work."
-    }
-  },
-  "reserve": {
-    "unit": "percent of each engine's daily total and each engine's weekly total",
-    "meaning": "Share reserved for Todd's development and day-to-day work. Hunter may use only the remaining share.",
-    "starting_daily_pct": 60,
-    "starting_weekly_pct": 60,
-    "min_pct": 20,
-    "max_pct": 85,
-    "adjust_step_pct": 5,
-    "adjust_rule": {
-      "raise_when": "Todd reports running out of bandwidth in the period, or the period's observed interactive usage reached the reserve floor before reset.",
-      "lower_when": "The period ended with at least lower_when_unused_pct of the engine's total unused, with no run-out reported in that period.",
-      "lower_when_unused_pct": 40,
-      "applied_by": "CoS, recorded in the adjustment ledger with the evidence used. Values stay within min_pct and max_pct."
-    }
-  },
   "burn_down": {
-    "timezone": "America/Chicago",
-    "after_hours_start": "18:00",
     "after_hours_end": "07:00",
-    "final_window_hours": 24,
+    "after_hours_start": "18:00",
     "emergency_reserve_pct": 10,
-    "rule": "During the final window before a reset, and during after-hours, the reserve for that period drops to emergency_reserve_pct, releasing expiring capacity to queued Hunter work. Expiring capacity has no value after reset, so it is not preserved."
-  },
-  "short_window": {
-    "rule": "A shorter-duration allowance (such as a 5-hour window) is never drained below its reserve, even when weekly capacity remains.",
-    "max_share_of_remaining_pct": 50
+    "final_window_hours": 24,
+    "rule": "During the final window before a reset, and during after-hours, the reserve for that period drops to emergency_reserve_pct, releasing expiring capacity to queued Hunter work. Expiring capacity has no value after reset, so it is not preserved.",
+    "timezone": "America/Chicago"
   },
   "capacity_watch": {
-    "role": "Pacing control, not an engine. It sets a mode that the dispatcher honors: pause, slow, normal, or accelerate.",
-    "signal_file": "system/.cache/hunter_capacity_watch_signal.json",
+    "default_mode": "normal",
     "modes": {
+      "accelerate": {
+        "max_leases_per_hour": 8
+      },
+      "normal": {
+        "max_leases_per_hour": 4
+      },
       "pause": {
         "dispatch": false
       },
       "slow": {
         "max_leases_per_hour": 1
-      },
-      "normal": {
-        "max_leases_per_hour": 4
-      },
-      "accelerate": {
-        "max_leases_per_hour": 8
       }
     },
-    "default_mode": "normal",
+    "role": "Pacing control, not an engine. It sets a mode that the dispatcher honors: pause, slow, normal, or accelerate.",
+    "signal_file": "system/.cache/hunter_capacity_watch_signal.json",
     "stale_after_hours": 6,
     "stale_behavior": "normal"
   },
+  "daily_plan": {
+    "day_share_of_usable_pct": 50,
+    "job_cost_estimate_pct": {
+      "chatgpt_work": 5,
+      "claude_co_work": 5,
+      "claude_code_headless": 5
+    },
+    "plan_path": "system/.cache/hunter_orchestrator/daily_plan.json",
+    "rule": "Usable = 100 - reserve - used, per period. Half of usable daily capacity is paced across the day window (now to 18:00 America/Chicago). The rest, and any excess before a daily reset, is scheduled into the after-hours window before the reset. Weekly usable caps the total. Planned slots run in queue rank order and dispatch honors their run_after time.",
+    "unreserved_engine_daily_slots": {
+      "chatgpt_deep_research": 3
+    }
+  },
+  "decided_by": "Todd (chat, 2026-10-06)",
+  "engines": {
+    "chatgpt_deep_research": {
+      "admitted": true,
+      "capacity_model": "local_execution_ledger",
+      "enabled": true,
+      "preference": 1,
+      "remaining_allowance": "unknown_unless_observed",
+      "reserve_applies": false
+    },
+    "chatgpt_work": {
+      "admitted": true,
+      "capacity_model": "usage_snapshot",
+      "capacity_source": "Settings > Usage (5-hour and weekly remaining %, reset times), recorded via `hunter_orchestrator.py capacity-record`",
+      "enable_when": "A capacity snapshot has been recorded and reviewed for at least one full weekly reset.",
+      "enabled": true,
+      "preference": 2,
+      "reserve_applies": true
+    },
+    "claude_co_work": {
+      "admitted": true,
+      "capacity_model": "usage_snapshot",
+      "capacity_source": "Unverified. No supported live-usage read or dispatch mechanism has been confirmed. Snapshots are recorded manually until one is verified.",
+      "enable_when": "A supported capacity signal and dispatch path are documented and verified.",
+      "enabled": false,
+      "preference": 4,
+      "reserve_applies": true
+    },
+    "claude_code_headless": {
+      "admitted": true,
+      "automatic": true,
+      "capacity_model": "usage_snapshot",
+      "capacity_source": "claude.ai Settings > Usage (session/weekly), recorded via `hunter_orchestrator.py capacity-record`",
+      "enable_when": "A capacity snapshot has been recorded and reviewed for at least one full weekly reset, same as chatgpt_work.",
+      "enabled": true,
+      "note": "Verified 2026-10-06: a non-interactive `claude -p` call, run from this repo with Read/Glob/Grep/WebSearch allowed, returns a well-formed packet and draws from the Pro session/weekly limits (confirmed against claude.ai Settings > Usage before and after two test calls). Unlike chatgpt_work and claude_co_work, dispatch can run this one automatically -- there is no browser step.",
+      "preference": 3,
+      "reserve_applies": true,
+      "transport": "scripts/hunter_claude_transport.py"
+    }
+  },
   "lease": {
-    "not_started_ttl_minutes": 240,
-    "running_ttl_minutes": 720,
     "max_attempts": 3,
-    "rule": "A lease is a hold, not an attempt. An unstarted lease expires back to queued without counting. An attempt begins only at `start` (Deep Research actually kicked off) and counts when it expires or is released."
+    "not_started_ttl_minutes": 240,
+    "rule": "A lease is a hold, not an attempt. An unstarted lease expires back to queued without counting. An attempt begins only at `start` (Deep Research actually kicked off) and counts when it expires or is released.",
+    "running_ttl_minutes": 720
+  },
+  "objective": "One prioritized Hunter queue dispatched across ChatGPT Deep Research, ChatGPT Work, and Claude Co-Work/Research. The assignment and validation standard never change with the engine. Capacity decides which engine runs and when; it never lowers research requirements.",
+  "reserve": {
+    "adjust_rule": {
+      "applied_by": "CoS, recorded in the adjustment ledger with the evidence used. Values stay within min_pct and max_pct.",
+      "lower_when": "The period ended with at least lower_when_unused_pct of the engine's total unused, with no run-out reported in that period.",
+      "lower_when_unused_pct": 40,
+      "raise_when": "Todd reports running out of bandwidth in the period, or the period's observed interactive usage reached the reserve floor before reset."
+    },
+    "adjust_step_pct": 5,
+    "max_pct": 85,
+    "meaning": "Share reserved for Todd's development and day-to-day work. Hunter may use only the remaining share.",
+    "min_pct": 20,
+    "starting_daily_pct": 60,
+    "starting_weekly_pct": 60,
+    "unit": "percent of each engine's daily total and each engine's weekly total"
   },
   "routing": {
     "ordering": "Queue rank is authoritative. Within a rank, engines are tried in preference order and only if they pass their reserve floor.",
@@ -109,17 +115,10 @@
       ]
     }
   },
-  "daily_plan": {
-    "plan_path": "system/.cache/hunter_orchestrator/daily_plan.json",
-    "job_cost_estimate_pct": {
-      "chatgpt_work": 5,
-      "claude_co_work": 5,
-      "claude_code_headless": 5
-    },
-    "day_share_of_usable_pct": 50,
-    "rule": "Usable = 100 - reserve - used, per period. Half of usable daily capacity is paced across the day window (now to 18:00 America/Chicago). The rest, and any excess before a daily reset, is scheduled into the after-hours window before the reset. Weekly usable caps the total. Planned slots run in queue rank order and dispatch honors their run_after time.",
-    "unreserved_engine_daily_slots": {
-      "chatgpt_deep_research": 3
-    }
-  }
+  "schema": "rb.hunter_orchestrator_config.v1",
+  "short_window": {
+    "max_share_of_remaining_pct": 50,
+    "rule": "A shorter-duration allowance (such as a 5-hour window) is never drained below its reserve, even when weekly capacity remains."
+  },
+  "updated_at": "2026-10-06T00:00:00Z"
 }
