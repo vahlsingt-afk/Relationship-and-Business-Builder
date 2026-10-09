@@ -261,7 +261,19 @@ class TestPendingJobCeiling(_IsolatedQueueMixin):
     """2026-10-03 (CLAUDE_HANDOFF_RB_HUNTER_GATHERER_END_TO_END_DEFECTS):
     confirmed live -- 9 jobs piled up pending with zero completions
     because queue_prepare() enforced no ceiling across different targets.
+
+    Pins PENDING_JOB_CEILING_TOTAL to a fixed small value independent of
+    whatever the real production ceiling is -- these tests exercise the
+    enforcement LOGIC (refuse the Nth job, report the right counts), not
+    the production VALUE, so raising the real ceiling for multi-engine
+    concurrency (RB-DEFECT-2026-10-09) doesn't require touching this file.
     """
+
+    def setUp(self):
+        super().setUp()
+        self._ceiling_patch = patch.object(hc, "PENDING_JOB_CEILING_TOTAL", 3)
+        self._ceiling_patch.start()
+        self.addCleanup(self._ceiling_patch.stop)
 
     def _queue(self, target_key: str, *, universe: str = "brands"):
         with patch.object(hc, "prepare", return_value=_fake_job(target_key)):
@@ -360,6 +372,12 @@ class TestTransportGate(_IsolatedQueueMixin):
 class TestBundleCountsTowardCeiling(_IsolatedQueueMixin):
     """2026-10-06: a single pending file holding several subjobs must count
     per target, or a multi-target bundle silently bypasses the ceiling."""
+
+    def setUp(self):
+        super().setUp()  # see TestPendingJobCeiling.setUp for why this is pinned
+        self._ceiling_patch = patch.object(hc, "PENDING_JOB_CEILING_TOTAL", 3)
+        self._ceiling_patch.start()
+        self.addCleanup(self._ceiling_patch.stop)
 
     def test_three_target_bundle_fills_the_ceiling(self):
         hc.PENDING_JOBS_DIR.mkdir(parents=True, exist_ok=True)

@@ -41,8 +41,22 @@ PROCESSED_PACKETS_DIR = PACKETS_INBOX_DIR / "processed"
 # job per enabled research family, whichever is smaller" -- enforced as
 # two independent caps in queue_prepare() below; either tripping refuses
 # the write.
+#
+# RB-DEFECT-2026-10-09: raised from 3 to 6. That ceiling was sized for a
+# single engine working one job at a time; with three independent Hunter
+# engines now dispatching concurrently (chatgpt_deep_research, chatgpt_work,
+# claude_code_headless), each holding its own in-flight job, 3 left
+# essentially no room for prepare-priority --queue to stage the next
+# target while even two engines were still out -- confirmed live: with
+# two real jobs already leased, the next hunter_drive_assignment_export.py
+# run hit pending_ceiling_reached on its second prepare-priority call and
+# chatgpt_work got nothing. 6 gives each of the three engines its own
+# in-flight slot plus one spare for staging the next target. The
+# PENDING_JOB_CEILING_TOTAL-dependent tests in test_hunter_cycle_queue_sweep.py
+# pin this back down to 3 themselves -- they test the enforcement logic, not
+# this specific value, so they don't need updating when this number does.
 QUARANTINED_JOBS_DIR = PENDING_JOBS_DIR / "quarantined"
-PENDING_JOB_CEILING_TOTAL = 3
+PENDING_JOB_CEILING_TOTAL = 6
 PENDING_JOB_CEILING_PER_FAMILY = 1
 
 # 2026-10-03: real runs (Tim Hortons, then KFC) confirmed Codex does not
