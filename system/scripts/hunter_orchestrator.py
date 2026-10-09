@@ -320,6 +320,28 @@ def mode_throughput_ok() -> tuple[bool, str]:
     return True, mode
 
 
+def _not_started_ttl_minutes(cfg: dict, engine: str | None) -> int:
+    """RB-DEFECT-2026-10-09: the default TTL assumes a real `start` signal
+    exists to tell "stuck" apart from "quietly in progress" -- true for
+    claude_code_headless (its transport calls cmd_start the moment it kicks
+    off), false for chatgpt_deep_research/chatgpt_work, which have no API
+    path back to this ledger at all: they just read an assignment from
+    Drive and research it, so a lease that's merely never been told to
+    start looks identical to one genuinely abandoned. Confirmed live: a
+    Deep Research lease expired on the default TTL and got silently
+    reassigned to a different target after 4 hours of pure silence --
+    harmless that time only because Deep Research had independently
+    reported the capability itself was unavailable (nothing was really in
+    flight), not because the TTL was actually safe for these engines.
+    Per-engine override in config (lease.not_started_ttl_minutes_by_engine)
+    lets exactly those engines wait longer before this reclaims their lease;
+    falls back to the shared default for any engine not listed there."""
+    overrides = cfg.get("not_started_ttl_minutes_by_engine") or {}
+    if engine in overrides:
+        return overrides[engine]
+    return cfg["not_started_ttl_minutes"]
+
+
 def expire_stale_leases() -> list[dict]:
     """Unstarted leases return to queued without counting as an attempt. Running attempts that
     outlive their window count toward max_attempts and become terminal when exhausted."""
@@ -327,7 +349,7 @@ def expire_stale_leases() -> list[dict]:
     expired = []
     for jid, row in job_states().items():
         state = row.get("state")
-        if state == "leased" and _lease_expired(row, cfg["not_started_ttl_minutes"]):
+        if state == "leased" and _lease_expired(row, _not_started_ttl_minutes(cfg, row.get("engine"))):
             expired.append(_transition(jid, "queued", reason="lease_not_started", attempts=_attempt_count(jid)))
         elif state == "running" and _lease_expired(row, cfg["running_ttl_minutes"]):
             attempts = _attempt_count(jid)
