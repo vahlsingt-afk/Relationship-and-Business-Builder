@@ -20,6 +20,7 @@ sys.path.insert(0, str(SCRIPTS_DIR))
 import hunter  # noqa: E402
 import hunter_change_dispatch  # noqa: E402
 import hunter_snapshot  # noqa: E402
+import hunter_orchestrator as ho  # noqa: E402
 
 GATHERER_QUEUE_PATH = SCRIPTS_DIR.parent / ".cache" / "gatherer_hunter_escalations.jsonl"
 import hunter_packet_normalize  # noqa: E402
@@ -453,12 +454,30 @@ def sweep(*, confirm: bool = False, quarantine_max_age_hours: int = 48) -> dict:
                 continue
             job = json.loads(job_path.read_text(encoding="utf-8"))
             receipt = _finalize_bundle(job, packet, confirm=confirm) if is_bundle else finalize(job, packet, confirm=confirm)
+            # RB-DEFECT-2026-10-09: tell hunter_orchestrator.py's lease ledger
+            # what sweep just decided -- best-effort, never fatal to the real
+            # intake this loop exists for. A sync failure is recorded on the
+            # receipt for visibility, not raised, so one bad ledger lookup
+            # can't block a real packet from being processed.
+            sync_state = None
+            try:
+                sync_state = ho.sync_from_sweep(job, confirm=confirm, ok=bool(receipt.get("ok")))
+            except Exception as error:  # noqa: BLE001
+                receipt["orchestrator_sync_error"] = str(error)
             results.append({"packet_path": str(packet_path), "job_path": str(job_path), "receipt": receipt})
             archived_packet = processed_dir / packet_path.name
             archived_receipt = archived_packet.with_name(archived_packet.name + ".receipt.json")
             archived_receipt.write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-            job_path.rename(PROCESSED_JOBS_DIR / job_path.name)
             packet_path.rename(archived_packet)
+            if sync_state and sync_state.get("state") == "retryable":
+                # Leave the job file in place -- archiving it here would
+                # strand a job the ledger just marked retryable with nothing
+                # left to match a corrected resubmission against. Confirmed
+                # live: recovering from exactly this required manually moving
+                # a job file back out of processed/ by hand.
+                pass
+            else:
+                job_path.rename(PROCESSED_JOBS_DIR / job_path.name)
     return {"schema": "rb.hunter_sweep_result.v1", "confirmed": confirm, "processed": results, "unmatched": unmatched, "quarantined": quarantined}
 
 

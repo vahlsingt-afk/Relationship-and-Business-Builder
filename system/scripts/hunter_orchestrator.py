@@ -507,6 +507,55 @@ def _attempt_count(jid: str) -> int:
     return sum(1 for r in _read_jsonl(LEASES_PATH) if r.get("job_id") == jid and r.get("state") == "running")
 
 
+def sync_from_sweep(job: dict, *, confirm: bool, ok: bool) -> dict | None:
+    """RB-DEFECT-2026-10-09: hunter_cycle.py's sweep() and this module's own
+    lease ledger are two separate, non-talking bookkeeping systems -- sweep
+    finalizes a packet match (writes a receipt, archives the files) entirely
+    through its own PENDING_JOBS_DIR/PROCESSED_JOBS_DIR file state, and never
+    told this ledger anything happened. Confirmed live: a job this ledger
+    still showed "leased" days after sweep had already matched, validated
+    (and failed), and archived its real packet -- recovering it for a
+    corrected resubmission required manually moving the job file back out of
+    processed/ by hand. sweep() calls this right after finalize()/
+    _finalize_bundle() so the two stay in sync going forward.
+
+    Returns None (no-op, changes nothing) when:
+      - the job never went through this ledger at all (no job_states()
+        entry) -- never invents lease history for a packet this module
+        didn't dispatch (a manual drop, a Codex-prepared batch, anything in
+        the legacy folder);
+      - it's a dry run (confirm=False) -- sweep's own receipt/archiving on a
+        dry run is itself documented, relied-upon preview behavior
+        (hunter_batch.py reads PROCESSED_JOBS_DIR regardless of confirm),
+        but committing a state change to the DISPATCH ledger is exactly what
+        a preview must not do;
+      - the job's current state isn't "leased" or "running" -- already
+        settled by something else (a direct cmd_complete/cmd_release call,
+        or a prior sweep), so this never clobbers a decision already made.
+
+    Mirrors cmd_complete/cmd_release's own completed/retryable/terminal_failed
+    logic exactly, rather than a parallel reimplementation -- same attempt
+    counting, same ceiling. Note that attempt counting only increments on a
+    "running" transition (cmd_start), which this ledger's real Hunter engines
+    never call -- so a job reaching this function always has 0 attempts and
+    can never hit terminal_failed through this path alone; that's an existing
+    limitation of _attempt_count shared with cmd_release, not something new
+    this function introduces."""
+    jid = job_id_for(job)
+    states = job_states()
+    if jid not in states or not confirm:
+        return None
+    if states[jid].get("state") not in ("leased", "running"):
+        return None
+    if ok:
+        return _transition(jid, "completed")
+    cfg = load_config()
+    attempts = _attempt_count(jid)
+    if attempts >= cfg["lease"]["max_attempts"]:
+        return _transition(jid, "terminal_failed", reason="sweep_validation_failed", attempts=attempts)
+    return _transition(jid, "retryable", reason="sweep_validation_failed", attempts=attempts)
+
+
 def cmd_release(args) -> dict:
     cfg = load_config()
     jid = args.job_id

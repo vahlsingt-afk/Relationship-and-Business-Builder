@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "system" / "scripts"))
 
 import hunter_cycle as hc  # noqa: E402
+import hunter_orchestrator as ho  # noqa: E402
 
 
 def _fake_job(target_key: str, *, research_authorized: bool = True) -> dict:
@@ -66,6 +67,14 @@ class _IsolatedQueueMixin(unittest.TestCase):
             patch.object(hc, "LEGACY_PROCESSED_PACKETS_DIR", tmp / "legacy_inbox" / "processed"),
             # 2026-10-03 (Defect 1/2 fix): isolate the new quarantine dir too.
             patch.object(hc, "QUARANTINED_JOBS_DIR", tmp / "pending" / "quarantined"),
+            # RB-DEFECT-2026-10-09: sweep() now syncs into hunter_orchestrator's
+            # own lease ledger -- isolate its ledger the same way every other
+            # orchestrator test does, or these tests would touch the real
+            # leases.jsonl on every run. CONFIG_PATH is left pointing at the
+            # real config (read-only here; its lease.max_attempts governs
+            # retryable-vs-terminal_failed, same as production).
+            patch.object(ho, "LEDGER_DIR", tmp / "ho_ledger"),
+            patch.object(ho, "LEASES_PATH", tmp / "ho_ledger" / "leases.jsonl"),
         ]
         for p in self._patches:
             p.start()
@@ -388,6 +397,95 @@ class TestBundleCountsTowardCeiling(_IsolatedQueueMixin):
             result = hc.queue_prepare("competitive_positioning", universe="competitors", target_keys=["competitor:one"])
         self.assertEqual(result["queued_paths"], [])
         self.assertTrue(result["ceiling_reached"])
+
+
+class TestSweepOrchestratorSync(_IsolatedQueueMixin):
+    """RB-DEFECT-2026-10-09: sweep() and hunter_orchestrator.py's lease
+    ledger used to be two separate, non-talking bookkeeping systems --
+    confirmed live, a job the ledger still showed "leased" days after
+    sweep had already matched, validated (and failed), and archived its
+    real packet. Recovering it for a corrected resubmission required
+    manually moving the job file back out of processed/ by hand."""
+
+    def _write_job_and_lease_it(self, target_key: str):
+        hc.PENDING_JOBS_DIR.mkdir(parents=True, exist_ok=True)
+        job_path = hc.PENDING_JOBS_DIR / f"{hc._target_slug(target_key)}.json"
+        job = _fake_job(target_key)
+        job_path.write_text(json.dumps(job), encoding="utf-8")
+        jid = ho.job_id_for(job)
+        ho._transition(jid, "leased", engine="chatgpt_work", job_path=str(job_path))
+        return job_path, jid
+
+    def _drop_packet(self, target_key: str, filename: str = "dropped.json"):
+        hc.PACKETS_INBOX_DIR.mkdir(parents=True, exist_ok=True)
+        path = hc.PACKETS_INBOX_DIR / filename
+        path.write_text(json.dumps(_fake_packet(target_key)), encoding="utf-8")
+        return path
+
+    def test_confirmed_success_marks_the_ledger_completed(self):
+        job_path, jid = self._write_job_and_lease_it("competitor:qu")
+        self._drop_packet("competitor:qu")
+        with patch.object(hc, "finalize", return_value={"ok": True}):
+            hc.sweep(confirm=True)
+        self.assertEqual(ho.job_states()[jid]["state"], "completed")
+
+    def test_confirmed_failure_marks_the_ledger_retryable_and_keeps_the_job_file(self):
+        job_path, jid = self._write_job_and_lease_it("competitor:qu")
+        self._drop_packet("competitor:qu")
+        with patch.object(hc, "finalize", return_value={"ok": False}):
+            result = hc.sweep(confirm=True)
+        self.assertEqual(ho.job_states()[jid]["state"], "retryable")
+        # The job file must still be there for a corrected resubmission to
+        # match against -- archiving it here is exactly the bug that made a
+        # real recovery require manually moving the file back by hand.
+        self.assertTrue(job_path.exists())
+        self.assertFalse((hc.PROCESSED_JOBS_DIR / job_path.name).exists())
+        self.assertEqual(len(result["processed"]), 1)
+
+    def test_confirmed_failure_past_max_attempts_marks_terminal_failed(self):
+        job_path, jid = self._write_job_and_lease_it("competitor:qu")
+        cfg = json.loads(ho.CONFIG_PATH.read_text())
+        max_attempts = cfg["lease"]["max_attempts"]
+        for _ in range(max_attempts):
+            ho._transition(jid, "running")
+            ho._transition(jid, "retryable")
+            ho._transition(jid, "leased")
+        self._drop_packet("competitor:qu")
+        with patch.object(hc, "finalize", return_value={"ok": False}):
+            hc.sweep(confirm=True)
+        self.assertEqual(ho.job_states()[jid]["state"], "terminal_failed")
+
+    def test_dry_run_never_touches_the_ledger_even_though_it_still_archives(self):
+        job_path, jid = self._write_job_and_lease_it("competitor:qu")
+        self._drop_packet("competitor:qu")
+        with patch.object(hc, "finalize", return_value={"ok": False}):
+            hc.sweep(confirm=False)
+        self.assertEqual(ho.job_states()[jid]["state"], "leased")  # unchanged
+        self.assertFalse(job_path.exists())  # dry run still archives -- documented, relied-upon behavior
+        self.assertTrue((hc.PROCESSED_JOBS_DIR / job_path.name).exists())
+
+    def test_a_job_never_dispatched_through_the_orchestrator_is_untouched(self):
+        # No ho._transition call at all -- this job has no orchestrator
+        # history, same as a manually-dropped or Codex-prepared batch.
+        job_path = hc.PENDING_JOBS_DIR / "competitor-qu.json"
+        hc.PENDING_JOBS_DIR.mkdir(parents=True, exist_ok=True)
+        job_path.write_text(json.dumps(_fake_job("competitor:qu")), encoding="utf-8")
+        self._drop_packet("competitor:qu")
+        with patch.object(hc, "finalize", return_value={"ok": False}):
+            result = hc.sweep(confirm=True)
+        self.assertEqual(ho.job_states(), {})  # never invented lease history
+        # No orchestrator record to preserve a retry for -- falls back to the
+        # original always-archive behavior.
+        self.assertFalse(job_path.exists())
+        self.assertEqual(len(result["processed"]), 1)
+
+    def test_a_sync_error_is_recorded_on_the_receipt_not_raised(self):
+        job_path, jid = self._write_job_and_lease_it("competitor:qu")
+        self._drop_packet("competitor:qu")
+        with patch.object(hc, "finalize", return_value={"ok": True}), \
+             patch.object(ho, "sync_from_sweep", side_effect=RuntimeError("boom")):
+            result = hc.sweep(confirm=True)  # must not raise
+        self.assertEqual(result["processed"][0]["receipt"]["orchestrator_sync_error"], "boom")
 
 
 if __name__ == "__main__":
