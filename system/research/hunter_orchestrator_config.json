@@ -85,6 +85,11 @@
   "lease": {
     "max_attempts": 3,
     "not_started_ttl_minutes": 240,
+    "not_started_ttl_minutes_by_engine": {
+      "chatgpt_deep_research": 1200,
+      "chatgpt_work": 1200
+    },
+    "not_started_ttl_by_engine_note": "RB-DEFECT-2026-10-09: the default 240-minute 'not started' TTL assumes a real `start` signal exists to distinguish 'stuck' from 'quietly in progress' -- true for claude_code_headless (hunter_claude_transport.py calls cmd_start the moment it kicks off), false for chatgpt_deep_research/chatgpt_work, which have no API path back to this ledger at all: they just read an assignment file from Drive and research it. Confirmed live: a Deep Research lease expired via this TTL and got silently reassigned to a different target after exactly 4 hours of pure silence -- harmless that day only because Deep Research had also independently reported the capability itself was unavailable (so nothing was really in flight to abandon), not because the TTL was actually safe for these engines. 1200 minutes (20 hours) roughly matches the real refresh cadence of this system's Drive-based assignment export (about once a day) rather than the hourly cadence of the Tasks that merely check whether anything new is there -- long enough that realistic research (no observed run anywhere near this long) is never cut off mid-flight, short enough that a truly abandoned assignment (Task disabled, account issue) still self-heals within about a day instead of lingering indefinitely.",
     "rule": "A lease is a hold, not an attempt. An unstarted lease expires back to queued without counting. An attempt begins only at `start` (Deep Research actually kicked off) and counts when it expires or is released.",
     "running_ttl_minutes": 720
   },

@@ -281,7 +281,65 @@ def test_expired_lease_returns_to_queue(env):
     _write_job(env, "a", "priority-a", ["company:a"])
     jid = ho.cmd_dispatch(_args(confirm=True))["results"][0]["job_id"]
     rows = ho._read_jsonl(ho.LEASES_PATH)
-    rows[-1]["at"] = (datetime.now(timezone.utc) - timedelta(hours=9)).isoformat()
+    # chatgpt_deep_research (the env fixture's default engine) has a 1200-minute
+    # (20-hour) per-engine not-started TTL override (RB-DEFECT-2026-10-09) --
+    # 21 hours clears that as well as the 4-hour global default.
+    rows[-1]["at"] = (datetime.now(timezone.utc) - timedelta(hours=21)).isoformat()
+    ho.LEASES_PATH.write_text("\n".join(json.dumps(r) for r in rows) + "\n")
+    ho.expire_stale_leases()
+    assert ho.job_states()[jid]["state"] == "queued"
+
+
+# ---- per-engine not-started TTL override ----
+
+def test_not_started_ttl_minutes_falls_back_to_the_default_for_an_unlisted_engine():
+    cfg = {"not_started_ttl_minutes": 240, "not_started_ttl_minutes_by_engine": {"chatgpt_deep_research": 1200}}
+    assert ho._not_started_ttl_minutes(cfg, "claude_code_headless") == 240
+    assert ho._not_started_ttl_minutes(cfg, None) == 240
+
+
+def test_not_started_ttl_minutes_uses_the_override_when_listed():
+    cfg = {"not_started_ttl_minutes": 240, "not_started_ttl_minutes_by_engine": {"chatgpt_deep_research": 1200}}
+    assert ho._not_started_ttl_minutes(cfg, "chatgpt_deep_research") == 1200
+
+
+def test_a_non_automatic_engine_lease_past_the_default_but_within_its_override_does_not_expire(env):
+    # RB-DEFECT-2026-10-09: confirmed live -- a chatgpt_deep_research lease
+    # expired on the 4-hour global default and got silently reassigned,
+    # even though nothing ever signals "I started" for this engine (no
+    # cmd_start call exists in its real delivery path), so 4 hours of
+    # silence looks identical to genuine abandonment.
+    _write_job(env, "a", "priority-a", ["company:a"])
+    jid = ho.cmd_dispatch(_args(confirm=True))["results"][0]["job_id"]
+    rows = ho._read_jsonl(ho.LEASES_PATH)
+    rows[-1]["at"] = (datetime.now(timezone.utc) - timedelta(hours=9)).isoformat()  # past the 4h default
+    ho.LEASES_PATH.write_text("\n".join(json.dumps(r) for r in rows) + "\n")
+    ho.expire_stale_leases()
+    assert ho.job_states()[jid]["state"] == "leased"  # still held, not reassigned
+
+
+def test_a_non_automatic_engine_lease_past_its_own_override_does_expire(env):
+    _write_job(env, "a", "priority-a", ["company:a"])
+    jid = ho.cmd_dispatch(_args(confirm=True))["results"][0]["job_id"]
+    rows = ho._read_jsonl(ho.LEASES_PATH)
+    rows[-1]["at"] = (datetime.now(timezone.utc) - timedelta(hours=21)).isoformat()  # past the 20h override
+    ho.LEASES_PATH.write_text("\n".join(json.dumps(r) for r in rows) + "\n")
+    ho.expire_stale_leases()
+    assert ho.job_states()[jid]["state"] == "queued"
+
+
+def test_an_automatic_engine_lease_still_uses_the_tight_default_unaffected_by_the_override(env):
+    # claude_code_headless has a real cmd_start signal, so an unstarted
+    # lease genuinely does mean stuck -- it keeps the short default TTL.
+    cfg = json.loads(ho.CONFIG_PATH.read_text())
+    cfg["engines"]["claude_code_headless"]["enabled"] = True
+    ho.CONFIG_PATH.write_text(json.dumps(cfg))
+    _write_job(env, "a", "priority-a", ["company:a"])
+    ho._transition(ho.job_id_for({"assignment_id": "priority-a", "target_keys": ["company:a"]}),
+                    "leased", engine="claude_code_headless", job_path=str(env["jobs"] / "a.json"))
+    jid = ho.job_id_for({"assignment_id": "priority-a", "target_keys": ["company:a"]})
+    rows = ho._read_jsonl(ho.LEASES_PATH)
+    rows[-1]["at"] = (datetime.now(timezone.utc) - timedelta(hours=9)).isoformat()  # past the 4h default
     ho.LEASES_PATH.write_text("\n".join(json.dumps(r) for r in rows) + "\n")
     ho.expire_stale_leases()
     assert ho.job_states()[jid]["state"] == "queued"
@@ -426,7 +484,9 @@ def test_unstarted_lease_never_becomes_terminal(env):
     _write_job(env, "a", "priority-a", ["company:a"])
     jid = ho.cmd_dispatch(_args(confirm=True))["results"][0]["job_id"]
     for _ in range(5):  # more nights than max_attempts
-        _backdate_last(5)
+        # chatgpt_deep_research's 1200-minute (20-hour) per-engine override
+        # (RB-DEFECT-2026-10-09) means a 5-hour backdate no longer expires it.
+        _backdate_last(21)
         ho.expire_stale_leases()
         assert ho.job_states()[jid]["state"] == "queued"
         assert ho._attempt_count(jid) == 0
