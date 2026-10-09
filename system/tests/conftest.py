@@ -155,6 +155,35 @@ def _isolate_ecosystem_snapshots_dir(request: pytest.FixtureRequest, monkeypatch
 
 
 @pytest.fixture(autouse=True)
+def _isolate_ecosystem_conflict_queue(monkeypatch: pytest.MonkeyPatch, tmp_path: Path):
+    """RB-DEFECT (2026-10-09): ecosystem_intelligence.py's
+    _write_conflict_record() reads core.CONFLICT_QUEUE_PATH -- a SEPARATE
+    module-level constant from core.ECOSYSTEM_INTELLIGENCE_PATH, which is
+    the only one most tests remember to isolate (e.g.
+    test_tech_stack_relationship_promotion.py's _IsolatedGraphMixin).
+    Confirmed live: every pytest run through that fixture's
+    resolve_and_upsert_relationship() calls wrote a synthetic
+    brand-blaze-pizza/vendor-oracle "existing claim" conflict record into
+    the REAL system/inbox/ecosystem/conflict_queue.jsonl (65 polluted
+    entries accumulated this way before cleanup) -- the exact same shape
+    of leak as the SNAPSHOTS_DIR defect above.
+
+    Unlike SNAPSHOTS_DIR (where each snapshot gets a unique, timestamp-
+    tagged filename, so sharing one directory across the whole session is
+    harmless), conflict records all land in ONE shared JSONL file, and
+    callers like intelligence_mutation_engine.build_mutation_brief_block()
+    and conflict_pattern_monitor.py filter/count by date -- a per-SESSION
+    shared file would let one test's write bleed into another test's
+    "conflicts detected today" count (confirmed live: a sibling test
+    running first inflated this test's count from 1 to 2). So this one is
+    isolated per-TEST, via pytest's own function-scoped tmp_path, rather
+    than reusing the shared _RB_TEST_* runtime directory.
+    """
+    monkeypatch.setattr(_rb_core, "CONFLICT_QUEUE_PATH", tmp_path / "conflict_queue.jsonl")
+    yield
+
+
+@pytest.fixture(autouse=True)
 def _reset_render_intelligence_brief_rendered_this_run():
     """RB-DEFECT-2026-07-08: render_intelligence_brief._rendered_this_run is a
     module-level set used to dedup a URL across sections within a single

@@ -46,7 +46,7 @@ SCRIPTS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS_DIR))
 import rb_core as core  # noqa: E402
 
-CONFLICT_LOG_PATH = core.SYSTEM_DIR / "inbox" / "ecosystem" / "conflict_queue.jsonl"
+CONFLICT_LOG_PATH = core.CONFLICT_QUEUE_PATH
 
 # A rivalry re-confirmed unresolved fewer than this many times, or spanning
 # fewer days than this, isn't yet a real pattern -- a one-off recorded_

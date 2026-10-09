@@ -40,6 +40,7 @@ INTELLIGENCE_DB_PATH = CACHE_DIR / "intelligence.db"
 # Sprint E-2b: Configurable industry sources (edit to match your industry)
 INDUSTRY_SOURCES_PATH = SYSTEM_DIR / "industry_sources.yaml"
 INBOX_DIR = SYSTEM_DIR / "inbox"
+CONFLICT_QUEUE_PATH = INBOX_DIR / "ecosystem" / "conflict_queue.jsonl"
 INBOX_ACCOUNTS_PATH = INBOX_DIR / "accounts.yaml"
 SOCIAL_FEED_PATH = INBOX_DIR / "social.feed.json"
 SOCIAL_OWN_POSTS_PATH = INBOX_DIR / "social.own_posts.json"

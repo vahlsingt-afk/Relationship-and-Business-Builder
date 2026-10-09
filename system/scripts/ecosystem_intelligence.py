@@ -1026,8 +1026,17 @@ def _write_conflict_record(record: dict) -> None:
     written here now documents a decision that was ALREADY made (auto_
     superseded or recorded_alongside) -- pure transparency ("let RBB
     interpret that as they build the brief"), never a pending action. Still
-    append-only JSONL, same as before, so the full history survives."""
-    queue_path = core.SYSTEM_DIR / "inbox" / "ecosystem" / "conflict_queue.jsonl"
+    append-only JSONL, same as before, so the full history survives.
+
+    2026-10-09: reads core.CONFLICT_QUEUE_PATH (not an inline SYSTEM_DIR-
+    relative join) specifically so a test can isolate it the same way
+    core.ECOSYSTEM_INTELLIGENCE_PATH already gets isolated -- confirmed
+    live: test_tech_stack_relationship_promotion.py's _IsolatedGraphMixin
+    patches only ECOSYSTEM_INTELLIGENCE_PATH, so every pytest run calling
+    resolve_and_upsert_relationship() through that fixture wrote a synthetic
+    brand-blaze-pizza/vendor-oracle conflict record into the REAL production
+    queue (65 polluted entries confirmed before cleanup)."""
+    queue_path = core.CONFLICT_QUEUE_PATH
     queue_path.parent.mkdir(parents=True, exist_ok=True)
     with open(queue_path, "a") as f:
         f.write(json.dumps(record) + "\n")
