@@ -142,7 +142,18 @@ def sweep_downloads(*, downloads: Path = DOWNLOADS, drive_inbox: Path = DRIVE_IN
             state["seen"][digest] = {"file": path.name, "outcome": "rejected", "at": now.isoformat()}
             continue
         packet_id = re.sub(r"[^A-Za-z0-9._-]+", "-", str(packet.get("packet_id") or path.stem))
-        dest = drive_inbox / f"{packet_id}.json"
+        # RB-DEFECT-2026-10-09: confirmed live -- hunter_drive_inbox_sync.py's own
+        # matcher only considers a Drive file a candidate packet when its filename
+        # stem contains "packet", "response", "batch", or "bundle" (it shares this
+        # folder with outgoing assignment files and other unrelated content, and
+        # uses the name to tell them apart before even opening the file). A real
+        # GPT-assigned packet_id has no reason to contain any of those words --
+        # "hunter-kfc-work-20261009-hj61a4a8b8535cb0b90448" didn't -- so a packet
+        # this watcher successfully recovered from Downloads sat silently
+        # stranded in Drive forever, never picked up by the next stage. The
+        # "packet-" prefix guarantees the stem always matches, regardless of
+        # whatever packet_id the research agent happened to choose.
+        dest = drive_inbox / f"hunter-packet-{packet_id}.json"
         if str(packet.get("packet_id")) in processed_ids:
             skipped.append(path.name)
             state["seen"][digest] = {"file": path.name, "outcome": "already_processed", "at": now.isoformat()}

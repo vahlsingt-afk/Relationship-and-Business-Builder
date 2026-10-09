@@ -66,7 +66,25 @@ class TestSweepDownloads(unittest.TestCase):
         (self.downloads / "packet.json").write_text(json.dumps(ENVELOPE), encoding="utf-8")
         result = self._run()
         self.assertEqual(len(result["copied"]), 1)
-        self.assertTrue((self.drive / "hunter-test-packet-1.json").exists())
+        # RB-DEFECT-2026-10-09: the destination name always carries a
+        # "packet-" token -- hunter_drive_inbox_sync.py's own matcher
+        # requires one of packet/response/batch/bundle in the stem to treat
+        # a Drive file as a candidate at all, and a real GPT-chosen
+        # packet_id has no guarantee of containing any of those (confirmed
+        # live: "hunter-kfc-work-20261009-hj61a4a8b8535cb0b90448" didn't,
+        # and sat silently stranded in Drive, never picked up downstream).
+        self.assertTrue((self.drive / "hunter-packet-hunter-test-packet-1.json").exists())
+
+    def test_destination_filename_always_satisfies_the_downstream_sync_matcher(self):
+        # A packet_id with none of packet/response/batch/bundle in it --
+        # exactly the shape that silently stranded a real recovered packet.
+        envelope = {**ENVELOPE, "packet_id": "hunter-kfc-work-20261009-hj61a4a8b8535cb0b90448"}
+        (self.downloads / "packet.json").write_text(json.dumps(envelope), encoding="utf-8")
+        result = self._run()
+        self.assertEqual(len(result["copied"]), 1)
+        dest_name = Path(result["copied"][0]["dest"]).name
+        self.assertTrue(dest_name.startswith("hunter-"))
+        self.assertIn("packet", dest_name)
 
     def test_bare_payload_is_rejected_and_left_in_downloads(self):
         source = self.downloads / "report.json"
