@@ -56,6 +56,7 @@ import validate_kb_consistency as vkc  # noqa: E402
 import jpr_recordings_index as jpri  # noqa: E402
 import render_reachability_check as rrc  # noqa: E402
 import friday_eow_routine as fer  # noqa: E402
+import conflict_pattern_monitor as cpm  # noqa: E402
 
 TEST_SUITE_TIMEOUT_SECONDS = 900  # well above the ~6-7min observed real runtime
 
@@ -193,10 +194,29 @@ def _artifact_consistency_findings() -> list[str]:
     return findings
 
 
+def _conflict_pattern_findings() -> list[str]:
+    """Self-healing / learning check #2 (RB-2026-10-08, Todd: "monitor and
+    expand as needed... the CoS learns about the conflicts, why they occur
+    and how they are being resolved"). ecosystem_intelligence.py's
+    check_relationship_conflict() already makes a real, audited decision
+    every time a claim rivals an existing one, logged to conflict_queue.
+    jsonl -- but nothing ever read that log back. Confirmed live: the same
+    Blaze Pizza POS rivalry (Qu vs. Oracle) was independently re-confirmed
+    as unresolved on 62 separate pipeline runs across 13 days, invisible
+    the whole time. This surfaces exactly that pattern -- a recurring,
+    never-escalated rivalry, or a legacy stuck-forever entry -- without
+    ever picking a winner itself."""
+    try:
+        return cpm.collect_findings()
+    except Exception as exc:  # noqa: BLE001
+        return [f"conflict_pattern_monitor could not run: {exc}"]
+
+
 def collect_findings(*, skip_test_suite: bool = False) -> dict:
     findings = {
         "kb_consistency": _kb_findings(),
         "mutation_reconciliation": _mutation_reconciliation_findings(),
+        "conflict_patterns": _conflict_pattern_findings(),
         "jpr_captures": _jpr_findings(),
         "render_reachability": _reachability_findings(),
         "artifact_consistency": _artifact_consistency_findings(),

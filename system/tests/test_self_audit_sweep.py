@@ -51,6 +51,27 @@ class _IsolatedLedgerMixin:
         self._tmpdir.cleanup()
 
 
+class TestConflictPatternFindings(unittest.TestCase):
+    """Self-healing / learning check #2 (RB-2026-10-08): _conflict_pattern_
+    findings() delegates to conflict_pattern_monitor.collect_findings() --
+    one detection function, never duplicated logic."""
+
+    def test_delegates_to_collect_findings(self):
+        with patch.object(sas.cpm, "collect_findings", return_value=["Blaze Pizza rivalry issue"]):
+            findings = sas._conflict_pattern_findings()
+        self.assertEqual(findings, ["Blaze Pizza rivalry issue"])
+
+    def test_no_patterns_yields_no_findings(self):
+        with patch.object(sas.cpm, "collect_findings", return_value=[]):
+            self.assertEqual(sas._conflict_pattern_findings(), [])
+
+    def test_exception_becomes_a_finding_not_a_crash(self):
+        with patch.object(sas.cpm, "collect_findings", side_effect=RuntimeError("boom")):
+            findings = sas._conflict_pattern_findings()
+        self.assertEqual(len(findings), 1)
+        self.assertIn("could not run", findings[0])
+
+
 class TestArtifactConsistencyFindings(unittest.TestCase):
     """RB defect 2026-09-30 (Five Guys), promoted from weekly to daily
     (Todd, 2026-10-08): _artifact_consistency_findings() delegates to
@@ -120,6 +141,7 @@ class TestCollectFindings(unittest.TestCase):
              patch.object(sas, "_jpr_findings", return_value=[]), \
              patch.object(sas, "_reachability_findings", return_value=[]), \
              patch.object(sas, "_artifact_consistency_findings", return_value=[]), \
+             patch.object(sas, "_conflict_pattern_findings", return_value=[]), \
              patch.object(sas, "_test_suite_findings", return_value=[]):
             result = sas.collect_findings()
         self.assertTrue(result["clean"])
@@ -131,13 +153,15 @@ class TestCollectFindings(unittest.TestCase):
              patch.object(sas, "_jpr_findings", return_value=["jpr issue"]), \
              patch.object(sas, "_reachability_findings", return_value=["reachability issue"]), \
              patch.object(sas, "_artifact_consistency_findings", return_value=["artifact drift issue"]), \
+             patch.object(sas, "_conflict_pattern_findings", return_value=["conflict pattern issue"]), \
              patch.object(sas, "_test_suite_findings", return_value=["test suite issue"]):
             result = sas.collect_findings()
         self.assertFalse(result["clean"])
-        self.assertEqual(len(result["all_findings"]), 6)
+        self.assertEqual(len(result["all_findings"]), 7)
         self.assertIn("kb issue", result["all_findings"])
         self.assertIn("reachability issue", result["all_findings"])
         self.assertIn("artifact drift issue", result["all_findings"])
+        self.assertIn("conflict pattern issue", result["all_findings"])
         self.assertIn("test suite issue", result["all_findings"])
 
     def test_skip_test_suite_flag_bypasses_the_real_subprocess(self):
@@ -146,6 +170,7 @@ class TestCollectFindings(unittest.TestCase):
              patch.object(sas, "_jpr_findings", return_value=[]), \
              patch.object(sas, "_reachability_findings", return_value=[]), \
              patch.object(sas, "_artifact_consistency_findings", return_value=[]), \
+             patch.object(sas, "_conflict_pattern_findings", return_value=[]), \
              patch.object(sas.subprocess, "run") as mock_run:
             result = sas.collect_findings(skip_test_suite=True)
         mock_run.assert_not_called()
