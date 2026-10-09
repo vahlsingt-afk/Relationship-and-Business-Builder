@@ -799,12 +799,25 @@ def run_pipeline(
                 str(SCRIPTS_DIR / "hunter_office_manager.py"),
                 "--confirm",
             ], required=False),
-            # Dry-run validation and governed-dispatch preview only; never
-            # canonical writes from the morning pipeline.
+            # RB-2026-10-09 (part 2): now --confirm, not dry-run. A packet
+            # that validates cleanly gets its findings/CoS-handoffs actually
+            # recorded instead of sitting as a preview someone has to
+            # separately re-run with --confirm by hand; a packet that fails
+            # validation is correctly left in PENDING_JOBS_DIR for the next
+            # corrected resubmission (hunter_orchestrator.sync_from_sweep
+            # only preserves a retryable job's file when confirm=True --
+            # confirmed live: a dry run archived a failed job regardless of
+            # outcome, forcing manual restoration before a corrected
+            # packet could ever be matched again). Confirming never bypasses
+            # review: every mutation_proposal still routes to the real
+            # review queue (hunter_mutation_proposals.jsonl) regardless of
+            # confirm -- nothing becomes a canonical "fact" without Todd
+            # acting on it there.
             _step("hunter_packet_sweep", [
                 py,
                 str(SCRIPTS_DIR / "hunter_cycle.py"),
                 "sweep",
+                "--confirm",
             ], required=False),
             # Persist a per-batch status/quality report after every morning
             # inbox sync and sweep. Best-effort so reporting never blocks the brief.

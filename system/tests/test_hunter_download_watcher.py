@@ -53,9 +53,20 @@ class TestSweepDownloads(unittest.TestCase):
         self.downloads.mkdir()
         self._state_patch = unittest.mock.patch.object(hdw, "STATE", tmp / "state.json")
         self._state_patch.start()
+        # RB-2026-10-09: _already_processed_packet_ids() reads this real,
+        # unpatched constant -- a packet_id a test happens to choose can
+        # collide with the real system/inbox/hunter_packets/processed/'s
+        # actual receipts (confirmed live: a real KFC packet processed
+        # earlier this session shares an id with this file's own test
+        # fixture), silently turning "copied" into "skipped" depending on
+        # what's sitting in production data that day. Isolate it like every
+        # other path here.
+        self._receipt_dirs_patch = unittest.mock.patch.object(hdw, "PROCESSED_RECEIPT_DIRS", (tmp / "no_such_dir",))
+        self._receipt_dirs_patch.start()
 
     def tearDown(self):
         self._state_patch.stop()
+        self._receipt_dirs_patch.stop()
         self._tmp.cleanup()
 
     def _run(self):

@@ -16,16 +16,26 @@ packet that failed its save at, say, 9am sat untouched for up to 19 hours
 even if Todd did nothing more than leave the download sitting in
 ~/Downloads.
 
-This runs the exact same chain the morning scan already runs --
-hunter_download_watcher -> hunter_drive_inbox_sync -> hunter_office_manager
---confirm -> hunter_cycle.sweep (dry-run) -- just hourly, so a recovered
-packet gets picked up and validated within the hour instead of waiting for
-the next morning. Office manager's own log/text-alert behavior is real
-(it does append to the real completion log and can text Todd), the same
-as it already is every morning; nothing else here is confirmed into
-canonical records -- sweep stays dry-run, matching the morning pipeline's
-own hunter_packet_sweep step. A deliberate, reviewed --confirm sweep is
-still a separate, later action.
+This runs the exact same chain the morning scan runs -- hunter_download_watcher
+-> hunter_drive_inbox_sync -> hunter_office_manager --confirm ->
+hunter_cycle.sweep --confirm -- just hourly, so a recovered packet gets
+picked up, validated, and (if clean) actually recorded within the hour
+instead of waiting for the next morning and a separate manual confirm.
+
+RB-2026-10-09 (part 2): sweep now runs --confirm here, not dry-run.
+Confirming never bypasses review -- hunter_change_dispatch still routes
+every mutation_proposal to the real review queue
+(hunter_mutation_proposals.jsonl) regardless of confirm; nothing becomes a
+canonical "fact" without Todd acting on it there. What --confirm actually
+changes is two things, both wanted: (1) a packet that validates cleanly
+gets its findings/CoS-handoffs actually written instead of sitting as a
+preview someone has to separately re-run with --confirm by hand; (2) a
+packet that FAILS validation gets correctly left in PENDING_JOBS_DIR for
+the next corrected resubmission (hunter_orchestrator.sync_from_sweep only
+preserves a retryable job's file when confirm=True) -- on a dry run it
+still gets archived regardless of outcome, which is exactly what forced
+manual job-file restoration after every failed validation before this
+change.
 """
 from __future__ import annotations
 
@@ -56,7 +66,7 @@ def run() -> dict:
     except Exception as error:  # noqa: BLE001
         results["office_manager"] = {"error": str(error)}
     try:
-        results["sweep"] = hunter_cycle.sweep(confirm=False)
+        results["sweep"] = hunter_cycle.sweep(confirm=True)
     except Exception as error:  # noqa: BLE001
         results["sweep"] = {"error": str(error)}
     return {"schema": "rb.hunter_recovery_sweep.v1", **results}

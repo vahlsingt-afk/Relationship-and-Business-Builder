@@ -28,7 +28,7 @@ def test_runs_all_four_steps_in_order_and_collects_their_results():
 
     def _sweep(confirm):
         calls.append("sweep")
-        assert confirm is False
+        assert confirm is True
         return {"processed": []}
 
     with patch.object(hrs.hunter_download_watcher, "sweep_downloads", side_effect=_dw), \
@@ -44,13 +44,17 @@ def test_runs_all_four_steps_in_order_and_collects_their_results():
     assert out["sweep"] == {"processed": []}
 
 
-def test_sweep_is_always_a_dry_run_never_confirmed():
+def test_sweep_runs_confirmed_not_a_dry_run():
+    # RB-2026-10-09 (part 2): a dry-run sweep archives a failed job's file
+    # regardless of outcome (hunter_orchestrator.sync_from_sweep only
+    # preserves a retryable job's file when confirm=True), which forced
+    # manual restoration after every failed validation before this change.
     with patch.object(hrs.hunter_download_watcher, "sweep_downloads", return_value={}), \
          patch.object(hrs.hunter_drive_inbox_sync, "run", return_value={}), \
          patch.object(hrs.hunter_office_manager, "run", return_value={}), \
          patch.object(hrs.hunter_cycle, "sweep") as mock_sweep:
         hrs.run()
-    mock_sweep.assert_called_once_with(confirm=False)
+    mock_sweep.assert_called_once_with(confirm=True)
 
 
 def test_one_steps_failure_does_not_block_the_others():
