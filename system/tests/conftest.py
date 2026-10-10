@@ -184,6 +184,17 @@ def _isolate_ecosystem_conflict_queue(monkeypatch: pytest.MonkeyPatch, tmp_path:
 
 
 @pytest.fixture(autouse=True)
+def _isolate_loop_state(monkeypatch: pytest.MonkeyPatch, tmp_path: Path):
+    """RB-DEFECT-074: declaration/capture processing now reconciles legacy L-
+    loops and writes system/loop_state.json. Tests that exercise those paths
+    without their own fixture must never write the live structured-state file
+    (same leak class as the conflict_queue.jsonl pollution)."""
+    import rb_core as _rb_core
+    monkeypatch.setattr(_rb_core, "LOOP_STATE_PATH", tmp_path / "loop_state.json")
+    yield
+
+
+@pytest.fixture(autouse=True)
 def _reset_render_intelligence_brief_rendered_this_run():
     """RB-DEFECT-2026-07-08: render_intelligence_brief._rendered_this_run is a
     module-level set used to dedup a URL across sections within a single

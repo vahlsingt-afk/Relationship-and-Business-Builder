@@ -425,3 +425,35 @@ class TestSelfAuditCloseGate(_IsolatedLedgerMixin, unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestSkippedIsNotPassed(unittest.TestCase):
+    """RB-DEFECT-074: a skipped suite must never read as a green run."""
+
+    def test_skip_reports_skipped_and_unverified(self):
+        sas._test_suite_findings(skip=True)
+        self.assertEqual(sas._last_test_report["status"], "skipped")
+
+    def test_clean_with_skipped_tests_is_not_verified_and_never_closes_loop(self):
+        def fake_findings(*, skip=False):
+            sas._last_test_report = {"status": "skipped"}
+            return []
+        with patch.object(sas, "_test_suite_findings", side_effect=fake_findings), \
+             patch.object(sas, "_kb_findings", return_value=[]), \
+             patch.object(sas, "_mutation_reconciliation_findings", return_value=[]), \
+             patch.object(sas, "_jpr_findings", return_value=[]), \
+             patch.object(sas, "_reachability_findings", return_value=[]), \
+             patch.object(sas, "_artifact_consistency_findings", return_value=[]), \
+             patch.object(sas, "_conflict_pattern_findings", return_value=[]):
+            result = sas.collect_findings(skip_test_suite=True)
+        self.assertTrue(result["clean"])
+        self.assertFalse(result["verified_clean"])
+        with patch.object(sas, "_find_open_self_audit_loop_id", return_value="L-2026-09-21-001"), \
+             patch.object(sas.mutations, "cmd_loop_close") as close:
+            action = sas.apply_loop_update(result)
+        close.assert_not_called()
+        self.assertTrue(action.startswith("no_action_unverified_tests_"))
+
+    def test_pytest_summary_parsing(self):
+        c = sas._parse_pytest_summary("...\n= 11 failed, 6354 passed, 3 skipped in 400.01s =\n")
+        self.assertEqual((c["failed"], c["passed"], c["skipped"]), (11, 6354, 3))

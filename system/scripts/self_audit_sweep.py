@@ -44,7 +44,7 @@ import json
 import re
 import subprocess
 import sys
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -118,14 +118,42 @@ def _jpr_findings() -> list[str]:
     return [f"{len(unresolved)} JPR recording(s) sitting unqueued or unprocessed"]
 
 
+# RB-DEFECT-074: skipped, failed and passed must be distinguishable. Previously
+# `--skip-test-suite` returned [] -- the same value as a green run -- so a sweep
+# with every other check clean would close the self-audit loop as "verified
+# clean" without a single test having run, and an empty `test_suite` field read
+# as "passed". The report below is the single record of what actually happened.
+_TEST_REPORT_UNKNOWN = {"status": "unknown"}
+_last_test_report: dict = dict(_TEST_REPORT_UNKNOWN)
+LAST_RUN_PATH = core.SYSTEM_DIR / "audit" / "self_audit_last_run.json"
+
+
+def _parse_pytest_summary(output: str) -> dict:
+    counts = {"passed": 0, "failed": 0, "errors": 0, "skipped": 0}
+    line = ""
+    for candidate in re.findall(r"^=*\s*(.*\d+ (?:passed|failed|error).*?)\s*=*$", output, re.MULTILINE):
+        line = candidate
+    for n, word in re.findall(r"(\d+) (passed|failed|errors?|skipped)", line):
+        counts["errors" if word.startswith("error") else word] = int(n)
+    return counts
+
+
 def _test_suite_findings(*, skip: bool = False) -> list[str]:
     """Run the full system/tests/ pytest suite -- the broadest self-check
     this system has (see module docstring for why the three checks above
     are not a substitute for it). Best-effort: a suite that can't even run
-    (timeout, import error) is itself a finding, never silently ignored."""
+    (timeout, import error) is itself a finding, never silently ignored.
+
+    Side effect: records what happened in `_last_test_report` with an explicit
+    status of passed | failed | skipped | error, counts, and ran_at."""
+    global _last_test_report
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     if skip:
+        _last_test_report = {"status": "skipped", "ran_at": None, "recorded_at": now,
+                             "detail": "--skip-test-suite: no tests were executed"}
         return []
     tests_dir = core.SYSTEM_DIR / "tests"
+    started = datetime.now(timezone.utc)
     try:
         proc = subprocess.run(
             [sys.executable, "-m", "pytest", str(tests_dir), "-q"],
@@ -133,17 +161,25 @@ def _test_suite_findings(*, skip: bool = False) -> list[str]:
             timeout=TEST_SUITE_TIMEOUT_SECONDS,
         )
     except subprocess.TimeoutExpired:
+        _last_test_report = {"status": "error", "ran_at": now,
+                             "detail": f"did not complete within {TEST_SUITE_TIMEOUT_SECONDS}s"}
         return [f"full test suite did not complete within {TEST_SUITE_TIMEOUT_SECONDS}s"]
     except Exception as exc:  # noqa: BLE001
+        _last_test_report = {"status": "error", "ran_at": now, "detail": str(exc)}
         return [f"full test suite could not be run: {exc}"]
 
+    output = proc.stdout + proc.stderr
+    counts = _parse_pytest_summary(output)
+    duration = round((datetime.now(timezone.utc) - started).total_seconds(), 1)
     if proc.returncode == 0:
+        _last_test_report = {"status": "passed", "ran_at": now, "duration_s": duration, **counts}
         return []
 
-    output = proc.stdout + proc.stderr
     failed_names = re.findall(r"^FAILED (\S+)", output, re.MULTILINE)
     summary_match = re.search(r"^(\d+ failed.*)$", output, re.MULTILINE)
     summary = summary_match.group(1) if summary_match else f"pytest exited {proc.returncode}"
+    _last_test_report = {"status": "failed", "ran_at": now, "duration_s": duration,
+                         "failed_tests": failed_names[:20], **counts}
     names_part = (
         (": " + ", ".join(failed_names[:5]) + ("..." if len(failed_names) > 5 else ""))
         if failed_names else ""
@@ -213,6 +249,8 @@ def _conflict_pattern_findings() -> list[str]:
 
 
 def collect_findings(*, skip_test_suite: bool = False) -> dict:
+    global _last_test_report
+    _last_test_report = dict(_TEST_REPORT_UNKNOWN)
     findings = {
         "kb_consistency": _kb_findings(),
         "mutation_reconciliation": _mutation_reconciliation_findings(),
@@ -223,7 +261,14 @@ def collect_findings(*, skip_test_suite: bool = False) -> dict:
         "test_suite": _test_suite_findings(skip=skip_test_suite),
     }
     all_findings = [f for group in findings.values() for f in group]
-    return {"findings_by_check": findings, "all_findings": all_findings, "clean": not all_findings}
+    report = dict(_last_test_report)
+    return {
+        "findings_by_check": findings, "all_findings": all_findings, "clean": not all_findings,
+        # An empty `test_suite` findings list is NOT a pass: read this instead.
+        "test_suite_report": report,
+        # clean AND the tests actually ran green ("unknown" = legacy/mocked caller).
+        "verified_clean": (not all_findings) and report.get("status") in ("passed", "unknown"),
+    }
 
 
 def _find_open_self_audit_loop_id() -> str | None:
@@ -305,6 +350,11 @@ def apply_loop_update(result: dict, *, dry_run: bool = False) -> str:
     findings closes whichever one is open, if any."""
     open_id = _find_open_self_audit_loop_id()
 
+    if result["clean"] and not result.get("verified_clean", True):
+        # No findings, but the test suite never ran green (skipped/errored):
+        # that is "unverified", not "clean". Never close a loop on it.
+        return "no_action_unverified_tests_" + str(result["test_suite_report"].get("status"))
+
     if result["clean"]:
         if open_id:
             args = SimpleNamespace(id=open_id, reason=mutations.SELF_AUDIT_VERIFIED_CLEAN_REASON, dry_run=dry_run)
@@ -338,6 +388,25 @@ def apply_loop_update(result: dict, *, dry_run: bool = False) -> str:
     return "opened"
 
 
+def _persist_last_run(result: dict) -> None:
+    """Explicit last-run time + test coverage for the CoS to read. A skipped
+    run must not overwrite the last REAL test result."""
+    prior = {}
+    try:
+        prior = json.loads(LAST_RUN_PATH.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        pass
+    report = result.get("test_suite_report") or {}
+    last_real = report if report.get("status") in ("passed", "failed", "error") else prior.get("last_test_run")
+    LAST_RUN_PATH.parent.mkdir(parents=True, exist_ok=True)
+    LAST_RUN_PATH.write_text(json.dumps({
+        "last_run": result["last_run"], "loop_action": result.get("loop_action"),
+        "clean": result["clean"], "verified_clean": result["verified_clean"],
+        "finding_count": len(result["all_findings"]),
+        "this_run_test_suite": report, "last_test_run": last_real,
+    }, indent=2), encoding="utf-8")
+
+
 def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--json", action="store_true")
@@ -349,6 +418,9 @@ def main() -> int:
     result = collect_findings(skip_test_suite=args.skip_test_suite)
     action = apply_loop_update(result, dry_run=args.dry_run)
     result["loop_action"] = action
+    result["last_run"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    if not args.dry_run:
+        _persist_last_run(result)
 
     if args.json:
         print(json.dumps(result, indent=2))

@@ -243,6 +243,48 @@ _EXTRA_RBB_CHAT_ONLY_TOOLS: list[tuple[dict, dict]] = [
     (
         {
             "type": "function",
+            "name": "updateLoopState",
+            "description": (
+                "Set an OPEN loop's CURRENT STATE -- current action, state, who it is waiting on, "
+                "next checkpoint -- with provenance. RB-DEFECT-074: this is the normal way to record "
+                "'here's where this stands now' (a meeting happened, a request is with Ryan, two "
+                "emails went unanswered). Do NOT use redateLoop notes for that. Requires "
+                "source_evidence (a real capture/interaction/email id, or 'todd:YYYY-MM-DD' for "
+                "Todd's own statement). The date may be unknown: pass clear_checkpoint=true rather "
+                "than inventing one. The response separates changed_fields from no_change. This "
+                "does not close a loop (closeLoop does) and a contact touch never closes an "
+                "introduction or approves an initiative."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "id": {"type": "string", "description": "Open loop id, format L-YYYY-MM-DD-NNN"},
+                    "source_evidence": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+                    "current_action": {"type": "string"},
+                    "state": {"type": "string", "enum": [
+                        "active", "waiting", "awaiting_response", "awaiting_internal_review",
+                        "waiting_internal", "in_progress", "parked", "monitoring", "blocked"]},
+                    "waiting_on": {"type": "string"},
+                    "next_checkpoint": {"type": "string", "description": "YYYY-MM-DD"},
+                    "clear_checkpoint": {"type": "boolean"},
+                    "outreach_attempts": {"type": "integer", "minimum": 0},
+                    "last_interaction": {"type": "string", "description": "YYYY-MM-DD"},
+                    "note": {"type": "string"},
+                },
+                "required": ["id", "source_evidence"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "method": "POST", "path": "/loops/state", "path_params": [], "query_params": [], "has_body": True,
+            "body_param_names": ["id", "source_evidence", "current_action", "state", "waiting_on",
+                                 "next_checkpoint", "clear_checkpoint", "outreach_attempts",
+                                 "last_interaction", "note"],
+        },
+    ),
+    (
+        {
+            "type": "function",
             "name": "listBlueSheetAccounts",
             "description": (
                 "List every Blue Sheet account dossier (restaurant-brand accounts under "

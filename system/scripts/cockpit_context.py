@@ -68,8 +68,29 @@ def _git_revision() -> str | None:
         return None
 
 
+def _plan_health() -> dict:
+    try:
+        import loop_state
+        import weekly_planning
+        return loop_state.plan_health(weekly_planning.load_plan(), datetime.now().date())
+    except Exception as exc:  # noqa: BLE001
+        return {"stale": None, "error": str(exc)}
+
+
+def _open_loop_reviews() -> list[dict]:
+    try:
+        import loop_state
+        return [r for r in loop_state.read_state().get("review_queue", []) if r.get("status") == "open"]
+    except Exception:  # noqa: BLE001
+        return []
+
+
 def _legacy_loops(path: Path) -> list[dict]:
     rows = []
+    # RB-DEFECT-074: overlay the structured current-state so the cockpit shows
+    # the same state getLoops does, not just the (possibly obsolete) prose.
+    import rb_core as _core
+    overlay = _core.load_loop_state()
     for line in path.read_text(encoding="utf-8").splitlines():
         if not line.startswith("| L-"):
             continue
@@ -81,6 +102,7 @@ def _legacy_loops(path: Path) -> list[dict]:
             "action": re.sub(r"\*+", "", cells[3]).strip(),
             "target_date": cells[4], "status": re.sub(r"\*+", "", cells[5]).strip(),
             "authority": "system/loop_ledger.md",
+            "current_state": overlay.get(cells[0]),
         })
     return rows
 
@@ -249,6 +271,8 @@ def build_context(*, now: datetime | None = None) -> dict:
         )[:12],
         "pending_decisions": pending_decisions,
         "reconciliation_queue": {
+            "weekly_plan_health": _plan_health(),
+            "open_loop_review_items": _open_loop_reviews(),
             "authority_gaps": registry.get("unresolved_governance_decisions", []),
             "stale_active_threads": [t.get("id") for t in active_threads
                                      if t.get("target_close") and str(t["target_close"]) < now.date().isoformat()],

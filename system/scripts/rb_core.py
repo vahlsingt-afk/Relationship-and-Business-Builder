@@ -25,6 +25,11 @@ PROJECT_DIR = SYSTEM_DIR.parent
 
 BASELINE_PATH = SYSTEM_DIR / "baseline_index.json"
 LOOP_LEDGER_PATH = SYSTEM_DIR / "loop_ledger.md"
+# RB-DEFECT-074: structured current-state overlay for legacy L- loops. The ledger
+# row only has description/target/status columns, so "what is actually the
+# current action / who is it waiting on / when is the next checkpoint" had no
+# home other than appended prose. Keyed by L- id; written by loop_state.py only.
+LOOP_STATE_PATH = SYSTEM_DIR / "loop_state.json"
 CIRCLES_DIR = SYSTEM_DIR / "circles"
 CARDS_DIR = SYSTEM_DIR / "cards"
 BRIEFS_DIR = SYSTEM_DIR / "briefs"
@@ -259,14 +264,43 @@ class Loop:
     target: date
     status_raw: str
     closed: bool
+    # RB-DEFECT-074: structured overlay from loop_state.json (None = prose-only loop).
+    state: dict | None = None
 
     @property
     def status_short(self) -> str:
         return "closed" if self.closed else "open"
 
 
-def parse_loop_ledger(path: Path = LOOP_LEDGER_PATH) -> list[Loop]:
+def load_loop_state(path: Path | None = None) -> dict[str, dict]:
+    """Structured state overlay keyed by L- id. Missing/corrupt file -> {}."""
+    path = path or LOOP_STATE_PATH
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    loops = raw.get("loops") if isinstance(raw, dict) else None
+    return loops if isinstance(loops, dict) else {}
+
+
+# States where the ball is in someone else's court (or on a scheduled internal
+# step) -- a past ledger target date does not make these "overdue chases".
+WAITING_STATES = frozenset({
+    "waiting", "awaiting_response", "awaiting_internal_review", "waiting_internal",
+    "parked", "monitoring",
+    # Explicit in-progress work is state-driven too: its stale ledger target
+    # date is not an overdue chase (e.g. engineering work under way).
+    "in_progress",
+})
+
+
+def parse_loop_ledger(path: Path | None = None) -> list[Loop]:
+    # Resolved at call time (not a bound default) so tests/tools can repoint
+    # LOOP_LEDGER_PATH; the state overlay only applies to the real ledger.
+    is_live = path is None
+    path = path or LOOP_LEDGER_PATH
     loops: list[Loop] = []
+    overlay = load_loop_state() if is_live else {}
     for line in path.read_text().splitlines():
         m = LOOP_ROW_RE.match(line)
         if not m:
@@ -281,6 +315,7 @@ def parse_loop_ledger(path: Path = LOOP_LEDGER_PATH) -> list[Loop]:
             target=date.fromisoformat(target),
             status_raw=status,
             closed=closed,
+            state=overlay.get(loop_id),
         ))
     return loops
 
@@ -292,6 +327,7 @@ def loops_by_status(loops: Iterable[Loop], today: date) -> dict[str, list[Loop]]
         "due_today": [],
         "this_week": [],
         "future": [],
+        "waiting": [],
         "closed": [],
     }
     # Todd's operating week ends Friday COB. On Saturday/Sunday, "this week"
@@ -301,6 +337,25 @@ def loops_by_status(loops: Iterable[Loop], today: date) -> dict[str, list[Loop]]
     for L in loops:
         if L.closed:
             out["closed"].append(L)
+            continue
+        st = L.state or {}
+        if st.get("state") in WAITING_STATES:
+            # RB-DEFECT-074: an explicitly waiting/parked loop is bucketed by its
+            # real next checkpoint, not by the stale ledger target date. No
+            # checkpoint at all = unknown date, which stays visible as "waiting"
+            # instead of being invented into a chase deadline.
+            cp = st.get("next_checkpoint")
+            try:
+                cp_d = date.fromisoformat(cp) if cp else None
+            except ValueError:
+                cp_d = None
+            if cp_d is None or cp_d > today:
+                out["waiting"].append(L)
+                continue
+            if cp_d == today:
+                out["due_today"].append(L)
+                continue
+            out["overdue"].append(L)
             continue
         if L.target < today:
             out["overdue"].append(L)
