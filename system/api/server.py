@@ -86,6 +86,7 @@ import daily_brief  # noqa: E402
 import gap_detection  # noqa: E402
 import validate_baseline as vb  # noqa: E402
 import mutations  # noqa: E402
+import loop_state  # noqa: E402  # RB-DEFECT-074 — structured loop state + reconciliation
 import hubspot_ingest  # noqa: E402  # RB-DEFECT-064 — HubSpot CRM export ingest
 import test_trace  # noqa: E402
 import manual_relationship_intake  # noqa: E402
@@ -2298,10 +2299,19 @@ def get_loops(
     return {
         "today": d.isoformat(),
         "buckets": {
-            k: [{**asdict(L), "opened": L.opened.isoformat(), "target": L.target.isoformat()} for L in v]
+            k: [{**asdict(L), "opened": L.opened.isoformat(), "target": L.target.isoformat(),
+                 # RB-DEFECT-074: engineering-owned loops are not customer follow-ups.
+                 "domain": "engineering" if (L.party.startswith("RB ") or "Self-audit findings:" in L.description)
+                           else "customer_relationship"} for L in v]
             for k, v in buckets.items()
         },
         "totals": {k: len(v) for k, v in buckets.items()},
+        # RB-DEFECT-074: surface stale week_of / unresolved reconciliation here
+        # instead of letting old prose stand in for the current execution state.
+        "plan_health": loop_state.plan_health(
+            __import__("weekly_planning").load_plan(), d),
+        "open_review_items": [r for r in loop_state.read_state().get("review_queue", [])
+                              if r.get("status") == "open"],
     }
 
 
@@ -2826,9 +2836,12 @@ def post_capture_submit(
     exec_mutations: list = []
     for stream in triage_result.get("identified_types", []):
         if stream.get("intelligence_type") == "executive_declaration":
-            exec_mutations.extend(_execute_executive_declaration(stream, transcript, data.get("queued_at")))
+            exec_mutations.extend(_execute_executive_declaration(
+                stream, transcript, data.get("queued_at"), reconcile_ledger=False))
+    loop_reconciliation = _reconcile_loops_from_capture({**data, "file_id": file_id, "transcript": transcript})
 
     capture_ingest.mark_processed(file_id, result={
+        "loop_reconciliation": loop_reconciliation,
         # RB-DEFECT-2026-07-08: intelligence_triage.triage_input() has never
         # returned a "stream_count" key (only "type_count") -- this read
         # always silently fell back to the 0 default, permanently reporting
@@ -2996,11 +3009,13 @@ def process_all_pending_captures() -> dict:
             for stream in triage_result.get("identified_types", []):
                 if stream.get("intelligence_type") == "executive_declaration":
                     exec_mutations.extend(_execute_executive_declaration(
-                        stream, data["transcript"], data.get("queued_at")))
+                        stream, data["transcript"], data.get("queued_at"), reconcile_ledger=False))
+            loop_reconciliation = _reconcile_loops_from_capture({**data, "file_id": fid})
             # RB-DEFECT-2026-07-08: see submitCapture -- triage_input() never
             # returns "stream_count", only "type_count"; this always silently
             # defaulted to 0 and mismarked every capture as intelligence-free.
             capture_ingest.mark_processed(fid, result={
+                "loop_reconciliation": loop_reconciliation,
                 "triage_stream_count": triage_result.get("type_count", 0),
                 "noise_only": triage_result.get("noise_only", False),
                 "persisted_count": persisted_count,
@@ -5695,7 +5710,8 @@ def _ingest_trust_stats(
     }
 
 
-def _execute_executive_declaration(stream: dict, raw_text: str, event_at: Optional[str] = None) -> list[dict]:
+def _execute_executive_declaration(stream: dict, raw_text: str, event_at: Optional[str] = None,
+                                   reconcile_ledger: bool = True) -> list[dict]:
     """Auto-mutate canonical state from a CEO first-person declaration.
 
     No confirmation required — CEO declarations are the highest-fidelity source.
@@ -5866,9 +5882,12 @@ def _execute_executive_declaration(stream: dict, raw_text: str, event_at: Option
         if event_type in ("action_completed", "state_resolved", "loop_advanced"):
             try:
                 eolms_result = eolms.match_and_transition(declaration_text, apply=True)
-                results.append({"mutation": "eolms_loop_transition", **eolms_result})
+                results.append({"mutation": "eolms_loop_transition",
+                                "mutation_applied": eolms_result.get("status") == "applied",
+                                **eolms_result})
             except Exception as exc:  # noqa: BLE001
-                results.append({"mutation": "eolms_loop_transition", "status": "error", "detail": str(exc)})
+                results.append({"mutation": "eolms_loop_transition", "status": "error",
+                                "mutation_applied": False, "detail": str(exc)})
 
     # ── personal_practice_logged ──────────────────────────────────────────────
     # RB-DEFECT-062 — Life Lens had no write path at all (not a routing gap like
@@ -5891,7 +5910,58 @@ def _execute_executive_declaration(stream: dict, raw_text: str, event_at: Option
         except Exception as exc:  # noqa: BLE001
             results.append({"mutation": "personal_relationship_event", "status": "error", "detail": str(exc)})
 
+    # RB-DEFECT-074: the matcher above only ever searched EOLMS (EL-) records;
+    # the loops actually being worked are legacy L- ledger rows. Reconcile
+    # those too, for every business declaration type. Best-effort, but its
+    # outcome is reported honestly (mutation_applied / review_items) rather
+    # than being folded into an "ok" receipt.
+    if reconcile_ledger and event_type not in ("personal_practice_logged", "opportunity_accepted", "opportunity_declined"):
+        try:
+            ledger_result = loop_state.reconcile_text(
+                declaration_text, source="executive_declaration", event_date=today_str, apply=True,
+                evidence_id=f"decl:{today_str}:" + __import__("hashlib").sha1(
+                    declaration_text.encode("utf-8")).hexdigest()[:12],
+            )
+            results.append({"mutation": "ledger_loop_transition", **ledger_result})
+        except Exception as exc:  # noqa: BLE001
+            results.append({"mutation": "ledger_loop_transition", "status": "error",
+                            "mutation_applied": False, "detail": str(exc)})
+
     return results
+
+
+def _reconcile_loops_from_capture(capture: dict) -> dict:
+    """RB-DEFECT-074: processed transcripts must reach the execution loops.
+    Best-effort (never fails capture processing) but the outcome is persisted in
+    the capture's processing_result so a missing transition is visible."""
+    try:
+        res = loop_state.reconcile_capture(capture, apply=True)
+        loop_state.reconcile_weekly_plan()
+        return {k: res.get(k) for k in ("status", "mutation_applied", "applied", "review_items",
+                                        "rejected", "reason", "evidence_id")}
+    except Exception as exc:  # noqa: BLE001
+        return {"status": "error", "mutation_applied": False, "detail": str(exc)}
+
+
+def _loop_transition_summary(mutations: list[dict]) -> dict:
+    """RB-DEFECT-074: separate real loop mutations from receipts and no-matches.
+    An interaction receipt or a `no_match` is never counted as a transition."""
+    applied, review, not_applied = [], [], []
+    for m in mutations:
+        if m.get("mutation") not in ("eolms_loop_transition", "ledger_loop_transition"):
+            continue
+        if m.get("mutation_applied"):
+            applied.extend(m.get("applied") or [{"loop_id": m.get("loop_id"), "to_status": m.get("to_status")}])
+        review.extend(m.get("review_items") or [])
+        if not m.get("mutation_applied"):
+            not_applied.append({"source": m["mutation"], "status": m.get("status"),
+                                "reason": m.get("reason") or m.get("detail")})
+    return {
+        "transition_applied": bool(applied),
+        "applied": applied,
+        "review_items": review,
+        "not_applied": not_applied,
+    }
 
 
 class ExecDeclIn(BaseModel):
@@ -5944,6 +6014,16 @@ def post_exec_declaration(body: ExecDeclIn, x_api_key: Optional[str] = Header(No
     from intelligence_triage import classify_executive_declaration
     stream = classify_executive_declaration(body.text)
     if stream is None:
+        ledger_try = loop_state.reconcile_text(body.text, source="executive_declaration",
+                                               event_date=body.event_at, apply=True)
+        if ledger_try.get("applied") or ledger_try.get("review_items"):
+            al.log_mutation_executed(
+                f"ingestExecutiveDeclaration: unclassified, ledger reconcile status={ledger_try.get('status')} text={body.text[:200]!r}",
+                source="POST /ingest/executive_declaration")
+            return {"status": "ok", "event_type": None, "mutations_applied": [{"mutation": "ledger_loop_transition", **ledger_try}],
+                    "mutations_count": 1,
+                    "loop_transitions": _loop_transition_summary([{"mutation": "ledger_loop_transition", **ledger_try}]),
+                    "source": "CEO", "requires_confirmation": False}
         return {
             "status": "no_match",
             "message": "Text did not match any executive declaration pattern. Use ingestContent for general intelligence.",
@@ -5961,6 +6041,7 @@ def post_exec_declaration(body: ExecDeclIn, x_api_key: Optional[str] = Header(No
         "confidence": stream.get("confidence"),
         "mutations_applied": mutations,
         "mutations_count": len(mutations),
+        "loop_transitions": _loop_transition_summary(mutations),
         "source": "CEO",
         "requires_confirmation": False,
     }
@@ -7007,6 +7088,28 @@ class LoopCloseIn(BaseModel):
     )
 
 
+def _reconcile_plan_best_effort() -> None:
+    """Refresh weekly-plan linked-outcome progress after any loop mutation so
+    the plan, getLoops and the cockpit can't disagree about a closed loop."""
+    try:
+        loop_state.reconcile_weekly_plan()
+    except Exception:  # noqa: BLE001 -- derived projection; never fail the loop write
+        pass
+
+
+class LoopStateIn(BaseModel):
+    id: str = Field(..., description="An OPEN legacy loop id from getLoops, format 'L-YYYY-MM-DD-NNN'. Never a contact, thread or EL- id.")
+    source_evidence: list[str] = Field(..., min_length=1, description="REQUIRED provenance: stable evidence ids/refs for why the state changed -- a capture id ('capture:cap-...'), interaction id ('exec-action-2026-10-10-0014'), email/thread id, or 'todd:YYYY-MM-DD' for Todd's own statement in chat. Never invented.")
+    current_action: Optional[str] = Field(None, description="The ACTUAL next action now (replaces the obsolete one; description history is untouched).")
+    state: Optional[str] = Field(None, description="active | waiting | awaiting_response | awaiting_internal_review | waiting_internal | in_progress | parked | monitoring | blocked")
+    waiting_on: Optional[str] = Field(None, description="Who/what the ball is with. Omit to leave unchanged; empty string clears.")
+    next_checkpoint: Optional[str] = Field(None, description="YYYY-MM-DD, or send clear_checkpoint=true when the date is genuinely unknown. Never invent a date.")
+    clear_checkpoint: bool = Field(False, description="True = the next checkpoint is unknown; clears any prior checkpoint instead of fabricating one.")
+    outreach_attempts: Optional[int] = Field(None, ge=0, description="Count of unanswered outreach touches so far. >=2 produces a review-first disposition proposal and suppresses repeat-chase recommendations.")
+    last_interaction: Optional[str] = Field(None, description="YYYY-MM-DD of the most recent real interaction.")
+    note: Optional[str] = Field(None, description="Short human-readable reason for the history entry.")
+
+
 class LoopRedateIn(BaseModel):
     id: str = Field(..., description="A LOOP id from getLoops, e.g. 'L-2026-07-23-003' (format L-YYYY-MM-DD-NNN). Must be an OPEN loop -- redating a closed one fails. Same id-mixup risk as closeLoop: never a contact id or thread id.")
     target: str = Field(..., description="New target date, YYYY-MM-DD.")
@@ -7758,7 +7861,42 @@ def post_loop_close(body: LoopCloseIn, x_api_key: Optional[str] = Header(None)):
         al.log_mutation_rejected(f"closeLoop: id={body.id}", reason="id not found or already closed")
         raise HTTPException(400, "loop-close failed (id not found or already closed)")
     al.log_mutation_executed(f"closeLoop: id={body.id} reason={body.reason}", source="POST /loops/close")
+    _reconcile_plan_best_effort()
     return {"ok": True, "id": body.id}
+
+
+@app.post("/loops/state", tags=["write"], operation_id="updateLoopState")
+def post_loop_state(body: LoopStateIn, x_api_key: Optional[str] = Header(None)):
+    """Update an open loop's CURRENT STATE (current action, state, waiting_on,
+    next checkpoint, source evidence) without touching its date or appending
+    prose -- the normal path for "this happened, here's where it stands now".
+    RB-DEFECT-074: redateLoop-with-a-note was the only way to correct a loop,
+    which left obsolete prose in place and kept date-only overdue bucketing.
+    Dates may be unknown; nothing is invented. Returns changed_fields
+    separately; status="no_change" means nothing was written. Closing a loop is
+    still closeLoop, and a contact touch never closes an introduction."""
+    _auth(x_api_key)
+    kwargs: dict = {}
+    for f in ("current_action", "state", "waiting_on", "outreach_attempts", "last_interaction"):
+        v = getattr(body, f)
+        if v is not None:
+            kwargs[f] = v
+    if body.clear_checkpoint:
+        kwargs["next_checkpoint"] = None
+    elif body.next_checkpoint is not None:
+        kwargs["next_checkpoint"] = body.next_checkpoint
+    try:
+        result = loop_state.update_loop_state(
+            body.id, source_evidence=body.source_evidence, note=body.note, **kwargs)
+    except ValueError as exc:
+        al.log_mutation_rejected(f"updateLoopState: id={body.id}", reason=str(exc))
+        raise HTTPException(422, f"loop-state update rejected: {exc}")
+    if result["mutation_applied"]:
+        al.log_mutation_executed(
+            f"updateLoopState: id={body.id} fields={sorted(result['changed_fields'])} evidence={body.source_evidence}",
+            source="POST /loops/state")
+        _reconcile_plan_best_effort()
+    return {"ok": True, **result, "rejected": []}
 
 
 @app.post("/loops/redate", tags=["write"], operation_id="redateLoop")
@@ -7776,6 +7914,7 @@ def post_loop_redate(body: LoopRedateIn, x_api_key: Optional[str] = Header(None)
         al.log_mutation_rejected(f"redateLoop: id={body.id}", reason="id not found, closed, or invalid target date")
         raise HTTPException(400, "loop-redate failed (id not found, closed, or invalid target date)")
     al.log_mutation_executed(f"redateLoop: id={body.id} target={body.target} note={body.note}", source="POST /loops/redate")
+    _reconcile_plan_best_effort()
     return {"ok": True, "id": body.id, "target": body.target}
 
 

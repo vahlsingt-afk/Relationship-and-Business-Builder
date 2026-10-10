@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "loops": {
+    "L-2026-08-28-001": {
+      "loop_id": "L-2026-08-28-001",
+      "history": [
+        {
+          "at": "2026-10-10T11:22:46+00:00",
+          "actor": "updateLoopState",
+          "changed": {
+            "current_action": {
+              "from": null,
+              "to": "Strategy/disposition decision pending -- FSTEC scheduling is obsolete. UNAPPROVED recommendation: stop repeated direct outreach; use Maggie Lenhart to validate relevance/access; park if no sponsored path or concrete trigger."
+            },
+            "state": {
+              "from": null,
+              "to": "awaiting_response"
+            },
+            "waiting_on": {
+              "from": null,
+              "to": "Jeff Caplin (no response to two emails and a LinkedIn reply)"
+            },
+            "outreach_attempts": {
+              "from": null,
+              "to": 3
+            }
+          },
+          "evidence": [
+            "todd:2026-10-10",
+            "interaction_ledger:exec-action-2026-10-10-0014..0017 (receipts only)"
+          ],
+          "note": "RB-DEFECT-074 repair: state per Todd 2026-10-10"
+        }
+      ],
+      "evidence_ids": [
+        "todd:2026-10-10",
+        "interaction_ledger:exec-action-2026-10-10-0014..0017 (receipts only)"
+      ],
+      "current_action": "Strategy/disposition decision pending -- FSTEC scheduling is obsolete. UNAPPROVED recommendation: stop repeated direct outreach; use Maggie Lenhart to validate relevance/access; park if no sponsored path or concrete trigger.",
+      "state": "awaiting_response",
+      "waiting_on": "Jeff Caplin (no response to two emails and a LinkedIn reply)",
+      "next_checkpoint": null,
+      "outreach_attempts": 3,
+      "updated_at": "2026-10-10T11:22:46+00:00",
+      "strategy": {
+        "type": "disposition_proposal",
+        "review_first": true,
+        "suppress_chase": true,
+        "basis": "3 unanswered outreach attempt(s)",
+        "options": [
+          "Validate relevance/access through a sponsored path (e.g. the relationship manager) before any further direct outreach",
+          "Change the value proposition or trigger before re-approaching",
+          "Park or stop: no sponsored path and no concrete trigger"
+        ],
+        "not_recommended": "another direct follow-up of the same kind"
+      }
+    },
+    "L-2026-08-11-001": {
+      "loop_id": "L-2026-08-11-001",
+      "history": [
+        {
+          "at": "2026-10-10T11:22:47+00:00",
+          "actor": "updateLoopState",
+          "changed": {
+            "current_action": {
+              "from": null,
+              "to": "Introduction NOT yet requested/pushed. Todd met Jeff Coffland this week and emailed him (Outlook metadata: sent + reply 2026-10-09). Introduction target identity unresolved (Todd: Justin Powers; ledger: Justine Power) -- verify from source before touching contact records."
+            },
+            "state": {
+              "from": null,
+              "to": "monitoring"
+            },
+            "last_interaction": {
+              "from": null,
+              "to": "2026-10-09"
+            }
+          },
+          "evidence": [
+            "todd:2026-10-10",
+            "outlook:gp-outlook-20261010035950-cf532103d24e (metadata only)"
+          ],
+          "note": "RB-DEFECT-074 repair"
+        }
+      ],
+      "evidence_ids": [
+        "todd:2026-10-10",
+        "outlook:gp-outlook-20261010035950-cf532103d24e (metadata only)"
+      ],
+      "current_action": "Introduction NOT yet requested/pushed. Todd met Jeff Coffland this week and emailed him (Outlook metadata: sent + reply 2026-10-09). Introduction target identity unresolved (Todd: Justin Powers; ledger: Justine Power) -- verify from source before touching contact records.",
+      "state": "monitoring",
+      "next_checkpoint": null,
+      "last_interaction": "2026-10-09",
+      "updated_at": "2026-10-10T11:22:47+00:00"
+    },
+    "L-2026-08-10-002": {
+      "loop_id": "L-2026-08-10-002",
+      "history": [
+        {
+          "at": "2026-10-10T11:22:47+00:00",
+          "actor": "updateLoopState",
+          "changed": {
+            "current_action": {
+              "from": null,
+              "to": "Material sent to Michael Estabrooks at Ryan's request; waiting for next internal meeting; proforma P&L started. No approval, meeting date or feasibility decision asserted."
+            },
+            "state": {
+              "from": null,
+              "to": "awaiting_internal_review"
+            },
+            "waiting_on": {
+              "from": null,
+              "to": "Next internal meeting (Ryan Hildebrand / Michael Estabrooks)"
+            }
+          },
+          "evidence": [
+            "todd:2026-10-10"
+          ],
+          "note": "RB-DEFECT-074 repair; supersedes push-Ryan action"
+        }
+      ],
+      "evidence_ids": [
+        "todd:2026-10-10"
+      ],
+      "current_action": "Material sent to Michael Estabrooks at Ryan's request; waiting for next internal meeting; proforma P&L started. No approval, meeting date or feasibility decision asserted.",
+      "state": "awaiting_internal_review",
+      "waiting_on": "Next internal meeting (Ryan Hildebrand / Michael Estabrooks)",
+      "next_checkpoint": null,
+      "updated_at": "2026-10-10T11:22:47+00:00"
+    },
+    "L-2026-09-21-001": {
+      "loop_id": "L-2026-09-21-001",
+      "history": [
+        {
+          "at": "2026-10-10T11:23:02+00:00",
+          "actor": "updateLoopState",
+          "changed": {
+            "current_action": {
+              "from": null,
+              "to": "Engineering health work, not a customer follow-up. Fresh diagnostics 2026-10-10 (self_audit_sweep --dry-run --skip-test-suite; full pytest run: 6383 passed, 2 failed -> 1 fixed (KB routing for updateLoopState), 1 open: test_hunter_orchestrator::test_work_snapshot_without_daily_window_applies_weekly_only). Open findings: refreshSources traffic with zero confirmed mutations; 23 stranded legacy requires_confirmation conflict records (oldest 2026-08-03); 1 JPR recording unqueued; Blue Sheet review drift McDonald's 44d / Pollo Campero 40d / Subway 24d. RB-DEFECT-074 fix landed (loop_state.py, updateLoopState)."
+            },
+            "state": {
+              "from": null,
+              "to": "in_progress"
+            }
+          },
+          "evidence": [
+            "self_audit_sweep:2026-10-10 dry-run (tests skipped in that run; separate full pytest run same day)",
+            "todd:2026-10-10"
+          ],
+          "note": "RB-DEFECT-074 repair: refreshed from actual diagnostics"
+        }
+      ],
+      "evidence_ids": [
+        "self_audit_sweep:2026-10-10 dry-run (tests skipped in that run; separate full pytest run same day)",
+        "todd:2026-10-10"
+      ],
+      "current_action": "Engineering health work, not a customer follow-up. Fresh diagnostics 2026-10-10 (self_audit_sweep --dry-run --skip-test-suite; full pytest run: 6383 passed, 2 failed -> 1 fixed (KB routing for updateLoopState), 1 open: test_hunter_orchestrator::test_work_snapshot_without_daily_window_applies_weekly_only). Open findings: refreshSources traffic with zero confirmed mutations; 23 stranded legacy requires_confirmation conflict records (oldest 2026-08-03); 1 JPR recording unqueued; Blue Sheet review drift McDonald's 44d / Pollo Campero 40d / Subway 24d. RB-DEFECT-074 fix landed (loop_state.py, updateLoopState).",
+      "state": "in_progress",
+      "waiting_on": null,
+      "next_checkpoint": null,
+      "updated_at": "2026-10-10T11:23:02+00:00"
+    }
+  },
+  "review_queue": [],
+  "updated_at": "2026-10-10T11:23:02+00:00"
+}

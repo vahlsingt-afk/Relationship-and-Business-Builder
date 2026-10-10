@@ -749,14 +749,17 @@ class RelationshipConflictDetectionTestContinued(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as tmp:
             original_system_dir = ei.core.SYSTEM_DIR
+            original_queue_path = ei.core.CONFLICT_QUEUE_PATH
             ei.core.SYSTEM_DIR = Path(tmp)
+            queue_path = Path(tmp) / "inbox" / "ecosystem" / "conflict_queue.jsonl"
+            ei.core.CONFLICT_QUEUE_PATH = queue_path
             try:
                 outcome = ei.resolve_and_upsert_relationship(graph, incoming)
-                queue_path = Path(tmp) / "inbox" / "ecosystem" / "conflict_queue.jsonl"
                 self.assertTrue(queue_path.exists())
                 record = json.loads(queue_path.read_text().splitlines()[0])
             finally:
                 ei.core.SYSTEM_DIR = original_system_dir
+                ei.core.CONFLICT_QUEUE_PATH = original_queue_path
 
         self.assertTrue(outcome["added"])
         self.assertEqual(outcome["conflict"]["resolution"], "auto_superseded")

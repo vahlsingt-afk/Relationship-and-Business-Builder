@@ -1638,7 +1638,7 @@ def build_mutation_brief_block() -> dict:
     # conflict can be recorded there from either the article-ingestion path
     # (this module) or the structured file-ingestion path (ecosystem_intelligence.py).
     conflicts_today: list[dict] = []
-    conflict_queue_path = core.SYSTEM_DIR / "inbox" / "ecosystem" / "conflict_queue.jsonl"
+    conflict_queue_path = core.CONFLICT_QUEUE_PATH
     if conflict_queue_path.exists():
         for line in conflict_queue_path.read_text().splitlines():
             try:
