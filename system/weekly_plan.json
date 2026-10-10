@@ -21,7 +21,16 @@
         "L-2026-08-31-001"
       ],
       "portfolio_allocation_pct": 50.0,
-      "status": "active"
+      "status": "closed",
+      "loop_progress": {
+        "total": 1,
+        "closed": 0,
+        "closed_ids": [],
+        "open_ids": [],
+        "unknown_ids": [
+          "L-2026-08-31-001"
+        ]
+      }
     },
     {
       "id": "outcome-loop-stability",
@@ -33,7 +42,17 @@
         "L-2026-09-21-001"
       ],
       "portfolio_allocation_pct": 50.0,
-      "status": "active"
+      "status": "active",
+      "loop_progress": {
+        "total": 2,
+        "closed": 0,
+        "closed_ids": [],
+        "open_ids": [],
+        "unknown_ids": [
+          "L-2026-08-28-001",
+          "L-2026-09-21-001"
+        ]
+      }
     }
   ],
   "portfolio_allocation": {
@@ -43,5 +62,6 @@
   "forcing_functions": [],
   "status": "active",
   "generated_at": "2026-09-28T12:24:01.798954Z",
-  "confirmed_at": "2026-09-29T01:00:06.056707Z"
+  "confirmed_at": "2026-09-29T01:00:06.056707Z",
+  "reconciled_at": "2026-10-10T11:31:51+00:00"
 }
