@@ -51,6 +51,7 @@ import team_market_intelligence as tmi  # noqa: E402
 import restaurant_tech_trends as rtt  # noqa: E402
 import team_portal_admin as tpa  # noqa: E402
 import team_portal_usage_log as tpul  # noqa: E402
+import hunter_mutation_review as hmr  # noqa: E402
 
 CREDENTIALS_PATH = (
     Path.home() / "Library" / "Application Support" / "Relationship Builder"
@@ -259,6 +260,11 @@ class AddMemberRequest(BaseModel):
     role: str = "team_member"
     is_owner: bool = False
     plan: str = "internal"
+
+
+class HunterMutationResolveRequest(BaseModel):
+    decision: str
+    note: str = ""
 
 
 def _not_found_to_404(exc: tts.NotFoundError) -> HTTPException:
@@ -629,6 +635,21 @@ def post_earnings_talking_points(company_id: str, member: dict = Depends(get_cur
 
 # --- Sales Tools: account picker (2026-09-29 additions) --------------------
 
+@app.get("/api/sales-tools/discovery/{document}")
+def get_discovery_document(document: str, member: dict = Depends(get_current_member)):
+    """Shared methodology only; never exposes account data or editorial feedback."""
+    files = {
+        "guide": "Discovery_Guide.md",
+        "template": "Blank_Discovery_Worksheet.md",
+    }
+    if document not in files:
+        raise HTTPException(status_code=404, detail="Unknown discovery document")
+    return FileResponse(
+        SYSTEM_DIR / "sales_tools" / "discovery" / files[document],
+        filename=files[document], media_type="text/markdown",
+    )
+
+
 @app.get("/api/sales-tools/accounts/search")
 def get_sales_tools_accounts_search(q: str = "", member: dict = Depends(get_current_member)):
     """Scoped to the customers_prospects registry -- NOT /api/brands/search's
@@ -827,6 +848,25 @@ def get_admin_usage(
         # function only ever sees real member_ids, by design).
         "routes_by_member": tpul.summarize_routes_by_member(events),
     }
+
+
+# RB-2026-10-10: the missing review step for Hunter's mutation proposal
+# queue (see hunter_mutation_review.py's own docstring for the full gap
+# this closes) -- owner-gated, same as every other /api/admin/* route.
+@app.get("/api/admin/hunter-mutations")
+def get_admin_hunter_mutations(member: dict = Depends(require_owner)):
+    return {"pending": hmr.list_pending(), "resolved": hmr.list_resolved(limit=50)}
+
+
+@app.post("/api/admin/hunter-mutations/{proposal_id}/resolve")
+def post_admin_hunter_mutation_resolve(
+    proposal_id: str, body: HunterMutationResolveRequest, member: dict = Depends(require_owner),
+):
+    try:
+        record = hmr.resolve(proposal_id, body.decision, resolved_by=member["id"], note=body.note)
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc))
+    return record
 
 
 _UI_PATH = Path(__file__).resolve().parent / "team_portal_ui.html"

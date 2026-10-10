@@ -61,6 +61,10 @@
   form.entry-form label { font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 3px; }
   form.entry-form .full { grid-column: 1 / -1; }
   .token-reveal { background: var(--code-bg); border-radius: 8px; padding: 12px; font-family: monospace; font-size: 13px; word-break: break-all; margin-top: 10px; }
+  .proposal-card { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; }
+  .proposal-card h3 { margin: 0 0 4px; font-size: 14px; }
+  .proposal-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+  .proposal-json { background: var(--code-bg); border-radius: 6px; padding: 10px; font-family: monospace; font-size: 12px; white-space: pre-wrap; word-break: break-word; margin-bottom: 10px; max-height: 220px; overflow-y: auto; }
 </style>
 </head>
 <body>
@@ -89,6 +93,7 @@
     <div class="tabs">
       <button id="tab-members" class="active">Members</button>
       <button id="tab-usage">Usage</button>
+      <button id="tab-hunter">Hunter Review</button>
     </div>
 
     <div id="members-view">
@@ -135,6 +140,23 @@
           </table>
         </div>
         <p class="muted">"Unauthenticated — page loads" is just the public page being opened in a browser (the token only attaches to actual API calls, so this is expected traffic, not a security signal). "Unauthenticated — rejected API calls" is the one worth watching: a real API call that failed to authenticate.</p>
+      </div>
+    </div>
+
+    <div id="hunter-view" class="hidden">
+      <div class="card">
+        <h2>Pending Hunter mutation proposals</h2>
+        <p class="muted">Hunter's research produces structured facts that have no automatic canonical writer yet — they wait here for review. Approving does not write anything to canonical records yet (no generic writer exists for most of these fact types); it records your decision so the backlog stops growing silently and so future narrow-writer work has a known-good queue to apply.</p>
+        <div id="hunter-pending-list"></div>
+      </div>
+      <div class="card">
+        <h2>Recently resolved</h2>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Proposal</th><th>Decision</th><th>By</th><th>When</th><th>Note</th></tr></thead>
+            <tbody id="hunter-resolved-body"></tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
@@ -314,19 +336,76 @@ function loadUsage() {
   }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
 }
 
-document.getElementById('tab-members').addEventListener('click', () => {
-  document.getElementById('tab-members').classList.add('active');
-  document.getElementById('tab-usage').classList.remove('active');
-  document.getElementById('members-view').classList.remove('hidden');
-  document.getElementById('usage-view').classList.add('hidden');
-});
-document.getElementById('tab-usage').addEventListener('click', () => {
-  document.getElementById('tab-usage').classList.add('active');
-  document.getElementById('tab-members').classList.remove('active');
-  document.getElementById('usage-view').classList.remove('hidden');
-  document.getElementById('members-view').classList.add('hidden');
-  loadUsage();
-});
+const TABS = ['members', 'usage', 'hunter'];
+function showTab(name) {
+  TABS.forEach((t) => {
+    document.getElementById('tab-' + t).classList.toggle('active', t === name);
+    document.getElementById(t + '-view').classList.toggle('hidden', t !== name);
+  });
+  if (name === 'usage') loadUsage();
+  if (name === 'hunter') loadHunterMutations();
+}
+document.getElementById('tab-members').addEventListener('click', () => showTab('members'));
+document.getElementById('tab-usage').addEventListener('click', () => showTab('usage'));
+document.getElementById('tab-hunter').addEventListener('click', () => showTab('hunter'));
+
+function relativeTime(iso) {
+  if (!iso) return '';
+  const then = new Date(iso).getTime();
+  if (Number.isNaN(then)) return esc(iso);
+  const days = Math.floor((Date.now() - then) / 86400000);
+  if (days <= 0) return 'today';
+  if (days === 1) return '1 day ago';
+  return `${days} days ago`;
+}
+
+function proposalCardHtml(row) {
+  const p = row.proposal || {};
+  const decisionClass = (row.decision || {}).decision_class || '';
+  return `<div class="proposal-card" data-id="${esc(p.proposal_id)}">
+    <h3>${esc(p.target_key || '')} — ${esc(p.field_path || '')}</h3>
+    <div class="proposal-meta">
+      ${esc(p.proposal_id)} · operation: ${esc(p.operation || '')} · confidence: ${esc(p.confidence_pct ?? '')}%
+      · ${esc(decisionClass)} · queued ${relativeTime(row.queued_at)} · packet ${esc(row.packet_id || '')}
+    </div>
+    <div class="proposal-json">${esc(JSON.stringify({ existing_value: p.existing_value, new_value: p.new_value, effective_at: p.effective_at, finding_ids: p.finding_ids, source_ids: p.source_ids }, null, 2))}</div>
+    <button data-action="approved" data-id="${esc(p.proposal_id)}">Approve</button>
+    <button class="danger" data-action="rejected" data-id="${esc(p.proposal_id)}">Reject</button>
+  </div>`;
+}
+
+function resolvedRowHtml(r) {
+  return `<tr>
+    <td>${esc(r.proposal_id)}</td>
+    <td>${esc(r.decision)}</td>
+    <td>${esc(r.resolved_by)}</td>
+    <td>${relativeTime(r.resolved_at)}</td>
+    <td>${esc(r.note || '')}</td>
+  </tr>`;
+}
+
+function loadHunterMutations() {
+  api('/api/admin/hunter-mutations').then((data) => {
+    setError(null);
+    const list = document.getElementById('hunter-pending-list');
+    list.innerHTML = (data.pending || []).map(proposalCardHtml).join('') || '<p class="muted">Nothing pending — the queue is caught up.</p>';
+    list.querySelectorAll('button[data-action]').forEach((btn) => {
+      btn.addEventListener('click', () => handleHunterResolve(btn.dataset.id, btn.dataset.action));
+    });
+    const resolvedBody = document.getElementById('hunter-resolved-body');
+    resolvedBody.innerHTML = (data.resolved || []).map(resolvedRowHtml).join('') || '<tr><td colspan="5" class="muted">Nothing resolved yet.</td></tr>';
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+function handleHunterResolve(proposalId, decision) {
+  const verb = decision === 'approved' ? 'Approve' : 'Reject';
+  const note = prompt(`${verb} ${proposalId}? Optional note:`, '');
+  if (note === null) return; // cancelled
+  api(`/api/admin/hunter-mutations/${encodeURIComponent(proposalId)}/resolve`, {
+    method: 'POST', body: { decision, note },
+  }).then(() => loadHunterMutations())
+    .catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
 
 function init() {
   if (!state.token) { showTokenScreen(); return; }
