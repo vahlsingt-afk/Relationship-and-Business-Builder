@@ -61,10 +61,14 @@
   form.entry-form label { font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 3px; }
   form.entry-form .full { grid-column: 1 / -1; }
   .token-reveal { background: var(--code-bg); border-radius: 8px; padding: 12px; font-family: monospace; font-size: 13px; word-break: break-all; margin-top: 10px; }
-  .proposal-card { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; }
-  .proposal-card h3 { margin: 0 0 4px; font-size: 14px; }
-  .proposal-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
-  .proposal-json { background: var(--code-bg); border-radius: 6px; padding: 10px; font-family: monospace; font-size: 12px; white-space: pre-wrap; word-break: break-word; margin-bottom: 10px; max-height: 220px; overflow-y: auto; }
+  .proposal-card { border: 1px solid var(--border); border-left-width: 4px; border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; }
+  .proposal-card p { margin: 0 0 6px; font-size: 13px; }
+  .proposal-conflict { border-left-color: var(--danger-text); }
+  .proposal-net_new { border-left-color: var(--accent); }
+  .proposal-sequenced { border-left-color: var(--text-muted); }
+  .proposal-meta { font-size: 12px; color: var(--text-muted); margin: 4px 0 8px; }
+  .proposal-json { background: var(--code-bg); border-radius: 6px; padding: 10px; font-family: monospace; font-size: 12px; white-space: pre-wrap; word-break: break-word; margin: 6px 0 10px; max-height: 220px; overflow-y: auto; }
+  .proposal-card details summary { cursor: pointer; font-size: 12px; margin-bottom: 4px; }
 </style>
 </head>
 <body>
@@ -359,25 +363,72 @@ function relativeTime(iso) {
   return `${days} days ago`;
 }
 
+function humanizeField(fieldPath) {
+  if (!fieldPath) return 'This field';
+  return fieldPath.replace(/[._]/g, ' ').split(' ')
+    .filter(Boolean).map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+function formatValue(v) {
+  if (v === null || v === undefined || v === '') return null;
+  return typeof v === 'object' ? JSON.stringify(v) : String(v);
+}
+
+function sourcesHtml(sources) {
+  if (!sources || !sources.length) return '<span class="muted">source not resolved</span>';
+  return sources.map((s) => {
+    const when = (s.accessed_at || '').slice(0, 10) || s.published_at || '';
+    const label = esc(s.title || s.publisher || s.url || s.source_id);
+    const withDate = when ? `${label} (${esc(when)})` : label;
+    return s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${withDate}</a>` : withDate;
+  }).join('; ');
+}
+
+// Todd's review feedback, 2026-10-10: plain language, not system jargon --
+// and an empty existing_value ("overwriting 'null'") must never read as a
+// conflict. display_class (from hunter_mutation_review.classify()) decides
+// which of these three honest framings applies; raw proposal/decision
+// internals are still available, just tucked behind <details> for anyone
+// who wants them.
 function proposalCardHtml(row) {
   const p = row.proposal || {};
-  const decisionClass = (row.decision || {}).decision_class || '';
-  return `<div class="proposal-card" data-id="${esc(p.proposal_id)}">
-    <h3>${esc(p.target_key || '')} — ${esc(p.field_path || '')}</h3>
-    <div class="proposal-meta">
-      ${esc(p.proposal_id)} · operation: ${esc(p.operation || '')} · confidence: ${esc(p.confidence_pct ?? '')}%
-      · ${esc(decisionClass)} · queued ${relativeTime(row.queued_at)} · packet ${esc(row.packet_id || '')}
-    </div>
-    <div class="proposal-json">${esc(JSON.stringify({ existing_value: p.existing_value, new_value: p.new_value, effective_at: p.effective_at, finding_ids: p.finding_ids, source_ids: p.source_ids }, null, 2))}</div>
+  const cls = row.display_class || 'net_new';
+  const field = esc(humanizeField(p.field_path));
+  const target = esc(p.target_key || '');
+  const newVal = esc(formatValue(p.new_value) ?? '(no value given)');
+  const oldVal = esc(formatValue(p.existing_value) ?? '(nothing on file)');
+  const asOf = p.effective_at ? `, as of ${esc(p.effective_at)}` : '';
+  const srcs = sourcesHtml(row.resolved_sources);
+
+  let body;
+  if (cls === 'conflict') {
+    body = `<p>${field} for ${target} — <strong>this disagrees with what RBB has on file.</strong></p>
+      <p>Current RBB value: <strong>${oldVal}</strong></p>
+      <p>Hunter found: <strong>${newVal}</strong> — ${srcs}${asOf}</p>
+      <p class="muted">Which is correct?</p>`;
+  } else if (cls === 'sequenced') {
+    body = `<p>${field} for ${target} — a dated update, not a dispute.</p>
+      <p>Previously: <strong>${oldVal}</strong> &rarr; now: <strong>${newVal}</strong>${asOf} — ${srcs}</p>`;
+  } else {
+    body = `<p>${field} for ${target} — <strong>new information</strong>, nothing on file before.</p>
+      <p>Hunter found: <strong>${newVal}</strong> — ${srcs}${asOf}</p>`;
+  }
+
+  return `<div class="proposal-card proposal-${esc(cls)}" data-id="${esc(p.proposal_id)}">
+    ${body}
+    <div class="proposal-meta">confidence ${esc(p.confidence_pct ?? '')}% · queued ${relativeTime(row.queued_at)}</div>
+    <details><summary class="muted">Raw data</summary><div class="proposal-json">${esc(JSON.stringify(p, null, 2))}</div></details>
     <button data-action="approved" data-id="${esc(p.proposal_id)}">Approve</button>
+    <button class="secondary" data-action="reassigned_for_research" data-id="${esc(p.proposal_id)}">Reassign to Hunter</button>
     <button class="danger" data-action="rejected" data-id="${esc(p.proposal_id)}">Reject</button>
   </div>`;
 }
 
+const RESOLVED_LABELS = { approved: 'Approved', rejected: 'Rejected', reassigned_for_research: 'Reassigned to Hunter' };
 function resolvedRowHtml(r) {
   return `<tr>
     <td>${esc(r.proposal_id)}</td>
-    <td>${esc(r.decision)}</td>
+    <td>${esc(RESOLVED_LABELS[r.decision] || r.decision)}</td>
     <td>${esc(r.resolved_by)}</td>
     <td>${relativeTime(r.resolved_at)}</td>
     <td>${esc(r.note || '')}</td>
@@ -397,9 +448,13 @@ function loadHunterMutations() {
   }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
 }
 
+const RESOLVE_VERBS = { approved: 'Approve', rejected: 'Reject', reassigned_for_research: 'Reassign to Hunter for deeper research' };
 function handleHunterResolve(proposalId, decision) {
-  const verb = decision === 'approved' ? 'Approve' : 'Reject';
-  const note = prompt(`${verb} ${proposalId}? Optional note:`, '');
+  const verb = RESOLVE_VERBS[decision] || decision;
+  const promptText = decision === 'reassigned_for_research'
+    ? `${verb} — what should Hunter dig into? (note helps whoever follows up)`
+    : `${verb} ${proposalId}? Optional note:`;
+  const note = prompt(promptText, '');
   if (note === null) return; // cancelled
   api(`/api/admin/hunter-mutations/${encodeURIComponent(proposalId)}/resolve`, {
     method: 'POST', body: { decision, note },

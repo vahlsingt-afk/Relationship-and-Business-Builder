@@ -32,6 +32,31 @@ def _append_jsonl(path: Path, record: dict) -> None:
         handle.write(json.dumps(record, sort_keys=True, default=str) + "\n")
 
 
+def _resolve_sources(packet: dict, source_ids: list[str]) -> list[dict]:
+    """The compact, human-facing fields a reviewer actually needs to judge
+    a proposal's new value -- never the full source_ledger row (internal
+    fields like evidence_chain_id/access_status add noise, not trust).
+    Unknown source_ids are silently skipped rather than raising: a
+    reviewer seeing fewer citations than expected is a visible, honest
+    gap; crashing dispatch over a dangling id in someone's packet is not
+    a trade worth making."""
+    by_id = {s.get("source_id"): s for s in packet.get("source_ledger") or []}
+    resolved = []
+    for sid in source_ids:
+        s = by_id.get(sid)
+        if not s:
+            continue
+        resolved.append({
+            "source_id": sid,
+            "title": s.get("title"),
+            "publisher": s.get("publisher"),
+            "url": s.get("url"),
+            "published_at": s.get("published_at"),
+            "accessed_at": s.get("accessed_at"),
+        })
+    return resolved
+
+
 def _source_url(proposal: dict, packet: dict) -> str | None:
     by_id = {source.get("source_id"): source for source in packet.get("source_ledger") or []}
     for source_id in proposal.get("source_ids") or []:
@@ -166,6 +191,15 @@ def dispatch(packet: dict, *, dry_run: bool = True) -> dict:
                     "proposal": proposal,
                     "decision": decision.receipt,
                     "reason": "review required or no registered narrow writer",
+                    # RB-2026-10-10 (Todd's review feedback): the queued row only
+                    # ever carried source_ids, never what those sources actually
+                    # say -- a reviewer had no way to see "this new value comes
+                    # from X, published/accessed on Y" without separately
+                    # re-opening the archived packet. The packet (and its
+                    # source_ledger) is only ever in scope right here, at
+                    # dispatch time -- resolve it now, once, so it survives
+                    # unchanged however long the proposal sits pending.
+                    "resolved_sources": _resolve_sources(packet, proposal.get("source_ids") or []),
                 })
         summary["mutation_results"].append(result)
 

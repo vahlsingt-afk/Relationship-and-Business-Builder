@@ -38,7 +38,43 @@ sys.path.insert(0, str(SCRIPTS_DIR))
 
 PROPOSAL_QUEUE_PATH = SYSTEM_DIR / ".cache" / "hunter_mutation_proposals.jsonl"
 RESOLUTIONS_PATH = SYSTEM_DIR / ".cache" / "hunter_mutation_resolutions.jsonl"
-DECISIONS = {"approved", "rejected"}
+# "reassigned_for_research" (Todd, 2026-10-10): a reviewer's third real
+# option besides approve/reject -- the proposal isn't wrong or right yet,
+# it needs Hunter to go look closer before anyone can decide. Resolves it
+# the same way approve/reject do (removed from pending, durably recorded);
+# actually generating a follow-up Hunter assignment from this is a
+# separate, later step (not yet built) -- this just stops it from sitting
+# in limbo forever while nobody's looked at it in a while.
+DECISIONS = {"approved", "rejected", "reassigned_for_research"}
+
+# mutation_policy.py's own decision_class values that mean "this genuinely
+# conflicts with something RBB already has on file" -- CONFIRMATION_REQUIRED_
+# OVERWRITE/CONFIRMATION_REQUIRED_UNDATED_CONFLICT. Everything else that
+# still lands in this queue (today, almost everything -- only one narrow
+# writer exists) is net-new or date-sequenced, not a real dispute: showing
+# both exactly alike was Todd's own review feedback ("overwriting 'null'
+# instead of recognizing that as having zero information") -- an empty
+# existing_value next to a new one LOOKS like an overwrite unless the UI
+# says otherwise.
+CONFLICT_DECISION_CLASSES = {"confirmation_required_overwrite", "confirmation_required_undated_conflict", "review_required_identity_ambiguity"}
+
+
+def classify(row: dict) -> str:
+    """One of "conflict" (a real disagreement with existing RBB data --
+    the only case that actually needs an old-vs-new comparison), "net_new"
+    (nothing was on file before; always true when existing_value is
+    missing/empty, matching mutation_policy.decide()'s own check), or
+    "sequenced" (both sides had real dates and were ordered automatically
+    -- informational, not a dispute)."""
+    proposal = row.get("proposal") or {}
+    decision_class = (row.get("decision") or {}).get("decision_class")
+    if decision_class in CONFLICT_DECISION_CLASSES:
+        return "conflict"
+    if decision_class in {"auto_added_dated_successor", "auto_added_historical_fact"}:
+        return "sequenced"
+    if proposal.get("existing_value") in (None, "", [], {}):
+        return "net_new"
+    return "conflict" if decision_class else "net_new"
 
 
 def _read_jsonl(path: Path) -> list[dict]:
@@ -69,12 +105,16 @@ def _resolved_ids() -> set[str]:
 def list_pending() -> list[dict]:
     """Every queued proposal not yet resolved, oldest first -- the real
     backlog view. Each row carries the full original queue entry (proposal,
-    decision, reason, packet_id, queued_at) exactly as hunter_change_
-    dispatch.py wrote it, so a reviewer sees everything without a second
-    lookup."""
+    decision, reason, packet_id, queued_at, resolved_sources) exactly as
+    hunter_change_dispatch.py wrote it, plus one computed field this module
+    owns: display_class (see classify()), so a reviewer -- or the UI --
+    never has to re-derive "is this actually a conflict" from raw decision
+    internals."""
     resolved = _resolved_ids()
     rows = [r for r in _read_jsonl(PROPOSAL_QUEUE_PATH) if (r.get("proposal") or {}).get("proposal_id") not in resolved]
     rows.sort(key=lambda r: r.get("queued_at") or "")
+    for row in rows:
+        row["display_class"] = classify(row)
     return rows
 
 
