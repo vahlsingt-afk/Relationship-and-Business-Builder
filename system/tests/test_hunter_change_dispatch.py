@@ -1,7 +1,10 @@
 from __future__ import annotations
 
+import json
 import sys
+import tempfile
 from pathlib import Path
+from unittest.mock import patch
 
 
 SCRIPTS = Path(__file__).resolve().parent.parent / "scripts"
@@ -83,3 +86,44 @@ def test_unregistered_writer_is_queued_not_claimed_applied():
     result = dispatch.dispatch(packet, dry_run=True)
     assert result["canonical_applied"] == 0
     assert result["queued_for_review_or_unhandled"] == 1
+
+
+# ---- resolved_sources embedding (Todd's review feedback, 2026-10-10) -----
+# A reviewer previously saw only source_ids on a queued proposal, with no
+# way to see what those sources actually say without re-opening the
+# archived packet. The packet is only in scope at dispatch time -- resolve
+# it then, once, and embed it in the queued row.
+
+def _queue_an_unregistered_proposal():
+    tmp = tempfile.TemporaryDirectory()
+    queue_path = Path(tmp.name) / "proposals.jsonl"
+    packet = _change_packet()
+    packet["mutation_proposals"][0]["field_path"] = "unknown.store.field"
+    with patch.object(dispatch, "PROPOSAL_QUEUE_PATH", queue_path):
+        dispatch.dispatch(packet, dry_run=False)
+        rows = [json.loads(l) for l in queue_path.read_text().splitlines()]
+    tmp.cleanup()
+    return rows
+
+
+def test_queued_proposal_carries_resolved_sources():
+    rows = _queue_an_unregistered_proposal()
+    assert len(rows) == 1
+    sources = rows[0]["resolved_sources"]
+    assert len(sources) == 1
+    assert sources[0]["source_id"] == "src-example"
+    assert sources[0]["title"] == "Case study"
+    assert sources[0]["publisher"] == "Example"
+    assert sources[0]["url"] == "https://example.com/case-study"
+
+
+def test_resolve_sources_skips_an_unknown_id_instead_of_raising():
+    packet = _change_packet()
+    resolved = dispatch._resolve_sources(packet, ["src-example", "src-does-not-exist"])
+    assert len(resolved) == 1
+    assert resolved[0]["source_id"] == "src-example"
+
+
+def test_resolve_sources_empty_list_returns_empty_list():
+    packet = _change_packet()
+    assert dispatch._resolve_sources(packet, []) == []

@@ -62,7 +62,29 @@ Single conversational query surface across all RB intelligence modules: Micro, M
 
 ---
 
+### Hunter mutation proposal narrow writers — HIGH PRIORITY, start once token usage resets next week (2026-10-10)
+
+**The gap, confirmed live:** `hunter_change_dispatch.py` has exactly one registered "narrow writer" (`_apply_brand_recent_signal`) that can safely auto-apply a mutation proposal straight to canonical records. Every other fact type Hunter actually produces in practice — `leadership_event_history`, `acquisition_history`, `customer_deployment_history`, `product_release_history`, `research_publication_history`, and more — has no handler at all, so it unconditionally lands in the review queue (`hunter_mutation_proposals.jsonl`) regardless of confidence or how obviously safe the fact is. 38 real proposals had piled up silently since 2026-10-03 before the review gap itself was caught and fixed (see below) — this is the deeper, second half of that same finding.
+
+**What's already fixed (2026-10-10):** the visibility/triage half of this gap. New `system/scripts/hunter_mutation_review.py` + a "Hunter Review" tab on the Team Portal admin page (`/admin`, owner-gated) let Todd see every pending proposal and record approve/reject decisions — durably, idempotently, with a resolution log separate from the pending queue. That does NOT write to canonical records itself; it's the human review step, not the automated writer. Tests: `system/tests/test_hunter_mutation_review.py`, plus the new `TestHunterMutationRoutes` class in `system/tests/test_team_portal_admin_routes.py`.
+
+**What's still needed — this item:** real narrow-writer handlers for the common field types above, following `_apply_brand_recent_signal`'s own pattern (a function registered in `hunter_change_dispatch.dispatch()` that knows exactly how to safely translate one proposal shape into a real write against its real target file/structure). Each field type likely needs its own handler since the target canonical structures differ (e.g. `competitor_intelligence/competitors/<slug>/competitor.json`'s leadership history vs. acquisition history are probably different substructures). Once in place, Todd's "approved" decisions in the new review tab become the natural backlog to apply first — approved-and-queued is the known-good signal a handler should trust most.
+
+**Why next week specifically:** Todd's own call — start once this week's token usage resets, given the scope (several distinct handler types, each needing its own real understanding of the target canonical structure before writing to it).
+
+---
+
 ## Queued / Future
+
+---
+
+### Restaurant Technology Research Portal ("RTR Portal") — separate subscription product (not started, not scoped — 2026-10-09)
+
+Todd's directive: record on the roadmap now; scope later when there is time. **No design or implementation authorized.** Full charter as provided: `system/RTR_PORTAL_CHARTER_2026-10-09.md`.
+
+One-line summary: a separate subscription product (own identity, Research Director CoS voice, organization accounts with named seats) offering source-backed restaurant-tech market briefings, company profiles, watchlists and a cited research desk, built on the *eligible public* research records Hunter and Gatherer collect. GP, RBB, personal and subscriber-private data stay outside the shared corpus. Excludes sales tooling and the Ranked Portfolio tab.
+
+Charter's own phasing (for when this is picked up): Phase 0 architecture/data discovery → Phase 1 reviewable dev MVP → Phase 2 paid pilot → Phase 3 commercial readiness. Open items to resolve at scoping: where the shared Hunter/Gatherer database and its contracts live, commercial-use eligibility enforcement, first pilot segment/categories, auth/hosting/billing choices, name/domain availability.
 
 ---
 

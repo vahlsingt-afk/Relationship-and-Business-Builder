@@ -61,6 +61,14 @@
   form.entry-form label { font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 3px; }
   form.entry-form .full { grid-column: 1 / -1; }
   .token-reveal { background: var(--code-bg); border-radius: 8px; padding: 12px; font-family: monospace; font-size: 13px; word-break: break-all; margin-top: 10px; }
+  .proposal-card { border: 1px solid var(--border); border-left-width: 4px; border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; }
+  .proposal-card p { margin: 0 0 6px; font-size: 13px; }
+  .proposal-conflict { border-left-color: var(--danger-text); }
+  .proposal-net_new { border-left-color: var(--accent); }
+  .proposal-sequenced { border-left-color: var(--text-muted); }
+  .proposal-meta { font-size: 12px; color: var(--text-muted); margin: 4px 0 8px; }
+  .proposal-json { background: var(--code-bg); border-radius: 6px; padding: 10px; font-family: monospace; font-size: 12px; white-space: pre-wrap; word-break: break-word; margin: 6px 0 10px; max-height: 220px; overflow-y: auto; }
+  .proposal-card details summary { cursor: pointer; font-size: 12px; margin-bottom: 4px; }
 </style>
 </head>
 <body>
@@ -89,6 +97,9 @@
     <div class="tabs">
       <button id="tab-members" class="active">Members</button>
       <button id="tab-usage">Usage</button>
+      <button id="tab-hunter">Hunter Review</button>
+      <button id="tab-identity">Relationship Resolution</button>
+      <button id="tab-loops">Open Loops</button>
     </div>
 
     <div id="members-view">
@@ -135,6 +146,39 @@
           </table>
         </div>
         <p class="muted">"Unauthenticated — page loads" is just the public page being opened in a browser (the token only attaches to actual API calls, so this is expected traffic, not a security signal). "Unauthenticated — rejected API calls" is the one worth watching: a real API call that failed to authenticate.</p>
+      </div>
+    </div>
+
+    <div id="hunter-view" class="hidden">
+      <div class="card">
+        <h2>Pending Hunter mutation proposals</h2>
+        <p class="muted">Hunter's research produces structured facts that have no automatic canonical writer yet — they wait here for review. Approving does not write anything to canonical records yet (no generic writer exists for most of these fact types); it records your decision so the backlog stops growing silently and so future narrow-writer work has a known-good queue to apply.</p>
+        <div id="hunter-pending-list"></div>
+      </div>
+      <div class="card">
+        <h2>Recently resolved</h2>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Proposal</th><th>Decision</th><th>By</th><th>When</th><th>Note</th></tr></thead>
+            <tbody id="hunter-resolved-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="identity-view" class="hidden">
+      <div class="card">
+        <h2>Pending relationship matches</h2>
+        <p class="muted">An inbound email's sender name exactly matches a baseline contact who doesn't have that address on file yet. Confirm to link the email to them; "no email" for cases where the match is right but the address itself isn't theirs (e.g. a platform relay like invitations@linkedin.com).</p>
+        <div id="identity-pending-list"></div>
+      </div>
+    </div>
+
+    <div id="loops-view" class="hidden">
+      <div class="card">
+        <h2>Open loops</h2>
+        <p class="muted">Closing a loop here is exactly as governed as closing it any other way — self-audit loops still require a clean automated re-check or an explicit override reason.</p>
+        <div id="loops-list"></div>
       </div>
     </div>
   </div>
@@ -314,19 +358,207 @@ function loadUsage() {
   }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
 }
 
-document.getElementById('tab-members').addEventListener('click', () => {
-  document.getElementById('tab-members').classList.add('active');
-  document.getElementById('tab-usage').classList.remove('active');
-  document.getElementById('members-view').classList.remove('hidden');
-  document.getElementById('usage-view').classList.add('hidden');
-});
-document.getElementById('tab-usage').addEventListener('click', () => {
-  document.getElementById('tab-usage').classList.add('active');
-  document.getElementById('tab-members').classList.remove('active');
-  document.getElementById('usage-view').classList.remove('hidden');
-  document.getElementById('members-view').classList.add('hidden');
-  loadUsage();
-});
+const TABS = ['members', 'usage', 'hunter', 'identity', 'loops'];
+function showTab(name) {
+  TABS.forEach((t) => {
+    document.getElementById('tab-' + t).classList.toggle('active', t === name);
+    document.getElementById(t + '-view').classList.toggle('hidden', t !== name);
+  });
+  if (name === 'usage') loadUsage();
+  if (name === 'hunter') loadHunterMutations();
+  if (name === 'identity') loadIdentityMatches();
+  if (name === 'loops') loadLoops();
+}
+document.getElementById('tab-members').addEventListener('click', () => showTab('members'));
+document.getElementById('tab-usage').addEventListener('click', () => showTab('usage'));
+document.getElementById('tab-hunter').addEventListener('click', () => showTab('hunter'));
+document.getElementById('tab-identity').addEventListener('click', () => showTab('identity'));
+document.getElementById('tab-loops').addEventListener('click', () => showTab('loops'));
+
+function relativeTime(iso) {
+  if (!iso) return '';
+  const then = new Date(iso).getTime();
+  if (Number.isNaN(then)) return esc(iso);
+  const days = Math.floor((Date.now() - then) / 86400000);
+  if (days <= 0) return 'today';
+  if (days === 1) return '1 day ago';
+  return `${days} days ago`;
+}
+
+function humanizeField(fieldPath) {
+  if (!fieldPath) return 'This field';
+  return fieldPath.replace(/[._]/g, ' ').split(' ')
+    .filter(Boolean).map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+function formatValue(v) {
+  if (v === null || v === undefined || v === '') return null;
+  return typeof v === 'object' ? JSON.stringify(v) : String(v);
+}
+
+function sourcesHtml(sources) {
+  if (!sources || !sources.length) return '<span class="muted">source not resolved</span>';
+  return sources.map((s) => {
+    const when = (s.accessed_at || '').slice(0, 10) || s.published_at || '';
+    const label = esc(s.title || s.publisher || s.url || s.source_id);
+    const withDate = when ? `${label} (${esc(when)})` : label;
+    return s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${withDate}</a>` : withDate;
+  }).join('; ');
+}
+
+// Todd's review feedback, 2026-10-10: plain language, not system jargon --
+// and an empty existing_value ("overwriting 'null'") must never read as a
+// conflict. display_class (from hunter_mutation_review.classify()) decides
+// which of these three honest framings applies; raw proposal/decision
+// internals are still available, just tucked behind <details> for anyone
+// who wants them.
+function proposalCardHtml(row) {
+  const p = row.proposal || {};
+  const cls = row.display_class || 'net_new';
+  const field = esc(humanizeField(p.field_path));
+  const target = esc(p.target_key || '');
+  const newVal = esc(formatValue(p.new_value) ?? '(no value given)');
+  const oldVal = esc(formatValue(p.existing_value) ?? '(nothing on file)');
+  const asOf = p.effective_at ? `, as of ${esc(p.effective_at)}` : '';
+  const srcs = sourcesHtml(row.resolved_sources);
+
+  let body;
+  if (cls === 'conflict') {
+    body = `<p>${field} for ${target} — <strong>this disagrees with what RBB has on file.</strong></p>
+      <p>Current RBB value: <strong>${oldVal}</strong></p>
+      <p>Hunter found: <strong>${newVal}</strong> — ${srcs}${asOf}</p>
+      <p class="muted">Which is correct?</p>`;
+  } else if (cls === 'sequenced') {
+    body = `<p>${field} for ${target} — a dated update, not a dispute.</p>
+      <p>Previously: <strong>${oldVal}</strong> &rarr; now: <strong>${newVal}</strong>${asOf} — ${srcs}</p>`;
+  } else {
+    body = `<p>${field} for ${target} — <strong>new information</strong>, nothing on file before.</p>
+      <p>Hunter found: <strong>${newVal}</strong> — ${srcs}${asOf}</p>`;
+  }
+
+  return `<div class="proposal-card proposal-${esc(cls)}" data-id="${esc(p.proposal_id)}">
+    ${body}
+    <div class="proposal-meta">confidence ${esc(p.confidence_pct ?? '')}% · queued ${relativeTime(row.queued_at)}</div>
+    <details><summary class="muted">Raw data</summary><div class="proposal-json">${esc(JSON.stringify(p, null, 2))}</div></details>
+    <button data-action="approved" data-id="${esc(p.proposal_id)}">Approve</button>
+    <button class="secondary" data-action="reassigned_for_research" data-id="${esc(p.proposal_id)}">Reassign to Hunter</button>
+    <button class="danger" data-action="rejected" data-id="${esc(p.proposal_id)}">Reject</button>
+  </div>`;
+}
+
+const RESOLVED_LABELS = { approved: 'Approved', rejected: 'Rejected', reassigned_for_research: 'Reassigned to Hunter' };
+function resolvedRowHtml(r) {
+  return `<tr>
+    <td>${esc(r.proposal_id)}</td>
+    <td>${esc(RESOLVED_LABELS[r.decision] || r.decision)}</td>
+    <td>${esc(r.resolved_by)}</td>
+    <td>${relativeTime(r.resolved_at)}</td>
+    <td>${esc(r.note || '')}</td>
+  </tr>`;
+}
+
+function loadHunterMutations() {
+  api('/api/admin/hunter-mutations').then((data) => {
+    setError(null);
+    const list = document.getElementById('hunter-pending-list');
+    list.innerHTML = (data.pending || []).map(proposalCardHtml).join('') || '<p class="muted">Nothing pending — the queue is caught up.</p>';
+    list.querySelectorAll('button[data-action]').forEach((btn) => {
+      btn.addEventListener('click', () => handleHunterResolve(btn.dataset.id, btn.dataset.action));
+    });
+    const resolvedBody = document.getElementById('hunter-resolved-body');
+    resolvedBody.innerHTML = (data.resolved || []).map(resolvedRowHtml).join('') || '<tr><td colspan="5" class="muted">Nothing resolved yet.</td></tr>';
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+const RESOLVE_VERBS = { approved: 'Approve', rejected: 'Reject', reassigned_for_research: 'Reassign to Hunter for deeper research' };
+function handleHunterResolve(proposalId, decision) {
+  const verb = RESOLVE_VERBS[decision] || decision;
+  const promptText = decision === 'reassigned_for_research'
+    ? `${verb} — what should Hunter dig into? (note helps whoever follows up)`
+    : `${verb} ${proposalId}? Optional note:`;
+  const note = prompt(promptText, '');
+  if (note === null) return; // cancelled
+  api(`/api/admin/hunter-mutations/${encodeURIComponent(proposalId)}/resolve`, {
+    method: 'POST', body: { decision, note },
+  }).then(() => loadHunterMutations())
+    .catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+// --- Relationship Resolution (identity_match_review.py, already built --
+// this is wiring, not new logic) -------------------------------------------
+function identityCardHtml(c) {
+  return `<div class="proposal-card proposal-net_new" data-id="${esc(c.id)}">
+    <p><strong>${esc(c.sender_name)}</strong> (${esc(c.sender_email)}) emailed in — matches baseline contact <strong>${esc(c.baseline_name)}</strong>${c.baseline_company ? ' at ' + esc(c.baseline_company) : ''}, who has no email on file.</p>
+    <div class="proposal-meta">thread: ${esc(c.thread_subject || '(no subject)')} · account: ${esc(c.account)} · last message ${relativeTime(c.last_message_at)} · first seen ${esc(c.first_seen || '')}</div>
+    <button data-action="confirm" data-id="${esc(c.id)}">Confirm — link this email</button>
+    <button class="secondary" data-action="confirm_no_email" data-id="${esc(c.id)}">Confirm, but not this email</button>
+    <button class="danger" data-action="reject" data-id="${esc(c.id)}">Not a match</button>
+  </div>`;
+}
+
+function loadIdentityMatches() {
+  api('/api/admin/identity-matches').then((data) => {
+    setError(null);
+    const list = document.getElementById('identity-pending-list');
+    list.innerHTML = (data.pending || []).map(identityCardHtml).join('') || '<p class="muted">Nothing pending.</p>';
+    list.querySelectorAll('button[data-action]').forEach((btn) => {
+      btn.addEventListener('click', () => handleIdentityResolve(btn.dataset.id, btn.dataset.action));
+    });
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+function handleIdentityResolve(id, action) {
+  let reason = '';
+  if (action === 'confirm_no_email') {
+    reason = prompt('Why is this address not theirs? (optional — e.g. "platform relay")', '') || '';
+  } else if (action === 'reject' && !confirm('Mark this as not a real match?')) {
+    return;
+  }
+  api(`/api/admin/identity-matches/${encodeURIComponent(id)}/resolve`, {
+    method: 'POST', body: { action, reason },
+  }).then(() => loadIdentityMatches())
+    .catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+// --- Open Loops (server.py's own getLoops/closeLoop logic, called
+// in-process -- a Team Portal close is exactly as governed as a GPT-issued
+// one) -----------------------------------------------------------------
+const LOOP_BUCKET_LABELS = { overdue: 'Overdue', due_today: 'Due today', this_week: 'This week', waiting: 'Waiting on someone else', future: 'Future' };
+const LOOP_BUCKET_ORDER = ['overdue', 'due_today', 'this_week', 'waiting', 'future'];
+
+function loopCardHtml(l) {
+  return `<div class="proposal-card" data-id="${esc(l.id)}">
+    <p><strong>${esc(l.id)}</strong> — ${esc(l.description)}</p>
+    <div class="proposal-meta">party: ${esc(l.party)} · opened ${esc(l.opened)} · target ${esc(l.target)} · ${esc(l.status_raw)}</div>
+    <button data-action="close" data-id="${esc(l.id)}">Close</button>
+  </div>`;
+}
+
+function loadLoops() {
+  api('/api/admin/loops').then((data) => {
+    setError(null);
+    const buckets = data.buckets || {};
+    const sections = LOOP_BUCKET_ORDER.map((key) => {
+      const rows = buckets[key] || [];
+      if (!rows.length) return '';
+      return `<h3 style="font-size:13px;margin:14px 0 6px;">${esc(LOOP_BUCKET_LABELS[key] || key)} (${rows.length})</h3>` + rows.map(loopCardHtml).join('');
+    }).join('');
+    const container = document.getElementById('loops-list');
+    container.innerHTML = sections || '<p class="muted">No open loops.</p>';
+    container.querySelectorAll('button[data-action="close"]').forEach((btn) => {
+      btn.addEventListener('click', () => handleLoopClose(btn.dataset.id));
+    });
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+function handleLoopClose(id) {
+  const reason = prompt(`Close ${id} — reason:`, '');
+  if (reason === null) return;
+  api(`/api/admin/loops/${encodeURIComponent(id)}/close`, {
+    method: 'POST', body: { reason },
+  }).then(() => loadLoops())
+    .catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
 
 function init() {
   if (!state.token) { showTokenScreen(); return; }
