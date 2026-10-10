@@ -52,6 +52,10 @@ import restaurant_tech_trends as rtt  # noqa: E402
 import team_portal_admin as tpa  # noqa: E402
 import team_portal_usage_log as tpul  # noqa: E402
 import hunter_mutation_review as hmr  # noqa: E402
+import identity_match_review as imr  # noqa: E402
+import rb_core as core  # noqa: E402
+import mutations  # noqa: E402
+import eolms  # noqa: E402
 
 CREDENTIALS_PATH = (
     Path.home() / "Library" / "Application Support" / "Relationship Builder"
@@ -265,6 +269,15 @@ class AddMemberRequest(BaseModel):
 class HunterMutationResolveRequest(BaseModel):
     decision: str
     note: str = ""
+
+
+class IdentityMatchResolveRequest(BaseModel):
+    action: str  # "confirm" | "confirm_no_email" | "reject"
+    reason: str = ""
+
+
+class LoopCloseRequest(BaseModel):
+    reason: str
 
 
 def _not_found_to_404(exc: tts.NotFoundError) -> HTTPException:
@@ -867,6 +880,83 @@ def post_admin_hunter_mutation_resolve(
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc))
     return record
+
+
+# RB-2026-10-10: Todd's idea, same session as the Hunter review tab --
+# "relationship resolution comes to mind as using the team portal as a good
+# interface." Both of these reuse fully-built, already-tested backend logic
+# (identity_match_review.py; server.py's own getLoops/closeLoop, called
+# in-process the same way every other admin route here calls its own
+# scripts module instead of making an HTTP round trip) -- this is wiring,
+# not new business logic. Writes land immediately, same as identity_match_
+# review.py/mutations.py always have; Todd's "next-day batch" alternative
+# turned out unnecessary since nothing here needed building from scratch.
+@app.get("/api/admin/identity-matches")
+def get_admin_identity_matches(member: dict = Depends(require_owner)):
+    return {"pending": imr.pending_candidates()}
+
+
+@app.post("/api/admin/identity-matches/{candidate_id}/resolve")
+def post_admin_identity_match_resolve(
+    candidate_id: str, body: IdentityMatchResolveRequest, member: dict = Depends(require_owner),
+):
+    if body.action == "confirm":
+        result = imr.confirm(candidate_id)
+    elif body.action == "confirm_no_email":
+        result = imr.confirm_without_email(candidate_id, reason=body.reason)
+    elif body.action == "reject":
+        result = imr.reject(candidate_id)
+    else:
+        raise HTTPException(status_code=422, detail=f"unknown action: {body.action!r}")
+    if result.get("error"):
+        raise HTTPException(status_code=422, detail=result["error"])
+    return result
+
+
+@app.get("/api/admin/loops")
+def get_admin_loops(member: dict = Depends(require_owner)):
+    from dataclasses import asdict
+    # Explicit path, not the default: parse_loop_ledger(path: Path =
+    # LOOP_LEDGER_PATH) binds its default at def time, so patching
+    # core.LOOP_LEDGER_PATH in a test has no effect unless the path is
+    # actually passed through -- confirmed live in test development (a
+    # test's isolated ledger was silently ignored in favor of the real
+    # system/loop_ledger.md). Passing it explicitly reads the attribute
+    # fresh, same as identity_match_review.py already does for BASELINE_PATH.
+    loops = core.parse_loop_ledger(core.LOOP_LEDGER_PATH)
+    buckets = core.loops_by_status(loops, core.date.today())
+    return {
+        "buckets": {
+            k: [{**asdict(L), "opened": L.opened.isoformat(), "target": L.target.isoformat()} for L in v]
+            for k, v in buckets.items() if k != "closed"  # the open-loops tab is for what's still open
+        },
+    }
+
+
+@app.post("/api/admin/loops/{loop_id}/close")
+def post_admin_loop_close(loop_id: str, body: LoopCloseRequest, member: dict = Depends(require_owner)):
+    """Mirrors POST /loops/close in server.py exactly (same EL- vs ledger-id
+    branch, same self-audit-gate handling) -- a Team Portal close must be
+    exactly as governed as a GPT-issued one, not a lighter-weight shortcut."""
+    if loop_id.startswith("EL-"):
+        err = eolms.close_by_id(loop_id, body.reason)
+        if err:
+            raise HTTPException(status_code=400, detail=err)
+        return {"ok": True, "id": loop_id}
+    rc = mutations.cmd_loop_close(type("A", (), {"id": loop_id, "reason": body.reason, "dry_run": False})())
+    if rc == 2:
+        raise HTTPException(
+            status_code=422,
+            detail=(
+                f"'{loop_id}' is a self-audit loop and its finding(s) have not been automatically "
+                "confirmed resolved. Either let self_audit_sweep.py close it once a fresh run comes "
+                f"back clean, or resubmit with reason starting with {mutations.SELF_AUDIT_OVERRIDE_PREFIX!r} "
+                "to explicitly accept this as an unverified, deliberate override."
+            ),
+        )
+    if rc != 0:
+        raise HTTPException(status_code=400, detail="loop-close failed (id not found or already closed)")
+    return {"ok": True, "id": loop_id}
 
 
 _UI_PATH = Path(__file__).resolve().parent / "team_portal_ui.html"

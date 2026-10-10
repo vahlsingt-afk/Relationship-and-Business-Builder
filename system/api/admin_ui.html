@@ -98,6 +98,8 @@
       <button id="tab-members" class="active">Members</button>
       <button id="tab-usage">Usage</button>
       <button id="tab-hunter">Hunter Review</button>
+      <button id="tab-identity">Relationship Resolution</button>
+      <button id="tab-loops">Open Loops</button>
     </div>
 
     <div id="members-view">
@@ -161,6 +163,22 @@
             <tbody id="hunter-resolved-body"></tbody>
           </table>
         </div>
+      </div>
+    </div>
+
+    <div id="identity-view" class="hidden">
+      <div class="card">
+        <h2>Pending relationship matches</h2>
+        <p class="muted">An inbound email's sender name exactly matches a baseline contact who doesn't have that address on file yet. Confirm to link the email to them; "no email" for cases where the match is right but the address itself isn't theirs (e.g. a platform relay like invitations@linkedin.com).</p>
+        <div id="identity-pending-list"></div>
+      </div>
+    </div>
+
+    <div id="loops-view" class="hidden">
+      <div class="card">
+        <h2>Open loops</h2>
+        <p class="muted">Closing a loop here is exactly as governed as closing it any other way — self-audit loops still require a clean automated re-check or an explicit override reason.</p>
+        <div id="loops-list"></div>
       </div>
     </div>
   </div>
@@ -340,7 +358,7 @@ function loadUsage() {
   }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
 }
 
-const TABS = ['members', 'usage', 'hunter'];
+const TABS = ['members', 'usage', 'hunter', 'identity', 'loops'];
 function showTab(name) {
   TABS.forEach((t) => {
     document.getElementById('tab-' + t).classList.toggle('active', t === name);
@@ -348,10 +366,14 @@ function showTab(name) {
   });
   if (name === 'usage') loadUsage();
   if (name === 'hunter') loadHunterMutations();
+  if (name === 'identity') loadIdentityMatches();
+  if (name === 'loops') loadLoops();
 }
 document.getElementById('tab-members').addEventListener('click', () => showTab('members'));
 document.getElementById('tab-usage').addEventListener('click', () => showTab('usage'));
 document.getElementById('tab-hunter').addEventListener('click', () => showTab('hunter'));
+document.getElementById('tab-identity').addEventListener('click', () => showTab('identity'));
+document.getElementById('tab-loops').addEventListener('click', () => showTab('loops'));
 
 function relativeTime(iso) {
   if (!iso) return '';
@@ -459,6 +481,82 @@ function handleHunterResolve(proposalId, decision) {
   api(`/api/admin/hunter-mutations/${encodeURIComponent(proposalId)}/resolve`, {
     method: 'POST', body: { decision, note },
   }).then(() => loadHunterMutations())
+    .catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+// --- Relationship Resolution (identity_match_review.py, already built --
+// this is wiring, not new logic) -------------------------------------------
+function identityCardHtml(c) {
+  return `<div class="proposal-card proposal-net_new" data-id="${esc(c.id)}">
+    <p><strong>${esc(c.sender_name)}</strong> (${esc(c.sender_email)}) emailed in — matches baseline contact <strong>${esc(c.baseline_name)}</strong>${c.baseline_company ? ' at ' + esc(c.baseline_company) : ''}, who has no email on file.</p>
+    <div class="proposal-meta">thread: ${esc(c.thread_subject || '(no subject)')} · account: ${esc(c.account)} · last message ${relativeTime(c.last_message_at)} · first seen ${esc(c.first_seen || '')}</div>
+    <button data-action="confirm" data-id="${esc(c.id)}">Confirm — link this email</button>
+    <button class="secondary" data-action="confirm_no_email" data-id="${esc(c.id)}">Confirm, but not this email</button>
+    <button class="danger" data-action="reject" data-id="${esc(c.id)}">Not a match</button>
+  </div>`;
+}
+
+function loadIdentityMatches() {
+  api('/api/admin/identity-matches').then((data) => {
+    setError(null);
+    const list = document.getElementById('identity-pending-list');
+    list.innerHTML = (data.pending || []).map(identityCardHtml).join('') || '<p class="muted">Nothing pending.</p>';
+    list.querySelectorAll('button[data-action]').forEach((btn) => {
+      btn.addEventListener('click', () => handleIdentityResolve(btn.dataset.id, btn.dataset.action));
+    });
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+function handleIdentityResolve(id, action) {
+  let reason = '';
+  if (action === 'confirm_no_email') {
+    reason = prompt('Why is this address not theirs? (optional — e.g. "platform relay")', '') || '';
+  } else if (action === 'reject' && !confirm('Mark this as not a real match?')) {
+    return;
+  }
+  api(`/api/admin/identity-matches/${encodeURIComponent(id)}/resolve`, {
+    method: 'POST', body: { action, reason },
+  }).then(() => loadIdentityMatches())
+    .catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+// --- Open Loops (server.py's own getLoops/closeLoop logic, called
+// in-process -- a Team Portal close is exactly as governed as a GPT-issued
+// one) -----------------------------------------------------------------
+const LOOP_BUCKET_LABELS = { overdue: 'Overdue', due_today: 'Due today', this_week: 'This week', waiting: 'Waiting on someone else', future: 'Future' };
+const LOOP_BUCKET_ORDER = ['overdue', 'due_today', 'this_week', 'waiting', 'future'];
+
+function loopCardHtml(l) {
+  return `<div class="proposal-card" data-id="${esc(l.id)}">
+    <p><strong>${esc(l.id)}</strong> — ${esc(l.description)}</p>
+    <div class="proposal-meta">party: ${esc(l.party)} · opened ${esc(l.opened)} · target ${esc(l.target)} · ${esc(l.status_raw)}</div>
+    <button data-action="close" data-id="${esc(l.id)}">Close</button>
+  </div>`;
+}
+
+function loadLoops() {
+  api('/api/admin/loops').then((data) => {
+    setError(null);
+    const buckets = data.buckets || {};
+    const sections = LOOP_BUCKET_ORDER.map((key) => {
+      const rows = buckets[key] || [];
+      if (!rows.length) return '';
+      return `<h3 style="font-size:13px;margin:14px 0 6px;">${esc(LOOP_BUCKET_LABELS[key] || key)} (${rows.length})</h3>` + rows.map(loopCardHtml).join('');
+    }).join('');
+    const container = document.getElementById('loops-list');
+    container.innerHTML = sections || '<p class="muted">No open loops.</p>';
+    container.querySelectorAll('button[data-action="close"]').forEach((btn) => {
+      btn.addEventListener('click', () => handleLoopClose(btn.dataset.id));
+    });
+  }).catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
+}
+
+function handleLoopClose(id) {
+  const reason = prompt(`Close ${id} — reason:`, '');
+  if (reason === null) return;
+  api(`/api/admin/loops/${encodeURIComponent(id)}/close`, {
+    method: 'POST', body: { reason },
+  }).then(() => loadLoops())
     .catch((e) => { if (e.message !== 'unauthorized') setError(e.message); });
 }
 
